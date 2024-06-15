@@ -20,7 +20,7 @@
     - Security v convenience
     - Trust v time
     - Different balance in different settings with different people (entities, etc.)
-        - Your bff AirDrops a photo to you in rl
+        - Your bff AirDrops a photo to you irl
         - A stranger sends you a file on the Internet
 2. The Internet...
     - is open
