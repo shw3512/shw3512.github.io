@@ -5,6 +5,4 @@
 
 ### Books
 
-- ""
-
-[1]: <https://www3.nd.edu/~dthain/compilerbook/> "ND : DT : Compilers"
+- "[Introduction to compilers and language design](https://www3.nd.edu/~dthain/compilerbook/)", 2nd edition, by Douglas Thain
