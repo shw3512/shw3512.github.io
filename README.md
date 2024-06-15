@@ -8,9 +8,9 @@ I'm currently working on
 
 I'm currently learning about
 
-- Compilers<!--[Compilers](https://github.com/shw3512/compilers)-->
+- [Compilers](compilers.md)
 - [Computer networking](networking.md) (at the level of Cisco's CCNA)
-- Lisp<!--[Lisp](https://github.com/shw3512/lisp)-->
+- [Lisp](lisp.md)
 
 Reach me on [GitHub][GH] \| [LinkedIn][LI]
 
