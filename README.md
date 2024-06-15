@@ -1,6 +1,4 @@
-# About me
-
-I'm Stephen Wolff.
+I'm glad you're here.
 
 I'm currently working on
 
