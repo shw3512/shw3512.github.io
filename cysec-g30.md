@@ -127,7 +127,7 @@
 - Do not reuse
 - Make sufficiently long
     - Complex?
-    - See NIST, xkcd
+    - See [NIST](https://pages.nist.gov/800-63-3/sp800-63b.html#appA), [xkcd](https://xkcd.com/936/)
 - Use a password manager (maybe?)
     - Tradeoffs
     - If you use a password manager, then...
