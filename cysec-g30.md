@@ -124,7 +124,7 @@
 
 ### Passwords
 
-- Do not reuse
+- Don't reuse
 - Make sufficiently long
     - Complex?
     - See [NIST](https://pages.nist.gov/800-63-3/sp800-63b.html#appA), [xkcd](https://xkcd.com/936/)
