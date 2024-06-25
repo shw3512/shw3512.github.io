@@ -5,6 +5,31 @@
 
 
 
+<!--
+Reorganize presentation to focus on real-world applications, not theory.
+After "Realities" section, give two or three sections focusing on single
+area. In each area, give brief (!) background and theory, then give tips
+and example scenarios for group discussion. Focus on engagement and
+generating discussion and desire to know more, not delivering "content".
+
+- Devices
+    - Device security settings (auto screen-lock, etc.)
+- Authentication
+    - MFA
+    - Password management
+- Phishing
+    - Discuss general social engineering, include in examples
+- Networks
+    - Public Wi-Fi
+    - How to test and harden home router
+- Summary
+    - Gather (restate) helpful resources
+        - VirusTotal
+        - Password generators
+-->
+
+
+
 ## Overview
 
 0. [Realities](cysec-g30.md#realities)
@@ -56,12 +81,16 @@
 
 ##### Commonly used tactics
 
+- Scarcity
 - Urgency
 - Intimidation
+    - Fear
 - Authority
-- Familiarity
 - Trust
-- Pity
+    - Social proof
+    - Familiarity
+- Likeableness
+    - Pity
 
 ##### Tips
 
