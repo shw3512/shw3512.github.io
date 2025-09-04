@@ -72,6 +72,8 @@ Remarks.
 
 | Exam #         | Key topics                            | Files                 |
 |:---------------|:--------------------------------------|:----------------------|
+| Mock exam 1    | Rings, modules, representation theory | [q](), [a](), [tex]() |
 | Midterm exam 1 | Rings, modules, representation theory | [q](), [a](), [tex]() |
+| Mock exam 2    | Field theory, Galois theory           | [q](), [a](), [tex]() |
 | Midterm exam 2 | Field theory, Galois theory           | [q](), [a](), [tex]() |
 | Final exam     | Comprehensive                         | [q](), [a](), [tex]() |
