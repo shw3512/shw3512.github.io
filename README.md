@@ -14,7 +14,7 @@ I'm currently learning about
 
 # Previously
 
-Peruse my past [learnings]() and [projects]().
+Peruse my past [learning]() and [projects]().
 
 # Connect
 
