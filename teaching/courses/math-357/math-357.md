@@ -30,13 +30,13 @@ Remarks.
 
 | # | Key topics              | Files                 |
 |--:|:------------------------|:----------------------|
-| 1 | Ring structure          | [q](assess/hw/01/01-q.pdf), [a](assess/hw/01/01-a.pdf), [tex](assess/hw/01/01.tex) |
-| 2 | Polynomial rings        | [q](assess/hw/02/02-q.pdf), [a](assess/hw/02/02-a.pdf), [tex](assess/hw/02/02.tex) |
-| 3 | Irreducible polynomials | [q](assess/hw/03/03-q.pdf), [a](assess/hw/03/03-a.pdf), [tex](assess/hw/03/03.tex) |
-| 4 | Modules                 | [q](assess/hw/04/04-q.pdf), [a](assess/hw/04/04-a.pdf), [tex](assess/hw/04/04.tex) |
-| 5 | Representation theory   | [q](assess/hw/05/05-q.pdf), -, [tex](assess/hw/05/05.tex) |
-| 6 | Field theory            | [q](assess/hw/06/06-q.pdf), [a](assess/hw/06/06-a.pdf), [tex](assess/hw/06/06.tex) |
-| 7 | Galois theory           | [q](assess/hw/07/07-q.pdf), [a](assess/hw/07/07-a.pdf), [tex](assess/hw/07/07.tex) |
+| 1 | Ring structure          | [q](hw/01/01-q.pdf), [a](hw/01/01-a.pdf), [tex](hw/01/01.tex) |
+| 2 | Polynomial rings        | [q](hw/02/02-q.pdf), [a](hw/02/02-a.pdf), [tex](hw/02/02.tex) |
+| 3 | Irreducible polynomials | [q](hw/03/03-q.pdf), [a](hw/03/03-a.pdf), [tex](hw/03/03.tex) |
+| 4 | Modules                 | [q](hw/04/04-q.pdf), [a](hw/04/04-a.pdf), [tex](hw/04/04.tex) |
+| 5 | Representation theory   | [q](hw/05/05-q.pdf), -, [tex](hw/05/05.tex) |
+| 6 | Field theory            | [q](hw/06/06-q.pdf), [a](hw/06/06-a.pdf), [tex](hw/06/06.tex) |
+| 7 | Galois theory           | [q](hw/07/07-q.pdf), [a](hw/07/07-a.pdf), [tex](hw/07/07.tex) |
 
 ### Quizzes
 
