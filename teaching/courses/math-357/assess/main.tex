@@ -378,12 +378,12 @@ Your name	&	\line(1,0){200}
 \end{tabular}
 \end{center}
 
-\IfFileExists{\filePathAssessments \fileName _Instructions}{%
-   \vspace{2in}\begin{quote}\noindent\textbf{Instructions}\input{\filePathAssessments \fileName _Instructions}\end{quote}%
+\IfFileExists{\filePathAssessments \fileName -instructions}{%
+   \vspace{2in}\begin{quote}\noindent\textbf{Instructions}\input{\filePathAssessments \fileName -instructions}\end{quote}%
 }{}%
 
-\IfFileExists{\filePathAssessments \fileName _GradeBox}{%
-   \newpage\input{\filePathAssessments \fileName _GradeBox}%
+\IfFileExists{\filePathAssessments \fileName -gradebox}{%
+   \newpage\input{\filePathAssessments \fileName -gradebox}%
 }{}% If file does not exist, then do nothing.
 
 \newpage
