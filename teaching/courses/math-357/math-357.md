@@ -8,16 +8,16 @@
 
 ## Course documents
 
-- Syllabus ([pdf](math-357/docs/pdf/syl.pdf), [tex](math-357/docs/tex/syl.tex))
+- Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/syl.tex))
 - Webpages:
-    - [Course homepage](math-357/webp/home.html)
-    - Calendar of lectures ([original](math-357/webp/cal-v0.html) | [final](math-357/webp/cal-v9.html))
-    - [Homework (practice)](math-357/webp/ph.html)
+    - [Course homepage](webp/home.html)
+    - Calendar of lectures ([original](webp/cal-v0.html) | [final](webp/cal-v9.html))
+    - [Homework (practice)](webp/ph.html)
 
 ## Lecture supplements
 
-- Course introduction ([pdf](), [tex]())
-- Galois theory: example ([pdf](), [tex]())
+- Course introduction ([pdf](lect/01/01.pdf), [tex](lect/01/01.tex))
+- Galois theory: example ([pdf](lect/gte/gte.pdf), [tex](lect/gte/gte.tex))
 
 ## Assessments
 
