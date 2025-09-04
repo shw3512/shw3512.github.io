@@ -70,10 +70,11 @@ Remarks.
 
 ### Exams
 
-| Exam #         | Key topics                            | Files                 |
-|:---------------|:--------------------------------------|:----------------------|
-| Mock exam 1    | Rings, modules, representation theory | [q](assess/ex/pdf/01M.pdf), -, tex ([instr](assess/ex/tex/01M-intructions), [grade](assess/ex/tex/01M-gradebox), [q+a](assess/ex/tex/01M.tex)) |
-| Midterm exam 1 | Rings, modules, representation theory | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), tex ([instr](assess/ex/tex/01-intructions), [grade](assess/ex/tex/01-gradebox), [q+a](assess/ex/tex/01.tex)) |
-| Mock exam 2    | Field theory, Galois theory           | [q](assess/ex/pdf/02M.pdf), -, tex ([instr](assess/ex/tex/02M-intructions), [grade](assess/ex/tex/02M-gradebox), [q+a](assess/ex/tex/02M.tex)) |
-| Midterm exam 2 | Field theory, Galois theory           | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-intructions), [grade](assess/ex/tex/02-gradebox), [q+a](assess/ex/tex/02.tex)) |
-| Final exam     | Comprehensive                         | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([instr](assess/ex/tex/03-intructions), [grade](assess/ex/tex/03-gradebox), [q+a](assess/ex/tex/03.tex)) |
+| Exam #          | Key topics                                | Files                 |
+|:----------------|:------------------------------------------|:----------------------|
+| Diagnostic quiz | Linear algebra, group theory, ring theory | [q](assess/ex/pdf/00.pdf), -, tex ([instr](assess/ex/tex/00-intructions), [grade](assess/ex/tex/00-gradebox), [q+a](assess/ex/tex/00.tex)) |
+| Mock exam 1     | Rings, modules, representation theory     | [q](assess/ex/pdf/01M.pdf), -, tex ([instr](assess/ex/tex/01M-intructions), [grade](assess/ex/tex/01M-gradebox), [q+a](assess/ex/tex/01M.tex)) |
+| Midterm exam 1  | Rings, modules, representation theory     | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), tex ([instr](assess/ex/tex/01-intructions), [grade](assess/ex/tex/01-gradebox), [q+a](assess/ex/tex/01.tex)) |
+| Mock exam 2     | Field theory, Galois theory               | [q](assess/ex/pdf/02M.pdf), -, tex ([instr](assess/ex/tex/02M-intructions), [grade](assess/ex/tex/02M-gradebox), [q+a](assess/ex/tex/02M.tex)) |
+| Midterm exam 2  | Field theory, Galois theory               | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-intructions), [grade](assess/ex/tex/02-gradebox), [q+a](assess/ex/tex/02.tex)) |
+| Final exam      | Comprehensive                             | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([instr](assess/ex/tex/03-intructions), [grade](assess/ex/tex/03-gradebox), [q+a](assess/ex/tex/03.tex)) |
