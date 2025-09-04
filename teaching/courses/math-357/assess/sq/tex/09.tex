@@ -1,0 +1,50 @@
+%
+% SQ09 : 2024--02--23 (F)
+%
+
+\noindent{}Let $C_{4} = \langle{}g \st g^{4} = 1\rangle{}$ be the cyclic group of order $4$ with generator $g$. For each of the following maps, state whether it is a matrix representation of $C_{4}$, and if so, whether it is faithful.
+\begin{align*}
+\rho_{1}
+:
+C_{4}
+&\rightarrow
+\GL_{1}(\C)
+&
+\rho_{2}
+:
+C_{4}
+&\rightarrow
+\GL_{2}(\C)
+&
+\rho_{3}
+:
+C_{4}
+&\rightarrow
+\GL_{3}(\C)
+\\
+g^{j}
+&\mapsto
+\begin{pmatrix}
+1
+\end{pmatrix}
+&
+g^{j}
+&\mapsto
+\begin{pmatrix}
+0	&	1	\\
+-1	&	0
+\end{pmatrix}%
+^{j}
+&
+g^{j}
+&\mapsto
+\begin{pmatrix}
+1	&	0	&	0	\\
+0	&	-1	&	0	\\
+0	&	0	&	i
+\end{pmatrix}%
+^{j}
+\end{align*}
+
+\spaceSolution{2in}{% Begin solution.
+By definition, a representation is a group homomorphism. For our present examples, it suffices to check that $\rho(g^{4})$ is the identity matrix (why?). It is straightforward to check that this is true for all three maps. By definition, a representation is faithful if it is injective. The representation $\rho_{1}$ is not faithful, whereas $\rho_{2}$ and $\rho_{3}$ are.}% End solution.
