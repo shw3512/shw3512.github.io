@@ -1,0 +1,414 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{ifthen}
+\usepackage{mathtools}
+
+\newcommand{\showSolutions}{1}% Show solutions?
+% Allowed values:
+% - 0 = Do not show
+% - 1 = Show
+
+% Display or do not display solutions.
+\ifthenelse{\equal{\showSolutions}{1}}{%
+  \newcommand{\spaceSolution}[2]{#2}
+}%
+{%
+  \newcommand{\spaceSolution}[2]{\vspace{#1}}
+}%
+
+
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+
+
+
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+\newcommand{\spaceSolutions}[2]{}
+
+\newcommand{\abs}[2][]{\left|#2\right|_{#1}}
+\newcommand{\C}{\complexes}
+\newcommand{\complexes}{\mathbf{C}}
+\newcommand{\divides}{\,|\,}
+\newcommand{\idealeq}{\trianglelefteq}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\integersNonnegative}{\integers_{\geq 0}}
+\newcommand{\Q}{\rationals}
+\newcommand{\rationals}{\mathbf{Q}}
+\renewcommand{\setminus}{-}
+\newcommand{\st}{\,|\,}
+\newcommand{\Z}{\integers}
+
+
+
+
+
+\title{Math 357\\Expositional homework 01}
+\author{}
+\date{Assigned: 2024--01--08 (M)\\Due: 2024--01--22 (M)}
+
+
+
+
+
+% Document begins here.
+
+
+
+\begin{document}
+
+\maketitle
+
+The goal of this homework is to expand and explore our library of examples related to ring structure. In particular, we will explore concrete examples related to the following chain of (one-way) implications:
+\begin{align}
+\text{field} \Rightarrow \text{ED} \Rightarrow \text{PID} \Rightarrow \text{UFD} \Rightarrow \text{ID}%
+\label{eq : EH01 : Structure Implications}
+\end{align}
+where ED denotes euclidean domain, PID denotes principal ideal domain, UFD denotes unique factorization domain, and ID denotes integral domain.
+
+Let $\Z$ denote the ring of integers.
+\begin{enumerate}[label=(\alph*)]
+\item Define each of the algebraic structures in \eqref{eq : EH01 : Structure Implications}.
+\item Give an example of a ring that is not an integral domain. Justify your assertion.
+\item Show that $\Z[\sqrt{-5}]$ is an integral domain that is not a unique factorization domain.
+\item Let $t$ be an indeterminate. Show that $\Z[t]$ is a unique factorization domain that is not a principal ideal domain.
+\item Show that $\Z[(1 + \sqrt{-19}) / 2]$ is a principal ideal domain that is not a euclidean domain. \fontHint{See Dummit \&{} Foote, 3e, pages 277 and 281--282. You may also find helpful discussions on pages 227 (Example (5)) and 229--230.}
+\item Give an example of a euclidean domain that is not a field. Justify your assertion.
+\end{enumerate}
+
+
+
+\spaceSolution{0in}{% Begin solution.
+\subsection*{Solution}
+
+We begin by defining the algebraic structures in equation \eqref{eq : EH01 : Structure Implications} and related terms. We take as given the ring definitions in Chapter 7 of Dummit \&{} Foote, 3e (hereafter, DF3e). We assume all rings are commutative unless noted otherwise. Following the definitions, we present the examples.
+
+
+
+\subsubsection*{Definitions}
+
+An \fontDefWord{integral domain} is a commutative ring that has a multiplicative identity $1 \neq 0$ and no (nonzero) zero divisors. A \fontDefWord{field} is an integral domain in which every nonzero element is a unit.
+
+Let $R$ be an integral domain. A \fontDefWord{norm} on $R$ is a map $N : R \rightarrow \integersNonnegative$ such that $N(0) = 0$. A norm $N$ on $R$ \fontDefWord{has a division algorithm} if for all $a, b \in R$ such that $b \neq 0$, there exist $q, r \in R$ such that $a = q b + r$ with $r = 0$ or $N(r) < N(b)$. We note that $q, r$ need not be unique.% Begin footnote.
+\footnote{For one example, let $R$ be a field. Define $N : R \rightarrow \integersNonnegative$ by $N(a) = 0$ for all $a \in R$. One readily checks that $N$ satisfies the definition of a norm and has a division algorithm. (In particular, for the division algorithm, one may always take $r = 0$.) Thus a field is a euclidean domain.
+
+For another example, let $R = \Z$. Define $N : \Z \rightarrow \integersNonnegative$ by $N(a) = \abs{a}$. Then $N$ satisfies the definition of a norm, and one can check (see DF3e, p 271) that it has a division algorithm. Consider $a = 5$ and $b = 3$. The equations $5 = 1 \times 3 + 2$ and $5 = 2 \times 3 - 1$ both satisfy the requirements of the division algorithm, showing that $q, r$ need not be unique.} % End footnote.
+A \fontDefWord{euclidean domain} is an integral domain on which there exists a norm that has a division algorithm.
+
+An ideal $I \idealeq R$ is \fontDefWord{principal} if it is generated by a single element; that is, there exists an $a \in R$ such that $I = (a)$. A \fontDefWord{principal ideal domain} is an integral domain for which all ideals are principal.
+
+Let $R$ be an integral domain. An element $r \in R$ is \fontDefWord{irreducible} if (i) $r \neq 0$; (ii) $r \notin R^{\times}$; and (iii) for all $a, b \in R$, if $r = a b$, then $a \in R^{\times}$ or $b \in R^{\times}$.% Begin footnote.
+\footnote{An element $r \in R$ is \fontDefWord{reducible} if it is not irreducible. We won't use this definition here, but it's natural to note. Plus, it's delightfully stereotypical mathematics.} % End footnote.
+Two elements $a, b \in R$ are \fontDefWord{associates} if there exists a $u \in R^{\times}$ such that $a = u b$. (Loosely speaking, $a$ and $b$ differ by a unit.) A \fontDefWord{unique factorization domain} is an integral domain $R$ such that for all $r \in R \setminus (\{0\} \cup R^{\times})$, the following two conditions are satisfied:
+\begin{enumerate}[label=(\roman*)]
+\item ($r$ has a factorization into irreducibles...) There exist finitely many irreducible elements $p_{i} \in R$, not necessarily distinct, such that $r = \prod_{i = 1}^{n} p_{i}$.
+\item (...that is unique up to associates) Given any two such factorizations of $r$, say $r = \prod_{i = 1}^{n_{p}} p_{i}$ and $r = \prod_{i = 1}^{n_{q}} q_{i}$, we have $n_{p} = n_{q}$, and we may reorder the factors so that for each $i$, $p_{i}$ and $q_{i}$ are associates.
+\end{enumerate}
+
+
+
+\subsubsection*{Example (b): Ring that is not an integral domain}
+
+We get examples of rings that are not integral domains by ``breaking'' at least one part of the definition of an integral domain.
+
+By definition, an integral domain is a commutative ring. Thus, any noncommutative ring is not an integral domain. For example, let $R$ be any nontrivial ring,% Begin footnote.
+\footnote{By nontrivial, we mean that the multiplication operation on $R$ does not always output $0$. As we have seen, this includes but is not limited to the zero ring.} % End footnote.
+and consider the ring $M_{2}(R)$ of $2 \times 2$ matrices with entries in $R$, with addition and multiplication on $M_{2}(R)$ defined as usual for matrices.% Begin footnote.
+\footnote{An argument nearly identical to the one we give will work for the ring $M_{n}(R)$ of $n \times n$ matrices, for all $n \in \integers_{\geq 2}$. Just fill out the matrices $A$ and $B$ with $0$.} % End footnote.
+By hypothesis, $R$ is nontrivial, so there exist $a, b \in R$ such that $b a \neq 0$. Consider the matrices
+\begin{align*}
+A
+&=
+\begin{pmatrix}
+a	&	0	\\
+0	&	0
+\end{pmatrix}
+&
+&\text{and}
+&
+B
+&=
+\begin{pmatrix}
+0	&	0	\\
+b	&	0
+\end{pmatrix}
+\end{align*}
+We compute
+\begin{align*}
+A B
+=
+\begin{pmatrix}
+0	&	0	\\
+0	&	0
+\end{pmatrix}
+\neq
+\begin{pmatrix}
+0		&	0	\\
+b a	&	0
+\end{pmatrix}
+=
+B A
+\end{align*}
+Thus $M_{n}(R)$ is not commutative, and therefore not an integral domain. Note that this example is valid even if $R$ is commutative.
+
+Let $G$ be any finite group, let $R$ be a commutative ring with multiplicative identity $1 \neq 0$,% Begin footnote.
+\footnote{In particular, note that this hypothesis excludes the trivial group.} % End footnote.
+and let $R G$ be the group ring of $G$ with coefficients in $R$.% Begin footnote.
+\footnote{See DF3e, pp 236--7.} % End footnote.
+It is straightforward to check that the ring $R G$ is commutative if and only if $G$ is commutative. Thus, taking $G$ to be any noncommutative group gives another class of examples of noncommutative rings, and hence rings that are not integral domains.
+
+By definition, an integral domain has a multiplicative identity $1 \neq 0$. Thus, any ring without a multiplicative identity $1 \neq 0$ is not an integral domain. For example, the ring $2 \Z$ is not an integral domain. (Note that $2 \Z$ satisfies all other axioms of an integral domain.)
+
+By definition, an integral domain has no zero divisors. Thus, any ring with zero divisors is not an integral domain. For example, the ring $\Z / 6 \Z$ is not an integral domain, because $2, 3 \in \Z / 6 \Z$ are both nonzero, and $2 \times 3 = 6 \equiv 0$. (Note that $\Z / 6 \Z$ satisfies all other axioms of an integral domain.)
+
+
+
+\subsubsection*{Example (c): Integral domain that is not a unique factorization domain}
+
+See DF3e, pp 229--30 and 286, Example (5).
+
+We consider the ring $\Z[\sqrt{-5}] = \{a + b \sqrt{-5} \st a, b \in \Z\}$, equipped with addition and multiplication operations analogous to% Begin footnote.
+\footnote{If you prefer, inherited from.} % End footnote.
+those of $\C$. To see that $\Z[\sqrt{-5}]$ is an integral domain, one can observe that it is a subring of the quadratic field $\Q(\sqrt{-5})$.% Begin footnote.
+\footnote{See DF3e, pp 227, 229.} % End footnote.
+Fields are integral domains, and subrings of integral domains are integral domains, so $\Z[\sqrt{-5}]$ is an integral domain. Alternatively, one can prove it is an integral domain directly: Let $a,b \in \Z[\sqrt{-5}]$ be arbitrary, say
+\begin{align*}
+a
+&=
+a_{0} + a_{1} \sqrt{-5}
+&
+b
+&=
+b_{0} + b_{1} \sqrt{-5}
+\end{align*}
+where $a_{0}, a_{1}, b_{0}, b_{1} \in \Z$. Then
+\begin{align*}
+0 + 0 \sqrt{-5}
+=
+0
+=
+a b
+= (a_{0} b_{0} - 5 a_{1} b_{1}) + (a_{0} b_{1} + a_{1} b_{0}) \sqrt{-5}
+\end{align*}
+which is true if and only if the two ``coefficients'' in the expression on the right are both zero, or equivalently,
+\begin{align}
+a_{0} b_{0}
+&=
+5 a_{1} b_{1}%
+\label{eq : EH01c Direct 1}
+\\
+a_{0} b_{1}
+&=
+-a_{1} b_{0}%
+\label{eq : EH01c Direct 2}
+\end{align}
+Multiplying equation \eqref{eq : EH01c Direct 1} by $b_{1}$ and equation \eqref{eq : EH01c Direct 2} by $b_{0}$, we get
+\begin{align*}
+5 a_{1} b_{1}^{2}
+=
+a_{0} b_{0} b_{1}
+=
+-a_{1} b_{0}^{2}
+\end{align*}
+in $\Z$. This is equivalent to
+\begin{align*}
+a_{1} (5 b_{1}^{2} + b_{0}^{2})
+=
+0
+\end{align*}
+in $\Z$. Because $\Z$ is an integral domain, the cancellation law implies
+\begin{align*}
+a_{1}
+&=
+0
+&
+&\text{or}
+&
+b_{0}^{2}
+&=
+-5 b_{1}^{2}
+\end{align*}
+Because all squares in $\Z$ are nonnegative, the second equation is true if and only if $b_{0} = 0$ and $b_{1} = 0$, that is, if and only if $b = 0$ in $\Z[\sqrt{-5}]$. If the first equation is true --- that is, if $a_{1} = 0$ --- then equations \eqref{eq : EH01c Direct 1} and \eqref{eq : EH01c Direct 2} reduce to
+\begin{align*}
+a_{0} b_{0}
+&=
+0
+&
+&\text{and}
+&
+a_{0} b_{1}
+&=
+0
+\end{align*}
+If $a_{0} = 0$, then $a = 0$ in $\Z[\sqrt{-5}]$, and we are done. If $a_{0} \neq 0$, then again using the fact that $\Z$ is an integral domain, we must have $b_{0} = 0$ in the first equation and $b_{1} = 0$ in the second equation, so that $b = 0$ in $\Z[\sqrt{-5}]$.
+
+To see that $\Z[\sqrt{-5}]$ is not a UFD, consider two factorizations of the element $6$:
+\begin{align*}
+(1 + \sqrt{-5}) \times (1 - \sqrt{-5})
+=
+6
+=
+2 \times 3
+\end{align*}
+If we can show that the factors $1 \pm{} \sqrt{-5}, 2, 3$ are irreducible, then we are done. To do this, we can use the field norm
+\begin{align*}
+N : \Q(\sqrt{-5}) &\rightarrow \Q
+\\
+a + b \sqrt{-5}
+&\mapsto
+a^{2} + 5 b^{2}
+\end{align*}
+restricted to $\Z[\sqrt{-5}]$ (note that the codomain of the restricted norm is $\Z$).% Begin footnote.
+\footnote{See DF3e, pp 229--30.} % End footnote.
+We compute the norms
+\begin{align*}
+N(1 \pm{} \sqrt{-5})
+&=
+6
+&
+N(2)
+&=
+4
+&
+N(3)
+&=
+9
+\end{align*}
+One can check that $N$ is multiplicative. So if an element factors in $\Z[\sqrt{-5}]$, then the norm of each factor is an integer that divides that element's norm. For example, if there exist $\alpha, \beta \in \Z[\sqrt{-5}]$ such that $1 + \sqrt{-5} = \alpha \beta$, then
+\begin{align*}
+6
+=
+N(1 + \sqrt{-5})
+=
+N(\alpha \beta)
+=
+N(\alpha) N(\beta)
+\end{align*}
+as an equation in $\Z$. A case analysis% Begin footnote.
+\footnote{See DF3e, p 273.} % End footnote.
+of the possible values of the factors' norms shows that the only factorizations of $1 \pm{} \sqrt{-5}$, $2$, and $3$ involve units, so they are irreducible.
+
+
+
+\subsubsection*{Example (d): Unique factorization domain that is not a principal ideal domain}
+
+See DF3e, pp 252, Example (3); 273, Example (1); 279, Example (1); and 304--5, Theorem 7.
+
+Consider $\Z[t]$. We will show below that $\Z$ is a euclidean domain. Hence, by the implications in equation \eqref{eq : EH01 : Structure Implications}, $\Z$ is a unique factorization domain.% Begin footnote.
+\footnote{See also DF3e, p 287, Theorem 14.} % End footnote.
+Hence $\Z[t]$ is a unique factorization domain, by Theorem 9.7.
+
+We claim that the ideal $(2, t)$ is not principal. Because $\Z[t]$ is a commutative ring, the ideal
+\begin{align*}
+(2, t) = \{2 p(t) + t q(t) \st p(t), q(t) \in \Z[t]\}
+\end{align*}
+Observe that $f(t) \in (2, t)$ if and only if $2 \divides f(0)$. In particular, $1 \notin (2, t)$, so $(2, t)$ is a proper ideal. Suppose for the sake of contradiction% Begin footnote.
+\footnote{We follow the argument in DF3e, p 252, Example (3).} % End footnote.
+that $(2, t)$ were principal. Then by definition, there exists an $a \in \Z[t]$ such that $(2, t) = (a)$. Because $2 \in (2 ,t) = (a)$, there exist $b \in \Z[t]$ such that $2 = a b$. The degree function on $\Z[t]$, which maps nonzero polynomials to their degree and the zero polynomial to $-\infty$, satisfies two important conditions:
+\begin{enumerate}
+\item For all $f \in \Z[t] - \{0\}$, $\deg f \in \Z_{\geq 0}$.
+\item Because $\Z$ is an integral domain,% Begin footnote.
+\footnote{Why is this condition important?} % End footnote.
+for all $f, g, h \in \Z[t]$ such that $f = g h$,
+\begin{align*}
+\deg f
+=
+\deg g + \deg h
+\end{align*}
+\end{enumerate}
+Applying these conditions to the equation $2 = a b$, we get
+\begin{align*}
+0
+=
+\deg 2
+=
+\deg a + \deg b
+\end{align*}
+so both polynomials $a$ and $b$ must be constants. We may view the equation $2 = a b$ in $\Z$ and conclude that either (i) $a = \pm{}1$ and $b = \pm{2}$, or (ii) $a = \pm{2}$ and $b = \pm{1}$. In case (i), $(a) = (1)$, contradicting the fact that $(a) = (2, t)$ is a proper ideal. In case (ii), $t \in (2, t) = (a) = (2)$ implies that there exists a $b \in \Z[t]$ such that $t = 2 b(t)$. All coefficients of the polynomial $2 b(t)$ are divisible by $2$, whereas the coefficient of $t$ is not, so equality of the two is a contradiction. We conclude that $(2, t) \idealeq \Z[t]$ is not principal, and therefore $\Z[t]$ is not a principal ideal domain.
+
+
+
+\subsubsection*{Example (e): Principal ideal domain that is not a euclidean domain}
+
+See DF3e, pp 229-30, 276--7, 282.
+
+Consider $\Z[(1 + \sqrt{-19}) / 2] = \{a + b (1 + \sqrt{-19}) / 2 \st a, b \in \Z\}$. We can show that this ring is a principal ideal domain but not a euclidean domain as follows:
+\begin{enumerate}
+\item Define norm, positive norm, and Dedekind--Hasse norm.% Begin footnote.
+\footnote{See DF3e, p 281}% End footnote.
+\item Cite Proposition 8.9 (DF3e, p 281): Let $R$ be an integral domain. Then $R$ is a principal ideal domain if and only if there exists a Dedekind--Hasse norm on $R$.
+\item Show that the function
+\begin{align*}
+N : \Z[(1 + \sqrt{-19} / 2)]
+&\rightarrow
+\Z
+\\
+a + b (1 + \sqrt{-19}) / 2
+&\mapsto
+a^{2} + a b + 5 b^{2}
+\end{align*}
+is a Dedekind--Hasse norm on $\Z[(1 + \sqrt{-19}) / 2]$.% Begin footnote.
+\footnote{See DF3e, p 282, Example.} % End footnote.
+Thus the ring is a principal ideal domain.
+\item Define universal side divisors.% Begin footnote.
+\footnote{See DF3e, p 277. The second definition more closely resembles notions we may be used to from the euclidean algorithm}% End footnote.
+\item Cite Proposition 8.5 (DF3e, p 277): Let $R$ be an integral domain that is not a field. If $R$ is a euclidean domain, then $R$ has universal side divisors.
+\item Show that $\Z[(1 + \sqrt{-19}) / 2]$ has no universal side divisors.% Begin footnote.
+\footnote{See DF3e, p 277, Example.}% End footnote.
+\end{enumerate}
+
+
+
+\subsubsection*{Example (f): Euclidean domain that is not a field}
+
+Consider the ring of integers, $\Z$. Define $N : \Z \rightarrow \integersNonnegative$ by $N(a) = \abs{a}$. One can check that $N$ satisfies the definition of a norm, and that it has a division algorithm.% Begin footnote.
+\footnote{See DF3e, p 271, Example (1).} % End footnote.
+Thus $\Z$ is a euclidean domain. However, $\Z^{\times} = \{\pm 1\} \neq \Z \setminus \{0\}$ --- for example, $2 \in \Z$ has no multiplicative inverse --- so $\Z$ is not a field.
+
+As another example, let $F$ be a field, and consider the ring $F[t]$ of polynomials in one indeterminate $t$ with coefficients in $F$.% Begin footnote.
+\footnote{See DF3e, pp 234--5.} % End footnote.
+Define
+\begin{align*}
+N : F[t]
+&\rightarrow
+\integersNonnegative
+\\
+f
+&\mapsto
+\begin{dcases*}
+\deg f	&	if $f \neq 0$	\\
+0			&	if $f = 0$
+\end{dcases*}
+\end{align*}
+One can check that $N$ satisfies the definition of a norm, and that it has a division algorithm.% Begin footnote.
+\footnote{See DF3e, p 271, Example (2).} % End footnote.
+Thus $F[t]$ is a euclidean domain. However, $F[t]^{\times} = F^{\times} \neq F[t] \setminus \{0\}$ --- for example, $t \in F[t]$ has no multiplicative inverse --- so $F[t]$ is not a field.%
+}% End solution.
+
+
+
+\end{document}
