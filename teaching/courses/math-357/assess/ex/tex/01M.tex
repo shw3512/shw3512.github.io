@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%
+%
+%	Mock exam 01 : 2024--02--23 (F)
+%
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Exercise \ref{sec : me01q1}}
+\label{sec : me01q1}
+
+(4 pt) Let $R$ be an integral domain. For each of the following statements, state whether it is true or false, and prove it (if true) or give a counterexample (if false).
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me01q1a} The product of two units is a unit.
+\item\label{itm : me01q1b} If $r \in R$ is prime, then it is irreducible.
+\item\label{itm : me01q1c} If $r \in R$ is irreducible, then it is prime.
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+}% End solution.
+
+
+
+\section{Exercise \ref{sec : me01q2}}
+\label{sec : me01q2}
+
+(4 pt) Let $F$ be a field, let $t$ be an indeterminate, and let $I \idealeq F[t]$ be an ideal.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me01q2a} Characterize $I$ as completely as possible.
+\item\label{itm : me01q2b} For each of the following algebraic structures, state whether there exists an ideal $I \idealeq F[t]$ such that the quotient ring $F[t] / I$ has that structure. If yes, then give an example. If no, then justify why.
+\begin{quote}
+(i) field
+\qquad
+(ii) integral domain but not field
+\qquad
+(iii) ring but not integral domain
+\end{quote}
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+}% End solution.
+
+
+
+\section{Exercise \ref{sec : me01q3}}
+\label{sec : me01q3}
+
+(4 pt) Let $\Q$ denote the field of rational numbers; given a prime $p \in \integersPositive$, let $F_{p} \isomorphism \Z / (p)$ denote the finite field with $p$ elements; and let $t$ be an indeterminate. For each of the following polynomials, state whether it is irreducible or reducible. Justify your assertions.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me01q3a} $f_{1} = t^{4} - 2 t^{3} + t + 1 \in F_{5}[t]$
+\item\label{itm : me01q3b} $f_{2} = 6 t^{4} + 11 t^{3} + 8 t^{2} - 6 t - 4 \in \Q[t]$
+\item\label{itm : me01q3c} $f_{3} = t^{4} + 4 t^{3} + t + 16 \in \Q[t]$
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+$f_{1}$ is reducible. No zeros in $F_{5}$, but
+\begin{align*}
+f_{1}
+=
+(t^{2} + 2) (t^{2} - 2 t - 2)
+\end{align*}
+
+$f_{2}$ is reducible: In fact,
+\begin{align*}
+f_{2}
+=
+(2 t + 1) (3 t - 2) (t^{2} + 2 t + 2)
+\end{align*}
+
+$f_{3}$ is irreducible: We compute
+\begin{align*}
+f_{3}(t - 1)
+=
+t^{4} - 6 t^{2} + 9 t + 12
+\end{align*}
+Note that every coefficient of $f_{3}(t - 1)$ except the leading coefficient is divisible by $3$, and the constant term of $f_{3}(t - 1)$ is not divisible by $3^{2}$. Thus we may apply the Eisenstein--Sch\"{o}nemann criterion with $p = 3$ to conclude that $f_{3}$ is irreducible in $\Z[t]$ and hence, by Gau\ss{}'s lemma, in $\Q[t]$.}% End solution.
+
+
+
+\section{Exercise \ref{sec : me01q4}}
+\label{sec : me01q4}
+
+(4 pt) Let $F$ be a field, let $G$ be a finite group, and let $V$ be an $F$-vector space.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me01q4a} Given a representation $\rho : G \rightarrow \GL(V)$, describe how to define an $F G$-module structure on $V$ that extends the $F$-action of the $F$-vector space $V$ and that affords the representation $\rho$.
+\item\label{itm : me01q4a} Given an $F G$-module $V$, describe how to recover a representation $\rho$ of $G$ on $V$.
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+}% End solution.
+
+
+
+\section{Exercise \ref{sec : me01q5}}
+\label{sec : me01q5}
+
+(4 pt) Consider three matrix representations $\rho_{j} : \Z / 4 \Z \rightarrow \GL_{2}(\C)$, $j \in \{1, 2, 3\}$, defined by% Begin footnote.
+\footnote{More precisely, we should write $\rho_{j}(m + 4 \Z)$. To keep notation simple, I have written what I have written.}% End footnote.
+\begin{align*}
+\rho_{1}(m)
+&=
+\begin{pmatrix}
+1	&	0	\\
+0	&	-1
+\end{pmatrix}%
+^{m}
+&
+\rho_{2}(m)
+&=
+\begin{pmatrix}
+0	&	1	\\
+-1	&	0
+\end{pmatrix}%
+^{m}
+&
+\rho_{3}(m)
+&=
+\begin{pmatrix}
+i	&	0	\\
+0	&	-i
+\end{pmatrix}%
+^{m}
+\end{align*}
+(Here $i \in \C$ denotes a square root of $-1$.) State which of these matrix representations are faithful, which are irreducible, and which are equivalent. Briefly justify your assertions.
+
+\spaceSolution{6in}{% Begin solution.
+}% End solution.

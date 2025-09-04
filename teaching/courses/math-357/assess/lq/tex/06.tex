@@ -1,0 +1,29 @@
+%
+% LQ06 : 2024--04--10 (W)
+%
+
+\noindent{}Let $K : K_{0}$ be a field extension, let $\alpha \in K$ be algebraic over $K_{0}$, and let $\sigma \in \Aut(K : K_{0})$.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ06a} Prove that $\alpha$ and $\sigma(\alpha)$ have the same minimal polynomial over $K_{0}$.
+\item\label{itm : LQ06b} Use part \ref{itm : LQ06a} to explain (and, if possible, refine) the statement, ``Given $f \in K_{0}[t]$ and $\sigma \in \Aut(K : K_{0})$, $\sigma$ permutes the zeros of $f$.''
+\end{enumerate}
+
+
+
+\spaceSolution{4 in}{% Begin solution.
+Part \ref{itm : LQ06a}: Given any $f \in K_{0}[t]$ such that $f(\alpha) = 0_{K}$, we have seen that $f(\sigma(\alpha)) = 0_{K}$, and we have seen that this in turn implies that the minimal polynomial $m_{\sigma(\alpha), K_{0}}$ of $\sigma(\alpha)$ over $K_{0}$ divides $f$. Taking $f = m_{\alpha, K_{0}}$, we get
+\begin{align*}
+m_{\sigma(\alpha), K_{0}}
+\divides
+m_{\alpha, K_{0}}
+\end{align*}
+that is, there exists an $h \in K_{0}[t]$ such that
+\begin{align}
+m_{\alpha, K_{0}}
+=
+h \cdot m_{\sigma(\alpha), K_{0}}%
+\label{eq : LQ06 factorization}
+\end{align}
+By definition, $m_{\alpha, K_{0}}$ is irreducible, and $\deg m_{\sigma(\alpha), K_{0}} \geq 1$. It follows that $h \in (K_{0}[t])^{\times} \isomorphism K_{0}^{\times}$, that is, $h$ is a nonzero constant (polynomial). By definition, a minimal polynomial has leading coefficient $1_{K_{0}}$. Equation \eqref{eq : LQ06 factorization} and the definition of polynomial multiplication thus imply that $h = 1_{K_{0}}$, so that $m_{\alpha, K_{0}} = m_{\sigma(\alpha), K_{0}}$, as desired.
+
+Part \ref{itm : LQ06b}:}% End solution.

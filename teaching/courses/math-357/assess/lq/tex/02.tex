@@ -1,0 +1,102 @@
+%
+% LQ02 : 2024--01--29 (M)
+%
+
+\noindent{}Consider $\R[x, y]$, the polynomial ring in two indeterminates $x, y$ whose ring of coefficients is the field $\R$ of real numbers. Let $f, g \in \R[x, y]$ be the polynomials
+\begin{align*}
+f(x, y)
+&=
+x^{2} y - x y - x y^{3}
+&
+g(x, y)
+&=
+x^{2} - x y - 2 y^{2}
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item For each polynomial, state its (total) degree and its number of homogeneous components.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+By definition, the (total) degree of a nonzero polynomial is the maximum of the (total) degrees of its nonzero monomial terms. Let ``\# h.c.'' denote ``number of homogeneous components''. We have
+\begin{center}
+\begin{tabular}{l|c c}
+		&	deg	&	\# h.c.	\\
+\hline
+$f$	&	$4$	&	$3$	\\
+$g$	&	$2$	&	$1$
+\end{tabular}
+\end{center}
+In particular, each nonzero monomial term of $f$ is a different homogenous component, because each term has a different (total) degree; and $g$ has a single nonzero homogeneous component, and is therefore homogeneous.}% End solution.
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : LQ02b} Consider the following statement: ``If a polynomial is homogeneous, then the zeros of the induced function are well defined on lines through the origin.'' Use the polynomials $f$ and $g$ to explain this statement. \fontHint{What is $\{\lambda (x_{0}, y_{0}) \st \lambda \in \R\}$?}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+As noted above, the polynomial $g$ is homogeneous, whereas $f$ is not. We observe that $(2,1)$ is a zero of $g$:
+\begin{align*}
+g(2, 1)
+=
+4 - 2 - 2
+=
+0
+\end{align*}
+Let $\ell_{(2,1)}$ denote the line in $\R^{2}$ passing through the origin and the point $(2,1)$. Then
+\begin{align*}
+\ell_{(2,1)}
+=
+\{\lambda (2,1) \st \lambda \in \R\}
+\end{align*}
+In particular, for every point $P \in \ell_{(2,1)}$, there exists a $\lambda \in \R$ such that $P = \lambda (2,1)$. Evaluating $g$ at $P$, we find
+\begin{align*}
+g(P)
+=
+g(2 \lambda, \lambda)
+=
+4 \lambda^{2} - 2 \lambda^{2} - 2 \lambda^{2}
+=
+\lambda^{2} (4 - 2 - 2)
+=
+0
+\end{align*}
+Because $P \in \ell_{(2,1)}$ was arbitrary, we conclude that the polynomial $g$ evaluates to $0$ on the line $\ell_{(2,1)}$. That is, if a homogeneous polynomial evaluates to zero at a nonzero point $P$, then it evaluates to zero at any point on the line through $P$ and the origin.}% End solution.
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item Make a conjecture.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+We observe that $(2,1)$ is also a zero of the polynomial $f$:
+\begin{align*}
+f(2,1)
+=
+4 - 2 - 2
+=
+0
+\end{align*}
+The point $(-2, -1) = -1 (2, 1)$ is on the line through $(2, 1)$ and the origin. We compute
+\begin{align*}
+f(-1 (2,1))
+=
+f(-2, -1)
+=
+-4 - 2 - 2
+=
+-8
+\neq
+0
+\end{align*}
+Perhaps we could strengthen the statement in part \ref{itm : LQ02b}? Conjecture: Let $R$ be an integral domain, let $n \in \integersPositive$, and let $t_{i}$ be indeterminates. A polynomial $f \in R[t_{1}, \ldots, t_{n}]$ is homogeneous if and only if the zeros of the induced function $f : R^{n} \rightarrow R$ are well defined on lines through the origin. (Do we need the ring $R$ of coefficients to be an integral domain? to be a field? to be infinite?)
+
+One might also consider fractions of homogeneous polynomials. Conjecture: Let $R$, $n$, and $t_{i}$ be as above, and let $f, g \in R[t_{1}, \ldots, t_{n}]$ be nonzero homogeneous polynomials of the same degree. Let $\zeros(g)$ denote the set of zeros of $g$:
+\begin{align*}
+\zeros(g)
+=
+\{a \in R^{n} \st g(a) = 0\}
+\end{align*}
+Then $f / g$ is well defined as a function $R^{n} - \zeros(g) \rightarrow R$.}% End solution.

@@ -1,6 +1,8 @@
-# Cisco Certified Network Associate (CCNA) certification
+# CCNA
 
-- Status: Earned (2025-05-20)
+- Certification: Cisco Certified Network Associate (CCNA)
+- Vendor: Cisco
+- Status: Passed (2025-05-20)
 
 ## Learning resources
 

@@ -1,0 +1,79 @@
+%
+% SQ11 : 2024--03--20 (W)
+%
+
+\begin{enumerate}[label=(\alph*)]
+\item Define the minimal polynomial of a field element. Briefly but clearly introduce any hypotheses and auxiliary objects that you use in your definition.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+Let $K : K_{0}$ be a field extension, and let $\alpha \in K$ be algebraic over $K_{0}$. The \fontDefWord{minimal polynomial} of $\alpha$ over $K_{0}$ is the (unique) monic, irreducible polynomial $p \in K_{0}[t]$ such that $p(\alpha) = 0$.% Begin footnote.
+\footnote{We may view the ring (field) operations $+$ and $\times$ used to evaluate $p$ at $\alpha$ as being those of $K$.} % End footnote.
+We will denote this minimal polynomial by $m_{\alpha, K_{0}}$.
+
+Note that the hypothesis that $\alpha$ be algebraic over $K_{0}$ is important. If $\alpha$ is transcendental (not algebraic) over $K_{0}$, then by definition there is no polynomial $p \in K_{0}[t]$ such that $p(\alpha) = 0$, let alone a monic, irreducible one.}% End solution.
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item Let $\alpha = \sqrt{-\sqrt{2}} \in \C$. State the minimal polynomial of $\alpha$ over $\Q$, over $\R$, and over $\C$.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+We may manipulate the defining equation for $\alpha$ in an attempt to get a ``polynomial'' relation involving powers of $\alpha$ and coefficients in the desired base field. If we are successful, then we may replace $\alpha$ with $t$ to get a polynomial with $\alpha$ as a zero. (We still must certify that the polynomial is monic and irreducible.) Playing this game, we get candidates
+\begin{align*}
+\alpha
+&=
+\sqrt{-\sqrt{2}}
+&
+&\Leftrightarrow
+&
+\alpha - \sqrt{-\sqrt{2}}
+&=
+0
+&
+&\rightsquigarrow
+&
+m_{\alpha, \C}
+&=
+t - \sqrt{-\sqrt{2}}
+\\
+\alpha^{2}
+&=
+-\sqrt{2}
+&
+&\Leftrightarrow
+&
+\alpha^{2} + \sqrt{2}
+&=
+0
+&
+&\rightsquigarrow
+&
+m_{\alpha, \R}
+&=
+t^{2} + \sqrt{2}
+\\
+\alpha^{4}
+&=
+2
+&
+&\Leftrightarrow
+&
+\alpha^{4} - 2
+&=
+0
+&
+&\rightsquigarrow
+&
+m_{\alpha, \Q}
+&=
+t^{4} - 2
+\end{align*}
+All these polynomials are monic. As for irreducibility, note that
+\begin{enumerate}
+\item $m_{\alpha, \Q}$ is irreducible in $\Q[t]$ by the Eisenstein--Sch\"{o}nemann criterion with $p = 2$ and Gau\ss{}'s lemma.% Begin footnote.
+\footnote{See DF3e, Proposition 9.13, p 309 and Proposition 9.5, p 303, respectively.}% End footnote.
+\item $m_{\alpha, \R}$ is irreducible in $\R[t]$ because, if it factored, it would do so into two degree-1 factors, which would imply that $\alpha = \sqrt{-2}$ is in $\R$, a contradiction.% Begin footnote.
+\footnote{See DF3e, Proposition 9.10, p 308.}% End footnote.
+\item $m_{\alpha, \C}$ is irreducible in $\C[t]$ because all degree-1 polynomials over a field are irreducible.% Begin footnote.
+\footnote{Note that the hypothesis that the ring of coefficients is a field is important. For example, the degree-1 polynomial $2 t - 2$ is reducible in $\Z[t]$ (why?).}% End footnote.
+\end{enumerate}}% End solution.

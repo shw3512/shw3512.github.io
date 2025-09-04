@@ -1,0 +1,46 @@
+%
+% SQ08 : 2024--02--16 (F)
+%
+
+\noindent{}By popular demand, you are sharing knowledge of modules with your friends while you all share a meal together. ``Indeed!'' says one, ``Why, module homomorphisms are exactly like ring homomorphisms: They both respect addition and multiplication.'' Respond.
+
+\spaceSolution{2in}{``Indeed!'' say I. ``Why, `exactly' being such a strong word, in a careful response to its use in casual conversation, one almost always finds a `no', or at least a `not exactly'.'' (``Which is `exactly' why nonmathematicians can find casual conversation with mathematicians tedious,'' jokes another friend, barely sotto voce. I acknowledge the bait with a grinning frown and continue with my response.) Let me offer three justifications for this ``not exactly''. First, the multiplication in rings and on modules differs: In ring, multiplication is a binary operation; whereas on modules, (scalar) multiplication is a ring action. This may be clearer in writing,'' I remark, and taking a handy paper napkin and a loitering pen, I write
+\begin{center}
+\begin{tabular}{c c c}
+In a ring $R$	&	\hspace{0.5in}	&	On an $R$-module $M$	\\
+$\times : R \times R \rightarrow R$	&	&	$\cdot : R \times M \rightarrow M$
+\end{tabular}
+\end{center}
+``This different algebraic structure leads to different treatment by the respective homomorphisms,'' I continue, appending the following rows to the table on the napkin (on the table):
+\begin{center}
+\begin{tabular}{c c c}
+$\varphi(r_{1} \times_{R} r_{2}) = \varphi(r_{1}) \times_{S} \varphi(r_{2})$
+&
+\hspace{0.5in}
+&
+$\varphi(r \cdot_{M} m) = r \cdot_{N} \varphi(m)$
+\\
+for $\varphi : R \rightarrow S$
+&
+\hspace{0.5in}
+&
+for $\varphi : M \rightarrow N$
+\end{tabular}
+\end{center}
+``Now, one could consider the case $M = R$, with scalar multiplication on the $R$-module $R$ given by the multiplication in the ring $R$. In this case, the domain and codomain of the maps $\times$ and $\cdot$ (I point to the table) would be the same, but notice that the homomorphisms would still treat the two multiplications differently. This allows there to be ring homomorphisms that are not $R$-module homomorphisms, and vice versa,'' I observe solemnly, appending two final rows to the napkin table:
+\begin{center}
+\begin{tabular}{c c c}
+$\varphi : \Z \rightarrow \Z$
+&
+\hspace{0.5in}
+&
+$\varphi : \F[t] \rightarrow \F[t]$
+\\
+$\varphi(a) = 2 a$
+&
+\hspace{0.5in}
+&
+$\varphi(f(t)) = f(t^{2})$
+\end{tabular}
+\end{center}
+``Which,'' I conclude with a smile, ``would be hard to accomplish if these two homomorphisms were exactly alike.'' My friends joining me in general agreement, I join them in enjoying our shared meal.}

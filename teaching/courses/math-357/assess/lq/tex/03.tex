@@ -1,0 +1,106 @@
+%
+% LQ03 : 2024--01--31 (W)
+%
+
+\noindent{}Let $R$ be a commutative ring, and let $t$ be an indeterminate. Consider the polynomial ring $R[t]$.
+
+\begin{enumerate}[label=(\alph*)]
+\item Define the degree function, $\deg$, on $R[t]$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Given any nonzero $f \in R[t]$, we may write $f$ in the form
+\begin{align}
+f
+=
+a_{m} t^{m} + \ldots + a_{0}%
+\label{eq : LQ03 Nonzero Polynomial}
+\end{align}
+where $m \in \integersNonnegative$, each $a_{i} \in R$, and $a_{m} \neq 0$. Define
+\begin{align*}
+\deg
+:
+R[t]
+&\rightarrow
+\integersNonnegative \cup \{-\infty\}
+\\
+f
+&\mapsto
+\begin{dcases*}
+m			&	if $f \neq 0$, $f$ as in \eqref{eq : LQ03 Nonzero Polynomial}	\\
+-\infty	&	if $f = 0$
+\end{dcases*}
+\end{align*}
+Some mathematicians prefer to define $\deg : R[t] \setminus \{0\} \rightarrow \integersNonnegative$, leaving the degree of the zero polynomial undefined.}% End solution.
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item Let $p, q \in R[t]$. Prove that if $R$ is an integral domain, then
+\begin{align*}
+\deg p q
+=
+\deg p + \deg q
+\end{align*}
+Give an example to show that this equation can fail if $R$ is not an integral domain.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+For the (counter)example, consider the ring $\Z / (4)$ (also written $\Z / 4 \Z$), which is not an integral domain, and the polynomials $p = q = 2 t + 1$ in $(\Z / (4))[t]$. Then
+\begin{align*}
+p q
+=
+(2 t + 1) (2 t + 1)
+=
+4 t^{2} + 4 t + 1
+\equiv
+0 t^{2} + 0 t + 1
+=
+1
+\end{align*}
+so
+\begin{align*}
+\deg p q
+=
+0
+\neq
+2
+=
+1 + 1
+=
+\deg p + \deg q
+\end{align*}
+
+Now suppose $R$ is an integral domain. Case 1: Either $p$ or $q$ is the zero polynomial. In this case, $p q = 0$. With the convention that for all $n \in \integers \cup \{-\infty\}$, $-\infty + n = -\infty = n + -\infty$, we get
+\begin{align*}
+\deg p q
+=
+-\infty
+=
+\deg p + \deg q
+\end{align*}
+Case 2: Neither $p$ nor $q$ is the zero polynomial. Denote their leading terms by
+\begin{align*}
+\leadingTerm(p)
+&=
+a_{m} t^{m}
+&
+\leadingTerm(q)
+&=
+b_{n} t^{n}
+\end{align*}
+By hypothesis, $p \neq 0$ and $q \neq 0$; hence $a_{m} \neq 0$ and $b_{n} \neq 0$, and $\deg p = m$ and $\deg q = n$. Because $R$ is an integral domain, it follows that $a_{m} b_{n} \neq 0$. Hence, by definition of multiplication in $R[t]$,
+\begin{align*}
+\leadingTerm(p q)
+=
+a_{m} b_{n} t^{m + n}
+\end{align*}
+so
+\begin{align*}
+\deg p q
+=
+m + n
+=
+\deg p + \deg q
+\end{align*}
+as desired.}% End solution.

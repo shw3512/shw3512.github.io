@@ -1,0 +1,89 @@
+%
+% LQ04C : 2024--04--10 (W)
+%
+
+\noindent{}Let $\Q$ denote the field of rational numbers; given a prime $p \in \integersPositive$, let $\F_{p} \isomorphism \Z / (p)$, a finite field with $p$ elements; and let $t$ be an indeterminate. For each of the quotient rings below, characterize its algebraic structure as ``field'', ``integral domain but not field'', or ``ring but not integral domain''. Justify your characterization.
+\begin{align*}
+R_{1}
+&=
+\F_{5}[t] / (t^{3} + 2)
+\\
+R_{2}
+&=
+\Q[t] / (t^{4} - 8 t^{2} + 20)
+\\
+R_{3}
+&=
+\Q[t] / (t^{3} - 11 t^{2} + 57 t + 12)
+\end{align*}
+
+
+
+\spaceSolution{4in}{% Begin solution.
+We analyze each ring in turn.
+
+$R_{1}$ : Ring but not integral domain. $t = 2$ is a zero of $f_{1}$, as a function $\F_{5} \rightarrow \F_{5}$. Equivalently, $t - 2$ is a factor of $t^{3} - 2$ in $\F_{5}[t]$.
+
+$R_{2}$ : Field. View $f_{2}$ as a function $\R \rightarrow \R$. We compute
+\begin{align*}
+f_{2}'
+&=
+4 t^{3} - 16 t
+=
+4 t (t + 2) (t - 2)
+\end{align*}
+Because $\lim_{t \rightarrow \pm{}\infty} f_{2}(t) = +\infty$, the values of $f_{2}$ at the ``outer'' horizontal tangents, at $t = \pm{}2$, are the candidate global minima of $f_{2}$. We compute
+\begin{align*}
+f_{2}(\pm{}2)
+=
+16 - 32 + 20
+=
+4
+>
+0
+\end{align*}
+We conclude that $f_{2}$ has no zeros in $\R$, and hence in $\Q$. Therefore $f_{2}$ is irreducible in $\Q[t]$, so the principal ideal $(f_{2})$ is maximal, so $R_{2} = \Q[t] / (f_{2})$ is a field.
+
+$R_{3}$ : We present two approaches.
+
+Approach 1: Consider $f_{3}$ as a function $\R \rightarrow \R$. We compute
+\begin{align*}
+f_{3}'(t)
+=
+3 t^{2} - 22 t + 57
+\end{align*}
+which has discriminant
+\begin{align*}
+(-22)^{2} - 4 (3) (57)
+=
+484 - 684
+=
+-200
+<
+0
+\end{align*}
+It follows that the function $f_{3}'$ has no zeros in $\R$, and therefore $f_{3}'(t) > 0$ for all $t \in \R$. That is, the function $f_{3}$ is monotonically increasing, and therefore has exactly one zero in $\R$. We compute
+\begin{align*}
+f_{3}(-1)
+&=
+-57
+<
+0
+&
+f_{3}(0)
+=
+12
+>
+0
+\end{align*}
+so by the intermediate value theorem, this unique real zero lies in the interval $(-1, 0)$. The rational zeros test applied to the polynomial $f_{3}$ implies that any rational zero of $f_{3}$ is an integer. There are no integers in the (open) interval $(-1, 0)$, so we conclude that $f_{3}$ has no zero in $\Q$. Because $f_{3}$ is degree 3, this is equivalent to $f_{3}$ being irreducible in $\Q[t]$.
+
+Approach 2: Consider $f_{3}(t + 2)$:
+\begin{align*}
+f_{3}(t + 2)
+=
+t^{3} - 5 t^{2} + 25 t + 90
+\end{align*}
+This is irreducible in $\Z[t]$ by the Eisenstein--Sch\"{o}nemann criterion, and therefore irreducible in $\Q[t]$ by Gau\ss{}'s lemma. Irreducibility of $f_{3}(t + 2)$ in $\Q[t]$ is equivalent to irreducibility of $f_{3}(t)$ in $\Q[t]$. Thus $f_{3}$ is irreducible in $\Q[t]$
+
+Because $f_{3}$ is irreducible in $\Q[t]$, the principal ideal $(f_{3})$ is maximal in $\Q[t]$, so $R_{3} = \Q[t] / (f_{3})$ is a field.}% End solution.

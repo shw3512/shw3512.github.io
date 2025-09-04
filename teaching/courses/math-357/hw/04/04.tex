@@ -1,0 +1,116 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{ifthen}
+
+
+
+\newcommand{\showSolutions}{1}% Show solutions?
+% Allowed values:
+% - 0 = Do not show
+% - 1 = Show
+
+% Display or do not display solutions.
+\ifthenelse{\equal{\showSolutions}{1}}{%
+  \newcommand{\spaceSolution}[2]{#2}
+}%
+{%
+  \newcommand{\spaceSolution}[2]{\vspace{#1}}
+}%
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+
+
+
+\DeclareMathOperator{\Endomorphism}{End}
+\newcommand{\R}{\reals}
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\submodule}{\leq}
+
+
+
+\title{Math 357\\Expositional homework 04}
+\author{}
+\date{Assigned: 2024--02--14 (W)\\\hspace{9.3mm}Due: 2024--02--26 (M)}
+
+
+
+% Document begins here.
+
+\begin{document}
+
+\maketitle
+
+The goal of this homework is to understand modules---including their connection to and generalization of vector spaces---via a specific and important example: $F[t]$-modules. The exercises are adapted from Dummit \&{} Foote, 3e, Sections 10.1 and 10.3.
+
+Let $F$ be a field, let $t$ be an indeterminate, let $V$ be an $F$-module (aka $F$-vector space), and let $T : V \rightarrow V$ be an $F$-module homomorphism (aka $F$-linear transformation).
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : EH04a} Use the linear transformation $T$ to give $V$ the structure of an $F[t]$-module. In particular, verify that the ring action of $F[t]$ on $V$ that you define satisfies the module axioms. \fontHint{See p 340.}
+
+\item\label{itm : EH04b} Let $U \submodule V$ be an $F$-submodule (aka $F$-subspace). $U$ is \fontDefWord{$T$-stable} (aka \fontDefWord{$T$-invariant}) if for all $u \in U$, $T(u) \in U$.% Begin footnote.
+\footnote{One nice property of a $T$-stable submodule $U$ is that the module homomorphism $T : V \rightarrow V$, restricted to $U$, again gives a module homomorphism $T|_{U} : U \rightarrow U$. Under favorable conditions, we can decompose $V = U \oplus W$ and understand the operation of $T$ on $V$ by studying the operation of its restrictions to the ``smaller'' spaces $U$ and $W$.} % End footnote.
+Show that $W \subseteq V$ is an $F[t]$-submodule if and only if $W$ is a $T$-stable $F$-subspace of $V$. \fontHint{See p 341.}
+
+\item\label{itm : EH04c} View $V$ as an $F$-vector space. Recall that the \fontDefWord{endomorphism ring of $V$} is the set $\Endomorphism_{F}(V)$ of all $F$-linear transformations from $V$ to itself, equipped with operations $+$ and $\times$ (see pp 346--7). There is a natural map
+\begin{align*}
+F &\rightarrow \Endomorphism_{F}(V)
+\\
+\alpha &\mapsto \alpha I
+\end{align*}
+where $I : V \rightarrow V$ is the identity map, and $\alpha I$ is the map
+\begin{align*}
+\alpha I : V &\rightarrow V
+\\
+v &\mapsto \alpha \cdot I(v)
+\end{align*}
+The image of $F$ in $\Endomorphism_{F}(V)$ is called the \fontDefWord{subring of scalar transformations}.% Begin footnote.
+\footnote{In the general setting of $R$-modules $M$, the analogous map $R \rightarrow \Endomorphism_{R}(M)$ may not be injective, as it is when $R = F$ a field.} % End footnote.
+Prove or disprove the following statement: Let $T$ be a scalar transformation. If $V$ is a nonzero cyclic $F[t]$-module, then $\dim_{F} V = 1$. \fontHint{See p 352.}
+
+\item\label{itm : EH04d} Let $F = \R$, let $V = \R^{2}$, and let $T \in \Endomorphism_{F}(V)$ be rotation by $\pi$ radians around the origin. Show that every $F$-subspace of $V$ is an $F[t]$-submodule for $T$. \fontHint{Classify all $F$-subspaces of $V$.}
+\end{enumerate}
+
+
+
+\spaceSolution{0in}{% Begin solution.
+\subsection*{Solutions}
+
+Exercises \ref{itm : EH04a}--\ref{itm : EH04c} are discussed in the pages referenced in the hints.
+
+\subsection*{Exercise \ref{itm : EH04d}}
+
+Using elementary linear algebra, we can show that, up to isomorphism, vector (sub)spaces are completely characterized by their dimension. In particular, because $\dim_{\R} \R^{2} = 2$, any subspace $U \submodule \R^{2}$ is one of the following three types:
+\begin{enumerate}
+\item $\dim U = 0$, corresponding to the zero subspace, $\{0\}$.
+\item $\dim U = 1$, corresponding to a line through the origin in $\R^{2}$.
+\item $\dim U = 2$, corresponding to the entire vector space $\R^{2}$.
+\end{enumerate}
+
+Let $U$ be an $\R$-subspace of $\R^{2}$. Using the construction in exercise \ref{itm : EH04a}, we have that $U$ is an $F[t]$-submodule if and only if $U$ is $T$-stable. Geometrically, it is clear that $T$ fixes each of the three types of subspaces listed above. (Algebraically, only the case $\dim U = 1$ requires work, and that work is easy.) Thus, for the given $T$, every $\R$-subspace of $\R^{2}$ is an $F[t]$-submodule for $T$, as desired.}% End solution.
+
+\end{document}

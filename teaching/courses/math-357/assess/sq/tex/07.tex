@@ -1,0 +1,14 @@
+%
+% SQ07 : 2024--02--05 (M)
+%
+
+\noindent{}Let $R$ be a euclidean domain, and let $N : R \rightarrow \integersNonnegative$ be a norm that has a division algorithm. State the division algorithm. Within the division algorithm, what bonus do we get in the case $R = F[t]$, where $F$ is a field and $t$ is an indeterminate?
+
+\spaceSolution{3in}{% Begin solution.
+The division algorithm states the following: Let $a, b \in R$ such that $b \neq 0$. Then there exist $q, r \in R$ such that
+\begin{align*}
+a
+=
+q b + r
+\end{align*}
+and $r = 0$ or $N(r) < N(b)$. In the case $R = F[t]$, we get the bonus that the quotient $q$ (better, the product $q b$) and the remainder $r$ are unique, if we take $N$ to be $\deg$ with the amendment that $N(0) = 0$.}% End solution.

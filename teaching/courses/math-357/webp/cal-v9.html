@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <title>Math 357</title>
+    <style>
+    a:active
+    {
+      background-color : transparent;
+      color : rgba(180,150,255,1);
+      text-decoration : none;
+    }
+    a:hover
+    {
+      background-color : transparent;
+      color : rgba(150,180,255,1);
+      text-decoration : none;
+    }
+    a:link
+    {
+      background-color : transparent;
+      color : rgba(200,200,255,1);
+      text-decoration : none;
+    }
+    a:visited
+    {
+      background-color : transparent;
+      color : rgba(180,180,255,1);
+      text-decoration : none;
+    }
+    body
+    {
+      background-color : black;
+      color : white;
+    }
+    table
+    {
+      border-collapse : collapse;
+      font-family : arial,sans-serif;
+      position : relative;
+      text-align : left;
+      width : 100%;
+    }
+    td,th
+    {
+      border-left : 1px solid rgba(0,0,0,1);
+      border-right : 1px solid rgba(0,0,0,1);
+      padding : 8px;
+      text-align : left;
+    }
+    th
+    {
+      position : -webkit-sticky;
+      position : sticky;
+      top : 0px;
+      z-index : 100;
+    }
+    tr.head th
+    {
+      background : rgba(47,47,47,1);
+    }
+    tr:nth-child(2n+1)
+    {
+      background-color : rgba(63,63,63,1);
+    }
+    tr.exam
+    {
+      background-color : green;
+    }
+    tr.no_class
+    {
+      background-color : red;
+    }
+    tr.special_class
+    {
+      background-color : orange;
+    }
+    tr:hover
+    {
+      background-color : rgba(128,128,128,1);
+    }
+    </style>
+  </head>
+  
+  
+  
+  <body>
+    <table>
+      <thead>
+        <tr class="head">
+          <th>#</th>
+          <th>Day</th>
+          <th>Date</th>
+          <th>Topic</th>
+          <th>DF3 sections</th>
+          <th>Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>M</td>
+          <td>08 Jan</td>
+          <td>Introduction. Diagnostic quiz.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>W</td>
+          <td>10 Jan</td>
+          <td>Rings: Review</td>
+          <td>7.1&ndash;6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>F</td>
+          <td>12 Jan</td>
+          <td>Rings: Review</td>
+          <td>7.1&ndash;6</td>
+          <td></td>
+        </tr>
+        <tr class="no_class">
+          <td></td>
+          <td>M</td>
+          <td>15 Jan</td>
+          <td>(Holiday: Rev. Dr. Martin Luther King, Jr. Day)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>W</td>
+          <td>17 Jan</td>
+          <td>Rings: Homomorphisms and ideals</td>
+          <td>7.3</td>
+          <td>PH01</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>F</td>
+          <td>19 Jan</td>
+          <td>Rings: Ideal properties</td>
+          <td>7.4</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>M</td>
+          <td>22 Jan</td>
+          <td>Rings: Prime and maximal ideals</td>
+          <td>7.4</td>
+          <td>EH01</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>W</td>
+          <td>24 Jan</td>
+          <td>Polynomial rings: Introduction</td>
+          <td>9.1</td>
+          <td>PH02</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>F</td>
+          <td>26 Jan</td>
+          <td>Polynomial rings: Polynomials and functions</td>
+          <td>9.1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>M</td>
+          <td>29 Jan</td>
+          <td>Polynomial rings: Integral domain</td>
+          <td>9.1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>W</td>
+          <td>31 Jan</td>
+          <td>Polynomial rings: Euclidean domain</td>
+          <td>9.1</td>
+          <td>PH03</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>F</td>
+          <td>02 Feb</td>
+          <td>Polynomial rings: Consequences</td>
+          <td>9.2, 9.5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>M</td>
+          <td>05 Feb</td>
+          <td>Polynomial rings: Gau&szlig;'s lemma</td>
+          <td>9.3&ndash;4</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>W</td>
+          <td>07 Feb</td>
+          <td>Polynomial rings: Reduction</td>
+          <td>9.3&ndash;4</td>
+          <td>PH04</td>
+        </tr>
+        <tr class="special_class">
+          <td>14</td>
+          <td>R</td>
+          <td>08 Feb</td>
+          <td>Polynomial rings: Eisenstein&ndash;Sch&ouml;nemann</td>
+          <td>9.3&ndash;4</td>
+          <td>EH02</td>
+        </tr>
+        <tr class="no_class">
+          <td></td>
+          <td>F</td>
+          <td>09 Feb</td>
+          <td>(No class: Spring recess)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>M</td>
+          <td>12 Feb</td>
+          <td>Modules: Introduction</td>
+          <td>10.1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>W</td>
+          <td>14 Feb</td>
+          <td>Modules: Morphisms</td>
+          <td>10.2</td>
+          <td>PH05</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>F</td>
+          <td>16 Feb</td>
+          <td>Modules: Generation, direct sums, free modules</td>
+          <td>10.3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>M</td>
+          <td>19 Feb</td>
+          <td>Rep theory: Introduction</td>
+          <td>18.1</td>
+          <td>EH03</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>W</td>
+          <td>21 Feb</td>
+          <td>Rep theory: Frameworks</td>
+          <td>18.1</td>
+          <td>PH06</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>F</td>
+          <td>23 Feb</td>
+          <td>Rep theory: Equivalence</td>
+          <td>18.1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>M</td>
+          <td>26 Feb</td>
+          <td>Rep theory: Irreducibility</td>
+          <td>18.1</td>
+          <td>EH04</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>W</td>
+          <td>28 Feb</td>
+          <td>Rep theory: Maschke's theorem</td>
+          <td>18.1</td>
+          <td>PH07</td>
+        </tr>
+        <tr class="exam">
+          <td>23</td>
+          <td>F</td>
+          <td>01 Mar</td>
+          <td>Midterm exam 1</td>
+          <td>7&ndash;10, 18</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>M</td>
+          <td>04 Mar</td>
+          <td>Fields: Field extensions</td>
+          <td>13.1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>W</td>
+          <td>06 Mar</td>
+          <td>Fields: Field extensions</td>
+          <td>13.1</td>
+          <td>PH08</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>F</td>
+          <td>08 Mar</td>
+          <td>Fields: Algebraic extensions</td>
+          <td>13.2</td>
+          <td></td>
+        </tr>
+        <tr class="no_class">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>(No class: Spring break)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>M</td>
+          <td>18 Mar</td>
+          <td>Fields: Algebraic extensions</td>
+          <td>13.2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>W</td>
+          <td>20 Mar</td>
+          <td>Fields: Algebraic extensions</td>
+          <td>13.2</td>
+          <td>PH09</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>F</td>
+          <td>22 Mar</td>
+          <td>Fields: Algebraic extensions</td>
+          <td>13.2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>M</td>
+          <td>25 Mar</td>
+          <td>Fields: Composite fields, splitting fields</td>
+          <td>13.2, 4</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>W</td>
+          <td>27 Mar</td>
+          <td>Fields: Splitting fields, algebraic closures</td>
+          <td>13.4&ndash;5</td>
+          <td>PH10</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>F</td>
+          <td>29 Mar</td>
+          <td>Fields: Separability</td>
+          <td>13.5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>M</td>
+          <td>01 Apr</td>
+          <td>Galois theory: Introduction</td>
+          <td>14.1</td>
+          <td>EH05</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>W</td>
+          <td>03 Apr</td>
+          <td>Galois theory: Galois extensions</td>
+          <td>14.2</td>
+          <td>PH11</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>F</td>
+          <td>05 Apr</td>
+          <td>Galois theory: Fundamental theorem</td>
+          <td>14.2</td>
+          <td></td>
+        </tr>
+        <tr class="no_class">
+          <td></td>
+          <td>M</td>
+          <td>08 Apr</td>
+          <td>(No class: Solar eclipse day)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>W</td>
+          <td>10 Apr</td>
+          <td>Galois theory: Simple and composite extensions</td>
+          <td>14.4</td>
+          <td>PH12</td>
+        </tr>
+        <tr class="exam">
+          <td>37</td>
+          <td>F</td>
+          <td>12 Apr</td>
+          <td>Midterm exam 2</td>
+          <td>13, 14</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>M</td>
+          <td>15 Apr</td>
+          <td>Polynomial rings: Ideal membership</td>
+          <td>9.6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>W</td>
+          <td>17 Apr</td>
+          <td>Rep theory: Character theory</td>
+          <td>18.3</td>
+          <td>PH13</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>F</td>
+          <td>19 Apr</td>
+          <td>Galois theory: Finite fields</td>
+          <td>13.6, 14.3</td>
+          <td></td>
+        </tr>
+        <tr class="exam">
+          <td>FE</td>
+          <td>T</td>
+          <td>30 Apr</td>
+          <td>Final exam (HBH 227)</td>
+          <td>All</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

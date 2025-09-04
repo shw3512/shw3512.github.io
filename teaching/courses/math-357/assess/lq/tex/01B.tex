@@ -1,0 +1,90 @@
+%
+% LQ01B : 2024--03--22 (F)
+%
+
+% Gallian 7e Exercise 12.50
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ01Ba} Let $R$ be a ring with a multiplicative identity $1_{R}$. $R$ is \fontDefWord{boolean} if, for all $a \in R$, $a^{2} = a$. Prove that a boolean ring is commutative.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Note that the ring axioms imply that $-1_{R} \in R$, and that it satisfies
+\begin{align}
+-1_{R}
+=
+(-1_{R})^{2}
+=
+1_{R}%
+\label{eq : LQ01B boolean ring -1}
+\end{align}
+where for the first equality we have used the hypothesis that $R$ is boolean.
+
+Case 1: $1_{R} = 0_{R}$. In this case, $R$ is the zero ring, which satisfies the axioms of a boolean ring. There is only one element $a \in R$ (namely $0_{R}$), and any element commutes with itself. Hence $R$ is commutative.
+
+Case 2: $1_{R} \neq 0_{R}$. Let $a, b \in R$ be arbitrary, and consider the element $a + b \in R$. Then
+\begin{align*}
+a + b
+=
+(a + b)^{2}
+=
+a^{2} + a b + b a + b^{2}
+=
+a + a b + b a + b
+\end{align*}
+where in the first equality, we use the hypothesis that $R$ is boolean; in the second, the left- and right-distributivity axioms of a ring; and in the third, the hypothesis that $R$ is boolean. Because $R$ is a ring, by definition it contains the additive inverses $-a$ and $-b$. Adding these to both sides of the last equation, we get
+\begin{align*}
+a b + b a
+&=
+0
+&
+&\Leftrightarrow
+&
+a b
+&=
+-b a
+\end{align*}
+Applying the ring axioms and equation \eqref{eq : LQ01B boolean ring -1} to this last equality, we conclude that
+\begin{align*}
+a b
+=
+-b a
+=
+-1_{R} (b a)
+=
+1_{R} (b a)
+=
+b a
+\end{align*}
+as desired.}% End solution.
+
+
+
+% Gallian 7e Exercise 14.16
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : LQ01Bb} Let $R$ be a ring; and let $I_{1}, I_{2}$ be ideals of $R$. Recall that
+\begin{align*}
+I_{1} + I_{2}
+&=
+\{a_{1} + a_{2} \st a_{i} \in I_{i}\}
+&
+I_{1} I_{2}
+&=
+\left\{\sum_{j = 1}^{n} a_{1, j} a_{2, j} \st n \in \integersPositive; \forall j, a_{i, j} \in I_{i}\right\}
+\end{align*}
+are ideals. (In particular, note that $I_{1} I_{2}$ comprises all finite sums of terms of the form $a_{1} a_{2}$ with $a_{i} \in I_{i}$.) Prove that if $R$ is a commutative ring with a multiplicative identity, and if $I_{1} + I_{2} = R$, then $I_{1} \cap I_{2} = I_{1} I_{2}$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+The inclusion $I_{1} I_{2} \subseteq I_{1} \cap I_{2}$ holds for arbitrary rings, by definition of an ideal (namely, closure under addition and ``strong closure'' under multiplication by ring elements). To show the reverse inclusion, $I_{1} \cap I_{2} \subseteq I_{1} I_{2}$, let $a \in I_{1} \cap I_{2}$. By hypothesis, $I_{1} + I_{2} = R$, and there exists a multiplicative identity element $1_{R} \in R$; so in particular, there exist $e_{1} \in I_{1}$ and $e_{2} \in I_{2}$ such that $e_{1} + e_{2} = 1_{R}$. Then
+\begin{align*}
+a
+=
+a 1_{R}
+=
+a (e_{1} + e_{2})
+=
+a e_{1} + a e_{2}
+=
+e_{1} a + a e_{2}
+\end{align*}
+where in the last equality we have used the hypothesis that $R$ is commutative. The last expression is a sum of elements, each with the form (element of $I_{1}$) times (element of $I_{2}$). Thus $a \in I_{1} I_{2}$, as desired.}% End solution.
