@@ -8,11 +8,11 @@
 
 ## Course documents
 
-- Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/syl.tex))
+- Syllabus ([pdf](math-357/docs/pdf/syl.pdf), [tex](math-357/docs/tex/syl.tex))
 - Webpages:
-    - [Course homepage](webp/home.html)
-    - Calendar of lectures ([original](webp/cal-v0.html) | [final](webp/cal-v9.html))
-    - [Homework (practice)](webp/ph.html)
+    - [Course homepage](math-357/webp/home.html)
+    - Calendar of lectures ([original](math-357/webp/cal-v0.html) | [final](math-357/webp/cal-v9.html))
+    - [Homework (practice)](math-357/webp/ph.html)
 
 ## Lecture supplements
 
