@@ -54,19 +54,19 @@ Remarks.
 
 |  # | Key topic                   | Files                 |
 |---:|:----------------------------|:----------------------|
-|  1 | Introduction                | [q](), [a](), [tex]() |
-|  2 | Ring theory                 | [q](), [a](), [tex]() |
-|  3 | Principal ideals            | [q](), [a](), [tex]() |
-|  4 | Polynomials v functions     | [q](), [a](), [tex]() |
-|  5 | Quotient rings              | [q](), [a](), [tex]() |
-|  6 | Check-in                    | [q](), [a](), [tex]() |
-|  7 | Division algorithm          | [q](), [a](), [tex]() |
-|  8 | Ring v module homomorphisms | [q](), [a](), [tex]() |
-|  9 | Matrix representations      | [q](), [a](), [tex]() |
-| 10 | Exam goals                  | [q](), [a](), [tex]() |
-| 11 | Minimal polynomials         | [q](), [a](), [tex]() |
-| 12 | Field theory                | [q](), [a](), [tex]() |
-| 13 | Exam goals                  | [q](), [a](), [tex]() |
+|  1 | Introduction                | [q](assess/sq/pdf/01.pdf), -, [tex](assess/sq/pdf/01.tex) |
+|  2 | Ring theory                 | [q](assess/sq/pdf/02.pdf), [a](assess/sq/pdf/02-sol.pdf), [tex](assess/sq/pdf/02.tex) |
+|  3 | Principal ideals            | [q](assess/sq/pdf/03.pdf), [a](assess/sq/pdf/03-sol.pdf), [tex](assess/sq/pdf/03.tex) |
+|  4 | Polynomials v functions     | [q](assess/sq/pdf/04.pdf), [a](assess/sq/pdf/04-sol.pdf), [tex](assess/sq/pdf/04.tex) |
+|  5 | Quotient rings              | [q](assess/sq/pdf/05.pdf), [a](assess/sq/pdf/05-sol.pdf), [tex](assess/sq/pdf/05.tex) |
+|  6 | Check-in                    | [q](assess/sq/pdf/06.pdf), -, [tex](assess/sq/pdf/06.tex) |
+|  7 | Division algorithm          | [q](assess/sq/pdf/07.pdf), [a](assess/sq/pdf/07-sol.pdf), [tex](assess/sq/pdf/07.tex) |
+|  8 | Ring v module homomorphisms | [q](assess/sq/pdf/08.pdf), [a](assess/sq/pdf/08-sol.pdf), [tex](assess/sq/pdf/08.tex) |
+|  9 | Matrix representations      | [q](assess/sq/pdf/09.pdf), [a](assess/sq/pdf/09-sol.pdf), [tex](assess/sq/pdf/09.tex) |
+| 10 | Exam goals                  | [q](assess/sq/pdf/10.pdf), -, [tex](assess/sq/pdf/10.tex) |
+| 11 | Minimal polynomials         | [q](assess/sq/pdf/11.pdf), [a](assess/sq/pdf/11-sol.pdf), [tex](assess/sq/pdf/11.tex) |
+| 12 | Field theory                | [q](assess/sq/pdf/12.pdf), [a](assess/sq/pdf/12-sol.pdf), [tex](assess/sq/pdf/12.tex) |
+| 13 | Exam goals                  | [q](assess/sq/pdf/13.pdf), -, [tex](assess/sq/pdf/13.tex) |
 
 ### Exams
 
