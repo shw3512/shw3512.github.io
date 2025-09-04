@@ -1,5 +1,7 @@
 I'm glad you're here.
 
+# Currently
+
 I'm currently working on
 
 - [Cybersecurity presentation for a general audience](cysec-g30.md) (30 minutes, English)
@@ -7,12 +9,13 @@ I'm currently working on
 I'm currently learning about
 
 - [Compilers](compilers.md)
-- [Computer networking](networking.md) (at the level of Cisco's CCNA)
+- [Computer networking]() (at the level of Cisco's CCNP)
 - [Lisp](lisp.md)
 
-Reach me on [GitHub][GH] \| [LinkedIn][LI]
+# Previously
 
+Peruse my past [learning](learn/past.md) and [projects](proj/past.md).
 
+# Connect
 
-[GH]: <https://github.com/shw3512> "GitHub : shw"
-[LI]: <https://www.linkedin.com/in/stephen-wolff-0x200/> "LinkedIn : shw"
+Reach me on [GitHub](https://github.com/shw3512) \| [LinkedIn](https://www.linkedin.com/in/stephen-wolff-0x200/)

@@ -1,4 +1,6 @@
-# Teaching
+# Past projects
+
+## Teaching
 
 Course names (will eventually) link to webpages (on GitHub) hosting corresponding course documents.
 
