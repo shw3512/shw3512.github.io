@@ -1,0 +1,134 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontField}[1]{\mathbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+
+
+
+\newcommand{\C}{\complexes}
+\DeclareMathOperator{\characteristic}{char}
+\newcommand{\complexes}{\fontField{C}}
+\newcommand{\divides}{\,|\,}
+\DeclareMathOperator{\Endomorphisms}{End}
+\DeclareMathOperator{\generalLinear}{GL}
+\newcommand{\GL}{\generalLinear}
+\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\integersPositive}{\fontField{Z}_{> 0}}
+\newcommand{\iso}{\isomorphism}
+\newcommand{\isomorphism}{\cong}
+\newcommand{\notDivides}{{}\hspace{-1mm}{\not\hspace{-.15em}\divides{}}\,}
+\newcommand{\order}{\#}
+\newcommand{\st}{\, | \,}
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+
+\title{Math 357\\Expositional homework 05}
+\author{}
+\date{Assigned: 2024--03--18 (M)\\Due: \hspace{1.5in}\,}
+
+
+
+% Document begins here.
+
+\begin{document}
+
+\maketitle
+
+The goal of this homework is to deepen our understanding of representation theory by working with the theory and applications of two results: Maschke's theorem and a version of Schur's lemma.
+
+\paragraph{Corollaries of Maschke's theorem.}
+
+Let $G$ be a finite group, let $F$ be a field such that $\characteristic F \notDivides \order G$, and let $V$ be a finitely generated $F G$-module (equivalently, a finite-dimensional $F$-vector space% Begin footnote.
+\footnote{Convince yourself of this equivalence! For a concise explanation, see DF3e, p 851.}% End footnote.
+). Prove the following statements.
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : EH05a} $V$ is completely reducible.% Begin footnote.
+\footnote{\fontHint{See DF3e, p 851.}}% End footnote.
+\item Let $\rho : G \rightarrow \GL(V)$ be a representation of $G$ on $V$---if you like, the representation afforded by the $F G$-module $V$. Then there exists a basis $\mathcal{B}$ of $V$ such that, simultaneously (!) for all $g \in G$, the matrix of $\rho(g)$ with respect to $\mathcal{B}$ is block diagonal.% Begin footnote.
+\footnote{\fontHint{Use Exercise \ref{itm : EH05a}. See also DF3e, p 851.}}% End footnote.
+\end{enumerate}
+
+\paragraph{Schur's lemma.}
+
+Let $G$ be a group; let $F$ be a field; and for $i \in \{1, 2\}$, let $V_{i}$ be an $F$-vector space, and let $\rho_{i} : G \rightarrow \GL(V_{i})$ be a representation of $G$ on $V_{i}$. A \fontDefWord{$G$-homomorphism} from $\rho_{1}$ to $\rho_{2}$ is an $F$-linear map $\varphi : V_{1} \rightarrow V_{2}$ that intertwines the two representations; that is, for all $g \in G$,
+\begin{align*}
+\varphi \circ \rho_{1}(g)
+=
+\rho_{2}(g) \circ \varphi
+\end{align*}
+as maps $V_{1} \rightarrow V_{2}$. A \fontDefWord{$G$-isomorphism} is an invertible $G$-homomorphism.
+
+Analogous to the notation we developed for modules, let $\Hom_{G}(\rho_{1}, \rho_{2})$ denote the set of $G$-homomorphisms from $\rho_{1}$ to $\rho_{2}$, and let $\Endomorphisms_{G}(\rho_{1})$ denote $\Hom_{G}(\rho_{1}, \rho_{1})$.
+
+Consider the following version of Schur's lemma.
+
+\begin{lemma}[Schur]
+Let $G$ be a group, let $V$ be a $\C$-vector space, let $\rho : G \rightarrow \GL(V)$ be an irreducible representation of $G$, and let $\varphi \in \Endomorphisms_{G}(\rho)$. Then $\varphi$ is a scalar multiple of the identity map on $V$. That is, there exists a $\lambda \in \C$ such that for all $v \in V$, $\varphi(v) = \lambda v$.
+\end{lemma}
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item Prove Schur's lemma. \fontHint{Make sense of the following proof outline:
+\begin{enumerate}[label=\arabic*.]
+\item $E_{\lambda} = \{v \in V \st \varphi(v) = \lambda v\} \neq \{0_{V}\}$
+\item $E_{\lambda}$ is $G$-invariant
+\item $E_{\lambda} = V$
+\end{enumerate}}
+\item For $i \in \{1, 2\}$, let $V_{i}$ be a $\C$-vector space, and let $\rho_{i} : G \rightarrow \GL(V_{i})$ be a representation of $G$ on $V_{i}$; and let $\varphi \in \Hom_{G}(\rho_{1}, \rho_{2})$. Prove that if $V_{1} \not\iso V_{2}$, then $\varphi$ is the zero map; and if $V_{1} \iso V_{2}$ and $\varphi$ is not the zero map, then $\varphi$ is a $G$-isomorphism.
+\end{enumerate}
+
+\paragraph{Applications of Schur's lemma.}
+
+Let $G$ be an abelian group, let $V$ be a nonzero $\C$-vector space, and let $\rho : G \rightarrow \GL(V)$ be an irreducible representation.
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : EH05e} Prove that $\deg \rho = 1$.% Begin footnote.
+\footnote{\fontHint{In the setting of Schur's lemma, consider $\varphi = \rho(g)$ for some $g \in G$.}}% End footnote.
+\item Let $n \in \integersPositive$, and let $G = \langle{}g \st g^{n} = 1\rangle{}$ be the cyclic group of order $n$ with generator $g$. Use Exercise \ref{itm : EH05e} to show that $\rho$ has the form
+\begin{align*}
+\rho
+:
+G
+&\rightarrow
+C^{\times}
+\\
+g^{j}
+&\mapsto
+e^{\frac{2 j k \pi i}{n}}
+\end{align*}
+for a fixed $k \in \{0, \ldots, n - 1\}$.
+\end{enumerate}
+
+\end{document}

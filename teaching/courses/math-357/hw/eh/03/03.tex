@@ -1,0 +1,419 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{ifthen}
+%\usepackage{mathtools}
+
+\newcommand{\showSolutions}{1}% Show solutions?
+% Allowed values:
+% - 0 = Do not show
+% - 1 = Show
+
+% Display or do not display solutions.
+\ifthenelse{\equal{\showSolutions}{1}}{%
+  \newcommand{\spaceSolution}[2]{#2}
+}%
+{%
+  \newcommand{\spaceSolution}[2]{\vspace{#1}}
+}%
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+
+
+
+\newcommand{\divides}{\,|\,}
+\newcommand{\F}{\mathbf{F}}
+\DeclareMathOperator{\Frac}{Frac}
+\newcommand{\idealeq}{\trianglelefteq}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\integersPositive}{\integers_{> 0}}
+\DeclareMathOperator{\LC}{LC}
+\newcommand{\notDivides}{{}\hspace{-1mm}\not\hspace{-.15em}\divides{}}
+\newcommand{\order}{\#}
+\newcommand{\Q}{\rationals}
+\newcommand{\rationals}{\mathbf{Q}}
+\DeclareMathOperator{\reverse}{rev}
+\newcommand{\st}{\, | \,}
+\newcommand{\Z}{\integers}
+
+
+
+\title{Math 357\\Expositional homework 03}
+\author{}
+\date{Assigned: 2024--02--07 (W)\\\hspace{0.37in}Due: 2024--02--19 (M)}
+
+
+
+% Document begins here.
+
+\begin{document}
+
+\maketitle
+
+The goal of this homework is to practice and extend our irreducibility--detector toolkit. The exercises are adapted from Dummit \&{} Foote, 3e, Section 9.4.
+
+Let $t$ be an indeterminate; let $\Z$ denote the ring of integers; and for $p \in \Z$ prime, let $\F_{p} = \Z / (p)$ (a finite field with $p$ elements).
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : EH03a} Prove the Eisenstein--Sch\"{o}nemann criterion for $\Z$, as we stated it in class: Let $p \in \Z$ be prime; let $f = a_{n} t^{n} + \ldots + a_{0} \in \Z[t]$, with $n = \deg f \geq 1$; and let $p \notDivides a_{n}$, $p \divides a_{n - 1}, \ldots, a_{0}$, and $p^{2} \notDivides a_{0}$. Then $f$ is irreducible in $\Q[t]$. Moreover, if $\gcd(a_{n}, \ldots, a_{0}) = 1$, then $f$ is irreducible in $\Z[t]$.
+
+\item\label{itm : EH03b} For each of the following polynomials, determine whether it is irreducible or reducible in the indicated polynomial ring. If it is reducible, then give its factorization into irreducibles.
+\begin{align*}
+f(t)
+&=
+t^{6} + 30 t^{5} - 15 t^{3} + 6 t - 120 \in \Z[t]
+\\
+g(t)
+&=
+t^{3} + t + 1 \in \Z[t]
+\\
+h(t)
+&=
+t^{3} + t + 1 \in \F_{3}[t]
+\end{align*}
+
+\item\label{itm : EH03c} Let $n \in \integersPositive$, and consider the polynomial
+\begin{align*}
+f_{n}(t)
+=
+1 + \prod_{i = 1}^{n} (t - i)
+\in
+\Z[t]
+\end{align*}
+Show that $f_{n}$ is irreducible for all $n \neq 4$.
+
+\item\label{itm : EH03d} Let $p \in \Z$ be prime, and consider the cyclotomic polynomial% Begin footnote.
+\footnote{Note that we can view $\Phi_{p}$ as the quotient of $t^{p} - 1$ when (evenly) divided by $t - 1$; that is, $\Phi_{p}(t) = \frac{t^{p} - 1}{t - 1}$.}% End footnote.
+\begin{align*}
+\Phi_{p}(t)
+=
+t^{p - 1} + \ldots + 1
+\in
+\Z[t]
+\end{align*}
+Show that $\Phi_{p}$ is irreducible. Explain the technique you use. \fontHint{See p 310.}
+
+\item\label{itm : EH03e} Let $F$ be a field, let $f \in F[t]$, and let $n = \deg f$. The \fontDefWord{reverse} of $f$ is the polynomial $t^{n} f(t^{-1})$. Justify why this construction gives a valid polynomial in $F[t]$ (even though $t^{-1}$ is not an element of $F[t]$). Give an example of a polynomial and its reverse that clearly illustrates why this name is apt for this construction. Prove that if $f(0) \neq 0$, then $f$ is irreducible if and only if its reverse is irreducible.
+\end{enumerate}
+
+
+
+\spaceSolution{4in}{% Begin solution.
+\subsection*{Solutions}
+
+\subsubsection*{Exercise \ref{itm : EH03a}}
+
+Suppose for the sake of contradiction that $f$ is reducible in $\Q[t]$. Then by Gauss's lemma, $f$ is reducible in $\Z[t]$, say
+\begin{align}
+f
+=
+f_{1} f_{2}%
+\label{eq : EH03a Factorization}
+\end{align}
+with $\deg f_{i} \geq 1$.% Begin footnote.
+\footnote{See DF3e, Proposition 9.5, pp 303--4.} % End footnote.
+Given a prime $p \in \Z$, let
+\begin{align*}
+\varphi_{p}
+:
+\Z[t]
+\rightarrow
+(\Z / (p))[t]
+\end{align*}
+be the reduction homomorphism associated to the prime ideal $(p)$ in $\Z$, which sends a polynomial $g \in \Z[t]$ to the polynomial $\overline{g} = \varphi_{p}(g) \in (\Z / (p))[t]$ whose coefficients are those of $g$ reduced modulo $p$. Using (i) the fact that $\varphi_{p}$ is a ring homomorphism and (ii) the hypotheses on the coefficients of $f$, we get
+\begin{align*}
+\overline{f}_{1} \overline{f}_{2}
+=
+\varphi_{p}(f_{1}) \varphi_{p}(f_{2})
+=
+\varphi_{p}(f_{1} f_{2})
+=
+\varphi_{p}(f)
+=
+\overline{a}_{n} t^{n}
+\end{align*}
+with $\overline{a}_{n} \neq 0$ in $\Z / (p)$. Thus $\overline{f}_{1}$ and $\overline{f}_{2}$ divide $\overline{a}_{n} t^{n}$ in $(\Z / (p))[t]$. Because $(p)$ is a prime (in fact, maximal) ideal in $\Z$, $\Z / (p)$ is an integral domain (in fact, a field), so $(\Z / (p))[t]$ is an integral domain. Therefore, the constant term of both $\overline{f}_{1}, \overline{f}_{2} \in (\Z / (p))[t]$ is $0$, which is true if and only if the constant term of both $f_{1}, f_{2} \in \Z[t]$ is divisible by $p$. This implies that the constant term of $f = f_{1} f_{2}$ is divisible by $p^{2}$, a contradiction. We conclude that $f$ is irreducible in $\Q[t]$.
+
+Further suppose that the greatest common divisor of the coefficients of $f$ is $1$. Recall Corollary 9.6 (p 304):
+\begin{quote}
+Let $R$ be a unique factorization domain, let $F = \Frac R$, let $f \in R[t]$, and suppose that the greatest common divisor of the coefficients of $f$ is $1$. Then $f$ is irreducible in $R[t]$ if and only if $f$ is irreducible in $F[t]$.
+\end{quote}
+We have just shown that $f$ is irreducible in $\Q[t] = (\Frac \Z)[t]$. Because $\Z$ is a euclidean domain, it is a unique factorization domain, and hence $\Z[t]$ is a unique factorization domain.% Begin footnote.
+\footnote{See DF3e, Corollary 9.8, p 305.} % End footnote.
+Hence Corollary 9.6 applies, and $f$ is irreducible in $\Z[t]$. 
+
+
+
+\subsubsection*{Exercise \ref{itm : EH03b}}
+
+We analyze each polynomial in turn.
+
+$f = t^{6} + 30 t^{5} - 15 t^{3} + 6 t - 120 \in \Z[t]$ is irreducible by the Eisenstein--Sch\"{o}nemann criterion with the prime $p = 3$. In particular, $3$ does not divide the leading coefficient of $f$, $3$ divides all other coefficients of $f$, and $3^{2}$ does not divide the constant term of $f$.
+
+$g = t^{3} + t + 1 \in \Z[t]$ is irreducible. We give two proofs. Both use the fact that a polynomial of degree $2$ or $3$ over a field is reducible if and only if its associated function has a zero.% Begin footnote.
+\footnote{See DF3e, Proposition 9.10, p 308.}% End footnote.
+\begin{enumerate}
+\item Method 1: Reduction modulo a proper ideal. Consider the maximal ideal $(2) \idealeq \Z$ and the associated reduction homomorphism $\varphi_{2} : \Z[t] \rightarrow (\Z / (2))[t]$. The polynomial
+\begin{align*}
+\varphi_{2}(g)
+=
+t^{3} + t + 1
+\in
+(\Z / (2))[t]
+\end{align*}
+has no zeros in the field $\Z / (2)$, so $\varphi_{2}(g)$ is irreducible, and therefore $g$ is irreducible.% Begin footnote.
+\footnote{The last implication uses DF3e Proposition 9.12, p 309.}% End footnote.
+
+Note that the reduction part of this argument requires only a proper, not necessarily maximal, ideal. However, the equivalence of reducibility and zeros for degree-2 and degree-3 polynomials requires that the ring of coefficients be a field, which (for a quotient ring) requires that the ideal by which we quotient be maximal.
+
+\item Method 2: Analysis in $\Q[t]$. View $g \in \Q[t]$. Because $\deg g = 3$, the polynomial $g$ is reducible if and only if the induced function $g : \Q \rightarrow \Q$ has a zero. By the rational zeros test, if $\frac{a}{b} \in \Q$ is a zero of $g$ with $\gcd(a, b) = 1$ (that is, $\frac{a}{b}$ is in lowest terms), then $a$ divides the constant term of $g$ and $b$ divides the leading coefficient of $g$; that is, $a \divides 1$ and $b \divides 1$, so $\frac{a}{b} = \pm{}1$. We compute
+\begin{align*}
+g(-1)
+&=
+-1
+&
+g(1)
+&=
+3
+\end{align*}
+We conclude that $g$ is irreducible in $\Q[t]$. Because the greatest common divisor of the coefficients of $g$ is $1$, if $g$ is irreducible in $\Q[t]$, then $g$ is irreducible in $\Z[t]$, as desired.
+\end{enumerate}
+
+$h =  t^{3} + t + 1 \in \F_{3}[t]$ is reducible. Because $\deg h = 3$, the polynomial $h$ is reducible if and only if the induced function $h$ has a zero. We compute that $h(1) = 0$, so $h$ is reducible.
+
+
+
+\subsubsection*{Exercise \ref{itm : EH03c}}
+
+% Provide an overview of the logic in this proof. (!!!)
+
+Suppose for the sake of contradiction that $f_{n}$ is reducible in $\Z[t]$, say
+\begin{align*}
+f_{n}
+=
+g_{1} g_{2}
+\end{align*}
+Without loss of generality, let $\deg g_{1} \leq \deg g_{2}$. By definition of $f_{n}$, $\LC(f_{n}) = 1$, so the greatest common divisor of the coefficients of $f_{n}$ equals $1$, and therefore each $g_{i}$ has degree at least $1$.
+
+Note that
+\begin{align*}
+g_{1} g_{2} - 1
+=
+f_{n} - 1
+=
+\prod_{i = 1}^{n} (t - i)
+\end{align*}
+This implies that for each $\alpha \in \{1, \ldots, n\}$,
+\begin{align*}
+(g_{1} g_{2} - 1)(\alpha)
+&=
+0
+&
+&\Leftrightarrow
+&
+g_{1}(\alpha) g_{2}(\alpha)
+&=
+1
+&
+&\Leftrightarrow
+&
+g_{1}(\alpha), g_{2}(\alpha)
+&=
+\pm{}1
+\end{align*}
+where in the final statement, for each $\alpha$, $g_{1}(\alpha)$ and $g_{2}(\alpha)$ have the same sign. Denote
+\begin{align*}
+S_{1}
+&=
+\{\alpha \in \{1, \ldots, n\} \st g_{i}(\alpha) = 1\}
+&
+S_{-1}
+&=
+\{\alpha \in \{1, \ldots, n\} \st g_{i}(\alpha) = -1\}
+\end{align*}
+Note that $S_{1} \cup S_{-1} = \{1, \ldots, n\}$, so at least one of $S_{1}, S_{-1}$ has order greater than or equal to $\lceil{}\frac{n}{2}\rceil{}$. Denote this set by $S_{M}$, where $M = \pm{1}$.
+
+By hypothesis, $f_{n} = g_{1} g_{2}$. Because $\Z$ is an integral domain, $\Z[t]$ is an integral domain, so
+\begin{align*}
+n
+=
+\deg f_{n}
+=
+\deg(g_{1} g_{2})
+=
+\deg g_{1} + \deg g_{2}
+\end{align*}
+Thus at least one of the $g_{i}$ has degree less than or equal to $\lfloor{}\frac{n}{2}\rfloor{}$. Earlier we arranged that $\deg g_{1} \leq \deg g_{2}$, so we have $\deg g_{1} \leq \lfloor{}\frac{n}{2}\rfloor{}$.
+
+Suppose $\deg g_{1} < \frac{n}{2}$. Then the polynomial $g_{1} - M$, which we may view in $\Q[t]$, has degree
+\begin{align*}
+\deg(g_{1} - M)
+=
+\deg g_{1}
+<
+\frac{n}{2}
+\end{align*}
+and at least $\order(S_{M}) \geq \lceil{}\frac{n}{2}\rceil{} \geq \frac{n}{2}$ zeros, a contradiction. When $n$ is odd, necessarily $\deg g_{1} < \frac{n}{2}$. Thus this contradiction shows that if $n$ is odd, then $f_{n}$ is irreducible.
+
+This contradiction also shows that if $n$ is even, then we must have $\deg g_{1} = \deg g_{2} = \frac{n}{2}$ and $\order(S_{1}) = \order(S_{2}) = \frac{n}{2}$. In this case, the set $S_{1}$ contains $\frac{n}{2}$ distinct zeros for the degree-$\frac{n}{2}$ polynomial $g_{i} - 1$, for $i \in \{1, 2\}$. (The analogous statement holds for the set $S_{-1}$ and the polynomial $g_{i} + 1$.) Therefore, for $i \in \{1, 2\}$,
+\begin{align*}
+g_{i}
+=
+-1 + \prod_{\alpha \in S_{1}} (t - \alpha)
+=
+1 + \prod_{\alpha \in S_{-1}} (t - \alpha)
+\end{align*}
+In particular, $g_{1} = g_{2}$; denote the common polynomial by $g$. Thus
+\begin{align*}
+g^{2}
+=
+f_{n}
+=
+1 + \prod_{i = 1}^{n} (t - i)
+\end{align*}
+That is, if the polynomial $f_{n}$ is reducible in $\Z[t]$, then it is a square. If we can show that the corresponding function $f_{n}$ evaluates to negative values, then we will have a contradiction.
+
+View the polynomials in $\Q[t]$, and consider evaluating their functions at $t = n - \frac{1}{2}$:
+\begin{align}
+\left(g\left(n - \frac{1}{2}\right)\right)^{2}
+=
+g^{2}\left(n - \frac{1}{2}\right)
+=
+f_{n}\left(n - \frac{1}{2}\right)
+=
+1 + \left(-\frac{1}{2}\right) \prod_{i = 1}^{n - 1} \left(n - \frac{1}{2} - i\right)%
+\label{eq : EH03c fn as square}
+\end{align}
+If $n > 4$, then the product in this expression satisfies
+\begin{align*}
+\prod_{i = 1}^{n - 1} \left(n - \frac{1}{2} - i\right)
+=
+\left(\frac{1}{2}\right) \left(\frac{3}{2}\right) \left(\frac{5}{2}\right) \left(\frac{7}{2}\right) \cdots \left(n - \frac{1}{2} - 1\right)
+>
+\frac{105}{16}
+>
+2
+\end{align*}
+where we obtain the penultimate inequality by keeping only the first four factors and noting that any subsequent factors are greater than or equal to $1$. Substituting this result into equation \eqref{eq : EH03c fn as square}, it follows that if $n > 4$, then
+\begin{align*}
+\left(g\left(n - \frac{1}{2}\right)\right)^{2}
+<
+1 - \frac{1}{2} (2)
+=
+0
+\end{align*}
+a contradiction (recall that we are viewing $g$ as a function from $\Q$ to $\Q$).
+
+It remains to address the cases $n = 2$ and $n = 4$.
+
+When $n = 2$,
+\begin{align*}
+f_{2}(t)
+=
+t^{2} - 3 t + 3
+\end{align*}
+which is irreducible by the Eisenstein--Sch\"{o}nemann criterion with $p = 3$.
+
+When $n = 4$,
+\begin{align*}
+f_{4}(t)
+=
+t^{4} - 10 t^{3} + 35 t^{2} - 50 t + 25
+=
+(t^{2} - 5 t + 5)^{2}
+\end{align*}
+so $f_{4}$ is reducible.
+
+
+
+\subsubsection*{Exercise \ref{itm : EH03d}}
+
+Note that we cannot apply the Eisenstein--Sch\"{o}nemann criterion directly to $\Phi_{p}(t)$. However, we compute
+\begin{align*}
+\Phi_{p}(t + 1)
+&=
+\frac{(t + 1)^{p} - 1}{(t + 1) - 1}
+\\
+&=
+t^{p - 1} + p t^{p - 2} + \ldots + \frac{p (p - 1)}{2} t + p
+\end{align*}
+We note two aspects. First, the constant term in the numerator, before dividing by $t$ in the denominator, is zero. Second, the coefficients of the final polynomial are ${p \choose i} = \frac{p (p - 1) \cdots (p - i + 1)}{i!}$, for $i \in \{0, \ldots, p - 1\}$; in particular, all coefficients except the leading coefficient (corresponding to $i = 0$) are divisible by $p$. Thus we may apply the Eisenstein--Sch\"{o}nemann criterion with the prime $p$ to $\Phi_{p}(t + 1)$ to conclude that $\Phi_{p}(t + 1)$, and hence $\Phi_{p}(t)$, is irreducible.
+
+
+
+\subsubsection*{Exercise \ref{itm : EH03e}}
+
+Let
+\begin{align*}
+f
+=
+a_{n} t^{n} + \ldots + a_{0}
+\end{align*}
+By definition, its reverse is
+\begin{align*}
+\reverse f
+=
+t^{n} f(t^{-1})
+=
+t^{n} (a_{n} t^{-n} + \ldots + a_{0})
+=
+a_{n} + \ldots + a_{0} t^{n}
+\end{align*}
+Because each monomial term in $f(t^{-1})$ has the form $a_{i} t^{-i}$ for some $i \in \{0, \ldots, n\}$, it follows that each monomial term in $t^{n} f(t^{-1})$ has the form $a_{i} t^{n - i}$, with $n - i \geq 0$. Thus this construction gives a polynomial in $F[t]$.
+
+As an example, consider the polynomial
+\begin{align*}
+f
+=
+t^{3} + 2 t + 3
+\end{align*}
+in $\Q[t]$. Then
+\begin{align*}
+\reverse f
+=
+t^{3} f(t^{-1})
+=
+1 + 2 t^{2} + 3 t^{3}
+=
+3 t^{3} + 2 t^{2} + 1
+\end{align*}
+This construction ``reverses'' the order of the coefficients of $f$ relative to the powers of $t$.
+
+Note that this construction can product a polynomial of strictly smaller degree than the input. More precisely, $\deg \reverse f < \deg f$ if and only if the constant term of $f$ is $0$---that is, if and only if $f(0) \neq 0$. For example, if $f = t$, then $\reverse f = 1$.
+
+Let $f \in F[t]$, and suppose that $f = g_{1} g_{2}$ for some $g_{i} \in F[t]$. Then a bookkeeping exercise with the definition of multiplication of polynomials shows that
+\begin{align*}
+(\reverse g_{1}) (\reverse g_{2})
+=
+\reverse f
+\end{align*}
+Because the reverse of the reverse of a polynomial is the original polynomial, the reverse implication also holds.
+
+Further suppose that $f(0) \neq 0$. Then because $F$ is a field (and hence an integral domain), each $g_{i}$ in the factorization $f = g_{1} g_{2}$ satisfies $g_{i}(0) \neq 0$. In particular, if $g_{i}(0) \neq 0$ and $\deg g_{i} \geq 1$, then $\deg(\reverse g_{i}) \geq 1$. It follows that such an $f$ is reducible if and only if $\reverse f$ is reducible.}% End solution.
+
+\end{document}

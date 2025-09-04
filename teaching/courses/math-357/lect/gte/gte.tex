@@ -1,0 +1,386 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+%\usepackage{amsthm}
+%\usepackage{enumitem}
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+%\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontField}[1]{\mathbf{#1}}
+%\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+
+
+
+\newcommand{\Aut}{\automorphisms}
+\DeclareMathOperator{\automorphisms}{Aut}
+%\newcommand{\C}{\complexes}
+%\DeclareMathOperator{\characteristic}{char}
+%\newcommand{\complexes}{\fontField{C}}
+%\newcommand{\divides}{\,|\,}
+%\DeclareMathOperator{\Endomorphisms}{End}
+%\newcommand{\F}{\fontField{F}}
+\newcommand{\fixedField}{\mathcal{F}}
+\newcommand{\Gal}{\galoisGroup}
+\DeclareMathOperator{\galoisGroup}{Gal}
+%\DeclareMathOperator{\generalLinear}{GL}
+%\newcommand{\GL}{\generalLinear}
+%\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\id}{\identityMap}
+\DeclareMathOperator{\identityMap}{id}
+%\newcommand{\integers}{\fontField{Z}}
+%\newcommand{\integersPositive}{\integers_{> 0}}
+%\newcommand{\iso}{\isomorphism}
+%\newcommand{\isomorphism}{\cong}
+%\newcommand{\notDivides}{{}\hspace{-1mm}{\not\hspace{-.15em}\divides{}}\,}
+%\newcommand{\order}{\#}
+\newcommand{\Q}{\rationals}
+\newcommand{\rationals}{\fontField{Q}}
+\newcommand{\st}{{\, | \,}}
+\newcommand{\transpose}{^\mathrm{t}}
+%\newcommand{\Z}{\integers}
+
+
+
+\title{Math 357\\Galois theory example}
+%\author{}
+%\date{}
+
+
+
+% Document begins here.
+
+\begin{document}
+
+\maketitle
+
+In these notes we use galois theory to analyze algebraic objects---zeros, field extensions, and groups---arising from the polynomial $f = t^{3} - 2 \in \Q[t]$. We start with a summary of the story. We invite the reader to fill in details and justify the assertions before proceeding to following sections, in which we explore the story and logic together.
+
+
+
+\section{Overview}
+
+Let
+\begin{align*}
+f
+=
+t^{3} - 2
+\in
+\Q[t]
+\end{align*}
+A splitting field for $f$ is $K = \Q(\alpha, \zeta_{3})$, where $\alpha$ is a zero of $f$, and $\zeta_{3}$ is a zero of $g = t^{2} + t + 1 \in \Q[t]$. A basis for $K$ as a $\Q$-vector space is
+\begin{align*}
+\mathcal{B}
+=
+(1, \alpha, \alpha^{2}, \zeta_{3}, \zeta_{3} \alpha, \zeta_{3} \alpha^{2})
+\end{align*}
+The field extension $K : \Q$ is galois, with galois group
+\begin{align*}
+\Gal(K : \Q)
+=
+\langle{}\sigma, \tau \st \sigma^{3}, \tau^{2}, (\sigma \tau)^{2}\rangle{}
+\end{align*}
+where the automorphisms $\sigma, \tau : K \rightarrow K$ are defined by
+\begin{align}
+\sigma
+:{}
+&\alpha \mapsto \zeta_{3} \alpha
+&
+\tau
+:{}
+&\alpha \mapsto \alpha
+\label{eq : generators of galois group}
+\\
+&\zeta_{3} \mapsto \zeta_{3}
+&
+&\zeta_{3} \mapsto \zeta_{3}^{2} = -(1 + \zeta_{3})
+\nonumber
+\end{align}
+One can use the galois correspondence between subfields and subgroups to enumerate and match all of each. In particular, the subfield $\Q(\zeta_{3} \alpha)$ corresponds to the subgroup $\langle{}\sigma^{2} \tau\rangle{}$. That is,
+\begin{align*}
+\fixedField(\langle{}\sigma^{2} \tau\rangle{})
+&=
+\Q(\zeta_{3} \alpha)
+&
+\Aut(K : \Q(\zeta_{3} \alpha))
+&
+=
+\langle{}\sigma^{2} \tau\rangle{}
+\end{align*}
+
+
+
+%\section{Constructing field extensions}
+%
+%We can construct the field $K$ in steps. In the ``top-down'' view, we adjoin one element after another. In the ``bottom-up'' view, we form one quotient ring after another. Recall that the ``top-down'' view requires that we have or assert the existence of a field that contains all the elements we need. In our present example, a splitting field for $f$ over $\Q$, or an algebraic closure of $\Q$, will do. In what follows, however, let's explore the ``bottom-up'' view.
+%
+%The polynomial $f$ is irreducible in $\Q[t]$---for example, by the Eisenstein--Sch\"{o}nemann criterion with $p = 2$, or by the rational zeros test. Therefore the principal ideal ${f}$ is maximal in $\Q[t]$, so the quotient ring $\Q[t] / (f)$ is a field, denote it $K_{1}$. Consider the maps
+%\begin{align*}
+%\Q
+%\xrightarrow{\iota_{0}}
+%\Q[t]
+%\xrightarrow{\pi_{0}}
+%\Q[t] / (f)
+%=
+%K_{1}
+%\xrightarrow{\iota_{1}}
+%K_{1}[t]
+%\end{align*}
+%where $\iota_{0}$ and $\iota_{2}$ are inclusion maps, and $\pi_{0}$ is the quotient map defined by $h \mapsto h + (f)$.
+
+
+
+\section{Subfield--subgroup correspondence}
+
+Claim: $\fixedField(\langle{}\sigma^{2} \tau\rangle{}) = \Q(\zeta_{3} \alpha)$.
+
+To prove this claim, we show set containment in both directions. Recall that $\langle{}\sigma^{2} \tau\rangle{} = \{\id_{K}, \sigma^{2} \tau\}$, and the identity map $\id_{K}$ fixes all of $K$, and hence, in particular, $\Q \subseteq K$. Thus for the fixed-field computations here, it suffices to analyze $\sigma^{2} \tau$. (More generally, we need to analyze a set of generators of the subgroup.) Also recall that, by definition, $\zeta_{3}$ is a zero of $g = t^{2} + t + 1$, hence also a zero of $(t - 1) g = t^{3} - 1$. Explicitly writing out what these zeros mean, we get
+\begin{align*}
+\zeta_{3}^{2}
+&=
+-(1 + \zeta_{3})
+&
+\zeta_{3}^{3}
+&=
+1
+\end{align*}
+
+($\supseteq$) Because $\sigma, \tau \in \Gal(K : \Q) = \Aut(K : \Q)$, they are field homomorphisms. Using this fact and the defining images of $\sigma$ and $\tau$ specified in equation \eqref{eq : generators of galois group}, we compute
+\begin{align*}
+\sigma^{2} \tau(\zeta_{3} \alpha)
+&=
+\sigma(\sigma(\tau(\zeta_{3} \alpha)))
+\\
+&=
+\sigma(\sigma(\tau(\zeta_{3}) \tau(\alpha)))
+\\
+&=
+\sigma(\sigma(\zeta_{3}^{2} \cdot \alpha))
+\\
+&=
+\sigma(\sigma(\zeta_{3})^{2} \sigma(\alpha))
+\\
+&=
+\sigma(\zeta_{3}^{2} \cdot \zeta_{3} \alpha)
+=
+\sigma(\zeta_{3}^{3} \alpha)
+=
+\sigma(\alpha)
+\\
+&=
+\zeta_{3} \alpha
+\end{align*}
+Alternatively, we can use the same hypotheses to compute where $\sigma^{2} \tau$ sends each generator of $K = \Q(\alpha, \zeta_{3})$:
+\begin{align}
+\sigma^{2} \tau(\alpha)
+&=
+\zeta_{3}^{2} \alpha
+&
+\sigma^{2} \tau(\zeta_{3})
+&=
+\zeta_{3}^{2}%
+\label{eq : s2t images}
+\end{align}
+to conclude that
+\begin{align*}
+\sigma^{2} \tau(\zeta_{3} \alpha)
+=
+\sigma^{2} \tau(\zeta_{3}) \cdot \sigma^{2} \tau(\alpha)
+=
+\zeta_{3}^{2} \cdot \zeta_{3}^{2} \alpha
+=
+\zeta_{3}^{4} \alpha
+=
+\zeta_{3} \alpha
+\end{align*}
+This shows that $\sigma^{2} \tau$ fixes the element $\zeta_{3} \alpha \in K$. Because $\sigma^{2} \tau \in \Gal(K : \Q)$, $\sigma^{2} \tau$ also fixes the base field $\Q$. Hence $\sigma^{2} \tau$ fixes $\Q(\zeta_{3} \alpha)$. That is,
+\begin{align}
+\Q(\zeta_{3} \alpha)
+\subseteq
+\fixedField(\langle{}\sigma^{2} \tau\rangle{})%
+\label{eq : subfield in fixed field}
+\end{align}
+
+($\subseteq$) To show the reverse inclusion, let $\beta \in \fixedField(\langle{}\sigma^{2} \tau\rangle{}) \subseteq K$. Because $\mathcal{B} = (1, \alpha, \alpha^{2}, \zeta_{3}, \zeta_{3} \alpha, \zeta_{3} \alpha^{2})$ is a $\Q$-basis for $K$, there exist unique $a_{i, j} \in \Q$ such that
+\begin{align}
+\beta
+&=
+\underset{j \in \{0, 1, 2\}}{\sum_{i \in \{0, 1\},}} a_{i, j} \zeta_{3}^{i} \alpha^{j}%
+\nonumber
+\\
+&=
+a_{0, 0} 1 + a_{0, 1} \alpha + a_{0, 2} \alpha^{2} + a_{1, 0} \zeta_{3} + a_{1, 1} \zeta_{3} \alpha + a_{1, 2} \zeta_{3} \alpha^{2}%
+\label{eq : beta as linear combination}
+\end{align}
+Because $\sigma^{2} \tau \in \Gal(K : \Q) = \Aut(K : \Q)$, it is a field homomorphism that fixes all elements of $\Q$. In particular, it fixes each $a_{i, j}$. Using these facts and our computation of $\sigma^{2} \tau$ on generators of $K : \Q$ in equation \eqref{eq : s2t images}, we compute
+\begin{align}
+&\sigma^{2} \tau(\beta)
+=
+\sigma^{2} \tau\left(\underset{j \in \{0, 1, 2\}}{\sum_{i \in \{0, 1\},}} a_{i, j} \zeta_{3}^{i} \alpha^{j}\right)
+=
+\underset{j \in \{0, 1, 2\}}{\sum_{i \in \{0, 1\},}} a_{i, j} \cdot (\sigma^{2} \tau(\zeta_{3}))^{i} \cdot (\sigma^{2} \tau(\alpha))^{j}%
+\nonumber
+\\
+&=
+a_{0, 0} \cdot 1 + a_{0, 1} \cdot \sigma^{2} \tau(\alpha) + a_{0, 2} \cdot (\sigma^{2} \tau(\alpha))^{2}%
+\nonumber
+\\
+&\hspace{10mm} + a_{1, 0} \cdot \sigma^{2} \tau(\zeta_{3}) + a_{1, 1} \cdot \sigma^{2} \tau(\zeta_{3}) \cdot \sigma^{2} \tau (\alpha) + a_{1, 2} \cdot \sigma^{2} \tau(\zeta_{3}) \cdot (\sigma^{2} \tau(\alpha))^{2}%
+\nonumber
+\\
+&=
+a_{0, 0} 1 + a_{0, 1} \zeta_{3}^{2} \alpha + a_{0, 2} \zeta_{3} \alpha^{2} + a_{1, 0} \zeta_{3}^{2} + a_{1, 1} \zeta_{3} \alpha + a_{1, 2} \alpha^{2}%
+\nonumber
+\\
+&=
+a_{0, 0} 1 - a_{0, 1} (1 + \zeta_{3}) \alpha + a_{0, 2} \zeta_{3} \alpha^{2} - a_{1, 0} (1 + \zeta_{3}) + a_{1, 1} \zeta_{3} \alpha + a_{1, 2} \alpha^{2}%
+\nonumber
+\\
+&=
+(a_{0, 0} - a_{1, 0}) 1 - a_{0, 1} \alpha + a_{1, 2} \alpha^{2} - a_{1, 0} \zeta_{3} + (a_{1, 1} - a_{0, 1}) \zeta_{3} \alpha + a_{0, 2} \zeta_{3} \alpha^{2}%
+\label{eq : s2t beta as linear combination}
+\end{align}
+By hypothesis, $\beta \in \fixedField(\langle{}\sigma^{2} \tau\rangle{})$, so
+\begin{align*}
+\sigma^{2} \tau(\beta)
+=
+\beta
+\end{align*}
+That is, the right sides of equations \eqref{eq : beta as linear combination} and \eqref{eq : s2t beta as linear combination} are equal. Because $\mathcal{B}$ is a $\Q$-basis (so, in particular, it is linear independent over $\Q$), for each basis element, the corresponding coefficients in these equations are equal. This gives a system of six linear equations in $\Q$:
+\begin{align*}
+1
+&:
+a_{0, 0}
+=
+a_{0, 0} - a_{1, 0}
+&
+\zeta_{3}
+&:
+a_{1, 0}
+=
+-a_{1, 0}
+\\
+\alpha
+&:
+a_{0, 1}
+=
+-a_{0, 1}
+&
+\zeta_{3} \alpha
+&:
+a_{1, 1}
+=
+a_{1, 1} - a_{0, 1}
+\\
+\alpha^{2}
+&:
+a_{0, 2}
+=
+a_{1, 2}
+&
+\zeta_{3} \alpha^{2}
+&:
+a_{1, 2}
+=
+a_{0, 2}
+\end{align*}
+This system of equations implies
+\begin{align*}
+a_{0,1}
+&=
+0
+&
+a_{1, 0}
+&=
+0
+&
+a_{1, 2}
+&=
+a_{0, 2}
+&
+a_{0, 0}, a_{1, 1}
+&\in
+\Q
+\end{align*}
+(The final expression simply states that $a_{0, 0}$ and $a_{1, 1}$ are free parameters.) That is, if $\beta \in \fixedField(\langle{}\sigma^{2} \tau\rangle{})$, then $\beta$ has the form
+\begin{align*}
+\beta
+=
+a_{0, 0} 1 + a_{1, 1} \zeta_{3} \alpha + a_{0, 2} (\alpha^{2} + \zeta_{3} \alpha^{2})
+\end{align*}
+for some $a_{0, 0}, a_{1, 1}, a_{0, 2} \in \Q$.% Begin footnote.
+\footnote{If you like to think in matrices, then we can reinterpret our work here in that language. Having chosen a basis $\mathcal{B}$ for the $\Q$-vector space $K$, we get a matrix $M_{\mathcal{B}}(\sigma^{2} \tau)$ for the linear transformation $\sigma^{2} \tau : K \rightarrow K$. For our basis $\mathcal{B} = (1, \alpha, \alpha^{2}, \zeta_{3}, \zeta_{3} \alpha, \zeta_{3} \alpha^{2})$, we get
+\begin{align*}
+M_{\mathcal{B}}(\sigma^{2} \tau)
+=
+\begin{pmatrix}
+1	&		&		&	-1	&		&		\\
+	&	-1	&		&		&		&		\\
+	&		&		&		&		&	1	\\
+	&		&		&	-1	&		&		\\
+	&	-1	&		&		&	1	&		\\
+	&		&	1	&		&		&	
+\end{pmatrix}
+\end{align*}
+Recall that the columns of this matrix are the coefficients of the linear combination with respect to the chosen basis $\mathcal{B}$ of each basis vector in $\mathcal{B}$; that is, $M_{\mathcal{B}}(\sigma^{2} \tau(\zeta_{3}^{i} \alpha^{j}))$. Given an arbitrary $\beta \in K$, its unique $\Q$-linear combination with respect to the basis $\mathcal{B}$ given in equation \eqref{eq : beta as linear combination} writes as the $6 \times 1$ matrix (column vector)
+\begin{align*}
+M_{\mathcal{B}}(\beta)
+=
+\begin{pmatrix}
+a_{0, 0}	&	a_{0, 1}	&	a_{0, 2}	&	a_{1, 0}	&	a_{1, 1}	&	a_{1, 2}
+\end{pmatrix}%
+\transpose
+\end{align*}
+Multiplying $M_{\mathcal{B}}(\sigma^{2} \tau)$ by $M_{\mathcal{B}}(\beta)$ gives a $6 \times 1$ matrix, equal to $M_{\mathcal{B}}(\sigma^{2} \tau(\beta))$, whose entries are the coefficients in equation \eqref{eq : s2t beta as linear combination}. Setting this matrix equal to $M_{\mathcal{B}}(\beta)$ gives the six linear equations we listed above.
+
+Note that, in this matrix view, solving
+\begin{align*}
+M_{\mathcal{B}}(\sigma^{2} \tau) M_{\mathcal{B}}(\beta)
+=
+M_{\mathcal{B}}(\beta)
+\end{align*}
+is equivalent to solving
+\begin{align*}
+(I - M_{\mathcal{B}}(\sigma^{2} \tau)) M_{\mathcal{B}}(\beta)
+=
+0
+\end{align*}
+where $I$ denotes the $6 \times 6$ identity matrix. That is, to compute the fixed field of an element of the galois group, we can compute the eigenspace associated to the eigenvalue $1$ for that element.}% End footnote.
+
+The first two terms are in $\Q(\zeta_{3} \alpha)$. What about the last term? Using the relation $\zeta_{3}^{2} = -(1 + \zeta_{3})$, we compute
+\begin{align*}
+\alpha^{2} + \zeta_{3} \alpha^{2}
+=
+(1 + \zeta_{3}) \alpha^{2}
+=
+-\zeta_{3}^{2} \alpha^{2}
+=
+-(\zeta_{3} \alpha)^{2}
+\in
+\Q(\zeta_{3} \alpha)
+\end{align*}
+Remember, $\Q(\zeta_{3} \alpha)$ denotes the field generated by $\zeta_{3} \alpha$ over $\Q$. It contains $\Q$ and $\zeta_{3} \alpha$, and it is closed under the field operations. Thus, in particular, it also contains $(-1) (\zeta_{3} \alpha)^{2}$, as we asserted above. The same logic shows that $\beta \in \Q(\zeta_{3} \alpha)$. Because $\beta \in \fixedField(\langle{}\sigma^{2} \tau\rangle{})$ was arbitrary, we conclude that $\fixedField(\langle{}\sigma^{2} \tau\rangle{}) \subseteq \Q(\zeta_{3} \alpha)$. Combining this with equation \eqref{eq : subfield in fixed field}, we conclude that $\fixedField(\langle{}\sigma^{2} \tau\rangle{}) = \Q(\zeta_{3} \alpha)$, as desired.
+
+
+
+\end{document}

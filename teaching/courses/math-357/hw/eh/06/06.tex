@@ -1,0 +1,549 @@
+\documentclass[oneside, english, 11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\geometry{left=1in, top=1in, right=1in, bottom=1in, nohead}
+\setlength\parindent{0.25in}
+
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontField}[1]{\mathbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+
+
+
+\newcommand{\C}{\complexes}
+\DeclareMathOperator{\characteristic}{char}
+\newcommand{\complexes}{\fontField{C}}
+\newcommand{\divides}{\,|\,}
+\DeclareMathOperator{\Endomorphisms}{End}
+\newcommand{\F}{\fontField{F}}
+\DeclareMathOperator{\generalLinear}{GL}
+\newcommand{\GL}{\generalLinear}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\identityMap}{id}
+\newcommand{\integers}{\fontField{Z}}
+\newcommand{\integersPositive}{\integers_{> 0}}
+\newcommand{\iso}{\isomorphism}
+\newcommand{\isomorphism}{\cong}
+\newcommand{\notDivides}{{}\hspace{-1mm}{\not\hspace{-.15em}\divides{}}\,}
+\newcommand{\order}{\#}
+\newcommand{\Q}{\rationals}
+\newcommand{\rationals}{\fontField{Q}}
+\newcommand{\st}{\, | \,}
+\newcommand{\Z}{\integers}
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+
+\title{Math 357\\Expositional homework 06}
+\author{}
+\date{Assigned: 2024--03--29 (F)\\\hspace{9.7mm}Due: 2024--04--12 (F)}
+
+
+
+% Document begins here.
+
+\begin{document}
+
+\maketitle
+
+The goal of this homework is to strengthen our understanding of field theory, through proof and example.
+
+\paragraph{Proofs}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : EH06a} Prove Proposition 13.12:% Begin footnote.
+\footnote{See DF3e, p 521.} % End footnote.
+Let $K : K_{0}$ be a field extension, and let $\alpha \in K$. Then $\alpha$ is algebraic over $K_{0}$ if and only if $[K_{0}(\alpha) : K_{0}] < \infty$.
+\item\label{itm : EH06b} Prove Theorem 13.25% Begin footnote.
+\footnote{See DF3e, p 536. If you are up for it, then you can also prove that any two splitting fields for $f$ are isomorphic; see Corollary 13.28, p 542. This will take a little work, but the theory and proof are both accessible and rewarding.} % End footnote.
+on the existence of splitting fields: Let $K_{0}$ be a field, and let $f \in K_{0}[t]$. Then there exists an extension field $K : K_{0}$ such that $f$ splits completely in $K[t]$.
+\item\label{itm : EH06c} Let $K : K_{0}$ be a field extension such that $[K : K_{0}] < \infty$. Prove that $K : K_{0}$ is normal if and only if for all irreducible polynomials $f \in K_{0}[t]$, if there exists an $\alpha \in K$ such that $f(\alpha) = 0$, then $f$ splits completely in $K[t]$.% Begin footnote.
+\footnote{See DF3e, Exercise 13.4.5, p 545.} % End footnote.
+(One may take this as the definition of a normal field extension, in which case one can prove the definition we gave in class as a proposition.)
+\item\label{itm : EH06d} Let $K_{0}$ be a field, and let $f_{1}, f_{2} \in K_{0}[t]$. Prove that the formal derivative $D_{t}$ of a polynomial in $K_{0}[t]$ satisfies the following relations (as does the derivative operator from calculus):% Begin footnote.
+\footnote{See DF3e, Exercise 13.5.1, p 551.}% End footnote.
+\begin{align*}
+D_{t}(f_{1} + f_{2})
+&=
+D_{t} f_{1} + D_{t} f_{2}
+&
+D_{t}(f_{1} f_{2})
+&=
+(D_{t} f_{1}) \cdot f_{2} + f_{1} \cdot (D_{t} f_{2})
+\end{align*}
+\end{enumerate}
+
+\paragraph{Examples}
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : EH06e} Determine the degree over $\Q$ of $2 + \sqrt{3}$ and $1 + \sqrt[3]{2} + \sqrt[3]{4}$.% Begin footnote.
+\footnote{See DF3e, Exercise 13.2.4, p 530.}% End footnote.
+\item\label{itm : EH06f} Let $K : K_{0}$ be a field extension of finite degree $n$, and let $\alpha \in K$.% Begin footnote.
+\footnote{See DF3e, Exercises 13.2.19(a) and 20, p 531.}% End footnote.
+\begin{enumerate}[label=(\roman*)]
+\item\label{itm : EH06f1} Prove that the map
+\begin{align*}
+T_{\alpha}
+:
+K
+&\rightarrow
+K
+\\
+\beta
+&\mapsto
+\alpha \beta
+\end{align*}
+which is (left) multiplication by $\alpha$, is a $K_{0}$-linear transformation of $K$.
+\end{enumerate}
+Let $n \in \integersPositive$, let $M$ be an $n \times n$ matrix, let $I$ be the $n \times n$ identity matrix, and let $t$ be an indeterminate. The \fontDefWord{characteristic polynomial} of $M$ is $\det(t I - M) = (-1)^{n} \det(M - t I)$.
+\begin{enumerate}[resume, label=(\roman*)]
+\item\label{itm : EH06f2} Let $\mathcal{B}$ be a $K_{0}$-basis of $K$, and let $M_{\mathcal{B}}(T_{\alpha})$ be the matrix of $T_{\alpha}$ with respect to $\mathcal{B}$. Prove that $\alpha$ is a zero of the characteristic polynomial of $M_{\mathcal{B}}(T_{\alpha})$.
+\item\label{itm : EH06f3} Use this technique to find monic polynomials in $\Q[t]$ of degree $3$ satisfied by $\sqrt[3]{2}$ and by $1 + \sqrt[3]{2} + \sqrt[3]{4}$.
+\end{enumerate}
+\item\label{itm : EH06g} Let $p \in \integersPositive$ be prime, let $\fontField{F}_{p} = \Z / (p)$ (a finite field of order $p$), let $a \in \fontField{F}_{p}$ be nonzero, and let $f = t^{p} - t + a \in \fontField{F}_{p}[t]$. Prove that $f$ is irreducible in $\fontField{F}_{p}[t]$ and separable.% Begin footnote.
+\footnote{See DF3e, Exercise 13.5.5, p 551.}% End footnote.
+\end{enumerate}
+
+
+
+\subsection*{Exercise \ref{itm : EH06a}}
+
+See DF3e, pp 521--2.
+
+
+
+\subsection*{Exercise \ref{itm : EH06b}}
+
+For existence, see DF3e, p 536. For uniqueness (which we were not required to prove on this homework), see DF3e, pp 541--2.
+
+
+
+\subsection*{Exercise \ref{itm : EH06c}}
+
+($\Rightarrow$) Let $K : K_{0}$ be normal. Then by definition, there exists a set $S \subseteq K_{0}[t]$ such that $K$ is a splitting field of $S$. By hypothesis, $[K : K_{0}] < \infty$, so there exists a finite subset $S' \subseteq S$ such that $K$ is a splitting field of $S'$. Let $f_{0} = \prod_{g \in S'} g$. (Note that this construction uses that $S'$ is finite.)
+
+Let $f \in K_{0}[t]$ such that there exists an $\alpha \in K$ such that $f(\alpha) = 0_{K}$. Let $\beta$ be a zero of $f$, potentially in some extension field over $K$. (For example, view $f \in K[t]$, let $\tilde{K}_{f}$ be a splitting field for $f$ over $K$, and take $\beta \in \tilde{K}_{f}$.) By Theorem 13.8, there exists an isomorphism $\sigma_{0} : K_{0}(\alpha) \rightarrow K_{0}(\beta)$ such that $\sigma_{0}(\alpha) = \beta$ and $\sigma_{0}|_{K_{0}} = \identityMap_{K_{0}}$. Note that $K(\alpha)$ is a splitting field of $f_{0}$ over $K_{0}(\alpha)$, and $K(\beta)$ is a splitting field of $f_{0}$ over $K_{0}(\beta)$. Thus by Theorem 13.27, $\sigma_{0}$ extends to an isomorphism $\sigma : K(\alpha) \rightarrow K(\beta)$ such that $\sigma|_{K_{0}(\alpha)} = \sigma_{0}$. By hypothesis, $\alpha \in K$, so $K(\alpha) = K$. We conclude that $K(\beta) \isomorphism K(\alpha) = K$, so $\beta \in K$ as well.
+
+($\Leftarrow$) By Theorem 13.17, $[K : K_{0}] < \infty$ if and only if $K$ is generated by a finite number, say $n$, of elements $\alpha_{i} \in K$, each of which is algebraic over $K_{0}$. Because $\alpha_{i}$ is algebraic over $K_{0}$, each $\alpha_{i}$ has a (unique) minimal polynomial $m_{\alpha_{i}, K_{0}} \in K_{0}[t]$, which by definition is irreducible. By definition, each $m_{\alpha_{i}, K_{0}}$ has a zero in $K$, namely $\alpha_{i}$; so by hypothesis, each $m_{\alpha_{i}, K_{0}}$ splits completely in $K$.
+
+Let $f_{0} = \prod_{i = 1}^{n} m_{\alpha_{i}, K_{0}}$. (Again, note that this construction uses that the indexing set of the product is finite.) Our argument in the preceding paragraph shows that $f$ splits completely in $K$, and that $K$ is generated by the zeros of $f$. Thus $K : K_{0}$ is normal (take $S = \{f_{0}\}$).
+
+
+
+\subsection*{Exercise \ref{itm : EH06d}}
+
+This is a straightforward if tedious bookkeeping exercise.
+
+Let $n_{i} = \deg f_{i}$, let $n = \max(n_{1}, n_{2})$, let $N = n_{1} + n_{2}$, and let
+\begin{align*}
+f_{i}
+&=
+\sum_{j = 0}^{n_{i}} a_{i, j} t^{j}
+&
+&\text{so}
+&
+D_{t} f_{i}
+&=
+\sum_{j = 1}^{n_{i}} j \cdot a_{i, j} t^{j - 1}
+\end{align*}
+Let us adopt the convention that if the index $j > n_{i}$, then $a_{i, j} = 0$. Then
+\begin{align*}
+D_{t}(f_{1} + f_{2})
+&=
+D_{t}\left(\sum_{j = 0}^{n} (a_{1, j} + a_{2, j}) t^{j}\right)
+&
+&\text{by definition of $+$ in a polynomial ring}
+\\
+&=
+\sum_{j = 1}^{n} j \cdot (a_{1, j} + a_{2, j}) t^{j - 1}
+&
+&\text{by definition of formal derivative}
+\\
+&=
+\sum_{j = 1}^{n} j \cdot a_{1, j} t^{j - 1} + \sum_{j = 1}^{n} j \cdot a_{2, j} t^{j - 1}
+&
+&\text{by field axioms}
+\\
+&=
+D_{t} f_{1} + D_{t} f_{2}
+&
+&\text{by definition of formal derivative}
+\end{align*}
+Similarly,
+\begin{align*}
+D_{t}(f_{1} f_{2})
+&=
+D_{t}\left(\sum_{j = 0}^{N} \sum_{k = 0}^{j} a_{1, k} a_{2, j - k} t^{j}\right)
+\\
+&=
+\sum_{j = 1}^{N} \sum_{k = 0}^{j} j \cdot a_{1, k} a_{2, j - k} t^{j - 1}
+\\
+&=
+\sum_{j = 1}^{N} \sum_{k = 0}^{j} (k + j - k) \cdot a_{1, k} a_{2, j - k} t^{j - 1}
+\\
+&=
+\sum_{j = 1}^{N} \sum_{k = 0}^{j} k \cdot a_{1, k} a_{2, j - k} t^{j - 1} + \sum_{j = 1}^{N} \sum_{k = 0}^{j} (j - k) \cdot a_{1, k} a_{2, j - k} t^{j - 1}
+\\
+&=
+D_{t} f_{1} \cdot f_{2} + f_{1} \cdot D_{t} f_{2}
+\end{align*}
+
+
+
+\subsection*{Exercise \ref{itm : EH06e}}
+
+Let $\alpha = 2 + \sqrt{3}$. Then
+\begin{align*}\alpha - 2
+&=
+\sqrt{3}
+&
+&\Rightarrow
+&
+(\alpha - 2)^{2}
+&=
+3
+&
+&\Leftrightarrow
+&
+\alpha^{2} - 4 \alpha + 1
+&=
+0
+\end{align*}
+so $\alpha$ is a zero of the polynomial
+\begin{align*}
+f
+=
+t^{2} - 4 t + 1
+\end{align*}
+Note that $f$ is irreducible (why?% Begin footnote.
+\footnote{One can see that $f$ is irreducible in various ways. One way is to reduce the coefficients mod $2$ and show that the image of $f$ has no zeros in $\Z / (2)$. Another way is to apply the rational zeros test to $f$ directly.}% End footnote.
+) and monic, so it is the minimal polynomial of $\alpha$ over $\Q$. Hence
+\begin{align*}
+\deg_{\Q} \alpha
+=
+\deg m_{\alpha, \Q}
+=
+\deg f
+=
+2
+\end{align*}
+
+Now let $\alpha = 1 + \sqrt[3]{2} + \sqrt[3]{4}$. Then
+\begin{align*}
+(\alpha - 1)^{3}
+&=
+(\sqrt[3]{2} + \sqrt[3]{2}^{2})^{3}
+=
+2 + 3 \sqrt[3]{2}^{4} + 3 \sqrt[3]{2}^{5} + 4
+=
+6 (1 + \sqrt[3]{2} + \sqrt[3]{2}^{2})
+=
+6 \alpha
+&
+&\Leftrightarrow
+&
+(\alpha - 1)^{3} - 6 \alpha
+&=
+0
+\end{align*}
+so $\alpha$ is a zero of the polynomial
+\begin{align*}
+f
+=
+t^{3} - 3 t^{2} - 3 t - 1
+\end{align*}
+Note that $f$ is irreducible (why?% Begin footnote.
+\footnote{The same approaches we took for $\alpha = 2 + \sqrt{3}$ above also work here.}% End footnote.
+) and monic, so it is the minimal polynomial of $\alpha$ over $\Q$. Hence
+\begin{align*}
+\deg_{\Q} \alpha
+=
+\deg m_{\alpha, \Q}
+=
+\deg f
+=
+3
+\end{align*}
+
+
+
+\subsection*{Exercise \ref{itm : EH06f}}
+
+Part \ref{itm : EH06f1}: Let $\beta_{1}, \beta_{2} \in K$, and let $a \in K_{0}$. Then
+\begin{align*}
+T_{\alpha}(a \beta_{1} + \beta_{2})
+&=
+\alpha (a \beta_{1} + \beta_{2})
+&
+&\text{by definition of $T_{\alpha}$}
+\\
+&=
+a \alpha \beta_{1} + \alpha \beta_{2}
+&
+&\text{by the axioms of a field}
+\\
+&=
+a T_{\alpha}(\beta_{1}) + T_{\alpha}(\beta_{2})
+&
+&\text{by definition of $T_{\alpha}$}
+\end{align*}
+so $T_{\alpha}$ is $K_{0}$-linear.
+
+
+
+Part \ref{itm : EH06f2}: Let $M$ denote $M_{\mathcal{B}}(T_{\alpha})$; let $p = \det(t I - M)$ denote the characteristic polynomial of $M$; and let $\identityMap_{K}$ denote the identity map on $K$, so $I = M_{\mathcal{B}}(\identityMap_{K})$. The intuition is that the matrix $\alpha I - M$ that appears in the expression for $p(\alpha)$ represents the map $\alpha \identityMap_{K} - T_{\alpha}$, and for all $\beta \in K$,
+\begin{align*}
+(\alpha \identityMap_{K} - T_{\alpha})(\beta)
+=
+\alpha \identityMap_{K}(\beta) - T_{\alpha}(\beta)
+=
+\alpha \beta - \alpha \beta
+=
+0
+\end{align*}
+We may be tempted to apply a result from linear algebra% Begin footnote.
+\footnote{See DF3e, Proposition 12.12, p 473.} % End footnote.
+that says $\det(\alpha I - M) = 0$ if and only if $\alpha$ is an eigenvalue of the corresponding linear map. However, we must be careful to correctly apply any theory from linear algebra. In our current setting, we view $K$ as a $K_{0}$-vector space. In particular, $\alpha \in K$ corresponds to a vector, not a scalar. As such, $\alpha$ cannot be an eigenvalue. As illustrated in our response to part \ref{itm : EH06f3} below, the matrix $\alpha I - M$ is not the zero matrix if (and only if) $\alpha \notin K_{0}$. Instead, we could view the characteristic polynomial $p \in K_{0}[t]$ as being an element of $K[t]$, or we could view the $n \times n$ matrix $\alpha I - M$ as operating on $K^{n}$ and find an eigenvector there with eigenvalue $\alpha$.% (!!!)
+
+
+
+Part \ref{itm : EH06f3}: Let
+\begin{align*}
+\alpha
+&=
+\sqrt[3]{2}
+&
+\beta
+&=
+1 + \sqrt[3]{2} + \sqrt[3]{4}
+=
+1 + \alpha + \alpha^{2}
+\end{align*}
+Note that $\alpha, \beta \in \Q(\alpha)$; and $m_{\alpha, \Q} = t^{3} - 2$ is the minimal polynomial for $\alpha$ over $\Q$ (why?), so $[\Q(\alpha) : \Q] = \deg m_{\alpha, \Q} = 3$. Therefore, one $\Q$-basis for $\Q(\alpha)$ is $\mathcal{B} = (1, \alpha, \alpha^{2})$. We compute the matrix representations with respect to this basis for the multiplication by $\alpha$ (respectively, $\beta$) map to be
+\begin{align*}
+M_{\mathcal{B}}(T_{\alpha})
+&=
+\begin{pmatrix}
+0	&	0	&	2	\\
+1	&	0	&	0	\\
+0	&	1	&	0
+\end{pmatrix}
+&
+M_{\mathcal{B}}(T_{\beta})
+&=
+\begin{pmatrix}
+1	&	2	&	2	\\
+1	&	1	&	2	\\
+1	&	1	&	1
+\end{pmatrix}
+\end{align*}
+From these, we compute the characteristic polynomials to be
+\begin{align*}
+p_{T_{\alpha}}
+&=
+t^{3} - 2
+&
+p_{T_{\beta}}
+&=
+t^{3} - 3 t^{2} - 3 t - 1
+\end{align*}
+By construction, the characteristic polynomial is monic; by part \ref{itm : EH06f2}, it has the given element ($\alpha$ or $\beta$) as a zero; and (for these particular polynomials) one can verify each is irreducible. We conclude that each is the minimal polynomial of its respective element over $\Q$. (In general, the minimal polynomial will be a factor, irreducible over the base field, of the characteristic polynomial.)
+
+
+
+\subsection*{Exercise \ref{itm : EH06g}}
+
+Let $K_{0}$ be a perfect field, and let $f \in K_{0}[t]$. We have seen that if $f$ is irreducible, then $f$ is separable.% Begin footnote.
+\footnote{See DF3e, p 549.} % End footnote.
+In particular, finite fields (for example, $\F_{p}$) are perfect. Thus for this exercise, it suffices to prove that $f$ is irreducible.% Begin footnote.
+\footnote{That said, we can give a quick proof that $f$ is separable using the formal derivative. Recall (see DF3e, Proposition 13.33, p 547.) that a polynomial $f$ is separable if and only if $\gcd(f, D_{t} f) = 1$. Using that $\characteristic \F_{p} = p$, we compute
+\begin{align*}
+D_{t} f
+=
+D_{t} (t^{p} - t + a)
+=
+(p \cdot 1_{\F_{p}}) t^{p - 1} - 1 + 0
+=
+-1
+\end{align*}
+Therefore $\gcd(f, D_{t} f) = 1$, so $f$ is separable.}% End footnote.
+
+Lemma. Let $K : \F_{p}$, and let $\alpha \in K$ such that $f(\alpha) = 0_{K}$. Then $K$ contains $n$ distinct zeros of $f$.
+
+Proof of lemma. Note that $\characteristic K = \characteristic \F_{p} = p$.% Begin footnote.
+\footnote{This follows immediately in both the subfield ($\F_{p} \subseteq K$) and injective field homomorphism ($\F_{p} \rightarrow K$) view of a field extension $K : \F_{p}$.} % End footnote.
+By hypothesis,
+\begin{align*}
+0_{K}
+=
+f(\alpha)
+=
+\alpha^{p} - \alpha + a
+\end{align*}
+Note that, for all $x, y \in K$,
+\begin{align*}
+(x + y)^{p}
+=
+x^{p} + {p \choose 1} \cdot x^{p - 1} y + \ldots + {p \choose p - 1} \cdot x y^{p - 1} + y^{p}
+=
+x^{p} + y^{p}
+\end{align*}
+where for the final equality, we observe that for $1 \leq m \leq p - 1$, ${p \choose m}$ is divisible by $p$ in $\Z$; because $\characteristic K = p$, all ``middle'' terms are zero in $K$. Using this, we compute
+\begin{align*}
+f(\alpha + 1_{K})
+=
+(\alpha + 1_{K})^{p} - (\alpha + 1_{K}) + a
+=
+\alpha^{p} + 1_{K} - \alpha - 1_{K} + a
+=
+\alpha^{p} - \alpha + a
+=
+f(\alpha)
+=
+0
+\end{align*}
+We conclude that if an extension field $K : \F_{p}$ contains one zero $\alpha$ of $f$, then it contains all $n$ zeros of $f$. More precisely, these zeros are
+\begin{align*}
+\alpha, \alpha + 1_{K}, \ldots, \alpha + (p - 1) \cdot 1_{K}
+\end{align*}
+Because $\characteristic K = p$, these zeros are distinct,% Begin footnote.
+\footnote{More precisely, suppose that there were $m, n \in \{0, \ldots, p - 1\}$ such that $m \neq n$ and $\alpha + m \cdot 1_{K} = \alpha + n \cdot 1_{K}$ in $K$. Without loss of generality, assume $n > m$. Then $0 = (n - m) \cdot 1_{K}$ with $n - m < p$, contradicting $\characteristic K = p$.} % End footnote.
+as desired.
+
+Note that the lemma also shows, directly, that $f$ is separable.
+
+Corollary. $f$ contains no zeros in $\F_{p}$.
+
+Proof. Suppose for the sake of contradiction that there exists an $\alpha \in \F_{p}$ such that $f(\alpha) = 0$. Then the lemma implies that
+\begin{align*}
+f
+=
+\prod_{\beta \in \F_{p}} (t - \beta)
+\end{align*}
+In particular, $a = f(0) = 0$, contradicting the hypothesis that $a \neq 0$.
+
+We now use the lemma to show that $f$ is irreducible (and hence separable). Let
+\begin{align*}
+f
+=
+\prod_{i = 1}^{n} f_{i}
+\end{align*}
+be a factorization of $f$ into irreducible factors $f_{i} \in \F_{p}[t]$. Because $f$ is monic, without loss of generality, we may assume that each $f_{i}$ is monic.% Begin footnote.
+\footnote{Because $\F_{p}$ is a field, by definition of polynomial multiplication, the product of the leading coefficients of all the $f_{i}$ equals the leading coefficient of $f$, which is $1_{\F_{p}}$. Factoring out the leading coefficient from each $f_{i}$ leaves each $f_{i}$ monic, and the product of these leading coefficients equals $1_{\F_{p}}$ and hence does not change the product.} % End footnote.
+We wish to show that $n = 1$.
+
+Claim: The degree of each factor $f_{i}$ of $f$ is equal. To see this, let $K$ be a splitting field for $f$ over $\F_{p}$. For each $i \in \{1, \ldots, n\}$, let $\alpha_{i} \in K$ be a zero of $f_{i}$. Because each $f_{i}$ is irreducible and monic, $f_{i}$ is the minimal polynomial of $\alpha_{i}$ over $\F_{p}$, denote it $m_{\alpha_{i}, \F_{p}}$. Because $\alpha_{i}$ is a zero of $f_{i}$, it is also a zero of $f$. Hence by the lemma,
+\begin{align*}
+\alpha_{i}
+\in
+\{\alpha_{1}, \alpha_{1} + 1_{K}, \ldots, \alpha_{1} + (p - 1) \cdot 1_{K}\}
+\subseteq
+K
+\end{align*}
+That is, for each $i \in \{1, \ldots, n\}$, there exists a $m_{i} \in \{0, \ldots, p - 1\} \subseteq \Z$ such that
+\begin{align*}
+\alpha_{i}
+=
+\alpha_{1} + m_{i} \cdot 1_{K}
+\end{align*}
+It follows that, for each $i \in \{1, \ldots, n\}$,
+\begin{align*}
+f_{1}(t - m_{i} \cdot 1_{K})
+\end{align*}
+is an irreducible, monic polynomial in $\F_{p}[t]$ with $\alpha_{i}$ as a zero. That is,
+\begin{align*}
+f_{1}(t - m_{i} \cdot 1_{K})
+=
+m_{\alpha_{i}, \F_{p}}(t)
+=
+f_{i}(t)
+\end{align*}
+so
+\begin{align*}
+\deg f_{i}(t)
+=
+\deg f_{1}(t - m_{i} \cdot 1_{K})
+=
+\deg f_{1}(t)
+\end{align*}
+proving the claim.
+
+Let $d = \deg f_{i}$ denote the common degree of each (irreducible) factor $f_{i}$ of $f$. Because $\F_{p}$ is a field (and hence an integral domain),
+\begin{align*}
+p
+=
+\deg f
+=
+\deg \prod_{i = 1}^{n} f_{i}
+=
+\sum_{i = 1}^{n} \deg f_{i}
+=
+n d
+\end{align*}
+Because $p$ is prime, $p \divides n$ or $p \divides d$. If $p \divides n$, then we must have $n = p$ and $d = 1$. However, $d = 1$ implies that each $\alpha_{i} \in \F_{p}$, contradicting the corollary above. Therefore we must have $n = 1$ and $d = p$. That is, $f$ is irreducible in $\F_{p}[t]$, as desired.
+
+
+
+%Suppose $f$ is reducible, say
+%\begin{align}
+%f
+%=
+%g_{1} g_{2}%
+%\label{eq : EH06g f reducible}
+%\end{align}
+%for $g_{i} \in \F_{p}[t]$ with $\deg g_{i} \geq 1$. Because $\F_{p}$ is a field and hence an integral domain,
+%\begin{align}
+%p
+%=
+%\deg f
+%=
+%\deg(g_{1} g_{2})
+%=
+%\deg g_{1} + \deg g_{2}%
+%\label{eq : EH06g sum degree gi}
+%\end{align}
+%This, along with each $\deg g_{i} \geq 1$, implies that
+%\begin{align}
+%1 \leq \deg g_{i} < \deg f = p%
+%\label{eq : EH06g degree gi}
+%\end{align}
+%Taking the formal derivative of equation \eqref{eq : EH06g f reducible} and using the product law, we get
+%\begin{align*}
+%-1
+%=
+%D_{t} f
+%=
+%D_{t}(g_{1} g_{2})
+%=
+%D_{t} g_{1} \cdot g_{2} + g_{1} \cdot D_{t} g_{2}
+%\end{align*}
+%From the conditions on $\deg g_{i}$ in \eqref{eq : EH06g sum degree gi} and \eqref{eq : EH06g degree gi} above, it follows that if $p > 2$, then at least one of $D_{t} g_{1}$ and $D_{t} g_{2}$ has degree greater than or equal to $1$, and therefore at least one of $D_{t} g_{1} \cdot g_{2}$ and $g_{1} \cdot D_{t} g_{2}$ has degree greater than or equal to $2$. (Show terms in sum on right cannot cancel to leave constant only. (!!!))
+%
+%It remains to consider the case $p = 2$. In this case, the only nonzero element $a \in \F_{p}$ is $a = 1$, so $f = t^{2} + t + 1$, which is a degree-2 polynomial whose associated function has no zeros in $\F_{2}$, hence $f$ is irreducible.
+\end{document}
