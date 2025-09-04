@@ -1,0 +1,394 @@
+%%%%%%%%%%%%%%%%%%%%
+%
+%	Midterm exam 02 : 2024--04--19 (F)
+%
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Exercise \ref{sec : e02q1}}
+\label{sec : e02q1}
+
+\noindent{}Let $K_{0}$ be a field; let $n \in \integersNonnegative$; and let $f = \sum_{i = 0}^{n} a_{i} t^{i} = a_{n} t^{n} + \ldots + a_{0} \in K_{0}[t]$, with $a_{n} \neq 0_{K_{0}}$. For your definitions, clearly introduce any additional objects you use and the hypotheses you make.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : e02q1a} Define what it means for $f$ to be (i) irreducible and (ii) separable.
+\item\label{itm : e02q1b} Define the formal derivative of $f$. As relevant to your definition, explain what multiplication by an integer means if $\characteristic K_{0} \neq 0$ (in which case, $K_{0}$ does not contain an isomorphic copy of $\Z$).
+\end{enumerate}
+(4 pt) For the remaining parts of this exercise, let $\characteristic K_{0} = 0$.
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : e02q1c} Prove that if $f$ is irreducible, then $f$ is separable.
+\item\label{itm : e02q1d} Give a counterexample that illustrates that the converse to the statement in part \ref{itm : e02q1c} is false. That is, give a polynomial $f$ that is separable and reducible.
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+Part \ref{itm : e02q1a}: (i) By hypothesis, $K_{0}$ is a field, hence an integral domain. Thus $K_{0}[t]$ is an integral domain, so the general definition of an irreducible element of an integral domain applies. Specifically, let $f \in K_{0}[t]$ such that $f \neq 0$ (the zero polynomial) and $f \notin (K_{0}[t])^{\times} \isomorphism K_{0}^{\times}$.% Begin footnote.
+\footnote{The units in $K_{0}[t]$ are the constant polynomials whose constant value is a unit in $K_{0}$. Because $K_{0}$ is a field, by definition every nonzero element of $K_{0}$ is a unit.} % End footnote.
+Then $f$ is \fontDefWord{irreducible} if for all $f_{1}, f_{2} \in K_{0}[t]$ such that $f = f_{1} f_{2}$, either $f_{1} \in (K_{0}[t])^{\times}$ or $f_{2} \in (K_{0}[t])^{\times}$.% Begin footnote
+\footnote{See DF3e, p 284.}% End footnote.
+
+(ii) A polynomial $f \in K_{0}[t]$ is \fontDefWord{separable} if $f$ each zero of $f$ (for example, in some splitting field for $f$) has multiplicity one.
+
+Note that the definition of irreducible depends on the ring of coefficients (for example, $f = 2 t$ is irreducible in $\Q[t]$ and reducible in $\Z[t]$), whereas the definition of separable does not (if each zero of $f$ has multiplicity one for some splitting field for $f$, then the same is true for any splitting field for $f$, because any two splitting fields for $f$ are isomorphic).
+
+Part \ref{itm : e02q1b}: Given
+\begin{align*}
+f
+=
+\sum_{i = 0}^{n} a_{i} t^{i}
+=
+a_{n} t^{n} + a_{n - 1} t^{n - 1} + \ldots + a_{1} t + a_{0}
+\end{align*}
+the formal derivative of $f$ is the polynomial% Begin footnote.
+\footnote{See DF3e, p 546.}% End footnote.
+\begin{align*}
+D_{t} f
+=
+\sum_{i = 1}^{n} i \cdot a_{i} t^{n - 1}
+=
+n \cdot a_{n} t^{n - 1} + (n - 1) \cdot a_{n - 1} t^{n - 2} + \ldots + a_{1}
+\end{align*}
+In general, given a positive integer $m$ and a ring element $r$, the notation $m \cdot r$ (often written without the dot) denotes the sum of $m$ copies of the element $r$:
+\begin{align*}
+m \cdot r
+=
+\sum_{i = 1}^{m} r
+\end{align*}
+By the distributive axiom for a field, this is equivalent to
+\begin{align*}
+m \cdot r
+=
+\left(\sum_{i = 1}^{m} 1_{K_{0}} \right) r
+\end{align*}
+
+Part \ref{itm : e02q1c}: For an arbitrary field $K_{0}$, we have seen that a polynomial $f \in K_{0}[t]$ is separable if and only if $\gcd(f, D_{t} f) = 1$. Let $f \in K_{0}[t]$ be irreducible, and denote $n = \deg f$. The definition of irreducible and the hypothesis that $K_{0}$ is a field imply that $f$ cannot be a constant function, so $n \geq 1$. By hypothesis, $\characteristic K_{0} = 0$, so $D_{t} f = n - 1$. Also by hypothesis, $f$ is irreducible, so by definition if $f = f_{1} f_{2}$, then one of the $f_{i}$, say $f_{1}$, is a unit, which in turn implies that $\deg f_{1} = 0$ and $\deg f_{2} = \deg f - \deg f_{1} = \deg f$. Because $\deg D_{t} f = n - 1 < n = \deg f$, it follows that $D_{t} f$ is a factor of $f$ if and only if $\deg D_{t} f = 0$. This implies that $\gcd(f, D_{t} f) = 1$, which is equivalent to $f$ being separable.
+
+Part \ref{itm : e02q1d}: A field is an integral domain. By definition, an integral domain has at least two distinct elements, $0$ and $1$ (the additive identity and the multiplicative identity, respectively, in the ring). Hence for any field $K_{0}$, the polynomial $f = (t - 0) (t - 1) = t^{2} - t$ is separable and reducible, by construction.}% End solution.
+
+
+
+\section{Exercise \ref{sec : e02q2}}
+\label{sec : e02q2}
+
+\noindent{}For your definitions, clearly introduce the objects you use and the hypotheses you make.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : e02q2a} Define ``minimal polynomial''.
+\end{enumerate}
+(4 pt) For the remaining parts of this exercise, let $\alpha = \sqrt[3]{5 - 3 \sqrt{-1}} \in \C$.
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : e02q2b} Find the minimal polynomial $m_{\alpha, \Q}$ of $\alpha$ over $\Q$. Demonstrate that it satisfies the axioms (i.e. defining properties) in your definition in part \ref{itm : e02q2a}.
+\item\label{itm : e02q2c} Prove that $[\Q(\alpha) : \Q] = 6$.
+\item\label{itm : e02q2d} Let $f \in \Q[t]$ such that $\deg f = 4$ and $f$ has no zeros in $\Q$, and let $\beta \in \C$ satisfy $f(\beta) = 0$. Can $\beta \in \Q(\alpha)$? Justify.
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+Part \ref{itm : e02q2a}: Let $K : K_{0}$ be a field extension, and let $\theta \in K$ be algebraic over $K_{0}$. The \fontDefWord{minimal polynomial of $\theta$ over $K_{0}$}, denoted $m_{\theta, K_{0}}$, is the unique monic, irreducible polynomial for which $\theta$ is a zero.% Begin footnote.
+\footnote{See DF3e p 520.}% End footnote.
+
+In this definition, irreducible is equivalent to minimal degree, in the following sense: Let $m \in K_{0}[t]$ such that $m(\theta) = 0$. Then $m$ is irreducible if and only if $m$ is a nonzero polynomial with minimal degree among the nonzero polynomials that have $\theta$ as a zero.
+
+
+Part \ref{itm : e02q2b}: We compute
+\begin{align*}
+\alpha
+&=
+\sqrt[3]{5 - 3 \sqrt{-1}}
+&
+&\Leftrightarrow
+&
+\alpha^{3}
+&=
+5 - 3 \sqrt{-1}
+&
+&\Leftrightarrow
+&
+\alpha^{3} - 5
+&=
+-3 \sqrt{-1}
+\\
+&
+&
+&\Rightarrow
+&
+(\alpha^{3} - 5)^{2}
+&=
+9 (-1)
+&
+&\Leftrightarrow
+&
+\alpha^{6} - 10 \alpha^{3} + 34
+&=
+0
+\end{align*}
+Viewing this last expression as a polynomial function evaluated at $t = \alpha$, we define
+\begin{align*}
+m
+=
+t^{6} - 10 t^{3} + 34
+\in
+\Q[t]
+\end{align*}
+This polynomial is in $\Q[t]$ and is monic (by inspection), is irreducible (for example, by the Eisenstein--Sch\"{o}nemann criterion with the prime $2$), and has $\alpha$ as a zero (by construction). Thus by definition, it is the minimal polynomial of $\alpha$ over $\Q$.
+
+Part \ref{itm : e02q2c}: In the setting of our definition in part \ref{itm : e02q2a}, we have shown that
+\begin{align*}
+[K_{0}(\theta) : K_{0}]
+=
+\deg m_{\theta, K_{0}}
+\end{align*}
+Applying this to part \ref{itm : e02q2b} gives the desired result.
+
+Part \ref{itm : e02q2d}: Yes, it is possible for $\beta \in \Q(\alpha)$. The hypotheses that $f \in \Q[t]$ and $f(\beta) = 0$ implies that $m_{\beta, \Q} \divides f$. By hypothesis, $f$ has no zeros in $\Q$, which is equivalent to the statement that a factorization of $f$ into irreducible elements in $\Q[t]$ has no factors of degree $1$; however, it may have factors of degree $2$. If $\deg m_{\beta, \Q} = 2$, then $\beta \in \Q(\alpha)$ is not precluded by the tower law. More precisely, if $\beta \in \Q(\alpha)$, then $\Q(\beta) \subseteq \Q(\alpha)$. Viewing both fields as extensions of the base field $\Q$, we get the tower $Q(\alpha) : \Q(\beta) : \Q$, so the tower law gives
+\begin{align*}
+[\Q(\alpha) : \Q]
+=
+[\Q(\alpha) : \Q(\beta)] [\Q(\beta) : \Q]
+\end{align*}
+In particular, this implies that
+\begin{align*}
+\deg m_{\beta, \Q}
+=
+[\Q(\beta) : \Q]
+\text{ divides }
+[\Q(\alpha) : \Q]
+=
+6
+\end{align*}
+
+Let's give a concrete example of such an $f \in \Q[t]$ and $\beta \in \C$. Let
+\begin{align*}
+f
+&=
+t^{4} - t^{2} - 2
+=
+(t^{2} + 1) (t^{2} - 2)
+&
+\beta
+&=
+\sqrt{-1}
+\in
+\C
+\end{align*}
+It is straightforward to check that $\deg f = 4$, $f$ has no zeros in $\Q$, and $f(\beta) = 0$. Moreover, from the definition of $\alpha$, we get
+\begin{align*}
+\beta
+=
+\sqrt{-1}
+=
+-\frac{1}{3} (\alpha^{3} - 5)
+\end{align*}
+so $\beta \in \Q(\alpha)$, as desired.}% End solution.
+
+
+\section{Exercise \ref{sec : e02q3}}
+\label{sec : e02q3}
+
+\noindent{}For your definitions, clearly introduce the objects you use and the hypotheses you make.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : e02q3a} Define ``splitting field''.
+\end{enumerate}
+(4 pt) Let $p, q \in \integersPositive$ be prime; let
+\begin{align*}
+f
+&=
+t^{p} - q
+&
+g
+&=
+\sum_{j = 0}^{p - 1} t^{j}
+=
+t^{p - 1} + \ldots + t + 1
+\end{align*}
+be polynomials in $\Q[t]$; fix a splitting field $K$ for $f g$, the product of $f$ and $g$, over $\Q$; let $\alpha \in K$ be a zero of $f$; let $\zeta \in K$ be a zero of $g$; and let $K_{f}$ (respectively, $K_{g}$) be the splitting field for $f$ (respectively, $g$) in $K : \Q$.
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : e02q3b} Prove that $f$ and $g$ are irreducible in $\Q[t]$. \fontHint{For $g$, let $\tilde{g}(t) = (t - 1) g(t) = t^{p} - 1$, and consider $\tilde{g}(t + 1)$.}
+\item\label{itm : e02q3c} Prove that for each integer $k \in \{0, \ldots, p - 1\}$, $\zeta^{k}$ is a zero of $\tilde{g}$, and $\zeta^{k} \alpha$ is a zero of $f$. Deduce that $K = K_{f} K_{g}$, the composite field of $K_{f}$ and $K_{g}$ in $K$.
+\item\label{itm : e02q3d} Prove that $[K : \Q] = p^{2} - p$. \fontHint{Use a field diagram.}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+Part \ref{itm : e02q3a}: Let $K : K_{0}$ be a field extension, and let $f \in K_{0}[t]$. $K$ is a \fontDefWord{splitting field for $f$} (over $K_{0}$) if (i) $f$ splits completely (that is, factors as a product of linear factors) in $K[t]$; and (ii) for all proper intermediate fields in $K : K_{0}$ (that is, all fields $K_{i}$ such that $K_{0} \subseteq K_{i} \subset K$), $f$ does not split completely in $K_{i}[t]$.% Begin footnote.
+\footnote{See DF3e p 536.} % End footnote.
+We have seen that for all fields $K_{0}$ and for all polynomials $f \in K_{0}[t]$, there exists a splitting field for $f$, and that it is unique up to isomorphism.
+
+Part \ref{itm : e02q3b}: $f$ is irreducible by the Eisenstein--Sch\"{o}nemann criterion with the prime $q$. For $g$, note that
+\begin{align*}
+t g(t + 1)
+=
+\tilde{g}(t + 1)
+=
+(t + 1)^{p} - 1
+&=
+t^{p} + {p \choose p - 1} t^{p - 1} + \ldots + {p \choose 1} t + 1 - 1
+\\
+&=
+t \left(t^{p - 1} + {p \choose p - 1} t^{p - 2} + \ldots + {p \choose 1}\right)
+\end{align*}
+Because $K_{0}[t]$ is an integral domain,% Begin footnote.
+\footnote{As we noted in our response to Exercise \ref{sec : e02q1}\ref{itm : e02q1a}, $K_{0}$ is a field implies $K_{0}$ is an integral domain implies $K_{0}[t]$ is an integral domain.} % End footnote.
+we may cancel $t$ from both sides of this equation to get
+\begin{align*}
+g(t + 1)
+=
+t^{p - 1} + {p \choose p - 1} t^{p - 2} + \ldots + {p \choose 1}
+\end{align*}
+Because $p$ is prime, for all $i \in \{1, \ldots, p - 1\}$,
+\begin{align*}
+p
+\divides
+{p \choose i}
+=
+\frac{p!}{i! (p - i)!}
+\end{align*}
+which are precisely the nonleading coefficients of $g(t + 1)$. Moreover, $p \notDivides 1 = \leadingCoefficient(g(t + 1))$; and $p^{2} \notDivides p = {p \choose 1}$, the constant term of $g(t + 1)$. Thus by the Eisenstein--Sch\"{o}nemann criterion with prime $p$, $g(t + 1)$ is irreducible in $\Z[t]$, hence $g(t)$ is irreducible in $\Z[t]$. Hence by Gau\ss{}'s lemma, $g$ is irreducible in $\Q[t]$.
+
+Part \ref{itm : e02q3c}: By hypothesis, $\zeta$ is a zero of $g$, so
+\begin{align*}
+\zeta^{p} - 1
+&=
+\tilde{g}(\zeta)
+=
+(\zeta - 1) g(\zeta)
+=
+0
+&
+&\Leftrightarrow
+&
+\zeta^{p}
+&=
+1
+\end{align*}
+Let $k \in \{0, \ldots, p - 1\}$. We compute
+\begin{align*}
+\tilde{g}(\zeta^{k})
+=
+(\zeta^{k})^{p} - 1
+=
+(\zeta^{p})^{k} - 1
+=
+1^{k} - 1
+=
+0
+\end{align*}
+Similarly,
+\begin{align*}
+f(\zeta^{k} \alpha)
+=
+(\zeta^{k} \alpha)^{p} - q
+=
+(\zeta^{p})^{k} \alpha^{p} - q
+=
+\alpha^{p} - q
+=
+f(\alpha)
+=
+0
+\end{align*}
+For $k \in \{0, \ldots, p - 1\}$, $\zeta^{k} = 1$ if and only if $k = 0$.% Add footnote!!!
+ Thus the values $1, \zeta, \ldots, \zeta^{p - 1}$ are distinct, so $\zeta, \ldots, \zeta^{p - 1}$ are the $p - 1 = \deg g$ zeros of $g$, and $\alpha, \zeta \alpha, \ldots, \zeta^{p - 1} \alpha$ are the $p = \deg f$ zeros of $f$. By definition, a splitting field $K_{f}$ for $f$ contains all zeros of $f$, so in particular $\alpha, \zeta \alpha \in K_{f}$. Because fields are closed under the field operations (addition, multiplication, and taking inverses), it follows that
+\begin{align*}
+\zeta
+=
+\alpha^{-1} \cdot \zeta \alpha
+\in
+K_{f}
+\end{align*}
+so for all $k \in \integers$, $\zeta^{k} \in K_{f}$. Therefore% Justify minimality!!!
+\begin{align*}
+K
+=
+\Q(\zeta, \alpha)
+=
+K_{f}
+\end{align*}
+
+Part \ref{itm : e02q3d}: Consider a field diagram with the fields $K = \Q(\zeta, \alpha) = K_{f} K_{g}$, $\Q(\zeta), \Q(\alpha)$, and $\Q$. Note that
+\begin{align*}
+K
+=
+K_{f} K_{g}
+=
+\Q(\zeta, \alpha) \Q(\zeta)
+=
+\Q(\zeta, \alpha)
+\end{align*}
+Because
+\begin{align*}
+[\Q(\zeta) : \Q]
+&=
+\deg m_{\zeta, \Q}
+=
+\deg g
+=
+p - 1
+\\
+[\Q(\alpha) : \Q]
+&=
+\deg m_{\alpha, \Q}
+=
+\deg f
+=
+p
+\end{align*}
+and $\gcd(p, p - 1) = 1$, the tower law implies that
+\begin{align*}
+[K : \Q]
+=
+p (p - 1)
+=
+p^{2} - p
+\end{align*}}% End solution.
+
+
+
+\section{Exercise \ref{sec : e02q4}}
+\label{sec : e02q4}
+
+(4 pt) Let $K : K_{0}$ be a field extension.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : e02q4a} Define $\Aut(K : K_{0})$.
+\item\label{itm : e02q4b} Let $H$ be a subgroup of $\Aut(K : K_{0})$. Define the fixed field of $H$.
+\item\label{itm : e02q4c} State what it means for $K : K_{0}$ to be galois. You may use any characterization of a galois extension that we have discussed in class.
+\item\label{itm : e02q4d} When $K : K_{0}$ is galois, the fundamental theorem of galois theory gives an inclusion-reversing, bijective correspondence between subfields (intermediate fields) of $K : K_{0}$ and subgroups of the galois group $\Gal(K : K_{0})$. Define the map from subfields to subgroups, and the map from subgroups to subfields.
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+Part \ref{itm : e02q4a}: The \fontDefWord{automorphism group} of the field extension $K : K_{0}$ is the set of automorphisms of $K$ (that is, field isomorphisms from $K$ to itself) that fix the base field $K_{0}$ (pointwise):% Begin footnote.
+\footnote{See DF3e, p 558.}% End footnote.
+\begin{align*}
+\Aut(K : K_{0})
+=
+\{\sigma : K \rightarrow K \st \text{$\sigma$ is an isomorphism}; \forall a \in K_{0}, \sigma(a) = a\}
+\end{align*}
+equipped with the group operation of function composition.
+
+Part \ref{itm : e02q4b}: The \fontDefWord{fixed field} of $H$, denote it $\fixedField(H)$, is the set of elements of the extension field $K$ that are fixed by all automorphisms in $H$:% Begin footnote.
+\footnote{See DF3e, p 560.}% End footnote.
+\begin{align*}
+\fixedField(H)
+=
+\{\alpha \in K \st \forall \sigma \in H, \sigma(\alpha) = \alpha\}
+\end{align*}
+
+Part \ref{itm : e02q4c}: The definition of a galois extension that we gave in our development of galois theory was that a finite extension $K : K_{0}$ is \fontDefWord{galois} if $\Aut(K : K_{0}) = [K : K_{0}]$. Equivalent characterizations include% Begin footnote.
+\footnote{See DF3e, pp 562 and 574.}% End footnote.
+\begin{enumerate}[label=(\arabic*)]
+\item There exists a separable $f \in K_{0}[t]$ such that $K$ is a splitting field for $f$.
+\item $\fixedField(\Aut(K : K_{0})) = K_{0}$.
+\item $K : K_{0}$ is finite, normal, and separable.
+\end{enumerate}
+
+Part \ref{itm : e02q4d}: The maps are
+\begin{align*}
+\{\text{subfields $K_{i}$ in $K : K_{i} : K_{0}$}\}
+&\leftrightarrow
+\{\text{subgroups $H \subgroupeq \Gal(K : K_{0})$}\}
+\\
+K_{i}
+&\mapsto
+\Aut(K : K_{i})
+\\
+\fixedField(H)
+&\mapsfrom
+H
+\end{align*}
+Note that these maps are inverse to each other.}% End solution.

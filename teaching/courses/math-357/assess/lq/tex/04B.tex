@@ -1,0 +1,36 @@
+%
+% LQ04B : 2024--02--26 (M)
+%
+
+\noindent{}Let $\Q$ denote the field of rational numbers; given a prime $p \in \integersPositive$, let $\F_{p} \isomorphism \Z / (p)$ denote the finite field with $p$ elements; and let $t$ be an indeterminate. For each of the quotient rings below, characterize its algebraic structure as ``field'', ``integral domain but not field'', or ``ring but not integral domain''. Justify your characterization.
+\begin{align*}
+R_{1}
+&=
+\F_{3}[t] / (t^{4} + t^{3} + t^{2} + 1)
+\\
+R_{2}
+&=
+\Q[t] / (3 t^{3} - 6 t^{2} + 7 t + 8)
+\\
+R_{3}
+&=
+\Q[t] / (t^{4} - 4 t^{3} + 6 t^{2} - t + 28)
+\end{align*}
+\fontHint{If you feel inclined to do a lot of computation, then I invite you to first check with me.}
+
+
+
+\spaceSolution{4in}{% Begin solution.
+$R_{1}$ : Field. Let $f_{1} = t^{4} + t^{3} + t^{2} + 1$. Direct computation shows that $f_{1}$ has no zeros in $\F_{3}$. It remains to check for factors of degree $2$. Without loss of generality, we may restrict our attention to monic irreducible factors of degree $2$ (why?). A polynomial of degree $2$ is reducible if and only if it has a linear factor, so by taking all possible products of the three linear polynomials in $\F_{3}[t]$, we may enumerate the reducible monic polynomials in $\F_{3}[t]$. These are
+\begin{align*}
+t^{2} + t + 1, t^{2} - t, t^{2} - 1, t^{2}, t^{2} + t, t^{2} - t + 1
+\end{align*}
+Removing these from the list of the nine monic polynomials of degree $2$ in $\F_{3}[t]$, we are left with
+\begin{align*}
+t^{2} - t - 1, t^{2} + 1, t^{2} + t - 1
+\end{align*}
+For each of these three polynomials $g$, we perform polynomial division in $\F_{3}[t]$ on $f_{1}$ by $g$. In each case, we obtain a nonzero remainder, so we conclude that $f_{1}$ is irreducible. Hence $R_{1} = \F_{3}[t] / (f_{1})$ is a field.
+
+$R_{2}$ : Field. Let $f_{2} = 3 t^{3} - 6 t^{2} + 7 t + 8 \in \Q[t]$. Analyze $f_{3} \in \R[t]$; $f_{2}(-1) = -1 < 0$ and $f_{2}(0) = 8 > 0$, so by the intermediate value theorem (which relies on the continuity of the function $f$ and the completeness of $\R$), $f_{2}$ has a zero in $\R$ in the interval $[-1, 0]$. Analyze the first derivative: For all $t \in \R$, $f_{2}'(t) > 0$, thus $[-1, 0]$ is the only interval in which a rational zero can possibly occur. Check the rational zeros in this interval consistent with the divisibility conditions implied by the coefficients of $f_{2}$: $-\frac{2}{3}, -\frac{1}{3}$. Neither is a zero of $f_{2}$, so $f_{2}$ is irreducible. Hence $\Q[t] / (f_{2})$ is a field.
+
+$R_{3}$ : Field. Let $f_{3} = t^{4} - 4 t^{3} + 6 t^{2} - t + 28 \in \Q[t]$. Apply the Eistenstein--Sch\"{o}nemann criterion with $p = 3$ to $f_{3}(t + 1) = t^{4} + 3 t + 30$ to conclude that $f_{3}$ is irreducible. Hence $\Q[t] / (f_{3})$ is a field.}% End solution.

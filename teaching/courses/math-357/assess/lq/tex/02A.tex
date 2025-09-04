@@ -1,0 +1,38 @@
+%
+%	LQ02A : 2024--02--05 (M)
+%
+
+\begin{enumerate}[label=(\alph*)]
+\item Consider the polynomial ring $\Z[t_{1}, t_{2}, t_{3}]$ ($\Z$ denotes the integers). For each of the following polynomials, state its (total) degree and its number of (nonzero) homogeneous components.
+\begin{align*}
+f
+&=
+t_{1}^{3} + t_{1} t_{2} t_{3} + 2 t_{2}^{2} t_{3}^{2} - t_{2} t_{3}^{3} + t_{3}^{2}
+\\
+g
+&=
+(t_{1}^{2} + t_{2}^{2} + t_{3}^{2})^{3} - (t_{1}^{3} + t_{2}^{3} + t_{3}^{3})^{2}
+\end{align*}
+\fontHint{Think before you compute.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Let ``\#{} h.c.'' denote ``number of homogeneous components''. We have
+\begin{center}
+\begin{tabular}{l|c c}
+		&	deg	&	\#{} h.c.	\\
+\hline
+$f$	&	$4$	&	$3$	\\
+$g$	&	$6$	&	$1$
+\end{tabular}
+\end{center}
+Note that to determine the degree and number of homogeneous components of the polynomial $g$, we don't need to expand the powers and group like terms. It suffices to note that (i) all terms in the expanded form have (total) degree $6$, and (ii) not all terms can cancel. For example, the $t_{1}^{2} t_{2}^{2} t_{3}^{2}$ term from the first expansion has nonzero coefficient (why?); and no term from the second expansion has the same multidegree, $(2,2,2)$ (why?).}% End solution.
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item By popular demand, you are explaining ideals to a group of your friends. One of them exclaims, ``Ah! So the ideal of all polynomials whose terms all have even (total) degree is an analog, in polynomial rings, to the ideal of even integers in $\Z$.'' Respond.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+``I would not trade your enthusiasm for all the prime ideals in $\Z$ (of which there are infinitely many),'' I begin. ``Aber achtung: Are we sure that the \emph{set} of all polynomials whose terms all have even (total) degree is an \emph{ideal}?'' After murmuring and shared scribbles passed among my friends, one retorts, ``The set contains the zero polynomial and is closed under addition and multiplication.'' ``I agree,'' I agree, ``but is that all we demand of ideals?'' Further murmuring and shared scribbles produces a moan: ``Oh no---the set is not strongly closed by multiplication of all ring elements.'' ``For example?'' I prod. ``Multiply any polynomial whose terms all have even degree by any linear monomial,'' my friend observes, ``and let the monomial's coefficient be $1$, to keep things simple.'' My smile expresses my agreement and my satisfaction.}% End solution.

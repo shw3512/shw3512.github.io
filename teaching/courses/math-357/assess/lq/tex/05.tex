@@ -1,0 +1,109 @@
+%
+% LQ05 : 2024--03--25 (M)
+%
+
+\noindent{}Let $p = t^{3} - 3 t - 1 \in \Q[t]$.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ05a} Prove that $p$ is irreducible.
+\item\label{itm : LQ05b} Prove that $p$ has three distinct zeros in $\R$. (You need not compute them.)
+\item\label{itm : LQ05c} Let $\alpha \in \R$ be a zero of $p$. Prove that $\sqrt{2} \notin \Q(\alpha)$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Part \ref{itm : LQ05a}: Because $p$ is a degree-$3$ polynomial over $\Q$, a field, $p$ is irreducible in $\Q[t]$ if and only if it has no zeros in $\Q$.% Begin footnote.
+\footnote{See DF3e, Proposition 9.10, p 308.} % End footnote.
+We may show that $p$ has no zeros in $\Q$ in various ways.
+\begin{enumerate}
+\item By the rational roots test,% Begin footnote.
+\footnote{See DF3e, Proposition 9.11, p 308.} % End footnote.
+if $\frac{r}{s} \in \Q$ is a zero of $p$ and in lowest terms, then $r$ divides the constant term of $p$ and $s$ divides the leading coefficient of $p$. This implies that if $\alpha \in \Q$ is a zero of $p$, then $\alpha = \pm{}1$. Evaluating the function $p$ at these two values, we find
+\begin{align*}
+p(-1)
+&=
+1
+&
+p(1)
+&=
+-3
+\end{align*}
+so $p$ has no zeros in $\Q$, and hence is irreducible in $\Q[t]$.
+\item Viewing $p \in \Z[t]$ and reducing its coefficients modulo $2$, we get
+\begin{align*}
+\overline{p}
+=
+t^{3} + t + 1
+\end{align*}
+Evaluating $\overline{p}$ at the elements of the (finite) field $\Z / (2)$, we find
+\begin{align*}
+\overline{p}(0)
+&=
+1
+&
+\overline{p}(1)
+&=
+3
+\equiv
+1
+\end{align*}
+so $p$ has no zeros in $\Z / (2)$, and hence is irreducible in $(\Z / (2))[t]$, hence in $\Z[t]$,% Begin footnote.
+\footnote{See DF3e, Proposition 9.12, p 309.} % End footnote.
+hence (by Gau\ss{}'s lemma% Begin footnote.
+\footnote{See DF3e, Proposition 9.5, p 303.}% End footnote.
+) in $\Q[t]$.
+\item Evaluating $p$ at $t + 1$, we get
+\begin{align*}
+p(t + 1)
+&=
+t^{3} + 3 t^{2} - 3
+\end{align*}
+which by the Eisenstein--Sch\"{o}nemann criterion% Begin footnote.
+\footnote{See DF3e, Proposition 9.13, p 309.} % End footnote.
+with $p = 3$ is irreducible in $\Z[t]$ and hence (by Gau\ss{}'s lemma) in $\Q[t]$.
+\end{enumerate}
+
+Part \ref{itm : LQ05b}: Evaluating $p$ at a few small values of $t \in \Z$, we find% Begin footnote.
+\footnote{In settings where we have access to graphing applications, we might use these to guide our search.}% End footnote.
+\begin{center}
+\begin{tabular}{l|r r r r r}
+\hline\hline
+$t$		&	$-2$	&	$-1$	&	$0$	&	$1$	&	$2$	\\
+\hline
+$p(t)$	&	$-3$	&	$1$	&	$-1$	&	$-3$	&	$1$	\\
+\hline
+\end{tabular}
+\end{center}
+In particular, $p(t)$ changes sign three times as $t$ increases over the interval $[-2, 2]$. If we view the polynomial $p \in \Q[t]$ as a function $\R \rightarrow \R$, then the intermediate value theorem implies that $p$ has three zeros in $\R$.
+
+Part \ref{itm : LQ05c}: To begin, note that
+\begin{enumerate}
+\item The minimal polynomial of $\alpha$ over $\Q$ is $p$, because $p$ is monic, irreducible, and $p(\alpha) = 0$.% Begin footnote.
+\footnote{See DF3e, Proposition 13.9, p 520, and the subsequent discussion.} % End footnote.
+Thus
+\begin{align*}
+[\Q(\alpha) : \Q]
+=
+\deg p
+=
+3
+\end{align*}
+\item The minimal polynomial of $\sqrt{2}$ over $\Q$ is $m_{\sqrt{2}, \Q} = t^{2} - 2$. Thus
+\begin{align*}
+[\Q(\sqrt{2}) : \Q]
+=
+\deg m_{\sqrt{2}, \Q}
+=
+2
+\end{align*}
+\end{enumerate}
+Let $K : \Q$ be a field extension such that $\sqrt{2} \in K$. Then $\Q(\sqrt{2})$ is an intermediate field of $K : \Q$, so we get a tower of field extensions:
+\begin{align*}
+K : \Q(\sqrt{2}) : \Q
+\end{align*}
+By the tower law, the degrees of these extensions satsify% Begin footnote.
+\footnote{See DF3e, Theorem 13.14, p 523.}% End footnote.
+\begin{align*}
+[K : \Q]
+=
+[K : \Q(\sqrt{2})] [\Q(\sqrt{2}) : \Q]
+\end{align*}
+In particular, $[\Q(\sqrt{2}) : \Q] = 2$ divides $[K : \Q]$. That is, if $\sqrt{2} \in K$, then $2 \divides [K : \Q]$. Equivalently, if $2 \notDivides [K : \Q]$, then $\sqrt{2} \notin K$. Because $[\Q(\alpha) : \Q] = 3$ is not divisible by $2$, we conclude that $\sqrt{2} \notin \Q(\alpha)$.}% End solution.

@@ -1,0 +1,61 @@
+%
+% LQ01 : 2024--01--19 (F)
+%
+
+\begin{enumerate}[label=(\alph*)]
+\item Let $R$ be a ring; let $a,b,c \in R$; and suppose that $a$ is not a zero divisor. Prove the left-cancellation law: If $a b = a c$, then $a = 0$ or $b = c$.
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+Using the ring axioms, we have% Begin footnote.
+\footnote{Justify each equivalence. Note that the second equivalence in \eqref{eq : SQ03a} assumes that $-(a c) = a (-c)$. Why is this true? Does this require that $R$ have a (multiplicative) identity?}% End footnote
+\begin{align}
+a b &= a c
+&
+&\Leftrightarrow
+&
+a b - a c &= 0
+&
+&\Leftrightarrow
+&
+a (b - c) &= 0%
+\label{eq : SQ03a}
+\end{align}
+Case 1: $a = 0$. The conclusion holds. Case 2: $a \neq 0$. By hypothesis, $a$ is not a zero divisor, so in this case we must have $b - c = 0$, which is equivalent to $b = c$.}% End solution.
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item Let $R$ and $S$ be commutative rings with (multiplicative) identity, let $a \in R$ be a zero divisor, and let $f : R \rightarrow S$ be a ring homomorphism such that $f(a) \in S^{\times}$. Show that $f$ is not injective.
+\end{enumerate}
+
+\spaceSolution{5in}{% Begin solution.
+For clarity, let $0_{R}$ and $0_{S}$ denote the additive identities of $R$ and $S$, respectively. Similarly, let $1_{S}$ denote the multiplicative identity of $S$.
+
+By hypothesis, $a \in R$ is a zero divisor, so by definition there exists a $b \in R \setminus \{0_{R}\}$ such that $a b = 0_{R}$. Applying the ring homomorphism $f$ to this equation, we have% Begin footnote.
+\footnote{Justify each equality.}% End footnote.
+\begin{align*}
+0_{S}
+=
+f(0_{R})
+=
+f(a b)
+=
+f(a) f(b)
+\end{align*}
+By hypothesis, $f(a) \in S^{\times}$, so by definition there exists an $s \in S$ such that $s f(a) = 1_{S}$. Left-multiplying both sides of $0_{S} = f(a) f(b)$ by this $s$, we get% Begin footnote.
+\footnote{Justify each equality.}% End footnote.
+\begin{align*}
+0_{S}
+=
+s 0_{S}
+=
+s (f(a) f(b))
+=
+(s f(a)) f(b)
+=
+1_{S} f(b)
+=
+f(b)
+\end{align*}
+That is, $b \in \ker f$. Because $b \neq 0_{R}$, we conclude that $f$ is not injective.}% End solution.

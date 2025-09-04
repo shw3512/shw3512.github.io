@@ -1,0 +1,27 @@
+%
+% LQ01A : 2024--02--05 (M)
+%
+
+\noindent{}Let $(R, +, \times)$ be a commutative ring with a (multiplicative) identity $1 \neq 0$, and let $I \idealeq R$ be an ideal. Prove the following.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ01a} $I = R$ if and only if $I$ contains a unit.
+\end{enumerate}
+
+\spaceSolution{2.5in}{($\Rightarrow$) Let $I = R$. By hypothesis, there exists $1 \in R$. By definition of a (multiplicative) identity, $1$ is a unit: $1 \times 1 = 1$. (Is using $1$ our only option?)
+
+($\Leftarrow$) Let $I$ contain a unit, denote it $u$. By definition of a unit, there exists some $v \in R$ such that $u v = 1$ and $v u = 1$.% Begin footnote.
+\footnote{In this exercise, we're assuming that $R$ is commutative, so these two conditions are equivalent.} % End footnote.
+By definition of an ideal, $I$ is closed under (left- and right-) multiplication by elements of $R$. In particular, $v \in R$ and $u \in I$, so $1 = v u \in I$. Using the same logic with $1 \in I$ and arbitrary $r \in R$, we conclude that $I = R$.}
+
+
+
+\begin{enumerate}[resume, label=(\alph*)]
+\item $R$ is a field if and only if its only ideals are $(0)$ and $(1)$.
+\end{enumerate}
+
+\spaceSolution{3in}{($\Rightarrow$) Let $R$ be a field, and let $I \idealeq R$ be an ideal. Case 1: $I = (0)$. We are done. Case 2: $I \neq (0)$. In this case there exists an element $a \in I$ such that $a \neq 0$. Because $R$ is a field, $a \in R^{\times}$; that is, $a$ is a unit. By part \ref{itm : LQ01a}, $I = R = (1)$.
+
+($\Leftarrow$) Let $(0)$ and $(1)$ be the only ideals of $R$. To show that $R$ is a field, we need to show that every nonzero element of $R$ is a unit. Let $r \in R$ such that $r \neq 0$. Consider the (principal) ideal $(r)$. Because $r \neq 0$ and $r \in (r)$, it follows that $(r) \neq (0)$. Hence $(r) = (1)$. In particular, $1 \in (1) = (r)$, so there exists some $s \in R$ such that $s r = 1$. (Do we have to worry whether this $s$ satisfies $r s = 1$, too?) That is, $r$ is a unit.}

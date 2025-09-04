@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%
+%
+%	Mock exam 02 : 2024--04--13 (S)
+%
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Exercise \ref{sec : me02q1}}
+\label{sec : me02q1}
+
+(4 pt) Let $K : K_{0}$ be a field extension, and let $\alpha \in K$ be algebraic over $K_{0}$.
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me02q1a} Define (axiomatically) the minimal polynomial $m_{\alpha, K_{0}}$ for $\alpha$ over $K_{0}$.
+\end{enumerate}
+In addition, let $K_{1}$ be an intermediate field of $K : K_{0}$; that is, let $K : K_{1} : K_{0}$.
+\begin{enumerate}[resume, label=(\alph*)]
+\item\label{itm : me02q1b} Prove that $m_{\alpha, K_{1}}$ divides $m_{\alpha, K_{0}}$. In what polynomial ring(s) does this divisibility apply?
+\item\label{itm : me02q1c} Give an example in which $[K_{1} : K_{0}] > 1$ and $m_{\alpha, K_{1}} = m_{\alpha, K_{0}}$ has degree greater than $1$.
+\end{enumerate}
+
+
+
+\section{Exercise \ref{sec : me02q2}}
+\label{sec : me02q2}
+
+(4 pt) Let
+\begin{align*}
+f
+=
+t^{4} - 6 t^{3} + 21 t^{2} - 36 t + 36
+\in
+\Q[t]
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me02q2a} Compute the formal derivative $D_{t} f$ of $f$.
+\item\label{itm : me02q2b} You apply the euclidean algorithm to $f$ and $D_{t} f$ and find
+\begin{align*}
+f
+&=
+q_{1} D_{t} f + r_{1}
+\\
+D_{t} f
+&=
+q_{2} r_{1} + 0
+\end{align*}
+where $q_{1}, q_{2}, r_{1} \in \Q[t]$, and
+\begin{align*}
+\deg q_{1}
+&=
+1
+&
+\deg q_{2}
+&=
+1
+&
+\deg r_{1}
+&=
+2
+\end{align*}
+From this, what can we conclude about the separability of $f$? about the irreducibility of $f$? Explain.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+(a) $D_{t} f = 4 t^{3} - 18 t^{2} + 42 t - 36$
+
+(b) If we do the polynomial division, then we find
+\begin{align*}
+f
+=
+t^{4} - 6 t^{3} + 21 t^{2} - 36 t + 36
+&=
+\frac{1}{8} (2 t - 3) D_{t} f + \frac{15}{4} (t^{2} - 3 t + 6)
+\\
+D_{t} f
+&=
+\frac{8}{15} (2 t - 3) \cdot \frac{15}{4} (t^{2} - 3 t + 6) + 0
+\end{align*}
+}% End solution.
+
+
+
+\section{Exercise \ref{sec : me02q3}}
+\label{sec : me02q3}
+
+(4 pt) Consider $\Q(\sqrt{2}, \sqrt{3})$ as a subfield of $\C$.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me02q3a} Prove that $[\Q(\sqrt{2}, \sqrt{3}) : \Q] = 4$. Give a basis for $\Q(\sqrt{2}, \sqrt{3})$ as a $\Q$-vector space.
+\item\label{itm : me02q3b} Specify the elements of $\Aut(\Q(\sqrt{2}, \sqrt{3}) : \Q)$. \fontHint{Recall that to specify a $\sigma \in \Aut(\Q(\sqrt{2}, \sqrt{3}) : \Q)$, it suffices to specify $\sigma(\sqrt{2})$ and $\sigma(\sqrt{3})$.}
+\item\label{itm : me02q3c} List the subgroups of $\Aut(\Q(\sqrt{2}, \sqrt{3}) : \Q)$, and find the fixed field of each.
+\item\label{itm : me02q3d} Prove that the field extension $\Q(\sqrt{2}, \sqrt{3}) : \Q$ is galois.
+\end{enumerate}
+
+
+
+\section{Exercise \ref{sec : me02q4}}
+\label{sec : me02q4}
+
+(4 pt) Let $K : K_{0}$ be a field extension.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : me2q4a} Using the definitions from the theory we developed in class, define what it means for $K : K_{0}$ to be finite, normal, separable, and galois. (That is, ``$K : K_{0}$ is finite if...'', ``$K : K_{0}$ is normal if...'', etc.)
+\item\label{itm : me2q4b} One can prove that $K : K_{0}$ is galois if and only if it is finite, normal, and separable. Discuss where, in your definition of a galois extension, each of these latter three concepts appears.
+\end{enumerate}
