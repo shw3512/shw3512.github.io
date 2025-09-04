@@ -8,11 +8,11 @@
 
 ## Course documents
 
-- [Syllabus]()
-- [Webpages]()
-    - [Course homepage]()
-    - Calendar of lectures ([original]() | [final]())
-    - [Homework (practice)]()
+- Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/syl.tex))
+- Webpages:
+    - [Course homepage](webp/home.html)
+    - Calendar of lectures ([original](webp/cal-v0.html) | [final](webp/cal-v9.html))
+    - [Homework (practice)](webp/ph.html)
 
 ## Lecture supplements
 
