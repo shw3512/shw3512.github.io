@@ -1,0 +1,84 @@
+%
+%
+%   LQuiz 08 : 2022-02-15 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Show that the following limits equal $\frac{1}{2}$. (Before you use l'H\^{o}pital's rule, show that it applies!)
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ08a} (2 pt) $\displaystyle\lim_{x \rightarrow 0} \frac{e^{2 x} - 1}{4 x}$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Direct evaluation of the limit gives
+\begin{align*}
+\frac{e^{2 (0)} - 1}{4 (0)}
+=
+\frac{1 - 1}{0}
+=
+\frac{0}{0}
+\end{align*}
+an indeterminate form to which l'H\^{o}pital's rule applies. Using it, we compute
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{e^{2 x} - 1}{4 x}
+=
+\lim_{x \rightarrow 0} \frac{2 e^{2 x}}{4}
+=
+\frac{2 e^{2 (0)}}{4}
+=
+\frac{2 (1)}{4}
+=
+\frac{1}{2}
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ08b} (2 pt) $\displaystyle\lim_{x \rightarrow 0} \frac{e^{x} - \cos x - x - x^{2}}{e^{x} - \sin x - 1 - \frac{1}{2} x^{2}}$
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Direct evaluation of the limit gives
+\begin{align*}
+\frac{e^{0} - 1 - 0 - 0}{e^{0} - 0 - 1 - 0}
+=
+\frac{1 - 1}{1 - 1}
+=
+\frac{0}{0}
+\end{align*}
+an indeterminate form to which l'H\^{o}pital's rule applies. Using it, we compute
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{e^{x} - \cos x - x - x^{2}}{e^{x} - \sin x - 1 - \frac{1}{2} x^{2}}
+=
+\lim_{x \rightarrow 0} \frac{e^{x} + \sin x - 1 - 2 x}{e^{x} - \cos x - x}
+\end{align*}
+Directly evaluating this limit at $x = 0$, we get
+\begin{align*}
+\frac{1 + 0 - 1 - 0}{1 - 1 - 0}
+=
+\frac{0}{0}
+\end{align*}
+an indeterminate form. This doesn't tell us the value of the limit...but it does tell us that l'H\^{o}pital's rule applies to the new limit, too! Using it, we compute
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{e^{x} + \sin x - 1 - 2 x}{e^{x} - \cos x - x}
+=
+\lim_{x \rightarrow 0} \frac{e^{x} + \cos x - 2}{e^{x} + \sin x - 1}
+\end{align*}
+Directly evaluating this limit at $x = 0$ again gives $\frac{0}{0}$. So l'H\^{o}pital's rule again applies. Using it,% Begin footnote.
+\footnote{We might begin to despair: Maybe l'H\^{o}pital's rule will always keep giving us indeterminate forms! That can happen: For example, consider $\displaystyle\lim_{x \rightarrow +\infty} \frac{x}{\sqrt{x^{2} + 1}}$. Here, however, we might take heart that each application of l'H\^{o}pital's rule seems to be simplifying the numerator and denominator. So we choose to press on.} % End footnote.
+we compute
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{e^{x} + \cos x - 2}{e^{x} + \sin x - 1}
+=
+\lim_{x \rightarrow 0} \frac{e^{x} - \sin x}{e^{x} + \cos x}
+=
+\frac{e^{0} - 0}{e^{0} + 1}
+=
+\frac{1}{2}
+\end{align*}
+The statement of l'H\^{o}pital's rule implies that each limit we computed above is equal (link each pair of equal limits, one after the other). Thus the original limit equals the final limit, which we showed equals $\frac{1}{2}$.}% End solution.

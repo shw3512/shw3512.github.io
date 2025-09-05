@@ -1,0 +1,95 @@
+%
+%
+%   LQuiz 02 : 2022-01-13 (R)
+%
+%
+
+\section{Exercise}
+
+Use properties of exponents and logarithms to compute the following. (The answers are integers.)
+\begin{enumerate}[label=(\alph*)]
+\item Let
+\begin{align*}
+e^{a}
+&=
+\frac{2}{3}
+&
+e^{b}
+&=
+3
+&
+e^{c}
+&=
+\frac{5}{6}
+\end{align*}
+Compute
+\begin{align*}
+e^{2 a + 3 b - 13 c} \cdot \frac{e^{10 a + 7 c}}{e^{10 a - 7 c}}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+We compute
+\begin{align*}
+e^{2 a + 3 b - 13 c} \cdot \frac{e^{10 a + 7 c}}{e^{10 a - 7 c}}
+&=
+e^{2 a} e^{3 b} e^{-13 c} \cdot e^{10 a} e^{7 c} \cdot e^{-10 a} e^{-(-7 c)}
+\\
+&=
+e^{2 a + 10 a - 10 a} e^{3 b} e^{-13 c + 7 c + 7 c}
+\\
+&=
+e^{2 a} e^{3 b} e^{c}
+\\
+&=
+(e^{a})^{2} (e^{b})^{3} e^{c}
+\\
+&=
+\frac{2^{2}}{3^{2}} \cdot 3^{3} \cdot \frac{5}{6}
+\\
+&=
+10
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item Let
+\begin{align*}
+\ln a
+&=
+2
+&
+\ln b
+&=
+-10
+&
+\ln c
+&=
+\pi
+\end{align*}
+Compute
+\begin{align*}
+\ln\left(\frac{a^{5}}{b^{-3} c^{12}}\right) - \ln\left(\frac{b^{4}}{(c^{6})^{2}}\right)
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+\ln\left(\frac{a^{5}}{b^{-3} c^{12}}\right) - \ln\left(\frac{b^{4}}{(c^{6})^{2}}\right)
+&=
+\ln a^{5} - \left(\ln b^{-3} + \ln c^{12}\right) - \left(\ln b^{4} - \ln c^{12}\right)
+\\
+&=
+5 \ln a + 3 \ln b - 12 \ln c - 4 \ln b + 12 \ln c
+\\
+&=
+5 \ln a - \ln b
+\\
+&=
+5 (2) - (-10)
+\\
+&=
+20
+\end{align*}}% End solution.

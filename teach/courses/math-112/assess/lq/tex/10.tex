@@ -1,0 +1,166 @@
+%
+%
+%   LQuiz 10 : 2022--02--24 (R)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Compute the following indefinite integrals (aka antiderivatives). Check your answers by differentiating. (What should you get?)
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ10a} (2 pt) $\displaystyle\int 3 x^{2} + 6 x - 1 \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Our goal is to find the most general function $F(x)$ such that its derivative $F'(x)$ equals the given integrand, $3 x^{2} + 6 x - 1$.
+
+With experience, we can often ``guess and check'' relatively simple indefinite integrals. However, we'll present a more systematic approach here.
+
+Using the linearity of the indefinite integral, we have
+\begin{align}
+\int 3 x^{2} + 6 x - 1 \spaceIntd \intd x
+=
+3 \int x^{2} \spaceIntd \intd x + 6 \int x \spaceIntd \intd x - \int 1 \spaceIntd \intd x%
+\label{eq : LQ10a Integral Decomposed}
+\end{align}
+Each of these simpler integrals can be solved by thinking of the power rule for differentiation, run in reverse. More precisely, the power rule for differentiation gives
+\begin{align*}
+\frac{\intd}{\intd x} \left(x^{n}\right)
+=
+n x^{n - 1}
+\end{align*}
+If $n \neq 0$, we can rearrange this as
+\begin{align*}
+\frac{\intd}{\intd x} \left(\frac{1}{n} x^{n}\right)
+=
+\frac{1}{n} \frac{\intd}{\intd x} \left(x^{n}\right)
+=
+x^{n - 1}
+\end{align*}
+Using the definition of an antiderivative, we can view this last statement as saying
+\begin{align*}
+\frac{1}{n} x^{n} \text{ is an antiderivative of } x^{n - 1}
+\end{align*}
+for $n \neq 0$. To get the most general antiderivative from a particular antiderivative, simply add an arbitrary constant $C \in \reals$ to the particular antiderivative. Thus we conclude that
+\begin{align*}
+\frac{1}{n} x^{n} + C \text{ is the most general antiderivative of } x^{n - 1}
+\end{align*}
+or equivalently,
+\begin{align*}
+\frac{1}{n} x^{n} + C
+=
+\int x^{n - 1} \spaceIntd \intd x
+\end{align*}
+
+Applying these results to the three integrals in \eqref{eq : LQ10a Integral Decomposed}, we get
+\begin{align*}
+\int x^{2} \spaceIntd \intd x
+=
+\frac{1}{3} x^{3}
+&&
+\int x \spaceIntd \intd x
+=
+\frac{1}{2} x^{2}
+&&
+\int 1 \spaceIntd \intd x
+=
+\int x^{0} \spaceIntd \intd x
+%=
+%\frac{1}{1} x + C_{1}
+=
+x
+\end{align*}
+Note that we've left off all the ``$+ C$''s for the moment --- what we have written is one particular antiderivative for each integral. Substituting these into \eqref{eq : LQ10a Integral Decomposed}, we get
+\begin{align*}
+\int 3 x^{2} + 6 x - 1 \spaceIntd \intd x
+=
+3 \left(\frac{1}{3} x^{3}\right) + 6 \left(\frac{1}{2} x^{2}\right) - x
+=
+x^{3} + 3 x^{2} - x
+\end{align*}
+This equation says that $x^{3} + 3 x^{2} - x$ is one particular antiderivative of $3 x^{2} + 6 x - 1$. To get the most general antiderivative, we just add $C$ to the particular antiderivative:
+\begin{align*}
+\int 3 x^{2} + 6 x - 1 \spaceIntd \intd x
+=
+x^{3} + 3 x^{2} - x + C
+\end{align*}
+
+To check our result, we differentiate it, to ensure that we get the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x} \left(x^{3} + 3 x^{2} - x + C\right)
+=
+3 x^{2} + 6 x - 1
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ10b} (2 pt) $\displaystyle\int e^{2 x} - \cos x \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Using the linearity of the integral, we have
+\begin{align}
+\int e^{2 x} - \cos x \spaceIntd \intd x
+=
+\int e^{2 x} \spaceIntd \intd x - \int \cos x \spaceIntd \intd x%
+\label{eq : LQ10b Integral Decomposed}
+\end{align}
+The power rule for differentiation doesn't apply to these integrands. We go back to the definition of an antiderivative.
+
+For the first integral, what is a function whose derivative equals $e^{2 x}$? Well, the derivative of $e^{\text{something}}$ is $e^{\text{something}}$. So let's try $F(x) = e^{2 x}$ as our antiderivative of $f(x) = e^{2 x}$. Using the chain rule, we compute
+\begin{align*}
+F'(x)
+=
+\frac{\intd}{\intd x} e^{2 x}
+=
+2 e^{2 x}
+=
+2 f(x)
+\end{align*}
+So $F'(x) \neq f(x)$ --- we're off by a factor of $2$. However, note that we can move that factor of $2$ to the left side of our equation, getting
+\begin{align*}
+\left(\frac{1}{2} F(x)\right)'
+=
+\frac{1}{2} F'(x)
+=
+f(x)
+\end{align*}
+This equation tells us that the antiderivative we seek isn't $F(x)$, but $\frac{1}{2} F(x)$, that is, $\frac{1}{2} e^{2 x}$:
+\begin{align*}
+\int e^{2 x} \spaceIntd \intd x
+=
+\frac{1}{2} e^{2 x}
+\end{align*}
+
+For the second integral, what is a function whose derivative is $\cos x$? The function $\sin x$ satisfies $\frac{\intd}{\intd x} (\sin x) = \cos x$. Thus by definition of antiderivative,
+\begin{align*}
+\int \cos x \spaceIntd \intd x
+=
+\sin x
+\end{align*}
+
+Substituting these two results into \eqref{eq : LQ10b Integral Decomposed}, we get
+\begin{align*}
+\int e^{2 x} - \cos x \spaceIntd \intd x
+=
+\frac{1}{2} e^{2 x} - \sin x
+\end{align*}
+This equation says that $\frac{1}{2} e^{2 x} - \sin x$ is one particular antiderivative of $e^{2 x} - \cos x$. To get the most general antiderivative, we just add $C$ to the particular antiderivative:
+\begin{align*}
+\int e^{2 x} - \cos x \spaceIntd \intd x
+=
+\frac{1}{2} e^{2 x} - \sin x + C
+\end{align*}
+
+To check our result, we differentiate it, to ensure that we get the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x} \left(\frac{1}{2} e^{2 x} - \sin x + C\right)
+=
+\frac{1}{2} \left(2 e^{2 x}\right) - \cos x + 0
+=
+e^{2 x} - \cos x
+\end{align*}}% End solution.

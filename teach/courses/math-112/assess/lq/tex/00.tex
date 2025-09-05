@@ -1,0 +1,572 @@
+%
+%
+%   LQuiz 01 : 2022-01-11 (T)
+%
+%
+
+%
+%   Section 1 : Precalculus
+%
+
+\section{Precalculus}
+
+\subsection{Exercise \ref{sec : Precalculus Q1}}
+\label{sec : Precalculus Q1}
+
+% Reference : SHW
+
+(4 pt) Let
+\begin{align*}
+f(x)
+&=
+\frac{3 x + 8}{x^{2} + 4 x + 2}
+&
+g(x)
+&=
+x - 2
+\end{align*}
+(Assume the domain and codomain of $f$ and $g$ are the largest possible subsets of the real numbers, $\reals$, for which the above rules of assignment make sense.) Find the composition $(f \circ g)(x)$, presented as simply as possible, and state its domain (i.e. the allowed values of $x$).
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+(f \circ g)(x)
+=
+f\left(g(x)\right)
+=
+f\left(x - 2\right)
+=
+\frac{3 (x - 2) + 8}{(x - 2)^{2} + 4 (x - 2) + 2}
+=
+\frac{3 x + 2}{x^{2} - 2}
+\end{align*}
+This final expression for $f \circ g$ is not defined if and only if the denominator equals $0$, i.e.
+\begin{align*}
+x^{2} - 2
+&=
+0
+&
+&\Leftrightarrow
+&
+x
+&=
+\pm{}\sqrt{2}
+\end{align*}
+Hence the domain of $f \circ g$ is all real numbers except $\pm{}\sqrt{2}$. We can also write this as
+\begin{align*}
+\reals \setminus \{\pm{}\sqrt{2}\}
+&&
+\text{or}
+&&
+\left(-\infty,-\sqrt{2}\right) \cup \left(-\sqrt{2},\sqrt{2}\right) \cup \left(\sqrt{2},+\infty\right)
+\end{align*}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Precalculus Q2}}
+\label{sec : Precalculus Q2}
+
+% Reference : SHW
+
+(4 pt) Show that the following expression simplifies to a single trigonometric function. State any disallowed values of $\theta$.
+\begin{align*}
+(\sec \theta - \cos \theta) \csc \theta
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Let's begin by distributing, then rewriting $\csc \theta$ and $\sec \theta$ in terms of $\cos \theta$ and $\sin \theta$:
+\begin{align*}
+\left(\sec \theta - \cos \theta\right) \csc \theta
+=
+\sec \theta \csc \theta - \cos \theta \csc \theta
+=
+\frac{1}{\cos \theta \sin \theta} - \frac{\cos \theta}{\sin \theta}
+\end{align*}
+To head further in the direction of a single trigonometric function, let's write the difference as a single fraction:
+\begin{align*}
+\ldots
+=
+\frac{1}{\cos \theta \sin \theta} - \frac{\cos \theta}{\cos \theta} \frac{\cos \theta}{\sin \theta}
+=
+\frac{1 - \cos^{2} \theta}{\cos \theta \sin \theta}
+\end{align*}
+Recall the identity $\cos^{2} \theta + \sin^{2} \theta = 1$. Using this, we can rewrite the expression as
+\begin{align*}
+\ldots
+=
+\frac{\sin^{2} \theta}{\cos \theta \sin \theta}
+=
+\frac{\sin \theta}{\cos \theta}
+=
+\tan \theta
+\end{align*}
+We can only cancel a factor of $\sin \theta$ from numerator and denominator when $\sin \theta \neq 0$, i.e. when $\theta$ is not an integer multiple of $\pi$. Otherwise, the denominator is $0$; thus these values of $\theta$ are not allowed. Moreover, $\tan \theta$ is not defined when $\theta$ is an odd-integer multiple of $\frac{\pi}{2}$. These are the only disallowed values of $\theta$.}% End solution.
+
+
+
+\newpage
+
+
+
+\subsection{Exercise \ref{sec : Precalculus Q3}}
+\label{sec : Precalculus Q3}
+
+% Reference : OpenStax, Calculus, V1, Exercise 1.5.288
+
+(4 pt) Solve the following equation exactly. If this is not possible, or no solution exists, state so.
+\begin{align*}
+\ln \sqrt{x + 3}
+=
+2
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Let's begin by exponentiating both sides and simplifying:
+\begin{align*}
+\sqrt{x + 3}
+=
+e^{\ln \sqrt{x + 3}}
+=
+e^{2}
+\end{align*}
+Because the exponential function% Begin footnote.
+\footnote{The inverse of the exponential function --- the natural logarithm function --- is also injective.} % End footnote.
+is injective (i.e. one-to-one), this transformation does not change the solutions to the original equation. Now we may square both sides and solve for $x$:
+\begin{align*}
+x
+=
+\left(e^{2}\right)^{2} - 3
+=
+e^{4} - 3
+\end{align*}
+The ``square'' function is not injective, so it is possible that we added spurious solutions at that step.% Begin footnote.
+\footnote{Consider the equation $x = 1$. Square both sides, then solve. What do you find? Is the result you found false?} % End footnote.
+However, we can check directly that the solution $x = e^{4} - 3$ indeed solves the original equation.}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Precalculus Q4}}
+\label{sec : Precalculus Q4}
+
+% Reference : SHW
+
+(4 pt) Compute the following.
+\begin{align*}
+\sum_{m = 1}^{19} (5 m + 2) - \sum_{n = -2}^{4} n^{2}
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Let's tackle the two sums separately. For the first sum, we compute
+\begin{align*}
+\sum_{m = 1}^{19} (5 m + 2)
+=
+5 \sum_{m = 1}^{19} m + \sum_{m = 1}^{19} 2
+=
+5 \frac{19 (19 + 1)}{2} + 19 (2)
+=
+5 (190) + 38
+=
+950 + 38
+\end{align*}
+For the second sum, there is a formula when the summation index starts at $1$ (or $0$),% Begin footnote.
+\footnote{The formula, which we can prove by induction, is $\sum_{n = 1}^{N} n^{2} = \frac{1}{6} N (N + 1) (2 N + 1)$. (Can you prove this?)} % End footnote.
+and we could partition the sum into two subsums to use it. However, because this sum has only 7 relatively small terms, I find it easier to compute them directly:
+\begin{align*}
+\sum_{n = -2}^{4} n^{2}
+=
+(-2)^{2} + (-1)^{2} + \ldots + 3^{2} + 4^{2}
+=
+4 + 1 + \ldots + 9 + 16
+=
+35
+\end{align*}
+Putting our two results together, we conclude that
+\begin{align*}
+\sum_{m = 1}^{19} (5 m + 2) - \sum_{n = -2}^{4} n^{2}
+=
+(950 + 38) - (35)
+=
+953
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+
+
+%
+%   Section 2 : Differential calculus
+%
+
+\section{Differential calculus}
+
+\subsection{Exercise \ref{sec : Differential Calculus Q1}}
+\label{sec : Differential Calculus Q1}
+
+% Reference : Math 111, Fall 2021, Final, Q3
+
+(4 pt) Let $f : \reals \rightarrow \reals$ be the function defined by
+\begin{align*}
+f(x)
+=
+x^{3} + 3 x^{2} - 9 x + 13
+\end{align*}
+Find all points $(x,f(x))$ where the tangent line to the graph of $f$ is horizontal.
+
+\spaceSolution{3in}{% Begin solution.
+Horizontal tangents to the graph of $f$ occurs at values of $x$ where $f'(x) = 0$. We compute
+\begin{align*}
+0
+\seteq
+f'(x)
+=
+3 x^{2} + 6 x - 9
+=
+3 (x^{2} + 2 x - 3)
+=
+3 (x + 3) (x - 1)
+\end{align*}
+This equation has two solutions: $x = -3$ and $x = 1$. For each solution, we evaluate $f$ at that value of $x$ to find the corresponding point $(x,f(x))$ on the graph of $f$. This gives us the two points
+\begin{align*}
+(-3,40)
+&&
+\text{and}
+&&
+(1,8)
+\end{align*}
+(Can you determine whether each point is a local minimum or a local maximum of $f$? Do you need to use calculus to do this?)}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Differential Calculus Q2}}
+\label{sec : Differential Calculus Q2}
+
+% Reference : Math 111, Fall 2021, Final, Q5 and Q6
+
+(4 pt) Compute the first derivative of the following function.
+\begin{align*}
+v(t)
+=
+t^{2} \ln(2 t^{3}) + \arctan(5 t) - \sin\left(\frac{\pi}{12}\right)
+\end{align*}
+(Assume the domain and codomain of $v$ are the largest possible subsets of the real numbers, $\reals$, for which the above rule of assignment make sense.) 
+
+\spaceSolution{3in}{% Begin solution.
+The derivative is linear, so we can differential $v$ term-by-term.
+
+The first term of $v$ is a product of (nontrivial) functions of $t$, so we must use the product rule:
+\begin{align*}
+\frac{\intd}{\intd t}\left(t^{2} \ln(2 t^{3})\right)
+&=
+\frac{\intd}{\intd t}\left(t^{2}\right) \ln(2 t^{3}) + t^{2} \frac{\intd}{\intd t}\left(\ln(2 t^{3})\right)
+\\
+&=
+(2 t) \ln(2 t^{3}) + t^{2} \left(\frac{1}{2 t^{3}} (6 t^{2})\right)
+\\
+&=
+2 t \ln(2 t^{3}) + 3 t
+\end{align*}
+where in the second equality we use the chain rule on the second term.
+
+The second term of $v$ also requires the chain rule (why?). Frankly, I don't remember the derivative of $y = \arctan x$, so I rewrite it as $\tan y = x$ and use implicit differentiation and elementary trigonometry, obtaining $y' = \frac{1}{x^{2} + 1}$. Thus
+\begin{align*}
+\frac{\intd}{\intd t}\left(\arctan(5 t)\right)
+=
+\frac{1}{(5 t)^{2} + 1} (5)
+=
+\frac{5}{25 t^{2} + 1}
+\end{align*}
+
+The third term of $v$ is a constant (no variable $t$!), so its derivative is $0$.
+
+Combining these results, we conclude that
+\begin{align*}
+v'(t)
+=
+2 t \ln(2 t^{3}) + 3 t + \frac{5}{25 t^{2} + 1}
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+
+
+\subsection{Exercise \ref{sec : Differential Calculus Q3}}
+\label{sec : Differential Calculus Q3}
+
+% Reference : Math 111, Fall 2021, Exam 2, Q 3
+
+(4 pt) Let $f : [2,+\infty) \rightarrow \reals$ be the function defined by
+\begin{align*}
+f(x)
+=
+\sqrt{2 x - 4}
+\end{align*}
+Using the limit definition of the derivative (!), compute $f'(x)$.
+
+\spaceSolution{3in}{% Begin solution.
+Fix $x \in [2,+\infty)$. Using the limit definition of the derivative (i.e. the limit of a difference quotient), we compute
+\begin{align*}
+f'(x)
+=
+\lim_{h \downarrow 0} \frac{f(x + h) - f(x)}{(x + h) - x}
+=
+\lim_{h \downarrow 0} \frac{\sqrt{2 x + 2 h - 4} - \sqrt{2 x - 4}}{h}
+\end{align*}
+Direct evaluation of this limit gives $\frac{0}{0}$, an indeterminate form. Let's rationalize the numerator to see if that helps:% Begin footnote.
+\footnote{Can we apply l'H\^{o}pital's rule here? What do we need to ``know'' to do the computations l'H\^{o}pital's rule requires?}% End footnote.
+\begin{align*}
+\lim_{h \downarrow 0} \frac{\sqrt{2 x + 2 h - 4} - \sqrt{2 x - 4}}{h}
+&=
+\lim_{h \downarrow 0} \frac{\sqrt{2 x + 2 h - 4} - \sqrt{2 x - 4}}{h} \cdot \frac{\sqrt{2 x + 2 h - 4} + \sqrt{2 x - 4}}{\sqrt{2 x + 2 h - 4} + \sqrt{2 x - 4}}
+\\
+&=
+\lim_{h \downarrow 0} \frac{2 h}{h \left(\sqrt{2 x + 2 h - 4} + \sqrt{2 x - 4}\right)}
+\\
+&=
+\lim_{h \downarrow 0} \frac{2}{\left(\sqrt{2 x + 2 h - 4} + \sqrt{2 x - 4}\right)}
+=
+\frac{2}{2 \sqrt{2 x - 4}}
+=
+\frac{1}{\sqrt{2 x - 4}}
+\end{align*}
+(Can you show we get the same result if we compute $f'(x)$ using the ``rules'' for derivatives?)}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Differential Calculus Q4}}
+\label{sec : Differential Calculus Q4}
+
+% Reference : Math 111, Fall 2021, Final, Q10
+
+(4 pt) Compute the following limit.
+\begin{align*}
+\lim_{x \rightarrow +\infty} \frac{3 e^{x} + 5}{5 e^{x} + x + 1}
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Direct evaluation of the limit gives $\frac{+\infty}{+\infty}$, an indeterminate form. Divide both numerator and denominator by $e^{x}$, or equivalently, multiply both numerator and denominator by $e^{-x}$:
+\begin{align*}
+\lim_{x \rightarrow +\infty} \frac{3 e^{x} + 5}{5 e^{x} + x + 1} \cdot \frac{e^{-x}}{e^{-x}}
+=
+\lim_{x \rightarrow +\infty} \frac{3 + 5 e^{-x}}{5 + x e^{-x} + e^{-x}}
+=
+\frac{\displaystyle\lim_{x \rightarrow +\infty} \left(3 + 5 e^{-x}\right)}{\displaystyle\lim_{x \rightarrow +\infty} \left(5 + x e^{-x} + e^{-x}\right)}
+\end{align*}
+where the final equality uses limit laws (which? what is the exact statement?). In the numerator, direct evaluation gives
+\begin{align*}
+\lim_{x \rightarrow +\infty} \left(3 + 5 e^{-x}\right)
+=
+3 + 5 e^{-\infty}
+=
+3 + 5 (0)
+=
+3
+\end{align*}
+In the denominator, another use of limit laws (which?) and one application of l'H\^{o}pital's rule give
+\begin{align*}
+\lim_{x \rightarrow +\infty} \left(5 + x e^{-x} + e^{-x}\right)
+=
+5 + \lim_{x \rightarrow +\infty} \frac{1}{e^{x}} + 0
+=
+5 + 0 + 0
+=
+5
+\end{align*}
+which we note is nonzero. (Why might we note that?) We conclude that
+\begin{align*}
+\lim_{x \rightarrow +\infty} \frac{3 e^{x} + 5}{5 e^{x} + x + 1}
+=
+\frac{3}{5}
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+
+
+%
+%   Section 3 : Integral calculus
+%
+
+\section{Integral calculus}
+
+\subsection{Exercise \ref{sec : Integral Calculus Q1}}
+\label{sec : Integral Calculus Q1}
+
+% Reference : OpenStax, Calculus, Volume 1, Exercise 4.10.500
+
+(4 pt) Solve the following initial value problem (i.e. find $f$ satisfying the following conditions).
+\begin{align*}
+f'(x)
+&=
+x^{2} + \sqrt{x}
+&
+&\text{such that}
+&
+f(0)
+&=
+2
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+First we integrate $f'(x)$ to get a family of functions:
+\begin{align*}
+f(x)
+=
+\int f'(x) \spaceIntd \intd x
+=
+\int x^{2} + \sqrt{x} \spaceIntd \intd x
+=
+\frac{1}{3} x^{3} + \frac{2}{3} x^{\frac{3}{2}} + C
+\end{align*}
+where $C \in \reals$. This is the general solution, ignoring the initial value (aka boundary condition) $f(0) = 2$. To obtain the particular solution, we apply the initial value:
+\begin{align*}
+2
+\seteq
+f(0)
+=
+\frac{1}{3} 0^{3} + \frac{2}{3} 0^{\frac{3}{2}} + C
+=
+C
+\end{align*}
+Thus, the particular solution to the initial value problem is
+\begin{align*}
+f(x)
+=
+\frac{1}{3} x^{3} + \frac{2}{3} x^{\frac{3}{2}} + 2
+\end{align*}
+(Can you confirm that this function satisfies all parts of the initial value problem? What about uniqueness: Is this solution unique?)}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Integral Calculus Q2}}
+\label{sec : Integral Calculus Q2}
+
+% Reference : OpenStax, Calculus, Volume 2, Exercise 1.2.112, modified
+
+(4 pt) Let $f : [-2,2] \rightarrow \reals$ be the function defined by
+\begin{align*}
+f(x)
+=
+2 - \sqrt{4 - x^{2}}
+\end{align*}
+Find the average value of $f$ on the interval $[0,2]$. Then find a value $x_{0}$ of $x$ on this interval such that $f(x_{0})$ equals this average value. (Is such an $x_{0}$ guaranteed to exist? Why or why not? Is it unique?)
+
+\spaceSolution{3in}{% Begin solution.
+The average value (aka mean value) of $f$ on the interval $[0,2]$ is given by
+\begin{align*}
+\averageValue(f,[0,2])
+=
+\frac{1}{2 - 0} \int_{0}^{2} f(x) \spaceIntd \intd x
+\end{align*}
+The integral is messy to compute algebraically...but a breeze to compute geometrically! (Why? Sketch the graph of $f$...) Elementary euclidean geometry gives us
+\begin{align*}
+\averageValue(f,[0,2])
+=
+\frac{1}{2} \left(2 \cdot 2 - \frac{1}{4} \pi \cdot 2^{2}\right)
+=
+2 - \frac{\pi}{2}
+\end{align*}
+We find the requested $x_{0}$ --- guaranteed to exist by the mean value theorem --- by solving
+\begin{align*}
+2 - \frac{\pi}{2}
+=
+\averageValue(f,[0,2])
+\seteq
+f(x_{0})
+=
+2 - \sqrt{4 - x_{0}^{2}}
+&&
+\Rightarrow
+&&
+x_{0}
+=
+\pm{}\sqrt{4 - \frac{\pi^{2}}{4}}
+\end{align*}
+Only the positive square root lies in the interval $[0,2]$ (can you show this? without a calculator?), so $x_{0} = \sqrt{4 - \frac{\pi^{2}}{4}}$.}% End solution.
+
+
+
+\newpage
+
+
+
+\subsection{Exercise \ref{sec : Integral Calculus Q3}}
+\label{sec : Integral Calculus Q3}
+
+% Reference : OpenStax, Calculus, Volume 2, Exercise 1.3.158, modified
+
+(4 pt) Compute the following derivative.
+\begin{align*}
+\frac{\intd}{\intd x} \int_{0}^{\ln x} e^{2 t} \spaceIntd \intd t
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+By the fundamental theorem of calculus,% Begin footnote.
+\footnote{The integrand, $e^{2 t}$, is continuous on all of $\reals$, so the fundamental theorem of calculus applies, at least on a subset of $(0,+\infty)$, the lower bound $0$ coming from the lower limit of integration of the original integral.}% End footnote.
+\begin{align*}
+\frac{\intd}{\intd x} \int_{0}^{\ln x} e^{2 t} \spaceIntd \intd t
+=
+e^{2 (\ln x)} \frac{\intd}{\intd x} \ln x - e^{2 (0)} \frac{\intd}{\intd x} 0
+=
+e^{\ln(x^{2})} \frac{1}{x} - 0
+=
+x
+\end{align*}
+(Can you show we get the same result, if we first compute the definite integral (as a function of $x$), then compute its derivative?)
+
+Note that the original integral is defined only for $x \in (0,+\infty)$, so our final answer has the same constraint. That is, a more precise answer is
+\begin{align*}
+\frac{\intd}{\intd x} \int_{0}^{\ln x} e^{2 t} \spaceIntd \intd t
+=
+x,
+\quad
+x \in (0,+\infty)
+\end{align*}
+(Can you explain this constraint, geometrically?)}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Integral Calculus Q4}}
+\label{sec : Integral Calculus Q4}
+
+% Reference : OpenStax, Calculus, Volume 2, Exercise 3.1.56
+
+(4 pt) Compute the following indefinite integral.
+\begin{align*}
+\int x^{2} \sin x \spaceIntd \intd x
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+One application of integration by parts (with $u = x^{2}$ and $\intd v = \sin x \spaceIntd \intd x$) gives
+\begin{align}
+\int x^{2} \sin x \spaceIntd \intd x
+=
+-x^{2} \cos x - \int -\cos x (2 x) \spaceIntd \intd x
+=
+-x^{2} \cos x + 2 \int x \cos x \spaceIntd \intd x%
+\label{eq : LQuiz01 Integration By Parts Intermediate Solution}
+\end{align}
+Another integration by parts, on the second integral (with $u = x$ and $\intd v = \cos x \spaceIntd \intd x$), gives
+\begin{align*}
+\int x \cos x \spaceIntd \intd x
+=
+x \sin x - \int \sin x \spaceIntd \intd x
+=
+x \sin x + \cos x + C_{0}
+\end{align*}
+Substituting this result into \eqref{eq : LQuiz01 Integration By Parts Intermediate Solution}, we obtain
+\begin{align*}
+\int x^{2} \sin x \spaceIntd \intd x
+=
+-x^{2} \cos x + 2 x \sin x + 2 \cos x + C
+\end{align*}
+(Can you show that differentiating our answer indeed gives the original integrand?)}% End solution.
+
+
+
+\newpage

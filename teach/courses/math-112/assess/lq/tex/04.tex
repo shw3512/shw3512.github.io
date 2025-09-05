@@ -1,0 +1,54 @@
+%
+%
+%   LQuiz 04 : 2022-01-20 (R)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+Consider the function
+\begin{align*}
+f : [3,+\infty) \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+\sqrt{x^{2} - 9}
+\end{align*}
+where as usual $\reals$ denotes ``all real numbers''. Find the derivative function $f'$. Be sure to specify its domain and codomain, in addition to the rule(s) of assignment.
+
+\spaceSolution{4in}{% Begin solution.
+The rule of assignment for $f$ involves a function within a function (namely, $x^{2} - 9$ within the square root function), so when differentiating $f$, we must use the chain rule. We compute
+\begin{align*}
+f'(x)
+=
+\frac{1}{2} \left(x^{2} - 9\right)^{-\frac{1}{2}} (2 x)
+=
+\frac{x}{\sqrt{x^{2} - 9}}
+\end{align*}
+This rule of assignment is invalid for $x$ if and only if one of the following conditions holds:
+\begin{enumerate}
+\item The expression inside the square root is negative, i.e. $x^{2} - 9 < 0$. This happens if and only if $x^{2} < 9$, which happens if and only if $-3 < x < 3$, i.e. $x$ is in the open interval $(-3,3)$.
+\item The denominator is zero. This happens if and only if $x = \pm{}3$.
+\end{enumerate}
+Combining these results, we conclude that the rule of assignment is invalid for all $x$ in the closed interval $[-3,3]$. Equivalently, the rule of assignment is valid for all $x$ outside this interval, i.e. in $(-\infty,-3) \cup (3,+\infty)$.
+
+However, this last expression is not the domain of $f'$. Why not? We must also consider the domain of the original function $f$, which is $[3,+\infty)$. The domain of $f'$ is the set of points in the domain of the original function $f$ for which the rule of assignment for $f'$ is valid, i.e.
+\begin{align*}
+[3,+\infty) \cap \left((-\infty,-3) \cup (3,+\infty)\right)
+=
+(3,+\infty)
+\end{align*}
+where the symbol ``$\cap$'' means ``intersection'' (all the points in common). The codomain of $f'$ we may take to be all real numbers. Thus we conclude that the derivative function for the given $f$ is the function
+\begin{align*}
+f' : (3,+\infty) \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+\frac{x}{\sqrt{x^{2} - 9}}
+\end{align*}}% End solution.
