@@ -34,8 +34,8 @@ Remarks.
 
 ### Quizzes
 
-| Sequence | Type  | Topic                                     | v0 | Requiz A | Requiz B | Requiz C |
-|---------:|:------|:------------------------------------------|:---|:---------|:---------|:---------|
+| Sequence | Type  | Topic                                     | Quiz | Requiz A | Requiz B | Requiz C |
+|---------:|:------|:------------------------------------------|:-----|:---------|:---------|:---------|
 | 2        | Short | Graphing vector operations                | [q](assess/qz/pdf/02.pdf), [tex](assess/qz/tex/02.tex), [zip](assess/qz/tex/02-graphics.zip) |  |  |  |
 | 3        | Long  | Coordinates, vector operations            | [q](assess/qz/pdf/03.pdf), [tex](assess/qz/tex/03.tex) | [q](assess/qz/pdf/03A.pdf), [tex](assess/qz/tex/03A.tex) |  |  |
 | 4        | Short | Lines                                     | [q](assess/qz/pdf/04.pdf), [tex](assess/qz/tex/04.tex) |  |  |  |

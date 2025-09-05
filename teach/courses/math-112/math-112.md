@@ -32,7 +32,7 @@ Remarks.
 
 #### Long quizzes
 
-| Sequence | Topic                    | v0       | Requiz A | Requiz B | Requiz C |
+| Sequence | Topic                    | Quiz     | Requiz A | Requiz B | Requiz C |
 |---------:|:-------------------------|:---------|:---------|:---------|:---------|
 |        2 | Logarithms and exponents | [q](assess/lq/pdf/02.pdf), [a](assess/lq/pdf/02-sol.pdf), [tex](assess/lq/tex/02.tex) |  |  |
 |        3 | Limits                   | [q](assess/lq/pdf/03.pdf), [a](assess/lq/pdf/03-sol.pdf), [tex](assess/lq/tex/03.tex), [zip](assess/lq/tex/03-graphics.zip) | [q](assess/rq/pdf/03A.pdf), -, [tex](assess/rq/tex/03A.tex) |  |  |
