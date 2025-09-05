@@ -65,6 +65,6 @@ Remarks.
 
 | # | Topics | Files |
 |--:|:-------|:------|
-| 0 | Diagnostic quiz                                                                     | [q](assess/qz/pdf/01.pdf), -, tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
-| 1 | Lines and planes in R3, velocity                                                    | [q](assess/he/pdf/01.pdf), [a](assess/he/pdf/01-sol.pdf), tex ([instr](assess/he/tex/01-instr.tex), [grade](assess/he/tex/01-grade.tex), [q+a](assess/he/tex/01.tex)) |
-| 2 | Differentiation, optimization, level sets, iterated integrals, integration theorems | [q](assess/he/pdf/02.pdf), [a](assess/he/pdf/02-sol.pdf), tex ([instr](assess/he/tex/02-instr.tex), [grade](assess/he/tex/02-grade.tex), [q+a](assess/he/tex/02.tex)), [zip](assess/he/tex/02-graphics.zip) |
+| 0 | Diagnostic quiz                                        | [q](assess/qz/pdf/01.pdf), -, tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
+| 1 | Lines and planes in R3, velocity                       | [q](assess/he/pdf/01.pdf), [a](assess/he/pdf/01-sol.pdf), tex ([instr](assess/he/tex/01-instr.tex), [grade](assess/he/tex/01-grade.tex), [q+a](assess/he/tex/01.tex)) |
+| 2 | Differentiation, optimization, level sets, integration | [q](assess/he/pdf/02.pdf), [a](assess/he/pdf/02-sol.pdf), tex ([instr](assess/he/tex/02-instr.tex), [grade](assess/he/tex/02-grade.tex), [q+a](assess/he/tex/02.tex)), [zip](assess/he/tex/02-graphics.zip) |
