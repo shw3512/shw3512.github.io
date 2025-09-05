@@ -1,0 +1,533 @@
+%
+%
+%	Exercise 1
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam01Q01}}
+\label{sec: Math212 2016 Fall HalfExam01Q01}
+
+\pagenumbering{arabic}
+
+(20 pt) Find an equation for the plane containing both (i) the point of intersection of the lines
+\begin{align*}
+L_{1}&:
+x
+=
+\frac{y + 1}{3}
+=
+1 - z,
+&
+L_{2}&:
+3 - x
+=
+\frac{y + 2}{2}
+=
+\frac{z + 4}{2}
+\end{align*}
+and (ii) the line of intersection of the planes
+\begin{align*}
+H_{1}&:
+x + y + z
+=
+6,
+&
+H_{2}&:
+2 y - x
+=
+0.
+\end{align*}
+\fontHint{Break it down. First find the coordinates of the point $P_{0}$ of intersection of the lines $L_{1}$ and $L_{2}$. Also find an equation for the line $L$ of intersection of the planes $H_{1}$ and $H_{2}$. Then put it all together to get an equation for the plane containing $P_{0}$ and $L$. Think geometrically!}
+
+
+
+\spaceSolution{6in}{% Begin solution.
+\subsection{Solution}
+
+We know an easy way to write an equation for a plane in $\reals^{3}$:% Begin footnote.
+\footnote{This approach generalizes nicely to hyperplanes in $\reals^{n}$. Do you see how?} % End footnote.
+Given a point $P_{0} = (x_{0},y_{0},z_{0})$ in the plane and a normal vector $\fontVector{n} = (n_{1},n_{2},n_{3})$ to the plane, any point $P = (x,y,z)$ in the plane satisfies
+\begin{align}
+0
+=
+\fontVector{n} \cdot \fontVectorBetweenPoints{P_{0} P}
+=
+(n_{1},n_{2},n_{3}) \cdot \left(x - x_{0},y - y_{0},z - z_{0}\right).%
+\label{eq: General Equation Plane R3}
+\end{align}
+Let's use the given information to find a $P_{0}$ and an $\fontVector{n}$.
+
+
+
+\subsubsection{Point $P_{0}$ of intersection of $L_{1}$ and $L_{2}$}
+
+By definition, the point of intersection of the lines $L_{1}$ and $L_{2}$ is a point $P_{0} = (x_{0},y_{0},z_{0})$ whose coordinates satisfy the equation for both $L_{1}$ and $L_{2}$. We can find this point in at least two ways.
+
+\paragraph{Method 1: Using the symmetric equations}
+
+The key idea is that \emph{the same point} $P_{0} = (x_{0},y_{0},z_{0})$ satisfies both sets of symmetric equations. Thus we can equate two expressions for the same variable (one expression from each set of symmetric equations) and then solve. For the variables $x,y$, we have
+\begin{align*}
+\frac{y_{0} + 1}{3}
+=
+x_{0}
+&=
+3 - \frac{y_{0} + 2}{2}
+&
+&\Leftrightarrow
+&
+2 y_{0} + 2
+&=
+18 - 3 y_{0} - 6
+&
+&\Leftrightarrow
+&
+y_{0}
+&=
+2.
+\end{align*}
+We can now use any of the equalities to find the remaining coordinates $x_{0},z_{0}$. From the symmetric equations for $L_{1}$, for example,
+\begin{align*}
+x_{0}
+&=
+\frac{y_{0} + 1}{3}
+=
+1,
+&
+z_{0}
+&=
+1 - x_{0}
+=
+0.
+\end{align*}
+We conclude that $P_{0} = (1,2,0)$.
+
+\paragraph{Method 2: Using the parametric equations}
+
+Recall that the symmetric equations of a line are obtained by eliminating the parameter, call it $t$, Thus all the expressions in the symmetric equations equal $t$. Solving for $x,y,z$ as functions of $t$, we find
+\begin{align*}
+\fontVector{r}_{1}(t)
+&=
+\left(t,-1 + 3 t,1 - t\right),
+&
+\fontVector{r}_{2}(t)
+&=
+\left(3 - t,-2 + 2 t,-4 + 2 t\right),
+\end{align*}
+where $\fontVector{r}_{i}$ is a vector equation for the line $L_{i}$, for $i \in \{1,2\}$. The key idea is that, to say that $L_{1}$ and $L_{2}$ have a point of intersection (i.e. a point in common) is equivalent to saying that there exist parameter values $t_{1}$ and $t_{2}$ such that
+\begin{align*}
+\fontVector{r}_{1}(t_{1})
+=
+\fontVector{r}_{2}(t_{2}).
+\end{align*}
+Writing out what this vector equality means in terms of components, we obtain a system of three equations (one for each component) in two unknowns (the parameters $t_{1},t_{2}$):
+\begin{align}
+t_{1}
+&=
+3 - t_{2},
+&
+-1 + 3 t_{1}
+&=
+-2 + 2 t_{2},
+&
+1 - t_{1}
+&=
+-4 + 2 t_{2}.%
+\label{eq: System Of Equations For Point Of Intersection}
+\end{align}
+Substituting the first equation into the second, we find that if a solution to this system exists (i.e. if $L_{1}$ and $L_{2}$ have a point of intersection), then
+\begin{align*}
+-1 + 3 (3 - t_{2})
+&=
+-2 + 2 t_{2}
+&
+&\Leftrightarrow
+&
+10
+&=
+5 t_{2}
+&
+&\Leftrightarrow
+&
+t_{2}
+&=
+2.
+\end{align*}
+This is the parameter value for $L_{2}$ corresponding to the candidate intersection point. Substituting this into the first equation, we find the corresponding parameter value for $L_{1}$:
+\begin{align*}
+t_{1}
+=
+3 - t_{2}
+=
+1.
+\end{align*}
+To verify that these parameter values indeed correspond to a point of intersection, we need to check that they satisfy the remaining inequalities --- in this case, just the third equality (corresponding to the $z$-coordinate):
+\begin{align*}
+1 - t_{1}
+=
+0
+=
+-4 + 2 t_{2}.
+\end{align*}
+Thus all three equalities in \eqref{eq: System Of Equations For Point Of Intersection} are satisfied when $t_{1} = 1$ and $t_{2} = 2$, i.e. $\fontVector{r}_{1}(t_{1}) = \fontVector{r}_{2}(t_{2})$, and we have a point of intersection. Its coordinates are found by evaluating $\fontVector{r}_{i}(t_{i})$ for either value of $i$:
+\begin{align*}
+P_{0}
+=
+\fontVector{r}_{1}(t_{1})
+=
+(1,2,0).
+\end{align*}
+
+
+
+\subsubsection{Line $L$ of intersection of $H_{1}$ and $H_{2}$}
+
+Close your eyes and view the geometric picture of two different planes intersecting. You will see that they intersect in a line. Algebraically, we can describe that line by giving a point on the line and a direction vector.
+
+Any point $P'_{0} = (x'_{0},y'_{0},z'_{0})$ on the line of intersection of $H_{1}$ and $H_{2}$ will do. Analogous to our discussion for the point of intersection of two lines, a point on the line of intersection of two planes satisfies the equation describing both planes. This gives us two equations (one for each plane) in three unknowns ($x'_{0},y'_{0},z'_{0}$). We can choose an arbitrary value for one of these variables,% Begin footnote.
+\footnote{\fontNeedsEdit{(discuss subtlety, e.g., a line whose $z$ values are constant)}} % End footnote.
+say $z_{0} = 0$. This reduces the system of equations to
+\begin{align*}
+x_{0} + y_{0}
+&=
+6,
+&
+2 y_{0} - x_{0}
+&=
+0.
+\end{align*}
+Solving the second equation for $x_{0}$ and substituting the result into the first, we have
+\begin{align*}
+(2 y_{0}) + y_{0}
+&=
+6
+&
+&\Leftrightarrow
+&
+y_{0}
+&=
+2.
+\end{align*}
+Hence $x_{0} = 2 y_{0} = 4$, so
+\begin{align*}
+P'_{0}
+=
+(4,2,0).
+\end{align*}
+
+A direction vector of the line of intersection is even easier to find. Again, think geometrically: The line of intersection lies in both planes, so in particular, a (nonzero) direction vector of that line lies in both planes. Because a normal vector to a plane is perpendicular to all vectors in the plane, we conclude that the direction vector of the line of intersection of two planes must be normal to \emph{both} normal vectors. And we know a way, if we are given two nonparallel vectors, to construct a vector normal (a.k.a. perpendicular) to both: take their cross product.
+
+The components of normal vectors $\fontVector{n}_{1}$ and $\fontVector{n}_{2}$ of the planes $H_{1}$ and $H_{2}$, respectively, can be read off from the corresponding coefficients of the variables $x,y,z$ in their defining equations:
+\begin{align*}
+\fontVector{n}_{1}
+&=
+(1,1,1),
+&
+\fontVector{n}_{2}
+&=
+(-1,2,0).
+\end{align*}
+By the preceding discussion, a direction vector $\fontVector{v}$ for the line of intersection is
+\begin{align*}
+\fontVector{v}
+=
+\fontVector{n}_{1} \times \fontVector{n}_{2}
+=
+\det
+\begin{pmatrix}
+\fontVector{i}	&	\fontVector{j}	&	\fontVector{k}	\\
+1			&	1			&	1			\\
+-1			&	2			&	0
+\end{pmatrix}
+=
+(-2,-1,3).
+\end{align*}
+
+
+
+\subsubsection{Putting it all together}
+
+At this point we have (i) the point
+\begin{align*}
+P_{0}
+=
+(1,2,0)
+\end{align*}
+of intersection of the lines $L_{1}$ and $L_{2}$ and (ii) an equation
+\begin{align*}
+\fontVector{r}(t)
+=
+(4,2,0) + t (-2,-1,3)
+\end{align*}
+for the line $L$ of intersection of the planes $H_{1}$ and $H_{2}$. We want an equation for the plane containing both $P_{0}$ and $L$. Note that $P_{0}$ does not lie in $L$.% Begin footnote.
+\footnote{You can check this by substituting the coordinates of $P_{0}$ for $\fontVector{r}(t)$ and trying to solve the resulting vector equation
+\begin{align*}
+(1,2,0)
+=
+(2,1,0) + t (-2,-1,3)
+\end{align*}
+for $t$. (Keep in mind that this vector equation can be viewed as a system of three equations (one for each component) in one unknown (the parameter $t$).) You will find that there is no solution.} % End footnote.
+Thus the plane we are asked to find indeed exists.
+
+We already have an explicit point in this plane (in fact, two: $P_{0}$ and $P'_{0}$), so all that remains is to find a normal vector to the plane. We also have an explicit vector in this plane, namely, the direction vector $\fontVector{v} = (-2,-1,3)$ of the line $L$. If we can find a second vector in the plane that is not parallel to $\fontVector{v}$, then we can take a cross product and be done. Think geometrically about our situation: We have a line $L$ in the desired plane, and a point $P_{0}$ in the desired plane, with $P_{0}$ not in $L$. If we take any point $P'_{0}$ in $L$, and form the vector $\fontVectorBetweenPoints{P'_{0} P_{0}}$, then this vector cannot be parallel to the direction vector $\fontVector{v}$ of the line $L$ (if it were, then $P_{0}$ would be in $L$). This gives us our desired second vector:
+\begin{align*}
+\fontVectorBetweenPoints{P'_{0} P_{0}}
+=
+(-3,0,0).
+\end{align*}
+Hence a normal vector $\fontVector{n}$ to the plane $H$ containing $P_{0}$ and $L$ is
+\begin{align*}
+\fontVector{n}
+=
+\fontVectorBetweenPoints{P'_{0} P_{0}} \times \fontVector{v}
+=
+\det
+\begin{pmatrix}
+\fontVector{i}	&	\fontVector{j}	&	\fontVector{k}	\\
+-3			&	0			&	0			\\
+-2			&	-1			&	3
+\end{pmatrix}
+=
+(0,9,3).
+\end{align*}
+Any nonzero scalar multiple of a normal vector is also a normal vector (do you see why, geometrically?), so we can also take the vector
+\begin{align*}
+\fontVector{n}'
+=
+\frac{1}{3} \fontVector{n}
+=
+(0,3,1)
+\end{align*}
+as a normal vector to the plane $H$.% Begin footnote.
+\footnote{Using $\fontVector{n}'$ just makes the subsequent computation a bit simpler. Using $\fontVector{n}$ yields an equivalent equation for the plane, which we can reduce to the equation obtained from using $\fontVector{n}'$ by dividing by $3$. Do you see why?} % End footnote.
+Substituting $\fontVector{n}'$ and $P_{0}$ into \eqref{eq: General Equation Plane R3}, we conclude that an equation for the plane $L$ containing $P_{0}$ and $L$ is
+\begin{align*}
+0
+=
+(0,3,1) \cdot (x - 1,y - 2,z - 0)
+=
+3 y - 6 + z,
+\end{align*}
+or equivalently,
+\begin{align*}
+3 y + z
+=
+6.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 2
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam01Q02}}
+\label{sec: Math212 2016 Fall HalfExam01Q02}
+
+(10 pt) Find the point $P^{*}$ in the line
+\begin{align*}
+L: \fontVector{r}(t)
+=
+\left(2 t + 4,-2 t,t - 4\right)
+\end{align*}
+that is closest to the point $Q = (12,6,1)$. \fontHint{Think geometrically! Use vectors.}
+
+
+
+\spaceSolution{4in}{% Begin solution.
+\subsection{Solution}
+
+As usual, we start by thinking geometrically, to acquire some intuition for how to approach this problem. The line $L$ and the point $Q$ are in $\reals^{3}$, but we can restrict our attention to a plane containing $L$ and $Q$.% Begin footnote.
+\footnote{If the point $Q$ is not in the line $L$ --- as is the case here --- then this plane is unique. If the point $Q$ is in the line $L$, then there are infinitely many planes containing $Q$ and $L$, but for the purposes of our problem, we would be done: $Q$ itself would be point in $L$ closest to $Q$.
+
+The point $Q$ lies in $L$ if and only if there exists a parameter value $t$ such that $\fontVector{r}(t) = Q$. This vector equality is equivalent to a system of three equations (one for each component) in one unknown (the parameter $t$). It is straightforward to show that this system of equations has no solution (do it).} % End footnote.
+That is, we can think geometrically in two dimensions. So imagine $L$ and $Q$ in $\reals^{2}$. We want the point $P^{*}$ in $L$ that is closest to $Q$. Visualizing this situation, you will convince yourself that this point $P^{*}$ is unique and is the intersection of $L$ with the line through $Q$ that is perpendicular to $L$\fontNeedsEdit{ (draw it!)}.
+
+For each point $P$ in the line $L$, we can associate the vector $\fontVectorBetweenPoints{P Q}$ from $P$ to $Q$. More precisely, to say that $\fontVector{r}(t)$ describes the line $L$ means that any point $P$ in $L$ has coordinates
+\begin{align*}
+\fontVector{r}(t)
+=
+\left(2 t + 4,-2 t,t - 4\right)
+\end{align*}
+for some $t \in \reals$. Thus for each point $P$ in $L$,
+\begin{align}
+\fontVectorBetweenPoints{P Q}
+=
+\left(8 - 2 t,6 + 2 t,5 - t\right).%
+\label{eq: Vector From Point In Line To Q}
+\end{align}
+In particular, $\fontVectorBetweenPoints{P^{*} Q}$ has this form. 
+
+The geometric intuition that we developed above now provides us with at least two ways to find the coordinates of $P^{*}$.
+
+\paragraph{Using inner product}
+
+In our geometric picture, we see that the vector $\fontVectorBetweenPoints{P^{*} Q}$ corresponding to the special point $P^{*}$ is orthogonal to the direction vector $\fontVector{v}$ of the line $L$. We can read off the components of the direction vector from the corresponding coefficients of the parameter $t$ in the equation defining $\fontVector{r}(t)$:
+\begin{align*}
+\fontVector{v}
+=
+(2,-2,1).
+\end{align*}
+Because $\fontVectorBetweenPoints{P^{*} Q}$ is orthogonal to $\fontVector{v}$, their inner product equals zero:
+\begin{align*}
+0
+=
+\fontVectorBetweenPoints{P^{*} Q} \cdot \fontVector{v}
+=
+\left(8 - 2 t,6 + 2 t,5 - t\right) \cdot (2,-2,1)
+=
+(16 - 4 t) + (-12 - 4 t) + (5 - t)
+=
+9 - 9 t,
+\end{align*}
+which yields the solution
+\begin{align*}
+t
+=
+1.
+\end{align*}
+Thus
+\begin{align*}
+P^{*}
+=
+\fontVector{r}(1)
+=
+(6,-2,-3).
+\end{align*}
+
+\paragraph{Using norm}
+
+In our geometric picture, we see that the vector $\fontVectorBetweenPoints{P^{*} Q}$ corresponding to the special point $P^{*}$ is the shortest vector of the form \eqref{eq: Vector From Point In Line To Q}. That is, the point $P^{*}$ corresponds to the parameter value $t$ that minimizes
+\begin{align*}
+\norm{\fontVectorBetweenPoints{P Q}}
+&=
+\sqrt{(8 - 2 t)^{2} + (6 + 2 t)^{2} + (5 - t)^{2}}
+\\
+&=
+\sqrt{(64 - 32 t + 4 t^{2}) + (36 + 24 t + 4 t^{2}) + (25 - 10 t + t^{2})}
+\\
+&=
+\sqrt{9 t^{2} - 18 t + 125}
+=
+\sqrt{9 (t^{2} - 2 t + 16)}
+\\
+&=
+3 \sqrt{(t - 1)^{2} + 15}.
+\end{align*}
+This expression is minimized when the expression in the square root is minimized, which in turn occurs when $t = 1$.% Begin footnote.
+\footnote{The expression in the square root describes an upward-opening parabola with vertex $(1,15)$.} % End footnote.
+Thus
+\begin{align*}
+P^{*}
+=
+\fontVector{r}(1)
+=
+(6,-2,-3).
+\end{align*}
+}% End solution.
+
+
+
+
+
+
+
+%
+%
+%	Exercise 3
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam01Q03}}
+\label{sec: Math212 2016 Fall HalfExam01Q03}
+
+(20 pt) At time $t = 0$, you espy a flying cockroach whizzing around your bedroom. Always quick on your feet, you apply your mad skillz of vector calculus to determine that the cockroach's position vector is given by
+\begin{align*}
+\fontVector{r}(t)
+=
+\left(\frac{4 \sqrt{2}}{5} t^{\frac{5}{2}} - 1,t^{2},\frac{2}{3} t^{3} + 1\right),
+\end{align*}
+where the component functions are measured in meters, and $t$ is measured in seconds. At time $t = 3$, you squash the sucker.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm: Math212 2016 Fall HalfExam01Q03a} (5 pt) Find the cockroach's velocity function $\fontVector{v}(t)$. What are the units of the component functions?
+\end{enumerate}
+
+
+
+\spaceSolution{.75in}{% Begin solution.
+\subsection{Solution to part \ref{itm: Math212 2016 Fall HalfExam01Q03a}}
+
+The velocity vector is the derivative of the position vector with respect to time. Remembering that derivatives of vector-valued functions are computed componentwise, we have
+\begin{align*}
+\fontVector{v}(t)
+=
+\fontVector{r}'(t)
+=
+\left(2 \sqrt{2} t^{\frac{3}{2}},2 t,2 t^{2}\right).
+\end{align*}
+The component functions are measured in meters/second.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Math212 2016 Fall HalfExam01Q03b} (10 pt) Determine how far the cockroach travels from the time you spot it to the time you squash it.
+\end{enumerate}
+
+
+
+\spaceSolution{3.75in}{% Begin solution.
+\subsection{Solution to part \ref{itm: Math212 2016 Fall HalfExam01Q03b}}
+
+The distance $s$ traveled by the cockroach is the arc length of $\fontVector{r}(t)$ from $t = 0$ to $t = 3$:
+\begin{align}
+s
+=
+\int_{0}^{3} \norm{\fontVector{r}'(t)} \intd t.%
+\label{eq: Arc Length General Form}
+\end{align}
+The derivative $\fontVector{r}'(t)$ is precisely the velocity function that we found in part \ref{itm: Math212 2016 Fall HalfExam01Q03a}. Thus
+\begin{align*}
+\norm{\fontVector{r}'(t)}
+=
+\sqrt{(8 t^{3}) + (4 t^{2}) + (4 t^{4})}
+=
+\sqrt{4 t^{2} \left(t^{2} + 2 t + 1\right)}
+=
+\sqrt{(2 t)^{2} (t + 1)^{2}}
+=
+2 t (t + 1),
+\end{align*}
+where in the final equality we have used the fact that $\fontVector{r}(t)$ (and hence $\fontVector{r}'(t)$) is defined only for $t \geq 0$ (do you see why?). Substituting this expression into \eqref{eq: Arc Length General Form}, we find
+\begin{align*}
+s
+=
+2 \int_{0}^{3} \left(t^{2} + t\right) \intd t
+=
+2 \left[\frac{1}{3} t^{3} + \frac{1}{2} t^{2}\right]_{t = 0}^{t = 3}
+=
+2 \left[\left(9 + \frac{9}{2}\right) - 0\right]
+=
+27.
+\end{align*}
+That is, the cockroach travels 27 meters from the time you see it to the time you squash it.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Math212 2016 Fall HalfExam01Q03c} (5 pt) You suspect that the cockroach was flying to its nest. In one (!) sentence, explain how you can (use something about vectors to) locate the nest.
+%\item\label{itm: Math212 2016 Fall HalfExam01Q04a} (Bonus 5 pt) Find the minimum speed of the cockroach over the time interval $(-\infty,3]$, and the time(s) when this minimum speed is achieved. \fontHint{Be careful. Physically, what inequality does speed satisfy?}
+\end{enumerate}
+
+
+
+\spaceSolution{1in}{% Begin solution.
+\subsection{Solution to part \ref{itm: Math212 2016 Fall HalfExam01Q03c}}
+
+If our suspicion is correct, then following the curve described by $\fontVector{r}(t)$ for $t > 3$ will lead us to the nest.
+}% End solution.

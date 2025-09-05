@@ -1,0 +1,927 @@
+%
+%
+%	Exercise 9
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q09}}
+\label{sec: Math212 2016 Fall HalfExam02Q09}
+% S6eQ14.06.24
+
+\pagenumbering{arabic}
+
+Let $D = \{(x,y,z) \in \reals^{3} \st z \neq 0\}$, and let $f: D \rightarrow \reals$ be given by
+\begin{align*}
+f(x,y,z)
+=
+\frac{x + y}{z}.
+\end{align*}
+Find the maximum rate of change of $f$ at the point $(1,1,-1)$ and the direction in which it occurs.
+
+\spaceSolution{3in}{% Begin solution.
+The maximum rate of change of a function $f$ occurs in the direction of its gradient vector $\gradient f$, and its value equals the norm $\norm{\gradient f}$.
+
+We compute
+\begin{align*}
+\gradient f
+=
+\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)
+=
+\left(\frac{1}{z},\frac{1}{z},-\frac{x + y}{z^{2}}\right).
+\end{align*}
+At the given point $(1,1,-1)$, we have
+\begin{align*}
+(\gradient f)(1,1,-1)
+&=
+\left(-1,-1,-2\right),
+&
+\norm{(\gradient f)(1,1,-1)}
+&=
+\sqrt{6}.
+\end{align*}
+Thus the maximum rate of change of $f$ at the point $(1,1,-1)$ is $\sqrt{6}$, and it occurs in the direction of the vector $(-1,-1,-2)$.
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 10
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q10}}
+\label{sec: Math212 2016 Fall HalfExam02Q10}
+% S6eQ14.05.41
+
+The ideal gas law states that
+\begin{align}
+P V
+=
+n R T,%
+\label{eq: Ideal Gas Law}
+\end{align}
+where $P$ is pressure (in kPa), $V$ is volume (in L), $n$ is number of moles, $R = 8.3144$ J/(mol K), and $T$ is temperature (in K). (You may ignore units; they are chosen so that they work out.% Begin footnote.
+\footnote{For those of us who mind our units, note that
+\begin{align*}
+1\text{ J}
+=
+1\text{ Pa m}^{3}
+=
+1000\text{ Pa L}
+=
+1\text{ kPa L}.
+\end{align*}
+}% End footnote.
+)
+
+The pressure of 1 mole of an ideal gas is increasing at a rate of $0.05$ kPa/s, and its temperature is increasing at a rate of $0.15 K/s$. Find the rate of change of the volume when the pressure is $20$ kPa and the temperature is $320$ K.
+
+\spaceSolution{5in}{% Begin solution.
+Note that $R$ is a constant. In this exercise, $n$ (the number of moles of gas) is also constant. The remaining three variables $P,V,T$ are functions of time $t$. We present two solutions.
+
+Method 1: Chain rule. Solving \eqref{eq: Ideal Gas Law} for $V$ as a function of $P,T$, we find
+\begin{align*}
+V(P,T)
+=
+V
+=
+\frac{n R T}{P}.
+\end{align*}
+Differentiating this expression with respect to time $t$, using the chain rule, we have
+\begin{align}
+\frac{\intd V}{\intd t}
+=
+\frac{\partial V}{\partial P} \frac{\intd P}{\intd t} + \frac{\partial V}{\partial T} \frac{\intd T}{\intd t}
+=
+\left(-\frac{n R T}{P^{2}}\right) \frac{\intd P}{\intd t} + \left(\frac{n R}{P}\right) \frac{\intd T}{\intd t}.%
+\label{eq: S6eQ14.05.41 Chain Rule Symbolic Result}
+\end{align}
+Substituting in the given values, we compute
+\begin{align*}
+\frac{\intd V}{\intd t}
+=
+\left(-\frac{(1) (8.3144) (320)}{(20)^{2}}\right) (.05) + \left(\frac{(1) (8.3144)}{(20)}\right) (.15)
+\approx
+-.2702\text{ L/s}.
+\end{align*}
+
+
+
+Method 2: Direct. Differentiating both sides of \eqref{eq: Ideal Gas Law} with respect to $t$ (using the product rule on the left, because both $P$ and $V$ are functions of $T$), we have
+\begin{align*}
+\frac{\intd P}{\intd t} V + P \frac{\intd V}{\intd t}
+=
+n R \frac{\intd T}{\intd t}.
+\end{align*}
+Solving for the desired quantity $\frac{\intd V}{\intd t}$, we find% Begin footnote.
+\footnote{Note that the final expression is equal to the final expression in \eqref{eq: S6eQ14.05.41 Chain Rule Symbolic Result}.}% End footnote.
+\begin{align*}
+\frac{\intd V}{\intd t}
+=
+P^{-1} \left(n R \frac{\intd T}{\intd t} - V \frac{\intd P}{\intd t}\right)
+=
+\left(\frac{n R}{P}\right) \frac{\intd T}{\intd t} - \left(\frac{n R T}{P^{2}}\right) \frac{\intd P}{\intd t},
+\end{align*}
+where in the second equality we have used the ideal gas law \eqref{eq: Ideal Gas Law} to write $V = \frac{n R T}{P}$. Substituting in the given values yields $\frac{\intd V}{\intd t} \approx -.2702\text{ L/s}$.
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 11
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q11}}
+\label{sec: Math212 2016 Fall HalfExam02Q11}
+% MT5eE03.03.10 (modified)
+
+Let $D \subseteq \reals^{2}$ be the closed disc
+\begin{align*}
+D
+=
+\left\{(x,y) \in \reals^{2} \st x^{2} + y^{2} \leq 2\right\},
+\end{align*}
+and let $f: \reals^{2} \rightarrow \reals$ be the function given by
+\begin{align*}
+f(x,y)
+=
+x^{2} + y^{2} - x - y + 1.
+\end{align*}
+Does $f$ achieve a global minimum and maximum on $D$? Explain. If yes, find the corresponding values.
+
+\spaceSolution{5in}{% Begin solution.
+The function $f$ is a polynomial, hence continuous on its entire domain $\reals^{2}$, and in particular on $D$. The disc $D$ is a closed and bounded set. Hence by the extreme value theorem, $f$ achieves a global minimum and maximum on $D$.
+
+To find the corresponding global minimum and maximum values, we find all critical points on the interior of $D$ and on the boundary of $D$ separately, then compare values.
+
+Interior: Because $f$ is a polynomial, it is everywhere differentiable (i.e. its gradient $\gradient f$ is defined everywhere), so all critical points on the interior of $D$ are given by $\gradient f = \fontVector{0}$. We compute
+\begin{align*}
+\gradient f
+=
+\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)
+=
+\left(2 x - 1,2 y - 1\right).
+\end{align*}
+Thus
+\begin{align*}
+\gradient f
+&=
+\fontVector{0}
+&
+&\Leftrightarrow
+&
+(x,y)
+&=
+\left(\frac{1}{2},\frac{1}{2}\right).
+\end{align*}
+Note that this point is indeed in $D$. Thus $(\frac{1}{2},\frac{1}{2})$ is the unique critical point on the interior of $D$.
+
+Boundary: The boundary of $D$ is the circle of radius $\sqrt{2}$ in $\reals^{2}$, which we can parametrize by
+\begin{align*}
+t
+&\mapsto
+\left(\sqrt{2} \cos t,\sqrt{2} \sin t\right),
+&
+t
+\in
+[0,2 \pi].
+\end{align*}
+Substituting $x = \sqrt{2} \cos t,y = \sqrt{2} \sin t$ into $f$, we have
+\begin{align*}
+f(x,y)
+=
+f(\cos t,\sin t)
+=
+2 - \sqrt{2} \cos t - \sqrt{2} \sin t + 1
+=
+3 - \sqrt{2} \cos t + \sqrt{2} \sin t,
+\end{align*}
+a real-valued function of a single variable $t$; denote this function by $g(t)$. Note that $g(t)$ is everywhere differentiable, so all critical points of $g$ are given by $g'(t) = 0$. We compute
+\begin{align*}
+g'(t)
+=
+\sqrt{2} \sin t - \sqrt{2} \cos t.
+\end{align*}
+Thus
+\begin{align*}
+g'(t)
+&=
+0
+&
+&\Leftrightarrow
+&
+\tan t
+&=
+1
+&
+&\Leftrightarrow
+&
+t = \frac{\pi}{4}
+&\text{ or }
+t = \frac{5 \pi}{4}.
+\end{align*}
+The points $(x,y)$ corresponding to these values of $t$ are
+\begin{align*}
+&\frac{\pi}{4}:
+(1,1)
+&
+&\frac{5 \pi}{4}:
+(-1,-1).
+\end{align*}
+Computing and comparing the values of $f$ at these three critical points, we find
+\begin{align*}
+f\left(\frac{1}{2},\frac{1}{2}\right)
+&=
+\frac{1}{2},
+&
+f(1,1)
+&=
+1,
+&
+f(-1,-1)
+&=
+5.
+\end{align*}
+Thus the global minimum value of $f$ on $D$ is $\frac{1}{2}$, and the global maximum value of $f$ on $D$ is $5$.
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 1
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q01}}
+\label{sec: Math212 2016 Fall HalfExam02Q01}
+% S6e15.R.01
+
+Let $R = [0,3] \times [0,3] \subseteq \reals^{2}$, and let $f: R \rightarrow \reals$ have the level sets shown in Figure \ref{fig: Stewart6eQ15.R.01}.
+\begin{figure}[t]
+\centering
+\includegraphics[scale=.75]{\filePathGraphics Stewart6eQ15_R_01}
+\caption{Level sets for the function $f: R \rightarrow \reals$ in Exercise \ref{sec: Math212 2016 Fall HalfExam02Q01}.}
+\label{fig: Stewart6eQ15.R.01}
+\end{figure}
+Use a Riemann sum with nine terms to estimate the value of the double integral
+\begin{align*}
+\iint_{R} f(x,y) \, \intd A.
+\end{align*}
+Take the sample points of each subregion to be the upper-right corner of the subregion.
+
+\spaceSolution{5in}{% Begin solution.
+From the level sets in Figure \ref{fig: Stewart6eQ15.R.01}, we estimate the values of $f$ on the upper-right points of each subregion to be
+\begin{align*}
+f(1,3)
+&\approx
+8,
+&
+f(2,3)
+&\approx
+10,
+&
+f(3,3)
+&\approx
+12,
+\\
+f(1,2)
+&\approx
+4.5,
+&
+f(2,2)
+&\approx
+6.5,
+&
+f(3,2)
+&\approx
+8.5,
+\\
+f(1,1)
+&\approx
+2.5,
+&
+f(2,1)
+&\approx
+4.5,
+&
+f(3,1)
+&\approx
+6.5.
+\end{align*}
+Note that each subregion of the partition has area $1$. Thus the Riemann sum with nine terms, taking the upper-right corner of each subregion as the labeled point, is
+\begin{align*}
+\sum_{i,j = 1}^{3} f(i,j)
+=
+2.5 + 4.5 + 6.5 + 4.5 + 6.5 + 8.5 + 8 + 10 + 12
+=
+61.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 2
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q02}}
+\label{sec: Math212 2016 Fall HalfExam02Q02}
+% S6eQ15.R.10
+
+Let $f: \reals^{2} \rightarrow \reals$ be a continuous function. Rewrite the following sum of iterated integrals as a single iterated integral, by changing the order of integration:
+\begin{align*}
+\int_{-4}^{0} \int_{0}^{4 + x} f(x,y) \, \intd y \, \intd x + \int_{0}^{4} \int_{0}^{4 - x} f(x,y) \, \intd y \, \intd x.
+\end{align*}
+
+\spaceSolution{5in}{% Begin solution.
+Let $R_{1}$ and $R_{2}$ denote the region of integration corresponding to the first and second integral, respectively. Sketching these regions of integration, we find that $R_{1}$ is the triangle in the $x y$-plane with vertices $(-4,0),(0,0),(0,4)$, and $R_{2}$ is the triangle in the $x y$-plane with vertices $(0,0),(4,0),(0,4)$.\fontNeedsEdit{ (add graphic)} Because these regions $R_{1}$ and $R_{2}$ overlap only on their boundaries, additivity of the (Riemann) integral implies that we can write the sum of the given two integrals as a single double integral over the region $R = R_{1} \cup R_{2}$, i.e. the triangle in the $x y$-plane with vertices $(-4,0),(4,0),(0,4)$.
+
+By hypothesis, $f$ is continuous on all of $\reals^{2}$, and hence in particular on $R$. Hence by Fubini's theorem, we may write the double integral $\iint_{R} f(x,y) \, \intd A$ as an iterated integral in any order. As per the instructions of this exercise, we are interested in the order $\intd x \, \intd y$. Referring to the sketch of the region $R$, we see that with this order of integration, the double integral writes as
+\begin{align*}
+\iint_{D} f(x,y) \, \intd A
+=
+\int_{y = 0}^{y = 4} \int_{x = y - 4}^{x = -y + 4} f(x,y) \, \intd x \, \intd y.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 3
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q03}}
+\label{sec: Math212 2016 Fall HalfExam02Q03}
+% S6eQ15.R.14
+
+Calculate the value of the iterated integral
+\begin{align*}
+\int_{0}^{1} \int_{\sqrt{y}}^{1} \frac{y e^{x^{2}}}{x^{3}} \, \intd x \, \intd y.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+The region of integration $R$ is the area above the line $y = 0$ (i.e. the $x$-axis), left of the curve $x = \sqrt{y}$ (i.e. the right half of $y = x^{2}$), and left of the line $x = 1$. Note that the integrand $f(x,y) = \frac{y e^{x^{2}}}{x^{3}}$ is continuous everywhere on $R$ except at the point $(0,0)$; in this situation, Fubini's theorem still applies.% Begin footnote.
+\footnote{Loosely speaking, integrating $f$ over all of $R$ or over $R$ without a point yields the same result.} % End footnote.
+Changing the order of integration (more precisely, writing the double integral $\iint_{R} f(x,y) \, \intd A$ as an iterated integral in the order $\intd y \, \intd x$), we have
+\begin{align*}
+\int_{x = 0}^{x = 1} \int_{y = 0}^{y = x^{2}} \frac{y e^{x^{2}}}{x^{3}} \, \intd y \, \intd x
+&=
+\int_{x = 0}^{x = 1} \frac{e^{x^{2}}}{x^{3}} \left[\int_{y = 0}^{y = x^{2}} y \, \intd y\right] \intd x
+\\
+&=
+\int_{x = 0}^{x = 1} \frac{e^{x^{2}}}{x^{3}} \left[\frac{1}{2} x^{4}\right] \intd x
+\\
+&=
+\frac{1}{4} \int_{x = 0}^{x = 1} e^{x^{2}} 2 x \, \intd x
+\\
+&=
+\frac{1}{4} \left[e^{x^{2}}\right]_{x = 0}^{x = 1}
+\\
+&=
+\frac{1}{4} (e - 1).
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 4
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q04}}
+\label{sec: Math212 2016 Fall HalfExam02Q04}
+% S6eQ15.R.24
+
+Let $T \subseteq \reals^{3}$ be the solid tetrahedron with vertices
+\begin{align*}
+P_{0}
+&=
+(0,0,0),
+&
+P_{1}
+&=
+\left(\frac{1}{3},0,0\right),
+&
+P_{2}
+&=
+(0,1,0),
+&
+P_{3}
+&=
+(0,0,1).
+\end{align*}
+Find the value of the triple integral
+\begin{align*}
+\iiint_{T} x y \, \intd V.
+\end{align*}
+
+\spaceSolution{6in}{% Begin solution.
+Note that the integrand $x y$ is a polynomial, hence continuous everywhere on $\reals^{3}$, and in particular on the region of integration $T$. Hence by Fubini's theorem we may write the triple integral as an iterated integral using any order of integration.
+
+The solid tetrahedron $T$ is the volume of $\reals^{3}$ bounded by the planes $x = 0$, $y = 0$, $z = 0$, and $3 x + y + z = 1$. (This last plane is determined by $P_{1},P_{2},P_{3}$; recall that three distinct points in $\reals^{3}$ determine a plane. In this case, an equation of the plane can be deduced by looking at the points.) Sketching the region $T$, we see that its projection onto the $y z$-plane is the triangle with vertices $(0,0),(1,0),(0,1)$. Using this, and writing the plane through $P_{1},P_{2},P_{3}$ as
+\begin{align*}
+x
+=
+\frac{1}{3} (1 - y - z),
+\end{align*}
+we obtain a convenient algebraic description of the region $T$, which we can use to write the triple integral as the iterated integral in the order $\intd x \, \intd z \, \intd y$:
+\begin{align*}
+\iiint_{T} x y \, \intd V
+&=
+\int_{y = 0}^{y = 1} \int_{z = 0}^{z = 1 - y} \int_{x = 0}^{x = \frac{1}{3} (1 - y - z)} x y \, \intd x \, \intd z \, \intd y
+\\
+&=
+\int_{y = 0}^{y = 1} \int_{z = 0}^{z = 1 - y} \left[\frac{1}{2} x^{2} y\right]_{x = 0}^{x = \frac{1}{3} (1 - y - z)} \intd z \, \intd y
+\\
+&=
+\int_{y = 0}^{y = 1} \int_{z = 0}^{z = 1 - y} \frac{1}{18} (1 - y - z)^{2} y \, \intd z \, \intd y
+\\
+&=
+\frac{1}{18} \int_{y = 0}^{y = 1} \int_{z = 0}^{z = 1 - y} \left(y - 2 y^{2} - 2 y z + 2 y^{2} z + y^{3} + y z^{2}\right) \intd z \, \intd y
+\\
+&=
+\frac{1}{18} \int_{y = 0}^{y = 1} \left[y z - 2 y^{2} z - y z^{2} + y^{2} z^{2} + y^{3} z + \frac{1}{3} y z^{3}\right]_{z = 0}^{z = 1 - y} \intd y
+\\
+&=
+\frac{1}{18} \int_{y = 0}^{y = 1} \left(y (1 - y) - 2 y^{2} (1 - y) - y (1 - y)^{2} + y^{2} (1 - y)^{2} + y^{3} (1 - y) + \frac{1}{3} y (1 - y)^{3}\right) \intd y
+\\
+&=
+\frac{1}{18} \int_{y = 0}^{y = 1} \left(\frac{1}{3} y - y^{2} + y^{3} - \frac{1}{3} y^{4}\right) \intd y
+\\
+&=
+\frac{1}{18} \left[\frac{1}{6} y^{2} - \frac{1}{3} y^{3} + \frac{1}{4} y^{4} - \frac{1}{15} y^{5}\right]_{y = 0}^{y = 1}
+\\
+&=
+\frac{1}{18} \left[\frac{1}{6} - \frac{1}{3} + \frac{1}{4} - \frac{1}{15}\right]
+=
+\frac{1}{1080}.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 5
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q05}}
+\label{sec: Math212 2016 Fall HalfExam02Q05}
+% S6eQ15.R.32
+
+Find the volume of the solid bounded by the cylinder $x^{2} + y^{2} = 4$ and the planes $z = 0$ and $y + z = 3$.
+
+\spaceSolution{4in}{% Begin solution.
+We present two solutions.
+
+Method 1: Calculus. The region of integration $V$ suggests that cylindrical coordinates will be a convenient choice of coordinates for this integral. With this choice of coordinates (remember the integration factor $r$), we can write the volume of the solid as
+\begin{align*}
+V
+&=
+\iiint_{V} 1 \, \intd V
+=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 2} \int_{z = 0}^{z = 3 - r \sin \theta} r \, \intd z \, \intd r \, \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 2} \left(3 r - r^{2} \sin \theta\right) \intd r \, \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \left[\frac{3}{2} r^{2} - \frac{1}{3} r^{3} \sin \theta\right]_{r = 0}^{r = 2} \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \left(6 - \frac{8}{3} \sin \theta\right) \intd \theta
+\\
+&=
+\left[6 \theta + \frac{8}{3} \cos \theta\right]_{\theta = 0}^{\theta = 2 \pi}
+\\
+&=
+12 \pi.
+\end{align*}
+
+Method 2: Geometry. The solid whose volume we wish to compute is a cylinder cut by a plane. More precisely, the base of the cylinder is a disc of radius $2$, and the plane cutting the cylinder leaves the base intact. Close your eyes (after reading this sentence), and envision cutting this solid along the plane parallel to the base through the point where the central axis of symmetry of the cylinder intersects the plane cutting the top of the solid. This cuts off an angled piece that we can flip over and place on the ``missing'' angled piece, forming a complete cylinder with height equal to the height of the point where we made the cut. Because the solid in this exercise has the center of its base at the origin (we can always translate such a solid so that this is the case), this height equals the $z$-value where the plane cutting the top of the solid intersects the $z$-axis: This is found by setting $x,y = 0$ in the equation of the plane, yielding $z = 3$. Hence the volume of the solid is
+\begin{align*}
+V
+=
+\pi r^{2} h
+=
+\pi (2)^{2} 3
+=
+12 \pi.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 6
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q06}}
+\label{sec: Math212 2016 Fall HalfExam02Q06}
+% S6eQ15.R.40
+
+Evaluate the integral
+\begin{align*}
+\int_{-2}^{2} \int_{0}^{\sqrt{4 - y^{2}}} \int_{-\sqrt{4 - x^{2} - y^{2}}}^{\sqrt{4 - x^{2} - y^{2}}} y^{2} \sqrt{x^{2} + y^{2} + z^{2}} \, \intd z \, \intd x \, \intd y.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+You should have two reactions to this integral: (i) barf, and (ii) spherical coordinates (look at all those squares and square roots! the Clue Fairy is flying low indeed!)!
+
+The integrand is continuous on all of $\reals^{3}$, hence in particular on the region of integration. Thus Fubini's theorem applies, and we may compute the triple integral associated to the given iterated integral in any order of integration.
+
+Let $V \subseteq \reals^{3}$ denote the region of integration, and let $f(x,y,z)$ denote the integrand. Using the limits of integration to sketch $V$, we see that $V$ is half of the solid sphere of radius $2$ centered at the origin, namely the half with $x \geq 0$. Thus, converting the given iterated integral to spherical coordinates (remember the integration factor $\rho^{2} \sin \varphi$), we have
+\begin{align}
+\iiint_{V} f(x,y,z) \, \intd V
+&=
+\int_{\varphi = 0}^{\varphi = \pi} \int_{\theta = -\frac{\pi}{2}}^{\theta = \frac{\pi}{2}} \int_{\rho = 0}^{\rho = 2} \left(\rho \sin \varphi \sin \theta\right)^{2} \rho (\rho^{2} \sin \varphi) \, \intd \rho \, \intd \theta \, \intd \varphi%
+\nonumber
+\\
+&=
+\int_{\varphi = 0}^{\varphi = \pi} \sin^{3} \varphi \, \intd \varphi \int_{\theta = -\frac{\pi}{2}}^{\theta = \frac{\pi}{2}} \sin^{2} \theta \, \intd \theta \int_{\rho = 0}^{\rho = 2} \rho^{5} \, \intd \rho.%
+\label{eq: Stewart 6e Q15.R.40 Intermediate}
+\end{align}
+Because none of the limits of integration depend on any variables, we may evaluate each of these single integrals separately. For $\varphi$, we use the identity $\sin^{2} \varphi + \cos^{2} \varphi = 1$ to compute
+\begin{align*}
+\int_{0}^{\pi} \sin^{3} \varphi \, \intd \varphi
+&=
+\int_{0}^{\pi} \left(1 - \cos^{2} \varphi\right) \sin \varphi \, \intd \varphi
+\\
+&=
+\int_{0}^{\pi} \sin \varphi \, \intd \varphi + \int_{0}^{\pi} \cos^{2} \varphi (-\sin \varphi) \, \intd \varphi
+\\
+&=
+\left[-\cos \varphi\right]_{\varphi = 0}^{\varphi = \pi} + \left[\frac{1}{3} \cos^{3} \varphi\right]_{\varphi = 0}^{\varphi = \pi}
+\\
+&=
+[1 - (-1)] + \frac{1}{3} [-1 - (1)]
+=
+\frac{4}{3}.
+\end{align*}
+For $\theta$, we use the identity $\cos(2 \theta) = 1 - 2 \sin^{2} \theta$ to compute
+\begin{align*}
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^{2} \theta \, \intd \theta
+&=
+\frac{1}{2} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \left(1 - \cos(2 \theta)\right) \intd \theta
+\\
+&=
+\frac{1}{2} \left(\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \intd \theta - \frac{1}{2} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos(2 \theta) 2 \, \intd \theta\right)
+\\
+&=
+\frac{1}{2} \left[\theta - \frac{1}{2} \sin(2 \theta)\right]_{\theta = -\frac{\pi}{2}}^{\theta = \frac{\pi}{2}}
+\\
+&=
+\frac{\pi}{2}.
+\end{align*}
+For $\rho$, we compute
+\begin{align*}
+\int_{0}^{2} \rho^{5} \, \intd \rho
+&=
+\frac{1}{6} \left[\rho^{6}\right]_{\rho = 0}^{\rho = 2}
+=
+\frac{32}{3}.
+\end{align*}
+Substituting these results into \eqref{eq: Stewart 6e Q15.R.40 Intermediate}, we conclude that
+\begin{align*}
+\iiint_{V} f(x,y,z) \, \intd V
+=
+\frac{64 \pi}{9}
+\approx
+22.3402.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 7
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q07}}
+\label{sec: Math212 2016 Fall HalfExam02Q07}
+% S6eQ15.R.43
+
+Let $X,Y$ be random variables with probability density function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+\begin{dcases*}
+C (x + y)	&	if $0 \leq x \leq 3,0 \leq y \leq 2$;	\\
+0		&	otherwise.
+\end{dcases*}
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm: S6eQ15.R.43a} Find the value of the constant $C$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+By definition, a probability density function (pdf) must (i) be everywhere nonnegative and (ii) integrate to $1$. The given function $f$ satisfies condition (i) if $C \geq 0$. The given function $f$ satisfies condition (ii) if
+\begin{align*}
+1
+&=
+\int_{x = 0}^{x = 3} \int_{y = 0}^{y = 2} C (x + y) \, \intd y \, \intd x
+\\
+&=
+C \int_{x = 0}^{x = 3} \left[x y + \frac{1}{2} y^{2}\right]_{y = 0}^{y = 2} \intd x
+\\
+&=
+C \int_{x = 0}^{x = 3} \left(2 x + 2\right) \intd x
+\\
+&=
+C \left[x^{2} + 2 x\right]_{x = 0}^{x = 3}
+\\
+&=
+15 C,
+\end{align*}
+equivalently, if $C = \frac{1}{15}$. Because $\frac{1}{15} \geq 0$, this value of $C$ makes $f$ a valid pdf.
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: S6eQ15.R.43b} Find $\probability(X \leq 2,Y \geq 1)$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We find probability by integrating the probability density function $f$ over the relevant region. Keeping in mind that $f(x,y) = 0$ outside the rectangle $[0,3] \times [0,2]$, we compute
+\begin{align*}
+\probability(X \leq 2,Y \geq 1)
+&=
+\int_{x = -\infty}^{x = 2} \int_{y = 1}^{y = +\infty} f(x,y) \, \intd y \, \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 2} \int_{y = 1}^{y = 2} (x + y) \, \intd y \, \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 2} \left[x y + \frac{1}{2} y^{2}\right]_{y = 1}^{y = 2} \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 2} \left(x + \frac{3}{2}\right) \intd x
+\\
+&=
+\frac{1}{15} \left[\frac{1}{2} x^{2} + \frac{3}{2} x\right]_{x = 0}^{x = 2}
+\\
+&=
+\frac{1}{3}.
+\end{align*}
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: S6eQ15.R.43c} Find $\probability(X + Y \leq 1)$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+With the same comments as in part \ref{itm: S6eQ15.R.43b}, we compute
+\begin{align*}
+\probability(X + Y \leq 1)
+&=
+\int_{x = -\infty}^{x = +\infty} \int_{y = -\infty}^{y = 1 - x} f(x,y) \, \intd y \, \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 1} \int_{y = 0}^{y = 1 - x} (x + y) \, \intd y \, \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 1} \left[x y + \frac{1}{2} y^{2}\right]_{y = 0}^{y = 1 - x} \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 1} \left(x (1 - x) + \frac{1}{2} (1 - x)^{2}\right) \intd x
+\\
+&=
+\frac{1}{15} \int_{x = 0}^{x = 1} \left(-\frac{1}{2} x^{2} + \frac{1}{2}\right) \intd x
+\\
+&=
+\frac{1}{15} \left[-\frac{1}{6} x^{3} + \frac{1}{2} x\right]_{x = 0}^{x = 1}
+\\
+&=
+\frac{1}{15} \left(\frac{1}{3}\right)
+=
+\frac{1}{45}.
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Exercise 8
+%
+%
+
+\section{Exercise \ref{sec: Math212 2016 Fall HalfExam02Q08}}
+\label{sec: Math212 2016 Fall HalfExam02Q08}
+% S6eQ15.R.49
+
+Let $R \subseteq \reals^{2}$ be the square with vertices
+\begin{align*}
+&(0,2),
+&
+&(1,1),
+&
+&(2,2),
+&
+&(1,3).
+\end{align*}
+Evaluate the double integral
+\begin{align*}
+\iint_{R} \frac{x - y}{x + y} \, \intd A.
+\end{align*}
+
+\spaceSolution{5in}{% Begin solution.
+Sketching the region of integration $R$, we see that it is a square in the $x y$-plane. Its sides are translates of the lines $y = x$ and $y = - x$, more precisely, the lines
+\begin{align}
+y - x
+&=
+0,
+&
+y - x
+&=
+2,
+&
+y + x
+&=
+2,
+&
+y + x
+&=
+4.%
+\label{eq: Stewart 6e Q15.R.49 Boundary Lines Of R}
+\end{align}
+
+The given integral seems difficult to evaluate directly, for (at least) two reasons: (i) the integrand is relatively complicated, and (ii) the region of integration would have to be subdivided in order to evaluate the double integral as (two or more) iterated integrals. These reasons suggest that we try a change of variables, and the form of the integrand (as well as the region of integration) suggests natural candidates for new variables $u,v$:
+\begin{align}
+u
+&=
+y - x,
+&
+v
+&=
+y + x.%
+\label{eq: Stewart 6e Q15.R.49 New Variables}
+\end{align}
+To do a change of variables, we need to express the given variables $x,y$ in terms of the new variables $u,v$. That is, we want a function $T: \reals^{2} \rightarrow \reals^{2}$ of the form
+\begin{align*}
+T(u,v)
+=
+\left(x(u,v),y(u,v)\right).
+\end{align*}
+From the definitions of $u,v$ in \eqref{eq: Stewart 6e Q15.R.49 New Variables}, we compute
+\begin{align*}
+u + v
+&=
+2 y,
+&
+-u + v
+&=
+2 x,
+\end{align*}
+so
+\begin{align*}
+x
+&=
+-\frac{1}{2} u + \frac{1}{2} v,
+&
+y
+&=
+\frac{1}{2} u + \frac{1}{2} v.
+\end{align*}
+Thus the Jacobian matrix and Jacobian determinant of the transformation $T$ are
+\begin{align*}
+\jacobian_{T}(u,v)
+&=
+\begin{pmatrix}
+\frac{\partial x}{\partial u}	&	\frac{\partial x}{\partial v}	\\
+\frac{\partial y}{\partial u}	&	\frac{\partial y}{\partial v}
+\end{pmatrix}
+=
+\begin{pmatrix}
+-\frac{1}{2}	&	\frac{1}{2}	\\
+\frac{1}{2}		&	\frac{1}{2}
+\end{pmatrix}
+,
+&
+\det\left(\jacobian_{T}(u,v)\right)
+&=
+-\frac{1}{4} - \frac{1}{4}
+=
+-\frac{1}{2},
+\end{align*}
+respectively.
+
+In terms of the new variables $u,v$, the curves in \eqref{eq: Stewart 6e Q15.R.49 Boundary Lines Of R} defining the boundary of the region $R$ in the $x y$-plane write as
+\begin{align*}
+u
+&=
+0,
+&
+u
+&=
+2,
+&
+v
+&=
+2,
+&
+v
+&=
+4.
+\end{align*}
+Because the transformation $T$ is linear, it follows that the region
+\begin{align*}
+S
+\defeq
+\left\{(u,v) \in \reals^{2} \st 0 \leq u \leq 2,2 \leq v \leq 4\right\}
+\end{align*}
+in the $u v$-plane is mapped bijectively to the region $R$ in the $x y$-plane. Thus we can use the change of variables given by the transformation $T$ to write the given double integral as
+\begin{align*}
+\iint_{R} \frac{x - y}{x + y} \, \intd A
+=
+\iint_{S} -\frac{u}{v} \abs{\det \jacobian_{T}(u,v)} \, \intd A
+=
+-\frac{1}{2} \iint_{S} \frac{u}{v} \, \intd A.
+\end{align*}
+Because the integrand is continuous on the region $S$ of integration, Fubini's theorem states that the value of the double integral equals the value of an iterated integral, integrated in either order. Choosing the order $\intd v \, \intd u$, we compute% Begin footnote.
+\footnote{Because all limits of integration for the variables $u,v$ are constants, the iterated integral in the order $\intd u \, \intd v$ is evaluated identically.}% End footnote.
+\begin{align*}
+-\frac{1}{2} \iint_{S} \frac{u}{v} \, \intd A
+&=
+-\frac{1}{2} \int_{u = 0}^{u = 2} \int_{v = 2}^{v = 4} \frac{u}{v} \, \intd v \, \intd u
+\\
+&=
+-\frac{1}{2} \int_{u = 0}^{u = 2} u \, \intd u \int_{v = 2}^{v = 4} v^{-1} \, \intd v
+\\
+&=
+-\frac{1}{2} \left[2\right] \left[\ln 4 - \ln 2\right]
+=
+-\ln 2.
+\end{align*}
+We conclude that
+\begin{align*}
+\iint_{R} \frac{x - y}{x + y} \, \intd A
+=
+-\ln 2.
+\end{align*}
+
+\begin{remark}
+As a rough check, note that the region $R$ in the $x y$-plane lies above the line $y = x$, so on this region, $y \geq x$, or equivalently, $x - y \leq 0$. Hence the integrand is nonpositive on this region (in fact, negative on $R$ except on the lower right boundary), so we expect the value of the integral to be negative.
+\end{remark}
+}% End solution.
+
+
+
+
+
+%
+%
+%	Hints
+%
+%
+
+\section{Hints}
+
+The following numbers correspond to the exercise numbers above.
+\begin{enumerate}
+\item Consider $\gradient f$.
+\item This exercise involves rates of change, i.e. derivatives, each with respect to time. View each variable as a function of time, and use the chain rule to relate the various rates of change.
+\item Appeal to the EVT. Parametrize the boundary of $D$ using polar coordinates.
+\item Use the definition of a Riemann sum.
+\item Sketch the region(s) of integration.
+\item Justify why you can change the order of integration.
+\item Sketch the region of integration.
+\item Choose a convenient coordinate system, based on the region of integration.
+\item Choose a convenient coordinate system, based on the region of integration.
+\item Use the definition of a probability density function.
+\item Apply a change of variables. It may be easier to first write the new variables $u,v$ as functions of the given variables $x,y$, then invert to find $x,y$ as functions of $u,v$. Remember the Jacobian determinant.
+\end{enumerate}

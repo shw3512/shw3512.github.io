@@ -1,0 +1,54 @@
+\section{Exercise}
+
+(2 pt) Consider the function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+x^{4} - x^{2} y^{2} + y^{4}.
+\end{align*}
+Compute the directional derivative of $f$ at the point $(x,y) = (1,1)$ in the direction of the vector $\fontVector{v} = (2,2)$. \fontHint{Note that $\fontVector{v}$ is not a unit vector. Recall the relationship between the directional derivative and the gradient.}
+
+
+
+\spaceSolution{3in}{% Begin solution.
+The directional derivative of $f$ at the point $(x,y)$ in the direction of the unit vector $\fontVector{u} = (u_{1},u_{2})$ is
+\begin{align}
+\left(D_{\fontVector{u}} f\right)(x,y)
+=
+\left((\gradient f)(x,y)\right) \cdot \fontVector{u}
+=
+\left(\frac{\partial f}{\partial x}(x,y)\right) u_{1} + \left(\frac{\partial f}{\partial y}(x,y)\right) u_{2}.%
+\label{eq: Directional Derivative General Equation R2}
+\end{align}
+The gradient of the given function $f$ is% Begin footnote.
+\footnote{Note that the function $f$ is symmetric in $x$ and $y$ (i.e. $f(x,y) = f(y,x)$), so after computing one of the two partial derivatives, we can obtain the other simply by exchanging $x$ and $y$.}% End footnote.
+\begin{align*}
+\gradient f
+=
+\left(4 x^{3} - 2 x y^{2},4 y^{3} - 2 y x^{2}\right),
+\end{align*}
+so
+\begin{align*}
+(\gradient f)(1,1)
+=
+(2,2).
+\end{align*}
+The unit vector $\fontVector{u}$ in the direction of $\fontVector{v}$ is
+\begin{align*}
+\fontVector{u}
+=
+\frac{1}{\norm{\fontVector{v}}} \fontVector{v}
+=
+\frac{1}{\sqrt{(2)^{2} + (2)^{2}}} (2,2)
+=
+\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right).
+\end{align*}
+Substituting these results into \eqref{eq: Directional Derivative General Equation R2}, we obtain
+\begin{align*}
+\left(D_{\fontVector{u}} f\right)(1,1)
+=
+(2) \frac{1}{\sqrt{2}} + (2) \frac{1}{\sqrt{2}}
+=
+2 \sqrt{2}.
+\end{align*}
+}% End solution.

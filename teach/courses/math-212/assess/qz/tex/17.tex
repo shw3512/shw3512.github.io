@@ -1,0 +1,196 @@
+\section{Exercise}
+
+(5 pt) Find the global minimum and maximum values of the function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+x^{2} y + x y^{2} - x y
+\end{align*}
+on the closed set $D \subseteq \reals^{2}$ given by
+\begin{align*}
+D
+=
+\left\{(x,y) \in \reals^{2} \st x \geq 0,y \geq 0,x + y \leq 2\right\},
+\end{align*}
+a 45-45-90 right triangle with side length $2$ in the first quadrant of the $x y$-plane. We'll do this in steps.
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Justify why a global minimum and maximum exist in this case. \fontHint{Name that theorem, and validate its hypotheses.}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+The function $f$ is continuous (polynomials, and more generally, rational functions, are continuous everywhere they are defined), and the set $D$ is closed and bounded. Thus by the extreme value theorem, $f$ achieves a (global) minimum and maximum on $D$.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Quiz17 Interior Critical Points} (2 pt) Find all critical points on the interior of $D$. \fontHint{As in single-variable optimization, do this by setting the appropriate notion of ``derivative of $f$'' equal to (the appropriate notion of) zero. Note that in the interior of $D$, $x \neq 0$ and $y \neq 0$. The derivative equal to zero gives a system of two equations, which will yield a unique solution --- our critical point.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Because $f$ is differentiable everywhere, all critical points $(x,y)$ of $f$ satisfy the condition $(\gradient f)(x,y) = \fontVector{0}$. Computing the gradient,% Begin footnote.
+\footnote{Note that the function $f$ is symmetric in $x$ and $y$, i.e. $f(x,y) = f(y,x)$. This implies that $\frac{\partial f}{\partial y}$ can be obtained from $\frac{\partial f}{\partial x}$ by interchanging $x$ and $y$.} % End footnote
+we find
+\begin{align*}
+(0,0)
+=
+\fontVector{0}
+=
+(\gradient f)(x,y)
+=
+\left(2 x y + y^{2} - y,2 x y + x^{2} - x\right).
+\end{align*}
+This vector equality is equivalent to the following system of equations:
+\begin{align*}
+0
+&=
+y (2 x + y - 1)
+&
+&\text{and}
+&
+0
+&=
+x (2 y + x - 1).
+\end{align*}
+These equations have the following solutions:
+\begin{align*}
+y
+&=
+0
+&
+&\text{or}
+&
+2 x + y - 1
+&=
+0,
+&
+&\text{and}
+&
+x
+&=
+0
+&
+&\text{or}
+&
+2 y + x - 1
+&=
+0.
+\end{align*}
+On the interior of $D$, $x > 0$ and $y > 0$ (do you see why this is true, geometrically?). Hence we must have
+\begin{align*}
+2 x + y - 1
+&=
+0
+&
+&\text{and}
+&
+2 y + x - 1
+&=
+0,
+\end{align*}
+a system of two equations in two unknowns with the unique solution
+\begin{align*}
+(x,y)
+=
+\left(\frac{1}{3},\frac{1}{3}\right).
+\end{align*}
+\newpage
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Quiz17 Boundary Critical Points} (1 pt) Find all critical points on the boundary of $D$. \fontHint{Note that $f(x,y) = 0$ along the boundary components of $D$ where $x = 0$ or $y = 0$. Thus we need only consider the boundary component $x + y = 2$. Solve for $y$ as a function of $x$ (or vice versa), substitute into $f$ to obtain a function of a single variable, and optimize this using single-variable calculus. Again you should find a unique critical point.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+\begin{wrapfigure}{r}{.3\textwidth}
+\centering
+\includegraphics[scale=.5]{\filePathGraphics Plot.png}
+\end{wrapfigure}
+The boundary of $D$ has three natural components:
+\begin{enumerate}
+\item $D_{1} = \{(x,y) \in \reals^{2} \st 0 \leq x \leq 2,y = 0\}$
+\item $D_{2} = \{(x,y) \in \reals^{2} \st x = 0,0 \leq y \leq 2\}$
+\item $D_{3} = \{(x,y) \in \reals^{2} \st x + y = 2,x \geq 0,y \geq 0\}$
+\end{enumerate}
+As noted in the hint, $f(x,y) = 0$ along the boundary components $D_{1}$ and $D_{2}$, because
+\begin{align}
+f(x,y)
+=
+x y \left(x + y - 1\right),%
+\label{eq: f Factored}
+\end{align}
+so $f(x,y) = 0$ if $x = 0$ or $y = 0$. It remains to analyze critical points of the boundary component $D_{3}$. The endpoints $(2,0)$ and $(0,2)$ of $D_{3}$ lie in $D_{1}$ and $D_{2}$, respectively, so we know the value of $f$ is $0$ at these points. Along $D_{3}$, we have $x + y = 2$, or equivalently,
+\begin{align*}
+y
+=
+2 - x.
+\end{align*}
+Substituting this into the expression \eqref{eq: f Factored} for $f$, we obtain
+\begin{align*}
+g(x)
+=
+f(x,2 - x)
+=
+x (2 - x) (x + (2 - x) - 1)
+=
+2 x - x^{2},
+\end{align*}
+a function of the single variable $x$. This function is a polynomial, so it is differentiable everywhere, and hence all critical points $x$ of $g$ satisfy the condition $g'(x) = 0$. We compute
+\begin{align*}
+0
+=
+g'(x)
+&=
+2 - 2 x
+&
+&\Leftrightarrow
+&
+x
+&=
+1.
+\end{align*}
+Thus the unique critical point along the boundary component $D_{3}$ is
+\begin{align*}
+(x,y)
+=
+(1,1).
+\end{align*}
+We should check that this point indeed lies in $D_{3}$. It does.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) State the global minimum and maximum values of $f$ on $D$. \fontHint{Compare values of $f$ at points from \ref{itm: Quiz17 Interior Critical Points} and \ref{itm: Quiz17 Boundary Critical Points}.}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+We compute the values of $f$ at the candidate extremal points found in \ref{itm: Quiz17 Interior Critical Points} and \ref{itm: Quiz17 Boundary Critical Points}:
+\begin{align*}
+f\left(\frac{1}{3},\frac{1}{3}\right)
+&=
+\left(\frac{1}{3}\right) \left(\frac{1}{3}\right) \left(\frac{1}{3} + \frac{1}{3} - 1\right)
+=
+-\frac{1}{27},
+&
+f(1,1)
+&=
+1 + 1 - 1
+=
+1.
+\end{align*}
+We conclude that $f$ has a unique global minimum and maximum on $D$, as summarized below.% Begin footnote.
+\footnote{The points in $D_{1}$ and $D_{2}$ are also critical points. The value of $f$ at each of these points is $0$, and $f(\frac{1}{3},\frac{1}{3}) < 0 < f(1,1)$, so none of these points is a global minimum or maximum.}% End footnote.
+\begin{center}
+\begin{tabular}{c c c}
+\hline\hline
+Point					&	Value		&	Type			\\
+\hline
+$(\frac{1}{3},\frac{1}{3})$	&	$-\frac{1}{27}$	&	global min		\\
+$(1,1)$				&	$1$			&	global max	\\
+\hline
+\end{tabular}
+\end{center}
+}% End solution.

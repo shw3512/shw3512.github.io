@@ -1,0 +1,68 @@
+\section{Exercise}
+
+(2 pt) Let $D \subseteq \reals^{2}$ be the region in the upper half plane (i.e. $y \geq 0$) bounded by the circle $C: x^{2} + y^{2} = 4$ and the lines $y = x$ and $y = -x$.
+\begin{enumerate}[label=(\alph*)]
+\item (0.5 pt) Sketch and shade the region $D$. \fontHint{The point $(0,1) \in D$.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+The region $D$ is shown below.
+\begin{center}
+\includegraphics[scale=.4]{\filePathGraphics Quiz20_RegionD}
+\end{center}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1.5 pt) Let $f: \reals^{2} \rightarrow \reals$ be the function
+\begin{align*}
+f(x,y)
+=
+2 x y.
+\end{align*}
+Set up (but do NOT evaluate) an iterated (!) integral for $\iint_{D} f(x,y) \, \intd A$ \textbf{using polar coordinates}. \fontHint{Describe the region $D$ algebraically using polar coordinates. When writing the iterated integral, remember to translate $(x,y)$ to $(r,\theta)$, and mind your integration factor.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Because $f(x,y)$ is continuous on the region $D$ of integration, Fubini's theorem allows us to write the double integral as an iterated integral. In polar coordinates, the region $D$ can be described as
+\begin{align*}
+D
+=
+\left\{(r,\theta) \st 0 \leq r \leq 2,\frac{\pi}{4} \leq \theta \leq \frac{3 \pi}{4}\right\},
+\end{align*}
+the function $f(x,y)$ writes as
+\begin{align*}
+f(x,y)
+=
+2 x y
+=
+2 (r \cos \theta) (r \sin \theta)
+=
+r^{2} 2 \sin \theta \cos \theta
+=
+r^{2} \sin(2 \theta),
+\end{align*}
+where in the final equality we have used the trigonometric identity
+\begin{align*}
+\sin(2 \theta)
+=
+2 \sin \theta \cos \theta,
+\end{align*}
+and
+\begin{align*}
+\intd A
+=
+r \, \intd r \, \intd \theta
+\end{align*}
+(note the integration factor of $r$). Thus
+\begin{align*}
+\iint_{D} f(x,y) \, \intd A
+&=
+\int_{\theta = \frac{\pi}{4}}^{\theta = \frac{3 \pi}{4}} \int_{r = 0}^{r = 2} r^{2} \sin(2 \theta) \, r \, \intd r \, \intd \theta
+\\
+&=
+\int_{\theta = \frac{\pi}{4}}^{\theta = \frac{3 \pi}{4}} \sin(2 \theta) \, \intd \theta \int_{r = 0}^{r = 2} r^{3} \, \intd r.
+\end{align*}
+Note that this iterated integral would be easy to compute, if we so desired.
+}% End solution.

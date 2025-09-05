@@ -1,0 +1,68 @@
+\section{Exercise}
+
+(2 pt) Let $f: \reals^{2} \rightarrow \reals$ be given by
+\begin{align*}
+f(x,y)
+=
+3 x^{2} - 6 x y^{2} + 2 y,
+\end{align*}
+and let $R \subseteq \reals^{2}$ be the rectangle
+\begin{align*}
+R
+=
+\left\{(x,y) \in \reals^{2} \st 0 \leq x \leq 2,0 \leq y \leq 1\right\}.
+\end{align*}
+We wish to evaluate the double integral $\iint_{R} f(x,y) \, \intd A$.
+\begin{enumerate}[label=(\alph*)]
+\item (0.5 pt) Justify why you can write the double integral as an iterated integral. \fontHint{Two words, rhymes with ``Houdini's serum''. Heart points for noting a sufficient condition on $f$.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Fubini's theorem. More precisely, the integrand $f(x,y)$ is a polynomial, hence continuous everywhere on its domain, and in particular on the region $R$ of integration.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1.5 pt) Evaluate the integral $\iint_{R} f(x,y) \, \intd A$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By Fubini's theorem, we may evaluate the double integral as an iterated integral in either order. Using the order $\intd x \, \intd y$, we compute
+\begin{align*}
+\iint_{R} f(x,y) \, \intd A
+&=
+\int_{y = 0}^{y = 1} \int_{x = 0}^{x = 2} \left(3 x^{2} - 6 x y^{2} + 2 y\right) \intd x \, \intd y
+\\
+&=
+\int_{y = 0}^{y = 1} \left[x^{3} - 3 x^{2} y^{2} + 2 x y\right]_{x = 0}^{x = 2} \, \intd y
+\\
+&=
+\int_{y = 0}^{y = 1} \left(8 - 12 y^{2} + 4 y\right) \, \intd y
+\\
+&=
+\left[8 y - 4 y^{3} + 2 y^{2}\right]_{y = 0}^{y = 1}
+\\
+&=
+6.
+\end{align*}
+If instead we integrate using the order $\intd y \, \intd x$, then we obtain
+\begin{align*}
+\iint_{R} f(x,y) \, \intd A
+&=
+\int_{x = 0}^{x = 2} \int_{y = 0}^{y = 1} \left(3 x^{2} - 6 x y^{2} + 2 y\right) \, \intd y \, \intd x
+\\
+&=
+\int_{x = 0}^{x = 2} \left[3 x^{2} y - 2 x y^{3} + y^{2}\right]_{y = 0}^{y = 1} \, \intd x
+\\
+&=
+\int_{x = 0}^{x = 2} \left(3 x^{2} - 2 x + 1\right) \, \intd x
+\\
+&=
+\left[x^{3} - x^{2} + x\right]_{x = 0}^{x = 2}
+\\
+&=
+6.
+\end{align*}
+Note that both orders of integration yield the same result, as required by Fubini's theorem.
+}% End solution.

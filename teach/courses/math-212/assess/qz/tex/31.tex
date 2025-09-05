@@ -1,0 +1,46 @@
+\section{Exercise}
+
+(2 pt) Let $C \subseteq \reals^{2}$ be the circle of radius $1$ centered at the origin, oriented counterclockwise. Use Green's theorem to rewrite the line integral
+\begin{align*}
+\int_{C} \left(3 y - e^{\sin x}\right) \intd x + \left(7 x + \sqrt{y^{4} + 1}\right) \intd y
+\end{align*}
+as an iterated (!) integral over the appropriate region $D \subseteq \reals^{2}$. \fontHint{Green's theorem changes (i) the integrand (think curl) and (ii) the region of integration (view $C$ as the boundary of $D$). The iterated integral is most easily expressed in polar coordinates (mind the integration factor!).}
+
+\spaceSolution{5in}{% Begin solution.
+The unit circle $C$ encloses the unit disc $D$, which is described in polar coordinates by
+\begin{align*}
+D
+=
+\left\{(r,\theta) \st 0 \leq r \leq 1,0 \leq \theta \leq 2 \pi\right\}.
+\end{align*}
+The unit circle $C$ is a smooth, simple, closed curve; and the component functions of
+\begin{align*}
+\fontVector{F}
+=
+(F_{1},F_{2})
+=
+\left(3 y - e^{\sin x},7 x + \sqrt{y^{4} + 1}\right)
+\end{align*}
+in the integrand of the line integral are $\mathscr{C}^{1}$ (continuously differentiable). Hence by Green's theorem,
+\begin{align*}
+\int_{C} \fontVector{F} \cdot \intd \fontVector{r}
+=
+\iint_{D} \left(\frac{F_{1}}{\partial y} - \frac{\partial F_{2}}{\partial x}\right) \intd A
+=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 1} (3 - 7) r \, \intd r \, \intd \theta
+=
+-4 \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 1} r \, \intd r \, \intd \theta.
+\end{align*}
+
+\begin{remark}
+Suppose that we wanted to evaluate this integral. The region $D$ has area $\pi (1)^{2} = \pi$, so $\iint_{D} 1 \, \intd A = \pi$, and hence (using Green's theorem as above)
+\begin{align*}
+\int_{C} \fontVector{F} \cdot \intd \fontVector{r}
+=
+-4 \iint_{D} \intd A
+=
+-4 \pi.
+\end{align*}
+Note that, because the integrand was a constant (and the area of the region $D$ is easily computable via geometry), we did not even have to set up and evaluate an iterated integral.
+\end{remark}
+}% End solution.

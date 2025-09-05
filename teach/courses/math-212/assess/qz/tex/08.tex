@@ -1,0 +1,46 @@
+\section{Exercise}
+
+(5 pt) Let $\fontVector{r}: \reals \rightarrow \reals^{3}$ be the position function of a particle, given by
+\begin{align*}
+\fontVector{r}(t)
+=
+\left(\cos(2 t),\frac{2}{3} \left(t^{2} + 2\right)^{\frac{3}{2}},\sin(2 t)\right).
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (2 pt) Write the velocity of the particle at time $t$. \fontHint{Recall that velocity is the rate of change of position with respect to time.}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The related velocity function is
+\begin{align*}
+\fontVector{v}(t)
+=
+\fontVector{r}'(t)
+=
+\left(-2 \sin(2 t),2 t \sqrt{t^{2} + 2},2 \cos(2 t)\right).
+\end{align*}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (3 pt) Find the minimum speed of the particle. \fontHint{Recall that speed is the magnitude of the velocity vector.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The speed $v(t)$ at time $t$ is
+\begin{align*}
+v(t)
+&=
+\norm{\fontVector{v}(t)}
+\\
+&=
+\sqrt{4 \sin^{2}(2 t) + 4 t^{2} (t^{2} + 2) + 4 \cos^{2}(2 t)}
+\\
+&=
+\sqrt{4 t^{4} + 8 t^{2} + 4}
+\\
+&=
+\sqrt{4 (t^{2} + 1)^{2}}
+\\
+&=
+2 (t^{2} + 1).
+\end{align*}
+The minimum value of this function $v(t)$ is $2$, occurring at $t = 0$.}% End solution.

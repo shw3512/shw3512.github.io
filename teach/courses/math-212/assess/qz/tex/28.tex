@@ -1,0 +1,105 @@
+\section{Exercise}
+
+(5 pt) Let $R \subseteq \reals^{2}$ be the square bounded by the lines
+\begin{align*}
+x + y
+&=
+-1,
+&
+x + y
+&=
+1,
+&
+x - y
+&=
+-1,
+&
+x - y
+&=
+1.
+\end{align*}
+Show that
+\begin{align*}
+\iint_{R} e^{x + y} \, \intd A
+=
+e - \frac{1}{e}.
+\end{align*}
+\fontHint{Apply a change of variables. More precisely, let the equations of the boundary of the region $R$ and the integrand guide your definition of new variables $u,v$ as functions of the given variables $x,y$. Solve for $x,y$ as functions of $u,v$. Remember the Jacobian determinant.}
+
+\spaceSolution{5in}{% Begin solution.
+The equations defining the region $R$ (and the integrand) suggest the change of variables
+\begin{align*}
+u
+&=
+x + y,
+&
+v
+&=
+x - y.
+\end{align*}
+Solving this system of equations for $x,y$ in terms of $u,v$, we find
+\begin{align*}
+x
+&=
+\frac{1}{2} u + \frac{1}{2} v,
+&
+y
+&=
+\frac{1}{2} u - \frac{1}{2} v.
+\end{align*}
+Thus the relevant transformation $T: \reals^{2} \rightarrow \reals^{2}$, from the $u v$-plane to the $x y$-plane, is
+\begin{align*}
+T(u,v)
+=
+\left(x(u,v),y(u,v)\right)
+=
+\left(\frac{1}{2} u + \frac{1}{2} v,\frac{1}{2} u - \frac{1}{2} v\right),
+\end{align*}
+with Jacobian matrix and Jacobian determinant
+\begin{align*}
+\jacobian_{T}(u,v)
+&=
+\begin{pmatrix}
+\frac{\partial x}{\partial u}	&	\frac{\partial x}{\partial v}	\\
+\frac{\partial y}{\partial u}	&	\frac{\partial y}{\partial u}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{1}{2}	&	\frac{1}{2}	\\
+\frac{1}{2}	&	-\frac{1}{2}
+\end{pmatrix}
+&
+&\text{and}
+&
+\det \jacobian_{T}
+&=
+-\frac{1}{4} - \frac{1}{4}
+=
+-\frac{1}{2}.
+\end{align*}
+respectively.
+
+The region $S$ of the $u v$-plane that maps to the region $R$ of the $x y$-plane can be found by rewriting the equations defining $R$ in terms of $u,v$. Doing this, we find
+\begin{align*}
+S
+=
+\left\{(u,v) \in \reals^{2} \st -1 \leq u \leq 1,-1 \leq v \leq 1\right\}.
+\end{align*}
+Applying the change-of-variables theorem to the given integral using the transformation $T$ gives
+\begin{align*}
+\iint_{R} f(x,y) \, \intd A
+&=
+\iint_{S} f(T(u,v)) \abs{\det \jacobian_{T}} \, \intd A
+\\
+&=
+\frac{1}{2} \int_{v = -1}^{v = 1} \int_{u = -1}^{u = 1} e^{u} \, \intd u \, \intd v
+\\
+&=
+\frac{1}{2} \int_{v = -1}^{v = 1} \intd v \int_{u = -1}^{u = 1} e^{u} \, \intd u
+\\
+&=
+\frac{1}{2} [2] \left[e^{1} - e^{-1}\right]
+=
+e - \frac{1}{e}.
+\end{align*}
+}% End solution.

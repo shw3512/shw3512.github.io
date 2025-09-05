@@ -1,0 +1,82 @@
+%
+%
+%	2016-11-18 (F)
+%
+%
+\section{Exercise}
+
+(5 pt) In this quiz we prove that the curl of any gradient is zero. More precisely, let $f: \reals^{3} \rightarrow \reals$ be $\mathscr{C}^{2}$ (i.e. twice continuously differentiable). Then
+\begin{align}
+\curl(\gradient f)
+=
+\fontVector{0}.%
+\label{eq: Curl Gradient Equals Zero}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm: Math212 F2016 Quiz32a} (1 pt) What kind of object is the $\fontVector{0}$ in \eqref{eq: Curl Gradient Equals Zero}?
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+It is a vector field. More precisely, it is the vector field defined on the same domain as $f$, such that for all points $(x,y,z)$ in this domain, it outputs the zero vector $\fontVector{0} \in \reals^{3}$.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Math212 F2016 Quiz32b} (3 pt) Prove \eqref{eq: Curl Gradient Equals Zero}, justifying your steps. \fontHint{Definitions, compute, Clairaut.}
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+We compute
+\begin{align*}
+\curl(\gradient f)
+&=
+\nabla \times (\nabla f)
+\\
+&=
+\det
+\begin{pmatrix}
+\fontVector{i}			&	\fontVector{j}			&	\fontVector{k}			\\
+\frac{\partial}{\partial x}	&	\frac{\partial}{\partial y}	&	\frac{\partial}{\partial z}	\\
+\frac{\partial f}{\partial x}	&	\frac{\partial f}{\partial y}	&	\frac{\partial f}{\partial z}
+\end{pmatrix}
+\\
+&=
+\left(\frac{\partial^{2} f}{\partial y \; \partial z} - \frac{\partial^{2} f}{\partial z \; \partial y}\right) \fontVector{i}
++ \left(\frac{\partial^{2} f}{\partial z \; \partial x} - \frac{\partial^{2} f}{\partial x \; \partial z}\right) \fontVector{j}
++ \left(\frac{\partial^{2} f}{\partial x \; \partial y} - \frac{\partial^{2} f}{\partial y \; \partial x}\right) \fontVector{k}
+\\
+&=
+0 \; \fontVector{i} + 0 \; \fontVector{j} + 0 \; \fontVector{k}
+=
+\fontVector{0},
+\end{align*}
+where the equalities are justified as follows:
+\begin{enumerate}
+\item Equivalent representation of curl
+\item Definition of curl, gradient, cross product
+\item Compute the determinant
+\item Clairaut--Schwarz theorem (equality of mixed partials)
+\end{enumerate}
+}% End solution.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\setcounter{enumi}{2}
+\item\label{itm: Math212 F2016 Quiz32c} (1 pt) Application: Let $\fontVector{F}: \reals^{3} \rightarrow \reals^{3}$ be a vector field, and suppose that $\curl \fontVector{F} \neq \fontVector{0}$. An unenlightened colleague from Math 212 (in another section, of course) asks you to find a potential function for $\fontVector{F}$, i.e. some $f: \reals^{3} \rightarrow \reals$ such that $\gradient f = \fontVector{F}$. State why you refuse, with logical justification. \fontHint{Use \eqref{eq: Curl Gradient Equals Zero}.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+We refuse because a potential function cannot exist for the given vector field $\fontVector{F}$. Suppose for the sake of contradiction that $\fontVector{F}$ had a potential function, i.e. $\fontVector{F}$ is conservative. Then
+\begin{align*}
+\fontVector{0}
+\neq
+\curl(\fontVector{F})
+=
+\curl(\gradient f)
+=
+\fontVector{0},
+\end{align*}
+where (i) the first inequality is by hypothesis; (ii) the middle equality assumes that $\fontVector{F}$ is conservative, so $\fontVector{F} = \gradient f$ for some $f$; and (iii) the final equality uses \eqref{eq: Curl Gradient Equals Zero}). Thus $\fontVector{0} \neq \fontVector{0}$, a contradiction. We conclude that $\fontVector{F}$ cannot have a potential function.
+}% End solution.

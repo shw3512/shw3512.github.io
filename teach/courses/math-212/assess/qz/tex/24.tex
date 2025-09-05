@@ -1,0 +1,45 @@
+\section{Exercise}
+
+(2 pt) Let $E \subseteq \reals^{3}$ be the region bounded by (i.e. inside) the cylinder $x^{2} + y^{2} = 4$ and the planes $z = 0$ and $z = 2$.
+\begin{enumerate}[label=(\alph*)]
+\item (0.5 pt) Sketch the region $E$.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+The region $E$ is a solid (classical) cylinder, centered along the $z$-axis, with radius $2$, height $2$, and base in the $x y$-plane.\fontNeedsEdit{ (add graphic)}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1.5 pt) Evaluate the triple integral
+\begin{align*}
+\iiint_{E} z e^{x^{2} + y^{2}} \, \intd V.
+\end{align*}
+\fontHint{Use cylindrical coordinates. Mind the integration factor.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The integrand $f(x,y,z) = z e^{x^{2} + y^{2}}$ is continuous everywhere; in particular, $f$ is continuous on the region $E$ of integration. Hence by Fubini's theorem, we may evaluate the triple integral as an iterated integral using any order of integration. In cylindrical coordinates,
+\begin{itemize}
+\item region of integration: $E = \left\{(r,\theta,z) \st 0 \leq r \leq 2,0 \leq \theta \leq 2 \pi,0 \leq z \leq 2\right\}$,
+\item integrand: $z e^{x^{2} + y^{2}} = z e^{r^{2}}$,
+\item differential: $\intd V = r \, \intd r \, \intd \theta \, \intd z$ (or any other order of the variables),
+\end{itemize}
+so the triple integral writes as
+\begin{align*}
+\iiint_{E} z e^{x^{2} + y^{2}} \, \intd V
+&=
+\int_{z = 0}^{z = 2} \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 2} z e^{r^{2}} \, r \, \intd r \, \intd \theta \, \intd z
+\\
+&=
+\int_{z = 0}^{z = 2} z \, \intd z \int_{\theta = 0}^{\theta = 2 \pi} \intd \theta \frac{1}{2} \int_{r = 0}^{r = 2} e^{r^{2}} 2 r \, \intd r
+\\
+&=
+\left[\frac{1}{2} z^{2}\right]_{z = 0}^{z = 2} \left[\theta\right]_{\theta = 0}^{\theta = 2 \pi} \frac{1}{2} \left[e^{r^{2}}\right]_{r = 0}^{r = 2}
+\\
+&=
+(2) (2 \pi) \frac{1}{2} (e^{4} - 1)
+\\
+&=
+2 \pi (e^{4} - 1).
+\end{align*}}% End solution.

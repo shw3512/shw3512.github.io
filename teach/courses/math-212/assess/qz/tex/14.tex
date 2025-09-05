@@ -1,0 +1,80 @@
+\section{Exercise}
+
+(5 pt) Consider the unit sphere $S^{2}$ in $\reals^{3}$ centered at the origin. Find an equation for the tangent plane to $S^{2}$ at the point $(\frac{1}{2},\frac{1}{2},-\frac{1}{\sqrt{2}})$. \fontHint{Recall that an equation for the unit sphere is
+\begin{align*}
+x^{2} + y^{2} + z^{2}
+=
+1.
+\end{align*}
+Solve for $z$ as a function of $x,y$, minding signs (!), then take partial derivatives. As an alternative to all this, think geometrically.}
+
+\spaceSolution{5in}{% Begin solution.
+\paragraph{Solution 1 (algebraic):}
+
+Solving for $z$ as a function of $x,y$, we obtain
+\begin{align}
+z
+=
+\pm\sqrt{1 - x^{2} - y^{2}}.%
+\label{eq: z(x,y)}
+\end{align}
+We are interested in the tangent plane at the point $(\frac{1}{2},\frac{1}{2},-\frac{1}{\sqrt{2}})$, for which the $z$-coordinate is negative. Thus we take the negative square root in \eqref{eq: z(x,y)}. Computing the first-order partial derivatives of $z$ (note that we can use symmetry of $z$ in $x$ and $y$ to make just one computation), we find
+\begin{align*}
+\frac{\partial z}{\partial x}
+&=
+\frac{x}{\sqrt{1 - x^{2} - y^{2}}},
+&
+\frac{\partial z}{\partial y}
+&=
+\frac{y}{\sqrt{1 - x^{2} - y^{2}}}.
+\end{align*}
+Evaluating these partial derivatives at the point $(x,y) = (\frac{1}{2},\frac{1}{2})$ (again we can use symmetry in $x$ and $y$ to make just one computation), we have
+\begin{align*}
+\frac{\partial z}{\partial x}\left(\frac{1}{2},\frac{1}{2}\right)
+&=
+\frac{\sqrt{2}}{2},
+&
+\frac{\partial z}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right)
+&=
+\frac{\sqrt{2}}{2}.
+\end{align*}
+We conclude that an equation for the tangent plane to $S^{2}$ at the point $(\frac{1}{2},\frac{1}{2},\frac{1}{\sqrt{2}})$ is
+\begin{align}
+z - z_{0}
+&=
+\left(\frac{\partial z}{\partial x}\left(\frac{1}{2},\frac{1}{2}\right)\right) \left(x - x_{0}\right) + \left(\frac{\partial z}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right)\right) \left(y - y_{0}\right)%
+\nonumber
+\\
+z + \frac{1}{\sqrt{2}}
+&=
+\frac{\sqrt{2}}{2} \left(x - \frac{1}{2}\right) + \frac{\sqrt{2}}{2} \left(y - \frac{1}{2}\right).%
+\label{eq: Equation Of Tangent Plane}
+\end{align}
+
+
+
+\paragraph{Solution 2 (geometric):}
+
+Close your eyes and see the unit sphere (in fact, any sphere) in $\reals^{3}$ centered at the origin, and also see a tangent plane to this sphere, at any point $P_{0} = (x_{0},y_{0},z_{0})$ on the sphere. Note that any normal vector to this plane (positioned so that its initial point is at $P_{0}$) lies in the line containing the radius from the origin $O$ to $P_{0}$, i.e. is parallel to the vector
+\begin{align*}
+\fontVectorBetweenPoints{O P_{0}}
+=
+(x_{0},y_{0},z_{0}).
+\end{align*}
+In particular, we can take the given point $P_{0}$ as the normal vector to the tangent plane. Doing so, we obtain the following equation for the tangent plane:
+\begin{align*}
+0
+=
+\left(x_{0},y_{0},z_{0}\right) \cdot \left(x - x_{0},y - y_{0},z - z_{0}\right).
+\end{align*}
+
+In particular, an equation for the tangent plane to the unit sphere at the point $(\frac{1}{2},\frac{1}{2},-\frac{1}{\sqrt{2}})$ is
+\begin{align*}
+0
+=
+\left(\frac{1}{2},\frac{1}{2},-\frac{1}{\sqrt{2}}\right) \cdot \left(x - \frac{1}{2},y - \frac{1}{2},z + \frac{1}{\sqrt{2}}\right)
+=
+\frac{1}{2} \left(x - \frac{1}{2}\right) + \frac{1}{2} \left(y - \frac{1}{2}\right) - \frac{1}{\sqrt{2}} \left(z + \frac{1}{\sqrt{2}}\right).
+\end{align*}
+Note that isolating the $z + \frac{1}{\sqrt{2}}$ term yields precisely equation \eqref{eq: Equation Of Tangent Plane}, found algebraically.
+}% End solution.

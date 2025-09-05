@@ -1,0 +1,128 @@
+%
+%
+%	2016-11-30 (W)
+%
+%
+\section{Exercise}
+
+(5 pt) For each of the following integrals, name a theorem that allows you to write an equivalent expression (e.g., integral), write it, and evaluate it. \emph{Guiding light:} Integrating a derivative over a region is related to evaluating the original function on the boundary of that region.
+\begin{enumerate}[label=(\alph*)]% S6eQ16.08.10
+\item (2.5 pt) Let $\fontVector{F}: \reals^{3} \rightarrow \reals^{3}$ be given by
+\begin{align*}
+\fontVector{F}(x,y,z)
+=
+\left(x y,2 z,3 y\right),
+\end{align*}
+and let $C \subseteq \reals^{3}$ be the curve of intersection of the plane $x + z = 5$ and the cylinder $x^{2} + y^{2} = 9$, oriented counterclockwise when viewed from above. Show that $\int_{C} \fontVector{F} \cdot \intd \fontVector{r} = 9 \pi$.
+\end{enumerate}
+
+\spaceSolution{2.75in}{% Begin solution.
+Stokes's theorem: $C$ is a (piecewise-) smooth simple closed curve, and the component functions of $\fontVector{F}$ are continuously differentiable, so taking $S$ to be any piecewise-smooth oriented surface with boundary $C$ permits us to apply Stokes's theorem, rewriting the given line integral as a surface integral. A convenient choice of surface $S$ is the region of the plane $x + z = 5$ bounded by $C$, equipped with upward-pointing unit normal vectors (to agree with the given orientation on $C$). Let $D \subseteq \reals^{2}$ be the disc in the $x y$-plane bounded by the given cylinder $x^{2} + y^{2} = 9$:
+\begin{align*}
+D
+=
+\left\{(x,y) \in \reals^{2} \st x^{2} + y^{2} \leq 9\right\}
+=
+\left\{(r,\theta) \st r \in [0,3],\theta \in [0,2 \pi]\right\}.
+\end{align*}
+Then a parametrization of this surface $S$ is given by
+\begin{align*}
+\fontVector{r}:
+D
+&\rightarrow
+\reals^{3}
+\\
+(x,y)
+&\mapsto
+\left(x,y,5 - x\right).
+\end{align*}
+Note that
+\begin{align*}
+\fontVector{r}_{x}
+&=
+\left(1,0,-1\right),
+&
+\fontVector{r}_{y}
+&=
+\left(0,1,0\right),
+\end{align*}
+so the induced normal vector at each point of $S$ is
+\begin{align*}
+\fontVector{r}_{x} \times \fontVector{r}_{y}
+=
+\left(1,0,1\right),
+\end{align*}
+upward-pointing, as required. Stokes's theorem gives
+\begin{align*}
+\int_{C} \fontVector{F} \cdot \intd \fontVector{r}
+&=
+\iint_{S} (\curl \fontVector{F}) \cdot \intd \fontVector{S}
+=
+\iint_{D} (\curl \fontVector{F}) \cdot (\fontVector{r}_{x} \times \fontVector{r}_{y}) \, \intd A
+\\
+&=
+\iint_{D} \left(1,0,-x\right) \cdot (1,0,1) \, \intd A
+=
+\iint_{D} (1 - x) \, \intd A
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 3} (1 - r \cos \theta) r \, \intd r \, \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \left[\frac{1}{2} r^{2} - \frac{1}{3} r^{3} \cos \theta\right]_{r = 0}^{r = 3} \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \left(\frac{9}{2} - 9 \cos \theta\right) \intd \theta
+\\
+&=
+\left[\frac{9}{2} \theta - 9 \sin \theta\right]_{\theta = 0}^{\theta = 2 \pi}
+\\
+&=
+9 \pi.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]% S6eQ16.09.12
+\item (2.5 pt) Let $\fontVector{F}: \reals^{3} \rightarrow \reals^{3}$ be given by
+\begin{align*}
+\fontVector{F}(x,y,z)
+=
+\left(x^{4},-x^{3} z^{2},4 x y^{2} z\right),
+\end{align*}
+and let $S \subseteq \reals^{3}$ be the surface of the solid bounded by the cylinder $x^{2} + y^{2} = 1$ and the planes $z = x + 2$ and $z = 0$, where $S$ is equipped with its outward-pointing unit normal vectors. Show that $\iint_{S} \fontVector{F} \cdot \intd \fontVector{S} = \frac{2 \pi}{3}$.
+\end{enumerate}
+
+\spaceSolution{2.75in}{% Begin solution.
+Gauss's (divergence) theorem: Let $E \subseteq \reals^{3}$ denote the solid bounded by $S$. Note that $E$ is a simple region, $S$ has positive (i.e. outward-pointing) orientation (by hypothesis), and the component functions of $\fontVector{F}$ are continuously differentiable. Thus Gauss's theorem applies, and we can rewrite the given surface integral as a triple integral. Using cylindrical coordinates to compute the resulting triple integral, we find
+\begin{align*}
+\iint_{S} \fontVector{F} \cdot \intd \fontVector{S}
+&=
+\iiint_{E} \divergence \fontVector{F} \, \intd V
+=
+\iiint_{E} \left(4 x^{3} + 0 + 4 x y^{2}\right) \intd V
+=
+4 \iiint_{E} x \left(x^{2} + y^{2}\right) \intd V
+\\
+&=
+4 \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 1} \int_{z = 0}^{z = 2 + r \cos \theta} (r \cos \theta) r^{2} \, r \, \intd z \, \intd r \, \intd \theta
+\\
+&=
+4 \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 1} \left(r^{4} \cos \theta\right) \int_{z = 0}^{z = 2 + r \cos \theta} \intd z \, \intd r \, \intd \theta
+\\
+&=
+4 \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 0}^{r = 1} \left(2 r^{4} \cos \theta + r^{5} \cos^{2} \theta\right) \intd r \, \intd \theta
+\\
+&=
+4 \int_{\theta = 0}^{\theta = 2 \pi} \left[\frac{2}{5} r^{5} \cos \theta + \frac{1}{6} r^{6} \cos^{2} \theta\right]_{r = 0}^{r = 1} \intd \theta
+\\
+&=
+4 \int_{\theta = 0}^{\theta = 2 \pi} \left(\frac{2}{5} \cos \theta + \frac{1}{12} \left(1 + \cos(2 \theta)\right)\right) \intd \theta
+\\
+&=
+4 \left[\frac{2}{5} \sin \theta + \frac{1}{12} \theta + \frac{1}{24} \sin(2 \theta)\right]_{\theta = 0}^{\theta = 2 \pi}
+\\
+&=
+\frac{2 \pi}{3}.
+\end{align*}
+}% End solution.

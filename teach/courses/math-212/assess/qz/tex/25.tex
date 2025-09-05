@@ -1,0 +1,91 @@
+\section{Exercise}
+
+(5 pt) Let $E \subseteq \reals^{3}$ be the region inside the cylinder $x^{2} + y^{2} = 1$, above the $x y$-plane, and below (!) the cone $z = \sqrt{x^{2} + y^{2}}$. We seek to evaluate the triple integral
+\begin{align*}
+\iiint_{E} z \, \intd V.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Sketch the region $E$. \fontHint{Where does the cone intersect the cylinder?}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+\fontNeedsEdit{(include graphic)}
+}% End solution.
+
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item (2 pt) State your choice of coordinate system. Write the corresponding differential $\intd V$, and give an algebraic description of the region $E$ (i.e. lower and upper limits on the variables) in these coordinates. \fontHint{One variable will have limits that depend on another variable.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Because the region $E$ of integration is defined (in part) by a (bona fide) cylinder, cylindrical coordinates will be easiest. In cylindrical coordinates,
+\begin{itemize}
+\item region of integration:
+\begin{align*}
+E
+&=
+\left\{(r,\theta,z) \st 0 \leq \theta \leq 2 \pi,0 \leq r \leq 1,0 \leq z \leq r\right\}
+\\
+&=
+\left\{(r,\theta,z) \st 0 \leq \theta \leq 2 \pi,0 \leq z \leq 1,z \leq r \leq 1\right\},
+\end{align*}
+\item integrand: $z = z$,
+\item differential: $\intd V = r \, \intd r \, \intd \theta \, \intd z$.
+\end{itemize}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (2 pt) Show that $\iiint_{E} z \, \intd V = \frac{\pi}{4}$ (i.e. evaluate the triple integral).
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+The integrand $f(x,y,z) = z$ is continuous everywhere on $\reals^{3}$; in particular, it is continuous on the region of integration $E$. Hence by Fubini's theorem, we may evaluate the triple integral as an iterated integral using any order of integration.
+
+With the order $\intd r \, \intd \theta \, \intd z$, the triple integral writes as
+\begin{align*}
+\iiint_{E} z \, \intd V
+&=
+\int_{z = 0}^{z = 1} \int_{\theta = 0}^{\theta = 2 \pi} \int_{r = z}^{r = 1} z \, r \, \intd r \, \intd \theta \, \intd z
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \intd \theta \int_{z = 0}^{z = 1} z \int_{r = z}^{r = 1} r \, \intd r \, \intd z
+\\
+&=
+(2 \pi) \int_{z = 0}^{z = 1} z \left[\frac{1}{2} r^{2}\right]_{r = z}^{r = 1} \intd z
+\\
+&=
+\pi \int_{z = 0}^{z = 1} \left(z - z^{3}\right) \, \intd z
+\\
+&=
+\pi \left[\frac{1}{2} z^{2} - \frac{1}{4} z^{4}\right]_{z = 0}^{z = 1}
+\\
+&=
+\frac{\pi}{4}.
+\end{align*}
+With the order $\intd z \, \intd \theta \, \intd r$, the triple integral writes as
+\begin{align*}
+\iiint_{E} z \, \intd V
+&=
+\int_{r = 0}^{r = 1} \int_{\theta = 0}^{\theta = 2 \pi} \int_{z = 0}^{z = r} z \, r \, \intd z \, \intd \theta \, \intd r
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \intd \theta \int_{r = 0}^{r = 1} r \int_{z = 0}^{z = r} z \, \intd z \, \intd r
+\\
+&=
+(2 \pi) \int_{r = 0}^{r = 1} r \left[\frac{1}{2} z^{2}\right]_{z = 0}^{z = r} \intd r
+\\
+&=
+\pi \int_{r = 0}^{r = 1} r^{3} \, \intd r
+\\
+&=
+\pi \left[\frac{1}{4} r^{4}\right]_{r = 0}^{r = 1}
+\\
+&=
+\frac{\pi}{4}.
+\end{align*}
+N.B. Because the variable $\theta$ appears neither in the integrand nor in any of the limits of integration, we may always pull the integral with respect to $\theta$ out on its own, so any order of integration is equivalent to (the second line of) one of the above two analyses.
+}% End solution.

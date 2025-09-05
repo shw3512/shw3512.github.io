@@ -1,0 +1,65 @@
+%
+%
+%	2016-11-21 (M)
+%
+%
+\section{Exercise}
+
+(2 pt) For each of the following vector fields $\fontVector{F}: \reals^{3} \rightarrow \reals^{3}$, write ``Conservative'' if $\fontVector{F}$ is conservative, and ``Not conservative'' otherwise. Justify your answer. \fontHint{
+\begin{center}
+\begin{tabular}{l}
+Conservative? Liberal? Head in a whirl ---\\
+For vector-field politics, compute the \_\_\_\_\_\_\_\_.
+\end{tabular}
+\end{center}}
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) $\fontVector{F}(x,y,z) = (e^{z},1,x e^{z})$
+\end{enumerate}
+
+\spaceSolution{3in}{
+Conservative. We compute
+\begin{align*}
+\curl \fontVector{F}
+&=
+\det
+\begin{pmatrix}
+\fontVector{i}			&	\fontVector{j}			&	\fontVector{k}			\\
+\frac{\partial}{\partial x}	&	\frac{\partial}{\partial y}	&	\frac{\partial}{\partial z}	\\
+e^{z			}		&	1					&	x e^{z}
+\end{pmatrix}
+\\
+&=
+\fontVector{i} \left(0 - 0\right) - \fontVector{j} \left(e^{z} - e^{z}\right) + \fontVector{k} \left(0 - 0\right)
+\\
+&=
+\fontVector{0},
+\end{align*}
+the zero vector field. Because the domain of $\fontVector{F}$, i.e. $\reals^{3}$, is simply connected and $\curl \fontVector{F} = \fontVector{0}$, it follows that $\fontVector{F}$ is conservative. (For practice, show that a potential function $f: \reals^{3} \rightarrow \reals$ for $\fontVector{F}$ always has the form $f(x,y,z) = x e^{z} + y + C$ for $C \in \reals$.)}
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) $\fontVector{F}(x,y,z) = (y e^{-x},e^{-x},2 z)$
+\end{enumerate}
+
+\spaceSolution{3in}{
+Not conservative. We compute
+\begin{align*}
+\curl \fontVector{F}
+&=
+\det
+\begin{pmatrix}
+\fontVector{i}			&	\fontVector{j}			&	\fontVector{k}			\\
+\frac{\partial}{\partial x}	&	\frac{\partial}{\partial y}	&	\frac{\partial}{\partial z}	\\
+y e^{-x}				&	e^{-x}				&	2 z
+\end{pmatrix}
+\\
+&=
+\fontVector{i} \left(0 - 0\right) - \fontVector{j} \left(0 - 0\right) + \fontVector{k} \left(-e^{-x} - e^{-x}\right)
+\\
+&=
+\left(0,0,-2 e^{-x}\right).
+\end{align*}
+Because $\curl \fontVector{F} \neq \fontVector{0}$,% Begin footnote.
+\footnote{Note that $-2 e^{-x} \neq 0$ on $\reals^{3}$; e.g., at $(x,y,z) = (0,0,0)$, $-2 e^{-x} = -2 \neq 0$.} % End footnote.
+it follows that $\fontVector{F}$ is not conservative (recall that $\curl(\gradient f) = \fontVector{0}$).}
