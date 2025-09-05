@@ -28,7 +28,7 @@ Remarks.
 
 ### Homework
 
-| # | Key topics              | Files                 |
+| # | Key topic               | Files                 |
 |--:|:------------------------|:----------------------|
 | 1 | Ring structure          | [q](hw/01/01-q.pdf), [a](hw/01/01-a.pdf), [tex](hw/01/01.tex) |
 | 2 | Polynomial rings        | [q](hw/02/02-q.pdf), [a](hw/02/02-a.pdf), [tex](hw/02/02.tex) |
@@ -42,8 +42,8 @@ Remarks.
 
 #### Long quizzes
 
-| Sequence | Key topics             | v0 | Requiz A | Requiz B | Requiz C |
-|---------:|:-----------------------|:---|:---------|:---------|:---------|
+| Sequence | Key topic              | Quiz | Requiz A | Requiz B | Requiz C |
+|---------:|:-----------------------|:-----|:---------|:---------|:---------|
 | 1 | Ring theory                   | [q](assess/lq/pdf/01.pdf), [a](assess/lq/pdf/01-sol.pdf), [tex](assess/lq/tex/01.tex) | [q](assess/lq/pdf/01A.pdf), [a](assess/lq/pdf/01A-sol.pdf), [tex](assess/lq/tex/01A.tex) | [q](assess/lq/pdf/01B.pdf), [a](assess/lq/pdf/01B-sol.pdf), [tex](assess/lq/tex/01B.tex) | [q](assess/lq/pdf/01C.pdf), -, [tex](assess/lq/tex/01C.tex) |
 | 2 | Multivariate polynomial rings | [q](assess/lq/pdf/02.pdf), [a](assess/lq/pdf/02-sol.pdf), [tex](assess/lq/tex/02.tex) | [q](assess/lq/pdf/02A.pdf), [a](assess/lq/pdf/02A-sol.pdf), [tex](assess/lq/tex/02A.tex) | [q](assess/lq/pdf/02B.pdf), -, [tex](assess/lq/tex/02B.tex) |  |
 | 3 | Univariate polynomial rings   | [q](assess/lq/pdf/03.pdf), [a](assess/lq/pdf/03-sol.pdf), [tex](assess/lq/tex/03.tex) | [q](assess/lq/pdf/03A.pdf), [a](assess/lq/pdf/03A-sol.pdf), [tex](assess/lq/tex/03A.tex) | [q](assess/lq/pdf/03B.pdf), -, [tex](assess/lq/tex/03B.tex) |  |
@@ -70,7 +70,7 @@ Remarks.
 
 ### Exams
 
-| Exam #          | Key topics                                | Files                 |
+| Exam            | Key topics                                | Files                 |
 |:----------------|:------------------------------------------|:----------------------|
 | Diagnostic quiz | Linear algebra, group theory, ring theory | [q](assess/ex/pdf/00.pdf), -, tex ([instr](assess/ex/tex/00-intructions), [grade](assess/ex/tex/00-gradebox), [q+a](assess/ex/tex/00.tex)) |
 | Mock exam 1     | Rings, modules, representation theory     | [q](assess/ex/pdf/01M.pdf), -, tex ([instr](assess/ex/tex/01M-intructions), [grade](assess/ex/tex/01M-gradebox), [q+a](assess/ex/tex/01M.tex)) |
