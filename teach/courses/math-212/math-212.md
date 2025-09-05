@@ -12,6 +12,16 @@
 - Expectations ([pdf](docs/pdf/exp.pdf), [tex](docs/tex/exp.tex))
 - How to read math effectively ([pdf](docs/pdf/read.pdf), [tex](docs/tex/read.tex))
 
+### Lecture notes
+
+All versions of the notes are compiled from the same files ([tex](/notes/tex/main.tex), [bib](/notes/tex/Bibliography.tex), and [zip](Graphics.zip)).
+
+| Version                           | Shows solutions? | Shows suggested edits? |
+|:----------------------------------|:----------------:|:----------------------:|
+| [student](/notes/pdf/student.pdf) | no  | no  |
+| [teacher](/notes/pdf/teacher.pdf) | yes | no  |
+| [editor](/notes/pdf/editor.pdf)   | yes | yes |
+
 
 
 ## Assessments
