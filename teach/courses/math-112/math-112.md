@@ -47,4 +47,33 @@
 
 #### Short quizzes
 
+| # | Topic         | Files |
+|--:|:--------------|:------|
+| 1 | Introduction  | [pdf](assess/sq/pdf/01.pdf), [tex](assess/sq/tex/01.tex) |
+| 2 | Exam 1: Goals | [pdf](assess/sq/pdf/02.pdf), [tex](assess/sq/tex/02.tex) |
+| 3 | Exam 1: AAR   | [pdf](assess/sq/pdf/03.pdf), [tex](assess/sq/tex/03.tex) |
+| 4 | Exam 2: Goals | [pdf](assess/sq/pdf/04.pdf), [tex](assess/sq/tex/04.tex) |
+| 5 | Exam 2: AAR   | [pdf](assess/sq/pdf/05.pdf), [tex](assess/sq/tex/05.tex) |
+| 6 | Exam 3: Goals | [pdf](assess/sq/pdf/06.pdf), [tex](assess/sq/tex/06.tex) |
+| 7 | Exam 3: AAR   | [pdf](assess/sq/pdf/07.pdf), [tex](assess/sq/tex/07.tex) |
+
+
 ### Exams
+
+#### Mock exams
+
+| # | Key topics | Files |
+|:--|:-----------|:------|
+| 0 | Diagnostic quiz | [q](assess/lq/pdf/00.pdf), [a](assess/lq/pdf/00-sol.pdf), tex ([instr](assess/me/tex/00-instr.tex), [grade](assess/me/tex/00-grade.tex), [q+a](assess/me/tex/00.tex)) |
+| 1 | Functions, continuity, differentiation, related rates | [q](assess/me/pdf/01.pdf), [a](assess/me/pdf/01-sol.pdf), tex ([instr](assess/me/tex/01-instr.tex), [grade](assess/me/tex/01-grade.tex), [q+a](assess/me/tex/01.tex)), [zip](assess/me/tex/01-graphics.zip) |
+| 2 | Limits, integration, signed area under curves         | [q](assess/me/pdf/02.pdf), [a](assess/me/pdf/02-sol-a.pdf), tex ([instr](assess/me/tex/02-instr.tex), [grade](assess/me/tex/02-grade.tex), [q+a](assess/me/tex/02.tex)), [zip](assess/me/tex/02-graphics.zip) |
+| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/me/pdf/03.pdf), [a](assess/me/pdf/03-sol-a.pdf), tex ([instr](assess/me/tex/03-instr.tex), [grade](assess/me/tex/03-grade.tex), [q+a](assess/me/tex/03.tex)), [zip](assess/me/tex/03-graphics.zip) |
+
+#### Exams
+
+| # | Key topics | Files |
+|:--|:-----------|:------|
+| 1 | Functions, continuity, differentiation, related rates | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), tex ([instr](assess/ex/tex/01-instr.tex), [grade](assess/ex/tex/01-grade.tex), [q+a](assess/ex/tex/01.tex)), [zip](assess/ex/tex/01-graphics.zip) |
+| 2 | Limits, integration, signed area under curves         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-instr.tex), [grade](assess/ex/tex/02-grade.tex), [q+a](assess/ex/tex/02.tex)), [zip](assess/ex/tex/02-graphics.zip) |
+| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([instr](assess/ex/tex/03-instr.tex), [grade](assess/ex/tex/03-grade.tex), [q+a](assess/ex/tex/03.tex)), [zip](assess/ex/tex/03-graphics.zip) |
+| 4 | Comprehensive                                         | [q](assess/lq/pdf/04.pdf), [a](assess/lq/pdf/04-sol.pdf), tex ([instr](assess/ex/tex/04-instr.tex), [grade](assess/ex/tex/04-grade.tex), [q+a](assess/ex/tex/04.tex)), [zip](assess/ex/tex/04-graphics.zip) |
