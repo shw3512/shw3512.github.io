@@ -1,0 +1,48 @@
+\section{Exercise}
+
+(2 pt) Consider the function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+x^{4} y^{2} - 2 x y^{5}.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Compute $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$.
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+\paragraph{Solution:}
+
+Partial derivatives are computed by holding all variables but one constant:
+\begin{align*}
+\frac{\partial f}{\partial x}
+&=
+4 x^{3} y^{2} - 2 y^{5},
+&
+\frac{\partial f}{\partial y}
+&=
+2 x^{4} y - 10 x y^{4}.
+\end{align*}
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Compute $\frac{\partial^{2} f}{\partial y \partial x}$ and $\frac{\partial^{2} f}{\partial x \partial y}$. Verify that the Clairaut--Schwarz theorem (equality of mixed partials) holds.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+\paragraph{Solution:}
+
+We compute
+\begin{align*}
+\frac{\partial^{2} f}{\partial y \partial x}
+=
+\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right)
+=
+8 x^{3} y - 10 y^{4}
+=
+\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)
+=
+\frac{\partial^{2} f}{\partial x \partial y}.
+\end{align*}
+These two second-order mixed partial derivatives are equal, as asserted by the Clairaut--Schwarz theorem. (Note that these second-order mixed partial derivatives are polynomials and therefore continuous everywhere, so the hypothesis of the theorem is satisfied.)
+}% End solution.

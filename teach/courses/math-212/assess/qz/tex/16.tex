@@ -1,0 +1,47 @@
+\section{Exercise}
+
+(2 pt) Our goal is to find the minimum and maximum of the function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+1 - x + y
+\end{align*}
+among the points $(x,y)$ that lie on the unit circle $x^{2} + y^{2} = 1$.
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Write the Lagrangian (a.k.a. auxiliary function) $L$ associated with this optimization problem. \fontHint{Identify the constraint function $g = 0$. $L$ is a function of three variables.}
+\end{enumerate}
+
+\spaceSolution{4em}{% Begin solution.
+The constraint that the point $(x,y)$ lie on the unit circle corresponds to the condition
+\begin{align*}
+g(x,y)
+=
+x^{2} + y^{2} - 1
+=
+0.
+\end{align*}
+Thus the Lagrangian is
+\begin{align*}
+L(x,y,\lambda)
+=
+f - \lambda g
+=
+1 - x + y - \lambda (x^{2} + y^{2} - 1).
+\end{align*}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Write the first-order condition(s) that you could solve to find the minimum and maximum. \fontHint{You can write as few as four symbols.}
+\end{enumerate}
+
+\spaceSolution{4em}{% Begin solution.
+The candidate points are given by the vector equation
+\begin{align*}
+\gradient L
+=
+\fontVector{0},
+\end{align*}
+where the gradient of $L$ includes the three partial derivatives of $L$ with respect to $x,y,\lambda$.
+}% End solution.

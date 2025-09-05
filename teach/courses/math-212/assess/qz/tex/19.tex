@@ -1,0 +1,316 @@
+\section{Exercise}
+
+(5 pt) Find the global minimum and maximum values of the function $f: \reals^{2} \rightarrow \reals$ given by
+\begin{align*}
+f(x,y)
+=
+x^{3} - 3 y^{2} + 6 x y - 9 x
+\end{align*}
+on the closed square $D \subseteq \reals^{2}$ given by
+\begin{align*}
+D
+=
+\left\{(x,y) \in \reals^{2} \st 0 \leq x \leq 2,0 \leq y \leq 2\right\}.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (.5 pt) Justify why a global minimum and maximum exist in this case. \fontHint{Name a theorem, and validate its hypotheses.}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+The function $f$ is continuous (polynomials, and more generally, rational functions, are continuous everywhere they are defined), and the set $D$ is closed and bounded. Thus by the extreme value theorem, $f$ achieves a (global) minimum and maximum on $D$.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Quiz19 Interior Critical Points} (2 pt) Find all critical points in the interior of $D$. \fontHint{You should find exactly one.}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Because $f$ is differentiable everywhere, all critical points $(x,y)$ of $f$ satisfy the condition $(\gradient f)(x,y) = \fontVector{0}$ (the zero vector). Computing the gradient, we find
+\begin{align}
+(0,0)
+=
+\fontVector{0}
+=
+(\gradient f)(x,y)
+=
+\left(3 x^{2} + 6 y - 9,-6 y + 6 x\right).%
+\label{eq: Quiz19 Gradient Vector}
+\end{align}
+This vector equality is equivalent to the following system of equations:
+\begin{align*}
+3 x^{2} + 6 y - 9
+&=
+0
+&
+&\text{and}
+&
+-6 y + 6 x
+&=
+0,
+\end{align*}
+or equivalently,
+\begin{align*}
+x^{2} + 2 y - 3
+&=
+0
+&
+&\text{and}
+&
+y
+&=
+x.
+\end{align*}
+Substituting the second equation into the first, we find
+\begin{align*}
+x^{2} + 2 x - 3
+&=
+0
+&
+&\Leftrightarrow
+&
+(x + 3) (x - 1)
+&=
+0
+&
+&\Leftrightarrow
+&
+x = -3
+&\text{ or }
+x = 1.
+\end{align*}
+Any point $(x,y)$ with $x = -3$ cannot lie in $D$. When $x = 1$ the equation $y = x$ implies that $y = 1$. We conclude that the corresponding point $(1,1)$ is the unique critical point in the interior $D$.
+
+\begin{remark}
+To determine whether interior critical points are (global) minima or maxima, we can evaluate the given function at these points and compare values to all other critical points (including those on the boundary). We can also use the second-derivatives test.% Begin footnote.
+\footnote{Note that we cannot use the second-derivatives test for extreme points on the boundary!} % End footnote.
+Let us illustrate the latter approach. Using the gradient vector $\gradient f$ computed in \eqref{eq: Quiz19 Gradient Vector}, we can easily compute the Jacobian matrix of all second-order partial derivatives of $f$:% Begin footnote.
+\footnote{Note that the Jacobian matrix is symmetric, as required by the Clairaut--Schwartz theorem (which asserts the equality of mixed partial derivatives when these partial derivatives are continuous, as is always the case for polynomial functions).}% End footnote.
+\begin{align*}
+\jacobian f
+=
+\begin{pmatrix}
+\frac{\partial^{2} f}{\partial x^{2}}			&	\frac{\partial^{2} f}{\partial y \partial x}	\\
+\frac{\partial^{2} f}{\partial x \partial y}	&	\frac{\partial^{2} f}{\partial y^{2}}
+\end{pmatrix}
+=
+\begin{pmatrix}
+6 x	&	6	\\
+6	&	-6
+\end{pmatrix}.
+\end{align*}
+At the point $(1,1)$, the Jacobian matrix and its corresponding determinant are
+\begin{align*}
+(\jacobian f)(1,1)
+&=
+\begin{pmatrix}
+6	&	6	\\
+6	&	-6
+\end{pmatrix}
+&
+&\text{and}
+&
+\det\left((\jacobian f)(1,1)\right)
+&=
+-72,
+\end{align*}
+respectively. Because the determinant of the Jacobian matrix at $(1,1)$ is negative, the second-derivatives test implies that $(1,1)$ is a saddle point of $f$ --- neither a (local, and hence global) minimum nor maximum. Indeed, in this case we could deduce this from the $\frac{\partial^{2} f}{\partial x^{2}}$ and $\frac{\partial^{2} f}{\partial y^{2}}$ entries of the Jacobian matrix at $(1,1)$: These are $6$ and $-6$, respectively, indicating that $f$ is concave up ($6 > 0$) in the $x$-direction (i.e. the values of $f$ increase as we move away from $(1,1)$ in the $x$-direction) and concave down ($-6 < 0$) in the $y$-direction (i.e. the values of $f$ decrease as we move away from $(1,1)$ in the $y$-direction).
+\end{remark}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Quiz19 Boundary Critical Points} (2 pt) Find all critical points on the boundary of $D$. \fontHint{You should find exactly five. Four of these are the corner points of $D$; to save time, note this, and look for ``interior'' critical points along the boundary, analyzing the four boundary components of $D$ separately.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+\begin{wrapfigure}{r}{.3\textwidth}
+\centering
+%\fontNeedsEdit{(include figure)}
+\includegraphics[scale=.5]{\filePathGraphics Quiz19_Plot.png}
+\end{wrapfigure}
+The boundary of $D$ has four natural components:
+\begin{enumerate}
+\item $D_{1} = \{(x,y) \in \reals^{2} \st 0 \leq x \leq 2,y = 0\}$,
+\item $D_{2} = \{(x,y) \in \reals^{2} \st x = 2,0 \leq y \leq 2\}$,
+\item $D_{3} = \{(x,y) \in \reals^{2} \st 0 \leq x \leq 2,y = 2\}$,
+\item $D_{4} = \{(x,y \in \reals^{2}) \st x = 0,0 \leq y \leq 2\}$.
+\end{enumerate}
+We analyze each of these four boundary components separately. The analysis in each case is similar. We discuss the analysis of $D_{1}$ in detail and streamline the analysis of the other three components. Note that the four corners of $D$ are the endpoints of the boundary components, and thus will appear as critical points in our subsequent analysis. Rather than analyzing these endpoints in each case, we'll compute their corresponding values now, allowing us to focus exclusively on interior critical points when analyzing the boundary components.
+\begin{align}
+f(0,0)
+&=
+0,
+&
+f(2,0)
+&=
+-10,
+&
+f(2,2)
+&=
+2
+&
+f(0,2)
+&=
+-12.%
+\label{eq: Quiz19 Corner Points}
+\end{align}
+We now analyze the boundary components.
+\begin{enumerate}
+\item $D_{1}$: In $D_{1}$ we have $y = 0$, and the function $f(x,y)$ reduces to
+\begin{align*}
+f(x,0)
+=
+x^{3} - 9 x.
+\end{align*}
+This function (of one variable, $x$) is differentiable everywhere (because it is a polynomial), so its critical points on the interval $x \in [0,2]$ are the endpoints $x = 0$ and $x = 2$ (corresponding to the points $(0,0)$ and $(2,0)$, analyzed above) and any interior points satisfying the first-derivative test:
+\begin{align*}
+0
+&=
+\frac{\intd}{\intd x} f(x,0)
+=
+3 x^{2} - 9
+&
+&\Leftrightarrow
+&
+x^{2}
+&=
+3
+&
+&\Leftrightarrow
+&
+x
+&=
+\pm{}\sqrt{3}.
+\end{align*}
+Only $x = \sqrt{3}$ lies in $[0,2]$ (corresponding to the point $(\sqrt{3},0) \in D_{1}$). Its value is
+\begin{align*}
+f\left(\sqrt{3},0\right)
+=
+-6 \sqrt{3}.
+\end{align*}
+
+\item $D_{2}$: In $D_{2}$ we have $x = 2$, so
+\begin{align*}
+f(2,y)
+=
+8 - 3 y^{2} + 12 y - 18
+=
+-3 y^{2} + 12 y - 10.
+\end{align*}
+Any interior critical points satisfy
+\begin{align*}
+0
+&=
+\frac{\intd}{\intd y} f(2,y)
+=
+-6 y + 12
+&
+&\Leftrightarrow
+&
+y
+&=
+2.
+\end{align*}
+We have already analyzed the corresponding point $(2,2)$ in \eqref{eq: Quiz19 Corner Points}.
+
+\item $D_{3}$: In $D_{3}$ we have $y = 2$, so
+\begin{align*}
+f(x,2)
+=
+x^{3} - 12 + 12 x - 9 x
+=
+x^{3} + 3 x - 12.
+\end{align*}
+Any interior critical points satisfy
+\begin{align*}
+0
+&=
+\frac{\intd}{\intd x} f(x,2)
+=
+3 x^{2} + 3
+&
+&\Leftrightarrow
+&
+x^{2}
+&=
+-1.
+\end{align*}
+There are no such values of $x$, so there are no interior critical points of $D_{3}$.
+
+\item $D_{4}$: In $D_{4}$ we have $x = 0$, so
+\begin{align*}
+f(0,y)
+=
+-3 y^{2}.
+\end{align*}
+Any interior critical points satisfy
+\begin{align*}
+0
+&=
+\frac{\intd}{\intd y} f(0,2)
+=
+-6 y
+&
+&\Leftrightarrow
+&
+y
+&=
+0.
+\end{align*}
+We have already analyzed the corresponding point $(0,0)$ in \eqref{eq: Quiz19 Corner Points}.
+\end{enumerate}
+}% End solution.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\setcounter{enumi}{3}
+\item (.5 pt) State the global minimum and maximum values of $f$ on $D$.% \fontHint{Compare values of $f$ at points from \ref{itm: Quiz19 Interior Critical Points} and \ref{itm: Quiz19 Boundary Critical Points}.}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+Comparing the values of $f$ at the candidate extreme points found in parts \ref{itm: Quiz19 Interior Critical Points} and \ref{itm: Quiz19 Boundary Critical Points}, we conclude as summarized below.
+\begin{center}
+\begin{tabular}{c c c}
+\hline\hline
+Point			&	Value		&	Type			\\
+$(x,y)$		&	$f(x,y)$		&				\\
+\hline
+$(1,1)$		&	$-5$			&				\\
+$(0,0)$		&	$0$			&				\\
+$(2,0)$		&	$-10$		&				\\
+$(2,2)$		&	$2$			&	global max	\\
+$(0,2)$		&	$-12$		&	global min		\\
+$(\sqrt{3},0)$	&	$-6 \sqrt{3}$	&				\\
+\hline
+\end{tabular}
+\end{center}
+Note that
+\begin{align*}
+1
+=
+\sqrt{1}
+<
+\sqrt{3}
+<
+\sqrt{4}
+=
+2;
+\end{align*}
+multiplying by $-6$ reverses the inequalities and yields
+\begin{align*}
+-6
+=
+-6 \sqrt{1}
+>
+-6 \sqrt{3}
+>
+-6 \sqrt{4}
+=
+-12.
+\end{align*}
+This shows that $(\sqrt{3},0)$ is not a global minimum of $f$ on $D$.
+}% End solution.

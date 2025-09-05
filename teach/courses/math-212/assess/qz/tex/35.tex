@@ -1,0 +1,53 @@
+%
+%
+%	2016-12-02 (F)
+%
+%
+\section{Exercise}
+
+Using a line integral, compute the area of the (closed) annulus (a.k.a. ``donut'') $A \subseteq \reals^{2}$, bounded by the circles
+\begin{align*}
+x^{2} + y^{2}
+&=
+1
+&
+&\text{and}
+&
+x^{2} + y^{2}
+&=
+4.
+\end{align*}
+\fontHint{What should the answer be? Recall our mantra: Think geometrically, prove algebraically.}
+
+\spaceSolution{3in}{% Begin solution.
+Denote the closed annulus by
+\begin{align*}
+D
+\defeq
+\left\{(x,y) \in \reals^{2} \st 1 \leq x^{2} + y^{2} \leq 4\right\}.
+\end{align*}
+The area of the annulus is given by the double integral
+\begin{align*}
+\iint_{D} 1 \, \intd A.
+\end{align*}
+We can convert this double integral into a line integral using Green's theorem. To do so, we need a vector field $\fontVector{F}: D \rightarrow \reals^{2}$ whose ``curl'' is the given integrand. More precisely, if $\fontVector{F}$ has component functions $(F_{1},F_{2})$, then
+\begin{align*}
+\frac{\partial F_{2}}{\partial x} - \frac{\partial F_{1}}{\partial y}
+=
+1.
+\end{align*}
+Any such vector field $\fontVector{F}$ will do; common $\fontVector{F}$ are
+\begin{align*}
+\fontVector{F}(x,y)
+&=
+(-y,0),
+&
+\fontVector{F}(x,y)
+&=
+(0,x),
+&
+\fontVector{F}(x,y)
+&=
+\left(-\frac{1}{2} y,\frac{1}{2} x\right).
+\end{align*}
+}% End solution.

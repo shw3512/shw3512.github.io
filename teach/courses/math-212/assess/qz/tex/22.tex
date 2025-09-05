@@ -1,0 +1,86 @@
+\section{Exercise}
+
+(5 pt) A thin washer (i.e. O-shaped piece of material) is described by the region $D \subseteq \reals^{2}$ lying between the circles
+\begin{align*}
+C_{1}:
+x^{2} + y^{2}
+&=
+1,
+&
+C_{2}:
+x^{2} + y^{2}
+&=
+4.
+\end{align*}
+The charge density of the washer is given by the function $\sigma: D \rightarrow \reals$ defined by
+\begin{align*}
+\sigma(x,y)
+=
+\frac{2 x y}{x^{2} + y^{2}}.
+\end{align*}
+We want to find the total (net) charge of the washer.
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Recall that we recover a quantity (e.g., mass, charge, etc.) by integrating a density. Sketch the relevant region of integration.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+The relevant region of integration is $D$, the region occupied by the washer.
+\begin{center}
+\includegraphics[scale=.5]{\filePathGraphics Quiz22_RegionOfIntegration}
+\end{center}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Set Up Integral} (3 pt) Set up an iterated (!) integral that gives the total (net) charge $Q$ of the washer. \fontHint{Use polar coordinates. Mind the integration factor.}
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+The region $D$ has a particularly simple description in polar coordinates:
+\begin{align*}
+D
+=
+\left\{(r,\theta) \st 1 \leq r \leq 2,0 \leq \theta \leq 2 \pi\right\}.
+\end{align*}
+The total charge $Q$ of the washer is given by integrating the charge density $\sigma(x,y)$ over the region $D$ occupied by the washer. Because $\sigma(x,y)$ is continuous on $D$, Fubini's theorem allows us to write this double integral as an iterated integral. Using polar coordinates, we have $x = r \cos \theta$ and $y = r \sin \theta$, and $\intd A = r \, \intd r \, \intd \theta$ (note the integration factor of $r$). Thus
+\begin{align*}
+Q
+&=
+\iint_{D} \sigma(x,y) \, \intd A
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 1}^{r = 2} \frac{2 (r \cos \theta) (r \sin \theta)}{r^{2}} \, r \, \intd r \, \intd \theta
+\\
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \int_{r = 1}^{r = 2} r \sin(2 \theta) \, \intd r \, \intd \theta,
+\end{align*}
+where in the final step we have used the trigonometric identity
+\begin{align*}
+\sin(2 \theta)
+=
+2 \sin \theta \cos \theta.
+\end{align*}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Evaluate the integral in part \ref{itm: Set Up Integral} to show that the total (net) charge $Q = 0$. \fontHint{Recall that $\sin(2 \theta) = 2 \sin \theta \cos \theta$.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Evaluating the integral from part \ref{itm: Set Up Integral}, we find
+\begin{align*}
+m
+&=
+\int_{\theta = 0}^{\theta = 2 \pi} \sin(2 \theta) \, \intd \theta \int_{r = 1}^{r = 2} r \, \intd r
+\\
+&=
+\left[-\frac{1}{2} \cos(2 \theta)\right]_{\theta = 0}^{\theta = 2 \pi} \left[\frac{1}{2} r^{2}\right]_{r = 1}^{r = 2}
+\\
+&=
+0,
+\end{align*}
+because the first integral evaluates to $0$.
+}% End solution.

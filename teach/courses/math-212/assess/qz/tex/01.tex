@@ -1,0 +1,349 @@
+\section{Geometry}
+
+
+
+\subsection{Exercise \ref{sec: Geometry Q1}}
+\label{sec: Geometry Q1}
+
+(2 pt) Compute the distance between the points $(-2,-1)$ and $(4,7)$ in $\reals^{2}$.
+
+\spaceSolution{1.25in}{% Begin solution.
+The distance is
+\begin{align*}
+d
+=
+\sqrt{(4 - (-2))^{2} + (7 - (-1))^{2}}
+=
+\sqrt{6^{2} + 8^{2}}
+=
+10.
+\end{align*}
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Geometry Q2}}
+\label{sec: Geometry Q2}
+
+(2 pt) Write the area of a circular sector with radius $r$ and angle $\theta$, where $0 \leq \theta \leq 2 \pi$.
+
+\spaceSolution{1.25in}{% Begin solution.
+Note that a sector of a circle is a fraction of the circle, more precisely, the fraction $\frac{\theta}{2 \pi}$. Thus the area of the sector is given by
+\begin{align*}
+\frac{\theta}{2 \pi} \pi r^{2}
+=
+\frac{1}{2} \theta r^{2}.
+\end{align*}
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Geometry Q3}}
+\label{sec: Geometry Q3}
+
+(2 pt) Write the area of a parallelogram with adjacent side lengths $u,v$ and enclosed angle $\theta$.
+
+\spaceSolution{1.25in}{% Begin solution.
+Imagine dropping a perpendicular from one side, say a side of length $u$, to the opposite parallel side (also of length $a$); cutting off the resulting right triangle (with hypotenuse $v$); and pasting this triangle to the other side of the parallelogram, lining up the sides of length $v$. This yields a rectangle with side lengths $u$ and $v \sin \theta$. Thus the area of the parallelogram is
+\begin{align*}
+u v \sin \theta.
+\end{align*}
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Geometry Q4}}
+\label{sec: Geometry Q4}
+
+(2 pt) Convert the point $(4,\frac{7 \pi}{6})$, given in polar coordinates $(r,\theta)$, to rectangular coordinates $(x,y)$.
+
+\spaceSolution{1.25in}{% Begin solution.
+The point $(4,\frac{7 \pi}{6})$ in polar coordinates lies in the third quadrant (negative $x$, negative $y$) of the euclidean plane. The corresponding rectangular coordinates are $(x,y)$, where
+\begin{align*}
+x
+&=
+r \cos \theta
+=
+4 \cos \frac{7 \pi}{6}
+=
+-2 \sqrt{3},
+&
+y
+&=
+r \sin \theta
+=
+4 \sin \frac{7 \pi}{6}
+=
+-2.
+\end{align*}
+}% End solution.
+
+
+
+
+
+\section{Single-Variable Calculus}
+
+
+
+\subsection{Exercise \ref{sec: Single Variable Calculus Q1}}
+\label{sec: Single Variable Calculus Q1}
+
+(2 pt) Evaluate the integral $\displaystyle\int \cos^{2} \theta \spaceIntd \intd \theta$.
+
+\spaceSolution{3in}{% Begin solution.
+Recall the trigonometric identity
+\begin{align*}
+\cos 2 \theta
+&=
+2 \cos^{2} \theta - 1
+&
+&\Leftrightarrow
+&
+\cos^{2} \theta
+&=
+\frac{1}{2} (1 + \cos 2 \theta).
+\end{align*}
+Substituting this into the given integral we find
+\begin{align*}
+\int \cos^{2} \theta \spaceIntd \intd \theta
+&=
+\frac{1}{2} \int (1 + \cos 2 \theta) \spaceIntd \intd \theta
+\\
+&=
+\frac{1}{2} \int \intd \theta + \frac{1}{4} \int \cos 2 \theta \spaceIntd 2 \intd \theta
+\\
+&=
+\frac{1}{2} \theta + \frac{1}{4} \sin 2 \theta + C,
+\end{align*}
+where $C$ is a constant of integration.
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Single Variable Calculus Q2}}
+\label{sec: Single Variable Calculus Q2}
+
+% S6e Example 5.5.2 (p 402)
+(2 pt) Evaluate the integral $\displaystyle\int \sqrt{2 x + 1} \spaceIntd \intd x$.
+
+\spaceSolution{3in}{% Begin solution.
+We cannot evaluate the given integral directly. Consider the change of variables (a.k.a. $u$-substitution)
+\begin{align*}
+u
+&\defeq
+2 x + 1
+&
+&\Rightarrow
+&
+\intd u
+&=
+2 \intd x
+&
+&\Leftrightarrow
+&
+\intd x
+&=
+\frac{1}{2} \intd u.
+\end{align*}
+When we make this substitution, the given integral becomes
+\begin{align*}
+\int \sqrt{2 x + 1} \spaceIntd \intd x
+=
+\int \sqrt{u} \left(\frac{1}{2} \intd u\right)
+=
+\frac{1}{2} \int \sqrt{u} \spaceIntd \intd u
+=
+\frac{1}{3} u^{\frac{3}{2}} + C
+=
+\frac{1}{3} (2 x + 1)^{\frac{3}{2}} + C,
+\end{align*}
+where $C$ is a constant of integration.
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Single Variable Calculus Q3}}
+\label{sec: Single Variable Calculus Q3}
+
+% S6e Formula 8.1.2 (p 526)
+
+(2 pt) Let $f$ be a real-valued function defined on the closed interval $[a,b]$, and let $f'$ be continuous on $[a,b]$. State the length of the curve $f(x)$ from $x = a$ to $x = b$.
+
+\spaceSolution{5in}{% Begin solution.
+The length of the curve is
+\begin{align}
+\int_{a}^{b} \sqrt{1 + (f'(x))^{2}} \spaceIntd \intd x.%
+\label{eq: Length Of Curve Integral}
+\end{align}
+
+\hspace{.25in}% Fix default indentation so that we can remove this hspace!!!
+One can arrive at this result as follows. Choose $n + 1$ (distinct) points $(x_{i},f(x_{i}))$ on the graph of the function $f$ on the closed interval $[a,b]$, with $(x_{0},f(x_{0})) = (a,f(a))$ and $(x_{n},f(x_{n})) = (b,f(b))$. Then ``connect the dots'', i.e. draw a line segment from the point $(x_{i - 1},f(x_{i - 1}))$ to the point $(x_{i},f(x_{i}))$, for each $i \in \{1,\ldots,n\}$. This yields a polygonal approximation to the graph of $f$. Let
+\begin{align*}
+\Delta x_{i}
+&\defeq
+x_{i} - x_{i - 1},
+&
+\Delta y_{i}
+&\defeq
+f(x_{i}) - f(x_{i - 1});
+\end{align*}
+these are the changes in $x$ and $y$, respectively, over the line segment connecting $(x_{i - 1},f(x_{i - 1}))$ to $(x_{i},f(x_{i}))$. Thus by Pythagorean's theorem, the length of this line segment, denote it $\Delta s_{i}$, is
+\begin{align*}
+\Delta s_{i}
+=
+\sqrt{(\Delta x_{i})^{2} + (\Delta y_{i})^{2}}
+=
+\sqrt{1 + \left(\frac{\Delta y_{i}}{\Delta x_{i}}\right)^{2}} \Delta x_{i},
+\end{align*}
+and the length of the polygonal approximation to the length $s$ of the curve $f(x)$ is
+\begin{align}
+s
+\approx
+\sum_{i = 1}^{n} \Delta s_{i}
+=
+\sum_{i = 1}^{n} \sqrt{1 + \left(\frac{\Delta y_{i}}{\Delta x_{i}}\right)^{2}} \Delta x_{i}.%
+\label{eq: Length Of Curve Finite Sum Approximation}
+\end{align}
+If we choose more and more points along the curve (i.e. as the number of points $n$ approaches infinity),% Begin footnote.
+\footnote{We need to choose these points so that $\lim_{n \rightarrow \infty} \Delta x_{i} = 0$. This is ensured, for example, if we take $\Delta x_{i}$ to be the same for all $i$, namely $\Delta x_{i} = \frac{b - a}{n}$.} % End footnote.
+then this polygonal approximation becomes better and better. In fact, as $n \rightarrow \infty$, $\frac{\Delta y_{i}}{\Delta x_{i}} \rightarrow f'(x_{i})$, and the sum \eqref{eq: Length Of Curve Finite Sum Approximation} becomes the integral \eqref{eq: Length Of Curve Integral}.\fontNeedsEdit{ (draw the picture)}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Single Variable Calculus Q4}}
+\label{sec: Single Variable Calculus Q4}
+
+(2 pt) Let $f$ be a real-valued function defined on a closed interval $[a,b]$ with $a < b$. Draw a picture depicting a Riemann sum corresponding to the definite integral
+\begin{align*}
+\int_{a}^{b} f(x) \intd x.
+\end{align*}
+
+\spaceSolution{.5in}{% Begin solution.
+See Sections 5.1 and 5.2 of Stewart.\fontNeedsEdit{ (include sketch; make $f$ noncontinuous, changing sign)}
+}% End solution.
+
+
+
+
+
+\section{Vector Calculus}
+
+
+
+\subsection{Exercise \ref{sec: Vector Calculus Q1}}
+\label{sec: Vector Calculus Q1}
+
+(2 pt) Let $\fontVector{u} \defeq (2,0,1)$ and $\fontVector{v} \defeq (0,-1,1)$ be vectors in $\reals^{3}$.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm: Vector Calculus Q1a} (1 pt) Compute the inner product (a.k.a. dot product) $\fontVector{u} \cdot \fontVector{v}$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+We compute
+\begin{align*}
+\fontVector{u} \cdot \fontVector{v}
+=
+(2,0,1) \cdot (0,-1,1)
+=
+2 \cdot 0 + 0 \cdot (-1) + 1 \cdot 1
+=
+1.
+\end{align*}
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Vector Calculus Q1b} (1 pt) Compute the cross product $\fontVector{u} \times \fontVector{v}$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We compute
+\begin{align*}
+\fontVector{u} \times \fontVector{v}
+&=
+\det
+\begin{pmatrix}
+\fontVector{i}	&	\fontVector{j}	&	\fontVector{k}	\\
+2			&	0			&	1			\\
+0			&	-1			&	1
+\end{pmatrix}
+\\
+&=
+(-1)^{1 + 1} \det
+\begin{pmatrix}
+0	&	1	\\
+-1	&	1
+\end{pmatrix}
+\fontVector{i} +
+(-1)^{1 + 2} \det
+\begin{pmatrix}
+2	&	1	\\
+0	&	1
+\end{pmatrix}
+\fontVector{j} +
+(-1)^{1 + 3} \det
+\begin{pmatrix}
+2	&	0	\\
+0	&	-1
+\end{pmatrix}
+\fontVector{k}
+\\
+&=
+\fontVector{i} - 2 \fontVector{j} - 2 \fontVector{k}
+=
+(1,-2,-2).
+\end{align*}
+}% End solution.
+
+
+
+\subsection{Exercise \ref{sec: Vector Calculus Q2}}
+\label{sec: Vector Calculus Q2}
+
+% S6e Example 14.7.7 (p 929)
+(2 pt) Find the absolute maximum and minimum values of the function
+\begin{align*}
+f(x,y)
+\defeq
+x^{2} - 2 x y + 2 y
+\end{align*}
+on the closed rectangle
+\begin{align*}
+D
+\defeq
+\left\{(x,y) \st 0 \leq x \leq 3,0 \leq y \leq 2\right\}.
+\end{align*}
+
+\vspace{3in}
+
+
+
+\subsection{Exercise \ref{sec: Vector Calculus Q3}}
+\label{sec: Vector Calculus Q3}
+
+%S6e Example 15.9.3 (p 1018)
+(2 pt) Evaluate the integral
+\begin{align*}
+\iint_{R} e^{\frac{x + y}{x - y}} \intd A,
+\end{align*}
+where $R$ is the trapezoidal region in $\reals^{2}$ with vertices $(1,0),(2,0),(0,-2),(0,-1)$.
+
+\newpage
+
+
+
+\subsection{Exercise \ref{sec: Vector Calculus Q4}}
+\label{sec: Vector Calculus Q4}
+
+% S6e Example 16.9.2 (p 1101)
+(2 pt) Evaluate
+\begin{align*}
+\iint_{S} \fontVector{F} \cdot \intd \fontVector{S},
+\end{align*}
+where
+\begin{align*}
+\fontVector{F}(x,y,z)
+\defeq
+\left(x y,y^{2} + e^{x z^{2}},\sin(x y)\right),
+\end{align*}
+and $S$ is the surface of the region $E$ bounded by the parabolic cylinder $z = 1 - x^{2}$ and the planes $z = 0$, $y = 0$, and $y + z = 2$.

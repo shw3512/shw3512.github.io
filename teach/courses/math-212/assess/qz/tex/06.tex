@@ -1,0 +1,131 @@
+\section{Exercise}
+
+(5 pt) Find an equation for the plane in $\reals^{3}$ passing through the points
+\begin{align*}
+&(2,-2,0),
+&
+&(2,0,2),
+&
+&(0,-2,2).
+\end{align*}
+\fontHint{If you have trouble determining a normal vector for this plane, think whether you can use the given points to ``create'' two nonparallel vectors that lie in the plane. Then think whether you can use these to determine a normal vector for the plane.}
+
+
+
+\spaceSolution{6in}{% Begin solution.
+Geometrically, a plane is determined by (i) a point in the plane and (ii) a normal vector to the plane. We're given a point (in fact, three points) in the plane, so we just need to determine a normal vector, and then translate the geometry into algebra.
+
+A systematic way to form a normal vector from three (noncolinear) points $A,B,C$ is to form the vectors $\fontVectorBetweenPoints{A B},\fontVectorBetweenPoints{A C}$, then compute their cross product. Doing so, we have
+\begin{align*}
+\fontVectorBetweenPoints{A B}
+&=
+(2 - 2,0 - (-2),2 - 0)
+=
+(0,2,2),
+&
+\fontVectorBetweenPoints{A C}
+&=
+(0 - 2,-2 - (-2),2 - 0)
+=
+(-2,0,2),
+\end{align*}
+so a normal vector $\fontVector{n}$ to the plane determined by the three points is
+\begin{align*}
+\fontVector{n}
+&=
+\fontVectorBetweenPoints{A B} \times \fontVectorBetweenPoints{A C}
+\\
+&=
+\det
+\begin{pmatrix}
+\fontVector{i}	&	\fontVector{j}	&	\fontVector{k}	\\
+0			&	2			&	2			\\
+-2			&	0			&	2
+\end{pmatrix}
+\\
+&=
+(-1)^{1 + 1}
+\det
+\begin{pmatrix}
+2	&	2	\\
+0	&	2
+\end{pmatrix}
+\fontVector{i} + (-1)^{1 + 2}
+\det
+\begin{pmatrix}
+0	&	2	\\
+-2	&	2
+\end{pmatrix}
+\fontVector{j} + (-1)^{1 + 3}
+\det
+\begin{pmatrix}
+0	&	2	\\
+-2	&	0
+\end{pmatrix}
+\fontVector{k}
+\\
+&=
+4 \fontVector{i} - 4 \fontVector{j} + 4 \fontVector{k}
+=
+(4,-4,4).
+\end{align*}
+
+Because the given three points are relatively ``nice'', you may also be able to ``see'' a normal vector to the plane they define: Find a corner of a room (maybe an empty room, if you're self-conscious), view the three lines emanating from that corner as the positive $x$-, negative $y$-, and positive $z$-axes (appropriately assigned), then put your feet at the point $(2,-2,0)$ (on the floor), your left hand at the point $(2,0,2)$ (on the left wall), and your right hand at the point $(0,-2,2)$ (on the right wall). If you now hold your body in a planar ``plank'' (great ab workout!), and then think about it (great mental-math workout!), you'll ``see'' that a normal vector to your body is given by $(1,-1,1)$. Note that this vector is a scalar multiple of the normal vector $\fontVector{n}$ that we found above.
+
+Either way, we now have a normal vector for our plane. Choosing any of the given three points, say $(2,0,2)$, we can form an equation for the plane (see the general discussion below):
+\begin{align*}
+0
+=
+\fontVector{n} \cdot (x - 2,y - 0,z - 2)
+=
+(4,-4,4) \cdot (x - 2,y - 0,z - 2)
+=
+(4 x - 8) + (-4 y) + (4 z - 8).
+\end{align*}
+If we wish, we can isolate the $x,y,z$ terms, move the constant terms to the other side, and divide through by a common factor of $4$ to obtain
+\begin{align*}
+x - y + z
+=
+4.
+\end{align*}
+
+
+
+\paragraph{General discussion:}
+
+Remember that a plane is determined by (i) a point in the plane and (ii) a normal vector to the plane. In particular, for a plane in $\reals^{3}$, let $P_{0} = (x_{0},y_{0},z_{0})$ be a point in the plane, and let $\fontVector{n} = (n_{1},n_{2},n_{3})$ be a normal vector to the plane. Given any point $P = (x,y,z)$ in the plane, we can form the vector from $P_{0}$ to $P$:
+\begin{align*}
+\fontVectorBetweenPoints{P_{0} P}
+=
+(x - x_{0},y - y_{0},z - z_{0}).
+\end{align*}
+This vector $\fontVectorBetweenPoints{P_{0} P}$ ``lives in'' the plane. (More precisely, if we move $\fontVectorBetweenPoints{P_{0} P}$ so that its initial point lies in the plane, then its terminal point --- and hence the whole vector --- lies in the plane.) Because $\fontVector{n}$ is normal (i.e. perpendicular) to the plane, we must have
+\begin{align*}
+\fontVector{n} \cdot \fontVectorBetweenPoints{P_{0} P}
+=
+0.
+\end{align*}
+Writing out what this equation means in terms of components, we find
+\begin{align*}
+0
+=
+\fontVector{n} \cdot \fontVectorBetweenPoints{P_{0} P}
+=
+(n_{1},n_{2},n_{3}) \cdot (x - x_{0},y - y_{0},z - z_{0})
+=
+n_{1} (x - x_{0}) + n_{2} (y - y_{0}) + n_{3} (z - z_{0}).
+\end{align*}
+Note that this is a scalar equation, and it is linear in the variables $x,y,z$. If desired, we can combine the scalar terms into a single term
+\begin{align*}
+d
+=
+n_{1} x_{0} + n_{2} y_{0} + n_{3} z_{0}
+\end{align*}
+and write the equation of the plane as
+\begin{align*}
+n_{1} x + n_{2} y + n_{3} z
+=
+d.
+\end{align*}
+This is the general form of an equation of a plane in $\reals^{3}$. (Can you generalize this to the general form of an equation of a plane in $\reals^{n}$?) This gives us another way to solve the above exercise: We're given three points $(x,y,z)$ that solve this equation, and we need to find the four values $n_{1},n_{2},n_{3},d$. This gives us three equations (one for each point) in four unknowns. 
+}% End solution.

@@ -1,0 +1,89 @@
+\section{Exercise}
+
+(2 pt) Write (but do NOT evaluate) an integral to find the surface area of the part of the cylinder
+\begin{align*}
+S:
+x^{2} + z^{2}
+=
+4
+\end{align*}
+lying above (i.e. with $z \geq 0$) the square $D$ in the $x y$-plane with vertices $(0,0),(2,0),(2,2),(0,2)$.
+
+\spaceSolution{4in}{% Begin solution.
+We present two methods to computing the surface area.
+
+Method 1: Multivariable calculus. The part of the cylinder $S$ lying above the $x y$-plane (i.e. with $z \geq 0$) can be described by solving the given equation for $z$:
+\begin{align*}
+z
+=
+\sqrt{4 - x^{2}}.
+\end{align*}
+Viewing $z$ as a function of $x,y$, we compute its partial derivatives to be
+\begin{align*}
+\frac{\partial z}{\partial x}
+&=
+\frac{-x}{\sqrt{4 - x^{2}}},
+&
+\frac{\partial z}{\partial y}
+&=
+0.
+\end{align*}
+The surface area $A(S)$ of the part of the cylinder $S$ lying above the square $D$ is
+\begin{align*}
+A(S)
+&=
+\iint_{D} \sqrt{1 + \left(\frac{\partial z}{\partial x}\right)^{2} + \left(\frac{\partial z}{\partial y}\right)^{2}} \, \intd A
+\\
+&=
+\iint_{D} \sqrt{1 + \frac{x^{2}}{4 - x^{2}}} \, \intd A
+\\
+&=
+\iint_{D} \frac{2}{\sqrt{4 - x^{2}}} \, \intd A.
+\end{align*}
+
+If desired, we can use Fubini's theorem to evaluate this double integral as an iterated integral. Using the change of variables indicated by the triangle below\fontNeedsEdit{ (draw related triangle)}, we have
+\begin{align*}
+\sin u
+&=
+\frac{\sqrt{4 - x^{2}}}{2},
+&
+\cos u
+&=
+\frac{x}{2}
+&
+&\Rightarrow
+&
+\intd x
+&=
+-2 \sin u \, \intd u,
+\end{align*}
+so
+\begin{align*}
+A(S)
+&=
+\int_{y = 0}^{y = 2} \int_{x = 0}^{x = 2} \frac{2}{\sqrt{4 - x^{2}}} \, \intd x \, \intd y
+\\
+&=
+\int_{y = 0}^{y = 2} \intd y \int_{x = 0}^{x = 2} \frac{1}{\sin u} (-2 \sin u \, \intd u)
+\\
+&=
+2 (-2) \int_{y = 0}^{y = 2} \left[u\right]_{x = 0}^{x = 2} \, \intd y
+\\
+&=
+-4 \left[\arccos\left(\frac{x}{2}\right)\right]_{x = 0}^{x = 2}
+\\
+&=
+-4 \left[0 - \frac{\pi}{2}\right]
+=
+2 \pi.
+\end{align*}
+
+Method 2: Geometry. The surface area of the part of the cylinder $S$ lying above the square $D$ is precisely $\frac{1}{4}$ of the surface area of the total cylinder $S$ from $y = 0$ to $y = 2$. This is a cylinder of radius $2$ and height $2$, so
+\begin{align*}
+A(S)
+=
+\frac{1}{4} \left[\pi (2)^{2} 2\right]
+=
+2 \pi.
+\end{align*}
+}% End solution.

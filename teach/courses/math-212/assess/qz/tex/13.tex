@@ -1,0 +1,32 @@
+\section{Exercise}
+
+(2 pt) Let $f: \reals^{n} \rightarrow \reals$ and $u,v: \reals \rightarrow \reals$ be differentiable functions.
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) Let $n = 1$. Use the chain rule to write $\frac{\intd}{\intd t} f(u(t))$. \fontHint{Single-variable calculus.}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+\paragraph{Solution:}
+
+By the chain rule for single-variable functions,
+\begin{align*}
+\frac{\intd}{\intd t} f(u(t))
+=
+f'(u(t)) u'(t).
+\end{align*}
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Let $n = 2$. Use the chain rule to write $\frac{\intd}{\intd t} f(u(t),v(t))$. \fontHint{If you don't know what the answer is, try to reason what it ``should'' be.}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+\paragraph{Solution:}
+
+By the chain rule for multivariable functions,
+\begin{align*}
+\frac{\intd}{\intd t} f(u(t),v(t))
+=
+\frac{\partial f}{\partial u}(u(t),v(t)) u'(t) + \frac{\partial f}{\partial v}(u(t),v(t)) v'(t).
+\end{align*}
+}% End solution.

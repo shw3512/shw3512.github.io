@@ -1,0 +1,80 @@
+\section{Exercise}
+
+(5 pt) This exercise investigates limits of functions $f: D \subseteq \reals^{2} \rightarrow \reals$. For each function $f$ appearing in the following limits, let $D$ be its maximum domain of definition.
+\begin{enumerate}[label=(\alph*)]
+\item (2.5 pt) Prove that the following limit exists, and find it.
+\begin{align*}
+\lim_{(x,y) \rightarrow (0,0)} \frac{y^{3} - x^{3}}{y - x}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+\subsection{Solution}
+
+The numerator factors:
+\begin{align*}
+y^{3} - x^{3}
+=
+(y - x) (y^{2} + y x + x^{2}).
+\end{align*}
+Substituting this result into the given limit, we would like to cancel the factor $y - x$ in the numerator and denominator. We can do this provided that $y - x \neq 0$. This inequality holds for all $(x,y) \in D$ (when $y - x = 0$, the rational function $\frac{y^{3} - x^{3}}{y - x}$ is not defined). We conclude that
+\begin{align*}
+\lim_{(x,y) \rightarrow (0,0)} \frac{y^{3} - x^{3}}{y - x}
+=
+\lim_{(x,y) \rightarrow (0,0)} \left(y^{2} + y x + x^{2}\right)
+=
+0 + 0 + 0
+=
+0.
+\end{align*}
+(Recall that the limit of a rational function, of which a polynomial function is a special case, is defined at all points where that rational function is defined, and equals its value at that point.)
+}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (2.5 pt) Prove that the following limit does not exist.% S6eE14.02.03
+\begin{align*}
+\lim_{(x,y) \rightarrow (0,0)} \frac{x^{2} y}{x^{4} + y^{2}}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+\subsection{Solution}
+
+To prove that the limit does not exist, we exhibit two paths of approach to the origin along which the given function has different limits.
+
+Along any line $y = m x$ of approach to the origin, the given function writes as
+\begin{align*}
+f(x,m x)
+=
+\frac{x^{2} (m x)}{x^{4} + (m x)^{2}}
+=
+\frac{m x^{3}}{x^{2} (x^{2} + m^{2})}.
+\end{align*}
+If $m = 0$, then $y = 0$, and this function is identically zero, so its limit is $0$. If $m \neq 0$, then the limit also evaluates to
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{m x^{3}}{x^{2} (x^{2} + m^{2})}
+=
+\lim_{x \rightarrow 0} \frac{m x}{x^{2} + m^{2}}
+=
+\frac{0}{m^{2}}
+=
+0.
+\end{align*}
+
+Now consider approaching the origin along the path $y = x^{2}$. Then
+\begin{align*}
+f(x,x^{2})
+=
+\frac{x^{2} (x^{2})}{x^{4} + (x^{2})^{2}}
+=
+\frac{x^{4}}{2 x^{4}}.
+\end{align*}
+Because $x \neq 0$ when evaluating the limit along this path ($x = 0 \Rightarrow y = x^{2} = 0$; by definition of limit, we must consider points $(x,y)$ not equal to the limiting point $(0,0)$), the limit evaluates to
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{4}}{2 x^{4}}
+=
+\frac{1}{2}.
+\end{align*}
+
+Because different paths of approach yield different limiting values, the limit does not exist.
+}% End solution.

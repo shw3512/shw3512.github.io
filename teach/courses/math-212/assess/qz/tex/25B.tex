@@ -1,0 +1,44 @@
+%
+%	S6eQ15.08.28
+%
+\section{Exercise}
+
+(5 pt) Our goal in this exercise is to evaluate the iterated integral
+\begin{align}
+\int_{x = -3}^{x = 3} \int_{y = 0}^{y = \sqrt{9 - x^{2}}} \int_{z = 0}^{z = 9 - x^{2} - y^{2}} \sqrt{x^{2} + y^{2}} \, \intd z \, \intd y \, \intd x.%
+\label{eq: S6eQ15.08.28}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item (1.5 pt) Sketch the region of integration.
+\end{enumerate}
+
+\spaceSolution{1.5in}{}
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm: Requiz25B b} (0.5 pt) What kind of symmetry does the region of integration possess? \fontHint{Focus on symmetry about an axis, also known as (fill in the blank) symmetry.}
+\end{enumerate}
+
+\spaceSolution{0.5in}{}
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (3 pt) Taking a cue from the Clue Fairy in part \ref{itm: Requiz25B b}, write the integral in \eqref{eq: S6eQ15.08.28} in appropriate coordinates, and show that it evaluates to $\frac{162 \pi}{5} \approx 101.7876$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Converting to cylindrical coordinates, we have
+\begin{align*}
+\iiint_{V} \sqrt{x^{2} + y^{2}} \, \intd V
+&=
+\int_{\theta = 0}^{\theta = \pi} \int_{r = 0}^{r = 3} \int_{z = 0}^{z = 9 - r^{2}} r \, r \, \intd z \, \intd r \, \intd \theta
+\\
+&=
+\pi \int_{r = 0}^{r = 3} r^{2} \left(9 - r^{2}\right) \intd r
+\\
+&=
+\pi \left[3 r^{3} - \frac{1}{5} r^{5}\right]_{r = 0}^{r = 3}
+\\
+&=
+\frac{162}{5} \pi.
+\end{align*}}
