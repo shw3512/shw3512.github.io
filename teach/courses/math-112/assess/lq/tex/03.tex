@@ -1,0 +1,74 @@
+%
+%
+%   LQuiz 03 : 2022-01-18 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : OpenStax Calculus I.2.2.65--67 (modified)
+
+Consider the piecewise function $f : \reals \rightarrow \reals$ whose rule of assignment is
+\begin{align*}
+f(x)
+=
+\begin{dcases*}
+-x^{2}	&	if $x \leq 0$	\\
+x^{2}		&	if $x > 0$
+\end{dcases*}
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQuiz03 Part a} (1 pt) Find $\displaystyle\lim_{x \uparrow 0} f(x)$ (i.e. the limit from the left). Justify briefly.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+To compute the limit of $f$ from the left at $x = 0$, we consider input values $x$ that are less than (i.e. ``to the left of'') the value of $x$ that the limit is approaching --- here, $x_{0} = 0$ --- and we see whether the corresponding output values $f(x)$ get ``closer and closer'' to some fixed value $L$ as these input values $x$ get ``closer and closer'' to $x_{0}$. When $x < 0$, our function has the rule of assignment $f(x) = -x^{2}$. As we take input values $x$ ``closer and closer'' to $0$ (and always less than $0$), the corresponding output values $f(x)$ get ``closer and closer'' to $0$. Thus we conclude that
+\begin{align*}
+\lim_{x \uparrow 0} f(x)
+=
+0
+\end{align*}}% End solution
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQuiz03 Part b} (1 pt) Is $f$ continuous from the left at $x = 0$? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Recall that continuity of a function $f$ at a point $x_{0}$ requires three things:
+\begin{enumerate}
+\item $f(x_{0})$ is defined.
+\item $\displaystyle\lim_{x \rightarrow x_{0}} f(x)$ exists.
+\item These two values are equal, i.e. $\displaystyle\lim_{x \rightarrow x_{0}} f(x) = f(x_{0})$.
+\end{enumerate}
+If we are interested in one-sided continuity, as we are here, then we replace the two-sided limits in the above definition with the appropriate one-sided limit.
+
+Our function $f$ is defined at $x_{0} = 0$: Using the rule of assignment for $x \leq 0$, we find $f(0) = 0$. This equals the limit of $f$ from the left at $x = 0$, which we computed in part \ref{itm : LQuiz03 Part a}. Thus we conclude that yes, $f$ is continuous from the left at $x = 0$.}% End solution.
+
+\begin{enumerate}[label=(\alph*)]
+\setcounter{enumi}{2}
+\item\label{itm : LQuiz03 Part c} (1 pt) Find $\displaystyle\lim_{x \downarrow 0} f(x)$ (i.e. the limit from the right). Justify briefly.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using reasoning analogous to that in our solution to part \ref{itm : LQuiz03 Part a}, we find
+\begin{align*}
+\lim_{x \downarrow 0} f(x)
+=
+0
+\end{align*}\newpage}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQuiz03 Part d} (1 pt) Is $f$ continuous from the right at $x = 0$? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using the same reasoning as we did in our solution to part \ref{itm : LQuiz03 Part b}, we find that yes, $f$ is continuous from the right at $x = 0$.
+
+N.B. ``But,'' we might object, ``the rule of assignment for $f$ is split at the value $x = 0$, and the ``right-side'' rule of assignment (i.e. for $x > 0$) doesn't include the input value $x = 0$.'' More precisely, the rule of assignment splits the domain $\reals$ (all real numbers) into two intervals, $(-\infty,0]$ and $(0,+\infty)$, and the right interval doesn't include $x = 0$. This is true, but it does not necessarily mean $f$ is not continuous from the right at $x = 0$. The definition of continuity tells us to think in two ``separate'' parts: (2) What is happening to $f(x)$ when $x$ ``gets close'' to $x_{0}$ (possibly from one side or the other, as we have here)? and (1) What happens to $f(x)$ when $x$ equals $x_{0}$? If our answers to these two questions are the same value, then $f$ is continuous at $x_{0}$ (one-sided or two-sided continuity, depending on how we defined ``gets close'' in question (2)).
+
+For this exercise (and much of single-variable calculus), sketching the graph of $f$ helps guide our analysis. Try it! You should get a graph that looks like (but is not (!) the same as) the graph of the function $g : \reals \rightarrow \reals$ given by $g(x) = x^{3}$.
+% Plot from WolframAlpha :
+% Plot[Piecewise[{{-x^2, x < 0}, {x^2, x > 0}}], {x, -2, 2}]
+\begin{center}
+\includegraphics[scale=0.5]{\filePathGraphics Graphf.png}
+\end{center}}% End solution.

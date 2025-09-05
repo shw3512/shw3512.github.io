@@ -1,0 +1,72 @@
+%
+%
+%   LQuiz 11 : 2022--03--01 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Take as given the following ``infinite polynomial'' expression for $\cos x$:
+\begin{align}
+\cos x
+&=
+1 - \frac{1}{2} x^{2} + \frac{1}{24} x^{4} - \frac{1}{720} x^{6} + \frac{1}{40320} x^{8} - \ldots%
+\nonumber
+\\
+&=
+1 - \frac{1}{2} x^{2} + \frac{1}{24} x^{4} + O(x^{6})%
+\label{eq : LQ11 cos x Taylor Series}
+\end{align}
+(Recall that $O(x^{6})$ means ``terms involving $x$ to powers $6$ and higher''.) Consider the limit
+\begin{align}
+\lim_{x \rightarrow 0} \frac{1 - \cos x - \frac{1}{2} x^{2}}{x^{4}}%
+\label{eq : LQ11 Limit}
+\end{align}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ11a} (2 pt) Compute the limit in \eqref{eq : LQ11 Limit} by substituting \eqref{eq : LQ11 cos x Taylor Series} for $\cos x$, simplifying, and evaluating.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Substituting \eqref{eq : LQ11 cos x Taylor Series} for $\cos x$ in the limit in \eqref{eq : LQ11 Limit}, we get
+\begin{align*}
+&\lim_{x \rightarrow 0} \frac{1 - \left(1 - \frac{1}{2} x^{2} + \frac{1}{24} x^{4} + O(x^{6})\right) - \frac{1}{2} x^{2}}{x^{4}}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{1 - 1 + \frac{1}{2} x^{2} - \frac{1}{24} x^{4} - O(x^{6}) - \frac{1}{2} x^{2}}{x^{4}}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{-\frac{1}{24} x^{4} - O(x^{6})}{x^{4}}
+\\
+&=
+\lim_{x \rightarrow 0} \left[-\frac{1}{24} - O(x^{2})\right]
+\\
+&=
+-\frac{1}{24}
+\end{align*}
+In the penultimate (next-to-last) equality we have canceled $x^{4}$ from each term in the numerator. In particular, every term in $O(x^{6})$ involves $x$ to the power $6$ or higher. When we divide these terms by $x^{4}$, every term now involves $x$ to the power $6 - 4 = 2$ or higher. Hence we can collect these terms into what we call $O(x^{2})$.
+
+For the final equality, every term in $O(x^{2})$ involves $x$ to the power $2$ or higher, so direct evaluation of the limit (as $x$ approaches $0$) makes all these terms $0$, leaving only $-\frac{1}{24}$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ11b} (2 pt) Compute the limit in \eqref{eq : LQ11 Limit} by iteratively applying l'H\^{o}pital's rule. (You should apply l'H\^{o}pital's rule four times. Briefly show it applies each time you use it!) Confirm you get the same result you got in part \ref{itm : LQ11a}.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+For each equality below, we (i) can check that direct evaluation of the limit on the left gives $\frac{0}{0}$, an indeterminate form to which l'H\^{o}pital's rule applies; and (ii) apply l'H\^{o}pital's rule to get the limit on the right.
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{1 - \cos x - \frac{1}{2} x^{2}}{x^{4}}
+=
+\lim_{x \rightarrow 0} \frac{\sin x - x}{4 x^{3}}
+=
+\lim_{x \rightarrow 0} \frac{\cos x - 1}{12 x^{2}}
+=
+\lim_{x \rightarrow 0} \frac{-\sin x}{24 x}
+=
+\lim_{x \rightarrow 0} \frac{-\cos x}{24}
+\end{align*}
+Direct evaluation of this last limit gives $-\frac{1}{24}$. This agrees with our answer to part \ref{itm : LQ11a}.}% End solution.

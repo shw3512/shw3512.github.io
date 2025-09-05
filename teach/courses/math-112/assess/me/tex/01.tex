@@ -1,0 +1,644 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q1}}
+\label{sec : Math112 Spring2022 MockExam1 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME1Q1a} (2 pt) The natural logarithm $\ln a$ of a real number $a$ can be negative.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+True. For example, let $a = e^{-1}$. Then $\ln a = \ln(e^{-1}) = -1 < 0$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q1b} (2 pt) The exponential $e^{a}$ of a real number $a$ can be negative.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+False. The image (aka range) of the exponential function is $(0,+\infty)$. Although the input to the (real) exponential function can be negative, the output is always positive.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q1c} (2 pt) Let $f$ be a function. The domain (aka set of inputs) of its first-derivative function $f'$ includes all points in the domain of $f$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+False. For example, let $f : [0,+\infty) \rightarrow \reals$ be given by $f(x) = \sqrt{x} = x^{\frac{1}{2}}$. The rule of assignment for the first-derivative function is $f'(x) = \frac{1}{2} x^{-\frac{1}{2}} = \frac{1}{2 \sqrt{x}}$. The domain of $f'$ is $(0,+\infty)$. In particular, the domain of $f'$ does not include $x = 0$, which is in the domain of $f$.
+
+\vspace{0.25in}}% End solution.
+
+
+
+For parts \ref{itm : ME1Q1d} and \ref{itm : ME1Q1e}, let $f$ be a function defined on an open set containing a point $a$.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q1d} (2 pt) If $f$ is continuous at $x = a$, then $\displaystyle\lim_{x \rightarrow a} f(x)$ exists.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+True. By definition, the function $f$ is continuous at $x = a$ if (1) $f$ is defined at $x = a$; (2) $\displaystyle\lim_{x \rightarrow a} f(x)$ exists; and (3) these two values are equal, that is, $\displaystyle\lim_{x \rightarrow a} f(x) = f(a)$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q1e} (2 pt) If $\displaystyle\lim_{x \rightarrow a} f(x)$ exists, then $f$ is continuous at $x = a$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+False. For example, let $a = 0$, and let $f : \reals \rightarrow \reals$ be given by
+\begin{align*}
+f(x)
+=
+\begin{dcases*}
+1	&	if $x = 0$	\\
+0	&	if $x \neq 0$
+\end{dcases*}
+\end{align*}
+Then $\displaystyle\lim_{x \rightarrow 0} f(x)$ exists and equals $0$, but $f$ is not continuous at $x = 0$. (Can you justify these three statements?)}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Properties of exponents and logarithms
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q2}}
+\label{sec : Math112 Spring2022 MockExam1 Q2}
+
+(8 pt) Compute the following. (The answers are integers.)
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME1Q2a} (4 pt) Let
+\begin{align*}
+e^{a}
+=
+4 \pi
+&&
+e^{b}
+=
+6 \pi
+&&
+e^{c}
+=
+9 \pi
+\end{align*}
+Compute
+\begin{align*}
+e^{-3 a - b - c} \cdot \frac{e^{5 a - b + 4 c}}{\left(e^{2}\right)^{b} e^{c}}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+We compute
+\begin{align*}
+e^{-3 a - b - c} \cdot \frac{e^{5 a - b + 4 c}}{\left(e^{2}\right)^{b} e^{c}}
+&=
+\left(e^{-3 a} e^{-b} e^{-c}\right) \left(e^{5 a} e^{-b} e^{4 c}\right) \left(e^{-2 b} e^{-c}\right)
+\\
+&=
+e^{2 a} e^{-4 b} e^{2 c}
+\\
+&=
+\left(e^{a}\right)^{2} \left(e^{b}\right)^{-4} \left(e^{c}\right)^{2}
+\\
+&=
+4^{2} \pi^{2} \cdot 6^{-4} \pi^{-4} \cdot 9^{2} \pi^{2}
+\\
+&=
+2^{4} \cdot (2^{-4} 3^{-4}) 3^{4}
+\\
+&=
+1
+\end{align*}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q2b} (4 pt) Let
+\begin{align*}
+\ln a
+=
+\frac{1}{3}
+&&
+\ln b
+=
+3
+&&
+\ln c
+=
+\frac{1}{2}
+\end{align*}
+Compute
+\begin{align*}
+\ln\left(\frac{a^{15} b^{21} c^{6}}{a^{12} b^{22} c^{2}}\right) - \ln\left(a^{2} - b^{2}\right) + \ln\left(\frac{a + b}{c}\right) + \ln(a c - b c)
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+We compute
+\begin{align*}
+&\ln\left(\frac{a^{15} b^{21} c^{6}}{a^{12} b^{22} c^{2}}\right) - \ln\left(a^{2} - b^{2}\right) + \ln\left(\frac{a + b}{c}\right) + \ln(a c - b c)
+\\
+&\hspace{10mm}=
+\ln\left(a^{3} b^{-1} c^{4}\right) + \ln\left(\frac{1}{a^{2} - b^{2}} \cdot \frac{a + b}{c} \cdot \frac{(a - b) c}{1}\right)
+\\
+&\hspace{10mm}=
+3 \ln a - \ln b + 4 \ln c + \ln 1
+\\
+&\hspace{10mm}=
+3 \cdot \frac{1}{3} - 3 + 4 \cdot \frac{1}{2} + 0
+\\
+&\hspace{10mm}=
+1 - 3 + 2
+\\
+&\hspace{10mm}=
+0
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Limits and continuity
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q3}}
+\label{sec : Math112 Spring2022 MockExam1 Q3}
+
+% Piecewise[{{x^3 - 6*x^2 + 12*x - 11, x < 1}, {x^2 - 5, x >= 1}}]
+
+(12 pt) Consider the piecewise function $f : \reals \rightarrow \reals$ whose rule of assignment is
+\begin{align*}
+f(x)
+=
+\begin{dcases*}
+x^{3} - 6 x^{2} + 12 x - 11	&	if $x < 1$	\\
+x^{2} - 5				&	if $x \geq 1$
+\end{dcases*}
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME1Q3a} (4 pt) Find $\displaystyle\lim_{x \rightarrow 1} f(x)$. If the limit does not exist, explain. In either case, show your work.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+To compute the limit of $f$ from the left as $x$ approaches $1$, we use the ``$x < 1$'' rule of assignment. We can directly evaluate the resulting limit:
+\begin{align*}
+\lim_{x \uparrow 1} f(x)
+=
+\lim_{x \uparrow 1} \left(x^{3} - 6 x^{2} + 12 x - 11\right)
+=
+1^{3} - 6 (1)^{2} + 12 (1) - 11
+=
+1 - 6 + 12 - 11
+=
+-4
+\end{align*}
+To compute the limit of $f$ from the right as $x$ approaches $1$, we use the ``$x > 1$'' rule of assignment. (Why do we omit $x = 1$ here?) Again, we can directly evaluate the resulting limit:
+\begin{align*}
+\lim_{x \downarrow 1} f(x)
+=
+\lim_{x \downarrow 1} \left(x^{2} - 5\right)
+=
+(1)^{2} - 5
+=
+-4
+\end{align*}
+Because the limits of $f$ from the left and from the right as $x$ approaches $1$ are equal, we conclude that the given (two-sided) limit exists, and
+\begin{align*}
+\lim_{x \rightarrow 1} f(x)
+=
+-4
+\end{align*}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q3b} (4 pt) Is $f$ continuous at $x = 1$? Justify.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using the relevant rule of assignment at $x = 1$, we compute
+\begin{align*}
+f(1)
+=
+(1)^{2} - 5
+=
+-4
+\end{align*}
+The value $f(1)$ equals $\displaystyle\lim_{x \rightarrow 1} f(x)$, which we computed in part \ref{itm : ME1Q3b}. Thus by definition of continuous, $f$ is continuous at $x = 1$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q3c} (4 pt) Is the first-derivative function $f'$ continuous at $x = 1$? Justify.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+First we compute the rules of assignment for $f'$, by differentiating those given for $f$:
+\begin{align*}
+f'(x)
+=
+\begin{dcases*}
+3 x^{2} - 12 x + 12	&	if $x < 1$	\\
+2 x				&	if $x > 1$
+\end{dcases*}
+\end{align*}
+Note that we don't (yet) include the ``breakpoint'' $x = 1$ in the domain of $f'$, as we don't (yet) know whether $f$ is differentiable there. We compute
+\begin{align*}
+\lim_{x \uparrow 1} f'(x)
+=
+3
+\neq
+2
+=
+\lim_{x \downarrow 1} f'(x)
+\end{align*}
+Because the limits of $f'(x)$ from the left and right as $x$ approaches $1$ do not agree, it follows that $\displaystyle\lim_{x \rightarrow 1} f'(x)$ does not exist. Thus $f'(x)$ cannot be continuous at $x = 1$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Optimization-ish
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q4}}
+\label{sec : Math112 Spring2022 MockExam1 Q4}
+
+(16 pt) Let $f : \reals \rightarrow \reals$ be the function defined by
+\begin{align*}
+f(x)
+=
+-3 x^{4} + 4 x^{3} + 12 x^{2} - 10
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME1Q4a} (4 pt) Find the interval(s) on which $f$ is increasing and decreasing.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+f'(x)
+=
+-12 x^{3} + 12 x^{2} + 24 x
+=
+-12 x (x^{2} - x - 2)
+=
+-12 x (x + 1) (x - 2)
+\end{align*}
+It follows that $f'(x) = 0$ if and only if $x = -1,0,2$. These are the ``critical points'' of $f$. By using the sign and degree of the leading term of the polynomial $f$, or by determining the sign of $f'(x)$ at values of $x$ between and outside these critical points (for example, at $x = -2,-\frac{1}{2},1,3$), we conclude that $f$ is
+\begin{itemize}
+\item increasing on $(-\infty,-1) \cup (0,2)$ and
+\item decreasing on $(-1,0) \cup (2,+\infty)$.
+\end{itemize}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q4b} (4 pt) Find the $(x,y)$-co\"{o}rdinates of each local minimum and maximum of $f$. State whether each is a local minimum or maximum of $f$.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The critical points of $f$ are the candidate local extrema.% Begin footnote.
+\footnote{If we were analyzing the function on a domain with boundary points, then the boundary points would also be candidate local extrema. For example, if the domain were the closed interval $[-3,3]$, then the boundary points $\pm{}3$ would also be candidate local extrema.} % End footnote.
+Evaluating $f$ at the three critical points of $f$ found in part \ref{itm : ME1Q4a}, we find
+\begin{align*}
+f(-1)
+=
+-5
+&&
+f(0)
+=
+-10
+&&
+f(2)
+=
+22
+\end{align*}
+Thus the three candidate local extrema for $f$ are
+\begin{align*}
+(-1,-5)
+&&
+(0,-10)
+&&
+(2,22)
+\end{align*}
+The sign and degree of the leading term of the polynomial $f$ are sufficient to deduce that $(-1,-5)$ and $(2,22)$ are local maxima, and $(0,-10)$ is a local minimum. (Can you justify this?)
+
+We can also arrive at this conclusion using the second-derivative test --- that is, by analyzing the concavity of $f$. We compute the second-derivative function of $f$ to be
+\begin{align*}
+f'' : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+f''(x)
+=
+-36 x^{2} + 24 x + 24
+\end{align*}
+Evaluating $f''(x)$ at the three critical points of $f$, we find
+\begin{align*}
+f''(-1)
+=
+-36
+&&
+f''(0)
+=
+24
+&&
+f''(2)
+=
+-72
+\end{align*}
+Recall that a negative second derivative at a point indicates the function is concave down there, whereas a positive second derivative at a point indicates the function is concave up there. Thus, $f$ is concave down at $x = -1$ and $x = 2$, so these are local maxima; and $f$ is concave up at $x = 0$, so this is a local minimum.}% End solution.
+
+
+
+\newpage
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q4c} (4 pt) Find the global minimum and maximum of $f$.
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+By looking at the rule of assignment of $f(x)$, we see that as $\abs{x}$ becomes arbitrarily large, $f(x)$ becomes arbitrarily small.% Begin footnote.
+\footnote{As $\abs{x}$ becomes large, the largest-degree term of $f(x)$, which is $-3 x^{4}$, dominates the behavior of $f(x)$. That is, as $\abs{x}$ becomes large, the behavior of $f(x)$ resembles that of $-3 x^{4}$.} % End footnote.
+Thus $f$ has no global minimum, on its full domain $\reals$. As another result of this ``end behavior'' of $f$, the global maximum of $f$ must be one of its local maxima, that is, either $(-1,-5)$ or $(2,22)$. Comparing the output values (that is, $y$-values) of these two local maxima, we conclude that $(2,22)$ is the global maximum of $f$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q4d} (4 pt) Find the $x$-co\"{o}rdinate of each inflection point of $f$.
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+By definition, an inflection point of $f(x)$ is a value of $x$ at which the concavity of $f$ changes sign. Recall that the concavity of $f$ is captured by the sign of the second-derivative function $f''$. For the concavity of $f$ to change sign at $x$, we must have $f''(x) = 0$. Values of $x$ that satisfy $f''(x) = 0$ are the candidate inflection points.
+
+In part \ref{itm : ME1Q4b} we found that
+\begin{align*}
+f''(x)
+=
+-36 x^{2} + 24 x + 24
+\end{align*}
+Setting $f''(x)$ equal to $0$ and solving for $x$ (for example, using the quadratic formula), we find
+\begin{align*}
+x
+=
+\frac{2 \pm \sqrt{4 + 24}}{6}
+=
+\frac{1 \pm \sqrt{7}}{3}
+\end{align*}
+Denote these two solutions $a_{\pm}$, that is,
+\begin{align*}
+a_{-}
+=
+\frac{1 - \sqrt{7}}{3}
+\approx
+-0.5486
+&&
+a_{+}
+=
+\frac{1 + \sqrt{7}}{3}
+\approx
+1.2153
+\end{align*}
+These are the \emph{candidate} inflection points. We must certify that the concavity of $f$ indeed changes sign at these values. This follows by analyzing the second-derivative function $f''(x)$: It is negative on $(-\infty,a_{-}) \cup (a_{+},+\infty)$, and positive on $(a_{-},a_{+})$. In particular, $f''(x)$ changes sign at $x = a_{-}$ and $x = a_{+}$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Implicit differentiation and linearization
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q5}}
+\label{sec : Math112 Spring2022 MockExam1 Q5}
+
+(12 pt) The graph of the equation
+\begin{align}
+y^{2}
+=
+x^{3} - 3 x + 4%
+\label{eq : ME1Q5 Equation}
+\end{align}
+shown below, is an example of an \fontDefWord{elliptic curve}.% Begin footnote.
+\footnote{Elliptic curves have important applications in digital security (cryptography).}% End footnote.
+\begin{center}
+\includegraphics[scale=0.35]{\filePathGraphics EllipticCurve.png}
+\end{center}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME1Q5a} (4 pt) Compute the rule of assignment for $y'$.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+Differentiating the given equation with respect to $x$, we get% Begin footnote.
+\footnote{We use implicit differentiation and the chain rule to differentiate the left side of Equation \eqref{eq : ME1Q5 Equation}.}% End footnote.
+\begin{align*}
+2 y y'
+=
+3 x^{2} - 3
+&&
+\Leftrightarrow
+&&
+y'
+=
+\frac{3 x^{2} - 3}{2 y}
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q5b} (4 pt) The graph suggests that the point $(0,2)$ is on the elliptic curve, and that the slope of the tangent line there is negative. Show, algebraically, that these statements are true.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+Geometrically, a point $P$ is on a graph if and only if, algebraically, the co\"{o}rdinates of $P$ satisfy the equation defining the graph. Evaluating Equation \eqref{eq : ME1Q5 Equation} at $(x,y) = (0,2)$, we get
+\begin{align*}
+2^{2}
+=
+0^{3} - 3 (0) + 4
+&&
+\Leftrightarrow
+&&
+4
+=
+4
+\end{align*}
+This statement is true, so the point $(0,2)$ satisfies Equation \eqref{eq : ME1Q5 Equation}. Thus this point is on the graph.
+
+The slope of the tangent line to the graph at the point $(x,y) = (0,2)$ is given by evaluating the first-derivative function at this point. Using our rule of assignment for $y'$ in part \ref{itm : ME1Q5a}, we compute
+\begin{align*}
+y'(0,2)
+=
+\frac{3 (0)^{2} - 3}{2 (2)}
+=
+-\frac{3}{4}
+\end{align*}
+This value is negative, as suggested by the graph.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME1Q5c} (4 pt) Find the linearization to the elliptic curve at the point $(0,2)$.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+The linearization $L$ to the curve at the point $(x_{0},y_{0})$ is the function
+\begin{align*}
+L : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+L(x) - y_{0}
+=
+y'(x_{0},y_{0}) \cdot (x - x_{0})
+\end{align*}
+Solving this rule of assignment for $L(x)$, and substituting in the values $(x_{0},y_{0}) = (0,2)$ and $y'(0,2) = -\frac{3}{4}$, we get
+\begin{align*}
+L(x)
+=
+2 - \frac{3}{4} (x - 0)
+=
+-\frac{3}{4} x + 2
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% Related rates : OS I.4.1E22 (p 351)
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam1 Q6}}
+\label{sec : Math112 Spring2022 MockExam1 Q6}
+
+(12 pt) The base of a triangle is shrinking at a rate of $1$ cm/s, and the height of the triangle is increasing at the rate of $5$ cm/s. Find the rate at which the area of the triangle changes when the base is $10$ cm and the height is $22$ cm.
+
+\spaceSolution{6in}{% Begin solution.
+Let $b$ denote the length of the base of the triangle, let $h$ denote the length of the height of the triangle, and let $A$ denote the area of the triangle. Recall from planar geometry that
+\begin{align}
+A
+=
+\frac{1}{2} b h%
+\label{eq : ME1Q6 Area Of Triangle Without t}
+\end{align}
+Note that the statement of the exercise implies that $b$ and $h$, and hence $A$, are implicitly functions of time, $t$. If we wish, we may rewrite Equation \eqref{eq : ME1Q6 Area Of Triangle Without t} as
+\begin{align}
+A(t)
+=
+\frac{1}{2} b(t) h(t)%
+\label{eq : ME1Q6 Area Of Triangle With t}
+\end{align}
+Moreover, the exercise tells us that
+\begin{align*}
+b'(t)
+=
+\frac{\intd b}{\intd t}
+=
+-1\text{ cm/s}
+&&
+h'(t)
+=
+\frac{\intd h}{\intd t}
+=
+5\text{ cm/s}
+\end{align*}
+
+To find how the area of the triangle changes with time, we implicitly differentiate Equation \eqref{eq : ME1Q6 Area Of Triangle With t} (or, equivalently, Equation \eqref{eq : ME1Q6 Area Of Triangle Without t}) with respect to $t$:
+\begin{align}
+A'(t)
+=
+\frac{1}{2} b'(t) h(t) + \frac{1}{2} b(t) h'(t)%
+\label{eq : ME1Q6 Area Rate Of Change}
+\end{align}
+This relation holds for all relevant times $t$.
+
+We are asked to find $A'(t)$ when the base is $10$ and the height is $22$. At this point, we might pause, because we don't know the value of $t$ when the base and height have these values. Indeed, the exercise gives us no way to determine this! However, let's ask ourselves: Do we need to know this value of $t$, explicitly? The answer is no. Whatever the magic value of $t$ is, we know all the values on the right side of Equation \eqref{eq : ME1Q6 Area Rate Of Change}:
+\begin{align*}
+b(t)
+=
+10\text{ cm}
+&&
+h(t)
+=
+22\text{ cm}
+&&
+b'(t)
+=
+-1\text{ cm/s}
+&&
+h'(t)
+=
+5\text{ cm/s}
+\end{align*}
+Substituting these values into Equation \eqref{eq : ME1Q6 Area Rate Of Change}, we find
+\begin{align*}
+A'(t)
+=
+\frac{1}{2} (-1\text{ cm/s}) (22\text{ cm}) + \frac{1}{2} (10\text{ cm}) (5\text{ cm/s})
+=
+14\text{ cm}^{2}/\text{s}
+\end{align*}}% End solution.

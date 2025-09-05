@@ -1,0 +1,42 @@
+%
+%
+%   ReQuiz 11A : 2022--04--08 (F)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Take as given the following ``infinite polynomial'' expression for $\ln(x + 1)$:
+\begin{align}
+\ln(x + 1)
+&=
+x - \frac{1}{2} x^{2} + \frac{1}{3} x^{3} - \frac{1}{4} x^{4} + \ldots%
+\nonumber
+\\
+&=
+x - \frac{1}{2} x^{2} + \frac{1}{3} x^{3} - O(x^{4})%
+\label{eq : RQ11A lns x Taylor Series}
+\end{align}
+(Recall that $O(x^{n})$ means ``terms involving $x$ to powers $n$ and higher''.) Consider the limit
+\begin{align}
+\lim_{x \rightarrow 0} \frac{\frac{1}{3} x^{3}}{\ln(x + 1) - x + \frac{1}{2} x^{2}}%
+\label{eq : RQ11A Limit}
+\end{align}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : RQ11Aa} (2 pt) Compute the limit in \eqref{eq : RQ11A Limit} by substituting \eqref{eq : RQ11A lns x Taylor Series} for $\ln(x + 1)$, simplifying, and evaluating.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : RQ11Ab} (2 pt) Compute the limit in \eqref{eq : RQ11A Limit} by iteratively applying l'H\^{o}pital's rule. (Briefly show it applies each time you use it!) Confirm you get the same result you got in part \ref{itm : RQ11Aa}.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+}% End solution.

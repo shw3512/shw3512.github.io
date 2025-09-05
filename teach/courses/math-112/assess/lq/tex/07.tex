@@ -1,0 +1,92 @@
+%
+%
+%   LQuiz 07 : 2022-02-01 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Consider the hyperbola graphed below, which is given by the equation
+\begin{align}
+x^{2} + y^{2}
+=
+4 x y + 9%
+\label{eq : LQ07 Equation}
+\end{align}
+\begin{center}
+\includegraphics[scale=0.35]{\filePathGraphics Hyperbola.png}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ07 Part a} (1 pt) From the graph, the point $(x,y) = (3,0)$ appears to be on the hyperbola. Prove this, algebraically.
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+A point $(x,y)$ is on the graph of Equation \eqref{eq : LQ07 Equation} (a geometric condition) if and only if the point $(x,y)$ satisfies Equation \eqref{eq : LQ07 Equation} (an algebraic condition). Evaluating Equation \eqref{eq : LQ07 Equation} at $x = 3$ and $y = 0$, we find
+\begin{align*}
+3^{2} + 0^{2}
+=
+4 (3) (0) + 9
+&&
+\Leftrightarrow
+&&
+9
+=
+9
+\end{align*}
+Algebraically, the point $(3,0)$ satisfies Equation \eqref{eq : LQ07 Equation}. Thus geometrically, the point $(3,0)$ is on the graph of Equation \eqref{eq : LQ07 Equation}.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ07 Part b} (1 pt) From the graph, what can we predict about the slope of the tangent line to the graph at the point $(3,0)$?
+\end{enumerate}
+
+\spaceSolution{0.75in}{% Begin solution.
+The slope of the tangent line to the graph at the point $(3,0)$ looks positive, and less than $1$. If we sketch the tangent line and estimate two points on it --- for example, the point we're given, $(3,0)$, and the point $(-1,-2)$ --- then we can give a numerical approximation for the slope:
+\begin{align*}
+\text{slope}
+\approx
+\frac{y_{2} - y_{1}}{x_{2} - x_{1}}
+=
+\frac{-2 - 0}{-1 - 3}
+=
+\frac{-2}{-4}
+=
+\frac{1}{2}
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ07 Part c} (2 pt) Compute the rule of assignment for $y'$. (Your answer will involve both $x$ and $y$.) Show that $y'$ evaluated at the point $(x,y) = (3,0)$ equals $\frac{1}{2}$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+We use implicit differentiation. Differentiating both sides of Equation \eqref{eq : LQ07 Equation} with respect to $x$ (remember that $y$ is an implicit function of $x$) and solving for $y'$, we get
+\begin{align*}
+2 x + 2 y y'
+=
+4 y + 4 x y' + 0
+&&
+\Leftrightarrow
+&&
+y'
+=
+\frac{4 y - 2 x}{2 y - 4 x}
+=
+-\frac{x - 2 y}{y - 2 x}
+\end{align*}
+Evaluating $y'$ at the point $(x,y) = (3,0)$, we find
+\begin{align*}
+y'
+=
+-\frac{3 - 2 (0)}{0 - 2(3)}
+=
+-\frac{3}{-6}
+=
+\frac{1}{2}
+\end{align*}
+We note that our algebraic result here is consistent with our geometric hypothesis in Part \ref{itm : LQ07 Part b}.}% End solution.

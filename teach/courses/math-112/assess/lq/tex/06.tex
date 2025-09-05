@@ -1,0 +1,77 @@
+%
+%
+%   LQuiz 06 : 2022-01-27 (R)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Consider the function
+\begin{align*}
+f : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+x^{3} - x + \sin x
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ06 Linearization} (3 pt) Compute the linearization of (aka linear approximation to) $f$ at $x = 0$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By definition, the linearization of $f$ at $x = 0$ is the function $L : \reals \rightarrow \reals$ given by
+\begin{align}
+L(x)
+=
+f(0) + f'(0) (x - 0)%
+\label{eq : LQ06 Linearization 0}
+\end{align}
+We compute
+\begin{align*}
+f(0)
+=
+0
+&&
+f'(x)
+=
+3 x^{2} - 1 + \cos x
+&&
+f'(0)
+=
+0
+\end{align*}
+Substituting this results into \eqref{eq : LQ06 Linearization 0}, we conclude that the rule of assignment for $L$ is
+\begin{align*}
+L(x)
+=
+0
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ06 Graph} (1 pt) Sketch a graph of your linearization of $f$ at $x = 0$. Clearly label the point $(0,f(0))$ and the slope. (While you will not be graded on the following, if you have spare time, try to sketch the graph of $f$ near $x = 0$. Can you weave a coherent story from these parts?)
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+The graph of our linearization $L$ is a horizontal line through the point $(0,0)$, shown in Figure \ref{fig : LQ06 Graphs}(i).
+\begin{figure}[b]
+\centering% Begin centering.
+\begin{tabular}{ccc}
+\includegraphics[scale=0.4]{\filePathGraphics fAndL.png}
+&
+\includegraphics[scale=0.4]{\filePathGraphics Cubic.png}
+&
+\includegraphics[scale=0.4]{\filePathGraphics Sin.png}
+\\
+(i)	&	(ii)	&	(iii)
+\end{tabular}
+\caption{Graphs. (i) The function $f(x) = x^{3} - x + \sin x$ (in blue) and the linearization $L$ of $f$ at $x = 0$, given by $L(x) = 0$ (in red). (ii) The part $f_{1}(x) = x^{3} - x$. (iii) The part $f_{2}(x) = \sin x$.}
+\label{fig : LQ06 Graphs}
+\end{figure}
+
+Figure \ref{fig : LQ06 Graphs} also shows graphs of the function $f$, as well as two of its ``parts'', $f_{1}(x) = x^{3} - x$ and $f_{2}(x) = \sin x$. It is interesting to note that the slope of the tangent line to the graph of $f_{1}$ at $x = 0$ seems to cancel the slope of the tangent line to the graph of $f_{2}$ at $x = 0$. Does this make sense? Can you make this more precise?}% End solution.

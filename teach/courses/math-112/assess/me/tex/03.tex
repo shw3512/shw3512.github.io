@@ -1,0 +1,889 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% TOPIC : True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q1}}
+\label{sec : Math112 Spring2022 MockExam3 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+
+Parts \ref{itm : ME3Q1a}--\ref{itm : ME3Q1b} concern the piecewise-linear function $f : \reals \rightarrow \reals$ graphed below.
+\begin{center}
+\includegraphics[scale=0.25]{\filePathGraphics Q1Graph.png}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q1a} (2 pt) The definite integral $\int_{0}^{3} f(x) \spaceIntd \intd x$ is positive.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. Using (finite) geometry, we compute
+\begin{align*}
+\int_{0}^{3} f(x) \spaceIntd \intd x
+=
+\int_{0}^{2} f(x) \spaceIntd \intd x + \int_{2}^{3} f(x) \spaceIntd \intd x
+=
+\left[\frac{1}{2} 2 (-2)\right] + \left[\frac{1}{2} (1) (1)\right]
+=
+-\frac{3}{2}
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q1b} (2 pt) The definite integral $\int_{0}^{6} f(x) \spaceIntd \intd x$ is positive.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. The quickest way to justify this may be to note that the areas $\int_{0}^{2} f(x) \spaceIntd \intd x$ and $\int_{2}^{4} f(x) \spaceIntd \intd x$ cancel each other---they are triangles of the same area, but the first has negative sign (it lies below the $x$-axis), the second, positive sign (it lies above the $x$-axis)---and the area $\int_{4}^{6} f(x) \spaceIntd \intd x$ is positive. Thus
+\begin{align*}
+\int_{0}^{6} f(x) \spaceIntd \intd x
+=
+\left(\int_{0}^{2} f(x) \spaceIntd \intd x + \int_{2}^{4} f(x) \spaceIntd \intd x\right) + \int_{4}^{6} f(x) \spaceIntd \intd x
+=
+0 + \int_{4}^{6} f(x) \spaceIntd \intd x
+>
+0
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q1c} (2 pt) The integration procedure of change of variables (aka substitution) is related to the product rule from differential calculus, by viewing the latter in terms of antiderivatives.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. Change of variables (aka substitution) is related to the chain rule.}% End solution.
+
+
+
+\vspace{0.25in}% Activate for solutions only.
+
+\noindent{}For parts \ref{itm : ME3Q1d}--\ref{itm : ME3Q1e}, let $f : [0,1] \rightarrow \reals$ be a function such that for all $x \in [0,1]$, $f(x) > 0$; and let $F : [0,1] \rightarrow \reals$ be the cumulative signed area function given by $F(x) = \int_{0}^{x} f(t) \spaceIntd \intd t$.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q1d} (2 pt) There exists no $x \in [0,1]$ such that $F(x)$ is negative.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+True. The cumulative signed area function $F(x)$ computes the signed area under the graph of $f(t)$ from $t = 0$ to $t = x$, where $0 \leq x \leq 1$. Because $f(t) > 0$ on the interval $[0,1]$, the graph of $f$ lies above the horizontal axis on this interval. Hence the area under the graph of $f$ cannot be negative over any part of this interval.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q1e} (2 pt) The average value of $f(x)$ on $[0,1]$ is less than $f(1)$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+False. Consider the function $f : [0,1] \rightarrow \reals$ given by $f(x) = 1$ for all $x \in [0,1]$. In this case, we can check that the average value of $f(x)$ on the interval $[0,1]$ equals $1$, which equals $f(1)$.
+
+Alternatively, consider the function $f$ given by $f(x) = 2 - x$. In this case, we can check that the average value of $f(x)$ on the interval $[0,1]$ equals $\frac{3}{2}$, which is greater than $f(1) = 1$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% TOPIC : Computing indefinite integrals (includes change of variables, integration by parts)
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q2}}
+\label{sec : Math112 Spring2022 MockExam3 Q2}
+
+(12 pt) Evaluate each indefinite integral. Clearly communicate your approach.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q2a} (4 pt) $\displaystyle\int 4 x^{3} - 4 x^{2} + 6 x + 3 \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Recall the ``power rule'' for integration (which can be quickly obtained by viewing the ``power rule'' for differentiation, from the point of view of antiderivatives):
+\begin{align*}
+\int x^{n} \spaceIntd \intd x
+=
+\frac{1}{n + 1} x^{n + 1} + C
+\qquad
+\text{(for all $n \neq 1$)}
+\end{align*}
+where $C \in \reals$ is an arbitrary constant. Using this and linearity of the integral, we compute
+\begin{align*}
+\int 4 x^{3} - 4 x^{2} + 6 x + 3 \spaceIntd \intd x
+&=
+4 \int x^{3} \spaceIntd \intd x - 4 \int x^{2} \spaceIntd \intd x + 6 \int x \spaceIntd \intd x + 3 \int 1 \spaceIntd \intd x
+\\
+&=
+x^{4} - \frac{4}{3} x^{3} + 3 x^{2} + 3 x + C
+\end{align*}
+
+Remember that we can easily check our answer (call it $F(x)$), by confirming that its derivative equals the original integrand (call it $f(x)$). We compute
+\begin{align*}
+F'(x)
+=
+4 x^{3} - 4 x^{2} + 6 x + 3
+=
+f(x)
+\end{align*}
+Hence by definition, $F(x)$ is an antiderivative of $f(x)$. It is the most general antiderative because any two antiderivatives of $f(x)$ differ by a constant, and we have left the constant $C$ in the expression for $F(x)$ arbitrary.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q2b} (4 pt) $\displaystyle\int e^{(x^{2} - 2 x)^{2}} (x^{2} - 2 x) (x - 1) \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+It will be helpful to use a change of variables to evaluate this integral. Let
+\begin{align}
+u
+=
+(x^{2} - 2 x)^{2}
+\label{eq : ME3Q2b u}
+\end{align}
+Then, by the chain rule,
+\begin{align*}
+\frac{\intd u}{\intd x}
+=
+u'
+=
+2 (x^{2} - 2 x) (2 x - 2)
+\end{align*}
+which we may write as
+\begin{align}
+\intd u
+=
+2 (x^{2} - 2 x) (2 x - 2) \intd x
+\label{eq : ME3Q2b du}
+\end{align}
+This looks similar to the last two factors in the integrand, with two differences.
+\begin{enumerate}
+\item Equation \eqref{eq : ME3Q2b du} has a factor of $2$ that does not appear in the integrand. Differences in constant factors, like this one, may be reconciled by factoring out of, or introducing constants into, the integrand by multiplying by $1$. (See below.)
+\item In equation \eqref{eq : ME3Q2b du}, the final factor is $2 x - 2$, whereas in the integrand it is $x - 1$. This we may reconcile by noting that $2 x - 2 = 2 (x - 1)$.
+\end{enumerate}
+Using these observations, we may rewrite \eqref{eq : ME3Q2b du} as
+\begin{align*}
+\intd u
+&=
+4 (x^{2} - 2 x) (x - 1) \intd x
+\end{align*}
+or equivalently, as
+\begin{align}
+\frac{1}{4} \intd u
+&=
+(x^{2} - 2 x) (x - 1) \intd x
+\label{eq : ME3Q2b 1/4 du}
+\end{align}
+Substituting \eqref{eq : ME3Q2b u} and \eqref{eq : ME3Q2b 1/4 du} into the original integral, we get
+\begin{align*}
+\int e^{(x^{2} - 2 x)^{2}} (x^{2} - 2 x) (x - 1) \spaceIntd \intd x
+=
+\int e^{u} \frac{1}{4} \spaceIntd \intd u
+=
+\frac{1}{4} \int e^{u} \spaceIntd \intd u
+=
+\frac{1}{4} e^{u} + C
+\end{align*}
+Using the definition of $u$ in \eqref{eq : ME3Q2b u} to replace $u$ with the function of $x$, we conclude
+\begin{align*}
+\int e^{(x^{2} - 2 x)^{2}} (x^{2} - 2 x) (x - 1) \spaceIntd \intd x
+=
+\frac{1}{4} e^{(x^{2} + 2 x)^{2}} + C
+\end{align*}
+
+We may check our answer by differentiating and confirming that we get the original integrand.}% End solution.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\setcounter{enumi}{2}
+\item\label{itm : ME3Q2c} (4 pt) $\displaystyle\int z^{2} e^{2 z} \spaceIntd \intd z$
+\end{enumerate}
+
+\spaceSolution{2.75in}{% Begin solution.
+To evaluate this integral, we use integration by parts. Let
+\begin{align*}
+f(z)
+&=
+z^{2}
+&
+g'(z)
+&=
+e^{2 z}
+\end{align*}
+Then
+\begin{align*}
+f'(z)
+&=
+2 z
+&
+g(z)
+&=
+\frac{1}{2} e^{2 z}
+\end{align*}
+Applying integration by parts, we get
+\begin{align}
+\int z^{2} e^{2 z} \spaceIntd \intd z
+&=
+(z^{2}) \left(\frac{1}{2} e^{2 z}\right) - \int \left(\frac{1}{2} e^{2 z}\right) (2 z) \spaceIntd \intd z
+\nonumber
+\\
+&=
+\frac{1}{2} z^{2} e^{2 z} - \int e^{2 z} z \spaceIntd \intd z
+\label{eq : ME3Q2c IbP1}
+\end{align}
+To evaluate the integral on the right, we again use integration by parts. Let
+\begin{align*}
+f(z)
+&=
+z
+&
+g'(z)
+&=
+e^{2 z}
+\end{align*}
+(Note that $g(z)$ is the same as in the previous integration by parts, so we may recycle our work there, here.) Then
+\begin{align*}
+f'(z)
+&=
+1
+&
+g(z)
+&=
+\frac{1}{2} e^{2 z}
+\end{align*}
+Applying integration by parts, we get
+\begin{align*}
+\int e^{2 z} z \spaceIntd \intd z
+&=
+(z) \left(\frac{1}{2} e^{2 z}\right) - \int \left(\frac{1}{2} e^{2 z}\right) (1) \spaceIntd \intd z
+\\
+&=
+\frac{1}{2} z e^{2 z} - \frac{1}{2} \int e^{2 z} \spaceIntd \intd z
+\\
+&=
+\frac{1}{2} z e^{2 z} - \frac{1}{4} e^{2 z} + C_{0}
+\end{align*}
+where to obtain the final equality we evaluate the remaining integral. Substituting this result into equation \eqref{eq : ME3Q2c IbP1}, we conclude
+\begin{align*}
+\int z^{2} e^{2 z} \spaceIntd \intd z
+&=
+\frac{1}{2} z^{2} e^{2 z} - \left[\frac{1}{2} z e^{2 z} - \frac{1}{4} e^{2 z} + C_{0}\right]
+\\
+&=
+\frac{1}{2} z^{2} e^{2 z} - \frac{1}{2} z e^{2 z} + \frac{1}{4} e^{2 z} + C
+\end{align*}
+where in the final equality we have renamed $-C_{0}$ simply $C$. (They are both just arbitrary constants.)
+
+We may check our answer (call it $F(z)$), by confirming that its derivative equals the original integrand (call it $f(z)$). We compute (using the product rule and integration by parts, where appropriate)
+\begin{align*}
+F'(z)
+&=
+\left[z e^{2 z} + z^{2} e^{2 z}\right] - \frac{1}{2} \left[e^{2 z} + 2 z e^{2 z}\right] + \left[\frac{1}{2} e^{2 z}\right] + 0
+\\
+&=
+z e^{2 z} + z^{2} e^{2 z} - \frac{1}{2} e^{2 z} - z e^{2 z} + \frac{1}{2} e^{2 z}
+\\
+&=
+z^{2} e^{2 z}
+=
+f(z)
+\end{align*}
+where in going from line 2 to line 3, all terms cancel in pairs except the one that remains in line 3.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% TOPIC : Fundamental theorem of calculus 2.0
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q3}}
+\label{sec : Math112 Spring2022 MockExam3 Q3}
+
+(16 pt) Evaluate each definite integral. Clearly communicate your approach.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q3a} (4 pt) $\displaystyle\int_{0}^{\pi} \sin \theta - \cos(2 \theta) \spaceIntd \intd \theta$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+To evaluate this definite integral, we use the fundamental theorem of calculus. Thus we need to find an antiderivative of
+\begin{align*}
+f(\theta)
+=
+\sin \theta - \cos(2 \theta)
+\end{align*}
+That is, we need to evaluate the indefinite integral
+\begin{align*}
+\int \sin \theta - \cos(2 \theta) \spaceIntd \intd \theta
+\end{align*}
+Using linearity of the integral, then evaluating each integral on the right, we get
+\begin{align*}
+\int \sin \theta - \cos(2 \theta) \spaceIntd \intd \theta
+&=
+\int \sin \theta \spaceIntd \intd \theta - \int \cos(2 \theta) \spaceIntd \intd \theta
+\\
+&=
+-\cos \theta - \frac{1}{2} \sin(2 \theta)
+\end{align*}
+Here we have set the arbitrary constant $C$ equal to $0$, because the fundamental theorem of calculus requires only an antiderivative, not the most general one. (If you prefer, you may keep writing $+ C$. The $C$ terms will cancel when we apply the fundamental theorem of calculus.) Call this final antiderivative $F(\theta)$. Note that we may check it is a valid antiderivative, by confirming that its derivative equals the original integrand.
+
+By the fundamental theorem of calculus,
+\begin{align*}
+\int_{0}^{\pi} \sin \theta - \cos(2 \theta) \spaceIntd \intd \theta
+&=
+F(\pi) - F(0)
+\\
+&=
+\left[-\cos(\pi) - \frac{1}{2} \sin(2 \pi)\right] - \left[-\cos(0) - \frac{1}{2} \sin(2 (0))\right]
+\\
+&=
+\left[-(-1) - \frac{1}{2} (0)\right] - \left[-1 - \frac{1}{2} 0\right]
+\\
+&=
+1 - (-1)
+=
+2
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q3b} (4 pt) $\displaystyle\int_{0}^{2} (1 - 2 t)^{2} - 1 \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+We may evaluate this integral by first expanding the square, simplifying the integrand, and integrating each term. Alternatively, we may evaluate this integral using a change of variables. We illustrate the second approach here.
+
+Let
+\begin{align}
+u
+=
+1 - 2 t%
+\label{eq : ME3Q2b u}
+\end{align}
+Then
+\begin{align*}
+\frac{\intd u}{\intd t}
+=
+u'
+=
+-2
+\end{align*}
+which we may write as
+\begin{align*}
+\intd u
+&=
+-2 \intd t
+&
+&\text{or}
+&
+-\frac{1}{2} \intd u
+&=
+\intd t
+\end{align*}
+Applying this change of variables to the original integral, we get
+\begin{align}
+\int_{0}^{2} (1 - 2 t)^{2} - 1 \spaceIntd \intd t
+&=
+\int_{t = 0}^{t = 2} \left(u^{2} - 1\right) \left(-\frac{1}{2} \spaceIntd \intd u\right)
+\\
+&=
+-\frac{1}{2} \int_{t = 0}^{t = 2} u^{2} - 1 \spaceIntd \intd u%
+\label{eq : ME3Q2b Intermediate}
+\end{align}
+Note that in the definite integral, we have explicitly noted that the bounds of integration are from $t = 0$ to $t = 2$. This is not required, but it will help us avoid incorrectly substituting $t$-values into $u$ variables.
+
+Denote the new integrand by
+\begin{align*}
+f(u)
+=
+u^{2} - 1
+\end{align*}
+An antiderivative of $f(u)$ is
+\begin{align*}
+F(u)
+=
+\frac{1}{3} u^{3} - u
+\end{align*}
+We cannot (!) invoke the fundamental theorem of calculus to evaluate $F(u)$ at $t = 2$ and $t = 0$, because $F$ is a function of $u$, and the bounds of integration are values of $t$. First, we must use our definition of $u$ in \eqref{eq : ME3Q2b u} to either (i) translate the values $t = 2$ and $t = 0$ into equivalent $u$-values, or (ii) write $F$ as a function of $t$. We illustrate approach (ii):
+\begin{align*}
+F(u)
+=
+\frac{1}{3} u^{3} - u
+=
+\frac{1}{3} (1 - 2 t)^{3} - (1 - 2 t)
+\end{align*}
+We may use this last expression with the fundamental theorem of calculus. Continuing where we left off in equation \eqref{eq : ME3Q2b Intermediate},
+\begin{align*}
+\int_{0}^{2} (1 - 2 t)^{2} - 1 \spaceIntd \intd t
+&=
+-\frac{1}{2} \left(\left[\frac{1}{3} (1 - 2 (2))^{3} - (1 - 2 (2))\right] - \left[\frac{1}{3} (1 - 2 (0))^{3} - (1 - 2 (0))\right]\right)
+\\
+&=
+-\frac{1}{2} \left(\left[\frac{1}{3} (-3)^{3} - (-3)\right] - \left[\frac{1}{3} (1) - (1)\right]\right)
+\\
+&=
+-\frac{1}{2} \left([-9 + 3] - \left[-\frac{2}{3}\right]\right)
+\\
+&=
+\frac{8}{3}
+\end{align*}}% End solution.
+
+
+
+\pagebreak% Activate for solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q3c} (4 pt) $\displaystyle\int_{-3}^{3} \sqrt{9 - x^{2}} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+If we try to evaluate this integral using the fundamental theorem of calculus and our current integration techniques, then we will probably run into insurmountable hurdles. Leaving this approach, the only other techniques we know are lower- and upper-sum approximations, which won't help here because the definite integral is the \emph{exact} signed area under the curve; and finite geometry. Could we use finite geometry?
+
+Call the integrand $y$, that is, let
+\begin{align*}
+y
+=
+\sqrt{9 - x^{2}}
+\end{align*}
+Squaring both sides and rearranging, we get
+\begin{align*}
+x^{2} + y^{2}
+=
+9
+\end{align*}
+which is the equation of a circle with center $(0,0)$ and radius $3$. The positive square root in the original integrand corresponds to the function whose graph is the upper (think, positive) half of the circle. Recall that the definite integral asks for the signed area under this curve from $x = -3$ to $x = 3$. Thus the definite integral is the area of the top half of the circle, which is
+\begin{align*}
+\frac{1}{2} \pi r^{2}
+=
+\frac{1}{2} \pi (3)^{2}
+=
+\frac{9 \pi}{2}
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q3d} (4 pt) $\displaystyle\int_{-1}^{1} 16 x^{3} (1 + x^{4})^{3} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+We use the fundamental theorem of calculus to evaluate the integral. Thus our first step is to find an antiderivative $F(x)$ of the integrand, that is, to compute
+\begin{align}
+F(x)
+=
+\int 16 x^{3} (1 + x^{4})^{3} \spaceIntd \intd x%
+\label{eq : ME3Q3d Indefinite Integral}
+\end{align}
+with any choice of arbitrary constant $C$. As with the integral in part \ref{itm : ME3Q3b}, we could expand all the products in the integrand, then integrate term by term. However, as with the integral in part \ref{itm : ME3Q3b}, we will find it more convenient to use a change of variables. Let
+\begin{align}
+u
+=
+1 + x^{4}%
+\label{eq : ME3Q3d u}
+\end{align}
+Then
+\begin{align*}
+\frac{\intd u}{\intd x}
+=
+4 x^{3}
+\end{align*}
+which we may rewrite as
+\begin{align*}
+\intd u
+=
+4 x^{3} \spaceIntd \intd x
+\end{align*}
+Substituting these results into \eqref{eq : ME3Q3d Indefinite Integral}, we get
+\begin{align*}
+F(x)
+=
+\int 16 x^{3} (1 + x^{4})^{3} \spaceIntd \intd x
+=
+\int 4 (1 + x^{4})^{3} \left(4 x^{3} \spaceIntd \intd x\right)
+=
+4 \int u^{3} \spaceIntd \intd u
+\end{align*}
+We may quickly evaluate this integral (for example, using the ``power rule''):
+\begin{align*}
+F(x)
+=
+4 \left[\frac{1}{4} u^{4}\right]
+=
+u^{4}
+\end{align*}
+(Note that we have set the arbitrary constant $C$ equal to $0$, because for the fundamental theorem of calculus, we need only any antiderivative, not necessarily the most general one.) Using our definition \eqref{eq : ME3Q3d u} for $u$ to rewrite this in terms of the original variable $x$, we get
+\begin{align*}
+F(x)
+=
+(1 + x^{4})^{4}
+\end{align*}
+
+Returning to the original definite integral, we apply the fundamental theorem of calculus using our antiderivative $F$, obtaining
+\begin{align*}
+\int_{-1}^{1} 16 x^{3} (1 + x^{4})^{3} \spaceIntd \intd x
+&=
+F(1) - F(-1)
+\\
+&=
+\left[(1 + (1)^{4})^{4}\right] - \left[(1 + (-1)^{4})^{4}\right]
+\\
+&=
+\left[(2)^{4}\right]^{4} - \left[(2)^{4}\right]^{4}
+=
+0
+\end{align*}
+Note that we don't need to compute $(2^{4})^{4}$ here (and we certainly don't need to do it twice!). Whatever number it is, we're subtracting it from itself, so we end up with $0$.
+
+\textbf{Remark.} There's an elegant, general observation we can make in this exercise. Let $f(x)$ denote the original integrand, that is,
+\begin{align*}
+f(x)
+=
+16 x^{3} (1 + x^{4})^{3}
+\end{align*}
+Note that $f(x)$ is an odd function. Algebraically, being an odd function means that $f(-x) = -f(x)$, which we may check by direct evaluation:
+\begin{align*}
+f(-x)
+=
+16 (-x)^{3} (1 + (-x)^{4})^{3}
+=
+-16 x^{3} (1 + x^{4})^{3}
+=
+-f(x)
+\end{align*}
+Geometrically, being an odd function means that $f(x)$ is symmetric about the origin: Whatever $f(x)$ does to the right of $x = 0$, it does the same thing \emph{with the opposite sign} to the left of $x = 0$. If we think about what this implies for definite integrals of odd functions (consider also the toy examples at the end of this remark), then we realize that any definite integral of an odd function over an interval $[-a,a]$ symmetric about the origin must equal $0$. Whatever area is under the graph of an odd function on the interval $[-a,0]$, the same area with opposite sign is under the graph on the interval $[0,a]$. For any interval of the form $[-a,a]$, the two areas will always cancel exactly.
+
+Helpful toy examples of odd functions to keep in mind are $f(x) = x$ and $f(x) = \sin x$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% TOPIC : Fundamental theorem of calculus 1.0
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q4}}
+\label{sec : Math112 Spring2022 MockExam3 Q4}
+
+(8 pt) Use the fundamental theorem of calculus to compute the following derivatives.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q4a} (4 pt) $\displaystyle\frac{\intd}{\intd x} \int_{-2}^{x} \cos\left(e^{\sin \sqrt{t}}\right) \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Note that the lower bound of integration is a constant, and the upper bound of integration is simply $x$. Thus we may use a straightforward application of the fundamental theorem of calculus (version 1.0), which gives
+\begin{align*}
+\frac{\intd}{\intd x} \int_{-2}^{x} \cos\left(e^{\sin \sqrt{t}}\right) \spaceIntd \intd t
+=
+\cos\left(e^{\sin \sqrt{x}}\right)
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q4b} (4 pt) $\displaystyle\frac{\intd}{\intd x} \int_{\sqrt{x}}^{x^{2}} \frac{t^{2}}{1 + t^{2}} \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+In this exercise, the lower bound of integration is not a constant, and both the lower and upper bounds of integration are functions of $x$. We will use the fundamental theorem of calculus (version 2.0).
+
+Denote the integrand by
+\begin{align*}
+f(t)
+=
+\frac{t^{2}}{1 + t^{2}}
+\end{align*}
+Let $F(t)$ be an antiderivative of $f(t)$. Then by the fundamental theorem of calculus (version 2.0),
+\begin{align*}
+\int_{\sqrt{x}}^{x^{2}} \frac{t^{2}}{1 + t^{2}} \spaceIntd \intd t
+=
+F(x^{2}) - F(\sqrt{x})
+\end{align*}
+Therefore
+\begin{align*}
+\frac{\intd}{\intd x} \int_{\sqrt{x}}^{x^{2}} \frac{t^{2}}{1 + t^{2}} \spaceIntd \intd t
+&=
+\frac{\intd}{\intd x} \left[F(x^{2}) - F(\sqrt{x})\right]
+\\
+&=
+\frac{\intd}{\intd x} F(x^{2}) - \frac{\intd}{\intd x} F(\sqrt{x})
+\\
+&=
+F'(x^{2}) (2 x) - F'(\sqrt{x}) \left(\frac{1}{2 \sqrt{x}}\right)
+\\
+&=
+2 x f(x^{2}) - \frac{1}{2 \sqrt{x}} f(\sqrt{x})
+\\
+&=
+(2 x) \frac{x^{4}}{1 + x^{4}} - \left(\frac{1}{2 \sqrt{x}}\right) \frac{x}{1 + x}
+%\\
+%&=
+%\frac{2 x^{5}}{1 + x^{4}} - \frac{x}{2 \sqrt{x} (1 + x)}
+\end{align*}
+where in the second line we have used linearity of the derivative; in the third line we have used the chain rule, on both terms; in the fourth line we have used the fact that, by hypothesis, $F(t)$ is an antiderivative of $f(t)$, so $F'(t) = f(t)$; and in the fifth line we have evaluated $f$ at $t = x^{2}$ and $t = \sqrt{x}$, as appropriate.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% TOPIC : Cumulative area function
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q5}}
+\label{sec : Math112 Spring2022 MockExam3 Q5}
+
+(18 pt) Let $f : [-2,4] \rightarrow \reals$ be a piecewise function. A graph of $F(x) = \displaystyle\int_{-2}^{x} f(t) \spaceIntd \intd t$ is shown below.
+\begin{center}
+\includegraphics[scale=0.25]{\filePathGraphics Q5Graph.png}
+\end{center}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q5a} (4 pt) Over which intervals is $f$ positive? negative? equal to zero?
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+Note that in the definite integral that defines $F(x)$, the lower bound of integration is a constant, and the upper bound of integration is simply $x$. Thus a straightforward application of the fundamental theorem of calculus (version 1.0) gives
+\begin{align}
+F'(x)
+=
+\frac{\intd}{\intd x} F(x)
+=
+\frac{\intd}{\intd x} \int_{-2}^{x} f(t) \spaceIntd \intd t
+=
+f(x)%
+\label{eq : ME3Q5a F^(1)}
+\end{align}
+This equation says that the \emph{slope} of $F$ at $x$ equals the \emph{value} of $f$ at $x$. It follows that
+\begin{itemize}
+\item $f$ is positive on the intervals on which $F'$ is positive, that is, on the interval $(0,4)$.
+\item $f$ is negative on the intervals on which $F'$ is negative, that is, on the interval $(-2,-1)$.
+\item $f$ is zero on the intervals on which $F'$ is zero, that is, on the interval $(-1,0)$.
+\end{itemize}
+
+\textbf{Remark.} At this point in time, I am not concerned whether you write these intervals as open (as we have done above), closed (that is, including both endpoints), or whatever. I want you to understand how the fundamental theorem of calculus connects the \emph{slope} of the cumulative signed area function $F$ and the \emph{value} of the integrand $f$, and that you can correctly identify the intervals (without worrying about whether to include the endpoints).}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q5b} (4 pt) Over which intervals is $f$ increasing? decreasing? constant?
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+This question combines ideas we know. In terms of the derivative, what does it mean for $f$ to be increasing? It means $f'$ is positive. Similarly, $f$ is decreasing if and only if $f'$ is negative, and $f$ is constant if and only if $f'$ is zero.
+
+How does this help us? We don't know $f$, so how can we know $f'$? Well, we do know a little about $f$: It's used to define the cumulative signed area function $F$, and---critically---in part \ref{itm : ME3Q5a} we used the fundamental theorem of calculus (version 1.0) to obtain the relation
+\begin{align*}
+f(x)
+=
+F'(x)
+\end{align*}
+This is all we need to know about $f$. Differentiating both sides, we get
+\begin{align}
+f'(x)
+=
+F''(x)%
+\label{eq : ME3Q5b F^(2)}
+\end{align}
+Recall that, geometrically, the first derivative of a function corresponds to its slope (that is, whether the function is increasing or decreasing), and the second derivative of a function corresponds to its concavity. Thus equation \eqref{eq : ME3Q5b F^(2)} says that the \emph{slope} of $f$ equals the \emph{concavity} of $F$. And we can read the concavity of $F$ from the graph of $F$. Great! Doing so, we conclude
+\begin{itemize}
+\item $f$ is increasing when $f'$ is positive, which by \eqref{eq : ME3Q5b F^(2)} is equivalent to when $F''$ is positive, that is, when $F$ is concave up. This occurs on the interval $(0,2)$.
+\item $f$ is decreasing when $f'$ is negative, which by \eqref{eq : ME3Q5b F^(2)} is equivalent to when $F''$ is negative, that is, when $F$ is concave down. This occurs on the interval $(2,4)$.
+\item $f$ is constant when $f'$ is zero, which by \eqref{eq : ME3Q5b F^(2)} is equivalent to when $F''$ is zero, that is, when $F$ is neither concave up nor concave down. This occurs on the interval $(-2,0)$.
+\end{itemize}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q5c} (2 pt) What are the maximum and minimum values of $f$?
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+By \eqref{eq : ME3Q5a F^(1)}, the maximum value of $f$ corresponds to the maximum slope of $F$. This appears to be infinite, at the point $x = 2$. (I should have left this point out of the domain of $f$, and off the graph of $F$.)
+
+Similarly, the minimum value of $f$ corresponds to the minimum slope of $F$. This occurs at any point on the interval $(-2,0)$, where the slope of $F$, and hence the value of $f$, is $-2$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q5d} (2 pt) What is the average value of $f$ on the interval $[-2,4]$? (If it helps, you may assume that $F(4) = \sqrt{2}$.)
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+By definition, the average value of $f$ on the interval $[-2,4]$ is
+\begin{align*}
+\frac{1}{4 - (-2)} \int_{-2}^{4} f(t) \spaceIntd \intd t
+\end{align*}
+Using the definition of $F(x)$, we may rewrite this as
+\begin{align*}
+\frac{1}{6} F(4)
+=
+\frac{\sqrt{2}}{6}
+\end{align*}
+}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% TOPIC : Area between two graphs
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam3 Q6}}
+\label{sec : Math112 Spring2022 MockExam3 Q6}
+
+(12 pt) Consider the functions $f : \reals \rightarrow \reals$ and $g : \reals \rightarrow \reals$ given by
+\begin{align*}
+f(x)
+&=
+-x^{2} + 4 x
+&
+g(x)
+&=
+x
+\end{align*}
+respectively. A graph of $f$ and $g$ appears below.
+\begin{center}
+\includegraphics[scale=0.25]{\filePathGraphics Q6Graph.png}
+\end{center}
+This exercise explores the definite integral
+\begin{align*}
+\int_{0}^{3} f(x) - g(x) \spaceIntd \intd x
+\end{align*}
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME3Q6a} (4 pt) Evaluate $\int_{0}^{3} f(x) \spaceIntd \intd x$. That is, find the area between the graph of $f$ and the $x$-axis, from $x = 0$ to $x = 3$.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using the fundamental theorem of calculus, we compute
+\begin{align*}
+\int_{0}^{3} f(x) \spaceIntd \intd x
+&=
+\int_{0}^{3} -x^{2} + 4 x \spaceIntd \intd x
+\\
+&=
+\left[-\frac{1}{3} x^{3} + 2 x^{2}\right]_{x = 0}^{x = 3}
+\\
+&=
+\left[-\frac{1}{3} (3)^{3} + 2 (3)^{2}\right] - \left[-\frac{1}{3} (0)^{3} + 2 (0)^{2}\right]
+\\
+&=
+\left[-9 + 18\right] - \left[0\right]
+=
+9
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q6b} (4 pt) Evaluate $\int_{0}^{3} g(x) \spaceIntd \intd x$. That is, find the area between the graph of $g$ and the $x$-axis, from $x = 0$ to $x = 3$.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+As in part \ref{itm : ME3Q6a}, we may evaluate this integral using the fundamental theorem of calculus. Alternatively, we may use finite geometry: The area between the graph of $g$ and the $x$-axis from $x = 0$ to $x = 3$ is a triangle with base $3$ and height $3$, which lies above the $x$-axis. Thus
+\begin{align*}
+\int_{0}^{3} g(x) \spaceIntd \intd x
+=
+\frac{1}{2} (3) (3)
+=
+\frac{9}{2}
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME3Q6c} (4 pt) Recall that linearity of the integral implies that
+\begin{align}
+\int_{0}^{3} f(x) - g(x) \spaceIntd \intd x
+=
+\int_{0}^{3} f(x) \spaceIntd \intd x - \int_{0}^{3} g(x) \spaceIntd \intd x%
+\label{eq : ME3Q6c}
+\end{align}
+Use this to help explain, geometrically, why the area between the graphs of $f(x)$ and $g(x)$ equals $\int_{0}^{3} f(x) - g(x) \spaceIntd \intd x$.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Geometrically, equation \eqref{eq : ME3Q6c} says that if we want to find (i) the signed area under the graph of the function $f(x) - g(x)$ from $x = 0$ to $x = 3$, then we may (ii) compute the signed area under the graph of $f(x)$ from $x = 0$ to $x = 3$, and subtract the signed area under the graph of $g(x)$ from $x = 0$ to $x = 3$. If we look at these areas on the graph of $f$ and $g$ above, then we see that the area that remains after the subtraction in (ii) is precisely the area between the graphs of $f$ and $g$. Viewed in reverse, this says that the area between the graphs of $f$ and $g$ is given by the definite integral $\int_{0}^{3} f(x) - g(x) \spaceIntd \intd x$.
+
+\textbf{Remark.} Which graph is ``above'' the other determines whether we integrate $f(x) - g(x)$ or $g(x) - f(x)$. Also, depending on the geometry of the area between the graphs, we may find it more convenient to view $f$ and $g$ as functions of $y$, and integrate with respect to $y$ instead of with respect to $x$. We will discuss these nuances after Exam 3.}% End solution.

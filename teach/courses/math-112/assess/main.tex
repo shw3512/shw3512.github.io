@@ -1,0 +1,378 @@
+\documentclass[oneside,english,11pt]{article}
+\usepackage{geometry}
+%\geometry{a4paper}
+\geometry{letterpaper}
+\geometry{left=1in,top=1in,right=1in,bottom=1in,nohead}
+\setlength\parindent{0.25in}
+
+
+
+
+
+\newcommand{\aHandle}{ex}% Assessment handle.
+% Allowed values:
+% - ex = exam
+% - me = mock exam
+% - lq = long quiz
+% - rq = re-quiz
+% - sq = short quiz
+
+\newcommand{\aNumber}{04}% Assessment number.
+% Allowed values: one- or two-digit numbers (e.g., 00,01,02,...,99). Requiz has capital letter (e.g., A,B,C,...) after two-digit number.
+
+\newcommand{\aDate}{2022--04--30 (S)}% Assessment date.
+% Allowed values:
+% - Any text
+
+\newcommand{\showPledge}{0}% Show prompt for Honor Pledge.
+% Allowed values:
+% - 0 = Do not show
+% - 1 = Show
+
+\newcommand{\showSolutions}{0}% Show solutions?
+% Allowed values:
+% - 0 = Do not show
+% - 1 = Show
+
+
+
+% The following values are automatically set based on the values above.
+% (!!!) Update coding of conditional statements. `ifthen` package weak?
+
+\usepackage{ifthen}
+
+\ifthenelse{\equal{\aHandle}{ex}}{\newcommand{\aType}{Exam}}{}
+\ifthenelse{\equal{\aHandle}{lq}}{\newcommand{\aType}{Long quiz}}{}
+\ifthenelse{\equal{\aHandle}{me}}{\newcommand{\aType}{Mock Exam}}{}
+\ifthenelse{\equal{\aHandle}{rq}}{\newcommand{\aType}{Requiz}}{}
+\ifthenelse{\equal{\aHandle}{sq}}{\newcommand{\aType}{Short quiz}}{}
+
+\newcommand{\filePathAssessments}{\aHandle/tex/}% File path to folder containing assessment TeX files.
+\newcommand{\filePathGraphics}{\filePathAssessments\fileName -graphics/}% File path to folder containing graphics.
+\newcommand{\fileName}{\aNumber}% File name of assessment TeX document to typeset.
+%\newcommand{\createTitlePage}{#2}% Create title page? #1 = Yes, #2 = No.
+\newcommand{\headingSolution}{\paragraph}
+
+% When conditional is true, sets each section to begin on new page.
+%    Activates for exam-type assessments: ex
+%    Does not activate for quiz-type assessments: lq, sq
+\ifthenelse{\equal{\aHandle}{ex}}{\newcommand{\sectionbreak}{\clearpage}}{}
+
+% Display or do not display solutions.
+\ifthenelse{\equal{\showSolutions}{1}}{%
+  \newcommand{\spaceSolution}[2]{\headingSolution{Solution:}\fontSolution{#2}}
+}%
+{%
+  \newcommand{\spaceSolution}[2]{\vspace{#1}}
+}%
+
+
+
+%% Set each section to begin on new page.
+%%    Activate for assessment types: Exam, HalfExam, MockExam
+%%    Comment out for assessment types: Quiz
+%%\newcommand{\sectionbreak}{\clearpage}
+%
+%% Use first definition for assessment. Use second definition for solutions.
+%\newcommand{\spaceSolution}[2]{\vspace{#1}}
+%%\newcommand{\spaceSolution}[2]{\headingSolution{Solution:}\fontSolution{#2}}
+%
+%
+%
+%% The following values are automatically set based on the values above.
+%
+%\newcommand{\filePathAssessments}{\assessmentType tex/}% File path to folder containing exam or quiz TeX files.
+%\newcommand{\filePathGraphics}{\filePathAssessments\fileName -graphics/}% File path to folder containing graphics.
+%\newcommand{\fileName}{\assessmentType \assessmentNumber}% File name of exam or quiz TeX document to typeset.
+%%\newcommand{\createTitlePage}{#2}% Create title page? #1 = Yes, #2 = No.
+%\newcommand{\headingSolution}{\paragraph}
+
+
+
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amssymb}% Allows the use of various commands, including \succsim.
+\usepackage{amsthm}
+%\usepackage{bbm}% Allows the use of the command \mathbbm (for blackboard numbers).
+\usepackage[thinlines]{easytable}
+\usepackage{enumitem}% Allows the use of the optional argument [resume] in the \enumerate environment.
+%\usepackage{eurosym}% Allows use of the euro symbol via the command \euro.
+\usepackage{fancyhdr}
+%\usepackage{graphicx}
+%\usepackage[bbgreekl]{mathbbol}% Allows use of \mathbb command with Greek and lowercase Roman letters. Note that this package renders blackboard uppercase Roman letters differently than the amsfonts package does.
+\usepackage{mathrsfs}
+\usepackage{mathtools}% Allows the use of various math-mode commands and environments, such as \dcases. The 'mathtools' package is incompatible with the 'xfrac' package.
+%\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{multicol}% Allows the use of \multicols environment, permitting multiple columns in list environments (enumerate, itemize, etc.).
+%\usepackage{multirow}% Allows the use of \multirow command.
+%\usepackage{natbib}
+%   \bibpunct{(}{)}{;}{a}{,}{,}
+%\usepackage{pgffor}% Allows use of \foreach command (apparently \ifthenelse command as well).
+%\usepackage{tikz}
+\usepackage{titlesec}
+%\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+%\usepackage{xifthen}
+\usepackage{hyperref}% The hyperref package allows for internal and external hyperlinks. The hyperref package should be listed AFTER all other packages, according to WikiBooks.
+
+
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+
+
+% Defines formatting of hyperlinks.
+
+\definecolor{colorLink}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=colorLink,linkcolor=colorLink}
+
+
+
+
+
+\newcommand{\abs}[2][]{\left|#2\right|_{#1}}
+%\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\commentout}[1]{} % Defines a new command, \commentout{}, that allows user to comment out lines of the tex code containing carriage returns.
+\newcommand{\filePathChapters}{Chapters/}
+%\newcommand{\fontAlgebra}[1]{\mathcal{#1}}
+\newcommand{\fontBookTitle}[1]{\emph{#1}}
+%\newcommand{\fontCat}[1]{\mathcal{#1}}
+\newcommand{\fontDefWord}[1]{\textbf{#1}}
+\newcommand{\fontField}[1]{\mathbf{#1}}
+\newcommand{\fontHint}[1]{\emph{Hint:} #1}
+%\newcommand{\fontMatrix}[1]{\mathbf{#1}}
+\newcommand{\fontMyNotes}[1]{{\color{blue}{#1}}}
+\newcommand{\fontNeedsEdit}[1]{{\color{red}\emph{#1}}}
+\newcommand{\fontSolution}[1]{#1}%{{\color{blue}#1}}
+%\newcommand{\lectureDate}[3]{\paragraph{Key Ideas}\marginpar{\textbf{#1}\\#2}#3}
+%\newcommand{\lectureDate}[3]{\marginpar{\textbf{#1}\\#2}\begin{frameKeyIdeas}[#2]#3\end{frameKeyIdeas}}
+%\newcommand{\fontVector}[1]{\mathbf{#1}}
+%\newcommand{\fontVectorBetweenPoints}[1]{\vec{#1}}
+\newcommand{\lectureDate}[3]{\begin{frameKeyIdeas}[#2]#3\end{frameKeyIdeas}}
+%\newcommand{\norm}[2][]{\left\|#2\right\|_{#1}}
+%\newcommand{\order}[1]{\#\left(#1\right)}
+\newcommand{\titlePage}[2]{\createTitlePage}
+%\newcommand{\scalarProjection}[2]{\mathrm{comp}_{#2}\left(#1\right)}
+%\newcommand{\vectorProjection}[2]{\mathrm{proj}_{#2}\left(#1\right)}
+
+
+
+
+
+%% Defines exercise-level title formats.
+
+\titleformat%
+{\section}% Command
+%[runin]% Shape: runin, etc.
+{\Large\bfseries}%\sffamily}% Format: bfseries = bold, sffamily = sans serif
+{}% Label
+{0em}% Horizontal space from left margin
+{}% Before Code
+%[]% After code
+
+
+
+
+
+%\DeclareMathOperator{\adj}{adj}
+%\newcommand{\altGp}{A}
+%\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator*{\argmin}{arg\,min}
+%\DeclareMathOperator{\automorphisms}{Aut}
+\DeclareMathOperator{\averageValue}{MV}
+%\DeclareMathOperator{\balancedHull}{bHull}
+%\DeclareMathOperator{\boundary}{bd}
+%\DeclareMathOperator{\cardinality}{card}
+%\DeclareMathOperator{\characteristic}{char}
+%\newcommand{\complexes}{\fontField{C}}
+%\newcommand{\continuum}{\mathfrak{C}}
+%\DeclareMathOperator{\Conv}{Conv}
+%\DeclareMathOperator{\convergeas}{\overset{a.s.}{\rightarrow}}
+%\DeclareMathOperator{\convergeindist}{\overset{d}{\rightarrow}}
+%\DeclareMathOperator{\convergeinprob}{\overset{p}{\rightarrow}}
+%\newcommand{\convergenorm}{\overset{\| \cdot \|}{\longrightarrow}}
+%\DeclareMathOperator{\Cov}{Cov}
+%\DeclareMathOperator{\curl}{curl}
+%\newcommand{\curvature}{\kappa}
+\newcommand{\defeq}{:=}
+%\newcommand{\degrees}{^{\circ}}
+%\DeclareMathOperator{\dist}{dist}
+%\DeclareMathOperator{\divergence}{div}
+%\newcommand{\divides}{|}
+\DeclareMathOperator{\domain}{domain}
+%\newcommand{\eqdef}{=:}
+%\newcommand{\expectation}{\mathbb{E}}
+%\newcommand{\galois}{G}% Math italics!!!
+%\newcommand{\generalLinear}{GL}
+%\newcommand{\gradient}{\nabla}
+%\newcommand{\hessian}{H}
+%\DeclareMathOperator{\Id}{Id}
+%\DeclareMathOperator{\identityMap}{Id}
+%\DeclareMathOperator{\im}{im}
+%\newcommand{\indicatorFunction}{\mathbf{1}}
+\newcommand{\intd}{\mathrm{d}}
+%\newcommand{\integers}{\fontField{Z}}
+%\newcommand{\integersNonnegative}{\integers_{\geq 0}}
+%\newcommand{\integersPositive}{\integers_{> 0}}
+%\DeclareMathOperator{\interior}{int}
+%\newcommand{\isomorphic}{\cong}
+%\DeclareMathOperator{\jacobian}{J}
+%\newcommand{\levelSet}[2]{LS_{#1}\left(#2\right)}
+%\newcommand{\linearization}[2]{L_{#1}\left(#2\right)}
+%\newcommand{\matrixGroup}{M}
+%\DeclareMathOperator{\median}{median}
+%\newcommand{\naturals}{\fontField{N}}
+%\newcommand{\normal}{\triangleleft}
+%\newcommand{\normaleq}{\trianglelefteq}
+%\newcommand{\notDivides}{{}\hspace{-1mm}\not\hspace{-.01em}\divides{}}
+%\DeclareMathOperator{\nullspace}{Null}
+%\newcommand{\orbit}{O}
+%\newcommand{\powerset}{\mathcal{P}}
+%\DeclareMathOperator{\probability}{\text{Prob}}
+%\newcommand{\projective}{\field{P}}
+%\newcommand{\projectiveGeneralLinear}{P\hspace{-.7mm}\generalLinear{}}
+%\DeclareMathOperator{\Rank}{Rank}
+%\newcommand{\rationals}{\fontField{Q}}
+\newcommand{\reals}{\fontField{R}}
+%\newcommand{\realsNonnegative}{\reals_{\geq 0}}
+\newcommand{\realsPositive}{\reals_{> 0}}
+\newcommand{\seteq}{\underset{\text{set}}{=}}
+\newcommand{\spaceIntd}{\;}
+%\DeclareMathOperator{\Span}{Span}
+%\newcommand{\specialLinear}{SL}
+%\newcommand{\st}{\, | \,}
+%\DeclareMathOperator{\stab}{Stab}
+%\DeclareMathOperator{\starlikeHull}{sHull}
+%\newcommand{\subgroup}{<}
+%\newcommand{\subgroupeq}{\leq}
+%\DeclareMathOperator{\support}{supp}
+%\newcommand{\surfaceArea}{A}
+%\newcommand{\symGp}{S}
+%\DeclareMathOperator{\topologicalDimension}{top \, dim}
+%\newcommand{\transpose}{t}
+%\DeclareMathOperator{\var}{Var}
+%\DeclareMathOperator{\xor}{\;xor\;}
+
+
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}% Theorem environments defined after this command have non-italicized text by default.
+%\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}{Exercise}[section]
+
+
+
+%\numberwithin{equation}{section}
+%\numberwithin{figure}
+%\numberwithin{table}
+
+
+
+
+
+%\pagestyle{fancy}
+%
+%\fancyhf{}% Clears any existing defaults.
+%
+%%\setlength{\oddsidemargin}{0pt}
+%%\setlength{\topmargin}{0pt}
+%\setlength{\headheight}{26pt}% Suggested headheight values: 14pt with 1 header line, 26pt with 2 header lines.
+%\setlength{\headsep}{22pt}
+%%\setlength{\textheight}{660pt}% Use with "a4paper" geometry.
+%\setlength{\textheight}{620pt}% Use with "letterstyle" geometry.
+%%\setlength{\textwidth}{500pt}
+%\setlength{\marginparsep}{22pt}
+%\setlength{\marginparwidth}{100pt}% Recommended settings: 54pt for 1in margins, 100pt for 2in margins.
+%\setlength{\footskip}{30pt}
+%%\setlength{\marginparpush}{5pt}
+%%\setlength{\hoffset}{0pt}
+%%\setlength{\voffset}{0pt}
+%
+%\lhead{Vector Calculus\\Stephen Wolff}
+%\chead{}
+%\rhead{Rice University\\Fall 2016}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+
+
+% Title specification. Carriage returns can be included in any of the arguments by using the standard \\ command. The \thanks{} command, if desired, should be included inside the author argument, after the corresponding author; the \thanks{} command can be used several times within the author argument if different authors wish to thank different persons.
+
+%\title{Math 112\\Exam \assessmentNumber}% For use with official past exams only.
+\title{Math 112\\\aType{} \aNumber}
+\author{}%
+\date{\aDate}% Activate to include a given date (the argument) or no date (if empty) after the title and author. If not activated, current date is printed.
+
+
+
+
+
+% Document begins here.
+
+
+
+\begin{document}
+
+\pagenumbering{gobble}% Turns off page numbering
+
+% Name, date, pledge
+\maketitle
+
+\begin{center}
+\begin{tabular}{r@{: }l}
+Your name	&	\line(1,0){200}%	\\[22pt]
+%Honor pledge	&	
+\end{tabular}
+\end{center}
+
+\IfFileExists{\filePathAssessments \fileName -instr}{%
+   \vspace{1in}\noindent\textbf{Instructions}\begin{quote}\input{\filePathAssessments \fileName -instr}\end{quote}%
+}{}%
+
+\IfFileExists{\filePathAssessments \fileName -grade}{%
+   \newpage\input{\filePathAssessments \fileName -grade}%
+}{}% If file does not exist, then do nothing.
+
+\newpage
+
+%\pagenumbering{arabic}
+
+\input{\filePathAssessments \fileName}
+
+
+
+%\bibliographystyle{authordate1}
+%\bibliography{Bibliography}
+
+
+
+\end{document}

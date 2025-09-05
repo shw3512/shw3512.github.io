@@ -1,0 +1,81 @@
+%
+%
+%   LQuiz 05 : 2022-01-25 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+Consider the function
+\begin{align*}
+f : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+x^{3} + 3 x^{2} - 9 x + 4
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ05 Linearization} (3 pt) Compute the linearization of (aka linear approximation to) $f$ at $x = 2$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By definition, the linearization of $f$ at $x = 2$ is the function $L : \reals \rightarrow \reals$ given by
+\begin{align}
+L(x)
+=
+f(2) + f'(2) (x - 2)%
+\label{eq : LQ05 Linearization 0}
+\end{align}
+We compute
+\begin{align*}
+f(2)
+=
+6
+&&
+f'(x)
+=
+3 x^{2} + 6 x - 9
+&&
+f'(2)
+=
+15
+\end{align*}
+Substituting these results into \eqref{eq : LQ05 Linearization 0}, we conclude that the rule of assignment for $L$ is
+\begin{align}
+L(x)
+=
+6 + 15 (x - 2)
+=
+15 x - 24%
+\label{eq : LQ05 Linearization 1}
+\end{align}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ05 Approximation Error} (1 pt) Use your linearization from part \ref{itm : LQ05 Linearization} to approximate the value $f(2.1)$. Given that the actual value is $f(2.1) = 7.591$, find the error in this approximation.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Using \eqref{eq : LQ05 Linearization 1},% Begin footnote.
+\footnote{It may be easier to compute with the first expression in \eqref{eq : LQ05 Linearization 1}, rather than the second, ``simplified'' one.} % End footnote.
+we compute
+\begin{align*}
+L(2.1)
+=
+7.5
+\end{align*}
+The error $\varepsilon$ in this approximation is% Begin footnote.
+\footnote{The negative sign simply indicates that our estimate $L(2.1)$ is below the actual value $f(2.1)$. Taking the absolute value gives the magnitude (size) of the error, without its direction (too small or too large).}% End footnote.
+\begin{align*}
+\varepsilon
+=
+L(2.1) - f(2.1)
+=
+7.5 - 7.591
+=
+-0.091
+\end{align*}
+(Question: Can we predict, with accuracy, the direction of the approximation error? I claim that in this exercise, we can use certain features of $f$ to deduce with certainty that our approximation will be too small, i.e. that $L(2.1) < f(2.1)$. How?)}% End solution.
