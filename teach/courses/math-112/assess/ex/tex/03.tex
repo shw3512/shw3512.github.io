@@ -1,0 +1,918 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% TOPIC : True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q1}}
+\label{sec : Math112 Spring2022 Exam3 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+\begin{figure}[t]
+\centering
+\begin{tabular}{*{3}{c}}
+\includegraphics[scale=0.2]{\filePathGraphics Q1abGraph.png}
+&
+\hspace{0.5in}
+&
+\includegraphics[scale=0.2]{\filePathGraphics Q1cdGraph.png}
+\\
+Graph of $g(x)$ for parts \ref{itm : E3Q1a}--\ref{itm : E3Q1b}.
+&
+&
+Graph of $F(x)$ for parts \ref{itm : E3Q1c}--\ref{itm : E3Q1e}.
+\end{tabular}
+\caption{Graphs for Exercise \ref{sec : Math112 Spring2022 Exam3 Q1}.}%
+\label{fig : E3Q1 Graphs}%
+\end{figure}
+
+\vspace{0.25in}
+
+For parts \ref{itm : E3Q1a}--\ref{itm : E3Q1b}, let $g : \reals \rightarrow \reals$ be the function given by $g(x) = \sin x$, graphed in Figure \ref{fig : E3Q1 Graphs}.
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q1a} (2 pt) $\displaystyle\int_{-\pi}^{\pi} g(x) \spaceIntd \intd x = 0$
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. Ignoring $+/-$ signs for the moment, the area between the graph of $g$ and the $x$-axis on the interval $[-\pi,0]$ equals the area between the graph of $g$ and the $x$-axis on the interval $[0,\pi]$. Now considering $+/-$ signs, the first area is below the $x$-axis, so negative; and the second area is above the $x$-axis, so positive. Thus the areas exactly cancel. Formally,
+\begin{align*}
+\int_{-\pi}^{0} g(x) \spaceIntd \intd x
+=
+-\int_{0}^{\pi} g(x) \spaceIntd \intd x
+\end{align*}
+so
+\begin{align*}
+\int_{-\pi}^{\pi} g(x) \spaceIntd \intd x
+=
+\int_{-\pi}^{0} g(x) \spaceIntd \intd x + \int_{0}^{\pi} g(x) \spaceIntd \intd x
+=
+-\int_{0}^{\pi} g(x) \spaceIntd \intd x + \int_{0}^{\pi} g(x) \spaceIntd \intd x
+=
+0
+\end{align*}
+Note that, if desired, we may evaluate the definite integral using the fundamental theorem of calculus, as we are given the rule of assignment for $g$.}% End solution.
+
+
+
+\newpage% Activate for solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1b} (2 pt) For every positive real number $a$, $\displaystyle\int_{-a}^{a} g(x) \spaceIntd \intd x = 0$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. The geometric argument given in part \ref{itm : E3Q1a} generalizes to the definite integral here. Alternatively, also as in part \ref{itm : E3Q1a}, we may use the fundamental theorem of calculus, and the fact that $\cos(-a) = \cos(a)$, to evaluate the definite integral. Alternatively---and related to the previous two approaches---we may note that $g(x) = \sin x$ is an odd function, that is,
+\begin{align*}
+\sin(-x)
+=
+\sin(x)
+\end{align*}
+The integral of an odd function over any interval symmetric about $0$ equals $0$.}% End solution.
+
+
+
+\vspace{0.25in}
+
+For parts \ref{itm : E3Q1c}--\ref{itm : E3Q1e}, let $f : [0,2 \pi] \rightarrow \reals$ be a continuous function, and let $F : [0,2 \pi] \rightarrow \reals$ be the cumulative signed area function graphed in Figure \ref{fig : E3Q1 Graphs}, given by
+\begin{align*}
+F(x)
+=
+\int_{0}^{x} f(t) \spaceIntd \intd t
+\end{align*}
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1c} (2 pt) For all $x$ in the range $0 \leq x \leq \pi$, $f(x) > 0$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. By the fundamental theorem of calculus,
+\begin{align*}
+F'(x)
+=
+\frac{\intd}{\intd x} \int_{0}^{x} f(t) \spaceIntd \intd t
+=
+f(x)
+\end{align*}
+That is, the \emph{value} of $f$ at $x$ equals the \emph{slope} of the graph of $F$ at $x$. From the graph of $F$ in Figure \ref{fig : E3Q1 Graphs}, we observe that the slope of $F$ is negative for $x \in (\frac{\pi}{2},\frac{3 \pi}{2})$. Thus, $f(x)$ is negative for all $x \in (\frac{\pi}{2},\pi)$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1d} (2 pt) On the interval $[0,2 \pi]$, $f(x) = 0$ at exactly two points.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. Recall the relation $f(x) = F'(x)$ obtained in part \ref{itm : E3Q1c}. From the graph of $F$ in Figure \ref{fig : E3Q1 Graphs}, we observe that $F'(x) = 0$ at exactly two points on the interval $[0,2 \pi]$---namely, at $x = \frac{\pi}{2}$ and $x = \frac{3 \pi}{2}$. Thus $f(x) = 0$ at exactly these points.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1e} (2 pt) The average value of $f$ on the interval $[0,2 \pi]$ equals $0$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. By definition, the average value of $f$ on the interval $[0,2 \pi]$ equals
+\begin{align*}
+\frac{1}{2 \pi - 0} \int_{0}^{2 \pi} f(t) \spaceIntd \intd t
+\end{align*}
+Using the definition of $F$, we may write this as
+\begin{align*}
+\frac{1}{2 \pi} F(2 \pi)
+\end{align*}
+From the graph of $F$, we see that $F(2 \pi) = 0$. Hence this last expression for average value equals $0$.}% End solution.
+
+
+
+% Viewing the chain rule (from differential calculus) from the point of view of antiderivatives gives the integration technique of change of variables. Similarly, viewing the product rule (from differential calculus) from the point of view of antiderivatives gives the integration technique of integration by parts.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% TOPIC : Computing indefinite integrals (includes change of variables, integration by parts)
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q2}}
+\label{sec : Math112 Spring2022 Exam3 Q2}
+
+(12 pt) Evaluate each indefinite integral. Clearly communicate your approach.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q2a} (4 pt) $\displaystyle\int e^{2 x} + 3 x^{2} - 4 x \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Using linearity of the integral, we compute
+\begin{align*}
+\int e^{2 x} + 3 x^{2} - 4 x \spaceIntd \intd x
+&=
+\int e^{2 x} \spaceIntd \intd x + 3 \int x^{2} \spaceIntd \intd x - 4 \int x \spaceIntd \intd x
+\\
+&=
+\frac{1}{2} e^{2 x} + 3 \left[\frac{1}{3} x^{3}\right] - 4 \left[\frac{1}{2} x^{2}\right] + C
+\\
+&=
+\frac{1}{2} e^{2 x} + x^{3} - 2 x^{2} + C
+\end{align*}
+where to evaluate the integral of $e^{2 x}$, we have used guess-and-check (or change of variables); and to evaluate the integrals of $x^{2}$ and $x$, we have used the power rule. Remember to include ``$+ C$'', because the indefinite integral is the most-general antiderivative.
+
+We can check our result, call it $F(x)$, by verifying that its derivative equals the original integrand, call it $f(x)$:
+\begin{align*}
+F'(x)
+=
+\frac{1}{2} e^{2 x} (2) + 3 x^{2} - 4 x + 0
+=
+e^{2 x} + 3 x^{2} - 4 x
+=
+f(x)
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q2b} (4 pt) $\displaystyle\int t^{2} (\sin(t^{3}))^{2} \cos(t^{3}) \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We use a change of variables. Let
+\begin{align*}
+u
+=
+\sin(t^{3})
+\end{align*}
+Then by the chain rule,
+\begin{align*}
+u'
+=
+3 t^{2} \cos(t^{3})
+\end{align*}
+so
+\begin{align*}
+\frac{1}{3} \intd u
+=
+t^{2} \cos(t^{3})
+\end{align*}
+Thus we may rewrite the original integral as
+\begin{align*}
+\int t^{2} (\sin(t^{3}))^{2} \cos(t^{3}) \spaceIntd \intd t
+=
+\int (\sin(t^{3}))^{2} \left(t^{2} \cos(t^{3}) \spaceIntd \intd t\right)
+=
+\int u^{2} \left(\frac{1}{3} \spaceIntd \intd u\right)
+=
+\frac{1}{3} \int u^{2} \spaceIntd \intd u
+\end{align*}
+Evaluating this integral, and using the definition of $u$ to write the result in terms of the original variable $t$, we get
+\begin{align*}
+\frac{1}{9} u^{3} + C
+=
+\frac{1}{9} \left(\sin(t^{3})\right)^{3} + C
+\end{align*}
+We check:
+\begin{align*}
+\frac{\intd}{\intd t} \left(\frac{1}{9} \left(\sin(t^{3})\right)^{3} + C\right)
+=
+\frac{1}{9} (3) \left((\cos(t^{3})\right)^{2} \cos(t^{3}) (3 t^{2})
+=
+\left((\cos(t^{3})\right)^{2} \cos(t^{3}) t^{2}
+\end{align*}
+which equals the original integrand, as required.}% End solution.
+
+
+
+\newpage% Activate for solutions only.
+
+\begin{enumerate}[label=(\alph*)]
+\setcounter{enumi}{2}
+\item\label{itm : E3Q2c} (4 pt) $\displaystyle\int x^{2} \cos x \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2.75in}{% Begin solution.
+We apply integration by parts. Let
+\begin{align*}
+f(x)
+&=
+x^{2}
+&
+g'(x)
+&=
+\cos x
+\end{align*}
+so
+\begin{align*}
+f'(x)
+&=
+2 x
+&
+g(x)
+&=
+\sin x
+\end{align*}
+Thus integration by parts gives
+\begin{align}
+\int x^{2} \cos x \spaceIntd \intd x
+=
+x^{2} \sin x - \int (2 x) \sin x \spaceIntd \intd x
+=
+x^{2} \sin x - 2 \int x \sin x \spaceIntd \intd x%
+\label{eq : E3Q2c IbP Intermediate}
+\end{align}
+To evaluate the new integral, we again use integration by parts. Let
+\begin{align*}
+f(x)
+&=
+x
+&
+g'(x)
+&=
+\sin x
+\end{align*}
+so
+\begin{align*}
+f'(x)
+&=
+1
+&
+g(x)
+&=
+-\cos x
+\end{align*}
+Thus integration by parts gives
+\begin{align*}
+\int x \sin x \spaceIntd \intd x
+=
+x (-\cos x) - \int (-\cos x) (1) \spaceIntd \intd x
+=
+-x \cos x + \int \cos x \spaceIntd \intd x
+=
+-x \cos x + \sin x + C
+\end{align*}
+Substituting this result into the last expression in \eqref{eq : E3Q2c IbP Intermediate}, we get
+\begin{align*}
+\int x^{2} \cos x \spaceIntd \intd x
+=
+x^{2} \sin x - 2 \left(-x \cos x + \sin x + C\right)
+=
+x^{2} \sin x + 2 x \cos x - 2 \sin x - 2 C
+\end{align*}
+If desired, we may replace ``$-2 C$'' with the simpler ``$+ C$'' (both are arbitrary constants):
+\begin{align*}
+\int x^{2} \cos x \spaceIntd \intd x
+=
+x^{2} \sin x + 2 x \cos x - 2 \sin x + C
+\end{align*}
+
+Calling our final result $F(x)$, we check
+\begin{align*}
+F'(x)
+=
+\left(2 x \sin x + x^{2} \cos x\right) + \left(2 \cos x - 2 x \sin x\right) - 2 \cos x + 0
+=
+x^{2} \cos x
+\end{align*}
+which is the original integrand, as required.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% TOPIC : Fundamental theorem of calculus 2.0
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q3}}
+\label{sec : Math112 Spring2022 Exam3 Q3}
+
+(12 pt) Evaluate each definite integral. Clearly communicate your approach.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q3a} (4 pt) $\displaystyle\int_{0}^{1} (2 x - 1)^{3} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We'll use the fundamental theorem of calculus. Thus we need an antiderivative $F(x)$ of the integrand $f(x)$. We can find an antiderivative $F(x)$ by evaluating the indefinite integral
+\begin{align}
+\int (2 x - 1)^{3} \spaceIntd \intd x%
+\label{eq : E3Q3a Indefinite Integral}
+\end{align}
+and setting the constant of integration, $C$, equal to any value we want. (The value $C = 0$ is convenient.)
+
+Approach 1. To evaluate the indefinite integral \eqref{eq : E3Q3a Indefinite Integral}, we may multiply out the integrand and evaluate the resulting polynomial term-by-term:
+\begin{align*}
+\int (2 x - 1)^{3} \spaceIntd \intd x
+&=
+\int 8 x^{3} - 12 x^{2} + 6 x - 1 \spaceIntd \intd x
+\\
+&=
+8 \int x^{3} \spaceIntd \intd x - 12 \int x^{2} \spaceIntd \intd x + 6 \int x \spaceIntd \intd x - \int 1 \spaceIntd \intd x
+\\
+&=
+8 \left[\frac{1}{4} x^{4}\right] - 12 \left[\frac{1}{3} x^{3}\right] + 6 \left[\frac{1}{2} x^{2}\right] - x + C
+\\
+&=
+2 x^{4} - 4 x^{3} + 3 x^{2} - x + C
+\end{align*}
+(Remember that we can always check our answer, by differentiating.) This is the most-general antiderivative of $f(x)$. Let $F(x)$ be the particular antiderivative of $f(x)$ that we get by setting $C = 0$, that is,
+\begin{align}
+F_{1}(x)
+=
+2 x^{4} - 4 x^{3} + 3 x^{2} - x%
+\label{eq : E3Q3a Antiderivative From Multiply Out}
+\end{align}
+
+Approach 2. To evaluate the indefinite integral \eqref{eq : E3Q3a Indefinite Integral}, we may use a change of variables. Let
+\begin{align*}
+u
+=
+2 x - 1
+\end{align*}
+Then
+\begin{align*}
+\frac{\intd u}{\intd x}
+=
+u'
+&=
+2 x
+&
+&\Leftrightarrow
+&
+\frac{1}{2} \intd u
+&=
+\intd x
+\end{align*}
+Using these results, we may rewrite the original indefinite integral \eqref{eq : E3Q3a Indefinite Integral} as
+\begin{align*}
+\int u^{3} \left(\frac{1}{2} \spaceIntd \intd u\right)
+=
+\frac{1}{2} \int u^{3} \spaceIntd \intd u
+\end{align*}
+This last integral we may quickly evaluate using the power rule:
+\begin{align*}
+=
+\frac{1}{2} \left[\frac{1}{4} u^{4} + C_{0}\right]
+=
+\frac{1}{8} u^{4} + C
+\end{align*}
+where in the first expression $C_{0}$ is an arbitrary constant, and in the second expression we have set $C = \frac{1}{2} C_{0}$. (All we're doing here is renaming arbitrary constants. The important point is not the arithmetic accounting, but rather to remember to include ``$+ C$'' at the very end, when evaluating indefinite integrals.) Using our original definition of $u$ to rewrite this result in terms of $x$, and setting $C = 0$, we obtain the particular antiderivative
+\begin{align}
+F_{2}(x)
+=
+\frac{1}{8} (2 x - 1)^{4}%
+\label{eq : E3Q3a Antiderivative From Change Of Variables}
+\end{align}
+This looks different from the particular antiderivative \eqref{eq : E3Q3a Antiderivative From Multiply Out} that we computed in Approach 1. It is different---but only by a constant, and antiderivatives are only determined up to constants! More precisely, multiplying out \eqref{eq : E3Q3a Antiderivative From Change Of Variables}, we find
+\begin{align*}
+F_{2}(x)
+=
+\frac{1}{8} \left(16 x^{4} - 32 x^{3} + 24 x^{2} - 8 x + 1\right)
+=
+2 x^{4} - 4 x^{3} + 3 x^{2} - x + \frac{1}{8}
+\end{align*}
+Comparing this to $F_{1}(x)$ in \eqref{eq : E3Q3a Antiderivative From Multiply Out}, we see that $F_{1}(x)$ and $F_{2}(x)$ differ by a constant---as two different antiderivatives of $f(x)$ are allowed to do.
+
+We may use any antiderivative of $f(x)$---$F_{1}(x)$, or $F_{2}(x)$, or any other---to implement the fundamental theorem of calculus and evaluate the original definite integral. If we use $F_{2}(x)$, we get
+\begin{align*}
+\int_{0}^{1} (2 x - 1)^{3} \spaceIntd \intd x
+=
+F_{2}(1) - F_{2}(0)
+=
+\left[\frac{1}{8} (2 (1) - 1)^{4}\right] - \left[\frac{1}{8} (2 (0) - 1)^{4}\right]
+=
+\frac{1}{8} (1)^{4} - \frac{1}{8} (-1)^{4}
+=
+0
+\end{align*}
+If instead we use $F_{1}(x)$, we get
+\begin{align*}
+\int_{0}^{1} (2 x - 1)^{3} \spaceIntd \intd x
+=
+F_{1}(1) - F_{1}(0)
+=
+\left[2 - 4 + 3 - 1\right] - \left[0\right]
+=
+0
+\end{align*}%
+No matter what antiderivative of $f$ we use in the fundamental theorem, we will get the same result.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q3b} (4 pt) $\displaystyle\int_{0}^{4} \sqrt{4 x - x^{2}} \spaceIntd \intd x$
+
+\fontHint{Set the integrand equal to $y$. Massage this equation into the form $(x - a)^{2} + (y - b)^{2} = r^{2}$, an equation of a circle with center $(a,b)$ and radius $r$. Use geometry to deduce the value of the integral.}
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+Following the hint, call the integrand $y$:
+\begin{align*}
+y
+=
+\sqrt{4 x - x^{2}}
+\end{align*}
+Squaring both sides of this equation, then moving all terms to the left, we get
+\begin{align*}
+x^{2} - 4 x + y^{2}
+=
+0
+\end{align*}
+To complete the square for the $x$ terms, we need to add $4$ to the left, and hence the right, side of the equation. This gives
+\begin{align*}
+x^{2} - 4 x + 4 + y^{2}
+&=
+4
+\\
+(x - 2)^{2} + y^{2}
+&=
+2^{2}
+\end{align*}
+This is the equation of a circle with center $(2,0)$ and radius $2$. Sketching the graph of this circle in the $xy$-plane, this circle has a diameter on the $x$-axis, with endpoints at $x = 0$ and $x = 4$. The integrand is the \emph{positive} square root, which corresponds to the \emph{upper} half of the circle. Thus the original definite integral asks for the area between the upper half of this circle and the $x$-axis. This area is positive and half the area of a full circle, that is,
+\begin{align*}
+\int_{0}^{4} \sqrt{4 x - x^{2}} \spaceIntd \intd x
+=
+\frac{1}{2} \pi r^{2}
+=
+\frac{1}{2} \pi (2)^{2}
+=
+2 \pi
+\end{align*}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q3c} (4 pt) $\displaystyle\int_{0}^{2} (x^{2} - 1) (x^{3} - 3 x)^{3} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We evaluate the definite integral using the fundamental theorem of calculus. First, we need to find an (any!) antiderivative of the integrand:
+\begin{align*}
+\int (x^{2} - 1) (x^{3} - 3 x)^{3} \spaceIntd \intd x
+\end{align*}
+We could multiply everything out and integrate the resulting polynomial term-by-term, but first let's see if a change of variables will make our lives easier. Let
+\begin{align*}
+u
+=
+x^{3} - 3 x
+\end{align*}
+Then
+\begin{align*}
+\frac{\intd u}{\intd x}
+=
+u'
+=
+3 x^{2} - 3
+\end{align*}
+so
+\begin{align*}
+\intd u
+&=
+(3 x^{2} - 3) \intd x
+=
+3 (x^{2} - 1) \intd x
+&
+&\Leftrightarrow
+&
+(x^{2} - 1) \intd x
+&=
+\frac{1}{3} \intd u
+\end{align*}
+Using these expressions, we may rewrite the original indefinite integral as
+\begin{align*}
+\int (x^{2} - 1) (x^{3} - 3 x)^{3} \spaceIntd \intd x
+=
+\frac{1}{3} \int u^{3} \spaceIntd \intd u
+\end{align*}
+Evaluating this integral, we find
+\begin{align*}
+\frac{1}{3} \left(\frac{1}{4} u^{4}\right)
+=
+\frac{1}{12} u^{4}
+=
+\frac{1}{12} (x^{3} - 3 x)^{4}
+\end{align*}
+where we have set the arbitrary constant $C$ equal to $0$, because we need only an (any!) antiderivative, not the most-general one.
+
+Call our antiderivative $F(x)$. (Note that we can check that our antiderivative is valid, by checking that $F'(x)$ equals the original integrand.) Returning to the original definite integral, applying the fundamental theorem of calculus, we find
+\begin{align*}
+\int_{0}^{2} (x^{2} - 1) (x^{3} - 3 x)^{3} \spaceIntd \intd x
+&=
+F(2) - F(0)
+\\
+&=
+\left[\frac{1}{12} ((2)^{3} - 3 (2))^{4}\right] - \left[\frac{1}{12} ((0)^{3} - 3 (0))^{4}\right]
+\\
+&=
+\left[\frac{1}{12} (2)^{4}\right] - [0]
+\\
+&=
+\frac{4}{3}
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% TOPIC : Fundamental theorem of calculus 1.0
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q4}}
+\label{sec : Math112 Spring2022 Exam3 Q4}
+
+(8 pt) Use the fundamental theorem of calculus to compute each derivative. Assume $x \geq 0$.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q4a} (4 pt) $\displaystyle\frac{\intd}{\intd x} \int_{0}^{x} e^{-t^{2}} \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Note that the lower bound of integration is a constant, and the upper bound of integration is simply $x$. Thus we may use a straightforward application of the fundamental theorem of calculus (version 1.0), which gives
+\begin{align*}
+\frac{\intd}{\intd x} \int_{0}^{x} e^{-t^{2}} \spaceIntd \intd t
+=
+e^{-x^{2}}
+\end{align*}%
+
+Alternatively, we may solve this exercise in the general framework. Call the integrand $f(t) = e^{-t^{2}}$, and let $F(t)$ be an antiderivative of $f(t)$. (Thus, by definition, $F'(t) = f(t)$.) By the fundamental theorem of calculus (version 2.0),
+\begin{align*}
+\int_{0}^{x} e^{-t^{2}} \spaceIntd \intd t
+=
+F(x) - F(0)
+\end{align*}
+Therefore
+\begin{align*}
+\frac{\intd}{\intd x} \int_{0}^{x} e^{-t^{2}} \spaceIntd \intd t
+=
+\frac{\intd}{\intd x} \left[F(x) - F(0)\right]
+=
+\frac{\intd}{\intd x} [F(x)] - \frac{\intd}{\intd x} [F(0)]
+=
+F'(x) (1) - 0
+=
+f(x)
+=
+e^{-x^{2}}
+\end{align*}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q4b} (4 pt) $\displaystyle\frac{\intd}{\intd x} \int_{x^{2}}^{4 x^{2}} \sin(\sqrt{t}) \spaceIntd \intd t$
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+In this exercise, the lower bound of integration is not a constant, and both the lower and upper bounds of integration are functions of $x$. We will use the fundamental theorem of calculus (version 2.0).
+
+Denote the integrand by
+\begin{align*}
+f(t)
+=
+\sin(\sqrt{t})
+\end{align*}
+Let $F(t)$ be an antiderivative of $f(t)$. Then by the fundamental theorem of calculus (version 2.0),
+\begin{align*}
+\int_{x^{2}}^{4 x^{2}} \sin(\sqrt{t}) \spaceIntd \intd t
+=
+F(4 x^{2}) - F(x^{2})
+\end{align*}
+Therefore
+\begin{align*}
+\frac{\intd}{\intd x} \int_{x^{2}}^{4 x^{2}} \sin(\sqrt{t}) \spaceIntd \intd t
+&=
+\frac{\intd}{\intd x}\left[F(4 x^{2}) - F(x^{2})\right]
+\\
+&=
+\frac{\intd}{\intd x} \left[F(4 x^{2})\right] - \frac{\intd}{\intd x} \left[F(x^{2})\right]
+\\
+&=
+8 x F'(4 x^{2}) - 2 x F'(x^{2})
+\\
+&=
+8 x f(4 x^{2}) - 2 x f(x^{2})
+\\
+&=
+8 x \sin(\sqrt{4 x^{2}}) - 2 x \sin(\sqrt{x^{2}})
+\\
+&=
+8 x \sin(2 x) - 2 x \sin(x)
+\end{align*}%
+}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% TOPIC : Cumulative area function
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q5}}
+\label{sec : Math112 Spring2022 Exam3 Q5}
+
+(10 pt) Let $f : [-2,6] \rightarrow \reals$ be a piecewise function. A graph of $F(x) = \displaystyle\int_{-2}^{x} f(t) \spaceIntd \intd t$ is shown below.
+\begin{center}
+\includegraphics[scale=0.2]{\filePathGraphics Q5Graph.png}
+\end{center}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q5a} (4 pt) On which intervals is $f$ positive? negative? equal to zero?
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+By the fundamental theorem of calculus,
+\begin{align*}
+F'(x)
+=
+\frac{\intd}{\intd x} F(x)
+=
+\frac{\intd}{\intd x} \int_{-2}^{x} f(t) \spaceIntd \intd t
+=
+f(x)
+\end{align*}
+This equations says that the \emph{value} of $f$ at $x$ equals the \emph{slope} of $F$ at $x$. Using this and the graph of $F$ given above, we conclude that
+\begin{itemize}
+\item $f$ is positive when the slope of $F$ is positive, which occurs on the intervals $(-2,0)$ and $(3,4)$.
+\item $f$ is negative when the slope of $F$ is negative, which occurs on the intervals $(2,3)$ and $(4,6)$.
+\item $f$ equals zero when the slope of $F$ is zero, which occurs on the interval $(0,2)$.
+\end{itemize}%
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q5b} (4 pt) On which intervals is $f$ increasing? decreasing? constant?
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+In part \ref{itm : E3Q5a}, we used the fundamental theorem of calculus to obtain
+\begin{align*}
+f(x)
+=
+F'(x)
+\end{align*}
+Differentiating both sides of this equation, we get
+\begin{align*}
+f'(x)
+=
+F''(x)
+\end{align*}
+This equation says that the \emph{rate of change} of $f$ at $x$ equals the \emph{concavity} of $F$ at $x$. Using this and the graph of $F$ given above, we conclude that
+\begin{itemize}
+\item $f$ is increasing ($f'(x) > 0$) when $F$ is concave up ($F''(x) > 0$), which occurs on the interval $(5,6)$.
+\item $f$ is decreasing ($f'(x) < 0$) when $F$ is concave down ($F''(x) < 0$), which occurs on the intervals $(-2,0)$ and $(3,5)$.
+\item $f$ is constant ($f'(x) = 0$) when $F$ is linear ($F''(x) = 0$), which occurs on the intervals $(0,2)$ and $(2,3)$. (If you write the interval $(0,3)$ here, then that's OK for the purposes of this class. Note, however, that $F'(x)$ is not defined at $x = 2$ (why not?), so $F''(x)$ is not defined at $x = 2$.)
+\end{itemize}%
+}% End solution.
+
+
+
+\newpage% Activate for solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q5c} (2 pt) What is the average value of $f$ on the interval $[-2,6]$?
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+By definition, the average value of $f$ on the interval $[-2,6]$ is
+\begin{align*}
+\frac{1}{6 - (-2)} \int_{-2}^{6} f(t) \spaceIntd \intd t
+\end{align*}
+Using the definition of $F(x)$, we may rewrite this as
+\begin{align*}
+\frac{1}{8} F(6)
+=
+\frac{1}{8} (-1)
+=
+-\frac{1}{8}
+\end{align*}
+where in the second expression we have read the value $F(6) = -1$ from the graph of $F$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% TOPIC : Area between two graphs
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 Exam3 Q6}}
+\label{sec : Math112 Spring2022 Exam3 Q6}
+
+(8 pt) Consider the functions $f : [0,+\infty) \rightarrow \reals$ and $g : \reals \rightarrow \reals$ given by
+\begin{align*}
+f(x)
+&=
+2 \sqrt{x}
+&
+g(x)
+&=
+2 + \frac{1}{2} (x - 1)
+\end{align*}
+respectively. Graphs of $f$ and $g$ appear below.
+\begin{center}
+\includegraphics[scale=0.2]{\filePathGraphics Q6Graph.png}
+\end{center}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q6a} (4 pt) Using the graph, write the two points $(x,y)$ of intersection of $f$ and $g$. Using the equations for $f$ and $g$, show that, for each point $(x,y)$ of intersection, $f(x) = y$ and $g(x) = y$. That is, the intersection points $(x,y)$ are on the graphs of both $f$ and $g$.
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+From the graph, we observe two points of intersection of $f$ and $g$, namely, $(1,2)$ and $(9,6)$.
+
+For the point $(x,y) = (1,2)$, we compute
+\begin{align*}
+f(x)
+=
+f(1)
+=
+2 \sqrt{1}
+=
+2 (1)
+=
+2
+=
+y
+\end{align*}
+so the point $(x,y) = (1,2)$ is on the graph of $f$. Likewise,
+\begin{align*}
+g(x)
+=
+g(1)
+=
+2 + \frac{1}{2} (1 - 1)
+=
+2
+=
+y
+\end{align*}
+so the point $(x,y) = (1,2)$ is on the graph of $g$.
+
+Similarly, for the point $(x,y) = (9,6)$, we compute
+\begin{align*}
+f(x)
+&=
+f(9)
+=
+2 \sqrt{9}
+=
+6
+=
+y
+&
+&\text{and}
+&
+g(x)
+&=
+g(9)
+=
+2 + \frac{1}{2} (9 - 1)
+=
+6
+=
+y
+\end{align*}
+so the point $(x,y) = (9,6)$ is on the graphs of $f$ and $g$.}% End solution.
+
+
+
+\newpage% Activate for solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q6b} (4 pt) Recall that linearity of the integral implies that
+\begin{align*}
+\int_{a}^{b} f(x) - g(x) \spaceIntd \intd x
+=
+\int_{a}^{b} f(x) \spaceIntd \intd x - \int_{a}^{b} g(x) \spaceIntd \intd x%
+\label{eq : E3Q6b}
+\end{align*}
+Use this to help explain, geometrically, why the area between the graphs of $f(x)$ and $g(x)$ equals $\int_{1}^{9} f(x) - g(x) \spaceIntd \intd x$.
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+For simplicity, note that the graphs of both $f$ and $g$ are above the $x$-axis on the interval $[1,9]$, so signed area is the same as area on this interval. (There's a caveat about the orientation of the interval. Ignore this for now. We'll address it next week.)
+
+The integral $\int_{1}^{9} f(x) \spaceIntd \intd x$ is the area under the graph of $f$ on the interval $[1,9]$. The integral $\int_{1}^{9} g(x) \spaceIntd \intd x$ is the area under the graph of $f$ on the interval $[1,9]$. Because the graph of $f$ is above the graph of $g$ on the interval $(1,9)$, the difference
+\begin{align*}
+\int_{1}^{9} f(x) \spaceIntd \intd x - \int_{1}^{9} g(x) \spaceIntd \intd x
+\end{align*}
+is the area that \emph{is} under the graph of $f$ and \emph{is not} under the graph of $g$. (Draw these areas on the graph above, and insist that this conclusion be clear to you!) An equivalent way to describe this area is the area \emph{between} the graphs of $f$ and $g$. We are told that
+\begin{align*}
+\int_{1}^{9} f(x) \spaceIntd \intd x - \int_{1}^{9} g(x) \spaceIntd \intd x
+=
+\int_{1}^{9} f(x) - g(x) \spaceIntd \intd x
+\end{align*}
+so this latter integral is the area between the graphs of $f$ and $g$.}% End solution.

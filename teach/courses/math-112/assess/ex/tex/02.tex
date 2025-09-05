@@ -1,0 +1,787 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q1}}
+\label{sec : Math112 Spring2022 MockExam2 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+
+\vspace{0.25in}
+
+
+
+\noindent{}For parts \ref{itm : Exam2Q1a}--\ref{itm : Exam2Q1b}, let $f(x)$ be a function, and let $F_{1}(x)$ and $F_{2}(x)$ be antiderivatives of $f(x)$.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam2Q1a} (2 pt) The function $2 F_{1}(x)$ is an antiderivative of $2 f(x)$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.6in}{% Begin solution.
+True. By definition of antiderivative, the hypothesis that $F_{1}(x)$ is an antiderivative of $f(x)$ means that $F_{1}'(x) = f(x)$. Therefore, by linearity of the derivative,
+\begin{align*}
+(2 F_{1}(x))'
+=
+2 F_{1}'(x)
+=
+2 f(x)
+\end{align*}
+This equation says that $2 F_{1} (x)$ is an antiderivative of $2 f(x)$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q1b} (2 pt) The function $F_{1}(x) + F_{2}(x)$ is an antiderivative of $2 f(x)$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.6in}{% Begin solution.
+True. By definition of antiderivative, $F_{1}'(x) = f(x)$ and $F_{2}'(x) = f(x)$. Therefore, by linearity of the derivative,
+\begin{align*}
+\left(F_{1}(x) + F_{2}(x)\right)'
+=
+F_{1}'(x) + F_{2}'(x)
+=
+f(x) + f(x)
+=
+2 f(x)
+\end{align*}
+This equation says that $F_{1}(x) + F_{2}(x)$ is an antiderivative of $2 f(x)$.}% End solution.
+
+
+
+\noindent{}For parts \ref{itm : Exam2Q1c}--\ref{itm : Exam2Q1d}, let $f(x)$ and $g(x)$ be functions such that
+\begin{align*}
+\int_{0}^{2} f(x) \spaceIntd \intd x
+=
+1
+&&
+\int_{0}^{2} g(x) \spaceIntd \intd x
+=
+-4
+\end{align*}
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q1c} (2 pt) $\displaystyle\int_{0}^{2} \left[3 f(x) + \frac{1}{2} g(x)\right] \spaceIntd \intd x = 1$
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.6in}{% Begin solution.
+True. The definite integral is linear. Therefore
+\begin{align*}
+\int_{0}^{2} \left[3 f(x) + \frac{1}{2} g(x)\right] \spaceIntd \intd x
+=
+3 \int_{0}^{2} f(x) \spaceIntd \intd x + \frac{1}{2} \int_{0}^{2} g(x) \spaceIntd \intd x
+=
+3 (1) + \frac{1}{2} (-4)
+=
+1
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q1d} (2 pt) $\displaystyle\int_{0}^{1} g(x) \spaceIntd \intd x + \int_{1}^{2} g(x) \spaceIntd \intd x = -2$
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.6in}{% Begin solution.
+False. Note that
+\begin{align*}
+\int_{0}^{1} g(x) \spaceIntd \intd x + \int_{1}^{2} g(x) \spaceIntd \intd x
+=
+\int_{0}^{2} g(x) \spaceIntd \intd x
+=
+-4
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam4P2Q1e} (2 pt) If the definite integral of a function is zero, then the function must be the zero function.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.6in}{% Begin solution.
+False. For example, consider the function $f : \reals \rightarrow \reals$ given by $f(x) = \sin x$. This is not the zero function, and we can check that $\int_{0}^{2 \pi} \sin x \spaceIntd \intd x = 0$. The positive and negative areas exactly cancel.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Evaluating limits (include one exercise on function-limit interchange)
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q2}}
+\label{sec : Math112 Spring2022 MockExam2 Q2}
+
+(16 pt) Evaluate each of the following limits. Briefly but clearly justify your work.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam2Q2a} (4 pt) Use the Taylor series
+\begin{align}
+\ln(1 + x)
+=
+x - \frac{1}{2} x^{2} + \frac{1}{3} x^{3} - \ldots%
+\label{eq : Exam2Q2c Taylor Series ln(1 + x)}
+\end{align}
+where the terms in ``$\ldots$'' all involve $x$ to the power $4$ or higher, to evaluate
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{2} + x - \ln(1 + x)}{x^{2}}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+Substituting the Taylor series \eqref{eq : Exam2Q2c Taylor Series ln(1 + x)} into the limit, the simplifying, we get
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{2} + x - \ln(1 + x)}{x^{2}}
+&=
+\lim_{x \rightarrow 0} \frac{x^{2} + x - \left(x - \frac{1}{2} x^{2} + \frac{1}{3} x^{3} - \ldots\right)}{x^{2}}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{\frac{3}{2} x^{2} - \frac{1}{3} x^{3} + \ldots}{x^{2}}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{\frac{3}{2} - \frac{1}{3} x + \ldots}{1}
+\\
+&=
+\frac{3}{2}
+\end{align*}
+where in evaluating the final limit we use the fact that, after canceling the factor $x^{2}$ in the third equality, the terms in ``$\ldots$'' all involve $x$ to the power $2$ or higher.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q2b} (4 pt) Use l'H\^{o}pital's rule to evaluate
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{2} + x - \ln(1 + x)}{x^{2}}
+\end{align*}
+(Note that this is the same limit as in part \ref{itm : Exam2Q2a}.)
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+At each step, we (i) check that direct evaluation (abbreviated ``D.E.'' below) of the limit gives $\frac{0}{0}$, so l'H\^{o}pital's rule applies; and (ii) apply l'H\^{o}pital's rule (differentiate numerator and denominator). The first result from direct evaluation that is not an indeterminate form is the limit.
+\begin{align*}
+&\lim_{x \rightarrow 0} \frac{x^{2} + x - \ln(1 + x)}{x^{2}}
+\xrightarrow{\text{D.E.}}
+\frac{0^{2} + 0 - \ln(1)}{0^{2}}
+=
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{2 x + 1 - \frac{1}{1 + x}}{2 x}
+\xrightarrow{\text{D.E.}}
+\frac{0 + 1 - 1}{0}
+=
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{2 + \frac{1}{(1 + x)^{2}}}{2}
+=
+\frac{2 + 1}{2}
+=
+\frac{3}{2}
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q2c} (4 pt) $\displaystyle\lim_{x \rightarrow 2} \frac{1 - \sqrt{5 - 2 x}}{x - 2}$
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+Direct evaluation of the limit gives the indeterminate form $\frac{0}{0}$. Thus l'H\^{o}pital's rule applies, and we may use it to find the limit. However, let us instead multiply numerator and denominator by the conjugate of the numerator (equivalent to multiplying by $1$):
+\begin{align*}
+\lim_{x \rightarrow 2} \frac{1 - \sqrt{5 - 2 x}}{x - 2}
+&=
+\lim_{x \rightarrow 2} \frac{1 - \sqrt{5 - 2 x}}{x - 2} \cdot \frac{1 + \sqrt{5 - 2 x}}{1 + \sqrt{5 - 2 x}}
+\\
+&=
+\lim_{x \rightarrow 2} \frac{1 - (\sqrt{5 - 2 x})^{2}}{(x - 2) (1 + \sqrt{5 - 2 x})}
+\\
+&=
+\lim_{x \rightarrow 2} \frac{2 x - 4}{(x - 2) (1 + \sqrt{5 - 2 x})}
+\end{align*}
+Factoring the numerator and canceling the common factor $x - 2$ allows us to compute the limit by direct evaluation:
+\begin{align*}
+&=
+\lim_{x \rightarrow 2} \frac{2 (x - 2)}{(x - 2) (1 + \sqrt{5 - 2 x})}
+\\
+&=
+\lim_{x \rightarrow 2} \frac{2}{1 + \sqrt{5 - 2 x}}
+\\
+&=
+\frac{2}{1 + \sqrt{1}}
+=
+1
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q2d} (4 pt) $\displaystyle\lim_{x \rightarrow +\infty} x^{3} e^{-x}$
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+Direct evaluation of the limit gives $+\infty \cdot 0$, an indeterminate form. It is not an indeterminate form to which l'H\^{o}pital's rule applies. We massage the given function into an equivalent form by moving the exponential factor to the denominator:
+\begin{align*}
+\lim_{x \rightarrow +\infty} x^{3} e^{-x}
+=
+\lim_{x \rightarrow +\infty} \frac{x^{3}}{e^{x}}
+\end{align*}
+Direct evaluation of this limit gives $\frac{+\infty}{+\infty}$, an indeterminate form to which l'H\^{o}pital's rule applies. Applying it iteratively (three times total), we get
+\begin{align*}
+&=
+\lim_{x \rightarrow +\infty} \frac{3 x^{2}}{e^{x}}
+\xrightarrow{\text{D.E.}}
+\frac{+\infty}{+\infty}
+\\
+&=
+\lim_{x \rightarrow +\infty} \frac{6 x}{e^{x}}
+\xrightarrow{\text{D.E.}}
+\frac{+\infty}{+\infty}
+\\
+&=
+\lim_{x \rightarrow +\infty} \frac{6}{e^{x}}
+\xrightarrow{\text{D.E.}}
+\frac{1}{+\infty}
+=
+0
+\end{align*}
+(Recall that a limit of $\frac{1}{+\infty}$ means that we're making the denominator larger and larger---arbitrarily large---while the numerator stays constant, so the fraction as a whole becomes smaller and smaller---arbitrarily small, that is, close to $0$.) Thus the limit is $0$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Finding antiderivatives
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q3}}
+\label{sec : Math112 Spring2022 MockExam2 Q3}
+
+(12 pt) Evaluate the indefinite integrals. (That is, find the most-general antiderivative $F(x)$ of the integrand $f(x)$ in the following integrals $\int f(x) \spaceIntd \intd x$.)
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam2Q3a} (4 pt) $\displaystyle\int 4 x^{3} - 3 x^{2} + 1 \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+For each indefinite integral in this exercise, we (1) use linearity of the integral to ``break'' the integral into separate terms and factor out constants, (2) guess and check to find an antiderivative for each smaller integral, and (3) include ``$+ C$'' to get the most-general antiderivative, where $C$ is an arbitrary real number (that is, a constant). We check our result by verifying that differentiating our most-general antiderivative (what we've been calling $F(x)$) gives the original integrand (the function in the original integral, which we've been calling $f(x)$).
+
+We compute
+\begin{align*}
+\int 4 x^{3} - 3 x^{2} + 1 \spaceIntd \intd x
+&=
+4 \int x^{3} \spaceIntd \intd x - 3 \int x^{2} \spaceIntd \intd x + \int 1 \spaceIntd \intd x
+\\
+&=
+4 \left[\frac{1}{4} x^{4}\right] - 3 \left[\frac{1}{3} x^{3}\right] + x + C
+\\
+&=
+x^{4} - x^{3} + x + C
+\end{align*}
+We check
+\begin{align*}
+\left(x^{4} - x^{3} + x + C\right)'
+=
+4 x^{3} - 3 x^{2} + 1
+=
+f(x)
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q3b} (4 pt) $\displaystyle\int 6 e^{3 x} - 25 \cos(5 x) \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+We compute
+\begin{align*}
+\int 6 e^{3 x} - 25 \cos(5 x) \spaceIntd \intd x
+&=
+6 \int e^{3 x} \spaceIntd \intd x - 25 \int \cos(5 x) \spaceIntd \intd x
+\\
+&=
+6 \left[\frac{1}{3} e^{3 x}\right] - 25 \left[\frac{1}{5} \sin(5 x)\right] + C
+\\
+&=
+2 e^{3 x} - 5 \sin(5 x) + C
+\end{align*}
+We check
+\begin{align*}
+\left(2 e^{3 x} - 5 \sin(5 x) + C\right)'
+=
+2 e^{3 x} \cdot 3 - 5 \cos(5 x) \cdot 5
+=
+6 e^{3 x} - 25 \cos(5 x)
+=
+f(x)
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q3c} (4 pt) $\displaystyle\int \frac{1 - x \sin x}{x} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+We compute
+\begin{align*}
+\int \frac{1 - x \sin x}{x} \spaceIntd \intd x
+&=
+\int \frac{1}{x} - \sin x \spaceIntd \intd x
+\\
+&=
+\int \frac{1}{x} \spaceIntd \intd x - \int \sin x \spaceIntd \intd x
+\\
+&=
+\ln x - (-\cos x) + C
+\\
+&=
+\ln x + \cos x + C
+\end{align*}
+(More precisely, $\int \frac{1}{x} \spaceIntd \intd x = \ln\abs{x} + C$. We'll ignore the subtlety about the absolute value for now.) We check
+\begin{align*}
+\left(\ln x + \cos x + C\right)'
+=
+\frac{1}{x} - \sin x
+=
+\frac{1}{x} - \frac{x \sin x}{x}
+=
+\frac{1 - x \sin x}{x}
+=
+f(x)
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Lower and upper sums, implicit fundamental theorem
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q4}}
+\label{sec : Math112 Spring2022 MockExam2 Q4}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+\centering
+\includegraphics[width=0.33\textwidth]{\filePathGraphics Exam2Q4_Graph.png}
+\end{wrapfigure}
+(10 pt) Consider the piecewise function $f : \reals \rightarrow \reals$ given by
+\begin{align*}
+f(x)
+=
+\begin{dcases*}
+2				&	if $x \leq 0$		\\
+2 - \sqrt{4 x - x^{2}}	&	if $-2 \leq x \leq 0$	\\
+2 - x				&	if $x \geq 2$
+\end{dcases*}
+\end{align*}
+A graph of $f$ is shown at right.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam2Q4a} (2 pt) Consider the rule of assignment for $f$ on the interval $[0,2]$, namely,
+\begin{align*}
+y
+=
+2 - \sqrt{4 x - x^{2}}
+\end{align*}
+Use algebra to massage this equation into the form $(x - a)^{2} + (y - b)^{2} = r^{2}$, thus showing that the graph of $f$ on the interval $[0,2]$ is part of a circle of radius $r = 2$.
+\end{enumerate}
+
+\spaceSolution{1.25in}{% Begin solution.
+First, we need to get rid of the square root, which we'll do by squaring. So let's get the square root by itself
+\begin{align*}
+y - 2
+=
+-\sqrt{4 x - x^{2}}
+\end{align*}
+and then square both sides
+\begin{align*}
+(y - 2)^{2}
+=
+\left(-\sqrt{4 x - x^{2}}\right)^{2}
+=
+4 x - x^{2}
+\end{align*}
+To put the right side in the form $(x - a)^{2}$, we complete the square:
+\begin{align*}
+4 x - x^{2}
+=
+-(x^{2} - 4 x)
+=
+-(x^{2} - 4 x + 4 - 4)
+=
+-(x^{2} - 4 x + 4) + 4
+=
+-(x - 2)^{2} + 4
+\end{align*}
+We substitute this into the previous expression, then move the $x$ and $y$ expressions to the same side, obtaining
+\begin{align*}
+(x - 2)^{2} + (y - 2)^{2}
+=
+4
+=
+2^{2}
+\end{align*}
+This is the equation of a circle with center $(a,b) = (2,2)$ and radius $r = 2$.}% End solution.
+
+
+
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : Exam2Q4b} (4 pt) Draw and compute a lower- and upper-sum estimate (call them $L_{3}$ and $U_{3}$, respectively) for $\int_{-2}^{4} f(x) \spaceIntd \intd x$ by partitioning $[-2,4]$ into three subintervals, each of width $2$.
+%\end{enumerate}
+%\begin{center}
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q4_Graph.png}
+%\hspace{0.5in}
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q4_Graph.png}
+%\\
+%Lower sum ($L_{3}$)
+%\hspace{1.75in}
+%Upper sum ($U_{3}$)
+%\end{center}
+%
+%\spaceSolution{2in}{% Begin solution.
+%}% End solution.
+%
+%
+%
+%\newpage
+%
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : Exam2Q4c} (4 pt) Draw and compute a lower- and upper-sum estimate (call them $L_{6}$ and $U_{6}$, respectively) for $\int_{-2}^{4} f(x) \spaceIntd \intd x$ by partitioning $[-2,4]$ into six subintervals, each of width $1$. (Use the rule of assignment for $f(x)$ to help find rectangle heights. For reference, $\sqrt{3} \approx 1.73$.)
+%\end{enumerate}
+%\begin{center}
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q4_Graph.png}
+%\hspace{0.5in}
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q4_Graph.png}
+%\\
+%Lower sum ($L_{6}$)
+%\hspace{1.5in}
+%Upper sum ($U_{6}$)
+%\end{center}
+%
+%\spaceSolution{1.75in}{% Begin solution.
+%}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q4d} (4 pt) Use geometry to compute the exact value of $\int_{-2}^{4} f(x) \spaceIntd \intd x$. You may leave your answer in terms of $\pi$; if you prefer, you may use that $\pi \approx 3.14$. (Hint: Use the conclusion from part \ref{itm : Exam2Q4a} to help find the area on the interval $[0,2]$. The area of a full circle of radius $r$ is $\pi r^{2}$. Remember, area is signed ($+/-$)!)
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+We break the definite integral on the interval $[-2,4]$ into three pieces, based on the geometry of the graph of $f(x)$:
+\begin{align}
+\int_{-2}^{4} f(x) \spaceIntd \intd x
+=
+\int_{-2}^{0} f(x) \spaceIntd \intd x + \int_{0}^{2} f(x) \spaceIntd \intd x + \int_{2}^{4} f(x) \spaceIntd \intd x%
+\label{eq : Exam2Q4d Intermediate}
+\end{align}
+Let's call these areas $A_{[-2,0]}$, $A_{[0,2]}$, and $A_{[2,4]}$, respectively.
+
+On the interval $[-2,0]$, the area $A_{[-2,0]}$ between the graph of $f(x)$ and the $x$-axis is a rectangle (in fact, square) of base $2$ and height $2$. This area is positive because it lies above the $x$-axis. So
+\begin{align*}
+A_{[-2,0]}
+=
+(2) (2)
+=
+4
+\end{align*}
+
+On the interval $[0,2]$, the area $A_{[0,2]}$ between the graph of $f(x)$ and the $x$-axis is a square minus a quarter circle, where the sides of the square and the radius of the circle are $2$. This area is positive because it lies above the $x$-axis. So
+\begin{align*}
+A_{[0,2]}
+=
+(2) (2) - \frac{1}{4} \pi (2)^{2}
+=
+4 - \pi
+\end{align*}
+
+On the interval $[2,4]$, the area $A_{[2,4]}$ between the graph of $f(x)$ and the $x$-axis is a triangle (in fact, a right triangle) of base $2$ and height $2$. This area is negative because it lies below the $x$-axis. So
+\begin{align*}
+A_{[2,4]}
+=
+-\frac{1}{2} (2) (2)
+=
+-2
+\end{align*}
+
+Substituting these results into \eqref{eq : Exam2Q4d Intermediate}, we conclude
+\begin{align*}
+\int_{-2}^{4} f(x) \spaceIntd \intd x
+&=
+A_{[-2,0]} + A_{[0,2]} + A_{[2,4]}
+\\
+&=
+[4] + [4 - \pi] + [-2]
+\\
+&=
+6 - \pi
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q4e} (4 pt) Is the definite integral $\int_{0}^{4} f(x) \spaceIntd \intd x$ positive, negative, or zero? Justify. (Hint: You need not give an exact value, though you may. It is enough to justify your answer using the geometry of the graph of $f(x)$.)
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The area left over when we subtract the quarter circle from its enclosing square---what we called $A_{[0,2]}$ in part \ref{itm : Exam2Q4d}---fits inside the right triangle of base $2$ and height $2$---what we called $A_{[2,4]}$---leaving a gap of area along the hypotenuse of the triangle. Because $A_{[2,4]}$ is negative area and $A_{[0,2]}$ is positive area, the overlapping parts cancel, and the gap of area that remains (which belongs to $A_{[2,4]}$) is negative. Thus we expect $\int_{0}^{4} f(x) \spaceIntd \intd x$ to be negative.
+
+Note that, if we use our values from part \ref{itm : Exam2Q4d} to compute the exact value of this definite integral, we get
+\begin{align*}
+\int_{0}^{4} f(x) \spaceIntd \intd x
+=
+A_{[0,2]} + A_{[2,4]}
+=
+[4 - \pi] + [-2]
+=
+2 - \pi
+<
+0
+\end{align*}
+(Note that $2 - \pi = -(\pi - 2) \approx -1.1416$.)}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Implicit fundamental theorem, average value
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q5}}
+\label{sec : Math112 Spring2022 MockExam2 Q5}
+
+(18 pt) Consider the function $f : \reals \rightarrow \reals$ given by
+\begin{align}
+f(x)
+=
+4 x^{3} - 12 x + 8%
+\label{eq : Exam2Q5 Rule Of Assignment}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam2Q5a} (4 pt) Find an antiderivative $F(x)$ of $f(x)$. Verify that it is indeed an antiderivative.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+\int 4 x^{3} - 12 x + 8 \spaceIntd \intd x
+&=
+4 \int x^{3} \spaceIntd \intd x - 12 \int x \spaceIntd \intd x + 8 \int 1 \spaceIntd \intd x
+\\
+&=
+4 \left[\frac{1}{4} x^{4}\right] - 12 \left[\frac{1}{2} x^{2}\right] + 8 x + C
+\\
+&=
+x^{4} - 6 x^{2} + 8 x + C
+\end{align*}
+We check
+\begin{align*}
+\left(x^{4} - 6 x^{2} + 8 x + C\right)'
+=
+4 x^{3} - 12 x + 8
+=
+f(x)
+\end{align*}
+We're asked to find an antiderivative, not necessarily the most-general antiderivative, of $f(x)$. So, if desired, we may set $C$ equal to a particularly convenient value, for example, $C = 0$. In this case, we get a particular antiderivative
+\begin{align*}
+F(x)
+=
+x^{4} - 6 x^{2} + 8 x
+\end{align*}
+We'll use this as $F(x)$ in the remainder of this exercise.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q5b} (2 pt) Using your antiderivative $F(x)$ from part \ref{itm : Exam2Q5a}, show that
+\begin{align*}
+\int_{-1}^{2} f(x) \spaceIntd \intd x
+=
+F(2) - F(-1)
+=
+21
+\end{align*}
+Take the first equality as given. (It is the fundamental theorem of calculus.) Just show that $F(2) - F(-1) = 21$.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+F(2)
+&=
+2^{4} - 6 \cdot 2^{2} + 8 \cdot 2
+=
+16 - 24 + 16
+=
+8
+\\
+F(-1)
+&=
+(-1)^{4} - 6 \cdot (-1)^{2} + 8 \cdot (-1)
+=
+1 - 6 - 8
+=
+-13
+\end{align*}
+Thus
+\begin{align*}
+F(2) - F(-1)
+=
+8 - (-13)
+=
+21
+\end{align*}
+as we were asked to show.}% End solution.
+
+
+
+\newpage
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q5c} (4 pt) On the graphs of $f$ below, draw a lower- and upper-sum approximation to the definite integral $\int_{-1}^{2} f(x) \spaceIntd \intd x$. Partition the interval $[-1,2]$ into three subintervals, each of width $1$.
+\end{enumerate}
+\begin{center}
+\includegraphics[scale=0.5]{\filePathGraphics Exam2Q5_Graph.png}% Activate for exam.
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q5_LowerSum.png}% Activate for solutions.
+\hspace{0.5in}
+\includegraphics[scale=0.5]{\filePathGraphics Exam2Q5_Graph.png}% Activate for exam.
+%\includegraphics[scale=0.5]{\filePathGraphics Exam2Q5_UpperSum.png}% Activate for solutions.
+\\
+Lower sum
+\hspace{2.25in}
+Upper sum
+\end{center}
+
+\spaceSolution{0in}{% Begin solution.
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q5d} (4 pt) Compute the upper- and lower-sum approximations you sketched in part \ref{itm : Exam2Q5c}. (Use the rule of assignment for $f(x)$, given in Equation \eqref{eq : Exam2Q5 Rule Of Assignment} at the start of this exercise, to help find the heights of your rectangles.) Show that these approximations bound your value of the definite integral computed in part \ref{itm : Exam2Q5b}.
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+For the lower-sum approximation, we compute
+\begin{align*}
+L_{3}
+&=
+1 \cdot f(0) + 1 \cdot f(1) + 1 \cdot f(1)
+\\
+&=
+1 \cdot 8 + 1 \cdot 0 + 1 \cdot 0
+\\
+&=
+8
+\end{align*}
+For the upper-sum approximation, we compute
+\begin{align*}
+U_{3}
+&=
+1 \cdot f(-1) + 1 \cdot f(0) + 1 \cdot f(2)
+\\
+&=
+1 \cdot (-4 - (-12) + 8) + 1 \cdot 8 + 1 \cdot (32 - 24 + 8)
+\\
+&=
+16 + 8 + 16
+\\
+&=
+40
+\end{align*}
+We verify that
+\begin{align*}
+L_{3}
+=
+8
+\leq
+\int_{-1}^{2} f(x) \spaceIntd \intd x
+=
+21
+\leq
+U_{3}
+=
+40
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Exam2Q5e} (4 pt) Your friend computes lower- and upper-sum approximations for $\int_{-1}^{2} f(x) \spaceIntd \intd x$ with $300$ subintervals, each of width $\frac{1}{100}$. Your friend reports the results are $L_{300} \approx -1.2723$ and $U_{300} \approx 20.8603$. Explain to your friend why neither result can be correct. (Be kind---your friend just did a lot of work!)
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The lower sum cannot be correct, because the function $f(x)$ that we are integrating is nonnegative (that is, greater than or equal to $0$) everywhere on the interval $[-1,2]$ over which we are integrating. Thus the smallest possible value of any lower-sum approximation is $0$.
+
+The upper sum cannot be correct, because the actual area under the graph of $f(x)$ on the interval $[-1,2]$ is given by $\int_{-1}^{2} f(x) \spaceIntd \intd x$, which we showed in part \ref{itm : Exam2Q5b} equals $21$; and any upper-sum approximation must be greater than or equal to the actual area.}% End solution.
