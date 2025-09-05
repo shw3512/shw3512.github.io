@@ -1,0 +1,862 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q1}}
+\label{sec : Math112 Spring2022 MockExam2 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME2Q1a} (2 pt) If direct evaluation of a limit gives an indeterminate form, then we can always apply l'H\^{o}pital's rule, even though other methods may be faster.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+False. L'H\^{o}pital's rule only applies to the indeterminate forms $\frac{0}{0}$ and $\frac{\pm{}\infty}{\pm{}\infty}$. Limits yielding other indeterminate forms, like $0^{0}$ or $1^{+\infty}$, must be massaged into yielding one of the two preceding forms before we can apply l'H\^{o}pital's rule.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q1b} (2 pt) Let $f(x)$ be a function, and let $F(x)$ be an antiderivative of $f(x)$. Then $(F(x))^{2}$ is an antiderivative of $(f(x))^{2}$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+False. Consider the constant function $f : \reals \rightarrow \reals$ given by $f(x) = 1$. Then $F : \reals \rightarrow \reals$ given by $F(x) = x$ is an antiderivative of $f(x)$. However, $(F(x))^{2} = x^{2}$ is not an antiderivative of $(f(x))^{2} = 1$. (Why not?)}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q1c} (2 pt) Let $f(x)$ be a function, and let $F(x)$ and $G(x)$ be antiderivatives of $f(x)$. Then the function $F(x) - G(x)$ is always a constant function.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+True. This statement is equivalent to saying that any two antiderivatives of $f(x)$ differ only by a constant. More precisely, the statement that $F(x) - G(x)$ is a constant function --- say, always equal to $C$ --- is equivalent to the statement $F(x) = G(x) + C$. That is, given one antiderivative $G(x)$ of $f(x)$, any other antiderivative $F(x)$ of $f(x)$ equals $G(x)$ plus some constant $C$.}% End solution.
+
+
+
+\noindent{}For parts \ref{itm : ME2Q1d}--\ref{itm : ME2Q1e}, let $f$ and $g$ be functions such that
+\begin{align*}
+\int_{-1}^{3} f(x) \spaceIntd \intd x
+=
+-2
+&&
+\int_{-1}^{3} g(x) \spaceIntd \intd x
+=
+4
+\end{align*}
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q1d} (2 pt) $\displaystyle\int_{-1}^{3} \left[f(x) + g(x)\right] \spaceIntd \intd x = 2$
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+True. The definite integral is linear. Therefore
+\begin{align*}
+\int_{-1}^{3} \left[f(x) + g(x)\right] \spaceIntd \intd x
+=
+\int_{-1}^{3} f(x) \spaceIntd \intd x + \int_{-1}^{3} g(x) \spaceIntd \intd x
+=
+-2 + 4
+=
+2
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q1e} (2 pt) $\displaystyle\int_{-1}^{0} f(x) \spaceIntd \intd x + \int_{0}^{3} f(x) \spaceIntd \intd x = -2$
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0.5in}{% Begin solution.
+True. This equality is saying that if we partition the interval $[-1,3]$ into two pieces $[-1,0]$ and $[0,3]$, the signed area under the graph of $f$ on the interval $[-1,3]$ equals the signed area under the graph of $f$ on $[-1,0]$ plus the signed area under the graph of $f$ on $[0,3]$.}% End solution.
+
+
+
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : ME2Q1d} (2 pt) Consider a continuous function $f(x)$ on a bounded interval $[a,b]$. Any lower sum is always less than or equal to any upper sum, no matter the function $f(x)$, the interval $[a,b]$, or the partitions (which may be different) we use to compute the lower and upper sum.
+%\begin{center}
+%\begin{tabular}{c c c}
+%true	&	\hspace{1in}	&	false
+%\end{tabular}
+%\end{center}
+%\end{enumerate}
+%
+%\spaceSolution{0.75in}{% Begin solution.
+%True. If $L$ is the value of the lower sum, and $U$ is the value of the upper sum, then
+%\begin{align*}
+%L
+%\leq
+%\int_{a}^{b} f(x) \spaceIntd \intd x
+%\leq
+%U
+%\end{align*}}% End solution.
+%
+%
+%
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : ME2Q1e} (2 pt) The definite integral of a function can be negative.
+%\begin{center}
+%\begin{tabular}{c c c}
+%true	&	\hspace{1in}	&	false
+%\end{tabular}
+%\end{center}
+%\end{enumerate}
+%
+%\spaceSolution{0.75in}{% Begin solution.
+%True. For example, $\int_{-2}^{0} x \spaceIntd \intd x = -2$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Evaluating limits (include one exercise on function-limit interchange)
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q2}}
+\label{sec : Math112 Spring2022 MockExam2 Q2}
+
+(20 pt) Evaluate each of the following limits. Briefly but clearly justify your work.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME2Q2a} (4 pt) $\displaystyle\lim_{x \rightarrow 0} \frac{x + \cos x}{-1 + \sin x}$
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+The function whose limit we're taking is the ratio of two continuous functions. Therefore it is continuous everywhere it is defined. It turns out this function is defined at $x = 0$: Direct evaluation gives
+\begin{align*}
+\frac{0 + \cos 0}{-1 + \sin 0}
+=
+\frac{0 + 1}{-1 + 0}
+=
+\frac{1}{-1}
+=
+-1
+\end{align*}
+Because the function is continuous at $x = 0$, this is the limit.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q2b} (4 pt) $\displaystyle\lim_{x \rightarrow -\infty} \frac{6 x^{3} - x^{2} + 5 x + 5}{2 x^{3} + 2 x}$
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+Direct evaluation gives $\frac{-\infty}{-\infty}$. Thus l'H\^{o}pital's rule applies. If we apply it (three times, checking at each step that the new limit yields a valid indeterminate form), then we will get the answer. Let's take an alternative approach: Divide both numerator and denominator by the highest power of $x$ that appears anywhere in the fraction, which is $x^{3}$. This gives
+\begin{align*}
+\lim_{x \rightarrow -\infty} \frac{6 x^{3} - x^{2} + 5 x + 5}{2 x^{3} + 2 x}
+=
+\lim_{x \rightarrow -\infty} \frac{6 - x^{-1} + 5 x^{-2} + 5 x^{-3}}{2 + 2 x^{-2}}
+\end{align*}
+The limit $x \rightarrow -\infty$ means that the value of $x$ becomes arbitrarily large (in absolute value) and negative. Thus as $x \rightarrow -\infty$, terms like $x^{-1}$, $x^{-2}$, etc. approach $0$. (Recall that $x^{-1} = \frac{1}{x}$, $x^{-2} = \frac{1}{x^{2}}$, etc.) Thus, direct evaluation of this last limit gives
+\begin{align*}
+=
+\frac{6 - 0 + 5 (0) + 5 (0)}{2 + 2 (0)}
+=
+\frac{6}{2}
+=
+3
+\end{align*}
+(Check that three iterative applications of l'H\^{o}pital's rule gives you the same result.)}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q2c} (4 pt) Use the Taylor series
+\begin{align}
+\sin x
+=
+x - \frac{1}{6} x^{3} + \frac{1}{120} x^{5} - \frac{1}{5040} x^{7} + \ldots%
+\label{eq : ME2Q2c Taylor Series sin x}
+\end{align}
+to evaluate
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{5}}{\sin(x) - x + \frac{1}{6} x^{3}}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Substituting the Taylor series \eqref{eq : ME2Q2c Taylor Series sin x} into the limit, and canceling terms, we have
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{5}}{\sin(x) - x + \frac{1}{6} x^{3}}
+&=
+\lim_{x \rightarrow 0} \frac{x^{5}}{\left(x - \frac{1}{6} x^{3} + \frac{1}{120} x^{5} - \frac{1}{5040} x^{7} + \ldots\right) - x + \frac{1}{6} x^{3}}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{x^{5}}{\frac{1}{120} x^{5} - \frac{1}{5040} x^{7} + \ldots}
+\end{align*}
+Now we can cancel $x^{5}$ from all terms in the numerator and denominator (that is, multiply numerator and denominator by $\frac{1}{x^{5}}$, which gives
+\begin{align*}
+=
+\lim_{x \rightarrow 0} \frac{1}{\frac{1}{120} - \frac{1}{5040} x^{2} + \ldots}
+\end{align*}
+All the terms in the denominator that involve $x$ have power $2$ or greater. Thus, direct evaluation of this limit at $x = 0$ makes all the terms in the denominator $0$, except the first, constant term. Continuing with the limit above, we conclude
+\begin{align*}
+=
+\frac{1}{\frac{1}{120} + 0 + \ldots}
+=
+120
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q2d} (4 pt) Use l'H\^{o}pital's rule to evaluate
+\begin{align*}
+\lim_{x \rightarrow 0} \frac{x^{5}}{\sin(x) - x + \frac{1}{6} x^{3}}
+\end{align*}
+(Note that this is the same limit as in part \ref{itm : ME2Q2c}.)
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+At each step, we (i) check that direct evaluation (abbreviated ``D.E.'' below) of the limit gives $\frac{0}{0}$, so l'H\^{o}pital's rule applies; and (ii) apply l'H\^{o}pital's rule (differentiate numerator and denominator). The first result from direct evaluation that is not an indeterminate form is our result.
+\begin{align*}
+&\lim_{x \rightarrow 0} \frac{x^{5}}{\sin(x) - x + \frac{1}{6} x^{3}}
+\xrightarrow{\text{D.E.}}
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{5 x^{4}}{\cos(x) - 1 + \frac{1}{2} x^{2}}
+\xrightarrow{\text{D.E.}}
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{20 x^{3}}{-\sin(x) + x}
+\xrightarrow{\text{D.E.}}
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{60 x^{2}}{-\cos(x) + 1}
+\xrightarrow{\text{D.E.}}
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{120 x}{\sin(x)}
+\xrightarrow{\text{D.E.}}
+\frac{0}{0}
+\\
+&=
+\lim_{x \rightarrow 0} \frac{120}{\cos(x)}
+=
+\frac{120}{1}
+=
+120
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q2e} (4 pt) $\displaystyle\lim_{x \downarrow 0} \left(1 + x\right)^{\frac{1}{x}}$ \hfill{}(Recall that $x \downarrow 0$ means the same as $x \rightarrow 0^{+}$.)
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Direct evaluation of the limit gives $1^{+\infty}$. (To explain the exponent: In the limit as $x$ goes to $0$ from the right, $x$ becomes arbitrarily small (and positive). Thus $\frac{1}{x}$ becomes arbitrarily large (and positive), i.e. $\frac{1}{x} \rightarrow +\infty$.) This is an indeterminate form, but not one to which l'H\^{o}pital's rule applies. So we must massage the original expression.
+
+First, call the given limit $L$. Then, take the natural log of both sides (with the goal of bringing down the exponent $\frac{1}{x}$, to eventually make a fraction, so we can apply l'H\^{o}pital's rule:
+\begin{align*}
+\ln L
+=
+\ln \lim_{x \downarrow 0} \left(1 + x\right)^{\frac{1}{x}}
+\end{align*}
+Next, interchange the function and the limit, then use properties of logarithms to ``bring down'' the exponent:
+\begin{align*}
+=
+\lim_{x \downarrow 0} \ln\left[\left(1 + x\right)^{\frac{1}{x}}\right]
+=
+\lim_{x \downarrow 0} \frac{1}{x} \ln(1 + x)
+=
+\lim_{x \downarrow 0} \frac{\ln(1 + x)}{x}
+\end{align*}
+Direct evaluation of this limit gives $\frac{0}{0}$. Thus l'H\^{o}pital's rule applies. Applying it (the chain rule applied to $\ln(1 + x)$ gives the ``$\cdot 1$''), we get
+\begin{align*}
+=
+\lim_{x \downarrow 0} \frac{\frac{1}{1 + x} \cdot 1}{1}
+=
+\lim_{x \downarrow 0} \frac{1}{1 + x}
+=
+1
+\end{align*}
+This string of equalities starts with $\ln L$, so we have
+\begin{align*}
+\ln L
+=
+1
+\end{align*}
+To find the original limit, $L$, we exponentiate both sides of this last equation. This gives
+\begin{align*}
+L
+=
+e^{\ln L}
+=
+e^{1}
+=
+e
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Finding antiderivatives
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q3}}
+\label{sec : Math112 Spring2022 MockExam2 Q3}
+
+%(16 pt) For each of the following functions $f(x)$, find the most-general antiderivative $F(x)$. That is, evaluate the indefinite integral $\int f(x) \spaceIntd \intd x$.
+(16 pt) Evaluate the indefinite integrals. (That is, find the most-general antiderivative $F(x)$ of the integrand $f(x)$ in the following integrals $\int f(x) \spaceIntd \intd x$.)
+
+
+
+\begin{enumerate}[label=(\alph*)]
+%\item\label{itm : ME2Q3a} (4 pt) $f : \reals \rightarrow \reals$ given by $f(x) = 4 x^{3} - 2 x + 1$
+\item\label{itm : ME2Q3a} (4 pt) $\displaystyle\int 4 x^{3} - 2 x + 1 \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using linearity of the indefinite integral, we compute
+\begin{align*}
+\int 4 x^{3} - 2 x + 1 \spaceIntd \intd x
+&=
+4 \int x^{3} \spaceIntd \intd x - 2 \int x \spaceIntd \intd x + \int 1 \spaceIntd \intd x
+\\
+&=
+4 \left[\frac{1}{4} x^{4}\right] - 2 \left[\frac{1}{2} x^{2}\right] + x + C
+\\
+&=
+x^{4} - x^{2} + x + C
+\end{align*}
+where $C \in \reals$ is an arbitrary constant. We can check that its first derivative indeed equals the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x}\left[x^{4} - x^{2} + x + C\right]
+=
+4 x^{3} - 2 x + 1
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : ME2Q3b} (4 pt) $f : \reals \rightarrow \reals$ given by $f(x) = e^{2 x} - e^{-x}$
+\item\label{itm : ME2Q3b} (4 pt) $\displaystyle\int e^{2 x} - e^{-x} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using linearity of the indefinite integral, we can write
+\begin{align}
+\int e^{2 x} - e^{-x} \spaceIntd \intd x
+=
+\int e^{2 x} \spaceIntd \intd x - \int e^{-x} \spaceIntd \intd x%
+\label{eq : ME2Q3b Linearity}
+\end{align}
+For the first integral, let's guess an antiderivative to be $F_{1}(x) = e^{2 x}$; for the second, $F_{2}(x) = e^{-x}$. Then, by the chain rule,
+\begin{align*}
+F_{1}'(x)
+=
+2 e^{2 x}
+&&
+F_{2}'(x)
+=
+-e^{-x}
+\end{align*}
+whereas we want the derivatives to be $e^{2 x}$ and $e^{-x}$, respectively. So we scale $F_{1}$ and $F_{2}$ by the reciprocals of the unwanted coefficients, $2$ and $-1$. This gives us the new guesses $F_{1}(x) = \frac{1}{2} e^{2 x}$ and $F_{2}(x) = -e^{-x}$. We can check these satisfy
+\begin{align*}
+F_{1}'(x)
+=
+e^{2 x}
+&&
+F_{2}'(x)
+=
+e^{-x}
+\end{align*}
+as desired. Substituting these results into \eqref{eq : ME2Q3b Linearity}, we conclude
+\begin{align*}
+\int e^{2 x} - e^{-x} \spaceIntd \intd x
+=
+\left[\frac{1}{2} e^{2 x}\right] - \left[-e^{-x}\right] + C
+=
+\frac{1}{2} e^{2 x} + e^{-x} + C
+\end{align*}
+We can check that its first derivative indeed equals the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x}\left[e^{2 x} + e^{-x} + C\right]
+=
+\frac{1}{2} e^{2 x} (2) + e^{-x} (-1) + 0
+=
+e^{2 x} - e^{-x}
+\end{align*}}% End solution.
+
+
+
+\newpage% Activate for solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : ME2Q3c} (4 pt) $f : [0,+\infty) \rightarrow \reals$ given by $f(x) = \frac{x^{2} - 1}{\sqrt{x}}$
+\item\label{itm : ME2Q3c} (4 pt) $\displaystyle\int \frac{x^{2} - 1}{\sqrt{x}} \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+First let's perform the division to rewrite the integrand:
+\begin{align}
+\frac{x^{2} - 1}{\sqrt{x}}
+=
+\frac{x^{2} - 1}{x^{\frac{1}{2}}}
+=
+\left(x^{2} - 1\right) x^{-\frac{1}{2}}
+=
+x^{2 - \frac{1}{2}} - x^{-\frac{1}{2}}
+=
+x^{\frac{3}{2}} - x^{-\frac{1}{2}}%
+\label{eq : ME2Q3c Algebra On Integrand}
+\end{align}
+Substituting this equivalent expression for our integrand, then using linearity of the indefinite integral, we get
+\begin{align}
+\int \frac{x^{2} - 1}{\sqrt{x}} \spaceIntd \intd x
+=
+\int x^{\frac{3}{2}} - x^{-\frac{1}{2}} \spaceIntd \intd x
+=
+\int x^{\frac{3}{2}} \spaceIntd \intd x - \int x^{-\frac{1}{2}} \spaceIntd \intd x%
+\label{eq : ME2Q3c Linearity}
+\end{align}
+Great. Let's guess some antiderivatives, by thinking of the power rule for derivatives, run in reverse. For the first integral, if we want to end up with the exponent $\frac{3}{2}$ after subtracting one from the exponent, then we'd better start with the exponent $\frac{5}{2}$. So let's guess $F_{1}(x) = x^{\frac{5}{2}}$. Similarly, for the second integral, let's guess $F_{2}(x) = x^{\frac{1}{2}}$. We check
+\begin{align*}
+F_{1}'(x)
+=
+\frac{5}{2} x^{\frac{3}{2}}
+&&
+F_{2}'(x)
+=
+\frac{1}{2} x^{-\frac{1}{2}}
+\end{align*}
+We don't want any coefficients, so we scale our original guesses for $F_{1}$ and $F_{2}$ by the reciprocals of the unwanted coefficients. This gives us new guesses
+\begin{align*}
+F_{1}(x)
+=
+\frac{2}{5} x^{\frac{5}{2}}
+&&
+F_{2}(x)
+=
+2 x^{\frac{1}{2}}
+\end{align*}
+We can check that these satisfy
+\begin{align*}
+F_{1}'(x)
+=
+x^{\frac{3}{2}}
+&&
+F_{2}'(x)
+=
+x^{-\frac{1}{2}}
+\end{align*}
+as desired. Substituting these results into \eqref{eq : ME2Q3c Linearity}, we conclude that
+\begin{align*}
+\int \frac{x^{2} - 1}{\sqrt{x}} \spaceIntd \intd x
+=
+\left[\frac{2}{5} x^{\frac{5}{2}}\right] - \left[2 x^{\frac{1}{2}}\right] + C
+=
+\frac{2}{5} x^{\frac{5}{2}} - 2 x^{\frac{1}{2}} + C
+\end{align*}
+We can check that its first derivative indeed equals the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x} \left[\frac{5}{2} x^{\frac{2}{5}} - 2 x^{\frac{1}{2}} + C\right]
+=
+\frac{2}{5} \cdot \frac{5}{2} x^{\frac{5}{2} - 1} - 2 \cdot \frac{1}{2} x^{\frac{1}{2} - 1} + 0
+=
+x^{\frac{3}{2}} - x^{-\frac{1}{2}}
+\end{align*}
+which equals the original integrand by what we showed in Equation \eqref{eq : ME2Q3c Algebra On Integrand}.}% End solution.
+
+
+
+\newpage% Activate in solutions only.
+
+\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : ME2Q3d} (4 pt) $f : [0,+\infty) \rightarrow \reals$ given by $f(x) = (x^{2} - 1) (4 x + 3)$
+\item\label{itm : ME2Q3d} (4 pt) $\displaystyle\int (x^{2} - 1) (4 x + 3) \spaceIntd \intd x$
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+First let's perform the multiplication in the integrand:
+\begin{align}
+(x^{2} - 1) (4 x + 3)
+=
+4 x^{3} + 3 x^{2} - 4 x - 3%
+\label{eq : ME2Q3d Algebra On Integrand}
+\end{align}
+This allows us to rewrite the indefinite integral as
+\begin{align*}
+\int (x^{2} - 1) (4 x + 3) \spaceIntd \intd x
+=
+\int 4 x^{3} + 3 x^{2} - 4 x - 3 \spaceIntd \intd x
+\end{align*}
+Using the same ``guess--and--check--and--modify'' techniques as above, or by observation, we find that this last indefinite integral evaluates to
+\begin{align*}
+=
+x^{4} + x^{3} - 2 x^{2} - 3 x + C
+\end{align*}
+We can check that its first derivative indeed equals the original integrand:
+\begin{align*}
+\frac{\intd}{\intd x} \left[x^{4} + x^{3} - 2 x^{2} - 3 x + C\right]
+=
+4 x^{3} + 3 x^{2} - 4 x - 3
+\end{align*}
+which equals the original integrand by what we showed in Equation \eqref{eq : ME2Q3d Algebra On Integrand}.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Lower and upper sums, implicit fundamental theorem
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q4}}
+\label{sec : Math112 Spring2022 MockExam2 Q4}
+
+(16 pt) Consider the piecewise function $f : \reals \rightarrow \reals$ given by
+\begin{align*}
+f(x)
+=
+\begin{dcases*}
+0			&	if $x \leq -2$		\\
+\sqrt{4 - x^{2}}	&	if $-2 \leq x \leq 0$	\\
+2 - 2 x		&	if $0 \leq x \leq 2$	\\
+-2			&	if $x \geq 2$
+\end{dcases*}
+\end{align*}
+Graphs of $f$ are included in parts \ref{itm : ME2Q4a} and \ref{itm : ME2Q4b}.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME2Q4a} (4 pt) Draw and compute a lower- and upper-sum estimate (call them $L_{3}$ and $U_{3}$, respectively) for $\int_{-2}^{4} f(x) \spaceIntd \intd x$ by partitioning $[-2,4]$ into three subintervals, each of width $2$.
+\end{enumerate}
+\begin{center}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q4_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q4a_Lower.pdf}% Activate for solutions.
+\hspace{0.5in}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q4_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q4a_Upper.pdf}% Activate for solutions.
+\\
+Lower sum ($L_{3}$)
+\hspace{1.75in}
+Upper sum ($U_{3}$)
+\end{center}
+
+\spaceSolution{2in}{% Begin solution.
+As noted, for this partition, each subinterval has width $2$. The lower-sum estimate is
+\begin{align*}
+L_{3}
+=
+0 \cdot 2 + (-2) \cdot 2 + (-2) \cdot 2
+=
+-8
+\end{align*}
+The upper-sum estimate is
+\begin{align*}
+U_{3}
+=
+2 \cdot 2 + 2 \cdot 2 + (-2) \cdot 2
+=
+4
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q4b} (4 pt) Draw and compute a lower- and upper-sum estimate (call them $L_{6}$ and $U_{6}$, respectively) for $\int_{-2}^{4} f(x) \spaceIntd \intd x$ by partitioning $[-2,4]$ into six subintervals, each of width $1$. (Note: $f(-1) = \sqrt{3} \approx 1.73$.)
+\end{enumerate}
+\begin{center}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q4_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q4b_Lower.pdf}% Activate for solutions.
+\hspace{0.5in}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q4_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q4b_Upper.pdf}% Activate for solutions.
+\\
+Lower sum ($L_{6}$)
+\hspace{1.75in}
+Upper sum ($U_{6}$)
+\end{center}
+
+\spaceSolution{2in}{% Begin solution.
+As noted, for this partition, each subinterval has width $1$. The lower-sum estimate is
+\begin{align*}
+L_{6}
+=
+0 \cdot 1 + \sqrt{3} \cdot 1 + 0 \cdot 1 + (-2) \cdot 1 + (-2) \cdot 1 + (-2) \cdot 1
+=
+-6 + \sqrt{3}
+\approx
+-4.27
+\end{align*}
+The upper-sum estimate is
+\begin{align*}
+U_{6}
+=
+\sqrt{3} \cdot 1 + 2 \cdot 1 + 2 \cdot 1 + 0 \cdot 1 + (-2) \cdot 1 + (-2) \cdot 1
+=
+\sqrt{3}
+\approx
+1.73
+\end{align*}
+}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q4c} (4 pt) Use geometry to compute the exact value of $\int_{-2}^{4} f(x) \spaceIntd \intd x$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Reading this definite integral, we see it asks us for the signed area under the graph of $f(x)$ starting at $x = -2$ and stopping at $x = 4$. The graph of $f(x)$ ``splits up'' naturally into four parts on this region:
+\begin{enumerate}
+\item $[-2,0]$ : We have a quarter circle with radius $2$. It lies above the $x$-axis, so this area is positive.
+\item $[0,1]$ : We have a triangle with base $1$ and height $2$. It lies above the $x$-axis, so this area is positive.
+\item $[1,2]$ : We have a triangle with base $1$ and height $2$. It lies below the $x$-axis, so this area is negative.% Begin footnote.
+\footnote{Note that this negative area cancels exactly the positive area from the other triangle.}% End footnote
+\item $[2,4]$ : We have a rectangle (square) with base $2$ and height $2$. It lies below the $x$-axis, so this area is negative.
+\end{enumerate}
+Combining this information, we compute
+\begin{align*}
+\int_{-2}^{4} f(x) \spaceIntd \intd x
+&=
+\int_{-2}^{0} f(x) \spaceIntd \intd x + \int_{0}^{1} f(x) \spaceIntd \intd x + \int_{1}^{2} f(x) \spaceIntd \intd x + \int_{2}^{4} f(x) \spaceIntd \intd x
+\\
+&=
++\left[\frac{1}{4} \pi (2)^{2}\right] + \left[\frac{1}{2} (1) (2)\right] - \left[\frac{1}{2} (1) (2)\right] - \left[(2) (2)\right]
+\\
+&=
+\pi + 1 - 1 - 4
+=
+-4 + \pi
+\approx
+-0.86
+\end{align*}
+
+Remark. We can ask ourselves, ``Should we expect the total signed area to be positive or negative?'' The area of the two triangles are equal, and one area is positive while the other is negative, so these areas cancel. The quarter circle (positive area) to sit ``inside'' the square (negative area), and a little bit of the square remains uncovered. So we should expect the total signed area to be negative, equal (in absolute value) to this uncovered area of the square. This geometry is exactly what our numerical result $-4 + \pi$ measures.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q4d} (4 pt) Order all your results, from parts \ref{itm : ME2Q2a}--\ref{itm : ME2Q2c}, in increasing order. Make a conjecture about where lower- and upper-sum estimates $L_{12}$ and $U_{12}$, with twelve subintervals, each of width $\frac{1}{2}$, would go in your order.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Comparing our results, we get
+\begin{align*}
+L_{3} = -8
+\leq
+L_{6} \approx -4.27
+\leq
+\int_{-2}^{4} f(x) \spaceIntd \intd x \approx -0.86
+\leq
+U_{6} \approx 1.73
+\leq
+U_{3} = 4
+\end{align*}
+Taking finer partitions (loosely, more rectangles) gives us better approximations to the actual area (the value of the definite integral, by definition). That is, as we increase the number of rectangles, the resulting approximation is closer to the actual value of the area. Therefore we expect that $L_{12}$ and $U_{12}$ would fit in our sequence as
+\begin{align*}
+L_{3} \leq L_{6} \leq L_{12} \leq \int_{-2}^{4} f(x) \spaceIntd \intd x \leq U_{12} \leq U_{6} \leq U_{3}
+\end{align*}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Implicit fundamental theorem, average value
+
+\newpage
+
+\section{Exercise \ref{sec : Math112 Spring2022 MockExam2 Q5}}
+\label{sec : Math112 Spring2022 MockExam2 Q5}
+
+(18 pt) Consider the function $f : \reals \rightarrow \reals$ given by
+\begin{align*}
+f(x)
+=
+e^{x} + \pi \cos(\pi x) + 2 x - 1
+\end{align*}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : ME2Q5a} (4 pt) Find an antiderivative $F(x)$ of $f(x)$. Verify that it is indeed an antiderivative.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Using the ``guess--and--check--and--modify'' technique as needed, we find one antiderivative of $f(x)$ is the function $F : \reals \rightarrow \reals$ given by
+\begin{align*}
+F(x)
+=
+e^{x} + \sin(\pi x) + x^{2} - x
+\end{align*}
+Adding any constant $C$ to this rule of assignment is also a valid antiderivative of $f(x)$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q5b} (4 pt) Using your antiderivative $F(x)$ from part \ref{itm : ME2Q5a}, show that $\int_{0}^{2} f(x) \spaceIntd \intd x = e^{2} + 1$ (approximately $8.3890$).
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+By the fundamental theorem of calculus, we have
+\begin{align*}
+\int_{0}^{2} f(x) \spaceIntd \intd x
+&=
+F(2) - F(0)
+\\
+&=
+\left[e^{2} + \sin(2 \pi) + 2^{2} - 2\right] - \left[e^{0} + \sin(0) + 0^{2} - 0\right]
+\\
+&=
+\left[e^{2} + 0 + 4 - 2\right] - \left[1 + 0 + 0 + 0\right]
+\\
+&=
+e^{2} + 1
+\approx
+8.3890
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q5c} (2 pt) Find the average value of $f(x)$ on the interval $[0,2]$. (You have already done almost all the work!)
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+By definition, the average value of $f(x)$ on the interval $[0,2]$ is
+\begin{align*}
+A(f,[0,2])
+&=
+\frac{1}{2 - 0} \int_{0}^{2} f(x) \spaceIntd \intd x
+=
+\frac{1}{2} \left(e^{2} + 1\right)
+\end{align*}
+where in the last equality we substituted our result for the definite integral, computed in part \ref{itm : ME2Q5c}.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q5d} (4 pt) On the graphs of $f$ below, draw a lower- and upper-sum approximation to the definite integral $\int_{0}^{2} f(x) \spaceIntd \intd x$. Partition the interval $[0,2]$ into four subintervals, each of width $\frac{1}{2}$.
+\end{enumerate}
+\begin{center}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q5_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q5d_Lower.pdf}% Activate for solutions.
+\hspace{0.5in}
+%\includegraphics[scale=0.5]{\filePathGraphics ME2Q5_Graph.png}% Activate for exam.
+\includegraphics[scale=0.8]{\filePathGraphics ME2Q5d_Upper.pdf}% Activate for solutions.
+\\
+Lower sum
+\hspace{2.25in}
+Upper sum
+\end{center}
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : ME2Q5e} (4 pt) Using the values $f(x)$ below, compute the upper- and lower-sum approximations you sketched in part \ref{itm : ME2Q5d}. Show that these approximations bound your value of the definite integral in part \ref{itm : ME2Q5b}.
+\begin{itemize}
+\item $f(0.0) \approx 3.14$% = \pi 
+\item $f(0.1) \approx 3.29$ (a local maximum)
+\item $f(0.5) \approx 1.65$% = \sqrt{e} 
+\item $f(0.9) \approx 0.24$ (a local minimum)
+\item $f(1.0) \approx 0.58$% = e - \pi + 1 
+\item $f(1.5) \approx 6.48$% = e^{\frac{3}{2}} + 2 
+\item $f(2.0) \approx 13.53$% = e^{2} + \pi + 3 
+\end{itemize}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Using our sketches of the lower- and upper-sum approximations in part \ref{itm : ME2Q5d} as a guide, we compute
+\begin{align*}
+L_{4}
+&=
+f(0.5) \cdot \frac{1}{2} + f(0.9) \cdot \frac{1}{2} + f(1.0) \cdot \frac{1}{2} + f(1.5) \cdot \frac{1}{2}
+\\
+&\approx
+\frac{1}{2} \left[1.65 + 0.24 + 0.58 + 6.48\right]
+=
+\frac{1}{2} \left[8.95\right]
+=
+4.475
+\end{align*}
+and
+\begin{align*}
+U_{4}
+&=
+f(0.1) \cdot \frac{1}{2} + f(0.5) \cdot \frac{1}{2} + f(1.5) \cdot \frac{1}{2} + f(2.0) \cdot \frac{1}{2}
+\\
+&\approx
+\frac{1}{2} \left[3.29 + 1.65 + 6.48 + 13.53\right]
+=
+\frac{1}{2} \left[24.95\right]
+=
+12.475
+\end{align*}
+where in the second line of each computation we have factored out the common factor of $\frac{1}{2}$ (that is, used the distributive property, in reverse) to simplify our computation.
+
+Comparing these estimates with the exact value of the definite integral that we computed in part \ref{itm : ME2Q5b}, we observe that
+\begin{align*}
+L_{4} \approx 4.475
+\leq
+\int_{0}^{2} f(x) \spaceIntd \intd x \approx 8.3890
+\leq
+U_{4} \approx 12.475
+\end{align*}}% End solution.
