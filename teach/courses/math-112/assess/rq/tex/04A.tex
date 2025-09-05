@@ -1,0 +1,55 @@
+%
+%
+%   ReQuiz 04A : 2022-02-01 (T)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Consider the function
+\begin{align*}
+f : (-2,2) \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+\cos\left(\frac{x}{\sqrt{4 - x^{2}}}\right)
+\end{align*}
+where as usual $\reals$ denotes ``all real numbers''. Find the derivative function $f'$. Be sure to specify its domain and codomain, in addition to the rule(s) of assignment.
+
+\spaceSolution{5in}{% Begin solution.
+If desired, we may write the rule of assignment for $f(x)$ equivalently as\footnote{% Begin footnote.
+I find rewriting quotients as products, and rewriting roots as fractional exponents, helps me compute derivatives.}% End footnote.
+\begin{align*}
+f(x)
+=
+\cos\left(x \left(4 - x^{2}\right)^{-\frac{1}{2}}\right)
+\end{align*}
+Using the chain rule (several times) and the product rule (or quotient rule), we compute\footnote{% Begin footnote.
+Any of these expressions for $f'(x)$ are ``correct''. The last two may be preferred, as they present the rule of assignment simply, without extraneous computation (for example, the ``$-x^{2} + x^{2}$'' appearing in line 3).}% End footnote.
+\begin{align*}
+f'(x)
+&=
+-\sin\left(\frac{x}{\sqrt{4 - x^{2}}}\right) \left(\left(4 - x^{2}\right)^{-\frac{1}{2}} + x \left(-\frac{1}{2}\right) \left(4 - x^{2}\right)^{-\frac{3}{2}} (-2 x)\right)
+\\
+&=
+-\sin\left(\frac{x}{\sqrt{4 - x^{2}}}\right) \left(\left(4 - x^{2}\right)^{-\frac{1}{2}} + x^{2} \left(4 - x^{2}\right)^{-\frac{3}{2}}\right)
+\\
+&=
+-\sin\left(\frac{x}{\sqrt{4 - x^{2}}}\right) \frac{\left(4 - x^{2}\right) + x^{2}}{\left(4 - x^{2}\right)^{\frac{3}{2}}}
+\\
+&=
+-\sin\left(\frac{x}{\sqrt{4 - x^{2}}}\right) \frac{4}{\left(4 - x^{2}\right)^{\frac{3}{2}}}
+\\
+&=
+-\frac{4 \sin\left(\frac{x}{\sqrt{4 - x^{2}}}\right)}{\left(4 - x^{2}\right)^{\frac{3}{2}}}
+\end{align*}
+This rule of assignment is undefined if and only if either
+\begin{enumerate}[label=(\roman*)]
+\item $4 - x^{2} < 0$, for then we would take the square root of a negative number, which is not possible in the real numbers; or
+\item $4 - x^{2} = 0$, for then we would divide by zero, which is not possible.
+\end{enumerate}
+These two conditions imply the rule of assignment is defined if and only if $-2 < x < 2$, that is, on the interval $(-2,2)$. This is the same as the domain of $f$. Thus we conclude that the domain of $f'$ is $(-2,2)$. The codomain of $f'$ we may take to be $\reals$ (all real numbers).}% End solution.

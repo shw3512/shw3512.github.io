@@ -1,0 +1,91 @@
+%
+%
+%   LQuiz 05B06B : 2022-02-13 (N)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Consider the function
+\begin{align*}
+f : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+e^{-2 x} + x^{3} + 4 x + 3
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ05B06B Linearization} (3 pt) Compute the linearization of (aka linear approximation to) $f$ at $x = 0$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By definition, the linearization of $f$ at $x = 0$ is the function $L : \reals \rightarrow \reals$ given by
+\begin{align}
+L(x)
+=
+f(0) + f'(0) (x - 0)%
+\label{eq : LQ05B06B Linearization 0}
+\end{align}
+We compute
+\begin{align*}
+f(0)
+&=
+e^{-2 (0)} + 0 + 0 + 3
+=
+4
+\\
+f'(x)
+&=
+-2 e^{-2 x} + 3 x^{2} + 4
+\\
+f'(0)
+&=
+-2 e^{-2 (0)} + 0 + 4
+=
+2
+\end{align*}
+Substituting these results into Equation \eqref{eq : LQ05B06B Linearization 0}, we find that the rule of assignment for $L$ is
+\begin{align*}
+L(x)
+=
+4 + 2 x
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ05B06B Approximation Error} (1 pt) Use your linearization from part \ref{itm : LQ05B06B Linearization} to approximate the value $f(1)$. Find the error in this approximation. (Where relevant, you may leave computations in terms of $e$.)
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We compute
+\begin{align*}
+L(1)
+=
+4 + 2 (1)
+=
+6
+&&
+\text{and}
+&&
+f(1)
+=
+e^{-2 (1)} + (1)^{3} + 4 (1) + 3
+=
+8 + e^{-2}
+\end{align*}
+The error $\varepsilon$ in the approximation $L(1)$ to $f(1)$ is
+\begin{align*}
+\varepsilon
+=
+L(1) - f(1)
+=
+6 - (8 + e^{-2})
+=
+-2 - e^{-2}
+\end{align*}
+This error is negative, indicating that our estimate $L(1)$ is less than the actual value $f(1)$. That is, our estimate is too small.}% End solution.

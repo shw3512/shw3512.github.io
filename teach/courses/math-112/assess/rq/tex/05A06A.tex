@@ -1,0 +1,95 @@
+%
+%
+%   LQuiz 05A06A : 2022-01-30 (N)
+%
+%
+
+\section{Exercise}
+
+% Reference : SHW
+
+(4 pt) Consider the function
+\begin{align*}
+f : \reals \rightarrow \reals
+&&
+\text{given by}
+&&
+f(x)
+=
+(x^{2} - 1)^{5} - \sin(\pi x)
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : LQ05A06A Linearization} (3 pt) Compute the linearization of (aka linear approximation to) $f$ at $x = 1$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By definition, the linearization of $f$ at $x = 1$ is the function $L : \reals \rightarrow \reals$ given by
+\begin{align}
+L(x)
+=
+f(1) + f'(1) (x - 1)%
+\label{eq : LQ05A06A Linearization 0}
+\end{align}
+We compute% Begin footnote.
+\footnote{In computing $f'(x)$, we use the chain rule twice, once on each term of $f(x)$.}% En footnote.
+\begin{align*}
+f(1)
+&=
+(1 - 1)^{5} - \sin(\pi)
+=
+0 - 0
+=
+0
+\\
+f'(x)
+&=
+5 (x^{2} - 1)^{4} (2 x) - \pi \cos(\pi x)
+=
+10 x (x^{2} - 1)^{4} - \pi \cos(\pi x)
+\\
+f'(1)
+&=
+\pi
+\end{align*}
+Substituting these results into \eqref{eq : LQ05A06A Linearization 0}, we conclude that the rule of assignment for $L$ is
+\begin{align}
+L(x)
+=
+0 + \pi (x - 1)
+=
+\pi x - \pi%
+\label{eq : LQ05A06A Linearization 1}
+\end{align}
+A graph of $f(x)$ (in blue) and $L(x)$ (in red), produced using \href{https://www.wolframalpha.com/input/?i=plot+\%28x\%5E2-1\%29\%5E5+-+sin\%28pi+x\%29+and+pi*x-pi}{WolframAlpha}, is shown below.
+\begin{center}
+\includegraphics[scale=0.4]{\filePathGraphics GraphOffL.png}
+\end{center}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : LQ05A06A Approximation Error} (1 pt) Use your linearization from part \ref{itm : LQ05A06A Linearization} to approximate the value $f(0)$. Find the error in this approximation.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Using the given rule of assignment for $f(x)$ and Equation \eqref{eq : LQ05A06A Linearization 1} for $L(x)$, we compute
+\begin{align*}
+L(0)
+=
+-\pi
+&&
+f(0)
+=
+(-1)^{5} - \sin(0)
+=
+-1
+\end{align*}
+The error $\varepsilon$ in the approximation $L(0)$ to $f(0)$ is
+\begin{align*}
+\varepsilon
+=
+L(0) - f(0)
+=
+-\pi - (-1)
+=
+1 - \pi
+\end{align*}
+This error is negative, indicating that our estimate $L(0)$ is less than the actual value $f(0)$. That is, our estimate is too small. (Our graph of $f$ and $L$ above confirms this.)}% End solution.
