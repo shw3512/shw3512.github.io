@@ -26,7 +26,6 @@ Remarks.
 
 | Sequence | Type  | Topic                                     | v0 | Requiz A | Requiz B | Requiz C |
 |---------:|:------|:------------------------------------------|:---|:---------|:---------|:---------|
-| 1        | Exam  | Diagnostic quiz                           | [q](assess/qz/pdf/01.pdf), tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |  |  |  |
 | 2        | Short | Graphing vector operations                | [q](assess/qz/pdf/02.pdf), [tex](assess/qz/tex/02.tex), [zip](assess/qz/tex/02-graphics.zip) |  |  |  |
 | 3        | Long  | Coordinates, vector operations            | [q](assess/qz/pdf/03.pdf), [tex](assess/qz/tex/03.tex) | [q](assess/qz/pdf/03A.pdf), [tex](assess/qz/tex/03A.tex) |  |  |
 | 4        | Short | Lines                                     | [q](assess/qz/pdf/04.pdf), [tex](assess/qz/tex/04.tex) |  |  |  |
@@ -66,5 +65,6 @@ Remarks.
 
 | # | Topics | Files |
 |--:|:-------|:------|
+| 0 | Diagnostic quiz                                               | [q](assess/qz/pdf/01.pdf), -, tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
 | 1 | Lines and planes in R3, velocity                              | [q](assess/he/pdf/01.pdf), [a](assess/he/pdf/01-sol.pdf), tex ([instr](assess/he/tex/01-instr.tex), [grade](assess/he/tex/01-grade.tex), [q+a](assess/he/tex/01.tex)) |
 | 2 | Differentiation, optimization, level sets, iterated integrals | [q](assess/he/pdf/02.pdf), [a](assess/he/pdf/02-sol.pdf), tex ([instr](assess/he/tex/02-instr.tex), [grade](assess/he/tex/02-grade.tex), [q+a](assess/he/tex/02.tex)), [zip](assess/he/tex/02-graphics.zip) |
