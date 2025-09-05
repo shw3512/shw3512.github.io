@@ -27,7 +27,7 @@ Remarks.
 | Sequence | Type  | Topic                                     | v0 | Requiz A | Requiz B | Requiz C |
 |---------:|:------|:------------------------------------------|:---|:---------|:---------|:---------|
 | 1        | Exam  | Diagnostic quiz                           | [q](assess/qz/pdf/01.pdf), [tex](assess/qz/tex/01.tex) |  |  |  |
-| 2        | Short | Graphing vector operations                | [q](assess/qz/pdf/02.pdf), [tex](assess/qz/tex/02.tex) |  |  |  |
+| 2        | Short | Graphing vector operations                | [q](assess/qz/pdf/02.pdf), [tex](assess/qz/tex/02.tex), [zip](assess/qz/tex/02-graphics.zip) |  |  |  |
 | 3        | Long  | Coordinates, vector operations            | [q](assess/qz/pdf/03.pdf), [tex](assess/qz/tex/03.tex) | [q](assess/qz/pdf/03A.pdf), [tex](assess/qz/tex/03A.tex) |  |  |
 | 4        | Short | Lines                                     | [q](assess/qz/pdf/04.pdf), [tex](assess/qz/tex/04.tex) |  |  |  |
 | 5        | Short | Level sets                                | [q](assess/qz/pdf/05.pdf), [tex](assess/qz/tex/05.tex) |  |  |  |
@@ -42,12 +42,12 @@ Remarks.
 | 14       | Long  | Tangent plane to surface                  | [q](assess/qz/pdf/14.pdf), [tex](assess/qz/tex/14.tex) | [q](assess/qz/pdf/14A.pdf), [tex](assess/qz/tex/14A.tex) |  |  |
 | 15       | Short | Directional derivative                    | [q](assess/qz/pdf/15.pdf), [tex](assess/qz/tex/15.tex) |  |  |  |
 | 16       | Short | Optimization                              | [q](assess/qz/pdf/16.pdf), [tex](assess/qz/tex/16.tex) |  |  |  |
-| 17       | Long  | Optimization                              | [q](assess/qz/pdf/17.pdf), [tex](assess/qz/tex/17.tex) |  |  |  |
+| 17       | Long  | Optimization                              | [q](assess/qz/pdf/17.pdf), [tex](assess/qz/tex/17.tex), [zip](assess/qz/tex/17-graphics.zip) |  |  |  |
 | 18       | Short | Double integral                           | [q](assess/qz/pdf/18.pdf), [tex](assess/qz/tex/18.tex) |  |  |  |
-| 19       | Long  | Optimization                              | [q](assess/qz/pdf/19.pdf), [tex](assess/qz/tex/19.tex) | [q](assess/qz/pdf/19A.pdf), [tex](assess/qz/tex/19A.tex) | [q](assess/qz/pdf/19B.pdf), [tex](assess/qz/tex/19B.tex) | [q](assess/qz/pdf/19C.pdf), [tex](assess/qz/tex/19C.tex) |
-| 20       | Short | Double integral (polar coordinates)       | [q](assess/qz/pdf/20.pdf), [tex](assess/qz/tex/20.tex) |  |  |  |
+| 19       | Long  | Optimization                              | [q](assess/qz/pdf/19.pdf), [tex](assess/qz/tex/19.tex), [zip](assess/qz/tex/19-graphics.zip) | [q](assess/qz/pdf/19A.pdf), [tex](assess/qz/tex/19A.tex) | [q](assess/qz/pdf/19B.pdf), [tex](assess/qz/tex/19B.tex) | [q](assess/qz/pdf/19C.pdf), [tex](assess/qz/tex/19C.tex) |
+| 20       | Short | Double integral (polar coordinates)       | [q](assess/qz/pdf/20.pdf), [tex](assess/qz/tex/20.tex), [zip](assess/qz/tex/20-graphics.zip) |  |  |  |
 | 21       | Short | Double integral                           | [q](assess/qz/pdf/21.pdf), [tex](assess/qz/tex/21.tex) |  |  |  |
-| 22       | Long  | Iterated integral                         | [q](assess/qz/pdf/22.pdf), [tex](assess/qz/tex/22.tex) | [q](assess/qz/pdf/22A.pdf), [tex](assess/qz/tex/22A.tex) | [q](assess/qz/pdf/22B.pdf), [tex](assess/qz/tex/22B.tex) | [q](assess/qz/pdf/22C.pdf), [tex](assess/qz/tex/22C.tex) |
+| 22       | Long  | Iterated integral                         | [q](assess/qz/pdf/22.pdf), [tex](assess/qz/tex/22.tex), [zip](assess/qz/tex/22-graphics.zip) | [q](assess/qz/pdf/22A.pdf), [tex](assess/qz/tex/22A.tex) | [q](assess/qz/pdf/22B.pdf), [tex](assess/qz/tex/22B.tex) | [q](assess/qz/pdf/22C.pdf), [tex](assess/qz/tex/22C.tex) |
 | 23       | Short | Triple integral (differential)            | [q](assess/qz/pdf/23.pdf), [tex](assess/qz/tex/23.tex) |  |  |  |
 | 24       | Short | Triple integral (cylindrical coordinates) | [q](assess/qz/pdf/24.pdf), [tex](assess/qz/tex/24.tex) |  |  |  |
 | 25       | Long  | Triple integral                           | [q](assess/qz/pdf/25.pdf), [tex](assess/qz/tex/25.tex) | [q](assess/qz/pdf/25A.pdf), [tex](assess/qz/tex/25A.tex) | [q](assess/qz/pdf/25B.pdf), [tex](assess/qz/tex/25B.tex) | [q](assess/qz/pdf/25C.pdf), [tex](assess/qz/tex/25C.tex) |
