@@ -9,10 +9,12 @@
 ## Course documents
 
 - Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/syl.tex))
+- Expectations ([pdf](docs/pdf/exp.pdf), [tex](docs/tex/exp.tex))
+- How to read math effectively ([pdf](docs/pdf/read.pdf), [tex](docs/tex/read.tex))
 - Webpages:
     - [Course homepage](webp/home.html)
     - [Calendar of lectures](webp/cal.html)
-    - [Homework](webp/ph.html)
+    - [Homework](webp/hw.html)
     - [Team project](webp/tp.html)
     - [Resources](webp/res.html)
 
