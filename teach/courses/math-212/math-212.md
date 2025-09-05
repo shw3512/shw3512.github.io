@@ -54,7 +54,7 @@ Remarks.
 | 27       | Short | Fubini's theorem                          | [q](assess/qz/pdf/27.pdf), [tex](assess/qz/tex/27.tex) |  |  |  |
 | 28       | Long  | Change of variables in integration        | [q](assess/qz/pdf/28.pdf), [tex](assess/qz/tex/28.tex) | [q](assess/qz/pdf/28A.pdf), [tex](assess/qz/tex/28A.tex) | [q](assess/qz/pdf/28B.pdf), [tex](assess/qz/tex/28B.tex) |  |
 | 29       | Short | Iterated integral: Choosing coordinates   | [q](assess/qz/pdf/29.pdf), [tex](assess/qz/tex/29.tex) |  |  |  |
-| 30       | Short | Regions (open? connected?)                | [q](assess/qz/pdf/30.pdf), [tex](assess/qz/tex/30.tex) |  |  |  |
+| 30       | Short | Regions in R2 (open? connected?)          | [q](assess/qz/pdf/30.pdf), [tex](assess/qz/tex/30.tex) |  |  |  |
 | 31       | Short | Green's theorem                           | [q](assess/qz/pdf/31.pdf), [tex](assess/qz/tex/31.tex) |  |  |  |
 | 32       | Long  | div, grad, curl                           | [q](assess/qz/pdf/32.pdf), [tex](assess/qz/tex/32.tex) |  |  |  |
 | 33       | Short | Conservative vector fields                | [q](assess/qz/pdf/33.pdf), [tex](assess/qz/tex/33.tex) |  |  |  |
