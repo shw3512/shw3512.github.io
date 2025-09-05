@@ -22,7 +22,11 @@
 
 ## Assessments
 
-### Homework
+Remarks.
+
+1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, `tex` links to the TeX document, and `zip` links to a zip file of images used in the assessment.
+2. To compile pdfs for the quizzes and exams, I used a common template TeX document (named `main.tex`); and subdirectories named `sq`, `lq`, `rq`, `me`, and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
+    - Abbreviations: `sq` = short quiz, `lq` = long quiz, `rq` = requiz, `me` = mock exam, `ex` = exam
 
 ### Quizzes
 
