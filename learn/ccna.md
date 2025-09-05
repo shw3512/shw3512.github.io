@@ -23,7 +23,7 @@ Below I list the resources I used to prepare for the CCNA certification exam.
             - Volume 2: "[CCNA certification study guide](https://www.amazon.com/CCNA-Certification-Study-Guide-200-301/dp/1119659183)"
         - November 2024
             - [Volume 1](https://www.amazon.com/CCNA-Certification-Study-Guide-Exam-dp-1394213018/dp/1394213018)
-            - [Volume 2](https://www.amazon.com/CCNA-Certification-Study-Guide-200-301-dp-1394302150/dp/1394302150))
+            - [Volume 2](https://www.amazon.com/CCNA-Certification-Study-Guide-200-301-dp-1394302150/dp/1394302150)
     - My review: Neutral.
 - Jeremy McDowell's two-volume study guide, "Acing the CCNA exam"
     - Author: Jeremy McDowell
