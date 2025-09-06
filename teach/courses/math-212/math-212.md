@@ -14,7 +14,7 @@
 
 ### Lecture notes
 
-All versions of the notes are compiled from the same files ([tex](/notes/tex/main.tex), [bib](/notes/tex/Bibliography.tex), and [zip](Graphics.zip)).
+All versions of the notes are compiled from the same collection of files (available here as [zip](/notes/tex/notes.zip)).
 
 | Version                           | Shows solutions? | Shows suggested edits? |
 |:----------------------------------|:----------------:|:----------------------:|
