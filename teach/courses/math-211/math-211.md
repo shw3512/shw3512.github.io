@@ -14,6 +14,11 @@
 
 Source files (tex) for the above documents are available here as [zip](docs/tex/docs.zip).
 
+- Webpages:
+    - [Resources](webp/res.html)
+    - [Office hours and exams](webp/oh-ex.html)
+    - [Final exam topics](fe.html)
+
 ### Lecture notes
 
 | Version | Format                        | Shows solutions? | Shows suggested edits? |
