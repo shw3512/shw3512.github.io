@@ -1,0 +1,185 @@
+%
+% Quiz 10 : 2019-07-19 (F)
+%
+\section{Exercise}
+
+(5 pt) Consider the matrix
+\begin{align*}
+A
+=
+\begin{bmatrix}
+0	&	0	&	1	\\
+1	&	2	&	0	\\
+-2	&	-2	&	1
+\end{bmatrix}%
+.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Quiz10 Part a} (2 pt) Show that $\det A = 2$. \fontHint{Use expansion by minors along row 1. (Why?)}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using expansion by minors along row 1 (which we choose because row 1 contains many zeros, which will simplify our work), we compute
+\begin{align*}
+\det A
+=
+0 + 0 + (-1)^{1 + 3} (1) \det
+\begin{bmatrix}
+1	&	2	\\
+-2	&	-2
+\end{bmatrix}
+=
+(1) (1) (1 (-2) - 2 (-2))
+=
+2,
+\end{align*}
+where we use the fact that the determinant of a $2 \times 2$ matrix is
+\begin{align*}
+\det
+\begin{bmatrix}
+a	&	b	\\
+c	&	d
+\end{bmatrix}
+=
+a d - b c.
+\end{align*}
+Note: Expansion by minors along any row or column will yield this same result. To illustrate, consider expansion by minors along column 2. We get
+\begin{align*}
+\det A
+&=
+0 + (-1)^{2 + 2} (2) \det
+\begin{bmatrix}
+0	&	1	\\
+-2	&	1
+\end{bmatrix}
++ (-1)^{3 + 2} (-2) \det
+\begin{bmatrix}
+0	&	1	\\
+1	&	0
+\end{bmatrix}
+\\
+&=
+0 + (1) (2) (0 (1) - 1 (-2)) + (-1) (-2) (0 (0) - 1 (1))
+=
+2 (2) + 2 (-1)
+=
+2.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Quiz10 Part b} (2 pt) Apply the row reduction algorithm to $\left[\begin{array}{c;{2pt/2pt}c}\fontMatrix{A}&\fontMatrix{I}_{3}\end{array}\right]$ to show that
+\begin{align*}
+A^{-1}
+=
+\frac{1}{2}
+\begin{bmatrix}
+2	&	-2	&	-2	\\
+-1	&	2	&	1	\\
+2	&	0	&	0
+\end{bmatrix}%
+.
+\end{align*}
+\fontHint{Recall that one of the three elementary row operations lets us swap any two rows.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+\fontMatrix{A}	&	\fontMatrix{I}_{3}
+\end{array}
+\right]
+&=
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+0	&	0	&	1	&	1	&	0	&	0	\\
+1	&	2	&	0	&	0	&	1	&	0	\\
+-2	&	-2	&	1	&	0	&	0	&	1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{1} \leftrightarrow R_{2}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	2	&	0	&	0	&	1	&	0	\\
+0	&	0	&	1	&	1	&	0	&	0	\\
+-2	&	-2	&	1	&	0	&	0	&	1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{3} = R_{3} + 2 R_{1}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	2	&	0	&	0	&	1	&	0	\\
+0	&	0	&	1	&	1	&	0	&	0	\\
+0	&	2	&	1	&	0	&	2	&	1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{1} = R_{1} - R_{3}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	0	&	-1	&	0	&	-1	&	-1	\\
+0	&	0	&	1	&	1	&	0	&	0	\\
+0	&	2	&	1	&	0	&	2	&	1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{3} = \frac{1}{2} R_{3}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	0	&	-1		&	0	&	-1	&	-1		\\
+0	&	0	&	1		&	1	&	0	&	0		\\
+0	&	1	&	\frac{1}{2}	&	0	&	1	&	\frac{1}{2}
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{2} \leftrightarrow R_{3}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	0	&	-1		&	0	&	-1	&	-1		\\
+0	&	1	&	\frac{1}{2}	&	0	&	1	&	\frac{1}{2}	\\
+0	&	0	&	1		&	1	&	0	&	0
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{1} = R_{1} + R_{3},R_{2} = R_{2} - \frac{1}{2} R_{3}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	0	&	0	&	1			&	-1	&	-1		\\
+0	&	1	&	0	&	-\frac{1}{2}	&	1	&	\frac{1}{2}	\\
+0	&	0	&	1	&	1			&	0	&	0
+\end{array}
+\right].
+\end{align*}
+The $3 \times 3$ matrix to the right of the dashed lines is $A^{-1}$. Factoring out $\frac{1}{2}$ from all of the entries of this matrix, we conclude that
+\begin{align*}
+A^{-1}
+=
+\begin{bmatrix}
+1			&	-1	&	-1		\\
+-\frac{1}{2}	&	1	&	\frac{1}{2}	\\
+1			&	0	&	0
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+2	&	-2	&	-2	\\
+-1	&	2	&	1	\\
+2	&	0	&	0
+\end{bmatrix}%
+,
+\end{align*}
+as claimed.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Explain how existence of $A^{-1}$ in part \ref{itm : Quiz10 Part b} is consistent with our answer in part \ref{itm : Quiz10 Part a}.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+A square matrix is invertible if and only if its determinant is nonzero. In part \ref{itm : Quiz10 Part a}, we computed $\det A = 2 \neq 0$, so we know $A^{-1}$ exists (and hence our computations in part \ref{itm : Quiz10 Part b} to find it are not in vain).}% End solution.

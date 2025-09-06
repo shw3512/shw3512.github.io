@@ -1,0 +1,313 @@
+%
+% Quiz 21 : 2019-08-05 (M)
+%
+% Phase planes plotted using online software at
+% http://www.calvin.edu/~scofield/demos/other/PhasePortrait2D.html
+%
+\section{Exercise}
+
+(5 pt) Consider the homogeneous 1st-order $2 \times 2$ linear system of ODEs
+\begin{align}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	-1
+\end{bmatrix}%
+\fontMatrix{x}.%
+\label{eq : Quiz21 ODE}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item (2 pt) Diagonalize the coefficient matrix (i.e. compute the eigenvalues and corresponding eigenvectors of the given matrix $\fontMatrix{A}$, and write it in the form $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$).
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+Denote the coefficient matrix in \eqref{eq : Quiz21 ODE} by
+\begin{align*}
+\fontMatrix{A}
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	-1
+\end{bmatrix}%
+.
+\end{align*}
+\textbf{Eigenvalues}. We compute
+\begin{align*}
+0
+\seteq
+\det(\fontMatrix{A} - \lambda \fontMatrix{I})
+=
+\det
+\begin{bmatrix}%
+-1 - \lambda	&	-4			\\
+4			&	-1 - \lambda
+\end{bmatrix}%
+=
+\lambda^{2} + 2 \lambda + 17.
+\end{align*}
+Using the quadratic equation,
+\begin{align*}
+\lambda
+=
+\frac{-(2) \pm{} \sqrt{2^{2} - 4 (1) (17)}}{2 (1)}
+=
+\frac{-2 \pm{} \sqrt{4 - 4 (17)}}{2}
+=
+\frac{-2 \pm{} \sqrt{4 (1 - 17)}}{2}
+=
+-1 \pm{} 4 i.
+\end{align*}
+\textbf{Eigenvectors.} Compute the eigenspace for $\lambda = -1 + 4 i$:
+\begin{align*}
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+=
+\fontMatrix{0}
+\seteq
+(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}
+=
+\begin{bmatrix}%
+-4 i	&	-4	\\
+4	&	-4 i
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+.
+\end{align*}
+Form the corresponding augmented matrix and apply the row reduction algorithm:
+\begin{align*}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+-4 i	&	-4	&	0	\\
+4	&	-4i	&	0
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} - i R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+-4 i	&	-4	&	0	\\
+0	&	0	&	0
+\end{array}
+\right]
+\xrightarrow{R_{1} = -\frac{1}{4 i} R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	-i	&	0	\\
+0	&	0	&	0
+\end{array}
+\right],
+\end{align*}
+where in the last step we use $\frac{1}{i} = \frac{1 \cdot i}{i \cdot i} = \frac{i}{i^{2}} = \frac{i}{-1}= -i$. We conclude that
+\begin{align*}
+\eigenspace(\fontMatrix{A},-1 + 4 i)
+=
+\Span
+\left\{
+\begin{bmatrix}%
+i	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+We can perform the analogous computations for the other eigenvalue $\lambda = -1 - 4 i$, or we can note that because it is the complex conjugate of $-1 + 4 i$, its eigenvectors are complex conjugate to the eigenvectors of $-1 + 4 i$. Either way, we get
+\begin{align*}
+\eigenspace(\fontMatrix{A},-1 - 4 i)
+=
+\Span
+\left\{
+\begin{bmatrix}%
+-i	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+\textbf{Diagonalization.} Using these results, we conclude
+\begin{align}
+\fontMatrix{A}
+=
+\begin{bmatrix}
+-1	&	-4	\\
+4	&	-1
+\end{bmatrix}
+=
+\begin{bmatrix}
+i	&	-i	\\
+1	&	1
+\end{bmatrix}
+\begin{bmatrix}
+-1 + i	&	0	\\
+0	&	-1 - i
+\end{bmatrix}
+\begin{bmatrix}
+i	&	-i	\\
+1	&	1
+\end{bmatrix}%
+^{-1}
+=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}.%
+\label{eq : Quiz21 Diagonalization}
+\end{align}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (2 pt) Use this information to write the general real solution $\fontMatrix{x}(t)$ to \eqref{eq : Quiz21 ODE}. \fontHint{Recall that when the eigenvalues of a homogeneous $2 \times 2$ linear system are complex, we can compute one solution $e^{\lambda t} v$, just as we did with real eigenvalues; decompose it into real and imaginary parts; then use these parts as our basis for the solution space. The formulas
+\begin{align*}
+e^{a + i b}
+=
+e^{a} e^{i b},
+&&
+e^{i b}
+=
+\cos b + i \sin b,
+\end{align*}
+will be useful.}
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+Call columns 1 and 2 of $\fontMatrix{P}$ $\fontMatrix{v}_{+}$ and $\fontMatrix{v}_{-}$, respectively. (They are eigenvectors corresponding to the eigenvalues $\lambda_{+} = -1 + 4 i$ and $\lambda_{-} = -1 - 4 i$, respectively. Hence our choice of subscripts $+$ and $-$.) Our diagonalization \eqref{eq : Quiz21 Diagonalization} gives one basis for the vector space of complex (!) solutions to \eqref{eq : Quiz21 ODE}, namely, the vectors
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+=
+e^{\lambda_{+} t} \fontMatrix{v}_{+}
+=
+e^{(-1 + 4 i) t}
+\begin{bmatrix}%
+i	\\
+1
+\end{bmatrix}%
+,
+&&
+\fontMatrix{x}_{-}(t)
+=
+e^{\lambda_{-} t} \fontMatrix{v}_{-}
+=
+e^{(-1 - 4 i) t}
+\begin{bmatrix}%
+-i	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+To describe the real (!) solutions to \eqref{eq : Quiz21 ODE}, we can decompose either one of these complex basis vectors into real and imaginary parts, $\fontMatrix{x}_{\realPart}$ and $\fontMatrix{x}_{\imaginaryPart}$, and take these as our basis vectors. Decomposing $\fontMatrix{x}_{+}(t)$, using the formulas in the hint, we find
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+&=
+e^{(-1 + 4 i) t}
+\begin{bmatrix}
+i	\\
+1
+\end{bmatrix}
+=
+e^{-t} e^{i (4 t)}
+\begin{bmatrix}
+i	\\
+1
+\end{bmatrix}
+=
+e^{-t} (\cos(4 t) + i \sin(4 t))
+\begin{bmatrix}
+i	\\
+1
+\end{bmatrix}
+\\
+&=
+e^{-t}
+\begin{bmatrix}
+-\sin(4 t) + i \cos(4 t)	\\
+\cos(4 t) + i \sin(4 t)
+\end{bmatrix}
+=
+\underbrace{e^{-t}
+\begin{bmatrix}
+-\sin(4 t)	\\
+\cos(4 t)
+\end{bmatrix}%
+}_{\fontMatrix{x}_{\realPart}}
++
+i \underbrace{e^{-t}
+\begin{bmatrix}
+\cos(4 t)	\\
+\sin(4 t)
+\end{bmatrix}%
+}_{\fontMatrix{x}_{\imaginaryPart}}.
+\end{align*}
+(Note that our definition of $\fontMatrix{x}_{\imaginaryPart}$ does not include the coefficient $i$.) The general real solution to \eqref{eq : Quiz21 ODE} is the real linear combination of $\fontMatrix{x}_{\realPart}$ and $\fontMatrix{x}_{\imaginaryPart}$, i.e.
+\begin{align*}
+\fontMatrix{x}(t)
+=
+c_{1} \fontMatrix{x}_{\realPart}(t) + c_{2} \fontMatrix{x}_{\imaginaryPart}(t)
+=
+c_{1} e^{-t}
+\begin{bmatrix}%
+-\sin(4 t)	\\
+\cos(4 t)
+\end{bmatrix}%
++
+c_{2} e^{-t}
+\begin{bmatrix}%
+\cos(4 t)	\\
+\sin(4 t)
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Quickly sketch the phase plane. Your sketch need not be exact; focus on whether trajectories move toward or away from the origin, and the direction of rotation.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The real part of both eigenvalues $\lambda_{\pm{}}$ is $-1$, which is negative; thus trajectories move toward the origin (as time increases). To determine the direction of rotation, we can use the original ODE \eqref{eq : Quiz21 ODE} to compute the tangent vectors $\fontMatrix{x}'$ at a few points $(x_{1},x_{2})$:
+\begin{align*}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	-1
+\end{bmatrix}%
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-5	\\
+3
+\end{bmatrix}%
+,
+&&
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	-1
+\end{bmatrix}%
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-3	\\
+-5
+\end{bmatrix}%
+.
+\end{align*}
+This shows that, at $(x_{1},x_{2}) = (1,1)$, tangent vectors point left ($x_{1}' = -5 < 0$) and up ($x_{2}' = 3 > 0$); at $(x_{1},x_{2}) = (-1,1)$, tangent vectors point left ($x_{1}' = -3 < 0$) and down ($x_{2}' = -5 < 0$). Thus trajectories rotate counterclockwise.
+
+A phase plane for the linear system \eqref{eq : Quiz21 ODE} is shown in Figure \ref{fig : Quiz21 Phase Plane}.
+\begin{figure}[b]
+\begin{center}
+\includegraphics[scale=0.5]{\filePathGraphics Quiz21_PhasePlane}
+\caption{Phase plane, in the $(x_{1},x_{2})$ plane, for the homogeneous 1st-order linear system \eqref{eq : Quiz21 ODE}. Arrows point in the direction of increasing $t$.}
+\label{fig : Quiz21 Phase Plane}
+\end{center}
+\end{figure}
+}% End solution.
+%
+% WolframAlpha code :
+% eigenvalues {{-1,-4},{4,-1}}

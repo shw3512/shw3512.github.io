@@ -1,0 +1,84 @@
+%
+% Quiz 09 : 2019-07-18 (R)
+%
+\section{Exercise}
+
+(2 pt) Recall the three elementary row operations:
+\begin{enumerate}
+\item Interchange two rows.
+\item Multiply a row by a nonzero scalar.
+\item Add a scalar multiple of one row to another.
+\end{enumerate}
+Using the elementary row operations, show that the augmented matrix
+\begin{align}
+A
+=
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+5	&	-5	&	17	&	-2	\\
+1	&	-1	&	3	&	0
+\end{array}
+\right]%
+\label{eq : Quiz 09 Matrix}
+\end{align}
+has reduced row echelon form (RREF)
+\begin{align}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	0	&	3	\\
+0	&	0	&	1	&	-1
+\end{array}
+\right].%
+\label{eq : Quiz 09 RREF}
+\end{align}
+
+\spaceSolution{5in}{% Begin solution.
+As shown in \eqref{eq : Quiz 09 RREF}, we want the upper left entry in an RREF matrix to be $1$. We can achieve this (i) by multiplying row 1 of \eqref{eq : Quiz 09 Matrix} by the nonzero scalar $\frac{1}{5}$; or even more simply, (ii) by interchanging row 1 and row 2:
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+5	&	-5	&	17	&	-2	\\
+1	&	-1	&	3	&	0
+\end{array}
+\right]
+\xrightarrow{R_{1} \leftrightarrow R_{2}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	3	&	0	\\
+5	&	-5	&	17	&	-2
+\end{array}
+\right].
+\end{align*}
+Now we clear all other entries in column 1, identify and rescale to get the next pivot, and clear all other entries in that pivot's column:
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	3	&	0	\\
+5	&	-5	&	17	&	-2
+\end{array}
+\right]
+&\xrightarrow{R_{2} = R_{2} - 5 R_{1}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	3	&	0	\\
+0	&	0	&	2	&	-2
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{2} = \frac{1}{2} R_{2}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	3	&	0	\\
+0	&	0	&	1	&	-1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{1} = R_{1} - 3 R_{2}}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-1	&	0	&	3	\\
+0	&	0	&	1	&	-1
+\end{array}
+\right].
+\end{align*}
+The RREF matrix we obtain via row reduction is indeed \eqref{eq : Quiz 09 RREF}.}% End solution.

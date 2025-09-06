@@ -1,0 +1,61 @@
+%
+% Quiz 03 : 2019-07-10 (W)
+% Blanchard et al. Chapter 1 Review Exercise 39 : p 139, solution p 760
+%
+\section{Exercise}
+
+
+(2 pt) Consider the 1st-order linear ODE
+\begin{align}
+\frac{\intd y}{\intd t}
+=
+2 t y + 3 t e^{t^{2}}.%
+\label{eq : Quiz 02 ODE}
+\end{align}
+Confirm that the function% Begin footnote.
+\footnote{This notation says that $y$ is a function with domain (input) all real numbers, codomain (output) real numbers, and rule of assignment given by
+\begin{align*}
+y(t)
+=
+\left(\frac{3}{2} t^{2} + 1\right) e^{t^{2}}.
+\end{align*}}% End footnote.
+\begin{align*}
+y
+:
+\reals
+&\rightarrow
+\reals
+\\
+t
+&\mapsto
+\left(\frac{3}{2} t^{2} + 1\right) e^{t^{2}}
+\end{align*}
+is a solution to \eqref{eq : Quiz 02 ODE}, and that the solution satisfies the initial condition $y(0) = 1$.
+
+\spaceSolution{3in}{% Begin solution.
+Let's do the easy part first: Check the initial condition. We evaluate
+\begin{align*}
+y(0)
+=
+\left(\frac{3}{2} 0^{2} + 1\right) e^{0^{2}}
+=
+(0 + 1) 1
+=
+1,
+\end{align*}
+as required by the initial condition. Next, we check that $y(t)$ is a solution to \eqref{eq : Quiz 02 ODE}, by plugging it into both sides of the ODE. On the left side, we compute the derivative using the product rule and chain rule:
+\begin{align*}
+\frac{\intd y}{\intd t}
+=
+(3 t) e^{t^{2}} + \left(\frac{3}{2} t^{2} + 1\right) (2 t) e^{t^{2}}.
+\end{align*}
+On the right side, we plug in $y(t)$:
+\begin{align*}
+2 t \left(\frac{3}{2} t^{2} + 1\right) e^{t^{2}} + 3 t e^{t^{2}}.
+\end{align*}
+These expressions are the same,% Begin footnote.
+\footnote{Both expressions simplify to
+\begin{align*}
+t e^{t^{2}} \left(3 t^{2} + 5\right).
+\end{align*}} % End footnote.
+i.e. $y(t)$ satisfies equation \eqref{eq : Quiz 02 ODE}, so by definition it is a solution.}% End solution.

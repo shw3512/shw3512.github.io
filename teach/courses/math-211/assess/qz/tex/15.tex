@@ -1,0 +1,145 @@
+%
+% Quiz 15 : 2019-07-26 (F)
+%
+\section{Exercise}
+
+(5 pt) Solve the initial value problem given by the homogeneous 2nd-order ODE
+\begin{align}
+y'' + 6 y' + 8 y
+=
+0%
+\label{eq : Quiz 15 ODE}
+\end{align}
+and the initial conditions
+\begin{align*}
+y(0)
+=
+3,
+&&
+y'(0)
+=
+-10.
+\end{align*}
+Your final answer should be an explicit equation for $y(t)$.% Begin footnote.
+\footnote{\fontHint{We have two approaches to find the general solution $y(t)$ to \eqref{eq : Quiz 15 ODE}: (1) translate the given higher-order linear ODE into the corresponding 1st-order linear system (what do the initial conditions become in this case?), and (2) jump directly to the characteristic equation. The general solution involves two parameters, call them $c_{1},c_{2}$. Compute $y(t)$, take its derivative to get $y'(t)$ (which will also involve $c_{1},c_{2}$), then apply the initial conditions to get a system of two linear equations in the two unknowns $c_{1},c_{2}$. Now solve this system, e.g., using our techniques from linear algebra.}} % End footnote.
+
+\spaceSolution{6in}{% Begin solution.
+Applying the change of variables
+\begin{align*}
+x_{0}
+=
+y,
+&&
+x_{1}
+=
+y',
+\end{align*}
+we get the corresponding homogeneous 1st-order linear system
+\begin{align*}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}
+0	&	1	\\
+-8	&	-6
+\end{bmatrix}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}
+\end{bmatrix}%
+.
+\end{align*}
+The characteristic polynomial of the (constant) coefficient matrix, call it $A$, is
+\begin{align*}
+p(\lambda)
+=
+\det(A - \lambda I)
+=
+\det
+\begin{bmatrix}
+-\lambda	&	1			\\
+-8		&	-6 - \lambda
+\end{bmatrix}
+=
+\lambda^{2} + 6 \lambda + 8.
+\end{align*}
+Note that this is the same characteristic polynomial we obtain by replacing each derivative $y^{(n)}$ with $\lambda^{n}$ in the given ODE \eqref{eq : Quiz 15 ODE}. The eigenvalues are the zeros of this characteristic polynomial:
+\begin{align*}
+0
+\seteq
+p(\lambda)
+=
+(\lambda + 4) (\lambda + 2)
+&&
+\Leftrightarrow
+&&
+\lambda
+=
+-4,-2.
+\end{align*}
+Because all the eigenvalues are distinct, the general solution $y$ to \eqref{eq : Quiz 15 ODE} is obtained by putting these eigenvalues as coefficients inside exponentials, and taking the linear combination:
+\begin{align*}
+y(t)
+=
+c_{1} e^{-4 t} + c_{2} e^{-2 t}.
+\end{align*}
+To find the solution to the IVP, we compute $y'$,
+\begin{align*}
+y'(t)
+=
+-4 c_{1} e^{-4 t} - 2 c_{2} e^{-2 t},
+\end{align*}
+and apply the initial conditions (the degree of the ODE \eqref{eq : Quiz 15 ODE} is 2, so 2 initial conditions are required):
+\begin{align*}
+3
+&=
+y(0)
+=
+c_{1} + c_{2}
+\\
+-10
+&=
+y'(0)
+=
+-4 c_{1} - 2 c_{2}.
+\end{align*}
+This is a linear system of equations in the unknowns $c_{1},c_{2}$, which we can solve in several ways. Here we'll form the augmented matrix associated to the system and row reduce:
+\begin{align*}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	3	\\
+-4	&	-2	&	-10
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} + 4 R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	3	\\
+0	&	2	&	2
+\end{array}
+\right]
+\xrightarrow{R_{2} = \frac{1}{2} R_{2}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	3	\\
+0	&	1	&	1
+\end{array}
+\right]
+\xrightarrow{R_{1} = R_{1} - R_{2}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	0	&	2	\\
+0	&	1	&	1
+\end{array}
+\right].
+\end{align*}
+Reading of the solution, $c_{1} = 2$ and $c_{2} = 1$. Thus the solution to the IVP is
+\begin{align*}
+y(t)
+=
+2 e^{-4 t} + e^{-2 t}.
+\end{align*}
+One can check that this $y(t)$ indeed satisfies both the ODE and the initial conditions, as required.}% End solution.

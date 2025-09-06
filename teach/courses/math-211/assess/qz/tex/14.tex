@@ -1,0 +1,120 @@
+%
+% Quiz 14 : 2019-07-25 (R)
+%
+\section{Exercise}
+
+(2 pt) Consider the 3rd-order linear ODE
+\begin{align}
+y^{(3)} + 6 y^{(2)} + 11 y^{(1)} + 6 y
+=
+0,%
+\label{eq : Quiz 14 ODE}
+\end{align}
+where $y^{(n)}$ denotes the $n$th (ordinary) derivative $\frac{\intd^{n} y}{\intd t^{n}}$. Using the change of variables
+\begin{align*}
+x_{n}
+=
+y^{(n)},
+\end{align*}
+for $n = 0,1,2$, translate the 3rd-order ODE \eqref{eq : Quiz 14 ODE} into a 1st-order linear system
+\begin{align*}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}	\\
+x_{2}
+\end{bmatrix}
+'
+=
+A
+\begin{bmatrix}
+x_{0}	\\
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+,
+\end{align*}
+where $A$ is a $3 \times 3$ matrix of constants. \fontHint{The entries in the third row of $A$ should be related to the coefficients of the original ODE \eqref{eq : Quiz 14 ODE}; the entries in the first two rows of $A$ should all be $0$ or $1$.}
+
+(Not required : Compute the characteristic polynomial of the coefficient matrix $A$, i.e. the polynomial $\det(A - \lambda I)$. (This is the polynomial we've met before, whose roots are the eigenvalues of $A$.) How does this compare to the equation we get by replacing each $y^{(n)}$ in the original ODE \eqref{eq : Quiz 14 ODE} with $\lambda^{n}$? How do the roots of these two polynomials compare?)
+
+\spaceSolution{4in}{% Begin solution.
+Computing the derivatives of the new variables $x_{n}$, we find
+\begin{align*}
+x_{0}'
+&=
+(y)'
+=
+y^{(1)}
+=
+x_{1}
+\\
+x_{1}'
+&=
+(y^{(1)})'
+=
+y^{(2)}
+=
+x_{2}
+\\
+x_{2}'
+&=
+(y^{(2)})'
+=
+y^{(3)}
+=
+-6 y^{(2)} - 11 y^{(1)} - 6
+=
+-6 x_{2} - 11 x_{1} - 6 x_{0}.
+\end{align*}
+Writing this system of 1st-order ODEs as a matrix equation, we have
+\begin{align*}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}	\\
+x_{2}
+\end{bmatrix}
+'
+=
+\begin{bmatrix}
+x_{0}'	\\
+x_{1}'	\\
+x_{2}'
+\end{bmatrix}
+=
+\left[
+\begin{array}{r c r c r}
+		&		&	x_{1}		&		&			\\
+		&		&			&		&	x_{2}		\\
+-6 x_{0}	&	-	&	11 x_{1}	&	-	&	6 x_{2}
+\end{array}
+\right]
+=
+\begin{bmatrix}
+0	&	1	&	0	\\
+0	&	0	&	1	\\
+-6	&	-11	&	-6
+\end{bmatrix}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+.
+\end{align*}
+
+The characteristic polynomial of the coefficient matrix $A$ is
+\begin{align*}
+\det(A - \lambda I)
+=
+\det
+\begin{bmatrix}
+-\lambda	&	1		&	0			\\
+0		&	-\lambda	&	1			\\
+-6		&	-11		&	-6 - \lambda
+\end{bmatrix}
+=
+-\lambda^{3} - 6 \lambda^{2} - 11 \lambda - 6.
+\end{align*}
+This is the same as the polynomial we get if we replace each $y^{(n)}$ on the left side of our original linear ODE \eqref{eq : Quiz 14 ODE} with $\lambda^{n}$, then multiply everything by $-1$.
+
+By definition, a root of a polynomial $p$ is an input $\lambda$ that makes $p(\lambda) = 0$. Multiplying both sides of this equation by $-1$, we get $-p(\lambda) = -0 = 0$. Thus, a root of a polynomial $p$ is also a root of $-p$, and vice versa. That is, a polynomial and $-1$ times that polynomial have the same roots. In our context here, this says that the roots of the polynomial we get from \eqref{eq : Quiz 14 ODE} are exactly the eigenvalues of the matrix $A$.}% End solution.

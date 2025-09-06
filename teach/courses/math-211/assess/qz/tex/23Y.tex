@@ -1,0 +1,245 @@
+%
+% Quiz 23Y : 2019-08-07 (W)
+%
+% Exercise 8.2.10 (p 483) in Farlow et al.
+%
+\section{Exercise}
+
+(5 pt) Solve the following nonhomogeneous 2nd-order linear initial value problem:
+\begin{align}
+y'' + y' + y
+=
+1,
+&&
+y(0)
+=
+0,
+&&
+y'(0)
+=
+0.%
+\label{eq : Quiz23 IVP}
+\end{align}
+\fontHint{Recall that, from the definition of the lapace transform,
+\begin{align*}
+\laplaceTransform\{y'\}(s)
+=
+s \laplaceTransform\{y\} - y(0).
+\end{align*}
+Applying this result to $y''$, we get
+\begin{align*}
+\laplaceTransform\{y''\}(s)
+=
+s \laplaceTransform\{y'\} - y'(0)
+=
+s^{2} \laplaceTransform\{y\} - s y(0) - y'(0).
+\end{align*}
+The following transform--inverse-transform pairs may be useful:
+\begin{align*}
+\laplaceTransform\{1\}
+&=
+\frac{1}{s},
+\qquad
+s > 0;
+&&
+\laplaceTransform\left\{e^{a t}\right\}
+=
+\frac{1}{s - a},
+\qquad
+s > a;
+\\
+\laplaceTransform\left\{e^{a t} \cos(b t)\right\}
+&=
+\frac{s - a}{(s - a)^{2} + b^{2}},
+\qquad
+s > a;
+\\
+\laplaceTransform\left\{e^{a t} \sin(b t)\right\}
+&=
+\frac{b}{(s - a)^{2} + b^{2}},
+\qquad
+s > a.
+\end{align*}}
+
+\spaceSolution{5in}{% Begin solution.
+Applying the laplace transform to both sides of the ODE, and using the fact that the laplace transform is linear, we get
+\begin{align}
+\laplaceTransform\{y''\} + \laplaceTransform\{y'\} + \laplaceTransform\{y\}
+=
+\laplaceTransform\{y'' + y' + y\}
+=
+\laplaceTransform\{1\}.%
+\label{eq : Quiz23 Initial Application Laplace Transform}
+\end{align}
+Denote
+\begin{align*}
+Y(s)
+=
+\laplaceTransform\{y\}.
+\end{align*}
+From the definition of the laplace transform, and using the given initial conditions, we compute
+\begin{align*}
+\laplaceTransform\{y'\}
+&=
+s \laplaceTransform\{y\} - y(0)
+=
+s Y(s) - 0
+=
+s Y(s)
+\\
+\laplaceTransform\{y''\}
+&=
+s^{2} \laplaceTransform\{y'\} - s f(0) - f'(0)
+=
+s^{2} Y(s).
+\end{align*}
+Substituting these results into \eqref{eq : Quiz23 Initial Application Laplace Transform}, we get
+\begin{align*}
+s^{2} Y(s) + s Y(s) + Y(s)
+=
+\laplaceTransform\{1\}
+=
+\frac{1}{s}.
+\end{align*}
+Solving this equation for $Y(s)$, we get
+\begin{align*}
+Y(s)
+=
+\frac{1}{s (s^{2} + s + 1)}.
+\end{align*}
+Setting up the partial fraction decomposition, we have
+\begin{align*}
+\frac{1}{s (s^{2} + s + 1)}
+=
+\frac{A}{s} + \frac{B s + C}{s^{2} + s + 1}.
+\end{align*}
+Clearing denominators, we get
+\begin{align*}
+1
+=
+(s^{2} + s + 1) A + s (B s + C)
+=
+(s^{2} + s + 1) A + s^{2} B + s C.
+\end{align*}
+Now we plug in (at least) three values for $t$ to get a system of equations we can use to solve for $A,B,C$:
+\begin{align*}
+s = -1
+&:
+1
+=
+A + B - C
+\\
+s = 0
+&:
+1
+=
+A
+\\
+s = 1
+&:
+1
+=
+3 A + B + C.
+\end{align*}
+Solving for $A,B,C$ (e.g., by applying the row reduction algorithm to the corresponding augmented matrix, or by ad hoc manipulation of the equations --- note that we already know $A = 1$), we find
+\begin{align*}
+A
+=
+1,
+&&
+B
+=
+-1,
+&&
+C
+=
+-1
+\end{align*}
+Thus
+\begin{align}
+Y(s)
+&=
+\frac{1}{s (s^{2} + s + 1)}
+=
+\frac{1}{s} + \frac{-s - 1}{s^{2} + s + 1}
+=
+\frac{1}{s} - \frac{s + 1}{s^{2} + s + 1}.%
+\label{eq : Quiz23 Y(s) Intermediate}
+\end{align}
+At this point, we want to massage the second term so that we get expressions appearing in our dictionary of transform--inverse-transform pairs. Completing the square in the denominator, then massaging the numerator to ``play nicely'' with the terms appearing the denominator, we get
+\begin{align*}
+\frac{s + 1}{s^{2} + s + 1}
+&=
+\frac{s + 1}{\left(s + \frac{1}{2}\right)^{2} + \frac{3}{4}}
+=
+\frac{(s + \frac{1}{2}) + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}
+\\
+&=
+\frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}} + \frac{\frac{1}{2}}{(s + \frac{1}{2})^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}
+\\
+&=
+\frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}} + \frac{1}{2} \frac{\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{2}}{\left(s + \frac{1}{2}\right)^{2} + (\frac{\sqrt{3}}{2})^{2}}
+\\
+&=
+\frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}} + \frac{1}{\sqrt{3}} \frac{\frac{\sqrt{3}}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}.
+\end{align*}
+Great. Plugging this into expression \eqref{eq : Quiz23 Y(s) Intermediate} for $Y(s)$, we have
+\begin{align*}
+Y(s)
+=
+\frac{1}{s} - \frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}} - \frac{1}{\sqrt{3}} \frac{\frac{\sqrt{3}}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}.
+\end{align*}
+Applying the inverse laplace transform $\laplaceTransform^{-1}$ to both sides, and using the fact that $\laplaceTransform^{-1}$ is linear, we get the solution to the IVP:
+\begin{align}
+y(t)
+&=
+\laplaceTransform^{-1}\{\laplaceTransform\{y\}\}
+=
+\laplaceTransform^{-1}\{Y(s)\}
+=
+\laplaceTransform^{-1}\left\{\frac{1}{s} - \frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}} - \frac{1}{\sqrt{3}} \frac{\frac{\sqrt{3}}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}\right\}%
+\nonumber
+\\
+&=
+\laplaceTransform^{-1}\left\{\frac{1}{s}\right\} - \laplaceTransform^{-1}\left\{\frac{s + \frac{1}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}\right\} - \frac{1}{\sqrt{3}} \laplaceTransform^{-1}\left\{\frac{\frac{\sqrt{3}}{2}}{\left(s + \frac{1}{2}\right)^{2} + \left(\frac{\sqrt{3}}{2}\right)^{2}}\right\}%
+\nonumber
+\\
+&=
+1 - e^{-\frac{1}{2} t} \cos\left(\frac{\sqrt{3}}{2} t\right) - \frac{1}{\sqrt{3}} e^{-\frac{1}{2} t} \sin\left(\frac{\sqrt{3}}{2} t\right).%
+\label{eq : Quiz23 Solution}
+\end{align}
+
+\begin{remark}
+Note that the characteristic polynomial associated to the IVP \eqref{eq : Quiz23 IVP} is
+\begin{align*}
+p(\lambda)
+=
+\lambda^{2} + \lambda + 1,
+\end{align*}
+which has two complex roots,
+\begin{align*}
+\lambda_{\pm}
+=
+\frac{-1 \pm{} \sqrt{1 - 4}}{2}
+=
+-\frac{1}{2} \pm{} \frac{\sqrt{3}}{2} i.
+\end{align*}
+If we form the solution $y_{\pm}(t) = e^{\lambda_{\pm} t}$ and decompose into real and imaginary parts (using euler's formula in the process), we find
+\begin{align*}
+y_{+}(t)
+&=
+e^{\left(-\frac{1}{2} + \frac{\sqrt{3}}{2} i\right) t}
+\\
+&=
+e^{-\frac{1}{2} t} e^{i \left(\frac{\sqrt{3}}{2} t\right)}
+\\
+&=
+e^{-\frac{1}{2} t} \left(\cos\left(\frac{3}{2} t\right) + i \sin\left(\frac{\sqrt{3}}{2} t\right)\right)
+\\
+&=
+\underbrace{e^{-\frac{1}{2} t} \cos\left(\frac{3}{2} t\right)}_{y_{\realPart}} + i \underbrace{e^{-\frac{1}{2} t} \sin\left(\frac{\sqrt{3}}{2} t\right)}_{y_{\imaginaryPart}}.
+\end{align*}
+Note that $y_{\realPart}$ and $y_{\imaginaryPart}$ are two of the building blocks that appear in our solution \eqref{eq : Quiz23 Solution} via the laplace transform. The coefficients to these building blocks arise from applying the initial conditions. And the $1$ in our solution \eqref{eq : Quiz23 Solution} is a particular solution to the original nonhomogeneous equation \eqref{eq : Quiz23 IVP}, as one can readily check.
+
+Thus we see that the laplace transform does the work of finding eigenvalues and decomposing complex solutions into their real and imaginary parts, and it also automatically builds in the initial conditions. This work is wrapped up in computing the transform--inverse-transform pairs to begin with (and in some of the algebraic manipulations we have to do in the course of our solution via the laplace transform!).
+\end{remark}}% End solution.
