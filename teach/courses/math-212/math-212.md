@@ -8,21 +8,21 @@
 
 ## Course documents
 
-- [Syllabus](docs/pdf/syl.pdf)
-- [Expectations](docs/pdf/exp.pdf)
-- [How to read math effectively](docs/pdf/read.pdf)
+- Syllabus ([pdf](docs/pdf/syl.pdf))
+- Expectations ([pdf](docs/pdf/exp.pdf))
+- How to read math effectively ([pdf](docs/pdf/read.pdf))
 
-The above links are to pdfs. The corresponding source files (tex) are available here as [zip](docs/tex/docs.zip).
+Source files (tex) for the above documents are available here as [zip](docs/tex/docs.zip).
 
 ### Lecture notes
 
-| Version                           | Shows solutions? | Shows suggested edits? |
-|:----------------------------------|:----------------:|:----------------------:|
-| [student](notes/pdf/student.pdf) | no  | no  |
-| [teacher](notes/pdf/teacher.pdf) | yes | no  |
-| [editor](notes/pdf/editor.pdf)   | yes | yes |
+| Version | Format                       | Shows solutions? | Shows suggested edits? |
+|:--------|:----------------------------:|:----------------:|:----------------------:|
+| student | [pdf](notes/pdf/student.pdf) | no  | no  |
+| teacher | [pdf](notes/pdf/teacher.pdf) | yes | no  |
+| editor  | [pdf](notes/pdf/editor.pdf)  | yes | yes |
 
-Links in the above table are to pdfs. All versions of the notes are compiled from the same collection of files, available here as [zip](notes/tex/notes.zip).
+All versions of the notes are compiled from the same collection of files, available here as [zip](notes/tex/notes.zip).
 
 
 
