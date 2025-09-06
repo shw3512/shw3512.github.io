@@ -12,7 +12,7 @@
 - [Expectations](docs/pdf/exp.pdf)
 - [How to read math effectively](docs/pdf/read.pdf)
 
-Source files (tex) for the above three documents are available here as [zip](docs/tex/docs.zip).
+The above links are to pdfs. The corresponding source files (tex) are available here as [zip](docs/tex/docs.zip).
 
 ### Lecture notes
 
