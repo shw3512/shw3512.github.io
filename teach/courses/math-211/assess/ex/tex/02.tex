@@ -1,0 +1,1174 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q1}}
+\label{sec : Math211 Summer2019 Exam2 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary (though you may find it beneficial to check your intuition).
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E1Q1a} (2 pt) Let $y_{1}$ and $y_{2}$ be solutions to the 1st-order ODE
+\begin{align}
+(\sin t) y^{-1} y'
+=
+t e^{t}.%
+\label{eq : E2Q1a ODE}
+\end{align}
+Then any linear combination $a_{1} y_{1} + a_{2} y_{2}$ is also a solution to \eqref{eq : E2Q1a ODE}. \fontHint{Can you rearrange the equation? Can you justify your answer?}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. We can rearrange the given ODE as $(\sin t) y' - (t e^{t}) y = 0$, which is homogeneous and linear. Thus the set of solutions is a vector space. In particular, any linear combination of solutions will also be a solution (the ``superposition principle'').}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1b} (2 pt) We can find four linearly independent vectors in $\reals^{3}$, the vector space of $3 \times 1$ matrices with real entries.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+False. The dimension of $\reals^{3}$ is $3$ (e.g., the number of vectors in the standard basis), so $3$ is the maximum number of vectors in any linearly independent set.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1c} (2 pt) We can find four linearly independent vectors in $\polynomials^{3}(\reals)$, the vector space of polynomial functions in one variable, of degree less than or equal to $3$, and with real coefficients.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. For example, one can check that $\{1,t,t^{2},t^{3}\}$ is linearly independent (e.g., by setting their general linear combination equal to the zero polynomial and equating corresponding coefficients).}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1d} (2 pt) Let $A$ be an $n \times m$ matrix with entries in $\reals$, and let $b_{1},b_{2}$ be two $n \times 1$ matrices. If there exists a solution to the matrix equation $A x = b_{1}$ and a (possibly different) solution to the matrix equation $A x = b_{2}$, then there exists a solution to the matrix equation $A x = b_{1} + b_{2}$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. Let $x_{1}$ be a solution to $A x = b_{1}$, and let $x_{2}$ be a solution to $A x = b_{2}$. We compute
+\begin{align*}
+A (x_{1} + x_{2})
+=
+A x_{1} + A x_{2}
+=
+b_{1} + b_{2}.
+\end{align*}
+Thus $x_{1} + x_{2}$ is a solution to the equation $A x = b_{1} + b_{2}$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1e} (2 pt) Every ODE can be solved, i.e. we can always find a closed-form solution (e.g., an explicit equation for $y(t)$).
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+False.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Subspaces (yes or no); if yes, dimension of subspace.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q2}}
+\label{sec : Math211 Summer2019 Exam2 Q2}
+
+(9 pt) For each of the following, indicate whether the subset $W \subseteq V$ described is a subspace of the given vector space $V$. If it is not, indicate whether it fails to be nonempty, fails to be closed under the vector space operations (equivalently, fails to be closed under linear combinations), or both.
+\begin{enumerate}[label=(\alph*)]
+\item (3 pt) $V = {}$the space of all continuously differentiable functions $f : \reals \rightarrow \reals$, $W = {}$the set of solutions to the 1st-order homogeneous linear ODE $a_{1}(t) y' + a_{2}(t) y = 0$, where $a_{1}(t),a_{2}(t)$ are continuous on all of $\reals$.
+\begin{center}
+\begin{tabular}{c c c c c}
+yes, subspace	&	\hspace{.35in}	&	no, fails to be nonempty	&	\hspace{.35in}	&	no, fails to be closed
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+Yes, subspace. The set of solutions to homogeneous linear ODEs form a vector space.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (3 pt) $V = \reals^{3}$, $W = {}$the set of solutions to the system of linear equations represented by the augmented matrix
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	2	&	3	&	2	\\
+0	&	0	&	1	&	1	\\
+2	&	4	&	2	&	1
+\end{array}
+\right].
+\end{align*}
+\fontHint{Row reduce.}
+\begin{center}
+\begin{tabular}{c c c c c}
+yes, subspace	&	\hspace{.35in}	&	no, fails to be nonempty	&	\hspace{.35in}	&	no, fails to be closed
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+No, fails to be nonempty. Row reduction leads to the matrix
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	2	&	0	&	-1	\\
+0	&	0	&	1	&	1	\\
+0	&	0	&	0	&	1
+\end{array}
+\right].
+\end{align*}
+The final row in this matrix corresponds to the equation $0 = 1$, so this system is inconsistent, i.e. it has no solutions, or equivalently, the set of solutions to this system is empty. Because elementary row operations yield an equivalent system of equations as the original matrix, we conclude that the given matrix is also inconsistent, i.e. its set of solutions $W$ is empty.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (3 pt) $V = \reals^{3}$, $W = {}$the set of solutions to the system of linear equations represented by the augmented matrix
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+3	&	1	&	-2	&	a	\\
+2	&	0	&	-1	&	b	\\
+1	&	0	&	1	&	c
+\end{array}
+\right],
+\end{align*}
+where $a,b,c \in \reals$ are not all $0$. \fontHint{This is all we need to know about $a,b,c$. Why?}
+\begin{center}
+\begin{tabular}{c c c c c}
+yes, subspace	&	\hspace{.35in}	&	no, fails to be nonempty	&	\hspace{.35in}	&	no, fails to be closed
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+No, fails to be closed. Row reduction leads to the matrix
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	0	&	0	&	A	\\
+0	&	1	&	0	&	B	\\
+0	&	0	&	1	&	C
+\end{array}
+\right],
+\end{align*}
+where $A,B,C$ are constants, which can be expressed in terms of the original $a,b,c$. However, such expression is not necessary here: It suffices to note that the three elementary row operations can never turn a nonzero column (i.e. a column with at least one nonzero entry) into a zero column (i.e. a column with all entries zero). It may be easier to see this going the other way: Elementary row operations can never turn a zero column into a nonzero column. Because elementary row operations are reversible,% Begin footnote.
+\footnote{One can see this, for example, by thinking about what the reverse of each elementary row operation is:
+\begin{itemize}
+\item Interchange row $i$ and row $j$: The inverse operation is to (again) interchange row $i$ and row $j$.
+\item Multiply row $i$ by a nonzero scalar $c$: The inverse operation is to multiply the same row $i$ by the scalar $c^{-1}$, which exists because $c \neq 0$, and because $c$ lives in a field.
+\item Add $c$ times row $j$ to row $i$, for any scalar $c$: The inverse operation is to subtract $c$ times row $j$ to row $i$, for that same scalar $c$.
+\end{itemize}
+One can also see that the elementary row operations are reversible by viewing each of the three elementary row operations as left-multiplication by a (square) matrix. We can write each matrix explicitly, and compute that its determinant is nonzero. Thus its inverse matrix exists; left-multiplication by this inverse corresponds to ``undoing'' or ``reversing'' the original elementary row operation.} % End footnote.
+if $A,B,C$ were all $0$, then undoing the elementary row operations in the row reduction algorithm to go backward from the reduced row echelon form matrix to the original matrix would imply that $a,b,c$ were all $0$, contradicting the hypothesis that they are not all $0$.
+
+Thus at least one of $A,B,C$ is nonzero. From the row reduced matrix, we read off the unique solution $x_{1} = A,x_{2} = B,x_{3} = C$. Because elementary row operations yield an equivalent system of equations as the original matrix, this is also the unique solution to the system of equations represented by the original matrix. That is,
+\begin{align*}
+W
+=
+\left\{
+\begin{bmatrix}
+A	\\
+B	\\
+C
+\end{bmatrix}
+\right\}.
+\end{align*}
+Note that (i) the zero vector is not in the solution set, and (ii) any scalar multiple $\alpha \fontVector{x}$ of the given solution vector $\fontVector{x} = \transpose{\begin{bmatrix}A&B&C\end{bmatrix}}$, when plugged into the system of equations, will give the right side $\transpose{\begin{bmatrix}\alpha a&\alpha b&\alpha c\end{bmatrix}}$, which is not equal to $\transpose{\begin{bmatrix}a&b&c\end{bmatrix}}$, as required by the original system of equations, unless $\alpha = 1$. (Perhaps most plainly, taking $\alpha = 0$, analysis (ii) shows that the scalar multiple $0 \fontMatrix{x} = \transpose{\begin{bmatrix}0&0&0\end{bmatrix}}$ is not in $W$, which is easily checked by substituting $\transpose{\begin{bmatrix}0&0&0\end{bmatrix}}$ into the original system of equations, and remembering that $a,b,c$ are not all $0$.)}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Solve a 1st-order IVP.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q3}}
+\label{sec : Math211 Summer2019 Exam2 Q3}
+
+(12 pt) Solve (i.e. give the explicit equation of the solution $y(t)$ to) the following 1st-order nonhomogeneous linear ODE IVP:
+\begin{align*}
+y' + 2 y
+=
+2 t^{2},
+&&
+y(0)
+=
+-\frac{3}{2}.
+\end{align*}
+
+\spaceSolution{6in}{% Begin solution.
+Method 1 : Variation of parameters. The corresponding homogeneous equation is
+\begin{align*}
+y' + 2 y
+=
+0,
+\end{align*}
+which has general solution% Begin footnote.
+\footnote{We can solve for the general solution using separation of variables, for example.}% End footnote.
+\begin{align*}
+y_{h}(t)
+=
+c e^{-2 t},
+\end{align*}
+where $c \in \reals$. Variation of parameters tells us to guess a particular solution of the form
+\begin{align*}
+y_{p}
+=
+v e^{-2 t}.
+\end{align*}
+Plugging this into the given nonhomogeneous ODE, we get
+\begin{align*}
+v' e^{-2 t}
+=
+\left(v' e^{-2 t} - 2 v e^{-2 t}\right) + 2 (v e^{-2 t})
+=
+2 t^{2},
+\end{align*}
+so
+\begin{align}
+v'
+=
+2 t^{2} e^{2 t}.%
+\label{eq : E2Q3 VoP v'}
+\end{align}
+We can solve for $v$ using integration by parts (twice):\fontNeedsEdit{ (add footnote with explicit steps?)}
+\begin{align*}
+v
+=
+t^{2} e^{2 t} - t e^{2 t} + \frac{1}{2} e^{2 t} + c_{0},
+\end{align*}
+where $c_{0} \in \reals$. Any value of $c_{0}$ will work (we just need one particular solution, it doesn't matter which), so let's take $c_{0} = 0$. Then
+\begin{align*}
+y_{p}
+=
+v e^{-2 t}
+=
+t^{2} - t + \frac{1}{2}.
+\end{align*}
+By the nonhomogeneous principle, the general solution $y$ to the given ODE is
+\begin{align*}
+y(t)
+=
+y_{p} + y_{h}
+=
+t^{2} - t + \frac{1}{2} + c e^{-2 t}.
+\end{align*}
+
+
+
+Method 2 : Integrating factors. We seek a function $\mu(t)$ such that
+\begin{align*}
+(\mu y)'
+\seteq
+\mu y' + 2 \mu y
+=
+2 t^{2} \mu,
+\end{align*}
+where the equality on the right comes from multiplying both sides of the given ODE by $\mu$, and the equality on the left is a condition we impose. Focusing on the left equation, and using the product rule, we find
+\begin{align*}
+\mu' y + \mu y'
+=
+\mu y' + 2 \mu y
+&&
+\Rightarrow
+&&
+\mu'
+=
+2 \mu,
+\end{align*}
+provided that $y$ is not the zero function. Solving this last ODE for $\mu$, we get
+\begin{align*}
+\mu
+=
+c_{1} e^{2 t},
+\end{align*}
+where $c_{1} \in \reals$. Any such $\mu$ will do, so let's set $c_{1} = 1$ and work with $\mu = e^{2 t}$. With the integrating factor $\mu$, we can rewrite the original ODE as
+\begin{align*}
+\left(e^{2 t} y\right)'
+=
+(\mu y)'
+=
+2 t^{2} \mu
+=
+2 t^{2} e^{2 t}.
+\end{align*}
+Integrating both sides with respect to $t$ and solving for $y$, we find
+\begin{align*}
+y(t)
+=
+e^{-2 t} \int 2 t^{2} e^{2 t} \spaceIntd \intd t.
+\end{align*}
+(Note that this integral is the same as \eqref{eq : E2Q3 VoP v'} we obtained using variation of parameters.) Computing the integral (e.g., via integration by parts), we obtain the general solution to the given ODE:
+\begin{align*}
+y(t)
+=
+e^{-2 t} \left(t^{2} e^{2 t} - t e^{2 t} + \frac{1}{2} e^{2 t} + c\right)
+=
+t^{2} - t + \frac{1}{2} + c e^{-2 t}.
+\end{align*}
+
+
+
+Method 3 : Guess a particular solution. One might guess a particular solution of the form
+\begin{align*}
+y_{p}(t)
+=
+a_{2} t^{2} + a_{1} t + a_{0},
+\end{align*}
+given the form of the function on the right side of the ODE. Substituting this guess into the nonhomogeneous ODE, we get
+\begin{align*}
+2 a_{2} t^{2} + (2 a_{2} + 2 a_{1}) t + (a_{1} + 2 a_{0})
+=
+2 t^{2}.
+\end{align*}
+Equating coefficients of each term $t^{n}$ gives
+\begin{align*}
+a_{2}
+=
+1,
+&&
+\text{so}
+&&
+a_{1}
+=
+-1,
+&&
+\text{so}
+&&
+a_{0}
+=
+\frac{1}{2}.
+\end{align*}
+Along with the general solution $y_{h}(t) = c e^{-2 t}$ to the corresponding homogeneous equation, the nonhomogeneous principle gives us the general solution to the given ODE:
+\begin{align*}
+y(t)
+=
+t^{2} - t + \frac{1}{2} + c e^{-2 t}
+\end{align*}
+
+
+
+Final step : Apply the initial condition. All the methods above lead to the same general solution to the given ODE. We get the desired solution to the IVP by applying the initial condition:
+\begin{align*}
+-\frac{3}{2}
+=
+y(0)
+=
+\frac{1}{2} + c
+&&
+\Leftrightarrow
+&&
+c
+=
+-2.
+\end{align*}
+We conclude that the solution to the IVP is
+\begin{align*}
+y(t)
+=
+t^{2} - t + \frac{1}{2} - 2 e^{-2 t}.
+\end{align*}
+Note that we can check our solution by (i) plugging it into the ODE and confirming the equation is true, and (ii) computing $y(0)$ (this duplicates our computation of $c$ just above).}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Compute inverse of a matrix (or state it is not invertible) using row reduction algorithm? Tell students what to expect (i.e. invertible or not)? Maybe: Ask students to compute determinant to check that a given matrix is invertible. Then use row reduction to find the inverse.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q4}}
+\label{sec : Math211 Summer2019 Exam2 Q4}
+
+(20 pt) Consider the following system of three linear equations in three unknowns:
+\begin{align}
+x_{1} - 3 x_{2} - 2 x_{3}
+&=
+6%
+\nonumber
+\\
+x_{2} - x_{3}
+&=
+-2%
+\label{eq : E1Q4 Linear System}
+\\
+x_{1} + x_{3}
+&=
+6.%
+\nonumber
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E2Q4a} (4 pt) Write the linear system \eqref{eq : E1Q4 Linear System} as a matrix equation. \fontHint{Double-check that your matrices indeed multiply to yield the given system \eqref{eq : E1Q4 Linear System} before you proceed!}
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+The matrix equation corresponding to the linear system \eqref{eq : E1Q4 Linear System} is
+\begin{align}
+\begin{bmatrix}
+1	&	-3	&	-2	\\
+0	&	1	&	-1	\\
+1	&	0	&	1
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}	\\
+x_{3}
+\end{bmatrix}
+=
+\begin{bmatrix}
+6	\\
+-2	\\
+6
+\end{bmatrix}%
+.%
+\label{eq : E2Q4 Matrix Equation}
+\end{align}
+Let $A$ denote the $3 \times 3$ matrix of coefficients on the left of this equation, let $x$ denote the $3 \times 1$ matrix of the $x_{i}$, and let $b$ denote the $3 \times 1$ matrix of constants on the right.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q4b} (8 pt) Compute the determinant of the $3 \times 3$ matrix of coefficients in part \ref{itm : E2Q4a}. (You should get $6$.) What does this tell us about existence and uniqueness of solutions to the linear system \eqref{eq : E1Q4 Linear System}?
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Using expansion by minors on column 1, we compute
+\begin{align*}
+\det A
+&=
+(-1)^{1 + 1} (1) \det
+\begin{bmatrix}
+1	&	-1	\\
+0	&	1
+\end{bmatrix}
++ 
+(-1)^{2 + 1} (0) \det
+\begin{bmatrix}
+-3	&	-2	\\
+0	&	1
+\end{bmatrix}
++
+(-1)^{3 + 1} (1) \det
+\begin{bmatrix}
+-3	&	-2	\\
+1	&	-1
+\end{bmatrix}
+\\
+&=
+1 (1) + 0 + 1 (5)
+=
+6.
+\end{align*}
+For a system of $n$ linear equations in $n$ unknowns, the coefficient matrix is square, and we can compute its determinant. The determinant is nonzero if and only if there exists a unique solution to the system of equations. (For intuition, note that the determinant is nonzero if and only if the coefficient matrix is invertible, i.e. if and only if $A^{-1}$ exists (in which case, we have seen that $A^{-1}$ is unique), and we can left-multiply both sides of \eqref{eq : E2Q4 Matrix Equation} by $A^{-1}$ to get a unique solution $x = A^{-1} b$.)}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q4c} (8 pt) Find all solutions to the linear system \eqref{eq : E1Q4 Linear System}. Briefly justify why this is all solutions.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We have multiple methods to solve this linear system.
+
+Method 1 : Row reduce the augmented matrix. The augmented matrix corresponding to the given system is
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+A	&	I
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	-3	&	-2	&	6	\\
+0	&	1	&	-1	&	-2	\\
+1	&	0	&	1	&	6
+\end{array}
+\right].
+\end{align*}
+Applying the row reduction algorithm to the left side, we end with
+\begin{align}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	0	&	0	&	5	\\
+0	&	1	&	0	&	-1	\\
+0	&	0	&	1	&	1
+\end{array}
+\right].%
+\label{eq : E2Q4 RREF}
+\end{align}
+We conclude that the unique solution to the given linear system is
+\begin{align*}
+x_{1}
+=
+5,
+&&
+x_{2}
+=
+-1,
+&&
+x_{3}
+=
+1.
+\end{align*}
+
+The row reduction algorithm yields an equivalent augmented matrix at each step (because the elementary row operations are invertible). This equivalence says that the set of solution to the linear system corresponding to \eqref{eq : E2Q4 RREF} is exactly the same as the set of solutions to the original system \eqref{eq : E1Q4 Linear System}. 
+
+
+
+Method 2 : Use the matrix inverse. When the coefficient matrix is square (which happens if and only if the number of equations equals the number of variables) and its determinant is nonzero, its matrix inverse exists. We can compute the matrix inverse $A^{-1}$ by applying the row reduction algorithm to the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}A&I\end{array}\right]$. We find
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&	-3	&	-2	&	1	&		&		\\
+0	&	1	&	-1	&		&	1	&		\\
+1	&	0	&	1	&		&		&	1
+\end{array}
+\right]
+\rightarrow
+\cdots
+\rightarrow
+\left[
+\begin{array}{c c c;{2pt/2pt}c c c}
+1	&		&		&	\frac{1}{6}		&	\frac{1}{2}		&	\frac{5}{6}	\\
+	&	1	&		&	-\frac{1}{6}	&	\frac{1}{2}		&	\frac{1}{6}	\\
+	&		&	1	&	-\frac{1}{6}	&	-\frac{1}{2}	&	\frac{1}{6}
+\end{array}
+\right],
+\end{align*}
+so
+\begin{align*}
+A^{-1}
+=
+\frac{1}{6}
+\begin{bmatrix}
+1	&	3	&	5	\\
+-1	&	3	&	1	\\
+-1	&	-3	&	1
+\end{bmatrix}%
+.
+\end{align*}
+(Note that we can check we computed $A^{-1}$ correctly by computing $A^{-1} A$ and checking that we get the identity matrix $I$.) Thus
+\begin{align*}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}	\\
+x_{3}
+\end{bmatrix}
+=
+A^{-1} A x
+=
+A^{-1} b
+=
+\frac{1}{6}
+\begin{bmatrix}
+1	&	3	&	5	\\
+-1	&	3	&	1	\\
+-1	&	-3	&	1
+\end{bmatrix}
+\begin{bmatrix}
+6	\\
+-2	\\
+6
+\end{bmatrix}
+=
+\begin{bmatrix}
+5	\\
+-1	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+% Wolfram Alpha code : (1/6){{1,3,5},{-1,3,1},{-1,-3,1}}{{6},{-2},{6}}
+The uniqueness part of our answer in part \ref{itm : E2Q4b} justifies this is all solutions to this linear system.
+
+Note: We can check our work by plugging $(x_{1},x_{2},x_{3}) = (5,-1,1)$ into the three equations in the original system \eqref{eq : E1Q4 Linear System} and checking that they are all true.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Walk students through concrete example of rank--nullity theorem (i.e. concrete matrix): Ask students to state dimension of domain and give a basis; compute kernel of matrix (remind definintion) and its dimension; compute image of matrix (remind definition) and its dimension; conjecture relationship among dim ker dim im dim domain.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q5}}
+\label{sec : Math211 Summer2019 Exam2 Q5}
+
+(17 pt) Consider a linear map $T : \reals^{5} \rightarrow \reals^{3}$ which (for a choice of basis for $\reals^{5}$ and $\reals^{3}$) is represented by the matrix
+\begin{align*}
+A
+=
+\begin{bmatrix}
+1	&	-2	&	0	&	0	&	-1	\\
+0	&	0	&	1	&	0	&	-3	\\
+0	&	0	&	0	&	1	&	0
+\end{bmatrix}%
+.
+\end{align*}
+That is, given a vector $v \in \reals^{5}$ (which we can view as a $5 \times 1$ column matrix), $T(v)$ is given by the matrix multiplication $A v$. (Note that the product of the $3 \times 5$ matrix $A$ times the $5 \times 1$ matrix $v$ is a $3 \times 1$ matrix, i.e. a vector in $\reals^{3}$, as required by the definition of $T$.)
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E2Q5a} (2 pt) State the dimension of the domain of $T$, i.e. $\reals^{5}$, and specify a basis.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The domain of $T$ is $\reals^{5}$. As a vector space over $\reals$, it has dimension $5$. (In general, given a field $k$, the vector space $k^{n}$, i.e. the set of all ordered $n$-tuples $(a_{1},\ldots,a_{n})$ with each $a_{i} \in k$, equipped with componentwise addition and scalar multiplication, is a vector space of dimension $n$ over $k$. The intuition is that, to define a vector $(a_{1},\ldots,a_{n})$ in $k^{n}$, we make $n$ within $k$, namely the choice of each coordinate $a_{i}$.)
+
+An explicit basis for $\reals^{5}$ (indeed, for any vector space of the form $k^{n}$) is the standard basis given by the $e_{i}$:
+\begin{align*}
+e_{1}
+=
+\begin{bmatrix}
+1	\\
+0	\\
+0	\\
+0	\\
+0
+\end{bmatrix}%
+,
+&&
+e_{2}
+=
+\begin{bmatrix}
+0	\\
+1	\\
+0	\\
+0	\\
+0
+\end{bmatrix}%
+,
+&&
+\ldots,
+&&
+e_{5}
+=
+\begin{bmatrix}
+0	\\
+0	\\
+0	\\
+0	\\
+1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q5b} (5 pt) By definition, the image of $T$ is the set of vectors $w \in \reals^{3}$ that $T$ outputs for some input $v \in \reals^{5}$:
+\begin{align*}
+\image T
+=
+\left\{w \in \reals^{3} \st \text{for some $v \in \reals^{5}$, $T(v) = w$}\right\}.
+\end{align*}
+If we unwind this definition, it says that $\image T$ is the span of the columns of $A$, where each column is viewed as a $3 \times 1$ matrix. Using this latter definition, specify $\image T$ (note that it must be a vector subspace of $\reals^{3}$), and show it has dimension $\dim \image T = 3$. \fontHint{Focus on the pivot columns of $A$.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The pivot columns of $A$ are columns 1, 3, and 4:
+\begin{align*}
+A_{\bullet,1}
+=
+\begin{bmatrix}
+1	\\
+0	\\
+0
+\end{bmatrix}%
+=
+e_{1},
+&&
+A_{\bullet,3}
+=
+\begin{bmatrix}
+0	\\
+1	\\
+0
+\end{bmatrix}%
+,
+&&
+A_{\bullet,4}
+=
+\begin{bmatrix}
+0	\\
+0	\\
+1
+\end{bmatrix}%
+,
+\end{align*}
+where here $e_{1},e_{2},e_{3}$ denote the standard basis vectors in $\reals^{3}$. The span of these three vectors in all of $\reals^{3}$ --- the full codomain of $T$. Adding more vectors to the set that we then take the span of can only make the span larger. Because the span is already as large as it can be, we conclude that
+\begin{align*}
+\image T
+=
+\reals^{3},
+&&
+\text{and}
+&&
+\dim(\image T)
+=
+3.
+\end{align*}
+Note that $\dim(\image T)$ is the number of vectors in any basis of $\image T = \reals^{3}$, e.g., in the standard basis $(e_{1},e_{2},e_{3})$.
+
+(Recall that, by definition, the only nonzero entry in a pivot column in a reduced row echelon form (RREF) matrix is the pivot, which is a $1$. Thus in an RREF matrix, a pivot column is always a standard basis vector of the codomain (which in this case is $\reals^{3}$).)}% End solution.
+
+
+
+%\newpage% Comment out for solutions.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q5c} (8 pt) By definition, the kernel of $T$ is the set of vectors $v \in \reals^{5}$ that $T$ maps to $0 \in \reals^{3}$:
+\begin{align*}
+\ker T
+=
+\left\{v \in \reals^{5} \st T(v) = 0\right\}.
+\end{align*}
+If we unwind this definition, it says that $\ker T$ is the set of solutions $v \in \reals^{5}$ to $A v = 0$ (where $0$ is the $3 \times 1$ zero matrix). Using this latter definition, specify $\ker T$ (note that it must be a vector subspace of $\reals^{5}$), and show it has dimension $\dim \ker T = 2$. \fontHint{View $A v = 0$ as a linear system of equations. Note that $A$ is already in reduced row echelon form.}
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+By definition, the kernel is the set of vectors $v \in \reals^{5}$ such that $A v = 0$. Viewing this matrix equation as describing a system of ($5$) linear equations, one for each entry of the unknown vector $v$, we can find the solution set by applying the row reduction algorithm to the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}A&0\end{array}\right]$, where $0$ is the $5 \times 1$ zero matrix. In this exercise, the matrix $A$ is already in reduced row echelon form (RREF). So we can read off the solutions as
+\begin{align*}
+v_{1}
+=
+2 v_{2} + v_{5},
+&&
+v_{3}
+=
+3 v_{5},
+&&
+v_{4}
+=
+0,
+\end{align*}
+or equivalently,
+\begin{align}
+\ker T
+=
+\left\{
+\begin{bmatrix}
+2 v_{2} + v_{5}	\\
+v_{2}			\\
+3 v_{5}		\\
+0			\\
+v_{5}
+\end{bmatrix}
+\st
+v_{2},v_{5} \in \reals\right\},%
+\label{eq : E2Q5 Kernel Single Vector Set Notation}
+\end{align}
+or equivalently,
+\begin{align}
+\ker T
+=
+\Span\left\{
+\begin{bmatrix}
+2	\\
+1	\\
+0	\\
+0	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}
+1	\\
+0	\\
+3	\\
+0	\\
+1
+\end{bmatrix}%
+\right\},%
+\label{eq : E2Q5 Kernel Span Notation}
+\end{align}
+where the two vectors in this last expression for the span come from decomposing the general solution in \eqref{eq : E2Q5 Kernel Single Vector Set Notation} into separate vectors for each parameter (in this case, two terms, one for $v_{2}$ and one for $v_{5}$).
+
+One can check (and this will always be the case when we construct the kernel from the RREF matrix in this way) that the set of the two vectors in this last expression \eqref{eq : E2Q5 Kernel Span Notation} is linearly independent. They span $\ker T$ by definition. Thus by definition, this set of two vectors forms a basis for $\ker T$, so
+\begin{align*}
+\dim(\ker T)
+=
+2.
+\end{align*}
+Note that the dimension equals the number of free variables in the matrix $A$, or equivalently, the number of parameters in \eqref{eq : E2Q5 Kernel Single Vector Set Notation}.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q5d} (2 pt) Using your results to parts \ref{itm : E2Q5a}, \ref{itm : E2Q5b}, and \ref{itm : E2Q5c}, make a brief conjecture about the relationship among the three dimensions: (i) the dimension of the domain of $T$, i.e. $\reals^{5}$; (ii) the dimension of the image of $T$; and (iii) the dimension of the kernel of $T$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+It could be coincidence, but
+\begin{align*}
+\dim \reals^{5}
+=
+5
+=
+3 + 2
+=
+\dim(\image T) + \dim(\ker T).
+\end{align*}
+That is, the dimension of the domain equals the dimension of the image (i.e. the rank of $T$) plus the dimension of the kernel (i.e. the nullity of $T$).
+
+In fact, this is no coincidence. This is a concrete example of the \href{https://en.wikipedia.org/wiki/Rank\%E2\%80\%93nullity\_theorem}{rank--nullity theorem}, and it is true for any linear map $T : V \rightarrow W$ between two vector spaces over the same field, with the only requirement that $\dim V$ is finite.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% Walk students through diagonalization: find eigenvalues, find eigenvectors, write P, compute P A P^{-1}; conjecture relationship between eigenvalues of T and P A P^{-1}.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam2 Q6}}
+\label{sec : Math211 Summer2019 Exam2 Q6}
+
+(32 pt) Consider the linear map $T : \reals^{2} \rightarrow \reals^{2}$ which (for a choice of basis for $\reals^{2}$) is represented by the matrix
+\begin{align*}
+A
+=
+\begin{bmatrix}
+4	&	-1	\\
+2	&	1
+\end{bmatrix}%
+.
+\end{align*}
+(For the purposes of this problem, we can focus on the matrix $A$ and not worry about $T$.)
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E2Q6a} (8 pt) By definition, the eigenvalues of $A$ are scalars $\lambda \in \reals$ such that there exists a nonzero (!) vector $v \in \reals^{2}$ such that $A v = \lambda v$. We saw that this is equivalent to the condition $\det(A - \lambda I) = 0$. Using this latter condition, show that the eigenvalues of $A$ are $\lambda = 2,3$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Let's do it!
+
+The characteristic equation is
+\begin{align*}
+0
+\seteq
+\det(A - \lambda I)
+=
+\det
+\begin{bmatrix}
+4 - \lambda	&	-1			\\
+2			&	1 - \lambda
+\end{bmatrix}
+=
+\lambda^{2} - 5 \lambda + 6
+=
+(\lambda - 2) (\lambda - 3).
+\end{align*}
+The zeros of this equation, namely $\lambda = 2,3$, are our eigenvalues.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q6b} (8 pt) For each eigenvalue in part \ref{itm : E2Q6a}, find an associated eigenvector. \fontHint{Recall we can find eigenvectors by solving the linear system of equations given by the matrix equation $(A - \lambda I) v = 0$, where in this case $0$ is the $2 \times 1$ zero matrix. Note that we once we find an eigenvector $v$, we can check our work by computing $A v$ and confirming it equals $\lambda v$.}
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Let's do it!
+
+For $\lambda = 2$ we solve
+\begin{align*}
+\begin{bmatrix}
+0	\\
+0
+\end{bmatrix}
+=
+0
+=
+(A - 2 I) v
+=
+\begin{bmatrix}
+2	&	-1	\\
+2	&	-1
+\end{bmatrix}
+\begin{bmatrix}
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+.
+\end{align*}
+With practice, we can often spot a solution $(v_{1},v_{2})$ --- i.e. an eigenvector --- ``by inspection''. We can always systematically solve for all eigenvectors by applying the row reduction algorithm to the corresponding augmented matrix, as we now illustrate:
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+A - \lambda I	&	0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+2	&	-1	&	0	\\
+2	&	-1	&	0
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} - R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+2	&	-1	&	0	\\
+0	&	0	&	0
+\end{array}
+\right]
+\xrightarrow{R_{1} = \frac{1}{2} R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	-\frac{1}{2}	&	0	\\
+0	&	0			&	0
+\end{array}
+\right].
+\end{align*}
+We read off the solutions (which, along with the zero vector, give the eigenspace of $T$ associated to the eigenvalue $\lambda = 2$):
+\begin{align*}
+E(T,2)
+=
+\left\{
+\begin{bmatrix}
+\frac{1}{2} v_{2}	\\
+v_{2}
+\end{bmatrix}
+\st
+v_{2} \in \reals
+\right\},
+\end{align*}
+or equivalently, taking $v_{2} = 2$,
+\begin{align*}
+E(T,2)
+=
+\Span\left\{
+\begin{bmatrix}
+1	\\
+2
+\end{bmatrix}
+\right\}.
+\end{align*}
+Thus $v_{1} = \transpose{\begin{bmatrix}1&2\end{bmatrix}}$, or any nonzero scalar multiple thereof, is an eigenvalue of $T$ associated to the eigenvalue $\lambda = 2$.
+
+Similarly, for $\lambda = 3$, we solve
+\begin{align*}
+\begin{bmatrix}
+0	\\
+0
+\end{bmatrix}
+=
+0
+=
+(A - 3 I) v
+=
+\begin{bmatrix}
+1	&	-1	\\
+2	&	-2
+\end{bmatrix}
+\begin{bmatrix}
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+.
+\end{align*}
+We find
+\begin{align*}
+E(T,3)
+=
+\Span\left\{
+\begin{bmatrix}
+1	\\
+1
+\end{bmatrix}
+\right\},
+\end{align*}
+so $v_{2} = \transpose{\begin{bmatrix}1&1\end{bmatrix}}$, or any nonzero scalar multiple thereof, is an eigenvalue of $T$ associated to the eigenvalue $\lambda = 3$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q6c} (2 pt) Write the $2 \times 2$ matrix $P$ you get by writing your two eigenvectors from part \ref{itm : E2Q6b} side by side, as the two $2 \times 1$ columns in the matrix $P$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Let's do it!
+\begin{align*}
+P
+=
+\begin{bmatrix}
+v_{1}	&	v_{2}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1	&	1	\\
+2	&	1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q6d} (8 pt) Compute $P^{-1}$. \fontHint{One way to do this is to row reduce the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}A&I\end{array}\right]$. Note that we can check our work by computing $P P^{-1}$ and confirming it equals the identity matrix $I$.}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Let's do it! (Note that a different choice of eigenvectors $v_{1},v_{2}$ in part \ref{itm : E2Q6c} will modify the specifics, but not the spirit, of the following computation.)
+
+Applying the row reduction algorithm to the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}P&I\end{array}\right]$, we compute
+\begin{align*}
+\left[\begin{array}{c;{2pt/2pt}c}
+P	&	I
+\end{array}
+\right]
+&=
+\left[\begin{array}{c c;{2pt/2pt}c c}
+1	&	1	&	1	&	0	\\
+2	&	1	&	0	&	1
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} - 2 R_{1}}
+\left[\begin{array}{c c;{2pt/2pt}c c}
+1	&	1	&	1	&	0	\\
+0	&	-1	&	-2	&	1
+\end{array}
+\right]
+\\
+&\xrightarrow{R_{1} = R_{1} + R_{2}}
+\left[\begin{array}{c c;{2pt/2pt}c c}
+1	&	0	&	-1	&	1	\\
+0	&	-1	&	-2	&	1
+\end{array}
+\right]
+\xrightarrow{R_{2} = -R_{2}}
+\left[\begin{array}{c c;{2pt/2pt}c c}
+1	&	0	&	-1	&	1	\\
+0	&	1	&	2	&	-1
+\end{array}
+\right].
+\end{align*}
+The $2 \times 2$ matrix to the right of the dashed line is our inverse:
+\begin{align*}
+P^{-1}
+=
+\begin{bmatrix}
+-1	&	1	\\
+2	&	-1
+\end{bmatrix}%
+.
+\end{align*}
+Note: We can check our inverse is correct by confirming that $P P^{-1}$ (or $P^{-1} P$) is the identity matrix:
+\begin{align*}
+P P^{-1}
+=
+\begin{bmatrix}
+1	&	1	\\
+2	&	1
+\end{bmatrix}
+\begin{bmatrix}
+-1	&	1	\\
+2	&	-1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1	&	0	\\
+0	&	1
+\end{bmatrix}%
+.
+\end{align*}
+Nailed it!}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q6e} (4 pt) Compute the matrix product $P^{-1} A P$. (You should get a diagonal matrix.) What do you notice about the diagonal entries?
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Let's do it! (It's just matrix multiplication.)
+
+Matrix multiplication is associative, so we can compute the product $P^{-1} A$ or $A P$ first, and our final result for $P^{-1} A P$ will be the same. We compute
+\begin{align*}
+P^{-1} A P
+=
+\begin{bmatrix}
+-1	&	1	\\
+2	&	-1
+\end{bmatrix}
+\begin{bmatrix}
+4	&	-1	\\
+2	&	1
+\end{bmatrix}
+\begin{bmatrix}
+1	&	1	\\
+2	&	1
+\end{bmatrix}
+=
+\begin{bmatrix}
+2	&	0	\\
+0	&	3
+\end{bmatrix}%
+.
+\end{align*}
+Our result is a diagonal matrix, as promised. Its diagonal entries are precisely the eigenvalues we computed in part \ref{itm : E2Q6a} --- in the same order, in fact, as we listed their corresponding eigenvectors in our matrix $P$ in part \ref{itm : E2Q6c}. Interesting.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E2Q6e} (2 pt) Based on your results above, make a brief conjecture about what you've discovered.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Perhaps, if we line up $n$ eigenvectors of an $n \times n$ matrix $A$ to form an $n \times n$ matrix $P$ (which it will sometimes be helpful to think of as an $\text{``$1$''} \times n$ matrix $\begin{bmatrix}v_{1}&\ldots&v_{n}\end{bmatrix}$), compute $P^{-1}$, and form the product, this product will always be a diagonal matrix, with the corresponding eigenvalues listed on the diagonal.
+
+In fact, this is not quite right. One can show that, for our conjecture to be true, the eigenvectors that we line up to form $P$ have to be linearly independent. That is, we need to be able to find a basis of $\reals^{n}$ (or more generally, of the vector space $k^{n}$ if our linear map is between two vector spaces over the field $k$) consisting of eigenvectors of $T$ (or its matrix incarnation $A$). In this case, the procedure we followed above ``diagonalizes'' the matrix $A$, and hence is often called \href{https://en.wikipedia.org/wiki/Diagonalizable\_matrix\#How\_to\_diagonalize\_a\_matrix}{diagonalization}.
+
+Unfortunately, a basis of $\reals^{n}$ consisting of eigenvectors of $T$ does not always exist. Nor is it just a theoretical issue --- in our study of concrete $2 \times 2$ 1st-order linear systems of ODEs, we'll see this issue rear its head. This leads to the study of \href{https://en.wikipedia.org/wiki/Generalized\_eigenvector}{generalized eigenvectors}, \href{https://en.wikipedia.org/wiki/Invariant\_subspace}{invariant subspaces}, and \href{https://en.wikipedia.org/wiki/Jordan\_normal\_form}{jordan canonical form}.}% End solution.

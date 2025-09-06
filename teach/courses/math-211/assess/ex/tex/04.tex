@@ -1,0 +1,2590 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% Theme : True/False (10 questions total)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q1}}
+\label{sec : Math211 Summer2019 Exam4 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary (though brief justification may help check your intuition).
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q1a} (1 pt) Let $y_{1}(t)$ be a solution to the nonhomogeneous 3rd-order linear ODE
+\begin{align}
+y^{(3)} - (\sin t) y'' + 3 y
+=
+t,%
+\label{eq : E4Q1a y1}
+\end{align}
+and let $y_{2}(t)$ be a solution to the nonhomogeneous 3rd-order linear ODE
+\begin{align}
+y^{(3)} - (\sin t) y'' + 3 y
+=
+2 t.%
+\label{eq : E4Q1a y2}
+\end{align}
+Then $2 y_{1} - y_{2}$ is a solution to the homogeneous 3rd-order linear ODE
+\begin{align*}
+y^{(3)} - (\sin t) y'' + 3 y
+=
+0.
+\end{align*}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. Plugging $2 y_{1} - y_{2}$ into the given ODE, and using linearity (of both the derivative as an operator, and the left side of the ODE), we compute
+\begin{align*}
+&(2 y_{1} - y_{2})^{(3)} - (\sin t) ((2 y_{1} - y_{2}))'' + 3 ((2 y_{1} - y_{2}))
+\\
+&\hspace{10mm}
+=
+2 \left(y_{1}^{(3)} - (\sin t) y_{1} + 3 y_{1}\right) - \left(y_{2}^{(3)} - (\sin t) y_{2}'' + 3 y_{2}\right)
+\\
+&\hspace{10mm}
+=
+2 (t) - (2 t)
+=
+0,
+\end{align*}
+where in the second equality we use the hypothesis that $y_{1}$ and $y_{2}$ are solutions to \eqref{eq : E4Q1a y1} and \eqref{eq : E4Q1a y2}, respectively.}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1b} (1 pt) Let $\fontMatrix{A}$ be an $n \times m$ matrix. For any $\fontMatrix{b} \in \reals^{n}$, the set of solutions to the matrix equation $\fontMatrix{A} \fontMatrix{x} = \fontMatrix{b}$ is a vector space over $\reals$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. If $\fontMatrix{b}$ is not the $n \times 1$ zero matrix, then the set of solutions may be empty (if the equation $\fontMatrix{A} \fontMatrix{x} = \fontMatrix{b}$ is inconsistent), or if it is nonempty, then the set of solutions will not be closed (e.g., if $\fontMatrix{x}$ is a solution, then $2 \fontMatrix{x}$ is not a solution, because $\fontMatrix{A} (2 \fontMatrix{x}) = 2 \fontMatrix{A} \fontMatrix{x} = 2 \fontMatrix{b} \neq \fontMatrix{b}$, because $\fontMatrix{b} \neq \fontMatrix{0}$).}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1c} (1 pt) Let $f_{1}(t) = t^{2}$ and $f_{2}(t) = t \abs{t}$ be two functions $\reals \rightarrow \reals$. Their wronskian $\wronskian[f_{1},f_{2}](t)$ is the zero function (i.e. identically $0$). \fontHint{The derivative $f_{2}'(t)$ is defined. Think graphically.}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. Graphically, the function $f_{2}(t) = t \abs{t}$ looks like $f_{1}(t) = t^{2}$, except that for $t < 0$ the sign is reversed. The derivatives should follow the same pattern. Formally, we have
+\begin{align*}
+f_{2}(t)
+=
+t \abs{t}
+=
+\begin{dcases*}
+-t^{2}	&	if $t \leq 0$,	\\
+t^{2}	&	if $t \geq 0$.
+\end{dcases*}
+\end{align*}
+Thus
+\begin{align*}
+f_{2}'(t)
+=
+\begin{dcases*}
+-2 t	&	if $t \leq 0$,	\\
+2 t	&	if $t \geq 0$
+\end{dcases*}
+=
+2 \abs{t}
+\end{align*}
+so
+\begin{align*}
+\wronskian[f_{1},f_{2}](t)
+=
+\det
+\begin{bmatrix}
+t^{2}	&	t \abs{t}	\\
+2 t	&	2 \abs{t}
+\end{bmatrix}
+=
+2 t^{2} \abs{t} - 2 t^{2} \abs{t}
+=
+0.
+\end{align*}}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1d} (1 pt) $f_{1}(t) = t^{2}$ and $f_{2}(t) = t \abs{t}$ are linearly dependent. \fontHint{Think graphically.}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. Graphically, if $f_{2}$ is a scalar multiple of $f_{1}$, then the scalar must be $1$, because the two functions are identical when $t \geq 0$. But then $f_{2}(t) \neq 1 \cdot f_{1}(t)$ for $t < 0$. Formally, consider the linear combination
+\begin{align*}
+a_{1} f_{1}(t) + a_{2} f_{2}(t)
+=
+0,
+\end{align*}
+where $0$ denotes the zero function. Evaluating all functions (including the zero function!) in this equation at the two points $t = \pm{}1$, we get the system of linear equations
+\begin{align*}
+a_{1} - a_{2}
+&=
+0
+\\
+a_{1} + a_{2}
+&=
+0,
+\end{align*}
+which we can write as the matrix equation
+\begin{align*}
+\begin{bmatrix}%
+1	&	-1	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+a_{1}	\\
+a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+.
+\end{align*}
+One can check that the determinant of the $2 \times 2$ coefficient matrix is $2 \neq 0$, so we may invert it; multiplying both sides of this equation on the left by this inverse, we get
+\begin{align*}
+\begin{bmatrix}%
+a_{1}	\\
+a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+.
+\end{align*}
+This shows that if a linear combination of $f_{1}$ and $f_{2}$ equals $0$ (the zero function), then all coefficients in the linear combination must be $0$. Thus by definition, the set $\{f_{1},f_{2}\}$ is linearly independent.}% End solution.
+
+
+
+\qsep
+
+
+
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : E4Q1e} (1 pt) Let $\fontMatrix{A}$ be a $2 \times 2$ matrix with entries in $\reals$. If $\lambda \in \complexes$ is a complex, nonreal eigenvalue of $\fontMatrix{A}$, then its complex conjugate $\complexConjugate{\lambda}$ is also an eigenvalue of $\fontMatrix{A}$.
+%\begin{center}
+%\begin{tabular}{c c c}
+%true	&	\hspace{1in}	&	false
+%\end{tabular}
+%\end{center}
+%\end{enumerate}
+%
+%\spaceSolution{0in}{% Begin solution.
+%}% End solution.
+%
+%
+%
+%\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1e} (1 pt) Let $\fontMatrix{A}$ be a $2 \times 2$ matrix with entries in $\reals$, and let $\lambda_{+},\lambda_{-} \in \complexes$ be complex, nonreal eigenvalues of $\fontMatrix{A}$ that are complex conjugates. If $\fontMatrix{v} \in \complexes^{2}$ is an eigenvector of $\fontMatrix{A}$ with corresponding eigenvalue $\lambda_{+}$, then the complex conjugate vector $\complexConjugate{\fontMatrix{v}}$ is an eigenvector of $\fontMatrix{A}$ with corresponding eigenvalue $\lambda_{-}$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. One can verify this quickly, using the facts that (1) the complex conjugate of a product equals the product of the complex conjugates, and (2) the complex conjugate of a real number is itself (in particular, for our matrix $\fontMatrix{A}$ with entries in $\reals$, $\complexConjugate{\fontMatrix{A}} = \fontMatrix{A}$):
+\begin{align*}
+\fontMatrix{A} \complexConjugate{\fontMatrix{v}}
+=
+\complexConjugate{(\fontMatrix{A} \fontMatrix{v})}
+=
+\complexConjugate{\lambda_{+} \fontMatrix{v}}
+=
+\complexConjugate{\lambda}_{+} \complexConjugate{\fontMatrix{v}}
+=
+\lambda_{-} \complexConjugate{\fontMatrix{v}}.
+\end{align*}}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1f} (1 pt) For a 1st-order system of ODEs that satisfies the (existence and) uniqueness statement of Picard's theorem, trajectories in the phase plane cannot cross. \fontHint{What information do these trajectories capture, and how?}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. Phase planes do not explicitly capture time. We often implicitly indicate the direction of increasing time using arrows along trajectories, but note this indication does not tell us when time equals particular values. If solutions pass through the same point $(x_{1},x_{2})$ at different times $t$, this is not an intersection in the space $(x_{1},x_{2},t)$ of all variables.}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1g} (1 pt) There exist $n \times n$ matrices $\fontMatrix{A}$ such that the $n$ columns of the matrix exponential function $e^{\fontMatrix{A} t}$ are linearly dependent.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. Let $\fontMatrix{A}$ be any $n \times n$ matrix. Then
+\begin{align*}
+e^{\fontMatrix{A} t} e^{-\fontMatrix{A} t}
+=
+e^{\fontMatrix{A} t - \fontMatrix{A} t}
+=
+e^{\fontMatrix{0}}
+=
+\fontMatrix{I},
+\end{align*}
+so by definition, $e^{\fontMatrix{A} t}$ has an inverse, namely $e^{-\fontMatrix{A} t}$. A square matrix is invertible if and only if its columns are linearly independent. We conclude that, for any $n \times n$ matrix $\fontMatrix{A}$, $e^{\fontMatrix{A} t}$ is invertible, and hence its columns are linearly independent.}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1h} (1 pt) Let $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$, where all matrices are $n \times n$, and $\fontMatrix{P}$ is invertible. Then for every nonnegative integer $j$, $\fontMatrix{A}^{j} = \fontMatrix{P} \fontMatrix{D}^{j} \fontMatrix{P}^{-1}$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+True. One can verify this via direct computation:
+\begin{align*}
+\fontMatrix{A}^{j}
+=
+\left(\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}\right)^{j}
+=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} \cdots \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}
+=
+\fontMatrix{P} \fontMatrix{D}^{j} \fontMatrix{P}^{-1},
+\end{align*}
+where in the final equality we have multiplied adjacent $\fontMatrix{P}^{-1} \fontMatrix{P}$ factors to get $\fontMatrix{I}$, then reduced.
+
+Note that our analysis did not require the matrix $\fontMatrix{D}$ to be diagonal. In the context of computing the matrix exponential, computing $e^{\fontMatrix{A} t}$ is greatly facilitated when we can decompose $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$ with $\fontMatrix{D}$ diagonal, or something close to diagonal (the \href{https://en.wikipedia.org/wiki/Jordan\_normal\_form}{jordan canonical form}).}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1i} (1 pt) Every $n \times n$ matrix with entries in $\reals$ can be diagonalized.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False. If the characteristic polynomial of the matrix has complex roots, then the matrix cannot be diagonalized over $\reals$. For example, this happens with the matrix
+\begin{align*}
+\begin{bmatrix}%
+0	&	1	\\
+-1	&	0
+\end{bmatrix}%
+,
+\end{align*}
+which has characteristic polynomial $p(\lambda) = \lambda^{2} + 1$.
+
+Even if we allow ourselves to work over $\complexes$, the statement is false. For example, consider the matrix
+\begin{align*}
+\begin{bmatrix}%
+1	&	1	\\
+0	&	1
+\end{bmatrix}%
+.
+\end{align*}
+This matrix is triangular, so its eigenvalues are the diagonal entries, in this case, both $1$. One can check that the eigenspace associated to this eigenvalue has dimension equal to $1$, so no basis of eigenvectors can be found, and we cannot form our matrix $\fontMatrix{P}$ that we typically use to diagonalize.
+
+In general, the failure of diagonalization shows up as the algebraic multiplicity of an eigenvalue being strictly greater than its geometric multiplicity. While not every square matrix with entries in $\reals$ can be diagonalized, it can be ``almost'' diagonalized over $\complexes$, and this ``almost'' diagonalization has additional nice properties. For more about this, read about the \href{https://en.wikipedia.org/wiki/Jordan\_normal\_form}{jordan canonical form}.}% End solution.
+
+
+
+\qsep
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q1j} (1 pt) Every ODE can be solved, i.e. we can always find a closed-form solution (e.g., an explicit equation for $y(t)$).
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+False.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Theme : Phase plane matching
+%
+% Phase planes plotted using online software at
+% http://www.calvin.edu/~scofield/demos/other/PhasePortrait2D.html
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q2}}
+\label{sec : Math211 Summer2019 Exam4 Q2}
+
+(6 pt) Match each of the homogeneous 1st-order $2 \times 2$ linear systems of ODEs with its corresponding phase plane in Figures \ref{fig : Exam4 Phase Planes 1 Of 2} and \ref{fig : Exam4 Phase Planes 2 Of 2} (on the last page of this exam). N.B. In each ODE, $\fontMatrix{x} = \transpose{\begin{bmatrix}x_{1}(t)&x_{2}(t)\end{bmatrix}}$ is a $2 \times 1$ matrix of scalar-valued functions.
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Exam4Q2a} $\displaystyle \fontMatrix{x}' = \frac{1}{4} \begin{bmatrix}10&-1\\-4&10\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}2&0\\0&3\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2b} $\displaystyle \fontMatrix{x}' = \frac{1}{4} \begin{bmatrix}-10&1\\4&-10\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}-2&0\\0&-3\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2c} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-4&1\\4&-4\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}-2&0\\0&-6\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2d} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-1&-\frac{1}{2}\\-2&-1\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}-2&0\\0&0\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2e} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}2&-2\\-8&2\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}-2&0\\0&6\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2f} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}2&2\\8&2\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}6&0\\0&-2\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Exam4Q2g} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-2&2\\-4&2\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix} \begin{bmatrix}2 i&0\\0&-2 i\end{bmatrix} \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix}^{-1}$
+\item\label{itm : Exam4Q2h} $\displaystyle \fontMatrix{x}' = \frac{1}{8} \begin{bmatrix}-2&65\\-4&2\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 - 8 i&1 + 8 i\\2&2\end{bmatrix} \begin{bmatrix}2 i&0\\0&-2 i\end{bmatrix} \begin{bmatrix}1 - 8 i&1 + 8 i\\2&2\end{bmatrix}^{-1}$
+\item\label{itm : Exam4Q2i} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-1&2\\-4&3\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix} \begin{bmatrix}1 + 2 i&0\\0&1 - 2 i\end{bmatrix} \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix}^{-1}$
+\item\label{itm : Exam4Q2j} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-3&2\\-4&1\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix} \begin{bmatrix}-1 + 2 i&0\\0&-1 - 2 i\end{bmatrix} \begin{bmatrix}1 - i&1 + i\\2&2\end{bmatrix}^{-1}$
+\item\label{itm : Exam4Q2k} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-1&0\\0&-1\end{bmatrix} \fontMatrix{x}$
+\item\label{itm : Exam4Q2l} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-1&1\\0&-1\end{bmatrix} \fontMatrix{x}$
+\end{enumerate}
+
+\spaceSolution{0in}{% Begin solution.
+\begin{align*}
+\begin{array}{r c l r c l r c l r c l r c l r c l}
+\ref{itm : Exam4Q2a}	&	=	&	(4)	&
+\ref{itm : Exam4Q2b}	&	=	&	(1)	&
+\ref{itm : Exam4Q2c}	&	=	&	(2)	&
+\ref{itm : Exam4Q2d}	&	=	&	(3)	&
+\ref{itm : Exam4Q2e}	&	=	&	(6)	&
+\ref{itm : Exam4Q2f}	&	=	&	(5)	\\
+\ref{itm : Exam4Q2g}	&	=	&	(12)	&
+\ref{itm : Exam4Q2h}	&	=	&	(11)	&
+\ref{itm : Exam4Q2i}	&	=	&	(10)	&
+\ref{itm : Exam4Q2j}	&	=	&	(9)	&
+\ref{itm : Exam4Q2k}	&	=	&	(7)	&
+\ref{itm : Exam4Q2l}	&	=	&	(8)	\\
+\end{array}
+\end{align*}}% End solution.
+
+% WolframAlpha code :
+% (a) {{1,1},{2,-2}}{{2,0},{0,3}}{{1,1},{2,-2}}^(-1)
+% (b) {{1,1},{2,-2}}{{-2,0},{0,-3}}{{1,1},{2,-2}}^(-1)
+% (c) {{1,1},{2,-2}}{{-2,0},{0,-6}}{{1,1},{2,-2}}^(-1)
+% (d) {{1,1},{2,-2}}{{-2,0},{0,0}}{{1,1},{2,-2}}^(-1)
+% (e) {{1,1},{2,-2}}{{-2,0},{0,6}}{{1,1},{2,-2}}^(-1)
+% (f) {{1,1},{2,-2}}{{6,0},{0,-2}}{{1,1},{2,-2}}^(-1)
+% (g) {{1-i,1+i},{2,2}}{{2i,0},{0,-2i}}{{1-i,1+i},{2,2}}^(-1)
+% (h) {{1-8i,1+8i},{2,2}}{{2i,0},{0,-2i}}{{1-8i,1+8i},{2,2}}^(-1)
+% (i) {{1-i,1+i},{2,2}}{{1+2i,0},{0,1-2i}}{{1-i,1+i},{2,2}}^(-1)
+% (j) {{1-i,1+i},{2,2}}{{-1+2i,0},{0,-1-2i}}{{1-i,1+i},{2,2}}^(-1)
+% (k)
+% (l)
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Theme : 1st-order ODE; Picard; equilibrium analysis?
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q3}}
+\label{sec : Math211 Summer2019 Exam4 Q3}
+
+(8 pt) Consider the homogeneous 1st-order nonlinear ODE
+\begin{align}
+e^{t} y' - (1 - e^{2 t}) y^{\frac{1}{3}}
+=
+0.%
+\label{eq : E4Q3 ODE}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q3a} (2 pt) Show that the ODE \eqref{eq : E4Q3 ODE} has exactly one equilibrium solution. Justify completely.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+By definition, the ``equilibrium'' part of ``equilibrium solution'' requires that $y(t)$ does not depend on $t$, i.e. $y$ is a constant function, say $y \equiv c$. Thus $y' = 0$. The ``solution'' part of ``equilibrium solution'' requires that $y$ solves \eqref{eq : E4Q3 ODE}. Plugging $y$ into \eqref{eq : E4Q3 ODE}, we get
+\begin{align*}
+e^{t} 0 - (1 - e^{2 t} c^{\frac{1}{3}})
+=
+0
+&&
+\Leftrightarrow
+&&
+y
+\equiv
+0.
+\end{align*}
+We conclude that \eqref{eq : E4Q3 ODE} has a unique equilibrium solution, $y \equiv 0$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q3b} (3 pt) Find all solutions to the initial value problem given by the ODE \eqref{eq : E4Q3 ODE} and the initial condition $y(0) = 0$. Justify briefly why this is all solutions.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The given ODE \eqref{eq : E4Q3 ODE} is separable:
+\begin{align}
+e^{t} y'
+&=
+(1 - e^{2 t}) y^{\frac{1}{3}}
+\\
+y^{-\frac{1}{3}} y'
+&=
+\frac{1 - e^{2 t}}{e^{t}}
+=
+e^{-t} - e^{t}.%
+\label{eq : E4Q3b Intermediate}
+\end{align}
+Note that when we move from line 1 to line 2, we divide both sides by $y^{\frac{1}{3}}$. This is OK as long as $y$ is not the zero function.
+
+Integrating both sides of \eqref{eq : E4Q3b Intermediate}, we get
+\begin{align*}
+\frac{3}{2} y^{\frac{2}{3}}
+=
+-e^{-t} - e^{t} + c_{1},
+\end{align*}
+for some $c_{1} \in \reals$. Solving for $y$, we get
+\begin{align*}
+y(t)
+=
+\pm{} \left(-\frac{2}{3} \left(e^{-t} + e^{t} + c_{2}\right)\right)^{\frac{3}{2}},
+\end{align*}
+where $c_{2} \in \reals$.
+
+Applying the initial condition $y(0) = 0$, we get
+\begin{align*}
+0
+=
+y(0)
+=
+\pm{}\left(-\frac{2}{3} \left(1 + 1 + c_{2}\right)\right)^{\frac{3}{2}}
+&&
+\Leftrightarrow
+&&
+c_{2}
+=
+-2.
+\end{align*}
+This gives us two nonequilibrium solutions:
+\begin{align*}
+y(t)
+=
+\pm{} \left(-\frac{2}{3} \left(e^{-t} + e^{t} - 2\right)\right)^{\frac{3}{2}}.
+\end{align*}
+Note that the equilibrium solution we found in part \ref{itm : E4Q3a} also solves the IVP. We conclude that there are exactly three solutions to the IVP.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q3c} (3 pt) Briefly explain how the equilibrium in part \ref{itm : E4Q3a} relates to our work in part \ref{itm : E4Q3b}. How do the above results relate to the existence and uniqueness statements of Picard's theorem?
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The equilibrium solution $y(t) \equiv 0$ is a solution to our IVP (the ODE \eqref{eq : E4Q3 ODE} with the initial condition $y(0) = 0$). It does not appear in our analysis in part \ref{itm : E4Q3b} because, in the step in which we divide by $y^{\frac{1}{3}}$, we (implicitly) impose that $y(t)$ is not the zero function. We have to check separately whether $y(t) \equiv 0$ solves the IVP.
+
+Solving the ODE \eqref{eq : E4Q3 ODE} for $y'$, we get
+\begin{align}
+y'
+=
+\left(e^{-t} - e^{t}\right) y^{\frac{1}{3}},
+\end{align}
+which is continuous at all points $(t,y)$. Thus Picard's theorem applies, and it guarantees existence of solutions of the ODE \eqref{eq : E4Q3 ODE} for any initial condition $y(t_{0}) = y_{0}$. This agrees with our finding solutions for the IVP with $y(0) = 0$.
+
+The uniqueness statement of Picard's theorem depends on continuity of the partial derivative
+\begin{align*}
+\frac{\partial}{\partial y} y'
+=
+\frac{1}{3} \left(e^{-t} - e^{t}\right) y^{-\frac{2}{3}}.
+\end{align*}
+This partial derivative is not defined, and hence not continuous, at any point $(t,y)$ with $y = 0$. Our initial condition is $(t_{0},y_{0}) = (0,0)$. Hence the uniqueness statement of Picard's theorem does not apply, and we cannot use it to conclude uniqueness or nonuniqueness of solutions. However, our analysis in part \ref{itm : E4Q3b} shows that solutions to the IVP are not unique.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Theme : Rank--nullity 3-parter (row reduction algorithm, basis of image and kernel, rank--nullity theorem)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q4}}
+\label{sec : Math211 Summer2019 Exam4 Q4}
+
+(8 pt) Consider the linear map $T$ given by
+\begin{align*}
+T
+:
+\reals^{4}
+&\rightarrow
+\reals^{3}
+\\
+\begin{bmatrix}
+x_{1}		\\
+\vdots	\\
+x_{4}
+\end{bmatrix}
+&\mapsto
+\left[
+\begin{array}{c c c c c c c}
+x_{1}		&	+	&	2 x_{2}	&	-	&	x_{3}		&	+	&	4 x_{4}	\\
+2 x_{1}	&	+	&	4 x_{2}	&	-	&	2 x_{3}	&	+	&	3 x_{4}	\\
+-x_{1}	&	-	&	x_{2}		&	+	&	2 x_{3}	&	+	&	4 x_{4}
+\end{array}
+\right].
+\end{align*}
+
+% WolframAlpha code :
+% row reduce {{1,2,-1,4},{2,4,-2,3},{-1,-1,2,4}}
+%	1	0	-3	0
+% 	0	1	1	0
+%	0	0	0	1
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q4a} (1 pt) Write the matrix $\fontMatrix{A}$ corresponding to the linear map $T$. \fontHint{Double-check your matrix before you continue!}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+A matrix $\fontMatrix{A}$ corresponding to the linear map $T$ can be obtained by reading off the coefficients of the map:
+\begin{align*}
+\fontMatrix{A}
+=
+\begin{bmatrix}%
+1	&	2	&	-1	&	4	\\
+2	&	4	&	-2	&	3	\\
+-1	&	-1	&	2	&	4
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q4b} (2 pt) Apply the row reduction algorithm to find the reduced row echelon form of $\fontMatrix{A}$.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Applying the row reduction algorithm to our matrix $\fontMatrix{A}$ from part \ref{itm : E4Q4a}, we obtain
+\begin{align*}
+\begin{bmatrix}%
+1	&	0	&	-3	&	0	\\
+0	&	1	&	1	&	0	\\
+0	&	0	&	0	&	1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q4c} (2 pt) State a basis for the image $\image(T)$ and a basis for the kernel $\ker(T)$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+A basis for the image $\image(T)$ is given by the pivot columns of the original matrix $\fontMatrix{A}$:
+\begin{align*}
+\text{basis}(\image(T))
+=
+\left(
+\begin{bmatrix}%
+1	\\
+2	\\
+-1
+\end{bmatrix}%
+,
+\begin{bmatrix}%
+2	\\
+4	\\
+-1
+\end{bmatrix}%
+,
+\begin{bmatrix}%
+4	\\
+3	\\
+4
+\end{bmatrix}%
+\right).
+\end{align*}
+See also part \ref{itm : E4Q4e} below.
+
+By definition, the kernel $\ker(T)$ is the set of input vectors that $T$ maps to the zero vector. In our matrix representation of $T$, this set corresponds to the solution space of the equation $\fontMatrix{A} \fontMatrix{x} = \fontMatrix{0}$. Finally, a matrix equation and its reduced row echelon form have the same solution set. Together, this logic implies that $\ker(T)$ is the set of solutions to
+\begin{align*}
+\rref(\fontMatrix{A}) \fontMatrix{x}
+=
+\fontMatrix{0},
+\end{align*}
+which we can read off from the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}\rref(\fontMatrix{A})&\fontMatrix{0}\end{array}\right]$:
+\begin{align*}
+\ker(T)
+=
+\left\{
+\begin{bmatrix}%
+x_{1}	\\
+x_{2}	\\
+x_{3}	\\
+x_{4}
+\end{bmatrix}%
+\st
+x_{1}
+=
+3 x_{3},
+x_{2}
+=
+-x_{3},
+x_{4}
+=
+0,
+x_{3}
+\in
+\reals
+\right\}.
+\end{align*}
+Here $x_{3} \in \reals$ is a free variable.% Begin footnote.
+\footnote{Note that the free variable $x_{3}$ corresponds to a nonpivot column in the reduced row echelon form matrix $\rref(\fontMatrix{A})$ (or equivalently in the original matrix $\fontMatrix{A}$).} % End footnote.
+We can write this concisely as
+\begin{align*}
+\ker(T)
+=
+\Span\left\{
+\begin{bmatrix}%
+3	\\
+-1	\\
+1	\\
+0
+\end{bmatrix}%
+\right\}.
+\end{align*}
+The vector (corresponding to $x_{3} = 1$) generating this span is a basis for $\ker(T)$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q4d} (1 pt) Confirm the rank--nullity theorem holds for the linear map $T$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The domain of $T$ is $\reals^{4}$, which is a vector space over $\reals$ of dimension $4$. In part \ref{itm : E4Q4d} we found that $\image(T)$ and $\ker(T)$ had bases with $3$ and $1$ elements, respectively. Thus
+\begin{align*}
+\dim(\domain(T))
+=
+4
+=
+3 + 1
+=
+\dim(\image(T)) + \dim(\ker(T)).
+\end{align*}
+This confirms the rank--nullity theorem for $T$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q4e} (2 pt) For part \ref{itm : E4Q4c}, your friend writes that
+\begin{align*}
+\text{basis}(\image(T))
+=
+\left(
+\begin{bmatrix}%
+1	\\
+0	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}%
+0	\\
+1	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}%
+0	\\
+0	\\
+1
+\end{bmatrix}%
+\right)
+\end{align*}
+and gets her problem marked wrong. Argue why your friend deserves full points.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Our general procedure tells us that, to specify a basis for the image of a linear map $T$ given by an $n \times m$ matrix $\fontMatrix{A}$, we identify the pivot columns of $\fontMatrix{A}$ (e.g., via row reduction), then take the pivot columns of the original matrix $\fontMatrix{A}$ as our basis for $\image T$. However, any other basis for $\image(T)$ is just as valid (it may just be harder to find).
+
+In part \ref{itm : E4Q4c}, we found that $\dim(\image(T)) = 3$. Moreover, $T : \reals^{4} \rightarrow \reals^{3}$, so $\image(T)$ is a vector subspace of $\reals^{3}$. And $\reals^{3}$ also has dimension $3$. If a subspace has the same dimension as the finite-dimensional vector space that contains it, then this subspace must be the entire vector space. In this case, this says that $\image(T) = \reals^{3}$. Thus any basis of $\reals^{3}$ is a basis of $\image(T)$. In particular, the standard basis of $\reals^{3}$ that your friend wrote is a valid basis of $\image(T)$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Theme : Linearization and equilibrium analysis; Can trajectories cross in the phase plane? explain
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q5}}
+\label{sec : Math211 Summer2019 Exam4 Q5}
+
+% Blanchard Devaney Hall Q 5.1.15 (p 468 ; solution p 794)
+
+(17 pt) Consider the following 1st-order nonlinear system of ODEs:
+\begin{align*}
+x_{1}	'
+&=
+2 x_{1} - x_{1}^{2} - x_{1} x_{2}
+\\
+x_{2}'
+&=
+x_{2}^{2} - x_{1} x_{2}.
+\end{align*}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q5a} (4 pt) State the $x_{1}$- and $x_{2}$-nullclines, and show that each consists of two lines. Plot them in the $(x_{1},x_{2})$-plane.
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+By definition, the $x_{i}$-nullcline is the set of points that solve $x_{i}' = 0$. Here,
+\begin{align*}
+0
+\seteq
+x_{1}'
+=
+2 x_{1} - x_{1}^{2} - x_{1} x_{2}
+=
+x_{1} (2 - x_{1} - x_{2})
+&&
+\Leftrightarrow
+&&
+x_{1}
+=
+0
+\text{ or }
+x_{2}
+=
+2 - x_{1}
+\\
+0
+\seteq
+x_{2}'
+=
+x_{2}^{2} - x_{1} x_{2}
+=
+x_{2} (x_{2} - x_{1})
+&&
+\Leftrightarrow
+&&
+x_{2}
+=
+0
+\text{ or }
+x_{2}
+=
+x_{1}.
+\end{align*}
+Note that each of the four equations on the right describes a curve (in fact, a line) in the $(x_{1},x_{2})$ plane. Plotting these lines (ideally in different colors, so intersections of one curve from each set of nullclines are easy to spot), we get\fontNeedsEdit{ (add sketch of nullcline graph)}.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q5b} (2 pt) Find the three equilibrium points of this system. State them explicitly.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+From our graph in part \ref{itm : E4Q5a}, we identify three equilibrium points:
+\begin{align*}
+(0,0),
+&&
+(1,1),
+&&
+(2,0).
+\end{align*}
+One can quickly verify that these three points are indeed equilibria, by plugging them into the original system of ODEs and checking that each equation becomes $x_{i}' = 0$.}% End solution.
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q5c} (2 pt) Write the jacobian matrix for this system, at the general point $(x_{1},x_{2})$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+By definition, the jacobian matrix for this system is
+\begin{align*}
+\fontMatrix{J}(x_{1},x_{2})
+=
+\begin{bmatrix}%
+\frac{\partial x_{1}'}{\partial x_{1}}(x_{1},x_{2})	&	\frac{\partial x_{1}'}{\partial x_{2}}(x_{1},x_{2})	\\
+\frac{\partial x_{2}'}{\partial x_{1}}(x_{1},x_{2})	&	\frac{\partial x_{2}'}{\partial x_{2}}(x_{1},x_{2})
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+2 - 2 x_{1} - x_{2}	&	-x_{1}		\\
+-x_{2}			&	2 x_{2} - x_{1}
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q5d} (9 pt) For each equilibrium point, write the corresponding linearized system, and classify its stability.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+We analyze each of the three equilibrium points $\fontMatrix{x}_{\text{eq}}$ we found in part \ref{itm : E4Q5b}.
+
+$(0,0)$. The corresponding linearized system is
+\begin{align*}
+\fontMatrix{x}'
+=
+\fontMatrix{J}(0,0) \left(\fontMatrix{x} - \fontMatrix{x}_{\text{eq}}\right)
+=
+\begin{bmatrix}%
+2	&	0	\\
+0	&	0
+\end{bmatrix}%
+\left(
+\begin{bmatrix}%
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+- 
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+\right)
+=
+\begin{bmatrix}%
+2	&	0	\\
+0	&	0
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+.
+\end{align*}
+Note that $\fontMatrix{J}$ is a triangular (in fact, diagonal) matrix; thus the eigenvalues of $\fontMatrix{J}(0,0)$ are the diagonal entries, i.e. $2$ and $0$. The zero eigenvalue corresponds to a line of equilibrium points; the eigenvalue of $2$ indicates that solutions move away from this equilibrium line.\fontNeedsEdit{ (insert phase plane)} We conclude that $(0,0)$ is an unstable equilibrium.
+
+$(2,0)$. The corresponding linearized system is
+\begin{align*}
+\fontMatrix{x}'
+=
+\fontMatrix{J}(2,0) \left(\fontMatrix{x} - \fontMatrix{x}_{\text{eq}}\right)
+=
+\begin{bmatrix}%
+-2	&	-2	\\
+0	&	-2
+\end{bmatrix}%
+\left(
+\begin{bmatrix}%
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+- 
+\begin{bmatrix}%
+2	\\
+0
+\end{bmatrix}%
+\right)
+=
+\begin{bmatrix}%
+-2	&	-2	\\
+0	&	-2
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1} - 2	\\
+x_{2}
+\end{bmatrix}%
+.
+\end{align*}
+Again $\fontMatrix{J}(2,0)$ is (upper) triangular, so the eigenvalues of $\fontMatrix{J}(2,0)$ are the diagonal entries, both $-2$. Both eigenvalues are real and negative, so this equilibrium $(2,0)$ is a sink\fontNeedsEdit{ (insert phase plane)}, which is stable.
+
+$(1,1)$. The corresponding linearized system is
+\begin{align*}
+\fontMatrix{x}'
+=
+\fontMatrix{J}(1,1) \left(\fontMatrix{x} - \fontMatrix{x}_{\text{eq}}\right)
+=
+\begin{bmatrix}%
+-1	&	-1	\\
+-1	&	1
+\end{bmatrix}%
+\left(
+\begin{bmatrix}%
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+- 
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+\right)
+=
+\begin{bmatrix}%
+-1	&	-1	\\
+-1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1} - 1	\\
+x_{2} - 1
+\end{bmatrix}%
+.
+\end{align*}
+We compute the eigenvalues of $\fontMatrix{J}(1,1)$ to be
+\begin{align*}
+0
+\seteq
+\det\left(\lambda \fontMatrix{I} - \fontMatrix{J}(1,1)\right)
+=
+\det
+\begin{bmatrix}%
+\lambda + 1	&	1			\\
+1			&	\lambda - 1
+\end{bmatrix}%
+=
+\lambda^{2} - 2
+&&
+\Leftrightarrow
+&&
+\lambda
+=
+\pm{}\sqrt{2}.
+\end{align*}
+We have one positive and one negative real eigenvalue, so this equilibrium $(2,0)$ is a saddle\fontNeedsEdit{ (insert phase plane)}, which is unstable.
+
+\fontNeedsEdit{(add general remark about how linearization at $(a_{1},a_{2})$ corresponds to writing original system in terms of $x_{1} - a_{1},x_{2} - a_{2}$ and dropping terms of order higher than $1$ ; illustrate with each equilibrium above, at least one in detail)}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% Theme : Given a (homogeneous?) higher-order ODE IVP
+% (a) Write characteristic polynomial.
+% (b) Translate into a 1st-order linear system.
+% (c) Solve the 1st-order linear system.
+% (d) State solution to original higher-order ODE.
+% (e) Use laplace transform, show we get same solution.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q6}}
+\label{sec : Math211 Summer2019 Exam4 Q6}
+
+% Blanchard Devaney Hall Exercise 6.1.13 (p 571 ; solution p 806).
+
+(20 pt) Consider the following homogeneous 2nd-order linear ODE IVP:
+\begin{align}
+y'' - 3 y' + 2 y
+=
+0,
+&&
+y(0)
+=
+2,
+&&
+y'(0)
+=
+7.%
+\label{eq : E4Q6 ODE}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q6a} (2 pt) Translate this 2nd-order linear ODE into a 1st-order linear system of ODEs. Also translate the initial conditions into an initial condition matrix (of order $2 \times 1$).
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+With the change of variables
+\begin{align*}
+x_{0}
+=
+y,
+&&
+x_{1}
+=
+y',
+\end{align*}
+we have
+\begin{align*}
+x_{0}'
+=
+y'
+=
+x_{1},
+&&
+x_{1}'
+=
+y''
+=
+-2 y + 3 y'
+=
+-2 x_{0} + 3 x_{1}.
+\end{align*}
+Denote
+\begin{align*}
+\fontMatrix{x}
+=
+\begin{bmatrix}%
+x_{0}	\\
+x_{1}
+\end{bmatrix}%
+.
+\end{align*}
+Then the 2nd-order linear ODE IVP \eqref{eq : E4Q6 ODE} writes as the 1st-order linear system IVP
+\begin{align*}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+0	&	1	\\
+-2	&	3
+\end{bmatrix}%
+\fontMatrix{x},
+&&
+\fontMatrix{x}(0)
+=
+\begin{bmatrix}%
+2	\\
+7
+\end{bmatrix}%
+,
+\end{align*}
+where the initial condition vector follows from our change of variables:
+\begin{align*}
+\fontMatrix{x}(0)
+=
+\begin{bmatrix}%
+x_{0}(0)	\\
+x_{1}(0)
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+y(0)	\\
+y'(0)
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+2	\\
+7
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q6b} (2 pt) Write the characteristic polynomial $p(\lambda) = \det(\fontMatrix{A} - \lambda \fontMatrix{I})$ associated to the coefficient matrix $\fontMatrix{A}$ of our linear system from part \ref{itm : E4Q6a}. How does this characteristic polynomial relate to the original ODE \eqref{eq : E4Q6 ODE}?
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+p(\lambda)
+=
+\det(\fontMatrix{A} - \lambda \fontMatrix{I})
+=
+\det
+\begin{bmatrix}%
+-\lambda	&	1			\\
+-2		&	3 - \lambda
+\end{bmatrix}%
+=
+\lambda^{2} - 3 \lambda + 2.
+\end{align*}
+This is exactly the ``characteristic polynomial'' we get by replacing each derivative $y^{(n)}$ with $\lambda^{n}$ in the original ODE \eqref{eq : E4Q6 ODE}.}% End solution.
+
+
+
+\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q6c} (5 pt) Solve the 1st-order linear system IVP from part \ref{itm : E4Q6a}. \fontHint{Remember to apply the initial conditions!}
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+Setting the characteristic polynomial $p(\lambda)$ from part \ref{itm : E4Q6b} equal to zero and finding the zeros, gives us the eigenvalues of $\fontMatrix{A}$:
+\begin{align*}
+0
+\seteq
+p(\lambda)
+=
+\lambda^{2} - 3 \lambda + 2
+=
+(\lambda - 1) (\lambda - 2)
+&&
+\Leftrightarrow
+&&
+\lambda = 1,2.
+\end{align*}
+For each eigenvalue, we find the corresponding eigenspace. For $\lambda = 1$,
+\begin{align*}
+\fontMatrix{0}
+\seteq
+(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}
+=
+\begin{bmatrix}%
+-1	&	1	\\
+-2	&	2
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Leftrightarrow
+&&
+\eigenspace(\fontMatrix{A},1)
+=
+\Span\left\{
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+For $\lambda = 2$,
+\begin{align*}
+\fontMatrix{0}
+\seteq
+(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}
+=
+\begin{bmatrix}%
+-2	&	1	\\
+-2	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Leftrightarrow
+&&
+\eigenspace(\fontMatrix{A},1)
+=
+\Span\left\{
+\begin{bmatrix}%
+1	\\
+2
+\end{bmatrix}%
+\right\}.
+\end{align*}
+Each eigenvalue $\lambda$ appears with algebraic multiplicity $1$ in the characteristic polynomial, so the general solution $\fontMatrix{x}(t)$ can be stated as a linear combination of $e^{\lambda t} \fontMatrix{v}_{\lambda}$, where $\fontMatrix{v}_{\lambda}$ is any (nonzero) eigenvector in $\eigenspace(\fontMatrix{A},\lambda)$:
+\begin{align}
+\fontMatrix{x}(t)
+=
+c_{1} e^{t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
++
+c_{2} e^{2 t}
+\begin{bmatrix}%
+1	\\
+2
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+c_{1} e^{t} + c_{2} e^{2 t}	\\
+c_{1} e^{t} + 2 c_{2} e^{2 t}
+\end{bmatrix}%
+.%
+\label{eq : E4Q6 General Solution Matrix Form}
+\end{align}
+Applying the initial condition, we have
+\begin{align*}
+\begin{bmatrix}%
+2	\\
+7
+\end{bmatrix}%
+=
+\fontMatrix{x}(0)
+=
+\begin{bmatrix}%
+c_{1} + c_{2}	\\
+c_{1} + 2 c_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+1	&	1	\\
+1	&	2
+\end{bmatrix}%
+\begin{bmatrix}%
+c_{1}	\\
+c_{2}
+\end{bmatrix}%
+.
+\end{align*}
+Solving this (implicit) system of equations for $c_{1},c_{2}$, we find
+\begin{align*}
+c_{1}
+=
+-3,
+&&
+c_{2}
+=
+5.
+\end{align*}
+Thus the solution to the 1st-order linear system IVP is
+\begin{align*}
+\fontMatrix{x}(t)
+=
+-3 e^{t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
++
+5 e^{2 t}
+\begin{bmatrix}%
+1	\\
+2
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-3 e^{t} + 5 e^{2 t}	\\
+-3 e^{t} + 10 e^{2 t}
+\end{bmatrix}%
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q6d} (1 pt) State the solution to the original 2nd-order ODE IVP \eqref{eq : E4Q6 ODE}. \fontHint{If you have done part \ref{itm : E4Q6c}, then you do not need to do any math in this step.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The original 2nd-order ODE IVP \eqref{eq : E4Q6 ODE} is in terms of the function $y$, which by our change of variables corresponds to $x_{0}$, the first entry in the $\fontMatrix{x}$ matrix. Hence
+\begin{align*}
+y(t)
+=
+-3 e^{t} + 5 e^{2 t}.
+\end{align*}
+N.B. The second entry in $\fontMatrix{x}$ is $x_{1} = y'$. One can check that differentiating $y$ (equivalently, $x_{0}$) indeed gives $x_{1}$ (equivalently, $y'$).}% End solution.
+
+
+
+\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q6e} (4 pt) Let $y$ be a ``suitable'' function (i.e. a function of exponential order $\alpha$, for some $\alpha \in \reals$). Using the definition of the laplace transform,
+\begin{align*}
+\laplaceTransform\left\{f(t)\right\}
+=
+\int_{0}^{+\infty} e^{-s t} f(t) \spaceIntd \intd t,
+\end{align*}
+show that
+\begin{align*}
+\laplaceTransform\left\{y'\right\}
+=
+s \laplaceTransform\left\{y\right\} - y(0)
+&&
+\text{and}
+&&
+\laplaceTransform\left\{y''\right\}
+=
+s^{2} \laplaceTransform\left\{y\right\} - s y(0) - y'(0).
+\end{align*}
+\fontHint{After computing $\laplaceTransform\left\{y'\right\}$, use recursion to deduce $\laplaceTransform\left\{y''\right\}$.}
+\end{enumerate}
+
+\spaceSolution{6in}{% Begin solution.
+We use the definition of the laplace transform, followed by integration by parts with
+\begin{align*}
+u
+=
+e^{-s t}
+&&
+\Leftrightarrow
+&&
+\intd u
+=
+-s e^{-s t} \spaceIntd \intd t,
+&&
+\intd v
+=
+y' \spaceIntd \intd t
+&&
+\Leftrightarrow
+&&
+v
+=
+y.
+\end{align*}
+(Note that we make these choices $u$ and $\intd v$ so that we integrate $y'$ to get $y$, which is what we want in the laplace transform at the end.) This gives
+\begin{align*}
+\laplaceTransform\left\{y'\right\}
+&=
+\int_{0}^{+\infty} e^{-s t} y' \spaceIntd \intd t
+=
+\left[e^{-s t} y(t)\right]_{t = 0}^{t = +\infty} + s \int_{0}^{+\infty} e^{-s t} y \spaceIntd \intd t
+\\
+&=
+\left[\left(\lim_{t \uparrow +\infty} e^{-s t} y(t)\right) - y(0)\right] + s \int_{0}^{+\infty} e^{-s t} y \spaceIntd \intd t.
+\end{align*}
+The hypothesis that $y$ is ``suitable'' implies that $y(t)$ does not grow faster than an exponential function, so the limit in the square brackets equals $0$. The integral in the second term is, by definition, the laplace transform of $y$. Thus we conclude that
+\begin{align}
+\laplaceTransform\left\{y'\right\}
+=
+-y(0) + s \laplaceTransform\left\{y\right\}.%
+\label{eq : Laplace Transform y'}
+\end{align}
+
+Viewing $y''$ as $(y')'$, we use our result \eqref{eq : Laplace Transform y'} and recursion to compute
+\begin{align*}
+\laplaceTransform\left\{y''\right\}
+=
+-y'(0) + s \laplaceTransform\left\{y'\right\}
+=
+-y'(0) + s \left(-y(0) + s \laplaceTransform\left\{y\right\}\right)
+=
+-y'(0) - s y(0) + s^{2} \laplaceTransform\left\{y\right\}.
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q6f} (6 pt) Use the laplace transform to solve the IVP \eqref{eq : E4Q6 ODE}, thus verifying your solution in part \ref{itm : E4Q6d}. Part \ref{itm : E4Q6e}, and the following transform--inverse-transform pairs, may be useful:
+\begin{align*}
+\begin{array}{r c l c c r c l c}
+\laplaceTransform\left\{t^{n}\right\}
+&
+=
+&
+\displaystyle\frac{n!}{s^{n + 1}},
+&
+s > 0;
+&
+\hspace{.1in}
+&
+\laplaceTransform\left\{e^{a t}\right\}
+&
+=
+&
+\displaystyle\frac{1}{s - a},
+&
+s > a;
+\\
+\\
+\laplaceTransform\left\{t^{n} e^{a t}\right\}
+&
+=
+&
+\displaystyle\frac{n!}{(s - a)^{n + 1}},
+&
+s > a;
+&
+\hspace{.1in}
+&
+&
+&
+&
+\\
+\\
+\laplaceTransform\left\{e^{a t} \cos(b t)\right\}
+&
+=
+&
+\displaystyle\frac{s - a}{(s - a)^{2} + b^{2}},
+&
+s > a;
+&
+\hspace{.1in}
+&
+\laplaceTransform\left\{e^{a t} \sin(b t)\right\}
+&
+=
+&
+\displaystyle\frac{b}{(s - a)^{2} + b^{2}},
+&
+s > a.
+\end{array}
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Applying the laplace transform to both sides of the ODE \eqref{eq : E4Q6 ODE}, using linearity and our results from part \ref{itm : E4Q6e}, we get
+\begin{align*}
+0
+&=
+\laplaceTransform\left\{0\right\}
+=
+\laplaceTransform\left\{y'' - 3 y' + 2 y\right\}
+=
+\laplaceTransform\left\{y''\right\} - 3 \laplaceTransform\left\{y'\right\} + 2 \laplaceTransform\left\{y\right\}
+\\
+&=
+\left(s^{2} \laplaceTransform\left\{y\right\} - s y(0) - y'(0)\right) - 3 \left(s \laplaceTransform\left\{y\right\} - y(0)\right) + 2 \laplaceTransform\left\{y\right\}
+\\
+&=
+\left(s^{2} - 3 s + 2\right) \laplaceTransform\left\{y\right\}  + (-s + 3) y(0) - y'(0).
+\end{align*}
+Solving for $\laplaceTransform\left\{y\right\}$ and applying the initial conditions, we get
+\begin{align*}
+\laplaceTransform\left\{y\right\}
+=
+\frac{2 s + 1}{s^{2} - 3 s + 2}.
+\end{align*}
+To set us up to find the inverse laplace transform, we decompose the fraction on the right, using partial fraction decomposition:
+\begin{align*}
+\frac{2 s + 1}{s^{2} - 3 s + 2}
+=
+\frac{A}{s - 1} + \frac{B}{s - 2}
+&&
+\Leftrightarrow
+&&
+2 s + 1
+=
+(s - 2) A + (s - 1) B.
+\end{align*}
+Evaluating this equation at (at least) two different values of $s$, and solving the resulting system of (linear) equations, we get
+\begin{align*}
+s = 1
+:
+\quad
+3
+=
+-A
+\Leftrightarrow
+A
+=
+-3;
+&&
+s = 2
+:
+\quad
+5
+=
+B
+\Leftrightarrow
+B
+=
+5.
+\end{align*}
+Thus
+\begin{align*}
+\laplaceTransform\left\{y\right\}
+=
+\frac{-3}{s - 1} + \frac{5}{s - 2}.
+\end{align*}
+Taking the inverse laplace transform of both sides, using its linearity, and using the given transform--inverse-transform pairs, we find
+\begin{align*}
+y
+&=
+\laplaceTransform^{-1}\left\{\laplaceTransform\left\{y\right\}\right\}
+=
+\laplaceTransform^{-1}\left\{\frac{-3}{s - 1} + \frac{5}{s - 2}\right\}
+\\
+&=
+-3 \laplaceTransform^{-1}\left\{\frac{1}{s - 1}\right\} + 5 \laplaceTransform^{-1}\left\{\frac{1}{s - 2}\right\}
+\\
+&=
+-3 e^{t} + 5 e^{2 t}.
+\end{align*}
+Note that this agrees with the solution $y(t)$ that we obtained by solving the 1st-order linear system in part \ref{itm : E4Q6d}. It also agrees with the result we obtain from taking the roots $\lambda$ of the characteristic polynomial of the original 2nd-order ODE as the building blocks $e^{\lambda t}$ of the general solution.}% End solution.
+
+
+
+\newpage
+
+
+
+
+
+%
+%
+%   Exercise 8
+%
+%
+
+% Theme : Matrix exponential
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q8}}
+\label{sec : Math211 Summer2019 Exam4 Q8}
+
+(14 pt) Consider the homogeneous 1st-order $2 \times 2$ linear system of ODEs
+\begin{align}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+5	&	-6	\\
+3	&	-4
+\end{bmatrix}%
+\fontMatrix{x}
+,%
+\label{eq : E4Q8 ODE}
+\end{align}
+where $\fontMatrix{x} = \transpose{\begin{bmatrix}x_{1}(t)&x_{2}(t)\end{bmatrix}}$. Let $\fontMatrix{A}$ denote the $2 \times 2$ coefficient matrix.
+
+% WolframAlpha code :
+% {{2,1},{1,1}}{{2,0},{0,-1}}{{2,1},{1,1}}^(-1)
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E4Q8a} (4 pt) Find the eigenvalues of $\fontMatrix{A}$, and specify their corresponding eigenspaces.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+The eigenvalues of $\fontMatrix{A}$ can be found by solving
+\begin{align*}
+0
+\seteq
+\det(\lambda \fontMatrix{I} - \fontMatrix{A})
+=
+\det
+\begin{bmatrix}%
+\lambda - 5	&	6			\\
+-3			&	\lambda + 4
+\end{bmatrix}%
+=
+\lambda^{2} - \lambda - 2
+=
+(\lambda + 1) (\lambda - 2),
+\end{align*}
+so
+\begin{align*}
+\lambda
+\in
+\left\{-1,2\right\}.
+\end{align*}
+For each eigenvalue, we find the corresponding eigenspace by solving
+\begin{align*}
+\fontMatrix{0}
+\seteq
+(\lambda \fontMatrix{I} - \fontMatrix{A}) \fontMatrix{v}.
+\end{align*}
+For $\lambda = -1$, we have
+\begin{align*}
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-6	&	6	\\
+-3	&	3
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Rightarrow
+&&
+\eigenspace(\fontMatrix{A},-1)
+=
+\Span\left\{
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+For $\lambda = 2$, we have
+\begin{align*}
+\begin{bmatrix}%
+0	\\
+0
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-3	&	6	\\
+-3	&	6
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Rightarrow
+&&
+\eigenspace(\fontMatrix{A},2)
+=
+\Span\left\{
+\begin{bmatrix}%
+2	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+We can check these results by computing $\fontMatrix{A} \fontMatrix{v}_{\lambda} = \lambda \fontMatrix{v}$, for the eigenvalue--eigenvector pairs $(\lambda,\fontMatrix{v}_{\lambda})$ we found.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q8b} (2 pt) Write the general solution to the ODE \eqref{eq : E4Q8 ODE}.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Because, for each eigenvalue $\lambda$, its algebraic multiplicity (i.e. the number of times $\lambda$ appears as a root to the characteristic polynomial $p(\lambda)$) equals its geometric multiplicity (i.e. the dimension of the eigenspace $\eigenspace(\fontMatrix{A},\lambda)$), the general solution $\fontMatrix{x}(t)$ to the homogeneous ODE \eqref{eq : E4Q8 ODE} is a linear combination of terms $e^{\lambda t} \fontMatrix{v}$, for linearly independent eigenvectors $\fontMatrix{v}$:
+\begin{align*}
+\fontMatrix{x}(t)
+=
+c_{1} e^{-t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
++
+c_{2} e^{2 t}
+\begin{bmatrix}%
+2	\\
+1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q8c} (2 pt) Use our results from part \ref{itm : E4Q8a} to diagonalize the matrix $\fontMatrix{A}$, i.e. to write it in the form
+\begin{align*}
+\fontMatrix{A}
+=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1},
+\end{align*}
+where $\fontMatrix{D}$ is a diagonal matrix. Specify $\fontMatrix{P}$ explicitly. (You may write $\fontMatrix{P}^{-1}$ as the $2 \times 2$ matrix $\fontMatrix{P}$ followed by the superscript $-1$ inverse symbol.)
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+When an $n \times n$ matrix $\fontMatrix{A}$ has a set of $n$ linearly independent eigenvectors, we may diagonalize $\fontMatrix{A}$ by taking these $n$ eigenvectors as the columns of the matrix $\fontMatrix{P}$, and the corresponding eigenvalues as the diagonal entries of the diagonal matrix $\fontMatrix{D}$. Doing so here, we get
+\begin{align*}
+\fontMatrix{A}
+=
+\begin{bmatrix}%
+1	&	2	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+-1	&	0	\\
+0	&	2
+\end{bmatrix}%
+\begin{bmatrix}%
+1	&	2	\\
+1	&	1
+\end{bmatrix}%
+^{-1}.
+\end{align*}
+N.B. If desired, we may compute $\fontMatrix{P}^{-1}$ explicitly, e.g., by applying the row reduction algorithm to $\left[\begin{array}{c;{2pt/2pt}c}\fontMatrix{P}&\fontMatrix{I}\end{array}\right]$ to get $\left[\begin{array}{c;{2pt/2pt}c}\fontMatrix{I}&\fontMatrix{P}^{-1}\end{array}\right]$. Doing so, we find
+\begin{align*}
+\fontMatrix{P}^{-1}
+=
+\begin{bmatrix}%
+-1	&	2	\\
+1	&	-1
+\end{bmatrix}%
+.
+\end{align*}
+We can then do the matrix multiplication to confirm that $\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} = \fontMatrix{A}$.}% End solution.
+
+% WolframAlpha code :
+% {{1,2},{1,1}}{{-1,0},{0,2}}{{-1,2},{1,-1}}
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q8d} (4 pt) Compute the matrix exponential function $e^{t \fontMatrix{A}}$. Leave your answer in the form of a product of three matrices, the middle matrix a function of $t$. \fontHint{Recall that, by definition,
+\begin{align*}
+e^{t \fontMatrix{A}}
+=
+\sum_{n = 0}^{\infty} \frac{1}{n!} t^{n} \fontMatrix{A}^{n}.
+\end{align*}
+Use part \ref{itm : E4Q8c} to make this computable.}
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Plugging the decomposition $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$ into the definition of the matrix exponential function, we get
+\begin{align*}
+e^{t \fontMatrix{A}}
+=
+e^{t \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}}
+=
+\sum_{n = 0}^{\infty} \frac{1}{n!} t^{n} (\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1})^{n}
+=
+\fontMatrix{P} \left(\sum_{n = 0}^{\infty} \frac{1}{n!} t^{n} \fontMatrix{D}^{n}\right) \fontMatrix{P}^{-1}
+=
+\fontMatrix{P} e^{t \fontMatrix{D}} \fontMatrix{P}^{-1}.
+\end{align*}
+Using (1) the diagonalization of $\fontMatrix{A}$ from part \ref{itm : E4Q8c}, and (2) the fact that for a diagonal matrix $\fontMatrix{D}$ with diagonal entries $d_{i}$, the matrix exponential function $e^{t \fontMatrix{D}}$ is the diagonal matrix with diagonal entries $e^{d_{i} t}$, we compute
+\begin{align}
+e^{t \fontMatrix{A}}
+=
+e^{t \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}}
+=
+\fontMatrix{P} e^{t \fontMatrix{D}} \fontMatrix{P}^{-1}
+=
+\begin{bmatrix}%
+1	&	2	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+e^{-t}	&	0		\\
+0	&	e^{2 t}
+\end{bmatrix}%
+\fontMatrix{P}^{-1}.%
+\label{eq : E4Q8d Matrix Exponential Function}
+\end{align}}% End solution.
+
+
+
+\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E4Q8e} (2 pt) Let $\fontMatrix{c} = \transpose{\begin{bmatrix}c_{1}&c_{2}\end{bmatrix}}$ be a $2 \times 1$ matrix of constants $c_{1},c_{2} \in \reals$. Using our result from part \ref{itm : E4Q8d}, compute the product
+\begin{align*}
+e^{t \fontMatrix{A}} \fontMatrix{P} \fontMatrix{c}.
+\end{align*}
+How does this compare with our answer in part \ref{itm : E4Q8b}? Comment briefly. \fontHint{Note that for any $2 \times 1$ matrix $\fontMatrix{c} \in \reals^{2}$, $\fontMatrix{P} \fontMatrix{c}$ is again a $2 \times 1$ matrix in $\reals^{2}$. Also note that, by construction, $\fontMatrix{P}$ is invertible.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Using our result \eqref{eq : E4Q8d Matrix Exponential Function} from part \ref{itm : E4Q8e}, we compute
+\begin{align*}
+e^{t \fontMatrix{A}} \fontMatrix{P} \fontMatrix{c}
+&=
+\begin{bmatrix}%
+1	&	2	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+e^{-t}	&	0		\\
+0	&	e^{2 t}
+\end{bmatrix}%
+\fontMatrix{P}^{-1} \fontMatrix{P} \fontMatrix{c}
+\\
+&=
+\begin{bmatrix}%
+1	&	2	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+e^{-t}	&	0		\\
+0	&	e^{2 t}
+\end{bmatrix}%
+\begin{bmatrix}%
+c_{1}	\\
+c_{2}
+\end{bmatrix}%
+\\
+&=
+c_{1} e^{-t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
++
+c_{2} e^{2 t}
+\begin{bmatrix}%
+2	\\
+1
+\end{bmatrix}%
+,
+\end{align*}
+where in the second equality, we use that $\fontMatrix{P}^{-1} \fontMatrix{P} = \fontMatrix{I}$; and in the third equality, we do the matrix multiplication, treating the columns of the first matrix $\fontMatrix{P}$ as ``indivisible'' columns.% Begin footnote.
+\footnote{In this last step, for the purpose of facilitating computation, it can be helpful to denote column $i$ as simply $\fontMatrix{v}_{i}$. Note that the matrices in the matrix product $e^{t \fontMatrix{A}} \fontMatrix{P} \fontMatrix{c}$ have orders (size) $2 \times 2$, $2 \times 2$, and $2 \times 1$, so our result should be a $2 \times 1$ matrix.} % End footnote.
+This is exactly the general solution we built in part \ref{itm : E4Q8b}. 
+
+\begin{remark}
+This exercise illustrates the connection between (1) building the general solution from eigenvalues and (generalized) eigenvectors, and (2) computing the matrix exponential. All of the information in procedure (1) is contained in the matrix exponential function. Stated differently, procedure (1) gives an indirect way to compute the matrix exponential function.
+
+With our knowledge of linear algebra and differential equations, we could embark on a more complete study of the \href{https://en.wikipedia.org/wiki/Matrix\_exponential}{matrix exponential}, which would lead us to study the \href{https://en.wikipedia.org/wiki/Jordan\_normal\_form}{jordan canonical form} of a square matrix, and manipulations of \href{https://en.wikipedia.org/wiki/Power\_series}{power series}. An understanding of these concepts would enable us to solve any homogeneous 1st-order linear system of ODEs, without the need to memorize or look up formulas for what to do in the case of repeated eigenvalues (and insufficient sets of linearly independent eigenvectors).
+\end{remark}}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 9
+%
+%
+
+% Theme : Homogeneous 1st-order linear system of ODEs with complex eigenvalues.
+
+% WolframAlpha code :
+% {{1,1},{2-i,2+i}}{{-1+i,0},{0,-1-i}}{{1,1},{2-i,2+i}}^(-1)
+% eigenvalues {{1,-1},{5,-3}}
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q9}}
+\label{sec : Math211 Summer2019 Exam4 Q9}
+
+(10 pt) Find the general real solution to the homogeneous 1st-order linear system of ODEs
+\begin{align}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+1	&	-1	\\
+5	&	-3
+\end{bmatrix}%
+\fontMatrix{x}.%
+\label{eq : E4Q9 ODE}
+\end{align}
+
+
+
+\spaceSolution{6in}{% Begin solution.
+Let $\fontMatrix{A}$ denote the $2 \times 2$ coefficient matrix. Its eigenvalues solve
+\begin{align*}
+0
+\seteq
+\det(\lambda \fontMatrix{I} - \fontMatrix{A})
+=
+\det
+\begin{bmatrix}%
+\lambda - 1	&	1			\\
+-5			&	\lambda + 3
+\end{bmatrix}%
+=
+\lambda^{2} + 2 \lambda + 2,
+\end{align*}
+so
+\begin{align*}
+\lambda
+=
+\frac{-2 \pm{} \sqrt{2^{2} - 4 (1) (2)}}{2}
+=
+-1 \pm{} i.
+\end{align*}
+To compute the real solutions of a homogeneous 1st-order $2 \times 2$ linear system, it suffices to decompose one complex solution $e^{\lambda} \fontMatrix{v}$ into real and complex parts, and take these parts as our basis. Taking $\lambda_{+} = -1 + i$, we find the corresponding eigenspace:
+\begin{align*}
+\fontMatrix{0}
+=
+(\lambda_{+} \fontMatrix{I} - \fontMatrix{A}) \fontMatrix{v}_{+}
+=
+\begin{bmatrix}%
+-2 + i	&	1	\\
+-5	&	2 + i
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+.
+\end{align*}
+To solve this, we could apply the row reduction algorithm to the corresponding augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}\lambda_{+} \fontMatrix{I} - \fontMatrix{A}&\fontMatrix{0}\end{array}\right]$, or we can try to spot one solution and take its $\complexes$-span. If we were to row-reduce, we expect to get a bottom row of all $0$s (this corresponds to the eigenspace having dimension at least $1$); looking at the second column of the matrix $\lambda_{+} \fontMatrix{I} - \fontMatrix{A}$, we see this would require us to multiply row 1 by $2 + i$ (to get the entries in column 2 to cancel, when we take $R2 = R2 - (2 + i) R1$). One quickly checks that this makes both entries in row 2 equal to $0$. So the coefficients of any $\complexes$-linear combination of the entries in row 1 that yields zero give the coordinates of an eigenvector $\fontMatrix{v}_{+}$ associated to the eigenvalue $\lambda_{+}$. For example,
+\begin{align*}
+(-1) (-2 + i) + (-2 + i) (1)
+=
+0,
+\end{align*}
+so one eigenvector is
+\begin{align*}
+\fontMatrix{v}_{+}
+=
+\begin{bmatrix}%
+-1	\\
+-2 + i
+\end{bmatrix}%
+.
+\end{align*}
+Combining these pieces, we get a ($\complexes$-valued) solution
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+=
+e^{\lambda_{+} t} \fontMatrix{v}_{+}
+=
+e^{(-1 + i) t}
+\begin{bmatrix}%
+-1	\\
+-2 + i
+\end{bmatrix}%
+.
+\end{align*}
+Using euler's formula
+\begin{align*}
+e^{i \theta}
+=
+\cos \theta + i \sin \theta,
+\end{align*}
+we decompose this solution into real and imaginary parts:
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+&=
+e^{-t} e^{i t}
+\begin{bmatrix}%
+-1	\\
+-2 + i
+\end{bmatrix}%
+=
+e^{-t} \left(\cos t + i \sin t\right)
+\begin{bmatrix}%
+-1	\\
+-2 + i
+\end{bmatrix}%
+\\
+&=
+e^{-t}
+\begin{bmatrix}%
+(-1) (\cos t + i \sin t)		\\
+(-2 + i) (\cos t + i \sin t)
+\end{bmatrix}%
+\\
+&=
+e^{-t}
+\begin{bmatrix}%
+-\cos t	\\
+-2 \cos t - \sin t
+\end{bmatrix}%
++ i 
+e^{-t}
+\begin{bmatrix}%
+-\sin t		\\
+\cos t - 2 \sin t
+\end{bmatrix}%
+,
+\end{align*}
+so we may take as our basis of the solution space the two vectors
+\begin{align*}
+\fontMatrix{x}_{\realPart}(t)
+=
+e^{-t}
+\begin{bmatrix}%
+\cos t	\\
+2 \cos t + \sin t
+\end{bmatrix}%
+,
+&&
+\fontMatrix{x}_{\imaginaryPart}(t)
+=
+e^{-t}
+\begin{bmatrix}%
+-\sin t		\\
+\cos t - 2 \sin t
+\end{bmatrix}%
+,
+\end{align*}
+where for $\fontMatrix{x}_{\realPart}(t)$ we have factored a scalar $-1$ out of its corresponding $2 \times 1$ matrix and then ignored it.% Begin footnote.
+\footnote{We can do this because, if $(v_{1},\ldots,v_{n})$ is a basis for a vector space $V$ over a field $k$, then for any nonzero scalars $c_{i} \in k$, $(c_{1} v_{1},\ldots,c_{n} v_{n})$ is also a basis for $V$. (You can prove this! Show that the ``new'' set of vectors $c_{i} v_{i}$ both spans $V$ and is linearly independent, given that the ``old'' set of vectors $v_{i}$ has these properties.)} % End footnote.
+The general real solution is their $\reals$-linear combination, i.e.
+\begin{align*}
+\fontMatrix{x}(t)
+=
+c_{1} \fontMatrix{x}_{\realPart}(t) + c_{2} \fontMatrix{x}_{\imaginaryPart}(t)
+=
+c_{1} e^{-t}
+\begin{bmatrix}%
+\cos t	\\
+2 \cos t + \sin t
+\end{bmatrix}%
++
+c_{2} e^{-t}
+\begin{bmatrix}%
+-\sin t		\\
+\cos t - 2 \sin t
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$.
+
+One can check that this $\fontMatrix{x}(t)$ is indeed a solution to the original ODE \eqref{eq : E4Q9 ODE}, by plugging it in and doing the (tedious but routine) derivative and matrix multiplication computations. One can also check that its building blocks $\fontMatrix{x}_{\realPart}(t)$ and $\fontMatrix{x}_{\imaginaryPart}(t)$ are linearly independent, e.g., by computing their wronskian, or by evaluating them at two (or more) points and checking linear independence from the definition. Because the original ODE \eqref{eq : E4Q9 ODE} is a 1st-order $2 \times 2$ linear system, its solution space has dimension $2$; and we have found $2$ linearly independent solutions, $\fontMatrix{x}_{\realPart}(t)$ and $\fontMatrix{x}_{\imaginaryPart}(t)$, so they form a basis, and their linear combination gives the general solution: the general $\reals$ solution if we take their $\reals$-linear combination, and the general $\complexes$ solution if we take their $\complexes$-linear combination.}% End solution.
+
+
+
+\newpage
+
+
+
+%
+%
+%   Exercise 7
+%
+%
+
+% Theme : Linearity three-parter, in 1st-order system; same linear operator in all parts, (a) and (b) have different forcing functions, (c) is linear combination
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam4 Q7}}
+\label{sec : Math211 Summer2019 Exam4 Q7}
+
+(7 pt) Find the general solution to the nonhomogeneous 1st-order $2 \times 2$ linear system of ODEs
+\begin{align}
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}%
+5	&	2	\\
+-6	&	-2
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
++
+\begin{bmatrix}%
+-6 e^{3 t}	\\
+8 e^{3 t}
+\end{bmatrix}%
+.%
+\label{eq : E4Q7 ODE}
+\end{align}
+
+
+
+\spaceSolution{5in}{% Begin solution.
+The system is linear, so let's use linearity to write the general solution $\fontMatrix{x}(t)$ to the nonhomogeneous equation as
+\begin{align*}
+\fontMatrix{x}(t)
+=
+\fontMatrix{x}_{h}(t) + \fontMatrix{x}_{p}(t),
+\end{align*}
+where $\fontMatrix{x}_{h}(t)$ is the general solution to the corresponding homogeneous equation, and $\fontMatrix{x}_{p}$ is a particular solution to the nonhomogeneous equation. Let $\fontMatrix{A}$ denote the $2 \times 2$ coefficient matrix.
+
+We start by solving the corresponding homogeneous equation. The eigenvalues of $\fontMatrix{A}$ solve
+\begin{align*}
+0
+\seteq
+\det(\lambda \fontMatrix{I} - \fontMatrix{A})
+=
+\det
+\begin{bmatrix}%
+\lambda - 5	&	-2			\\
+6			&	\lambda + 2
+\end{bmatrix}%
+=
+\lambda^{2} - 3 \lambda + 2
+=
+(\lambda - 1) (\lambda - 2),
+\end{align*}
+so
+\begin{align*}
+\lambda
+\in
+\{1,2\}.
+\end{align*}
+The corresponding eigenspaces are, for $\lambda = 1$,
+\begin{align*}
+\fontMatrix{0}
+\seteq
+((1) \fontMatrix{I} - \fontMatrix{A}) \fontMatrix{v}
+=
+\begin{bmatrix}%
+-4	&	-2	\\
+6	&	3
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Rightarrow
+&&
+\eigenspace(\fontMatrix{A},1)
+=
+\Span\left\{
+\begin{bmatrix}%
+1	\\
+-2
+\end{bmatrix}%
+\right\},
+\end{align*}
+and for $\lambda = 2$,
+\begin{align*}
+\fontMatrix{0}
+\seteq
+((2) \fontMatrix{I} - \fontMatrix{A}) \fontMatrix{v}
+=
+\begin{bmatrix}%
+-3	&	-2	\\
+6	&	4
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+&&
+\Rightarrow
+&&
+\eigenspace(\fontMatrix{A},1)
+=
+\Span\left\{
+\begin{bmatrix}%
+2	\\
+-3
+\end{bmatrix}%
+\right\}.
+\end{align*}
+We may choose any (nonzero) eigenvectors from these eigenspaces to build the general solution to the corresponding homogeneous equation:
+\begin{align*}
+\fontMatrix{x}_{h}(t)
+=
+c_{1} e^{t}
+\begin{bmatrix}%
+1	\\
+-2
+\end{bmatrix}%
++
+c_{2} e^{2 t}
+\begin{bmatrix}%
+2	\\
+-3
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$.
+
+Next we find a particular solution. Let's use the method of undetermined coefficients. Given the form of the nonhomogeneous term --- the entries involve scalar multiples of $e^{3 t}$ --- we guess a particular solution of the form
+\begin{align*}
+\fontMatrix{x}_{p}(t)
+=
+\begin{bmatrix}%
+a_{1} e^{3 t}	\\
+a_{2} e^{3 t}
+\end{bmatrix}%
+.
+\end{align*}
+Plugging this guess into the original ODE \eqref{eq : E4Q7 ODE}, we solve for the values of the undetermined coefficients $a_{1},a_{2}$ that make the ODE true (and therefore make $\fontMatrix{x}_{p}(t)$ a solution):
+\begin{align*}
+\begin{bmatrix}%
+3 a_{1} e^{3 t}	\\
+3 a_{2} e^{3 t}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+5	&	2	\\
+-6	&	-2
+\end{bmatrix}%
+\begin{bmatrix}%
+a_{1} e^{3 t}	\\
+a_{2} e^{3 t}
+\end{bmatrix}%
++
+\begin{bmatrix}%
+-6 e^{3 t}	\\
+8 e^{3 t}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+(5 a_{1} + 2 a_{2} - 6) e^{3 t}	\\
+(-6 a_{1} - 2 a_{2} + 8) e^{3 t}
+\end{bmatrix}%
+.
+\end{align*}
+If desired, we may rewrite this as
+\begin{align*}
+e^{3 t}
+\begin{bmatrix}%
+3 a_{1}	\\
+3 a_{2}
+\end{bmatrix}%
+=
+e^{3 t}
+\begin{bmatrix}%
+5 a_{1} + 2 a_{2} - 6	\\
+-6 a_{1} - 2 a_{2} + 8
+\end{bmatrix}%
+.
+\end{align*}
+Also if desired, we may divide both sides by the scalar-valued function $e^{3 t}$, which is not the zero function, giving
+\begin{align*}
+\begin{bmatrix}%
+3 a_{1}	\\
+3 a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+5 a_{1} + 2 a_{2} - 6	\\
+-6 a_{1} - 2 a_{2} + 8
+\end{bmatrix}%
+.
+\end{align*}
+Two matrices are equal if and only if corresponding entries are equal. This gives us the system of equations
+\begin{align*}
+3 a_{1}
+&=
+5 a_{1} + 2 a_{2} - 6
+\\
+3 a_{2}
+&=
+-6 a_{1} - 2 a_{2} + 8.
+\end{align*}
+Moving all terms involving the unknowns $a_{1},a_{2}$ to the left, and all other terms to the right, we get
+\begin{align*}
+-2 a_{1} - 2 a_{2}
+&=
+-6
+\\
+6 a_{1} + 5 a_{2}
+&=
+8.
+\end{align*}
+Writing the corresponding augmented matrix, and applying the row reduction algorithm, we obtain
+\begin{align*}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+-2	&	-2	&	-6	\\
+6	&	5	&	8
+\end{array}
+\right]
+\xrightarrow{\text{RRA}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	0	&	-7	\\
+0	&	1	&	10
+\end{array}
+\right].
+\end{align*}
+Thus a particular solution to \eqref{eq : E4Q7 ODE} is
+\begin{align*}
+\fontMatrix{x}_{p}(t)
+=
+\begin{bmatrix}%
+-7 e^{3 t}	\\
+10 e^{3 t}
+\end{bmatrix}%
+=
+e^{3 t}
+\begin{bmatrix}%
+-7	\\
+10
+\end{bmatrix}%
+.
+\end{align*}
+One can check that this $\fontMatrix{x}_{p}(t)$ is indeed a solution, by plugging it in.
+
+By linearity, we conclude that the general solution to the nonhomogeneous equation \eqref{eq : E4Q7 ODE} is
+\begin{align*}
+\fontMatrix{x}(t)
+=
+\fontMatrix{x}_{h}(t) + \fontMatrix{x}_{p}(t)
+=
+c_{1} e^{t}
+\begin{bmatrix}%
+1	\\
+-2
+\end{bmatrix}%
++
+c_{2} e^{2 t}
+\begin{bmatrix}%
+2	\\
+-3
+\end{bmatrix}%
++
+e^{3 t}
+\begin{bmatrix}%
+-7	\\
+10
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+% WolframAlpha code :
+% row reduce {{-2,-2,-6},{6,5,8}}
+
+
+
+%(9 pt) Consider the 1st-order $2 \times 2$ linear system of ODEs
+%\begin{align}
+%\fontMatrix{x}'
+%=
+%\fontMatrix{A} \fontMatrix{x} + \fontMatrix{f},%
+%\label{eq : E4Q7 ODE}
+%\end{align}
+%where
+%\begin{align*}
+%\fontMatrix{x}
+%=
+%\begin{bmatrix}%
+%x_{1}(t)	\\
+%x_{2}(t)
+%\end{bmatrix}%
+%,
+%&&
+%\fontMatrix{A}
+%=
+%\begin{bmatrix}%
+%5	&	2	\\
+%-6	&	-2
+%\end{bmatrix}%
+%,
+%\end{align*}
+%and $\fontMatrix{f}$ is some $2 \times 1$ matrix of continuous functions of $t$.
+%
+%% WolframAlpha code :
+%% {{1,-2},{-2,3}}{{1,0},{0,2}}{{1,-2},{-2,3}}^(-1)
+%
+%
+%
+%\begin{enumerate}[label=(\alph*)]
+%\item\label{itm : E4Q7b} (3 pt) Let
+%\begin{align*}
+%\fontMatrix{f}_{1}
+%=
+%\begin{bmatrix}
+%-6 e^{3 t}	\\
+%8 e^{3 t}
+%\end{bmatrix}.
+%\end{align*}
+%Find a particular solution $\fontMatrix{x}_{1,p}$ to
+%\begin{align*}
+%\fontMatrix{x}'
+%=
+%\fontMatrix{A} \fontMatrix{x} + \fontMatrix{f}_{1}.
+%\end{align*}
+%\end{enumerate}
+%
+%\spaceSolution{5in}{% Begin solution.
+%}% End solution.
+%
+%
+%
+%\newpage
+%
+%
+
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : E4Q7c} (pt) Let
+%\begin{align*}
+%\fontMatrix{f}_{2}
+%=
+%\begin{bmatrix}
+%-\cos(2 t)	\\
+%3 \sin (2 t)
+%\end{bmatrix}.
+%\end{align*}
+%Find a particular solution $\fontMatrix{x}_{2,p}$ to
+%\begin{align*}
+%\fontMatrix{x}'
+%=
+%\fontMatrix{A} \fontMatrix{x} + \fontMatrix{f}_{2}.
+%\end{align*}
+%Leave your answer in terms of undetermined coefficients or a matrix integral. In the case of undetermined coefficients, give the augmented matrix of a corresponding matrix equation that we could solve to determine the values of those coefficients.
+%
+%\fontHint{If pressed for time, write something brief for this part, and return to it as time permits.}
+%\end{enumerate}
+%
+%% WolframAlpha code :
+%% row reduce {{-5,2,-2,0,a},{-2,-5,0,-2,0},{6,0,-2,2,0},{0,6,-2,-2,b}}
+%
+%\spaceSolution{1in}{% Begin solution.
+%}% End solution.
+%
+%
+%
+%\newpage
+%
+%
+%
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : E4Q7a} (4 pt) Find the general solution $\fontMatrix{x}_{h}$ to the corresponding homogeneous equation of \eqref{eq : E4Q7 ODE}.
+%\end{enumerate}
+%
+%\spaceSolution{3.5in}{% Begin solution.
+%}% End solution.
+%
+%
+%
+%\begin{enumerate}[resume,label=(\alph*)]
+%\item\label{itm : E4Q7c} (2 pt) Let
+%\begin{align*}
+%\fontMatrix{f}_{2}
+%=
+%\begin{bmatrix}
+%-\cos(2 t)	\\
+%3 \sin (2 t)
+%\end{bmatrix},
+%\end{align*}
+%and let $\fontMatrix{x}_{2,p}$ be a particular solution to
+%\begin{align*}
+%\fontMatrix{x}'
+%=
+%\fontMatrix{A} \fontMatrix{x} + \fontMatrix{f}_{2}.
+%\end{align*}
+%Find the general solution to the nonhomogeneous linear system of ODEs
+%\begin{align}
+%\fontMatrix{x}'
+%=
+%\fontMatrix{A} \fontMatrix{x} - \fontMatrix{f}_{1} + 6 \fontMatrix{f}_{2},%
+%\label{eq : E4Q7 Linear Combination ODE}
+%\end{align}
+%where $\fontMatrix{f}_{1}$ and $\fontMatrix{f}_{2}$ are as given in parts \ref{itm : E4Q7b} and \ref{itm : E4Q7c}, respectively. Write your answer in terms of the symbols $\fontMatrix{x}_{h}$, $\fontMatrix{x}_{1,p}$, and $\fontMatrix{x}_{2,p}$, and show that your answer indeed solves \eqref{eq : E4Q7 Linear Combination ODE}. \fontHint{You needn't do much computation for this part.}
+%\end{enumerate}
+%
+%\spaceSolution{2in}{% Begin solution.
+%}% End solution.
+
+
+
+
+
+\newpage
+
+%\noindent{}.
+%
+%\newpage
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_b}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_c}
+\\
+(1)	&	&	(2)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_d}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_a}
+\\
+(3)	&	&	(4)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_f}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_e}
+\\
+(5)	&	&	(6)
+\end{tabular}
+\caption{Phase planes for Exercise \ref{sec : Math211 Summer2019 Exam4 Q2}, in the $(x_{1},x_{2})$ plane.}
+\label{fig : Exam4 Phase Planes 1 Of 2}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_k}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_l}
+\\
+(7)	&	&	(8)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_j}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_i}
+\\
+(9)	&	&	(10)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_h}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Exam04_PhasePlane_g}
+\\
+(11)	&	&	(12)
+\end{tabular}
+\caption{Phase planes for Exercise \ref{sec : Math211 Summer2019 Exam4 Q2}, in the $(x_{1},x_{2})$ plane.}
+\label{fig : Exam4 Phase Planes 2 Of 2}
+\end{center}
+\end{figure}

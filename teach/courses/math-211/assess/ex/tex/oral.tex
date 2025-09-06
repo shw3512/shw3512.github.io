@@ -1,0 +1,610 @@
+%
+%
+%   Exercise
+%
+%   Linear algebra : Diagonalization and jordan canonical form
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral : JCF} : Diagonalization}
+\label{sec : Math211 Summer2019 ExamOral : JCF}
+
+Are all square matrices diagonalizable? Can we give an example of a $2 \times 2$ matrix that is not diagonalizable? Can we prove that this matrix is not diagonalizable?
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   Linearization
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral : Linearization} : Linearization}
+\label{sec : Math211 Summer2019 ExamOral : Linearization}
+
+Consider the general nonhomogeneous autonomous (i.e. no $t$ dependence) 1st-order nonlinear system of ODEs
+\begin{align*}
+x_{1}'(t)
+&=
+f_{1}(x_{1},x_{2})
+\\
+x_{2}'(t)
+&=
+f_{2}(x_{1},x_{2}).
+\end{align*}
+Write the 1st-order linear system that provides the best linear approximation to the nonlinear system at an equilibrium point (i.e. jacobian matrix).
+
+
+
+\subsection{What is linearization doing?}
+
+\paragraph{(BDH p 457)} Consider the nonlinear system
+\begin{align*}
+x_{1}'
+&=
+e^{x_{2}} - 1
+\\
+x_{2}'
+&=
+-x_{2} - \sin x_{1}.
+\end{align*}
+Show that $(0,0)$ is an equilibrium. Jacobian matrix
+\begin{align*}
+\fontMatrix{J}(x_{1},x_{2})
+=
+\begin{bmatrix}
+0			&	e^{x_{2}}	\\
+-\cos x_{1}	&	-1
+\end{bmatrix}
+\end{align*}
+At $(0,0)$:
+\begin{align*}
+\fontMatrix{J}(0,0)
+=
+\begin{bmatrix}
+0	&	1	\\
+-1	&	-1
+\end{bmatrix}
+\end{align*}
+Gives linear system
+\begin{align*}
+\fontMatrix{x}'
+=
+\fontMatrix{J}(0,0) \fontMatrix{x}
+=
+\begin{bmatrix}
+x_{2}			\\
+-x_{1} - x_{2}
+\end{bmatrix}
+\end{align*}
+
+Another approach : Write everything as a power series centered at $(0,0)$:
+\begin{align*}
+x_{1}'
+&=
+\left(1 + x_{2} + \frac{1}{2!} x_{2}^{2} + \ldots\right) - 1
+\\
+x_{2}'
+&=
+-x_{2} - \left(x_{1} - \frac{1}{3!} x_{1}^{3} + \ldots\right)
+\end{align*}
+Why do polynomials stay the same? (Polynomials are already (finite) power series. However, if we expand around a point other than $(0,0)$, they will change shape, not degree.) This simplifies to
+\begin{align*}
+x_{1}'
+&=
+x_{2} + \frac{1}{2!} x_{2}^{2} + \ldots
+\\
+x_{2}'
+&=
+-x_{2} - x_{1} + \frac{1}{3!} x_{1}^{3} - \ldots.
+\end{align*}
+When $(x_{1},x_{2})$ is close (but not equal) to $(0,0)$, the higher-order terms are much smaller than the linear ones. So the system behaves like the linear part:
+\begin{align*}
+x_{1}'
+&=
+x_{2}
+\\
+x_{2}'
+&=
+-x_{2} - x_{1}.
+\end{align*}
+Same as we get with jacobian matrix.
+
+\paragraph{(FHMW p 433)} Let $(a_{1},a_{2})$ be an equilibrium solution. What does this mean? (By definition of equilibrium, $x_{i}'(a_{1},a_{2}) = 0$, for $i = 1,2$.) Write both functions $x_{1},x_{2}$ as power series centered at $(a_{1},a_{2})$. Similar to single-variable Taylor series, just now multiple variables. General form
+\begin{align*}
+f_{i}(x_{1},x_{2})
+=
+f_{i}(a_{1},a_{2}) + (x_{1} - a_{1}) \frac{\partial f_{i}}{ \partial x_{1}}(a_{1},a_{2}) + (x_{2} - a_{2}) \frac{\partial f_{i}}{ \partial x_{2}}(a_{1},a_{2}) + R_{i}(x_{1},x_{2}),
+\end{align*}
+where the remainder term $R_{i}(x_{1},x_{2})$ is second-order, hence relatively small sufficiently close to the equilibrium. $(a_{1},a_{2})$ an equilibrium implies the first term $f_{i}(a_{1},a_{2}) = 0$, in both expansions. Staying sufficiently close to the equilibrium point $(a_{1},a_{2})$ makes the remainder term $R_{i}(x_{1},x_{2})$ arbitrarily small compared to the linear terms. 
+
+
+
+\subsection{Stability}
+
+(BDH p 464) Consider the nonlinear 1st-order system
+\begin{align*}
+x_{1}'(t)
+&=
+x_{2} + (x_{1}^{2} + x_{2}^{2}) x_{1}
+\\
+x_{2}'(t)
+&=
+-x_{1} + (x_{1}^{2} + x_{2}^{2}) x_{2}.
+\end{align*}
+Show that this system has an equilibrium at the origin, that the jacobian matrix $J(0,0)$ has eigenvalues $\pm{}i$, and thus this system describes a (stable) center, with trajectories circles centered at the origin. Claim : In the original nonlinear system, the origin is unstable, a spiral source. Why? View the system as describing a vector field, and decompose the vector field into two parts, the linear and nonlinear parts:
+\begin{align*}
+\fontMatrix{V}_{1}(x_{1},x_{2})
+=
+(-y,x),
+&&
+\fontMatrix{V}_{2}(x_{1},x_{2})
+=
+\left(\left(x_{1}^{2} + x_{2}^{2}\right) x_{1},\left(x_{1}^{2} + x_{2}^{2}\right) x_{2}\right).
+\end{align*}
+$\fontMatrix{V}_{1}$ corresponds to the linear system --- trajectories are circles centered at the origin. $\fontMatrix{V}_{2}$ always points away from the origin. Thus $\fontMatrix{V}_{1} + \fontMatrix{V}_{2}$ always has a positive radial component (explain ; sketch vector field). This will cause trajectories to spiral away from the equilibrium. Thus the origin is a spiral source (unstable), not a center (stable).
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   Linearity
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral : Linearity} : Linearity}
+\label{sec : Math211 Summer2019 ExamOral : Linearity}
+
+Consider the nonhomogeneous 1st-order $2 \times 2$ linear system of ODEs
+\begin{align}
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}%
+5	&	2	\\
+-6	&	-2
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
++
+\begin{bmatrix}%
+-10 e^{3 t} + \sin(2 t)	\\
+-\cos(2 t)
+\end{bmatrix}%
+.
+\label{eq : Oral Linearity ODE}
+\end{align}
+% WolframAlpha code :
+% {{1,-2},{-2,3}}{{1,0},{0,2}}{{1,-2},{-2,3}}^(-1)
+Find the general solution to the corresponding homogeneous equation. Describe a strategy to find a particular solution. (If using linearity, decompose nonhomogeneous ``$\fontMatrix{f}$'' matrix into two parts.) What is the idea behind this decomposition? What can we do with the parameter $\alpha$? (We can treat $\alpha$ as a scalar in the linear combination.) If using undetermined coefficients, give an augmented matrix for a system of equations that will give us the coefficients. Call the particular solutions to the subproblems $\fontMatrix{x}_{1,p}$ and $\fontMatrix{x}_{2,p}$. How to find the general solution to the nonhomogeneous linear system
+\begin{align}
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}%
+5	&	2	\\
+-6	&	-2
+\end{bmatrix}%
+\begin{bmatrix}%
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
++
+\begin{bmatrix}%
+5 e^{3 t} - 3 \sin(2 t)	\\
+3 \cos(2 t)
+\end{bmatrix}%
+.
+\end{align}
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   Phase planes
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral Phase Planes} : Phase planes}
+\label{sec : Math211 Summer2019 ExamOral Phase Planes}
+
+Sketch a particular vector field (phase plane). What is being represented? (How component functions move in phase space over time.) Can trajectories cross? Yes. (See FHMW p 413.) Illustrative example : Nonhomogeneous system. E.g.,
+\begin{align}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+1	&	1	\\
+4	&	1
+\end{bmatrix}%
+\fontMatrix{x}
++
+\begin{bmatrix}%
+t - 2		\\
+4 t - 1
+\end{bmatrix}%
+.%
+\label{eq : Oral Exam Phase Plane ODE 1}
+\end{align}
+In this case, direction of vector field changes with time. So trajectories passing through the same point $(x_{1},x_{2})$ at different times $t$ may point in different directions. Give explicit example : Consider the point $(x_{1},x_{2}) = (0,0)$:
+\begin{align*}
+t = 0
+\rightarrow
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-2	\\
+-1
+\end{bmatrix}%
+,
+&&
+t = 4
+\rightarrow
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+2	\\
+15
+\end{bmatrix}%
+.
+\end{align*}
+Make sense of following remarks (FHMW p 354):
+\begin{itemize}
+\item For a linear system of differential equations in $\reals^{n}$, trajectories do not cross in $(t,x_{1},\ldots,x_{n})$ space.
+\item For an autonomous linear system in $\reals^{n}$, trajectories do not cross in $(x_{1},\ldots,x_{n})$ space, either.
+\end{itemize}
+%What if original system of ODEs is autonomous (no $t$ dependence, except implicitly through $x_{i}(t)$)? Still cross, in the sense that trajectories can overlap perfectly, being at different points along the trajectory for a given value of $t$. E.g., the corresponding homogeneous equation to \eqref{eq : Oral Exam Phase Plane ODE 1} is
+%\begin{align*}
+%\fontMatrix{x}'
+%=
+%\begin{bmatrix}%
+%1	&	1	\\
+%4	&	1
+%\end{bmatrix}%
+%\fontMatrix{x}
+%,
+%\end{align*}
+%which has general solution
+%\begin{align*}
+%\fontMatrix{x}
+%=
+%c_{1} e^{3 t}
+%\begin{bmatrix}%
+%1	\\
+%2
+%\end{bmatrix}%
+%+
+%c_{2} e^{-t}
+%\begin{bmatrix}%
+%1	\\
+%-2
+%\end{bmatrix}%
+%.
+%\end{align*}
+%For any $t_{0} \in \reals$, the matrix of functions
+%\begin{align*}
+%\fontMatrix{x}
+%=
+%c_{1} e^{3 (t - t_{0})}
+%\begin{bmatrix}%
+%1	\\
+%2
+%\end{bmatrix}%
+%+
+%c_{2} e^{-(t - t_{0})}
+%\begin{bmatrix}%
+%1	\\
+%-2
+%\end{bmatrix}%
+%\end{align*}
+%also a solution (why? $e^{-\lambda t_{0}}$ is a constant, gets absorbed into $c_{i}$
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   Laplace transform
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral Laplace Transform} : Laplace transform}
+\label{sec : Math211 Summer2019 ExamOral Laplace Transform}
+
+State definition of laplace transform of a ``suitable'' function $f$. Claim : We can deduce transform--inverse-transform pairs for $0$, $1$, $e^{a t}$, and $\sin(b t)$ and $\cos(b t)$ from just
+\begin{align*}
+\laplaceTransform\left\{e^{a t} \cos(b t)\right\}
+&=
+\frac{s - a}{(s - a)^{2} + b^{2}},
+\qquad
+s > a;
+\\
+\laplaceTransform\left\{e^{a t} \sin(b t)\right\}
+&=
+\frac{b}{(s - a)^{2} + b^{2}},
+\qquad
+s > a.
+\end{align*}
+
+Work through Quiz 23Y : Solve the following IVP:
+\begin{align}
+y'' + y' + y
+=
+1,
+&&
+y(0)
+=
+0,
+&&
+y'(0)
+=
+0.%
+\label{eq : Quiz23 IVP}
+\end{align}
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   What is the kernel?
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral Kernel} : Kernel}
+\label{sec : Math211 Summer2019 ExamOral Kernel}
+
+Let $T : V \rightarrow W$ be a linear map. Give definition of kernel. So one interpretation : What gets sent to $\fontVector{0} \in W$. Another : Suppose $T(v) = w$. Then for any $v_{0} \in \ker T$, what can we say about $T(v + v_{0})$? (Also $w$.) So another interpretation : The space of our degree of freedom of adjusting input to a linear map and getting same output. Explain how this fits with linear ODEs? Linearity (``nonhomogeneous principle'') said if we had one particular solution to a linear ODE (more generally, any linear equation), then all particular solutions have form $x_{p} + x_{h}$. This $x_{h}$ had some parameters --- our degrees of freedom. $x_{p} + x_{h}$ still solution to same ODE as $x_{p}$ solved.
+
+
+
+
+
+%
+%
+%   Exercise
+%
+%   Fixed-point theorems
+%
+%
+
+\section{Exercise \ref{sec : Math211 Summer2019 ExamOral Fixed Point Theorems} : Fixed Point Theorems}
+\label{sec : Math211 Summer2019 ExamOral Fixed Point Theorems}
+
+Consider the sequence $\{ x_{n} \}_{n=1}^{\infty}$ in $\reals$ defined by
+\begin{align*}
+x_{1} = 0,
+&&
+x_{n+1} = 1 + \frac{5}{2 x_{n} + 1},
+\quad
+n \geq 1.
+\end{align*}
+Find $\lim_{n \rightarrow \infty} x_{n}$. (Think in terms of fixed points. Distinguish which using initial condition, monotonicity, etc.)
+
+
+
+
+
+\subsection{Solution}
+
+We present two solutions, which use the following results.\footnote{Note that Proposition \ref{prop: Contractive Implies Cauchy} is the generalized result of Exercise \ref{sec: F2013HW04Q04}.}% Prove?
+
+\begin{proposition}% Nice exercise: Give a counterexample showing the converse is false.
+\label{prop: Contractive Implies Cauchy}
+Let $(X,d)$ be a metric space, and let $\{ x_{n} \}_{n=1}^{\infty}$ be a sequence in $X$. If $\{ x_{n} \}_{n=1}^{\infty}$ is contractive, then the sequence is Cauchy.
+\end{proposition}
+
+\begin{proposition}
+\label{prop: Cauchy Iff Convergent In Reals}
+Let $\{ x_{n} \}_{n=1}^{\infty}$ be a sequence in $\reals$. Then $\{ x_{n} \}_{n=1}^{\infty}$ converges if and only if the sequence is Cauchy.
+\end{proposition}
+
+\begin{proposition}
+\label{prop: Convergent Sequence All Subsequences Converge Same Limit}
+Let $\{ x_{n} \}_{n=1}^{\infty}$ be a sequence in $\reals$. If $\{ x_{n} \}_{n=1}^{\infty}$ converges, say to $x$, then all subsequences of this sequence converge to the same limit $x$.
+\end{proposition}
+
+\begin{theorem}[Monotone Convergence Theorem]
+\label{thm: Monotone Convergence Theorem}
+Let $\{ x_{n} \}_{n=1}^{\infty}$ be a monotone sequence of real numbers. Then $\{ x_{n} \}_{n=1}^{\infty}$ converges if and only if the sequence is bounded. Moreover, this limit equals $\sup x_{n}$ if the sequence is increasing, and $\inf x_{n}$ if the sequence is decreasing.
+\end{theorem}
+
+\begin{theorem}[Squeeze Theorem]
+\label{thm: Squeeze Theorem}
+Let $\{ a_{n} \}_{n=1}^{\infty}$, $\{ x_{n} \}_{n=1}^{\infty}$, and $\{ b_{n} \}_{n=1}^{\infty}$ be sequences such that $a_{n} \leq x_{n} \leq b_{n}$ for all $n \geq 1$. If the sequences $\{ a_{n} \}_{n=1}^{\infty}$ and $\{ b_{n} \}_{n=1}^{\infty}$ converge to the same limit $x$, then $\{ x_{n} \}_{n=1}^{\infty}$ converges to $x$ as well.
+\end{theorem}
+
+Both of our solutions use the fact that, although the sequence $\{ x_{n} \}_{n=1}^{\infty}$ is not monotonic,\footnote{Rigorously, we can show that $\{ x_{n} \}_{n=1}^{\infty}$ is not monotone, no matter how far out in the sequence we go, as follows. For convenience, rewrite the definition of $x_{n+1}$ in the equivalent form
+\begin{align*}
+x_{n+1} = 1 + \frac{5}{2 x_{n} + 1} = \frac{2 x_{n} + 6}{2 x_{n} + 1}.
+\end{align*}
+Then
+\begin{align*}
+x_{n+1} &> 2
+&
+&\Leftrightarrow
+&
+2 x_{n} + 6 &> 4 x_{n} + 2
+&
+&\Leftrightarrow
+&
+x_{n} &< 2,
+\end{align*}
+and
+\begin{align*}
+0 \leq x_{n+1} &< 2
+&
+&\Leftrightarrow
+&
+2 x_{n} + 6 &< 4 x_{n} + 2
+&
+&\Leftrightarrow
+&
+x_{n} &> 2.
+\end{align*}
+Thus when $x_{1} = 0$, the sequence $\{ x_{n} \}_{n=1}^{\infty}$ oscillates forever around $2$; more precisely, if $x_{n}$ is less than (greater than) $2$, then $x_{n+1}$ is greater than (less than) $2$. (Recall that we have shown that $x_{n} \geq 0$ for all $n$.)
+
+Note that our analysis yields the following corollary for free: The subsequence $\{ x_{2 n - 1} \}_{n=1}^{\infty}$ of odd terms is bounded above by $2$, and the subsequence $\{ x_{2 n} \}_{n=1}^{\infty}$ of even terms is bounded below by $2$. This corollary follows from the results of the previous paragraph, the observations that $x_{1} = 0 < 2$ and $x_{2} = 6 > 2$, and induction. As another corollary, $x_{n} \neq 2$, for all $n \geq 1$.} the subsequence of odd terms and the subsequence of even terms are both monotonic. This is suggested by computing the first few terms of the sequence $\{ x_{n} \}_{n=1}^{\infty}$ (see \eqref{eq: F2013HW04Q05 First Few Terms}); we now prove it rigorously by comparing the terms $x_{n}$ and $x_{n+2}$.
+
+First, note that given the initial term $x_{1} = 0$, all terms in the sequence $\{ x_{n} \}_{n=1}^{\infty}$ are nonnegative. This follows from the fact that, in the definition of $x_{n+1}$, all terms are positive and added, so once a positive value of $x_{n}$ appears, $x_{n+1}$ will be positive thereafter. Next, using the recursive definition to write $x_{n+2}$ in terms of $x_{n}$, we have
+\begin{align*}
+x_{n+2} = 1 + \frac{5}{2 x_{n+1} + 1} = 1 + \frac{5}{2 \left( 1 + \frac{5}{2 x_{n} + 1} \right) + 1} = 1 + \frac{5 (2 x_{n} + 1)}{6 x_{n} + 13} = \frac{16 x_{n} + 18}{6 x_{n} + 13}.
+\end{align*}
+Thus
+\begin{align}
+x_{n+2} &\gtreqqless x_{n}
+&
+&\Leftrightarrow
+&
+\frac{16 x_{n} + 18}{6 x_{n} + 13} &\gtreqqless x_{n}
+&
+&\Leftrightarrow
+&
+0 &\gtreqqless 6 x_{n}^{2} - 3 x_{n} - 18 = 3 (2 x_{n} + 3) (x_{n} - 2).\label{eq: F2013HW04Q05 Terms Two Apart}
+\end{align}
+(Note that the final equivalence assumes that $x_{n} > -\frac{13}{6}$, so that the direction of the inequality does not reverse when clearing the denominator. Because all terms in $\{ x_{n} \}_{n=1}^{\infty}$ are nonnegative, this indeed holds.) Analyzing the linear factors in the right-most expression, we find
+\begin{align*}
+2 x_{n} + 3 \gtreqqless 0 \quad &\Leftrightarrow \quad x_{n} \gtreqqless -\frac{3}{2},
+&
+x_{n} - 2 \gtreqqless 0 \quad &\Leftrightarrow \quad x_{n} \gtreqqless 2;
+\end{align*}
+therefore (see Figure \ref{fig: F2013HW04Q05 Sign Analysis}) the quadratic satisfies
+\begin{align}
+3 (2 x_{n} + 3) (x_{n} - 2) < 0 \quad &\Leftrightarrow \quad x_{n} > -\frac{3}{2} \text{ and } x_{n} < 2\label{eq: F2013HW04Q05 Increasing Condition}
+\end{align}
+and
+\begin{align}
+3 (2 x_{n} + 3) (x_{n} - 2) > 0 \quad &\Leftrightarrow \quad x_{n} < -\frac{3}{2} \text{ or } x_{n} > 2.\label{eq: F2013HW04Q05 Decreasing Condition}
+\end{align}
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[scale=.5]{Econ401_2013_HW04_Graphics/Econ401_2013_HW04_Q05_SignAnalysis.png}
+%\end{center}
+%\caption{Sign analysis for the function $3 (2 x_{n + 3}) (x_{n} - 2)$. The top two lines show the sign on the linear factors of the function; the sign on the function, shown on the bottom line, is found by multiplying the signs of all the products in each region.}
+%\label{fig: F2013HW04Q05 Sign Analysis}
+%\end{figure}
+
+From \eqref{eq: F2013HW04Q05 Terms Two Apart}, if $x_{n}$ satisfies \eqref{eq: F2013HW04Q05 Increasing Condition} then $x_{n+2} > x_{n}$, and if $x_{n}$ satisfies \eqref{eq: F2013HW04Q05 Decreasing Condition} then $x_{n+2} < x_{n}$. Because $-\frac{3}{2} < x_{1} = 0 < 2$ and $x_{2} = 6 > 2$, these results and induction imply that the subsequence $\{ x_{2 n - 1} \}_{n=1}^{\infty}$ of odd terms is monotonically increasing, and the subsequence $\{ x_{2 n} \}_{n=1}^{\infty}$ of even terms is monotonically decreasing.
+
+Armed with these facts about our sequence --- that all terms are nonnegative, that the subsequence of odd terms is monotonically increasing and bounded above by $2$, that the subsequence of even terms is monotonically decreasing and bounded below by $2$, and that $x_{n} \neq 2$ for all $n \geq 1$ --- we are prepared to attack the main proofs.
+
+
+
+\paragraph{Method 1: Contractive Sequence}
+
+The approach of this method is as follows: If we can show that $\{ x_{n} \}_{n=1}^{\infty}$ is contractive, then it is Cauchy, hence it converges to some point $x$, and all subsequences converge to this same point $x$. In particular, the subsequence of odd terms and the subsequence of even terms both converge to $x$. Because the former is bounded above by $2$ and the latter is bounded below by $2$, it follows that $x = 2$.
+
+To show that $\{ x_{n} \}_{n=1}^{\infty}$ is contractive, we must give a constant $c \in [0,1)$ such that $d(x_{n+2},x_{n+1}) \leq c d(x_{n+1},x_{n})$ for all $n \geq 1$. Thus we are led to consider the two distances in this last inequality. Using the recursive definition of the sequence to write $x_{n+1}$ and $x_{n+2}$ in terms of $x_{n}$, we have
+\begin{align*}
+x_{n+1} &= \frac{2 x_{n} + 6}{2 x_{n} + 1},
+&
+x_{n+2} &= \frac{16 x_{n} + 18}{6 x_{n} + 13}.
+\end{align*}
+Therefore
+\begin{align*}
+d(x_{n+2},x_{n+1}) &= \left| \frac{10 (2 x_{n} + 3) (x_{n} - 2)}{(6 x_{n} + 13) (2 x_{n} + 1)} \right|
+\end{align*}
+and
+\begin{align*}
+d(x_{n+1},x_{n}) &= \left| \frac{(2 x_{n} + 3) (x_{n} - 2)}{2 x_{n} + 1} \right|.
+\end{align*}
+Using the facts that $x_{n} \geq 0$ and $x_{n} \neq 2$ for all $n \geq 1$, we have $d(x_{n+1},x_{n}) \neq 0$ for all $n \geq 1$, so we can form the ratio
+\begin{align*}
+\frac{d(x_{n+2},x_{n+1})}{d(x_{n+1},x_{n})} = \left| \frac{10}{6 x_{n} + 13} \right|.
+\end{align*}
+Note that, for $x_{n} > -\frac{13}{6}$, this ratio is decreasing in $x_{n}$. We have shown that all terms in $\{ x_{n} \}_{n=1}^{\infty}$ are nonnegative, so the minimum value of $x_{n}$ is $0$, and hence the maximum value of the ratio is $\frac{10}{13} < 1$. Thus the sequence $\{ x_{n} \}_{n=1}^{\infty}$ is contractive, with (one possible choice of contractive constant) $c \defeq \frac{10}{13}$.
+
+From Proposition \ref{prop: Contractive Implies Cauchy} it follows that $\{ x_{n} \}_{n=1}^{\infty}$ is Cauchy, the thus it converges by Proposition \ref{prop: Cauchy Iff Convergent In Reals}; denote the point of convergence by $x$. By Proposition \ref{prop: Convergent Sequence All Subsequences Converge Same Limit} all subsequences of $\{ x_{n} \}_{n=1}^{\infty}$ converge to this same $x$. In particular, the subsequence of odd terms and the subsequence of even terms both converge to $x$. Because the former is bounded above by $2$ and the latter is bounded below by $2$, it follows that $x = 2$.\footnote{If $x < 2$ then all terms in the subsequence of even terms would be bounded away from $x$ by a distance of at least $2 - x$. Similarly, if $x > 2$ then all terms in the subsequence of odd terms would be bounded away from $x$ by a distance of $x - 2$. In either case one of the subsequences could not converge to $x$, a contradiction.}
+
+
+
+\paragraph{Method 2: Squeeze Theorem}
+
+If the given sequence $\{ x_{n} \}_{n=1}^{\infty}$ converges, then Proposition \ref{prop: Cauchy Iff Convergent In Reals} implies that it is Cauchy. In other words, if the given sequence converges, then its terms must become arbitrarily close together. This suggests that we set $x_{n+1} = x_{n} = x$ in the definition of $x_{n+1}$ to find the candidate limit(s) $x$:
+\begin{align*}
+x_{n} &\seteq x_{n+1} = 1 + \frac{5}{2 x_{n} + 1}
+&
+&\Leftrightarrow
+&
+2 x^{2} - x - 6 &= 0
+&
+&\Leftrightarrow
+&
+x &= -\frac{3}{2} \text{ or } x = 2.
+\end{align*}
+This procedure of setting $x_{n+1} = x_{n} = x$ and solving for $x$ is sometimes referred to as ``finding the fixed points'' of the sequence $\{ x_{n} \}_{n=1}^{\infty}$.
+
+Thus we have two candidate limits: $x = -\frac{3}{2}$ and $x = 2$. Which candidate to consider can be informed either (i) by recalling that we have shown that all terms in the sequence are nonnegative, or (ii) by computing the first few terms of the sequence,
+\begin{align}
+0,6,\frac{18}{13} \approx 1.3846,\frac{114}{49} \approx 2.3265, \frac{522}{277} \approx 1.8845, \frac{2706}{1321} \approx 2.0484, \ldots,\label{eq: F2013HW04Q05 First Few Terms}
+\end{align}
+suggesting that the terms are nonnegative and oscillate around $2$. Either way, we are led to consider $x = 2$ as our candidate point of convergence.
+
+We now prove that $\{ x_{n} \}_{n=1}^{\infty}$ converges to $2$. %, using the definition of convergence. Let $\varepsilon > 0$ be given; we wish to find some $N \in \naturals$ such that $d(x_{n},2) < \varepsilon$ for all $n \geq N$, where $d(x,y) = |x - y|$ denotes the Euclidean distance between $x$ and $y$ in $\reals$.
+We cannot apply Theorem \ref{thm: Monotone Convergence Theorem} directly to the sequence $\{ x_{n} \}_{n=1}^{\infty}$, because it is not monotone, as suggested by our computation of the first few terms in \eqref{eq: F2013HW04Q05 First Few Terms}. %!!!
+So we adopt the following approach:
+\begin{enumerate}
+\item Use the given sequence $\{ x_{n} \}_{n=1}^{\infty}$ to construct monotonic sequences $\{ a_{n} \}_{n=1}^{\infty}$ and $\{ b_{n} \}_{n=1}^{\infty}$ such that (i) $a_{n} \leq x_{n} \leq b_{n}$ for all $n \geq 1$ and (ii) if $\{ a_{n} \}_{n=1}^{\infty}$ and $\{ b_{n} \}_{n=1}^{\infty}$ converge, then they converge to the same limit $x$.
+\item Apply Theorem \ref{thm: Monotone Convergence Theorem} to $\{ a_{n} \}_{n=1}^{\infty}$ and $\{ b_{n} \}_{n=1}^{\infty}$.
+\item Apply Theorem \ref{thm: Squeeze Theorem} to conclude that $\{ x_{n} \}_{n=1}^{\infty}$ converges to $x$.
+\end{enumerate}
+This approach may look daunting, but in practice it is relatively painless. Let's see how it plays out.
+
+The ``problem'' with the given sequence $\{ x_{n} \}_{n=1}^{\infty}$ is that it is not monotonic. But as we have shown, the subsequences consisting of just the odd terms or just the even terms are monotonic. By Proposition \ref{prop: Convergent Sequence All Subsequences Converge Same Limit}, if the given sequence $\{ x_{n} \}_{n=1}^{\infty}$ converges, say to $x$, then these two subsequences also converge to $x$. So now our task becomes modifying these two subsequences so that we can apply Theorem \ref{thm: Squeeze Theorem}.
+
+To this end, define sequences $\{ a_{n} \}_{n=1}^{\infty}$ and $\{ b_{n} \}_{n=1}^{\infty}$ as follows:
+\begin{align*}
+a_{n} &\defeq
+\begin{dcases*}
+x_{n}		&	if $n$ is odd,	\\
+x_{n-1}	&	if $n$ is even;
+\end{dcases*}
+&
+b_{n} &\defeq
+\begin{dcases*}
+x_{n+1}	&	if $n$ is odd,	\\
+x_{n}		&	if $n$ is even,
+\end{dcases*}
+\end{align*}
+for all $n \geq 1$. Note that
+\begin{align*}
+\{ a_{n} \}_{n=1}^{\infty} &= x_{1},x_{1},x_{3},x_{3},\ldots,
+&
+\{ b_{n} \}_{n=1}^{\infty} &= x_{2},x_{2},x_{4},x_{4},\ldots.
+\end{align*}
+The sequence $\{ a_{n} \}_{n=1}^{\infty}$ is monotonically increasing and bounded within $[0,2]$; similarly, the sequence $\{ b_{n} \}_{n=1}^{\infty}$ is monotonically decreasing and bounded within $[2,6]$. Thus we can apply Theorem \ref{thm: Monotone Convergence Theorem} to conclude that $\lim_{n \rightarrow \infty} a_{n} = 2 = \lim_{n \rightarrow \infty} b_{n}$.% Rigorous proof that $2$ is supremum and infimum!!!
+
+Next, note that $a_{n} \leq 2 \leq b_{n}$ for all $n$, and
+\begin{align*}
+x_{n} =
+\begin{dcases*}
+a_{n}	&	if $n$ is odd,	\\
+b_{n}	&	if $n$ is even,
+\end{dcases*}
+\end{align*}
+so that $a_{n} \leq x_{n} \leq b_{n}$ for all $n \geq 1$. Thus Theorem \ref{thm: Squeeze Theorem} implies that $\{ x_{n} \}_{n=1}^{\infty}$ converges to $2$, as claimed.
