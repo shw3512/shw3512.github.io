@@ -8,7 +8,7 @@
 
 ## Course documents
 
-- Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/syl.tex))
+- Syllabus ([pdf](docs/pdf/syl.pdf), [tex](docs/tex/docs.zip))
 - Webpages:
     - [Course homepage](webp/home.html)
     - Calendar of lectures ([original](webp/cal-v0.html), [final](webp/cal-v9.html))
