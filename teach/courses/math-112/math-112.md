@@ -79,7 +79,7 @@ Remarks.
 
 | # | Key topics | Files |
 |:--|:-----------|:------|
-| 1 | Functions, continuity, differentiation, related rates | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), [tex](assess/ex/tex/01.zip)) |
-| 2 | Limits, integration, signed area under curves         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), [tex](assess/ex/tex/02.zip)) |
-| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), [tex](assess/ex/tex/03.zip)) |
-| 4 | Comprehensive                                         | [q](assess/lq/pdf/04.pdf), [a](assess/lq/pdf/04-sol.pdf), [tex](assess/ex/tex/04.zip)) |
+| 1 | Functions, continuity, differentiation, related rates | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), [tex](assess/ex/tex/01.zip) |
+| 2 | Limits, integration, signed area under curves         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), [tex](assess/ex/tex/02.zip) |
+| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), [tex](assess/ex/tex/03.zip) |
+| 4 | Comprehensive                                         | [q](assess/lq/pdf/04.pdf), [a](assess/lq/pdf/04-sol.pdf), [tex](assess/ex/tex/04.zip) |
