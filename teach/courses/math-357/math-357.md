@@ -24,7 +24,7 @@
 Remarks.
 
 1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, and `tex` links to the TeX document.
-2. To compile pdfs for short quizzes, long quizzes, and exams, I used a common template TeX document (named [`main.tex`](assess/main.tex)); and subdirectories named `sq`, `lq`, and `ex`, respectively (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
+2. To compile pdfs for short quizzes, long quizzes, and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named `sq`, `lq`, and `ex`, respectively (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
 
 ### Homework
 
