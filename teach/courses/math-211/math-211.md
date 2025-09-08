@@ -36,7 +36,7 @@ All versions of the notes are compiled from the same collection of files, availa
 Remarks.
 
 1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, `tex` links to the TeX document, and `im` links to a zip file of images used in the assessment.
-2. To compile pdfs for the quizzes and exams, I used a common template TeX document (named [`main.tex`](assess/main.tex)); and subdirectories named `qz` and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
+2. To compile pdfs for the quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named `qz` and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
     - Abbreviations: `ex` = exam, `qz` = quiz
 
 ### Quizzes
