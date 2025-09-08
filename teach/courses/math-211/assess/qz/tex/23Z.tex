@@ -1,0 +1,176 @@
+%
+% Quiz 23 : 2019-08-07 (W)
+%
+% Exercise 8.2.12 (p 483) in Farlow et al.
+%
+\section{Exercise}
+
+(5 pt) Solve the following nonhomogeneous 2nd-order linear initial value problem:
+\begin{align*}
+y'' + y' + y
+=
+e^{-t},
+&&
+y(0)
+=
+0,
+&&
+y'(0)
+=
+1.
+\end{align*}
+\fontHint{Recall that, from the definition of the lapace transform,
+\begin{align*}
+\laplaceTransform\{y'\}(s)
+=
+s \laplaceTransform\{y\} - y(0).
+\end{align*}
+Applying this result to $y''$, we get
+\begin{align*}
+\laplaceTransform\{y''\}(s)
+=
+s \laplaceTransform\{y'\} - y'(0)
+=
+s^{2} \laplaceTransform\{y\} - s y(0) - y'(0).
+\end{align*}
+The following transform--inverse-transform pairs may be useful:
+\begin{align*}
+\laplaceTransform\{e^{a t}\}
+=
+\frac{1}{s - a},
+\end{align*}}
+
+\spaceSolution{5in}{% Begin solution.
+Applying the laplace transform to both sides of the ODE, and using the fact that the laplace transform is linear, we get
+\begin{align}
+\laplaceTransform\{y''\} + \laplaceTransform\{y'\} + \laplaceTransform\{y\}
+=
+\laplaceTransform\{y'' + y' + y\}
+=
+\laplaceTransform\{e^{-t}\}.%
+\label{eq : Quiz23 Initial Application Laplace Transform}
+\end{align}
+Denote
+\begin{align*}
+Y(s)
+=
+\laplaceTransform\{y\}.
+\end{align*}
+From the definition of the laplace transform, and using the given initial conditions, we compute
+\begin{align*}
+\laplaceTransform\{y'\}
+&=
+s \laplaceTransform\{y\} - y(0)
+=
+s Y(s) - 0
+=
+s Y(s)
+\\
+\laplaceTransform\{y''\}
+&=
+s^{2} \laplaceTransform\{y'\} - s f(0) - f'(0)
+=
+s^{2} Y(s) - 1.
+\end{align*}
+Substituting these results into \eqref{eq : Quiz23 Initial Application Laplace Transform}, we get
+\begin{align*}
+\left(s^{2} Y(s) - 1\right) + s Y(s) + Y(s)
+=
+\laplaceTransform\{e^{-t}\}
+=
+\frac{1}{s + 1}.
+\end{align*}
+Solving this equation for $Y(s)$, we get
+\begin{align*}
+Y(s)
+=
+\frac{\frac{1}{s + 1} + 1}{s^{2} + s + 1}
+=
+\frac{\frac{s + 2}{s + 1}}{s^{2} + s + 1}
+=
+\frac{s + 2}{(s + 1) (s^{2} + s + 1)}.
+\end{align*}
+Setting up the partial fraction decomposition, we have
+\begin{align*}
+\frac{s + 2}{(s + 1) (s^{2} + s + 1)}
+=
+\frac{A}{s + 1} + \frac{B s + C}{s^{2} + s + 1}.
+\end{align*}
+Clearing denominators, we get
+\begin{align*}
+s + 2
+=
+(s^{2} + s + 1) A + (s + 1) (B s + C).
+\end{align*}
+Now we plug in (at least) three values for $t$ to get a system of equations we can use to solve for $A,B,C$:
+\begin{align*}
+s = -1
+&:
+1
+=
+A
+\\
+s = 0
+&:
+2
+=
+A + C
+=
+1 + C
+\Rightarrow
+C
+=
+1
+\\
+s = 1
+&:
+3
+=
+3 A + 2 (B + C)
+=
+3 + 2 B + 2
+\Rightarrow
+B
+=
+-1.
+\end{align*}
+Thus
+\begin{align*}
+Y(s)
+&=
+\frac{s + 2}{(s + 1) (s^{2} + s + 1)}
+\\
+&=
+\frac{1}{s + 1} + \frac{-s + 1}{s^{2} + s + 1}
+\\
+&=
+\frac{1}{s + 1} - \frac{s - \frac{1}{2}}{(s + \frac{1}{2})^{2} + \frac{3}{4}}
+\\
+&=
+\frac{1}{s + 1} - \frac{s + \frac{1}{2} - 1}{(s + \frac{1}{2})^{2} + \frac{3}{4}}
+\\
+&=
+\frac{1}{s + 1} - \frac{s + \frac{1}{2}}{(s + \frac{1}{2})^{2} + \frac{3}{4}} - \frac{4}{3} \frac{\frac{3}{4}}{(s + \frac{1}{2})^{2} + \frac{3}{4}},
+\end{align*}
+where
+\begin{itemize}
+\item in the third equality, in the second term, we have (i) factored out a $-1$ from the numerator and (ii) completed the square in the denominator;
+\item in the fourth equality, we have rewritten the numerator so we get the same $s + a$ term as appears in the completed square in the denominator (to set us up for the inverse laplace transform); and
+\item in the fifth equality, we have explicitly decomposed the second term into two terms, and rewritten the numerator of our second term (factoring out a $\frac{4}{3}$) so that all terms have a form that appear in our dictionary of transform--inverse-transform pairs.
+\end{itemize}
+Applying the inverse laplace transform to both sides, and using the fact that it is linear, we get
+\begin{align*}
+y(t)
+&=
+\laplaceTransform^{-1}\{\laplaceTransform\{y\}\}
+=
+\laplaceTransform^{-1}\{Y(s)\}
+=
+\laplaceTransform^{-1}\left\{\frac{1}{s + 1} - \frac{s + \frac{1}{2}}{(s + \frac{1}{2})^{2} + \frac{3}{4}} - \frac{1}{(s + \frac{1}{2})^{2} + \frac{3}{4}}\right\}
+\\
+&=
+\laplaceTransform^{-1}\left\{\frac{1}{s + 1}\right\} - \laplaceTransform^{-1}\left\{\frac{s + \frac{1}{2}}{(s + \frac{1}{2})^{2} + \frac{3}{4}}\right\} - \laplaceTransform^{-1}\left\{\frac{1}{(s + \frac{1}{2})^{2} + \frac{3}{4}}\right\}
+\\
+&=
+e^{-t} - e^{}
+\end{align*}}% End solution.

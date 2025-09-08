@@ -1,0 +1,245 @@
+%
+% Quiz 20 : 2019-08-02 (F)
+%
+% Phase planes plotted using online software at
+% http://www.calvin.edu/~scofield/demos/other/PhasePortrait2D.html
+%
+\section{Exercise}
+
+(2 pt) Match each of the homogeneous 1st-order $2 \times 2$ linear systems with its corresponding phase plane in Figure \ref{fig : Quiz 20 Phase Planes}. (N.B. In each ODE, $\fontMatrix{x} = \transpose{\begin{bmatrix}x_{1}(t)&x_{2}(t)\end{bmatrix}}$ is a $2 \times 1$ matrix of scalar-valued functions.) \fontHint{(Some of the) distinguishing features of the phase plane are associated with
+\begin{itemize}
+\item eigenvalues and their corresponding eigenvectors of the coefficient matrix;
+\item nullclines, i.e. lines in the phase plane along which $x_{1}' = 0$ or $x_{2}' = 0$; and
+\item evaluating the original ODE at points $(x_{1},x_{2})$.
+\end{itemize}}
+\fontHint{Recall that in the decomposition $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$, if $\fontMatrix{D}$ is a diagonal matrix, then column $j$ of the matrix $\fontMatrix{P}$ is an eigenvector corresponding to (the eigenvalue on) the $j$th diagonal entry of $\fontMatrix{D}$.}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Quiz20 a} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}0&1\\4&0\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\2&-2\end{bmatrix} \begin{bmatrix}2&0\\0&-2\end{bmatrix} \begin{bmatrix}1&1\\2&-2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Quiz20 b} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}0&-1\\-4&0\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1&1\\-2&2\end{bmatrix} \begin{bmatrix}2&0\\0&-2\end{bmatrix} \begin{bmatrix}1&1\\-2&2\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Quiz20 c} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}1&-1\\1&1\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}i&-i\\1&1\end{bmatrix} \begin{bmatrix}1 + i&0\\0&1 - i\end{bmatrix} \begin{bmatrix}i&-i\\1&1\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Quiz20 d} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}1&-10\\10&1\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}i&-i\\1&1\end{bmatrix} \begin{bmatrix}1 + 10 i&0\\0&1 - 10 i\end{bmatrix} \begin{bmatrix}i&-i\\1&1\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Quiz20 e} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}-4&6\\-3&2\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 - i&1 + i\\1&1\end{bmatrix} \begin{bmatrix}-1 + 3 i&0\\0&-1 - 3 i\end{bmatrix} \begin{bmatrix}1 - i& 1 + i\\1&1\end{bmatrix}^{-1} \fontMatrix{x}$
+\item\label{itm : Quiz20 f} $\displaystyle \fontMatrix{x}' = \begin{bmatrix}2&-6\\3&-4\end{bmatrix} \fontMatrix{x} = \begin{bmatrix}1 + i&1 - i\\1&1\end{bmatrix} \begin{bmatrix}-1 + 3 i&0\\0&-1 - 3 i\end{bmatrix} \begin{bmatrix}1 + i& 1 - i\\1&1\end{bmatrix}^{-1} \fontMatrix{x}$
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Focusing on the features in the hint, we find
+\begin{center}
+\ref{itm : Quiz20 a} $=$ (1)
+\hspace{.2in};\hspace{.2in}
+\ref{itm : Quiz20 b} $=$ (2)
+\hspace{.2in};\hspace{.2in}
+\ref{itm : Quiz20 c} $=$ (5)
+\hspace{.2in};\hspace{.2in}
+\ref{itm : Quiz20 d} $=$ (6)
+\hspace{.2in};\hspace{.2in}
+\ref{itm : Quiz20 e} $=$ (4)
+\hspace{.2in};\hspace{.2in}
+\ref{itm : Quiz20 f} $=$ (3).
+\end{center}
+
+More precisely, we can reason as follows. Based on their diagonalization decomposition $\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$, we group similar ODEs:
+\begin{multicols}{3}
+\begin{itemize}
+\item \ref{itm : Quiz20 a} and \ref{itm : Quiz20 b},
+\item \ref{itm : Quiz20 c} and \ref{itm : Quiz20 c},
+\item \ref{itm : Quiz20 e} and \ref{itm : Quiz20 f}.
+\end{itemize}
+\end{multicols}
+Reading the eigenvalues from the diagonal matrices $D$ in the decomposition, \ref{itm : Quiz20 a} and \ref{itm : Quiz20 b} have real eigenvalues, one positive and one negative; hence the equilibrium (at the origin) is a saddle. The phase portraits illustrating a saddle equilibrium are (1) and (2). In (1), trajectories move toward the equilibrium (i.e. the origin) in the direction of the vector $(1,-2)$, and away from the equilibrium in the direction of the vector $(1,2)$. In (2), these directions are reversed. Comparing this to the eigenvectors (i.e. the columns) in the $\fontMatrix{P}$ matrix in the ODEs \ref{itm : Quiz20 a} and \ref{itm : Quiz20 b}, this behavior allows us to match \ref{itm : Quiz20 a} with (1) and \ref{itm : Quiz20 b} with (2).
+
+\ref{itm : Quiz20 c}--\ref{itm : Quiz20 f} have complex eigenvalues; hence their phase planes will display rotation around the equilibrium (at the origin). The eigenvalues for \ref{itm : Quiz20 c} and \ref{itm : Quiz20 d} have positive real part, both $1$; hence trajectories (solution curves) spiral away from the equilibrium. The eigenvalues for \ref{itm : Quiz20 e} and \ref{itm : Quiz20 f} have negative real part, both $-1$; hence trajectories spiral toward the origin. This allows us to group \ref{itm : Quiz20 c} and \ref{itm : Quiz20 d} with phase planes (5) and (6), and \ref{itm : Quiz20 e} and \ref{itm : Quiz20 f} with phase planes (3) and (4).
+
+Nullclines are one way to distinguish between (5) and (6) for ODEs \ref{itm : Quiz20 c} and \ref{itm : Quiz20 d}. Writing out \ref{itm : Quiz20 c},
+\begin{align*}
+\begin{bmatrix}
+x_{1}'	\\
+x_{2}'
+\end{bmatrix}%
+=
+\fontMatrix{x}'
+=
+\fontMatrix{A} \fontMatrix{x}
+=
+\begin{bmatrix}
+1	&	-1	\\
+1	&	1
+\end{bmatrix}%
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}
+x_{1} - x_{2}	\\
+x_{1} + x_{2}
+\end{bmatrix}%
+.
+\end{align*}
+This matrix equation represents the system of equations
+\begin{align*}
+x_{1}'
+&=
+x_{1} - x_{2}
+\\
+x_{2}'
+&=
+x_{1} + x_{2}.
+\end{align*}
+By definition, $x_{1}$-nullclines satisfy
+\begin{align*}
+0
+\seteq
+x_{1}'
+=
+x_{1} - x_{2}
+&&
+\Leftrightarrow
+&&
+x_{2}
+=
+x_{1}.
+\end{align*}
+This tells us that, along the line $x_{2} = x_{1}$ in the $(x_{1},x_{2})$ plane, any direction of change lies entirely in the $x_{2}$ direction, i.e. trajectories pass either up or down when passing through the line $x_{2} = x_{1}$. Whether it is up or down can be determined by evaluating the original ODE at a few points on the $x_{1}$-nullcline: At any value $t_{0}$ such that $(x_{1}(t_{0}),x_{2}(t_{0})) = (1,1)$,
+\begin{align*}
+\fontMatrix{x}'(t_{0})
+=
+\begin{bmatrix}
+1	&	-1	\\
+1	&	1
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}(t_{0})	\\
+x_{2}(t_{0})
+\end{bmatrix}
+=
+\begin{bmatrix}
+1	&	-1	\\
+1	&	1
+\end{bmatrix}
+\begin{bmatrix}
+1	\\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0	\\
+2
+\end{bmatrix}%
+.
+\end{align*}
+Note that the first entry $x_{1}'(t_{0}) = 0$, as required for points on the $x_{1}$-nullcline. The second entry $x_{2}'(t_{0}) = 2 > 0$, which says that $x_{2}(t)$ is increasing at the point $(x_{1},x_{2}) = (1,1)$, i.e. trajectories are moving up at this point. Similarly, for $t_{0}$ such that $(x_{1}(t_{0}),x_{2}(t_{0})) = (-1,-1)$,
+\begin{align*}
+\fontMatrix{x}'(t_{0})
+=
+\begin{bmatrix}
+1	&	-1	\\
+1	&	1
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}(t_{0})	\\
+x_{2}(t_{0})
+\end{bmatrix}
+=
+\begin{bmatrix}
+1	&	-1	\\
+1	&	1
+\end{bmatrix}
+\begin{bmatrix}
+-1	\\
+-1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0	\\
+-2
+\end{bmatrix}%
+.
+\end{align*}
+Here $x_{2}'(t_{0}) = -2 < 0$, so $x_{2}(t)$ is decreasing at this point $(x_{1},x_{2}) = (1,1)$, i.e. trajectories are moving down.
+
+Similarly, by definition, $x_{2}$-nullclines satisfy
+\begin{align*}
+0
+\seteq
+x_{2}'
+=
+x_{1} + x_{2}
+&&
+\Leftrightarrow
+&&
+x_{2}
+=
+-x_{1}.
+\end{align*}
+Trajectories pass either left or right when passing through the line $x_{2} = -x_{1}$.
+
+All of this is consistent with the phase plane (5). Hence we conclude that the system \ref{itm : Quiz20 c} corresponds to phase plane (5).
+
+Playing the same game with the ODE \ref{itm : Quiz20 d}, we get nullclines
+\begin{align*}
+\text{$x_{1}$-nullcline}
+:
+x_{2}
+=
+\frac{1}{10} x_{1},
+&&
+\text{$x_{2}$-nullcline}
+:
+x_{2}
+=
+-10 x_{1}.
+\end{align*}
+This says that, graphically, trajectories have purely vertical tangents (velocities) along $x_{2} = \frac{1}{10} x_{1}$ (a relatively flat line, close to the $x_{1}$-axis), and purely horizontal tangents (velocities) along $x_{2} = -10 x_{1}$ (a relatively steep line, close to the $x_{2}$-axis). This is consistent with phase plane (6).
+
+These same approaches (i.e. analysis of nullclines, evaluating the original system at a few points) allow us to distinguish between \ref{itm : Quiz20 e} and \ref{itm : Quiz20 f}, matching them to phase planes (4) and (3), respectively.
+
+N.B. In all cases, we can confirm the direction of vectors in the phase planes at a few points $(x_{1},x_{2}) \in \reals^{2}$ by plugging $\fontMatrix{x} = (x_{1},x_{2})$ into the right side of the original ODEs.}% End solution.
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_a}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_b}
+\\
+(1)	&	&	(2)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_f}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_e}
+\\
+(3)	&	&	(4)
+\\
+\\
+\\
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_c}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.3]{\filePathGraphics Quiz20_PhasePlane_d}
+\\
+(5)	&	&	(6)
+\end{tabular}
+\caption{Phase planes for Quiz 20, in the $(x_{1},x_{2})$ plane.}
+\label{fig : Quiz 20 Phase Planes}
+\end{center}
+\end{figure}
+
+%
+% WolframAlpha code :
+% (a) {{1,1},{2,-2}}{{2,0},{0,-2}}{{1,1},{2,-2}}^(-1)
+% (b) {{1,1},{-2,2}}{{2,0},{0,-2}}{{1,1},{-2,2}}^(-1)
+% (c) {{i,-i},{1,1}}{{1+i,0},{0,1-i}}{{i,-i},{1,1}}^(-1)
+% (d) {{i,-i},{1,1}}{{1+10i,0},{0,1-10i}}{{i,-i},{1,1}}^(-1)
+% (e) {{1-i,1+i},{1,1}}{{-1+3i,0},{0,-1-3i}}{{1-i,1+i},{1,1}}^(-1)
+% (f) {{1+i,1-i},{1,1}}{{-1+3i,0},{0,-1-3i}}{{1+i,1-i},{1,1}}^(-1)

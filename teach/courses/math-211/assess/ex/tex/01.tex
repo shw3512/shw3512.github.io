@@ -1,0 +1,513 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q1}}
+\label{sec : Math211 Summer2019 Exam1 Q1}
+
+(15 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E1Q1a} Let $y_{1}$ and $y_{2}$ be solutions to the first-order ODE
+\begin{align}
+t y' + e^{t} y
+=
+t.%
+\label{eq : E1Q1a ODE}
+\end{align}
+Then any linear combination $a_{1} y_{1} + a_{2} y_{2}$ is also a solution to \eqref{eq : E1Q1a ODE}.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+False. The ODE is nonhomogeneous, so the superposition principle does not apply. In fact, letting $y = a_{1} y_{1} + a_{2} y_{2}$, we can compute
+\begin{align*}
+t y' + e^{t} y
+=
+a_{1} y_{1}' + a_{2} y_{2}' + a_{1} e^{t} y_{1} + a_{2} e^{t} y_{2}
+=
+a_{1} \left(y_{1}' + e^{t} y_{1}\right) + a_{2} \left(y_{2}' + e^{t} y_{2}\right)
+=
+\left(a_{1} + a_{2}\right) t,
+\end{align*}
+which equals $t$ as required by the ODE if and only if $a_{1} + a_{2} = 1$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1b} The function $y(t) = e^{4 t}$ solves the ODE $y'' - 3 y' - 4 y = 0$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+True. We can plug the proposed solution into the ODE and check that the equation is true.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1c} The first-order ODE $y' = \frac{t}{t^{2} + 1} y^{2} + \cos(t y)$ has a solution for any initial condition $y(t_{0}) = y_{0}$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+True. The function $y'$ (i.e. the right side of the ODE) is continuous at all $(t,y)$, so by Picard's theorem, there exists a solution (possibly several) through any $(t_{0},y_{0})$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1d} Let $y_{1}(t)$ be a solution to the IVP $y' = e^{t y} + t,y(0) = 1$, and let $y_{2}(t)$ be a solution to the IVP $y' = e^{t y} + 2 t,y(0) = 1$. Then for any $t \in \realsPositive$ (i.e. for any $t > 0$), $y_{1}(t) < y_{2}(t)$.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+True. The first term in the two IVPs, namely $e^{t y}$, is the same; the second term is $t$ and $2 t$. For $t > 0$, $t < 2 t$. Thus for $t > 0$, for any point $(t,y)$, the value of $y'$ given by the first IVP is strictly less than the value of $y'$ given by the second IVP. That is, starting at $(t_{0},y_{0}) = (0,1)$, and letting $t$ increase, the slope of the solution $y_{1}$ is always less than the slope of $y_{2}$, i.e. the solution $y_{1}$ grows less quickly than the solution $y_{2}$, i.e. for all $t > 0$, $y_{1}(t) < y_{2}(t)$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q1e} Every ODE has a closed-form solution (e.g., an explicit equation for $y(t)$).
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.75in}{% Begin solution.
+False.}% End solution.
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Matching : Slope fields to ODEs
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q2}}
+\label{sec : Math211 Summer2019 Exam1 Q2}
+
+(15 pt) Matching. Write the number of each slope field next to its corresponding ODE.
+
+\vspace{.25in}
+
+\begin{center}
+\begin{tabular}{c c c c c c c}
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_c}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_a}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_b}
+\\
+(1)
+&
+&
+(2)
+&
+&
+(3)
+\\
+\\
+\\
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_f}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_e}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.5]{\filePathGraphics Exam01_SlopeField_d}
+\\
+(4)
+&
+&
+(5)
+&
+&
+(6)
+\end{tabular}
+\end{center}
+
+\vspace{.25in}
+
+\begin{center}
+\begin{multicols}{2}
+\begin{tabular}{c c l}
+\_\_\spaceSolution{0in}{(2)}\_\_	&	(a)	&	$\displaystyle\frac{\intd y}{\intd t} = y^{2} - 5 y + 4$	\\
+\\
+\_\_\spaceSolution{0in}{(3)}\_\_	&	(b)	&	$\displaystyle\frac{\intd y}{\intd t} = y^{2} + 5 y + 4$	\\
+\\
+\_\_\spaceSolution{0in}{(1)}\_\_	&	(c)	&	$\displaystyle\frac{\intd y}{\intd t} = t^{2} + 5 t + 4$
+\end{tabular}
+\begin{tabular}{c c l}
+\_\_\spaceSolution{0in}{(6)}\_\_	&	(d)	&	$\displaystyle\frac{\intd y}{\intd t} = t \sin y$		\\
+\\
+\_\_\spaceSolution{0in}{(5)}\_\_	&	(e)	&	$\displaystyle\frac{\intd y}{\intd t} = y \sin t$		\\
+\\
+\_\_\spaceSolution{0in}{(4)}\_\_	&	(f)	&	$\displaystyle\frac{\intd y}{\intd t} = \sin(t y)$		\\
+\end{tabular}
+\end{multicols}
+\end{center}
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Solve one or two ODEs (e.g., separable ODE, homogeneous IVPs).
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q3}}
+\label{sec : Math211 Summer2019 Exam1 Q3}
+
+(20 pt) For each of the following first-order ODEs, find the general solution.
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E1Q3a} $\displaystyle\frac{\intd y}{\intd t} = \frac{2 t + 1}{4 y^{3} + 4 y}$
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+This first-order nonhomogeneous nonlinear ODE is separable. Separating variables and integrating, we get
+\begin{align*}
+4 \int \left(y^{3} + y\right) \intd y
+&=
+\int \left(2 t + 1\right) \intd t
+\\
+y^{4} + 2 y^{2}
+&=
+t^{2} + t + c_{1},
+\end{align*}
+for $c \in \reals$. Completing the square on the left, we get
+\begin{align*}
+y^{4} + 2 y^{2}
+=
+\left(y^{4} + 2 y^{2} + 1\right) - 1
+=
+\left(y^{2} + 1\right)^{2} - 1.
+\end{align*}
+Solving for $y$, and letting $c = c_{1} + 1$, we conclude that
+\begin{align*}
+y(t)
+=
+\pm{}\sqrt{-1 + \sqrt{t^{2} + t + c}}.
+\end{align*}
+Note that the inner square root originally has a $\pm$ factor in front, but to take the second (i.e. outer) square root, we must choose $+$, so that what we're taking the square root of is nonnegative.}% End solution.
+
+
+% Farlow Problem 2.2.14
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q3b} $\displaystyle(t^{2} + 9) y' + t y = 0$
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+This first-order homogeneous linear ODE is also separable. Separating variables and integrating, we get
+\begin{align*}
+y'
+&=
+-\frac{t}{t^{2} + 9} y
+\\
+\int y^{-1} \spaceIntd \intd y
+&=
+-\int \frac{t}{t^{2} + 9} \spaceIntd \intd t
+\\
+\ln\abs{y}
+&=
+-\frac{1}{2} \ln\abs{t^{2} + 9} + c_{1}
+=
+\ln\abs{t^{2} + 9}^{-\frac{1}{2}} + c_{1},
+\end{align*}
+where $c_{1} \in \reals$. Note that $\abs{t^{2} + 9} > 0$ for all $t \in \reals$, so we may drop the absolute value on the right. Exponentiating both sides gives
+\begin{align*}
+\abs{y}
+=
+\left(t^{2} + 9\right)^{-\frac{1}{2}} e^{c_{1}}
+=
+c_{2} \left(t^{2} + 9\right)^{-\frac{1}{2}},
+\end{align*}
+where $c_{2} \in \realsPositive$. This is an equation for $\abs{y}$, so $y$ can be either positive or negative, which we can capture by replacing $c_{2} \in \realsPositive$ with $c_{3} \in \reals \setminus \{0\}$. However, we can check that $y(t) \equiv 0$, i.e. the zero function, is also a solution to the original ODE, so in fact $c_{3}$ can be any real number, call it $c$. We conclude that the general solution is
+\begin{align*}
+y(t)
+=
+c \left(t^{2} + 9\right)^{-\frac{1}{2}},
+\end{align*}
+for any $c \in \reals$.}% End solution.
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Walk through application of nonhomogeneous principle in three steps ($y_{h}$, $y_{p}$, IVP)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q4}}
+\label{sec : Math211 Summer2019 Exam1 Q4}
+
+(24 pt) Consider the following first-order nonhomogeneous linear ODE:
+\begin{align}
+y' - 4 y
+=
+t e^{6 t}.%
+\label{eq : E1Q4 ODE}
+\end{align}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E1Q4a} (10 pt) Find the general solution to the corresponding homogeneous ODE.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The corresponding homogeneous ODE is
+\begin{align*}
+y' - 4 y
+=
+0.
+\end{align*}
+This is ODE is separable:
+\begin{align*}
+y^{-1} \spaceIntd \intd y
+&=
+4 \spaceIntd \intd t
+\\
+\ln\abs{y}
+&=
+4 t + c_{1}
+\\
+y_{h}
+&=
+c_{2} e^{4 t},
+\end{align*}
+where $c_{2} \in \reals$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q4b} (10 pt) Find the general solution to the nonhomogeneous ODE \eqref{eq : E1Q4 ODE}.
+\end{enumerate}
+
+\spaceSolution{3.5in}{% Begin solution.
+Using variation of parameters, we guess a particular solution of the form
+\begin{align*}
+y_{p}
+=
+v e^{4 t},
+\end{align*}
+where $v(t)$ is an unknown function of $t$. Plugging this into the original ODE \eqref{eq : E1Q6 ODE}, we get
+\begin{align*}
+t e^{6 t}
+=
+y_{p}' - 4 y_{p}
+=
+\left(v' e^{4 t} + 4 v e^{4 t}\right) - 4 \left(v e^{4 t}\right)
+=
+v' e^{4 t}.
+\end{align*}
+Solving for $v'$, we get
+\begin{align*}
+v'
+=
+e^{-4 t} \left(t e^{6 t}\right)
+=
+t e^{2 t}.
+\end{align*}
+Integrating both sides with respect to $t$ --- using integration by parts on the right, with
+\begin{align*}
+u
+=
+t,
+&&
+\intd v
+=
+e^{2 t} \spaceIntd \intd t,
+\end{align*}
+and thus
+\begin{align*}
+\intd u
+=
+\intd t,
+&&
+v
+=
+\frac{1}{2} e^{2 t}
+\end{align*}
+--- we find
+\begin{align*}
+v
+=
+\int t e^{2 t} \spaceIntd \intd t
+=
+\frac{1}{2} t e^{2 t} - \frac{1}{2} \int e^{2 t} \spaceIntd \intd t
+=
+\frac{1}{2} t e^{2 t} - \frac{1}{4} e^{2 t} + c_{0},
+\end{align*}
+where $c_{0} \in \reals$. Because we're looking for a (i.e. any) particular solution, we may choose $c_{0}$ to be any value we like. Let's make our lives easy and choose $c_{0} = 0$. Then
+\begin{align*}
+y_{p}
+=
+v e^{4 t}
+=
+\frac{1}{2} t e^{6 t} - \frac{1}{4} e^{6 t}
+=
+\frac{1}{4} \left(2 t - 1\right) e^{6 t}.
+\end{align*}
+By the nonhomogeneous principle, the general solution $y$ to the ODE \eqref{eq : E1Q6 ODE} is
+\begin{align}
+y(t)
+=
+y_{p} + y_{h}
+=
+\frac{1}{4} \left(2 t - 1\right) e^{6 t} + c_{2} e^{4 t}.%
+\label{eq: E1Q4 General Solution}
+\end{align}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q4c} (4 pt) Find the particular solution of the solution family you gave in part \ref{itm : E1Q4b} that satisfies the initial condition $y(0) = 1$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Applying the initial condition to our general solution \eqref{eq: E1Q4 General Solution}, we find
+\begin{align*}
+1
+\seteq
+y(0)
+=
+\frac{1}{4} (0 - 1) + c_{2}
+&&
+\Leftrightarrow
+&&
+c_{2}
+=
+\frac{5}{4}.
+\end{align*}
+Thus the particular solution to the IVP with ODE \eqref{eq : E1Q4 ODE} and initial condition $y(0) = 1$ is
+\begin{align*}
+y(t)
+=
+\frac{1}{4} \left(2 t - 1\right) e^{6 t} + \frac{5}{4} e^{4 t}.
+\end{align*}}% End solution.
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Nonlinear : Phase-line and stability analysis of equilibria
+% Farlow Problem 2.5.35
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q5}}
+\label{sec : Math211 Summer2019 Exam1 Q5}
+
+(16 pt) Consider the one-parameter family of first-order nonlinear ODEs
+\begin{align}
+\frac{\intd y}{\intd t}
+=
+y^{3} + \alpha y,%
+\label{eq : E1Q5 ODE}
+\end{align}
+where the parameter $\alpha$ is allowed to take any value in $\reals$.
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E1Q5a} (8 pt) Show that for $\alpha \geq 0$, the ODE \eqref{eq : E1Q5 ODE} has a unique equilibrium, and that it is unstable.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Recall that an equilibrium solution is a solution $y(t)$ that does not change with $t$; i.e. the function $y$ is constant; i.e. $y' = 0$. For a first-order separable ODE $y' = f(t) g(y)$, equilibrium solutions can be found by setting $g(y) = 0$ and solving for $y$.
+
+The right side of the ODE \eqref{eq : E1Q5 ODE} factors as
+\begin{align*}
+\frac{\intd y}{\intd t}
+=
+y (y^{2} + \alpha).
+\end{align*}
+We see that the constant function $y = 0$ is always an equilibrium solution. The second factor $y^{2} + \alpha$ has...
+\begin{itemize}
+\item ...no real roots when $\alpha > 0$.
+\item ...a repeated root of algebraic multiplicity $2$ at $y = 0$ when $\alpha = 0$.
+\item ...two distinct real roots of algebraic multiplicity $1$ at $y = \pm\sqrt{-\alpha}$ when $\alpha < 0$.
+\end{itemize}
+Thus when $\alpha \geq 0$, the ODE \eqref{eq : E1Q5 ODE} has a unique equilibrium solution, $y \equiv 0$. Moreover, in this case, if $y \neq 0$, then $y^{2} + \alpha > 0$, so the sign of $y'$ matches the sign of $y$. That is, $y' < 0$ if $y < 0$, and $y' > 0$ if $y > 0$. Thus in this case, $y \equiv 0$ is an unstable equilibrium.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E1Q5b} (8 pt) Show that for $\alpha < 0$, the ODE \eqref{eq : E1Q5 ODE} has three equilibria, at $0$ and $\pm\sqrt{-\alpha}$. Classify the stability of each equilibrium.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+In part \ref{itm : E1Q5a} we found that when $\alpha < 0$, the ODE \eqref{eq : E1Q5 ODE} has three distinct equilibrium solutions, $y \equiv 0$ and $y \equiv \pm{}\sqrt{-\alpha}$. By analyzing the sign of each factor (e.g., sign lines), or by evaluating $y'$ at intermediate points, we find that
+\begin{itemize}
+\item $y \equiv -\sqrt{-\alpha}$ is unstable.
+\item $y \equiv 0$ is stable.
+\item $y \equiv \sqrt{-\alpha}$ is unstable.
+\end{itemize}
+In particular, notice that when $\alpha$ passes from negative to positive, the stability of the equilibrium solution $y \equiv 0$ changes.}% End solution.
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% Dr. Wang's Picard's theorem application
+% (omitted) Application : growth equation or mixing problem?
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam1 Q6}}
+\label{sec : Math211 Summer2019 Exam1 Q6}
+
+(10 pt) In Class 5 (Friday 12 July) we argued that the first-order nonhomogeneous linear ODE
+\begin{align}
+y' - y
+=
+t%
+\label{eq : E1Q6 ODE}
+\end{align}
+has the general solution
+\begin{align}
+y(t)
+=
+-t - 1 + c e^{t},%
+\label{eq : E1Q6 General Solution}
+\end{align}
+where $c \in \reals$. The question was posed: How do we know \eqref{eq : E1Q6 General Solution} captures \emph{all} the solutions to \eqref{eq : E1Q6 ODE}?
+
+We gave one argument:
+\begin{quote}
+The solutions to the corresponding homogeneous ODE form a one-dimensional vector space over $\reals$ (as we will see), and the nonhomogeneous principle guarantees that any solution to \eqref{eq : E1Q6 ODE} has the form $y = y_{p} + y_{h}$.
+\end{quote}
+Give another argument, using Picard's theorem about existence and uniqueness of solutions. 
+\fontHint{Consider any point $(t_{0},y_{0})$. Is there a solution to \eqref{eq : E1Q6 ODE} of the form \eqref{eq : E1Q6 General Solution} that passes through $(t_{0},y_{0})$? It may help to sketch some solutions $c e^{t}$ to the corresponding homogeneous ODE.}
+
+\spaceSolution{6in}{% Begin solution.
+Allowing $c$ to be any real number, we see that the solution curves $y_{h}(t) = c e^{t}$ to the corresponding homogeneous ODE fill the $(t,y)$ plane. That is, through any point $(t,y)$, we can find such a curve. Graphically, adding the particular solution $y_{p}(t) = -t - 1$ of the nonhomogeneous ODE \eqref{eq : E1Q6 ODE} to these solutions to the homogeneous ODE corresponds to distorting this family of curves so that the line $-t - 1$ plays the role of $y = 0$. The resulting general solutions $y(t) = y_{p} + y_{h}$, given by \eqref{eq : E1Q6 General Solution}, still fill the plane.
+
+We can check that the ODE \eqref{eq : E1Q6 ODE} satisfies the hypotheses of both the existence and uniqueness part of Picard's theorem:
+\begin{itemize}
+\item $y' = t + y$ is continuous everywhere, guaranteeing existence of a solution given any initial condition.
+\item $\frac{\partial}{\partial y} y' = 1$ is continuous everywhere, guaranteeing uniqueness of these solutions.
+\end{itemize}
+The conclusion of our qualitative, graphical analysis above illustrates the existence part of Picard's theorem: Through any point $(t,y)$, we could find the graph of a curve given by \eqref{eq : E1Q6 General Solution}. The uniqueness part of Picard's theorem says there can be no other solutions. Thus, the family of general solutions \eqref{eq : E1Q6 General Solution} indeed captures all solutions to \eqref{eq : E1Q6 ODE}.}% End solution.

@@ -1,0 +1,39 @@
+%
+% Quiz 05 : 2019-07-12 (F)
+% For a discussion of the function f(t,y), see https://math.stackexchange.com/questions/1391544/differentiable-but-not-continuously-differentiable
+%
+\section{Exercise}
+
+(2 pt) Consider the first-order IVP
+\begin{align*}
+y'
+=
+t \sqrt[3]{y} + \cos t^{2},
+&&
+y(1)
+=
+0.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) What, if anything, can we conclude about existence of solutions to this IVP? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin spaceSolution.
+The expression for $y'$ is continuous, so Picard's theorem implies that there exists a solution (i.e. at least one solution) to this IVP on some $t$-interval around $t = 1$.}% End spaceSolution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) What, if anything, can we conclude about uniqueness of solutions to this IVP? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin spaceSolution.
+We compute
+\begin{align*}
+\frac{\partial (y')}{\partial y}
+=
+\frac{\partial}{\partial y}\left(t \sqrt[3]{y} + \cos t^{2}\right)
+=
+\frac{t}{3 \sqrt[3]{y^{2}}}.
+\end{align*}
+This function is not defined at $y = 0$, therefore it cannot be continuous at the point $(t,y) = (1,0)$. The uniqueness statement of Picard's theorem requires that this partial derivative be continuous, so we can't use Picard's theorem to conclude anything about uniqueness.}% End spaceSolution.

@@ -1,0 +1,41 @@
+%
+% Quiz 08 : 2019-07-17 (W)
+%
+\section{Exercise}
+
+(2 pt) Consider the 1st-order autonomous ODE
+\begin{align}
+\frac{\intd y}{\intd t}
+=
+-(y + 1) (y - 1)^{2} (y - 3).%
+\label{eq : Quiz 08 ODE}
+\end{align}
+Identify the equilibrium solutions, and classify the stability of each. (Mind the leading negative sign in this ODE!)
+
+\spaceSolution{5in}{%Begin solution.
+By definition, equilibrium solutions are constant functions $y(t) \equiv c$ that solve the given ODE. For the ODE \eqref{eq : Quiz 08 ODE}, the equilibrium solutions are $y \equiv -1$, $y \equiv 1$, and $y \equiv 3$. By using the ODE \eqref{eq : Quiz 08 ODE} to compute the sign of the slope (e.g., for each factor, then multiplying all the results to get the slope $\frac{\intd y}{\intd t}$; or computing the value of \eqref{eq : Quiz 08 ODE} all at once using $y$-values in the open intervals cut out by the equilibrium solutions), and being careful with the coefficient $-1$ in \eqref{eq : Quiz 08 ODE}, we get the phase line\fontNeedsEdit{ (insert graphic of phase line)}
+\begin{align*}
+-\infty
+&&
+(-)
+&&
+-1
+&&
+(+)
+&&
+1
+&&
+(+)
+&&
+3
+&&
+(-)
+&&
++\infty.
+\end{align*}
+We conclude that the equilibrium solutions and their stability are
+\begin{itemize}
+\item $y \equiv -1$ : unstable
+\item $y \equiv 1$ : semistable
+\item $y \equiv 3$ : stable
+\end{itemize}}% End solution.

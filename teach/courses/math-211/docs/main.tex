@@ -1,0 +1,171 @@
+\documentclass[oneside,english,12pt]{article}
+\usepackage{geometry}
+%\geometry{a4paper}
+\geometry{letterpaper}
+\geometry{top=1in,bottom=1in,left=1in,right=1in,nohead}
+\setlength\parindent{0.25in}
+%\linespread{1.6}
+
+
+
+\newcommand{\documentTitle}{Syllabus}
+% Acceptable arguments:
+%    Expectations
+%    HowToReadMathEffectively
+%    Syllabus
+\newcommand{\filePathTexFiles}{TeX/}
+
+
+
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multicol}
+\usepackage{setspace}% Allows use of the \doublespacing command.
+   \onehalfspacing
+%   \doublespacing
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{xifthen}% Allows use of \ifthenelse commands.
+\usepackage{hyperref}
+
+
+
+% Sets fonts. Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+% http://www.tug.org/mactex/fonts/LaTeX_Preamble-Font_Choices.html
+
+\renewcommand{\rmdefault}{ppl}% rm
+\linespread{1.05}% Palatino needs more leading
+\usepackage[scaled]{helvet}% ss
+\usepackage{courier}% tt
+%\usepackage{euler}% math
+\usepackage{eulervm}% math --- a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+
+
+
+\newcommand{\fontBookTitle}[1]{\emph{#1}}
+\newcommand{\fontExam}[1]{{\color{red}\textbf{#1}}}
+\newcommand{\fontForeignWord}[1]{\emph{#1}}
+\newcommand{\fontHoliday}[1]{{\color{blue}\emph{#1}}}
+\newcommand{\fontNeedsEdit}[1]{{\color{red}\emph{#1}}}
+\newcommand{\fontSectionNumber}[1]{{\color{brown}\textbf{#1}}}
+
+
+
+\definecolor{colorLink}{rgb}{0,0.2,0.6}
+
+
+
+\hypersetup{colorlinks,breaklinks,urlcolor=colorLink,linkcolor=colorLink}
+
+
+
+% Optional [runin] command --- \titleformat{secname}[runin] --- causes subsequent text to appear on same line as section title.
+
+\titleformat*{\paragraph}{\large\bfseries\sffamily}% Defines subsection headings; bfseries = bold, sffamily = sans serif.
+
+\titleformat
+{\section}% Command
+%[runin]% Shape: runin, etc.
+{\large\bfseries\sffamily}% Format: bfseries = bold, sffamily = sans serif
+{}% Label
+{0em}% Horizontal space from left margin
+{}% Before Code
+%[]% After code
+
+\titlespacing*{\section}
+{0em}% Horizontal space from left margin
+{1em}% Vertical space from preceding text
+{.5em}% Vertical space to subsequent text --OR-- if \titleformat uses optional [runin] argument, then 3 = horizontal space to subsequent text
+
+\titleformat
+{\subsection}% Command
+%[runin]% Shape: runin, etc.
+{\normalsize\bfseries\sffamily}% Format: bfseries = bold, sffamily = sans serif
+{}% Label
+{0em}% Horizontal space from left margin
+{}% Before Code
+%[]% After code
+
+\titlespacing*{\subsection}
+{0em}% Horizontal space from left margin
+{1em}% Vertical space from preceding text
+{.5em}% Vertical space to subsequent text --OR-- if \titleformat uses optional [runin] argument, then 3 = horizontal space to subsequent text
+
+
+
+
+
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\gradient}{grad}
+\DeclareMathOperator{\reals}{\mathbf{R}}
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{}% Clears any existing defaults.
+
+%\setlength{\oddsidemargin}{0pt}
+%\setlength{\topmargin}{0pt}
+\setlength{\headheight}{14pt}% Suggested headheight values: 14pt with 1 header line, 26pt with 2 header lines.
+\setlength{\headsep}{18pt}
+%\setlength{\textheight}{660pt}% Use with "a4paper" geometry.
+\setlength{\textheight}{630pt}% Use with "letterstyle" geometry.
+%\setlength{\textwidth}{500pt}
+\setlength{\marginparsep}{22pt}
+\setlength{\marginparwidth}{54pt}% Recommended settings: 54pt for 1in margins, 100pt for 2in margins.
+\setlength{\footskip}{24pt}
+%\setlength{\marginparpush}{5pt}
+%\setlength{\hoffset}{0pt}
+\setlength{\voffset}{0pt}
+
+\lhead{Rice University}
+\chead{}
+\rhead{Math 211 (Summer 2019)}
+\lfoot{}
+\cfoot{\thepage{} of \pageref{LastPage}}
+\rfoot{}
+
+
+
+
+
+\newcommand{\Year}{\the\year}
+
+\ifthenelse{\month < 10}{%
+   \newcommand{\Month}{0\the\month}%
+}%
+{%
+   \newcommand{\Month}{\the\month}%
+}%
+
+\ifthenelse{\day < 10}{%
+   \newcommand{\Day}{0\the\day}%
+}%
+{%
+   \newcommand{\Day}{\the\day}%
+}%
+
+
+
+
+
+\begin{document}
+
+
+
+%\pagestyle{empty}% Suppresses page numbers on all pages other than those with title, part, or chapter command. For such pages, use the \thispagestyle{empty} command.
+
+
+
+\input{\filePathTexFiles \documentTitle}
+
+
+
+\end{document}

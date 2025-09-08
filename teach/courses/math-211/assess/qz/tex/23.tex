@@ -1,0 +1,107 @@
+%
+% Quiz 23 : 2019-08-07 (W)
+%
+% Exercise 8.2.4 (p 483) in Farlow et al.
+%
+\section{Exercise}
+
+(5 pt) Solve the following nonhomogeneous 1st-order linear initial value problem, using the laplace transform:
+\begin{align}
+y' + y
+=
+e^{-t},
+&&
+y(0)
+=
+-1.%
+\label{eq : Quiz23 IVP}
+\end{align}
+\fontHint{Recall that, from the definition of the lapace transform,
+\begin{align*}
+\laplaceTransform\{y'\}(s)
+=
+s \laplaceTransform\{y\} - y(0).
+\end{align*}
+The following transform--inverse-transform pairs may be useful:
+\begin{align*}
+\laplaceTransform\left\{e^{a t}\right\}
+&=
+\frac{1}{s - a},
+\qquad
+s > a;
+&&
+\laplaceTransform\left\{t^{n} e^{a t}\right\}
+=
+\frac{n!}{(s - a)^{n + 1}},
+\qquad
+s > a.
+\end{align*}}
+
+\spaceSolution{5in}{% Begin solution.
+Applying the laplace transform to both sides of the ODE in \eqref{eq : Quiz23 IVP}, using the fact that the laplace transform is linear, we get
+\begin{align}
+\laplaceTransform\{y'\} + \laplaceTransform\{y\}
+=
+\laplaceTransform\{y' + y\}
+=
+\laplaceTransform\{e^{-t}\}.
+\label{eq : Quiz23 Laplace Transform Intermediate}
+\end{align}
+Denote
+\begin{align*}
+Y(s)
+=
+\laplaceTransform\{y\}.
+\end{align*}
+From the definition of the laplace transform, and using the given initial condition, we compute
+\begin{align*}
+\laplaceTransform\{y'\}
+=
+s \laplaceTransform\{y\} - y(0)
+=
+s Y(s) - (-1)
+=
+s Y(s) + 1.
+\end{align*}
+Using the transform--inverse-transform dictionary, we see that
+\begin{align*}
+\laplaceTransform\{e^{-t}\}
+=
+\laplaceTransform\{e^{(-1) t}\}
+=
+\frac{1}{s - (-1)}
+=
+\frac{1}{s + 1}.
+\end{align*}
+Substituting these results into \eqref{eq : Quiz23 Laplace Transform Intermediate}, we get
+\begin{align*}
+\left(s Y(s) + 1\right) + Y(s)
+=
+\frac{1}{s + 1}.
+\end{align*}
+Solving this equation for $Y(s)$, we find
+\begin{align}
+Y(s)
+=
+\frac{\frac{1}{s + 1} - 1}{s + 1}
+=
+\frac{1}{(s + 1)^{2}} - \frac{1}{s + 1}.%
+\label{eq : Quiz23 Y(s)}
+\end{align}
+We can't do partial fraction decomposition on fractions of this form. Nor do we need to. These transforms appear directly in our transform--inverse-transform dictionary: The first is the laplace transform of $t^{n} e^{a t}$, with $n = 1$ and $a = -1$; the second is the laplace transform of $e^{a t}$ with $a = -1$. Applying the inverse laplace transform $\laplaceTransform^{-1}$ to both sides of \eqref{eq : Quiz23 Y(s)}, and using the fact that $\laplaceTransform^{-1}$ is linear, we find
+\begin{align*}
+y
+&=
+\laplaceTransform^{-1}\left\{\laplaceTransform\left\{y\right\}\right\}
+=
+\laplaceTransform^{-1}\left\{Y(s)\right\}
+=
+\laplaceTransform^{-1}\left\{\frac{1}{(s + 1)^{2}} - \frac{1}{s + 1}\right\}
+\\
+&=
+\laplaceTransform^{-1}\left\{\frac{1}{(s + 1)^{2}}\right\} - \laplaceTransform^{-1}\left\{\frac{1}{s + 1}\right\}
+=
+t e^{-t} - e^{-t}.
+\end{align*}
+
+One can check that this function $y(t)$ indeed solves the IVP \eqref{eq : Quiz23 IVP}, by plugging it in and verifying that the equation is true. One can also check that we obtain the same solution $y(t)$ if we solve \eqref{eq : Quiz23 IVP} by other means, e.g., using an integrating factor, variation of parameters, or linearity combined with guessing a particular solution (in this case, one would have to guess $y_{p}(t) = t e^{-t}$).}% End solution.

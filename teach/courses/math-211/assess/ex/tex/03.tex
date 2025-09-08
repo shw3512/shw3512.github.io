@@ -1,0 +1,1581 @@
+%
+%
+%   Exercise 1
+%
+%
+
+% Theme : True/False (5 questions total)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q1}}
+\label{sec : Math211 Summer2019 Exam3 Q1}
+
+(10 pt) True/False. For each of the following statements, circle whether it is true or false. No justification is necessary (though you may find it beneficial to check your intuition).
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : E3Q1a} (2 pt) Let $V$ be a finite-dimensional vector space. The greatest number of linearly independent vectors in $V$ always equals the minimum number of vectors needed to span $V$. \fontHint{If you're not sure, play with a few toy examples, e.g., $V = \reals^{2},\reals^{3}$, etc. What do you find?}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. By definition, a basis of a vector space is a set of linearly independent vectors that spans the vector space. That is, a set of basis vectors is both linearly independent and a spanning set. If we add another vector to a basis, then the new set is no longer linearly independent; if we remove a vector from a basis, then the new set no longer spans the vector space. That is, a basis is both a maximal set of linearly independent vectors, and a minimal spanning set. Thus, the number of vectors in a basis gives both the greatest number of linearly independent vectors, and the minimum number of spanning vectors.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1b} (2 pt) Let $A$ be a square matrix, one of whose columns is a nontrivial linear combination of the others (i.e. not all coefficients in this linear combination are $0$). Then $0$ is an eigenvalue of $A$. \fontHint{Can we use the nontrivial linear combination to find an eigenvector for $0$?}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. View the columns of $A$ as column vectors $v_{1},\ldots,v_{n}$. By hypothesis, one of these columns, say column $n$, is a linear combination of the others, say $v_{n} = a_{1} v_{1} + \ldots + a_{n - 1} v_{n - 1}$. Then
+\begin{align*}
+A
+\begin{bmatrix}%
+a_{1}	\\
+\vdots	\\
+a_{n - 1}	\\
+-1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+|	&			&	|		&	|	\\
+v_{1}	&	\ldots	&	v_{n - 1}	&	v_{n}	\\
+|	&			&	|		&	|
+\end{bmatrix}%
+\begin{bmatrix}%
+a_{1}	\\
+\vdots	\\
+a_{n - 1}	\\
+-1
+\end{bmatrix}%
+=
+a_{1} v_{1} + \ldots + a_{n - 1} v_{n - 1} - v_{n}
+=
+\fontVector{0}
+=
+0
+\begin{bmatrix}%
+a_{1}	\\
+\vdots	\\
+a_{n - 1}	\\
+-1
+\end{bmatrix}%
+,
+\end{align*}
+where $\fontVector{0}$ denotes the $n \times 1$ zero vector. This shows that $\transpose{\begin{bmatrix}a_{1}&\ldots&a_{n - 1}&-1\end{bmatrix}}$ is an eigenvector of $A$ with associated eigenvalue $0$. (Note that the last entry of this vector is $-1 \neq 0$, so $\transpose{\begin{bmatrix}a_{1}&\ldots&a_{n - 1}&-1\end{bmatrix}}$ is not the zero vector, hence a valid eigenvector.)
+
+For example, in the $3 \times 3$ (square) matrix
+\begin{align*}
+A
+=
+\begin{bmatrix}
+1	&	0	&	1	\\
+0	&	1	&	1	\\
+0	&	0	&	0	\\
+\end{bmatrix}%
+,
+\end{align*}
+column 3 is a linear combination of columns 1 and 2, namely (using the above notation),
+\begin{align*}
+v_{3}
+=
+v_{1} + v_{2}.
+\end{align*}
+We compute
+\begin{align*}
+A
+\begin{bmatrix}
+1	\\
+1	\\
+-1
+\end{bmatrix}%
+=
+\begin{bmatrix}
+1	&	0	&	1	\\
+0	&	1	&	1	\\
+0	&	0	&	0	\\
+\end{bmatrix}%
+\begin{bmatrix}
+1	\\
+1	\\
+-1
+\end{bmatrix}%
+=
+\begin{bmatrix}
+0	\\
+0	\\
+0
+\end{bmatrix}%
+=
+0
+\begin{bmatrix}
+1	\\
+1	\\
+-1
+\end{bmatrix}%
+,
+\end{align*}
+so $\transpose{\begin{bmatrix}1&1&-1\end{bmatrix}}$ is an eigenvector of $A$ with associated eigenvalue $0$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1c} (2 pt) We can translate any $n$th-order linear ODE into an $n \times n$ $1$st-order linear system.
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. If the original $n$th-order linear ODE is
+\begin{align}
+a_{n}(t) y^{(n)} + \ldots + a_{0}(t) y
+=
+f(t),%
+\label{eq : E3Q1c nth Order ODE}
+\end{align}
+then we can make the change of variables $x_{i} = y^{(i)}$, for $i = 0,\ldots,n - 1$. Then one can check that \eqref{eq : E3Q1c nth Order ODE} can be written as the 1st-order $n \times n$ linear system
+\begin{align*}
+\begin{bmatrix}
+x_{0}		\\
+\vdots	\\
+x_{n - 1}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}
+0		&	1		&	0		&	\ldots	&	0		\\
+0		&	0		&	1		&	\ldots	&	0		\\
+\vdots	&	\vdots	&	\vdots	&	\ddots	&	\vdots	\\
+0		&	0		&	0		&	\ldots	&	1		\\
+-a_{0}(t)	&	-a_{1}(t)	&	-a_{2}(t)	&	\ldots	&	-a_{n}(t)
+\end{bmatrix}%
+\begin{bmatrix}
+x_{0}		\\
+\vdots	\\
+x_{n - 1}
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1d} (2 pt) Let $y_{1}(t)$ and $y_{2}(t)$ be solutions to the nonhomogeneous 3rd-order linear ODE $t y^{(3)} - e^{t} y' + y = \frac{t}{1 + t}$. Then $y_{2} - y_{1}$ is a solution to the corresponding homogeneous equation $t y^{(3)} - e^{t} y' + y = 0$. \fontHint{How do we check if something is a solution to an ODE?}
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+True. We can check that something is a solution to an ODE by plugging it into the ODE. Doing this for $y_{2} - y_{1}$, we compute
+\begin{align*}
+e^{t} (y_{2} - y_{1})' + (y_{2} - y_{1})
+&=
+e^{t} (y_{2}' - y_{1}') + (y_{2} - y_{1})
+\\
+&=
+\left(e^{t} y_{2}' + y_{2}\right) - \left(e^{t} y_{1}' + y_{1}\right)
+\\
+&=
+\frac{t}{1 + t} - \frac{t}{1 + t}
+=
+0,
+\end{align*}
+where in the first equality, we use linearity of the derivative; in the second equality, we rearrange terms; and in the third equality, we use the hypothesis that $y_{1}$ and $y_{2}$ are solutions to the given nonhomogeneous ODE.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : E3Q1e} (2 pt) Every ODE can be solved, i.e. we can always find a closed-form solution (e.g., an explicit equation for $y(t)$).
+\begin{center}
+\begin{tabular}{c c c}
+true	&	\hspace{1in}	&	false
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\spaceSolution{.5in}{% Begin solution.
+False.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 2
+%
+%
+
+% Theme : Solve nonhomogeneous 1st-order linear ODE.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q2}}
+\label{sec : Math211 Summer2019 Exam3 Q2}
+
+(12 pt) Consider the homogeneous 1st-order nonlinear ODE
+\begin{align}
+e^{-t} y' - y^{\frac{1}{5}}
+=
+0.%
+\label{eq : Math211 Summer2019 Exam3 Q2 ODE}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q2a} (2 pt) Show that the ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} has exactly one equilibrium solution. What is it? \fontHint{Recall that, by definition, an equilibrium solution is a solution $y(t)$ that does not depend on $t$.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+By definition, an equilibrium solution is a solution to the ODE (the ``solution'' part of ``equilibrium solution'') that does not change over time (the ``equilibrium'' part of ``equilibrium solution''), i.e. a constant function $y(t) \equiv a$ for some $a \in \reals$. For our ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE}, an equilibrium solution satisfies
+\begin{align*}
+0 - a^{\frac{1}{5}}
+=
+0
+&&
+\Leftrightarrow
+&&
+a
+=
+0.
+\end{align*}
+We conclude that \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} has a unique equilibrium solution, $y(t) \equiv 0$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q2b} (5 pt) Find all solutions to the initial value problem given by the ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} and the initial condition $y(0) = 0$. \fontHint{You should find at least one nonequilibrium solution.}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+The ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} is separable. Separating variables and solving, we have
+\begin{align*}
+y^{-\frac{1}{5}} y'
+=
+e^{t}
+&&
+\Leftrightarrow
+&&
+\frac{5}{4} y^{\frac{4}{5}}
+=
+e^{t} + c_{1}
+&&
+\Rightarrow
+&&
+y
+=
+\pm{}\left(\frac{4}{5} e^{t} + c_{2}\right)^{\frac{5}{4}},
+\end{align*}
+where $c_{1},c_{2} \in \reals$.% Begin footnote.
+\footnote{% Begin footnote.
+If we need to be careful, we'll note that $e^{t} + c_{1} \geq 0$ for all relevant values of $t$, so that the second equality makes sense. Hence $c_{2} = \frac{4}{5} c_{1} \geq -\frac{4}{5} e^{t}$, again for all relevant values of $t$. If $t$ is allowed to be any real number, than $c_{1},c_{2} \geq 0$.} % End footnote.
+Applying the initial condition to this general solution, we find
+\begin{align*}
+0
+=
+y(0)
+=
+\pm{}\left(\frac{4}{5} e^{0} + c_{2}\right)^{\frac{5}{4}}
+=
+\pm{}\left(\frac{4}{5} + c_{2}\right)^{\frac{5}{4}}
+&&
+\Leftrightarrow
+&&
+c_{2}
+=
+-\frac{4}{5}.
+\end{align*}
+Thus there are two (nonequilibrium) solutions to the given initial value problem (IVP):
+\begin{align*}
+y(t)
+=
+\pm{}\left(\frac{4}{5} \left(e^{t} - 1\right)\right)^{\frac{5}{4}}.
+\end{align*}
+Note that our equilibrium solution $y(t) \equiv 0$ from part \ref{itm : Math211 Summer2019 Exam3 Q2a} also solves the IVP.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q2c} (5 pt) Does your result to part \ref{itm : Math211 Summer2019 Exam3 Q2b} contradict your result to part \ref{itm : Math211 Summer2019 Exam3 Q2a}? How do these results relate to the existence and uniqueness statements of Picard's theorem? \fontHint{Picard's theorem, as we learned it, applies to 1st-order ODEs in the form $y' = f(t,y)$. Put \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} in this form.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Why didn't the equilibrium solution we found in part \ref{itm : Math211 Summer2019 Exam3 Q2a} appear in our analysis in part \ref{itm : Math211 Summer2019 Exam3 Q2b}? When we separated variables, we divided both sides of the given ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} by $y^{\frac{1}{5}}$. This division is a problem when $y(t) \equiv 0$ --- it is literally division by zero. So our analysis in part \ref{itm : Math211 Summer2019 Exam3 Q2b} implicitly assumed that $y$ is not the zero function --- precisely the ``missing'' solution.
+
+We can rewrite the original ODE \eqref{eq : Math211 Summer2019 Exam3 Q2 ODE} in the form $y' = f(t,y)$:
+\begin{align*}
+y'
+=
+e^{t} y^{\frac{1}{5}}.
+\end{align*}
+(Note that there are no division by zero issues with this rearrangement.) The right side of this equation is the product of two continuous functions, $e^{t}$ and $y^{\frac{1}{5}}$, hence is continuous, at all points $(t,y)$. Thus Picard's theorem ensures that a solution to any IVP exists. The partial derivative with respect to $y$ of the right side is
+\begin{align*}
+\frac{\partial}{\partial y}\left(e^{t} y^{\frac{1}{5}}\right)
+=
+\frac{1}{5} e^{t} y^{-\frac{4}{5}},
+\end{align*}
+which is not continuous at any point $(t,y)$ with $y = 0$. Thus the statement about uniqueness of solutions in Picard's theorem does not apply here: Solutions to our IVP may or may not be unique. In this case, our work in part \ref{itm : Math211 Summer2019 Exam3 Q2b} shows that they are not.}% End solution.
+
+% WolframAlpha code :
+% solve e^(-t) y' - y^(1/5) = 0
+% solve e^(-t) y' - y^(1/5) = 0,y(0) = 0
+
+
+
+
+
+%
+%
+%   Exercise 3
+%
+%
+
+% Theme : (see Exam 02, Exercise 5; see also Quiz 17)
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q3}}
+\label{sec : Math211 Summer2019 Exam3 Q3}
+
+(18 pt) Let $T$ be the linear map% Begin footnote.
+\footnote{Whenever we write a linear map between two vector spaces as a matrix, we are implicitly choosing a basis for each vector space. We can ignore this choice of bases for this problem. However, it's good to keep this general fact in mind.}% End footnote.
+\begin{align*}
+T
+:
+\reals^{4}
+&\rightarrow
+\reals^{3}
+\\
+\begin{bmatrix}
+x_{1}	\\
+x_{2}	\\
+x_{3}	\\
+x_{4}
+\end{bmatrix}
+&\mapsto
+\left[
+\begin{array}{r c r c r c r}
+x_{1}		&	+	&	2 x_{2}	&	-	&	x_{3}		&	+	&	x_{4}		\\
+2 x_{1}	&	+	&	4 x_{2}	&	-	&	2 x_{3}	&	+	&	2 x_{4}	\\
+3 x_{1}	&	+	&	5 x_{2}	&	-	&	4 x_{3}	&	+	&	2 x_{4}	
+\end{array}
+\right].
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q3a} (4 pt) Write the coefficient matrix $A$ for $T$, i.e. the matrix such that $A x = T(x)$, where $x$ is the $4 \times 1$ column matrix with entries $x_{1},x_{2},x_{3},x_{4}$. \fontHint{$T$ must output a vector in $\reals^{3}$, so $A x$ must be a $3 \times 1$ matrix. $x$ is $4 \times 1$. What do these imply about the order (dimensions) of $A$?}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The coefficient matrix is
+\begin{align*}
+A
+=
+\begin{bmatrix}
+1	&	2	&	-1	&	1	\\
+2	&	4	&	-2	&	2	\\
+3	&	5	&	-4	&	2
+\end{bmatrix}%
+.
+\end{align*}
+Check : We can compute that $A x$ gives the $3 \times 1$ matrix for $T(x)$, given in the statement of this exercise.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q3b} (10 pt) Find a basis for the image $\image(T)$. Find a basis for the kernel $\ker(T)$.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Row reducing our matrix $A$ from part \ref{itm : Math211 Summer2019 Exam3 Q3a}, we get
+\begin{align}
+\rref(A)
+=
+\begin{bmatrix}
+1	&	0	&	-3	&	-1	\\
+0	&	1	&	1	&	1	\\
+0	&	0	&	0	&	0
+\end{bmatrix}%
+.%
+\label{eq : Math211 Summer2019 Exam3 Q3 RREF}
+\end{align}
+
+\textbf{Image.} There are exactly two pivot columns, columns 1 and 2. (The number of pivot columns equals the dimension of the image.) The corresponding columns in the original matrix $A$ form a basis for the image:
+\begin{align*}
+\text{basis}(\image(T))
+=
+\left\{
+\begin{bmatrix}
+1	\\
+2	\\
+3
+\end{bmatrix}%
+,
+\begin{bmatrix}
+2	\\
+4	\\
+5
+\end{bmatrix}%
+\right\}.
+\end{align*}
+By definition, the image is a subspace of the codomain, in this case $\reals^{3}$. Note that the basis vectors listed here are $3 \times 1$ matrices, hence live in $\reals^{3}$, as required.
+
+\textbf{Kernel.} By definition, $\ker(T)$ is the set of vectors that $T$ maps to $0$. Translating this definition into matrices, $\ker(T)$ is the solution space of the matrix equation $A x = 0$, where $A x$ comes from our representation of $T(x)$ in part \ref{itm : Math211 Summer2019 Exam3 Q3a}; $x$ is a $4 \times 1$ column matrix of variables $x_{1},x_{2},x_{3},x_{4}$; and $0$ is the $3 \times 1$ zero matrix. The solution space of $A x = 0$ is equal to the solution space of $\rref(A) x = 0$ (because the elementary row operations yield equivalent systems). We can read the solutions to this last equation from $\rref(A)$ in \eqref{eq : Math211 Summer2019 Exam3 Q3 RREF}:
+\begin{align*}
+\ker(T)
+=
+\left\{
+\left[
+\begin{array}{r c r}
+3 x_{3}	&	+	&	x_{4}	\\
+-x_{3}	&	-	&	x_{4}	\\
+x_{3}		&		&		\\
+		&		&	x_{4}
+\end{array}
+\right]
+\st
+x_{3},x_{4} \in \reals
+\right\}
+=
+\Span
+\left\{
+\begin{bmatrix}
+3	\\
+-1	\\
+1	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}
+1	\\
+-1	\\
+0	\\
+1
+\end{bmatrix}%
+\right\}.
+\end{align*}
+By construction, the two vectors listed in this span are linearly independent, a fact we can also check directly.}% End solution.
+
+% WolframAlpha code :
+% row reduce {{1,2,-1,1},{2,4,-2,2},{3,5,-4,2}}
+% row reduce {{1,2,3},{2,4,5},{-1,-2,-4},{1,2,2}}
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q3c} (2 pt) Find the dimensions $\dim(\image(T))$ and $\dim(\ker(T))$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+In part \ref{itm : Math211 Summer2019 Exam3 Q3b} we found a basis for $\image(T)$, consisting of 2 vectors. Thus
+\begin{align*}
+\dim(\image(T))
+=
+2.
+\end{align*}
+Check : The number of pivot columns of $A$ (equivalently, of $\rref(A)$) equals the dimension of the image. Our RREF of $A$ had two pivots, confirming that $\dim(\image(T)) = 2$.
+
+In part \ref{itm : Math211 Summer2019 Exam3 Q3b} we found a basis for $\ker(T)$, consisting of 2 vectors. Thus
+\begin{align*}
+\dim(\ker(T))
+=
+2.
+\end{align*}
+Check : The number of nonpivot columns of $A$ (equivalently, of $\rref(A)$), corresponding to the number of free variables in the equation $A x = b$, equals the dimension of the kernel. Our RREF of $A$ had two nonpivot columns, confirming that $\dim(\ker(T)) = 2$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q3d} (2 pt) Confirm the rank--nullity theorem:
+\begin{align*}
+\dim(\text{domain}(T))
+=
+\dim(\image(T))
++
+\dim(\ker(T)).
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The domain of $T$ is the input space, i.e. $\reals^{4}$, so
+\begin{align*}
+\dim(\domain(T))
+=
+\dim(\reals^{4})
+=
+4.
+\end{align*}
+Applying our results above, we find
+\begin{align*}
+\dim(\domain(T))
+=
+4
+=
+2 + 2
+=
+\dim(\image(T)) + \dim(\ker(T)),
+\end{align*}
+confirming the rank--nullity theorem holds for $T$.}% End solution.
+
+
+
+
+
+%
+%
+%   Exercise 4
+%
+%
+
+% Theme : Solve three 1st-order linear systems
+% Phase planes drawn using online software at
+% https://aeb019.hosted.uark.edu/pplane.html
+% Alternative online software (no arrows, but trajectories) :
+% https://www.geogebra.org/m/utcMvuUy
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q4}}
+\label{sec : Math211 Summer2019 Exam3 Q4}
+
+(21 pt) For each of the following three homogeneous 1st-order $2 \times 2$ linear systems,
+\begin{enumerate}
+\item write the general solution, and
+\item circle the number of its phase plane (shown on the next page, in the $(x_{1},x_{2})$ plane).
+\end{enumerate}
+\fontHint{For the phase planes, recall that the sign of (the real part of) each eigenvalue relates to whether solutions move toward or away from the equilibrium at the origin.}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q4a} (7 pt) Phase plane :\hspace{.65in}(1)\hspace{1in}(2)\hspace{1in}(3)
+\begin{align*}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}
+3	&	-1	\\
+-1	&	3
+\end{bmatrix}%
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+Let $A$ denote the $2 \times 2$ coefficient matrix. Computing the eigenvalues, we find
+\begin{align*}
+0
+\seteq
+\det(A - \lambda I)
+=
+\det
+\begin{bmatrix}%
+3 - \lambda	&	-1			\\
+-1			&	3 - \lambda
+\end{bmatrix}%
+=
+\lambda^{2} - 6 \lambda + 8
+=
+(\lambda - 2) (\lambda - 4),
+\end{align*}
+so our two eigenvalues are $\lambda_{1} = 2$ and $\lambda_{2} = 4$. By solving the matrix equation $0 \seteq (A - \lambda I) v$ for $v$, we compute corresponding eigenvectors to be
+\begin{align*}
+v_{1}
+=
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+,
+&&
+v_{2}
+=
+\begin{bmatrix}%
+1	\\
+-1
+\end{bmatrix}%
+.
+\end{align*}
+Thus the general solution is
+\begin{align*}
+x(t)
+=
+c_{1} e^{2 t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
++
+c_{2} e^{4 t}
+\begin{bmatrix}%
+1	\\
+-1
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$.
+
+To describe the phase plane, we note the following.
+\begin{itemize}
+\item Both eigenvalues are real and positive, so the equilibrium (which is at the origin) is a source (unstable) --- all solutions move away from the equilibrium as time increases.
+\item The two eigenspaces are $\Span\{\transpose{\begin{bmatrix}1&1\end{bmatrix}}\}$ and $\Span\{\transpose{\begin{bmatrix}1&-1\end{bmatrix}}\}$. These correspond to lines in the phase plane, corresponding to the particular solutions with $c_{2} = 0$ and $c_{1} = 0$, respectively. (\fontNeedsEdit{(clarify the following) }These lines are a graphical incarnation of the fact that if a solution starts it an eigenspace, it will forever remain in that eigenspace.)
+\item As $t \uparrow +\infty$, the general solution more and more resembles the dominant term, $e^{4 t} \transpose{\begin{bmatrix}1&-1\end{bmatrix}}$; that is, as $t \uparrow +\infty$, all trajectories in the phase plane become parallel to $\transpose{\begin{bmatrix}1&-1\end{bmatrix}}$.
+\end{itemize}
+All this is consistent with the phase plane (2).
+
+N.B. One can also evaluate (the right side of) the ODE at various points $(x_{1},x_{2}) \in \reals^{2}$ to determine the phase plane.}% End solution.
+
+% WolframAlpha code :
+% {{1,1},{1,-1}}{{2,0},{0,4}}{{1,1},{1,-1}}^(-1)
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q4b} (7 pt) Phase plane :\hspace{.65in}(1)\hspace{1in}(2)\hspace{1in}(3)
+\begin{align*}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}
+-1	&	2	\\
+1	&	0
+\end{bmatrix}%
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.5in}{% Begin solution.
+We compute the eigenvalues and eigenvectors to be
+\begin{align*}
+\lambda_{1}
+=
+-2,
+\quad
+v_{1}
+=
+\begin{bmatrix}%
+2	\\
+-1
+\end{bmatrix}%
+;
+&&
+\lambda_{2}
+=
+1,
+\quad
+v_{2}
+=
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+Hence the general solution is
+\begin{align*}
+x(t)
+=
+c_{1} e^{-2 t}
+\begin{bmatrix}%
+2	\\
+-1
+\end{bmatrix}%
++
+c_{2} e^{t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$. Both eigenvalues are real, one negative and one positive, so the equilibrium (which is at the origin) is a saddle. This corresponds to the phase plane (3).
+
+Note how the lines corresponding to the eigenspaces appear in the phase plane.}% End solution.
+
+% WolframAlpha code :
+% {{1,2},{1,-1}}{{1,0},{0,-2}}{{1,2},{1,-1}}^(-1)
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q4c} (7 pt) Phase plane :\hspace{.65in}(1)\hspace{1in}(2)\hspace{1in}(3)
+\begin{align*}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}
+0	&	-2	\\
+6	&	-8
+\end{bmatrix}%
+\begin{bmatrix}
+x_{1}	\\
+x_{2}
+\end{bmatrix}%
+\end{align*}
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+We compute the eigenvalues and eigenvectors to be
+\begin{align*}
+\lambda_{1}
+=
+-6,
+\quad
+v_{1}
+=
+\begin{bmatrix}%
+1	\\
+3
+\end{bmatrix}%
+,
+&&
+\lambda_{2}
+=
+-2,
+\quad
+v_{2}
+=
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+Hence the general solution is
+\begin{align*}
+x(t)
+=
+c_{1} e^{-6 t}
+\begin{bmatrix}%
+1	\\
+3
+\end{bmatrix}%
++
+c_{2} e^{-2 t}
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$. Both eigenvalues are real and negative, so the equilibrium (which is at the origin) is a sink (stable) --- all solutions approach the origin as time increases. This corresponds to phase plane (1).
+
+Note how the lines corresponding to the eigenspaces appear in the phase plane. As $t \uparrow +\infty$, the term of the general solution with $e^{-6 t}$ goes to zero (more precisely, to the zero vector) faster than the term with $e^{-2 t}$. Thus, as $t \uparrow +\infty$, all trajectories in the phase plane become parallel to the eigenspace associated with the second term, i.e. parallel to $\transpose{\begin{bmatrix}1&-1\end{bmatrix}}$. This is indeed the behavior we observe in phase plane (1).}% End solution.
+
+% WolframAlpha code :
+% {{1,1},{1,3}}{{-2,0},{0,-6}}{{1,1},{1,3}}^(-1)
+
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[scale=0.25]{\filePathGraphics Exam03_PhasePlane_4c}
+&
+\hspace{.15in}
+&
+\includegraphics[scale=0.25]{\filePathGraphics Exam03_PhasePlane_4a}
+\\
+(1)	&		&	(2)	\\
+\\
+\includegraphics[scale=0.25]{\filePathGraphics Exam03_PhasePlane_4b}
+&
+
+\\
+(3)	&	
+\end{tabular}
+\caption{Phase planes for Exercise \ref{sec : Math211 Summer2019 Exam3 Q4}. Arrows indicate direction.}
+\label{fig : Math211 Summer2019 Exam3 Q4 Phase Planes}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+%
+%
+%   Exercise 5
+%
+%
+
+% Theme : Play with 2nd-order linear ODE with repeated eigenvalue.
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q5}}
+\label{sec : Math211 Summer2019 Exam3 Q5}
+
+(25 pt) Consider the homogeneous 2nd-order linear ODE
+\begin{align}
+2 y'' + 4 y' + 2 y
+=
+0.%
+\label{eq : Math211 Summer2019 Exam3 Q5 ODE}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q5a} (3 pt) Translate \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE} into a homogeneous 1st-order $2 \times 2$ linear system. \fontHint{Use the change of variables $x_{i} = y^{(i)}$, as we've learned. Be careful --- mind the coefficient on $y''$ in \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}.}
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+Let
+\begin{align*}
+x_{0}
+=
+y,
+&&
+x_{1}
+=
+y'.
+\end{align*}
+Then, using the definition of our new variables $x_{i}$ and the original ODE \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}, we compute
+\begin{align*}
+x_{0}'
+=
+y'
+=
+x_{1},
+&&
+x_{1}'
+=
+y''
+=
+-y - 2 y'
+=
+-x_{0} - 2 x_{1},
+\end{align*}
+which we can write as the matrix equation
+\begin{align*}
+\begin{bmatrix}
+x_{0}'	\\
+x_{1}'
+\end{bmatrix}
+=
+\left[
+\begin{array}{r c r}
+		&		&	x_{1}		\\
+-x_{0}	&	-	&	2 x_{1}
+\end{array}
+\right]
+=
+\begin{bmatrix}
+0	&	1	\\
+-1	&	-2
+\end{bmatrix}
+\begin{bmatrix}
+x_{0}	\\
+x_{1}
+\end{bmatrix}%
+.
+\end{align*}
+This is our desired homogeneous 1st-order $2 \times 2$ linear system.
+
+Let $\fontMatrix{A}$ denote the $2 \times 2$ matrix of coefficients, and let $\fontMatrix{x} = \transpose{\begin{bmatrix}x_{0}&x_{1}\end{bmatrix}}$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q5b} (6 pt) Show that this ODE (either \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE} or its equivalent $2 \times 2$ system you found in part \ref{itm : Math211 Summer2019 Exam3 Q5a}) has a repeated eigenvalue $\lambda = -1$, and that the associated eigenspace has dimension $1$ (i.e. we can find at most one linearly independent eigenvector with eigenvalue $-1$). Write an eigenvector, call it $\fontMatrix{v}_{1}$. \fontHint{You do not have to use part \ref{itm : Math211 Summer2019 Exam3 Q5a} to compute the eigenvalues; if preferred, you can do this straight from \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}.}
+
+We say that $-1$ is an eigenvalue with \fontDefWord{algebraic multiplicity} $2$ and \fontDefWord{geometric multiplicity} $1$. 
+\end{enumerate}
+
+\spaceSolution{4in}{% Begin solution.
+Either by substituting $\lambda^{i}$ for $y^{(i)}$ in the original ODE \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE} and dividing the equation by $2$, or by computing $\det(\lambda \fontMatrix{I} - \fontMatrix{A})$ for the coefficient matrix $\fontMatrix{A}$ in part \ref{itm : Math211 Summer2019 Exam3 Q5a}, we get the characteristic polynomial
+\begin{align*}
+p(\lambda)
+=
+\lambda^{2} + 2 \lambda + 1
+=
+(\lambda + 1)^{2}.
+\end{align*}
+The two roots of $p(\lambda)$ are both $-1$, i.e. $-1$ is an eigenvalue with algebraic multiplicity $2$.
+
+To compute the eigenspace $\eigenspace(\fontMatrix{A},-1)$ of $\fontMatrix{A}$ associated to the eigenvalue $-1$, we find the solution set of the matrix equation
+\begin{align*}
+\fontMatrix{A} \fontMatrix{v}
+=
+\lambda \fontMatrix{v}
+&&
+\Leftrightarrow
+&&
+(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}
+=
+\fontMatrix{0}.
+\end{align*}
+We can find the solution set by applying the row reduction algorithm to the augmented matrix
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+\fontMatrix{A} - \lambda \fontMatrix{I}	&	\fontMatrix{0}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	0	\\
+-1	&	-1	&	0
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} + R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	0	\\
+0	&	0	&	0
+\end{array}
+\right].
+\end{align*}
+From this reduced row echelon form (RREF) matrix, we can read off the solution space:% Begin footnote.
+\footnote{Note that this solution set $\eigenspace(\fontMatrix{A},-1)$ is the kernel of the matrix $\fontMatrix{A} - \lambda \fontMatrix{I}$, with $\lambda = -1$.}% End footnote.
+\begin{align*}
+\eigenspace(\fontMatrix{A},-1)
+=
+\Span\left\{
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}
+\right\}.
+\end{align*}
+We see that the solution set $\eigenspace(\fontMatrix{A},-1)$ is a subspace (of $\reals^{2}$) of dimension $1$. The dimension tells us that within this subspace, the largest set of linearly independent (eigen)vectors we can build has $1$ vector. Let's choose
+\begin{align*}
+\fontMatrix{v}_{1}
+=
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q5c} (6 pt) Using the $2 \times 2$ coefficient matrix $\fontMatrix{A}$ from part \ref{itm : Math211 Summer2019 Exam3 Q5a}, our eigenvalue $\lambda = -1$, and our eigenvector $\fontMatrix{v}_{1}$ from part \ref{itm : Math211 Summer2019 Exam3 Q5b}, find a vector $\fontMatrix{v}_{2} \in \reals^{2}$ that solves
+\begin{align}
+(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}_{2}
+=
+\fontMatrix{v}_{1}.%
+\label{eq : Math211 Summer2019 Exam3 Q5 Generalized Eigenvector}
+\end{align}
+\fontHint{View the two entries of the $2 \times 1$ vector $\fontMatrix{v}_{2}$ as unknown variables, and view \eqref{eq : Math211 Summer2019 Exam3 Q5 Generalized Eigenvector} as a system of equations. Solve this system.}
+
+The vector $\fontMatrix{v}_{2}$ is called a \fontDefWord{generalized eigenvector} of $\fontMatrix{A}$ associated to the eigenvalue $-1$.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+Writing out the matrix equation \eqref{eq : Math211 Summer2019 Exam3 Q5 Generalized Eigenvector}, with the $2 \times 1$ matrix $\fontMatrix{v}_{2}$ as our unknown, we have
+\begin{align*}
+\begin{bmatrix}
+1	&	1	\\
+-1	&	-1
+\end{bmatrix}
+\begin{bmatrix}
+v_{1}	\\
+v_{2}
+\end{bmatrix}
+=
+\left(\fontMatrix{A} - \lambda \fontMatrix{I}\right) \fontMatrix{v}_{2}
+=
+\fontMatrix{v}_{1}
+=
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}%
+.
+\end{align*}
+We can find the solution set to this system of equations by applying the row reduction algorithm to the augmented matrix:
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+\fontMatrix{A} - \lambda \fontMatrix{I}	&	\fontMatrix{v}_{1}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	1	\\
+-1	&	-1	&	-1
+\end{array}
+\right]
+\xrightarrow{R_{2} = R_{2} + R_{1}}
+\left[
+\begin{array}{c c;{2pt/2pt}c}
+1	&	1	&	1	\\
+0	&	0	&	0
+\end{array}
+\right].
+\end{align*}
+From this RREF matrix, we read off the solution set to be
+\begin{align*}
+\left\{
+\begin{bmatrix}
+1 - v_{2}	\\
+v_{2}
+\end{bmatrix}
+\st
+v_{2} \in \reals\right\}
+=
+\begin{bmatrix}
+1	\\
+0
+\end{bmatrix}
++
+\Span\left\{
+\begin{bmatrix}
+-1	\\
+1
+\end{bmatrix}
+\right\}
+=
+\begin{bmatrix}
+1	\\
+0
+\end{bmatrix}
++
+\eigenspace(\fontMatrix{A},-1).
+\end{align*}
+Any vector from this set will do. Let's choose
+\begin{align*}
+\fontMatrix{v}_{2}
+=
+\begin{bmatrix}
+1	\\
+0
+\end{bmatrix}
++
+\begin{bmatrix}
+-1	\\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0	\\
+1
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q5d} (6 pt) Using our eigenvalue $\lambda = -1$ and our vectors $\fontMatrix{v}_{1},\fontMatrix{v}_{2}$, show that the $2 \times 1$ matrix functions
+\begin{align*}
+\fontMatrix{X}_{1}(t)
+=
+e^{\lambda t} \fontMatrix{v}_{1}
+&&
+\text{and}
+&&
+\fontMatrix{X}_{2}(t)
+=
+e^{\lambda t} (t \fontMatrix{v}_{1} + \fontMatrix{v}_{2})
+\end{align*}
+are solutions to our linear system in part \ref{itm : Math211 Summer2019 Exam3 Q5a}.
+\end{enumerate}
+
+\spaceSolution{3in}{% Begin solution.
+First let's define these two $2 \times 1$ matrix functions explicitly:
+\begin{align}
+\fontMatrix{X}_{1}(t)
+=
+e^{-t}
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}%
+,
+&&
+\fontMatrix{X}_{2}(t)
+=
+e^{-t}
+\left(
+t
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}%
++
+\begin{bmatrix}
+0	\\
+1
+\end{bmatrix}%
+\right)
+=
+e^{-t}
+\begin{bmatrix}
+t	\\
+-t + 1
+\end{bmatrix}%
+.%
+\label{eq : Math211 Summer2019 Exam3Q5 Basis 1 Of Solution Space}
+\end{align}
+To show that these are solutions to our linear system in part \ref{itm : Math211 Summer2019 Exam3 Q5a}, we plug them into that linear system, and verify the equation holds. We compute
+\begin{align*}
+\fontMatrix{X}_{1}'(t)
+=
+-e^{-t}
+\begin{bmatrix}%
+1	\\
+-1
+\end{bmatrix}%
+=
+e^{-t}
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+\end{align*}
+and (doing the matrix multiplication, noting that $e^{-t}$ is a scalar, or more precisely, a scalar-valued function)
+\begin{align*}
+\fontMatrix{A} \fontMatrix{X}_{1}(t)
+=
+\begin{bmatrix}%
+0	&	1	\\
+-1	&	-2
+\end{bmatrix}%
+\left(
+e^{-t}
+\begin{bmatrix}%
+1	\\
+-1
+\end{bmatrix}%
+\right)
+=
+e^{-t}
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+We find that $\fontMatrix{X}_{1}'(t) = \fontMatrix{A} \fontMatrix{X}_{1}(t)$, so by definition, $\fontMatrix{X}_{1}(t)$ is a solution to our system in part \ref{itm : Math211 Summer2019 Exam3 Q5a}.
+
+Similarly, for $\fontMatrix{X}_{2}(t)$ we compute (using the product rule)
+\begin{align*}
+\fontMatrix{X}_{2}'(t)
+=
+\begin{bmatrix}%
+t e^{-t}		\\
+(-t + 1) e^{-t}
+\end{bmatrix}%
+'
+=
+\begin{bmatrix}%
+e^{-t} - t e^{-t}		\\
+-e^{-t} - (-t + 1) e^{-t}
+\end{bmatrix}%
+=
+e^{-t}
+\begin{bmatrix}%
+1 - t			\\
+-1 - (-t + 1)
+\end{bmatrix}%
+=
+e^{-t}
+\begin{bmatrix}%
+1 - t	\\
+-2 + t
+\end{bmatrix}%
+\end{align*}
+and (doing the matrix multiplication, again noting that $e^{-t}$ is a scalar)
+\begin{align*}
+\fontMatrix{A} \fontMatrix{X}_{2}(t)
+=
+\begin{bmatrix}%
+0	&	1	\\
+-1	&	-2
+\end{bmatrix}%
+\left(
+e^{-t}
+\begin{bmatrix}%
+t	\\
+-t + 1
+\end{bmatrix}%
+\right)
+=
+e^{-t}
+\begin{bmatrix}%
+-t + 1	\\
+-t - 2(-t + 1)
+\end{bmatrix}%
+=
+e^{-t}
+\begin{bmatrix}%
+-t + 1	\\
+t - 2
+\end{bmatrix}%
+.
+\end{align*}
+We find that $\fontMatrix{X}_{2}'(t) = \fontMatrix{A} \fontMatrix{X}_{2}(t)$, so by definition, $\fontMatrix{X}_{2}(t)$ is a solution to our system in part \ref{itm : Math211 Summer2019 Exam3 Q5a}.}% End solution.
+
+
+
+%\newpage
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q5e} (4 pt) Try to translate the general solution of our linear system in part \ref{itm : Math211 Summer2019 Exam3 Q5a}, i.e. the linear combination
+\begin{align*}
+a_{1} \fontMatrix{X}_{1}(t) + a_{2} \fontMatrix{X}_{2}(t),
+\end{align*}
+into the general solution $y(t)$ of our original 2nd-order ODE \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}. \fontHint{Note that rows 1 and 2 of each $\fontMatrix{X}_{i}(t)$ are $x_{0}$ and $x_{1}$, respectively. Consider our original change of variables. Note that we can check our proposed solution $y(t)$ by plugging it into the original ODE \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}.}
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Our homogeneous 1st-order linear system in part \ref{itm : Math211 Summer2019 Exam3 Q5a} is $2 \times 2$, so its solution set (of $\reals$-valued solutions) is a vector space over $\reals$ of dimension $2$. One can show that the solutions $\fontMatrix{X}_{1}(t)$ and $\fontMatrix{X}_{2}(t)$ we found in part \ref{itm : Math211 Summer2019 Exam3 Q5d} are linearly independent. (What happens when we write these $2 \times 1$ matrices side-by-side and take the determinant of the resulting $2 \times 2$ matrix?) Thus the general solution to our linear system in part \ref{itm : Math211 Summer2019 Exam3 Q5a} is
+\begin{align}
+a_{1} \fontMatrix{X}_{1}(t) + a_{2} \fontMatrix{X}_{2}(t)
+=
+a_{1} e^{-t}
+\begin{bmatrix}%
+1	\\
+-1
+\end{bmatrix}%
++
+a_{2} e^{-t}
+\begin{bmatrix}%
+t	\\
+-t + 1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+a_{1} e^{-t} + a_{2} t e^{-t}				\\
+-a_{1} e^{-t} - a_{2} t e^{-t} + a_{2} e^{-t}
+\end{bmatrix}%
+.%
+\label{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System}
+\end{align}
+By definition, the entries in rows 1 and 2 of our $2 \times 1$ matrices $\fontMatrix{x}(t)$ --- including $\fontMatrix{X}_{1}(t)$ and $\fontMatrix{X}_{2}(t)$ --- are $y$ and $y'$, respectively. So the first row of the general solution \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System} is the general solution $y(t)$ to our original 2nd-order ODE \eqref{eq : Math211 Summer2019 Exam3 Q5 ODE}:
+\begin{align}
+y(t)
+=
+a_{1} e^{-t} + a_{2} t e^{-t}.%
+\label{eq : Math211 Summer2019 Exam3Q5 General Solution 2nd Order ODE}
+\end{align}
+The second row in \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System} is supposed to be $y'(t)$. Let's differentiate \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution 2nd Order ODE} and check:
+\begin{align*}
+y'(t)
+=
+-a_{1} e^{-t} + a_{2} e^{-t} - a_{2} t e^{-t},
+\end{align*}
+the same as the entry in row 2 of \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System}.}% End solution.
+
+
+
+\begin{remark}
+Note that each step in our work above depended on choices we made in the previous step: Our computation of $\fontMatrix{v}_{2}$ depended on the eigenvector $\fontMatrix{v}_{1}$ we chose in part \ref{itm : Math211 Summer2019 Exam3 Q5b}, the $2 \times 1$ matrices $\fontMatrix{X}_{1}(t),\fontMatrix{X}_{2}(t)$ depended on our choices of $\fontMatrix{v}_{1}$ and $\fontMatrix{v}_{2}$, the general solution depended on our definition of $\fontMatrix{X}_{1}(t)$ and $\fontMatrix{X}_{2}(t)$. The general solution to our 1st-order linear system is a property of the system, which exists independent of our choices. That is, the solution set should always be the same, regardless of our choices. Is it? Let's see what happens if we make different choices.
+
+Suppose in part \ref{itm : Math211 Summer2019 Exam3 Q5b} we take our eigenvector to be
+\begin{align*}
+\fontMatrix{v}_{1}
+=
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+.
+\end{align*}
+Then in part \ref{itm : Math211 Summer2019 Exam3 Q5c} the equation $(\fontMatrix{A} - \lambda \fontMatrix{I}) \fontMatrix{v}_{2} = \fontMatrix{v}_{1}$ defining $\fontMatrix{v}_{2}$ writes as
+\begin{align*}
+\begin{bmatrix}%
+1	&	1	\\
+-1	&	-1
+\end{bmatrix}%
+\begin{bmatrix}%
+v_{1}	\\
+v_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+,
+\end{align*}
+which we can compute has the solution set
+\begin{align*}
+\left\{
+\begin{bmatrix}%
+-1 - v_{2}	\\
+v_{2}
+\end{bmatrix}%
+\st
+v_{2} \in \reals
+\right\}
+=
+\begin{bmatrix}%
+-1	\\
+0
+\end{bmatrix}%
++
+\Span\left\{
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+\right\}
+=
+\begin{bmatrix}%
+-1	\\
+0
+\end{bmatrix}%
++
+\eigenspace(\fontMatrix{A},-1).
+\end{align*}
+Any vector from this set will do. Let's choose
+\begin{align*}
+\fontMatrix{v}_{2}
+=
+\begin{bmatrix}%
+-1	\\
+0
+\end{bmatrix}%
+.
+\end{align*}
+In this case, our $2 \times 1$ matrices $\fontMatrix{X}_{1}(t),\fontMatrix{X}_{2}(t)$ write as
+\begin{align*}
+\fontMatrix{X}_{1}(t)
+=
+e^{\lambda t} \fontMatrix{v}_{1}
+=
+e^{-t}
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+,
+&&
+\fontMatrix{X}_{2}(t)
+=
+e^{\lambda t} (t \fontMatrix{v}_{1} + \fontMatrix{v}_{2})
+=
+e^{-t}
+\begin{bmatrix}%
+-t - 1	\\
+t
+\end{bmatrix}%
+.
+\end{align*}
+These are different matrices than those we computed in \eqref{eq : Math211 Summer2019 Exam3Q5 Basis 1 Of Solution Space}, with our other choice of $\fontMatrix{v}_{1},\fontMatrix{v}_{2}$. If we take the linear combination of our $\fontMatrix{X}_{1}(t),\fontMatrix{X}_{2}(t)$ here, we find
+\begin{align}
+b_{1} \fontMatrix{X}_{1}(t) + b_{2} \fontMatrix{X}_{2}(t)
+=
+b_{1} e^{-t}
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
++
+b_{2} e^{-t}
+\begin{bmatrix}%
+-t - 1	\\
+t
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+(-b_{1} - b_{2}) e^{-t} - b_{2} t e^{-t}	\\
+b_{1} e^{-t}  + b_{2} t e^{-t}
+\end{bmatrix}%
+.%
+\label{eq : Math211 Summer2019 Exam3Q5 General Solution 2 Matrix System}
+\end{align}
+Comparing this to \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System}, equating coefficients of like terms in each entry, we get
+\begin{align*}
+a_{1}
+=
+-b_{1} - b_{2},
+&&
+a_{2}
+=
+-b_{2},
+\end{align*}
+which we can write as a matrix equation
+\begin{align}
+\begin{bmatrix}%
+a_{1}	\\
+a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-1	&	-1	\\
+0	&	-1
+\end{bmatrix}%
+\begin{bmatrix}%
+b_{1}	\\
+b_{2}
+\end{bmatrix}%
+.%
+\label{eq : Math211 Summer2019 Exam3Q5 Change Of Basis}
+\end{align}
+Call the $2 \times 2$ coefficient matrix $\fontMatrix{B}$.
+
+Given a general solution \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution 2 Matrix System}, we can get the general solution \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System} by using these values of $a_{1},a_{2}$, i.e. $\transpose{\begin{bmatrix}a_{1}&a_{2}\end{bmatrix}} = \fontMatrix{B} \transpose{\begin{bmatrix}b_{1}&b_{2}\end{bmatrix}}$. Note that the coefficient matrix $\fontMatrix{B}$ has determinant $1$; hence it is invertible. Thus, conversely, given a general solution \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution Matrix System}, we can get the general solution \eqref{eq : Math211 Summer2019 Exam3Q5 General Solution 2 Matrix System} by settiing $\transpose{\begin{bmatrix}b_{1}&b_{2}\end{bmatrix}} = \fontMatrix{B}^{-1} \transpose{\begin{bmatrix}a_{1}&a_{2}\end{bmatrix}}$. Explicitly, given $a_{1},a_{2}$, take $b_{1},b_{2}$ to be
+\begin{align*}
+\begin{bmatrix}%
+b_{1}	\\
+b_{2}
+\end{bmatrix}%
+=
+\fontMatrix{B}^{-1}
+\begin{bmatrix}%
+a_{1}	\\
+a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-1	&	1	\\
+0	&	-1
+\end{bmatrix}%
+\begin{bmatrix}%
+a_{1}	\\
+a_{2}
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-a_{1} + a_{2}	\\
+-a_{2}
+\end{bmatrix}%
+.
+\end{align*}
+
+\fontNeedsEdit{(clarify this conclusion) }What we have found is that the $\fontMatrix{X}_{1}(t),\fontMatrix{X}_{2}(t)$ we computed here, and the $\fontMatrix{X}_{1}(t),\fontMatrix{X}_{2}(t)$ we computed in part \ref{itm : Math211 Summer2019 Exam3 Q5d}, are different bases of the same solution space. The $2 \times 2$ coefficient matrix $\fontMatrix{B}$ explicitly relates these two bases. That is, the set of solutions to our original ODE can be described in different ways, but all these different descriptions are equivalent.
+\end{remark}
+
+
+
+
+
+%
+%
+%   Exercise 6
+%
+%
+
+% Theme : Find general solution to nonhomogeneous 2nd-order linear ODE, given a particular solution (check the particular solution ; explicitly say to use NHP to give general solution to nonhom ODE).
+
+\section{Exercise \ref{sec : Math211 Summer2019 Exam3 Q6}}
+\label{sec : Math211 Summer2019 Exam3 Q6}
+
+(14 pt) Consider the nonhomogeneous 2nd-order linear ODE
+\begin{align}
+y'' - 4 y
+=
+8 \sin(2 t) - 4.%
+\label{eq : Math211 Summer2019 Exam3 Q6 ODE}
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q6a} (6 pt) Write the corresponding homogeneous equation, and find the general solution $y_{h}(t)$.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The corresponding homogeneous equation is
+\begin{align}
+y'' - 4 y
+=
+0.%
+\label{eq : Math211 Summer2019 Exam3 Q6 Homogeneous ODE}
+\end{align}
+The characteristic polynomial (which we can find by either substituting $\lambda^{i}$ for $y^{(i)}$ in \eqref{eq : Math211 Summer2019 Exam3 Q6 Homogeneous ODE}; or by translating \eqref{eq : Math211 Summer2019 Exam3 Q6 Homogeneous ODE} into a homogeneous 1st-order $2 \times 2$ linear system $\fontMatrix{x}' = \fontMatrix{A} \fontMatrix{x}$, then computing $\det(\lambda \fontMatrix{I} - \fontMatrix{A})$) is
+\begin{align*}
+p(\lambda)
+=
+\lambda^{2} - 4,
+\end{align*}
+which has two distinct real roots, $\lambda = \pm{}2$. Thus the general solution to \eqref{eq : Math211 Summer2019 Exam3 Q6 Homogeneous ODE} is
+\begin{align*}
+y(t)
+=
+c_{1} e^{-2 t} + c_{2} e^{2 t},
+\end{align*}
+where $c_{1},c_{2} \in \reals$.
+
+Note that we can check that $y(t)$ is indeed a solution by plugging it into \eqref{eq : Math211 Summer2019 Exam3 Q6 Homogeneous ODE} and confirming that the equation is true.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q6b} (4 pt) Show that
+\begin{align*}
+y_{p}(t)
+=
+-\sin(2 t) + 1
+\end{align*}
+is a particular solution to \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE}.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+As usual, to show that something is a solution, we plug it in:
+\begin{align*}
+y_{p}'' - 4 y_{p}
+=
+(-\sin(2 t) + 1)'' - 4 (-\sin(2 t) + 1)
+=
+4 \sin(2 t) + 4 \sin(2 t) - 4
+=
+8 \sin(2 t) -4,
+\end{align*}
+which is the right side of \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE}. Hence $y_{p}(t)$ is indeed a particular solution to \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE}.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Math211 Summer2019 Exam3 Q6c} (4 pt) Briefly justify why the nonhomogeneous principle applies to our ODE \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE}. Then use it, and our above results, to write the the general solution to \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE}.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+The nonhomogeneous ODE \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE} is linear, hence the nonhomogeneous principle (another way to say ``linearity'') applies. By this principle, the general solution $y(t)$ to \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE} is
+\begin{align*}
+y(t)
+=
+y_{p}(t) + y_{h}(t),
+\end{align*}
+where $y_{h}(t)$ is the general solution to the corresponding homogeneous equation, and $y_{p}(t)$ is a particular solution. Using our results for $y_{h}(t)$ and $y_{p}(t)$ in parts \ref{itm : Math211 Summer2019 Exam3 Q6a} and \ref{itm : Math211 Summer2019 Exam3 Q6b} above, we conclude that the general solution to \eqref{eq : Math211 Summer2019 Exam3 Q6 ODE} is
+\begin{align*}
+y(t)
+=
+-\sin(2 t) + 1 + c_{1} e^{-2 t} + c_{2} e^{2 t}.
+\end{align*}}% End solution.
+

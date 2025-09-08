@@ -1,0 +1,426 @@
+%
+% Quiz 16 : 2019-07-29 (M)
+%
+\section{Exercise}
+
+(5 pt) Consider the homogeneous 1st-order linear system
+\begin{align}
+\fontMatrix{x}'
+=
+\fontMatrix{A} \fontMatrix{x},%
+\label{eq : Quiz 16 ODE}
+\end{align}
+where
+\begin{align*}
+\fontMatrix{x}
+=
+\begin{bmatrix}
+x_{1}(t)	\\
+x_{2}(t)
+\end{bmatrix}%
+,
+&&
+\fontMatrix{A}
+=
+\begin{bmatrix}
+-7	&	-18	\\
+3	&	8
+\end{bmatrix}%
+.
+\end{align*}
+We have seen that the general solution to \eqref{eq : Quiz 16 ODE} is $\fontMatrix{x}(t) = e^{\fontMatrix{A} t} \fontMatrix{c}$, where $\fontMatrix{c}$ is a $2 \times 1$ matrix of parameters.
+
+Computing $e^{\fontMatrix{A} t}$ for a general square matrix $\fontMatrix{A}$ of constants can be hard. However, we have seen that for a diagonal matrix $\fontMatrix{D}$, the matrix exponential function is straightforward:
+\begin{align}
+\fontMatrix{D}
+=
+\begin{bmatrix}
+\lambda_{1}	&	0			\\
+0			&	\lambda_{2}
+\end{bmatrix}
+&&
+\Rightarrow
+&&
+e^{\fontMatrix{D} t}
+=
+\begin{bmatrix}
+e^{\lambda_{1} t}	&	0				\\
+0				&	e^{\lambda_{2} t}
+\end{bmatrix}%
+.%
+\label{eq : Quiz 16 Matrix Exponential Diagonal Matrix}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Quiz16 a} (2 pt) Show the eigenvalues of $\fontMatrix{A}$ are $-1$ and $2$. For each eigenvalue, compute an eigenvector.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+We can find the eigenvalues by solving
+\begin{align*}
+0
+\seteq
+\det(\lambda \fontMatrix{I} - \fontMatrix{A})
+=
+\det
+\begin{bmatrix}
+\lambda + 7	&	18			\\
+-3			&	\lambda - 8
+\end{bmatrix}
+=
+\lambda^{2} - \lambda - 2
+=
+(\lambda - 2) (\lambda + 1)
+&&
+\Leftrightarrow
+&&
+\lambda \in \{-1,2\}.
+\end{align*}
+We can find corresponding eigenvectors by finding nonzero vectors solving
+\begin{align*}
+\fontMatrix{A} \fontMatrix{v}
+=
+\lambda \fontMatrix{v}
+&&
+\Leftrightarrow
+&&
+(\lambda \fontMatrix{I} - \fontMatrix{A}) \fontMatrix{v}
+=
+\fontMatrix{0}.
+\end{align*}
+For $\lambda = -1$,
+\begin{align*}
+\begin{bmatrix}
+0	\\
+0
+\end{bmatrix}
+=
+\fontMatrix{0}
+=
+\fontMatrix{A} \fontMatrix{v}
+=
+\begin{bmatrix}
+6	&	18	\\
+-3	&	-9
+\end{bmatrix}
+\begin{bmatrix}
+v_{1}	\\
+v_{2}
+\end{bmatrix}
+&&
+\Rightarrow
+&&
+\fontMatrix{v}
+=
+c_{1}
+\begin{bmatrix}
+3	\\
+-1
+\end{bmatrix}%
+,
+\end{align*}
+for any nonzero $c_{1} \in \reals$. For $\lambda = 2$,
+\begin{align*}
+\begin{bmatrix}
+0	\\
+0
+\end{bmatrix}
+=
+\fontMatrix{0}
+=
+\fontMatrix{A} \fontMatrix{v}
+\begin{bmatrix}
+9	&	18	\\
+-3	&	-6
+\end{bmatrix}
+\begin{bmatrix}
+v_{1}	\\
+v_{2}
+\end{bmatrix}
+&&
+\Rightarrow
+&&
+\fontMatrix{v}
+=
+c_{2}
+\begin{bmatrix}
+2	\\
+-1
+\end{bmatrix}%
+,
+\end{align*}
+for any nonzero $c_{2} \in \reals$. Choosing $c_{1},c_{2} = 1$ gives us the eigenvectors
+\begin{align*}
+\fontMatrix{v}_{1}
+=
+\begin{bmatrix}
+3	\\
+-1
+\end{bmatrix}%
+,
+&&
+\fontMatrix{v}_{2}
+=
+\begin{bmatrix}
+2	\\
+-1
+\end{bmatrix}%
+\end{align*}
+associated to the eigenvalues $\lambda_{1} = -1$ and $\lambda_{2} = 2$, respectively.
+
+N.B. We can check our work by computing, for $i = 1,2$, $\fontMatrix{A} \fontMatrix{v}_{i}$ and confirming that it equals $\lambda_{i} \fontMatrix{v}_{i}$.}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Quiz16 b} (1 pt) Write your two eigenvectors as columns, side by side in a $2 \times 2$ matrix $\fontMatrix{P}$. Compute $\fontMatrix{P}^{-1}$, and confirm that $\fontMatrix{D} = \fontMatrix{P}^{-1} \fontMatrix{A} \fontMatrix{P}$, where $\fontMatrix{D}$ is a $2 \times 2$ diagonal matrix with the eigenvalues of $\fontMatrix{A}$ on the diagonal. Thus $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$.
+\end{enumerate}
+
+\spaceSolution{1.5in}{% Begin solution.
+Writing our two eigenvectors side by side gives
+\begin{align*}
+\fontMatrix{P}
+=
+\begin{bmatrix}
+|				&	|				\\
+\fontMatrix{v}_{1}	&	\fontMatrix{v}_{2}	\\
+|				&	|
+\end{bmatrix}
+=
+\begin{bmatrix}
+3	&	2	\\
+-1	&	-1
+\end{bmatrix}%
+.
+\end{align*}
+We can compute $\fontMatrix{P}^{-1}$ by applying the row reduction algorithm to the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}\fontMatrix{P}&\fontMatrix{I}\end{array}\right]$:
+\begin{align*}
+\left[
+\begin{array}{c;{2pt/2pt}c}
+\fontMatrix{P}	&	\fontMatrix{I}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c c;{2pt/2pt}c c}
+3	&	2	&	1	&	0	\\
+-1	&	-1	&	0	&	1
+\end{array}
+\right]
+\rightarrow
+\cdots
+\rightarrow
+\left[
+\begin{array}{c c;{2pt/2pt}c c}
+1	&	0	&	1	&	2	\\
+0	&	1	&	-1	&	-3
+\end{array}
+\right].
+\end{align*}
+The left square in this RREF matrix is $\fontMatrix{I}$, so the right square is $\fontMatrix{P}^{-1}$:% Begin footnote.
+\footnote{If the left square in the RREF matrix contains a zero row, then we conclude $\fontMatrix{P}^{-1}$ does not exist, i.e. $\fontMatrix{P}$ is not invertible.}% End footnote.
+\begin{align*}
+\fontMatrix{P}^{-1}
+=
+\begin{bmatrix}
+1	&	2	\\
+-1	&	-3
+\end{bmatrix}%
+.
+\end{align*}
+Note that we can check our work by computing $\fontMatrix{P} \fontMatrix{P}^{-1}$ (or $\fontMatrix{P}^{-1} \fontMatrix{P}$) and confirming that it equals the $2 \times 2$ identity matrix $\fontMatrix{I}$:
+\begin{align*}
+\fontMatrix{P} \fontMatrix{P}^{-1}
+=
+\begin{bmatrix}
+3	&	2	\\
+-1	&	-1
+\end{bmatrix}%
+\begin{bmatrix}
+1	&	2	\\
+-1	&	-3
+\end{bmatrix}%
+=
+\begin{bmatrix}
+1	&	0	\\
+0	&	1
+\end{bmatrix}%
+.
+\end{align*}
+Got it.
+
+As requested, we compute $\fontMatrix{P}^{-1} \fontMatrix{A} \fontMatrix{P}$:
+\begin{align*}
+\fontMatrix{P}^{-1} \fontMatrix{A} \fontMatrix{P}
+=
+\begin{bmatrix}
+1	&	2	\\
+-1	&	-3
+\end{bmatrix}%
+\begin{bmatrix}
+-7	&	-18	\\
+3	&	8
+\end{bmatrix}%
+\begin{bmatrix}
+3	&	2	\\
+-1	&	-1
+\end{bmatrix}%
+=
+\begin{bmatrix}
+-1	&	0	\\
+0	&	2
+\end{bmatrix}%
+.
+\end{align*}
+We indeed obtain a diagonal matrix, call it $\fontMatrix{D}$, with the eigenvalues of $A$ listed on the diagonal in the same order that we listed their corresponding eigenvectors in the matrix $\fontMatrix{P}$. Taking the equation
+\begin{align*}
+\fontMatrix{P}^{-1} \fontMatrix{A} \fontMatrix{P}
+=
+\fontMatrix{D}
+\end{align*}
+and multiplying both sides on the left by $\fontMatrix{P}$ and on the right by $\fontMatrix{P}^{-1}$, we get
+\begin{align*}
+\fontMatrix{A}
+=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}.
+\end{align*}}% End solution.
+
+% WolframAlpha code :
+% row reduce {{3,2,1,0},{-1,-1,0,1}}
+% {{1,2},{-1,-3}}{{-7,-18},{3,8}}{{3,2},{-1,-1}}
+% diagonalize {{-7,-18},{3,8}}
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Quiz16 c} (2 pt) Use your result to part \ref{itm : Quiz16 b} to compute the $2 \times 2$ matrix $e^{\fontMatrix{A} t}$, by noting that
+\begin{align*}
+e^{\fontMatrix{A} t}
+=
+e^{t \fontMatrix{A}}
+=
+e^{t \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}}
+=
+\fontMatrix{P} e^{t \fontMatrix{D}} \fontMatrix{P}^{-1}.
+\end{align*}
+(Compute using this last expression.) The columns of this matrix form a basis for the solution space of our original ODE \eqref{eq : Quiz 16 ODE}.
+\end{enumerate}
+
+\spaceSolution{1in}{% Begin solution.
+Using the definition of the matrix exponential (in terms of an infinite series), we have
+\begin{align}
+e^{\fontMatrix{A} t}
+=
+e^{t \fontMatrix{A}}
+=
+e^{t (\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1})}
+=
+\sum_{j = 0}^{\infty} \frac{1}{j!} t^{j} \left(\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}\right)^{j}.%
+\label{eq : Quiz 16 Matrix Exponential}
+\end{align}
+Using the fact that $\fontMatrix{P}^{-1} \fontMatrix{P} = \fontMatrix{I}$, we note that
+\begin{align*}
+\left(\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}\right)^{2}
+&=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}
+=
+\fontMatrix{P} \fontMatrix{D}^{2} \fontMatrix{P}^{-1}
+\\
+\left(\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}\right)^{3}
+&=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1} \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}
+=
+\fontMatrix{P} \fontMatrix{D}^{3} \fontMatrix{P}^{-1}
+\\
+&\vdots
+\\
+\left(\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}\right)^{j}
+&=
+\fontMatrix{P} \fontMatrix{D}^{j} \fontMatrix{P}^{-1}.
+\end{align*}
+Substituting these results into \eqref{eq : Quiz 16 Matrix Exponential}, then factoring out from each term of the sum $\fontMatrix{P}$ on the left and $\fontMatrix{P}^{-1}$ on the right, we get
+\begin{align*}
+e^{\fontMatrix{A} t}
+=
+\fontMatrix{P} \left(\sum_{j = 0}^{\infty} \frac{1}{j!} t^{j} \fontMatrix{D}^{j}\right) \fontMatrix{P}^{-1}
+=
+\fontMatrix{P} e^{\fontMatrix{D} t} \fontMatrix{P}^{-1}.
+\end{align*}
+Using our matrices $\fontMatrix{P}$ and $\fontMatrix{P}^{-1}$, and the form \eqref{eq : Quiz 16 Matrix Exponential Diagonal Matrix} of the matrix exponential for a diagonal matrix, we get
+\begin{align*}
+e^{\fontMatrix{A} t}
+=
+\begin{bmatrix}
+3	&	2	\\
+-1	&	-1
+\end{bmatrix}%
+\begin{bmatrix}
+e^{-t}	&	0		\\
+0	&	e^{2 t}
+\end{bmatrix}%
+\begin{bmatrix}
+1	&	2	\\
+-1	&	-3
+\end{bmatrix}%
+=
+\begin{bmatrix}
+3 e^{-t} - 2 e^{2 t}	&	6 e^{-t} - 6 e^{2 t}	\\
+-e^{-t} + e^{2 t}		&	-2 e^{-t} + 3 e^{2 t}
+\end{bmatrix}%
+.
+\end{align*}
+
+In class we asserted that the columns of this matrix $e^{\fontMatrix{A} t}$ form a basis for the vector space of solutions to the homogeneous 1st-order linear system $\fontMatrix{x}' = \fontMatrix{A} \fontMatrix{x}$. If we decompose these columns into separate pieces for each eigenvalue,% Begin footnote.
+\footnote{More precisely, and more generally, we'll be interested in decomposing into separate pieces for each generalized eigenvector.} % End footnote.
+we get
+\begin{align*}
+\begin{bmatrix}
+3 e^{-t} - 2 e^{2 t}	\\
+-e^{-t} + e^{2 t}
+\end{bmatrix}
+=
+\begin{bmatrix}
+3	\\
+-1
+\end{bmatrix}
+e^{-t}
+-
+\begin{bmatrix}
+2	\\
+-1
+\end{bmatrix}
+e^{2 t},
+&&
+\begin{bmatrix}
+6 e^{-t} - 6 e^{2 t}	\\
+-2 e^{-t} + 3 e^{2 t}
+\end{bmatrix}
+=
+2
+\begin{bmatrix}
+3	\\
+-1
+\end{bmatrix}
+e^{-t}
+-
+3
+\begin{bmatrix}
+2	\\
+-1
+\end{bmatrix}
+e^{2 t}.
+\end{align*}
+Analyzing this decomposition, we observe that the columns of $e^{\fontMatrix{A} t}$ --- again, which form a basis for the vector space of solutions to $\fontMatrix{x}' = \fontMatrix{A} \fontMatrix{x}$ --- are linear combinations of expressions of the form
+\begin{align}
+(\text{eigenvector}_{j}) e^{\text{eigenvalue}_{j} t}.%
+\label{eq : Quiz 16 General Form Basis Vector From Eigenvectors}
+\end{align}
+Here, the coefficients of this linear combination are given by the entries in the columns of $\fontMatrix{P}^{-1}$: $1,-1$ for column 1, and $2,-3$ for column 2.
+
+This suggests that the basis coming from the columns of $e^{\fontMatrix{A} t}$ is itself built from basic building blocks of the form \eqref{eq : Quiz 16 General Form Basis Vector From Eigenvectors}. That is, we can write another basis for the vector space of solutions, given by vectors of the form \eqref{eq : Quiz 16 General Form Basis Vector From Eigenvectors}. If we suitably generalize the notion of eigenvector (to ensure that a basis of $k^{n}$, formed from $n$ generalized eigenvectors of a matrix, always exists), this is always true.}% End solution.
+
+% WolframAlpha code :
+% {{3,2},{-1,-1}}{{e^(-t),0},{0,e^(2*t)}}{{1,2},{-1,-3}}
+
+
+
+% The given matrix A is the product {{3,-2},{-1,1}} {{-1,0},{0,2}} {{1,2},{1,3}}

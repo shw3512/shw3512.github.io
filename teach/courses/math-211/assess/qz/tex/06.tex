@@ -1,0 +1,115 @@
+%
+% Quiz 06 : 2019-07-15 (M)
+% Farlow et al., Problem 2.2.5 (p 70)
+%
+\section{Exercise}
+
+(5 pt) Find the general solution to the nonhomogeneous linear ODE% Begin footnote.
+\footnote{\fontHint{Recall that the nonhomogeneous principle says we can find (i) one particular solution to the nonhomogeneous ODE, (ii) the general solution to the corresponding homogeneous ODE, then combine them to get the general solution to the nonhomogeneous ODE. While we're not obliged to use variation of parameters here, recall that it says that a particular solution to a nonhomogeneous ODE can be found by treating the constant in the general solution to the corresponding homogeneous ODE as a function of $t$.}}% End footnote.
+\begin{align}
+y' + y
+=
+\frac{1}{1 + e^{t}}.%
+\label{eq : Farlow Problem 2.2.5}
+\end{align}
+
+\spaceSolution{6in}{% Begin solution.
+By the nonhomogeneous principle, any solution $y$ to \eqref{eq : Farlow Problem 2.2.5} has the form
+\begin{align*}
+y
+=
+y_{p} + y_{h},
+\end{align*}
+where $y_{p}$ is any (one) particular solution to \eqref{eq : Farlow Problem 2.2.5}, and $y_{h}$ is the general solution to the corresponding homogeneous ODE. The general solution to \eqref{eq : Farlow Problem 2.2.5} is $y_{p} + y_{h}$.
+
+To find $y_{h}$, we solve the corresponding homogeneous ODE:
+\begin{align*}
+y' + y
+=
+0.
+\end{align*}
+This ODE is separable. Solving it (and calling our solution $y_{h}$), we find
+\begin{align*}
+y^{-1} \spaceIntd \intd y
+&=
+-\intd t
+\\
+\ln\abs{y}
+&=
+-t + c_{1}
+\\
+y_{h}
+&=
+c_{2} e^{-t}.
+\end{align*}
+Note that
+\begin{align*}
+y_{h}' + y_{h}
+=
+-c_{2} e^{-t} + c_{2} e^{-t}
+=
+0,
+\end{align*}
+so $y_{h}$ indeed solves the corresponding homogeneous ODE, as claimed.
+
+To find $y_{p}$ we can use guess-and-check, integrating factors, or variation of parameters. Variation of parameters is the most systematic of these options, so we'll go with it. Variation of parameters tells us that, to find a particular solution to \eqref{eq : Farlow Problem 2.2.5}, we take the general solution to the corresponding homogeneous ODE, and turn the constant parameter into a function of $t$, call it $v(t)$:
+\begin{align}
+y_{p}
+=
+v e^{-t}.%
+\label{eq : Farlow Problem 2.2.5 VoP Particular Solution}
+\end{align}
+Plugging this function into the original ODE \eqref{eq : Farlow Problem 2.2.5}, we get
+\begin{align*}
+\frac{1}{1 + e^{t}}
+=
+y_{p}' + y_{p}
+=
+\left(v' e^{-t} - v e^{-t}\right) + v e^{-t}
+=
+v' e^{-t}.
+\end{align*}
+Solving this equation for $v$, we find
+\begin{align*}
+v'
+=
+\frac{e^{t}}{1 + e^{t}}
+&&
+\Leftrightarrow
+&&
+v(t)
+=
+\int \frac{e^{t}}{1 + e^{t}} \spaceIntd \intd t
+=
+\ln\abs{1 + e^{t}} + c_{3}
+=
+\ln\left(1 + e^{t}\right) + c_{3},
+\end{align*}
+for some $c_{3} \in \reals$. We can drop the absolute value because $1 + e^{t} > 0$ (in fact,${} > 1$) for all $t \in \reals$. Also, because we only need one particular solution, we can choose the constant $c_{3}$ to be any value we like. To make our lives easy, let's choose $c_{3} = 0$. Then, plugging this $v$ into \eqref{eq : Farlow Problem 2.2.5 VoP Particular Solution}, we have
+\begin{align*}
+y_{p}
+=
+e^{-t} \ln\left(1 + e^{t}\right).
+\end{align*}
+
+By the nonhomogeneous principle, the general solution $y$ to \eqref{eq : Farlow Problem 2.2.5} is
+\begin{align}
+y(t)
+=
+y_{p} + y_{h}
+=
+e^{-t} \ln\left(1 + e^{t}\right) + c e^{-t},%
+\label{eq : Farlow Problem 2.2.5 General Solution}
+\end{align}
+where $c \in \reals$.
+
+We can check that our general solution \eqref{eq : Farlow Problem 2.2.5 General Solution} is indeed a solution by plugging it into \eqref{eq : Farlow Problem 2.2.5}:
+\begin{align*}
+y' + y
+&=
+\left(-e^{-t} \ln\left(1 + e^{t}\right) + \frac{e^{-t}}{1 + e^{t}} e^{t} - c e^{-t}\right) + \left(e^{-t} \ln\left(1 + e^{t}\right) + c e^{-t}\right)
+\\
+&=
+\frac{1}{1 + e^{t}},
+\end{align*}
+so the original ODE \eqref{eq : Farlow Problem 2.2.5} indeed holds, i.e. our $y(t)$ in \eqref{eq : Farlow Problem 2.2.5 General Solution} is a solution.}% End solution.

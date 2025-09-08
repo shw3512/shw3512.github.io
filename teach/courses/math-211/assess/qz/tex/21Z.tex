@@ -1,0 +1,252 @@
+%
+% Quiz 21 : 2019-08-05 (M)
+%
+% Phase planes plotted using online software at
+% http://www.calvin.edu/~scofield/demos/other/PhasePortrait2D.html
+%
+\section{Exercise}
+
+(5 pt) Consider the homogeneous 1st-order $2 \times 2$ linear system of ODEs
+\begin{align}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	1
+\end{bmatrix}%
+\fontMatrix{x}.%
+\label{eq : Quiz21Z ODE}
+\end{align}
+\begin{enumerate}[label=(\alph*)]
+\item (2 pt) Diagonalize the coefficient matrix (i.e. compute the eigenvalues and corresponding eigenvectors of the given matrix $\fontMatrix{A}$, and write it in the form $\fontMatrix{A} = \fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}$).
+\end{enumerate}
+
+\spaceSolution{1.75in}{% Begin solution.
+Denote the coefficient matrix in \eqref{eq : Quiz21Z ODE} by
+\begin{align*}
+\fontMatrix{A}
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	1
+\end{bmatrix}%
+.
+\end{align*}
+
+\textbf{Eigenvalues}. We compute
+\begin{align*}
+\lambda_{\pm{}}
+=
+\pm{}i \sqrt{15}.
+\end{align*}
+
+\textbf{Eigenvectors.} We compute
+\begin{align*}
+\fontMatrix{v}_{+}
+=
+\begin{bmatrix}%
+-1 + i \sqrt{15}	\\
+4
+\end{bmatrix}%
+,
+&&
+\fontMatrix{v}_{-}
+=
+\begin{bmatrix}%
+-1 - i \sqrt{15}	\\
+4
+\end{bmatrix}%
+.
+\end{align*}
+Any nonzero (complex) scalar multiples of these vectors will also be eigenvectors. Note that once we compute one of the two eigenvectors $\fontMatrix{v}_{+},\fontMatrix{v}_{-}$, we can obtain the other immediately by taking the complex conjugate of the first.
+
+\textbf{Diagonalization.} Using these results, we conclude
+\begin{align}
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-1 + i \sqrt{15}	&	-1 - i \sqrt{15}	\\
+4			&	4
+\end{bmatrix}%
+\begin{bmatrix}%
+i \sqrt{15}	&	0		\\
+0		&	-i \sqrt{15}
+\end{bmatrix}%
+\begin{bmatrix}%
+-1 + i \sqrt{15}	&	-1 - i \sqrt{15}	\\
+4			&	4
+\end{bmatrix}%
+^{-1}.%
+\label{eq : Quiz21Z Diagonalization}
+\end{align}
+Call the matrices in this equation as follows:
+\begin{align*}
+\fontMatrix{A}
+=
+\fontMatrix{P} \fontMatrix{D} \fontMatrix{P}^{-1}.
+\end{align*}}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (2 pt) Use this information to write the general real solution $\fontMatrix{x}(t)$ to \eqref{eq : Quiz21Z ODE}. \fontHint{Recall that when the eigenvalues of a homogeneous $2 \times 2$ linear system are complex, we can compute one solution $e^{\lambda t} v$, just as we did with real eigenvalues; decompose it into real and imaginary parts; then use these parts as our basis for the solution space. The formulas
+\begin{align*}
+e^{a + i b}
+=
+e^{a} e^{i b},
+&&
+e^{i b}
+=
+\cos b + i \sin b,
+\end{align*}
+will be useful.}
+\end{enumerate}
+
+\spaceSolution{2.25in}{% Begin solution.
+Call columns 1 and 2 of $\fontMatrix{P}$ $\fontMatrix{v}_{+}$ and $\fontMatrix{v}_{-}$, respectively. (They are eigenvectors corresponding to the eigenvalues $\lambda_{+} = i \sqrt{15}i$ and $\lambda_{-} = -i \sqrt{15}$, respectively. Hence our choice of subscripts $+$ and $-$.) Our diagonalization \eqref{eq : Quiz21Z Diagonalization} gives one basis for the vector space of complex (!) solutions to \eqref{eq : Quiz21Z ODE}, namely, the vectors
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+=
+e^{\lambda_{+} t} \fontMatrix{v}_{+}
+=
+e^{i \sqrt{15} t}
+\begin{bmatrix}%
+-1 + i \sqrt{15}	\\
+4
+\end{bmatrix}%
+,
+&&
+\fontMatrix{x}_{-}(t)
+=
+e^{\lambda_{-} t} \fontMatrix{v}_{-}
+=
+e^{-i \sqrt{15} t}
+\begin{bmatrix}%
+-1 - i \sqrt{15}	\\
+4
+\end{bmatrix}%
+.
+\end{align*}
+To describe the real (!) solutions to \eqref{eq : Quiz21Z ODE}, we can decompose either one of these complex basis vectors into real and imaginary parts, $\fontMatrix{x}_{\realPart}$ and $\fontMatrix{x}_{\imaginaryPart}$, and take these as our basis vectors. Decomposing $\fontMatrix{x}_{+}(t)$, using the formulas in the hint, we find
+\begin{align*}
+\fontMatrix{x}_{+}(t)
+&=
+e^{i \sqrt{15} t}
+\begin{bmatrix}
+-1 + i \sqrt{15}	\\
+4
+\end{bmatrix}
+=
+e^{0 t} e^{i \sqrt{15} t}
+\begin{bmatrix}
+-1 + i \sqrt{15}	\\
+4
+\end{bmatrix}
+=
+(\cos(\sqrt{15} t) + i \sin(\sqrt{15} t))
+\begin{bmatrix}
+-1 + i \sqrt{15}	\\
+4
+\end{bmatrix}
+\\
+&=
+\left[
+\begin{array}{c c c}
+\left(-\cos(\sqrt{15} t) - \sqrt{15} \sin(\sqrt{15} t)\right)	&	+ i	&	\left(\sqrt{15} \cos(\sqrt{15} t) - \sin(\sqrt{15} t)\right)	\\
+4 \cos(\sqrt{15} t)							&	+ i	&	\sin(\sqrt{15} t)
+\end{array}
+\right]
+\\
+&=
+\underbrace{
+\begin{bmatrix}%
+-\cos(\sqrt{15} t) - \sqrt{15} \sin(\sqrt{15} t)	\\
+4 \cos(\sqrt{15} t)
+\end{bmatrix}%
+}_{\fontMatrix{x}_{\realPart}}
++
+i \underbrace{
+\begin{bmatrix}%
+\sqrt{15} \cos(\sqrt{15} t) - \sin(\sqrt{15} t)	\\
+\sin(\sqrt{15} t)
+\end{bmatrix}%
+}_{\fontMatrix{x}_{\imaginaryPart}}.
+\end{align*}
+(Note that our definition of $\fontMatrix{x}_{\imaginaryPart}$ does not include the coefficient $i$.) The general real solution to \eqref{eq : Quiz21Z ODE} is the real linear combination of $\fontMatrix{x}_{\realPart}$ and $\fontMatrix{x}_{\imaginaryPart}$, i.e.
+\begin{align*}
+\fontMatrix{x}(t)
+&=
+c_{1} \fontMatrix{x}_{\realPart}(t) + c_{2} \fontMatrix{x}_{\imaginaryPart}(t)
+\\
+&=
+c_{1}
+\begin{bmatrix}%
+-\cos(\sqrt{15} t) - \sqrt{15} \sin(\sqrt{15} t)	\\
+4 \cos(\sqrt{15} t)
+\end{bmatrix}%
++
+c_{2}
+\begin{bmatrix}%
+\sqrt{15} \cos(\sqrt{15} t) - \sin(\sqrt{15} t)	\\
+\sin(\sqrt{15} t)
+\end{bmatrix}%
+,
+\end{align*}
+where $c_{1},c_{2} \in \reals$.}% End solution.
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Quickly sketch the phase plane. Your sketch need not be exact; focus on whether trajectories move toward or away from the origin, and the direction of rotation.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin solution.
+The real part of both eigenvalues $\lambda_{\pm{}}$ is $0$; thus trajectories are closed ellipses. To determine the direction of rotation, we can use the original ODE \eqref{eq : Quiz21Z ODE} to compute the tangent vectors $\fontMatrix{x}'$ at a few points $(x_{1},x_{2})$:
+\begin{align*}
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+1	\\
+1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-5	\\
+5
+\end{bmatrix}%
+,
+&&
+\fontMatrix{x}'
+=
+\begin{bmatrix}%
+-1	&	-4	\\
+4	&	1
+\end{bmatrix}%
+\begin{bmatrix}%
+-1	\\
+1
+\end{bmatrix}%
+=
+\begin{bmatrix}%
+-3	\\
+-3
+\end{bmatrix}%
+.
+\end{align*}
+This shows that, at $(x_{1},x_{2}) = (1,1)$, tangent vectors point left ($x_{1}' = -5 < 0$) and up ($x_{2}' = 5 > 0$); at $(x_{1},x_{2}) = (-1,1)$, tangent vectors point left ($x_{1}' = -3 < 0$) and down ($x_{2}' = -3 < 0$). Thus trajectories rotate counterclockwise.
+
+A phase plane for the linear system \eqref{eq : Quiz21Z ODE} is shown in Figure \ref{fig : Quiz21 Phase Plane}.
+\begin{figure}[b]
+\begin{center}
+\includegraphics[scale=0.5]{\filePathGraphics Quiz21Z_PhasePlane}
+\caption{Phase plane, in the $(x_{1},x_{2})$ plane, for the homogeneous 1st-order linear system \eqref{eq : Quiz21Z ODE}. Arrows point in the direction of increasing $t$.}
+\label{fig : Quiz21 Phase Plane}
+\end{center}
+\end{figure}
+}% End solution.
+%
+% WolframAlpha code :
+% eigenvalues {{-1,-4},{4,-1}}

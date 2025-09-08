@@ -1,0 +1,228 @@
+%
+% Quiz 17A : 2019-08-02 (F)
+%
+\section{Exercise}
+
+(5 pt) For each of the following linear maps $T : \reals^{n} \rightarrow \reals^{m}$, where $\reals^{n},\reals^{m}$ are viewed as vector spaces over $\reals$,
+\begin{enumerate}[label=(\roman*)]
+\item write a basis for the image $\image(T)$ and a basis for the kernel $\ker(T)$, and
+\item confirm the rank--nullity theorem.
+\end{enumerate}
+\begin{enumerate}[label=(\alph*)]
+\item\label{itm : Quiz17Aa} (2.5 pt) The linear map $T_{1}$ given by
+\begin{align*}
+T_{1}
+:
+\reals^{3}
+&\rightarrow
+\reals^{5}
+\\
+\begin{bmatrix}
+x_{1}		\\
+\vdots	\\
+x_{3}
+\end{bmatrix}
+&\mapsto
+\left[
+\begin{array}{c c c c c c c}
+x_{1}	&	+	&			&		&	x_{3}		\\
+x_{1}	&	+	&	x_{2}		&	-	&	x_{3}		\\
+	&		&	x_{2}		&	-	&	2 x_{3}	\\
+	&		&	x_{2}		&	-	&	2 x_{3}	\\
+	&		&	-2 x_{2}	&	+	&	4 x_{3}
+\end{array}
+\right].
+\end{align*}
+\end{enumerate}
+
+% WolframAlpha code :
+% row reduce {{1,0,1},{1,1,-1},{0,1,-2},{0,1,-2},{0,-2,4}}
+
+\spaceSolution{2in}{% Begin solution.
+We write the corresponding matrix $A_{1}$, then apply the row reduction algorithm (RRA) to get its reduced row echelon form (RREF):
+\begin{align*}
+A_{1}
+=
+\begin{bmatrix}
+1	&	0	&	1	\\
+1	&	1	&	-1	\\
+0	&	1	&	-2	\\
+0	&	1	&	-2	\\
+0	&	-2	&	4
+\end{bmatrix}%
+\xrightarrow{\text{RRA}}
+\begin{bmatrix}
+1	&	0	&	1	\\
+0	&	1	&	-2	\\
+0	&	0	&	0	\\
+0	&	0	&	0	\\
+0	&	0	&	0
+\end{bmatrix}%
+=
+\rref(A_{1}).
+\end{align*}
+The image is the span of the pivot columns of the original (!) matrix $A_{1}$
+\begin{align*}
+\image(T_{1})
+=
+\Span\left\{
+\begin{bmatrix}
+1	\\
+1	\\
+0	\\
+0	\\
+0	
+\end{bmatrix}%
+,
+\begin{bmatrix}
+0	\\
+1	\\
+1	\\
+1	\\
+-2	
+\end{bmatrix}%
+\right\}.
+\end{align*}
+These columns are linearly independent and hence form a basis for $\image(T_{1})$.
+
+Notice that the third column of $A_{1}$ is a linear combination of the first two. More precisely, letting $(A_{1})_{\bullet,j}$ denote the $j$th column of $A_{1}$, we can check that $(A_{1})_{\bullet,3} = (A_{1})_{\bullet,1} - 2 (A_{1})_{\bullet,2}$.\fontNeedsEdit{ (elaborate?)}
+
+The nonpivot columns, in this case column 3, correspond to free variables, in this case $x_{3}$. The general vector in the kernel of $T_{1}$ can be read off from the RREF of $A_{1}$ --- more precisely, from the augmented matrix $\left[\begin{array}{c;{2pt/2pt}c}\rref(A)&\fontMatrix{0}\end{array}\right]$:
+\begin{align*}
+\ker(T_{1})
+=
+\left\{
+\begin{bmatrix}
+-x_{3}	\\
+2 x_{3}	\\
+x_{3}
+\end{bmatrix}
+\st
+x_{3} \in \reals
+\right\}
+=
+\Span\left\{
+\begin{bmatrix}
+-1	\\
+2	\\
+1
+\end{bmatrix}
+\right\}.
+\end{align*}
+A set containing a single nonzero vector is always linearly independent. Thus any nonzero vector in $\ker(T_{1})$ is a basis of $\ker(T_{1})$.
+
+The rank--nullity theorem writes as
+\begin{align*}
+\dim(\text{domain}(T_{1}))
+=
+3
+=
+2 + 1
+=
+\dim(\image(T_{1})) + \dim(\ker(T_{1})).
+\end{align*}}% End solution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item\label{itm : Quiz17Ab} (2.5 pt) The linear map $T_{2}$ given by
+\begin{align*}
+T_{2}
+:
+\reals^{4}
+&\rightarrow
+\reals^{4}
+\\
+\begin{bmatrix}
+x_{1}		\\
+\vdots	\\
+x_{4}
+\end{bmatrix}
+&\mapsto
+\left[
+\begin{array}{c c c c c c c}
+x_{1}		&	+	&			&		&	x_{3}		&		&			\\
+x_{1}		&	+	&	x_{2}		&	+	&	2 x_{3}	&	+	&	3 x_{4}	\\
+2 x_{1}	&	+	&			&		&	2 x_{3}	&	+	&	2 x_{4}	\\
+		&		&			&		&			&		&	4 x_{4}
+\end{array}
+\right].
+\end{align*}
+\end{enumerate}
+
+% WolframAlpha code :
+% row reduce {{1,0,1,0},{1,1,2,3},{2,0,2,2},{0,0,0,4}}
+
+\spaceSolution{2in}{% Begin solution.
+We write the corresponding matrix $A_{2}$, then apply the RRA to get its RREF:
+\begin{align*}
+A_{2}
+=
+\begin{bmatrix}
+1	&	0	&	1	&	0	\\
+1	&	1	&	2	&	3	\\
+2	&	0	&	2	&	2	\\
+0	&	0	&	0	&	4
+\end{bmatrix}%
+\xrightarrow{\text{RRA}}
+\begin{bmatrix}
+1	&	0	&	1	&	0	\\
+0	&	1	&	1	&	0	\\
+0	&	0	&	0	&	1	\\
+0	&	0	&	0	&	0
+\end{bmatrix}%
+=
+\rref{A_{2}}.
+\end{align*}
+
+By the same logic as in part \ref{itm : Quiz17Aa}, we find
+\begin{align*}
+\image(T_{2})
+=
+\Span\left\{
+\begin{bmatrix}
+1	\\
+1	\\
+2	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}
+0	\\
+1	\\
+0	\\
+0
+\end{bmatrix}%
+,
+\begin{bmatrix}
+0	\\
+3	\\
+2	\\
+4
+\end{bmatrix}%
+\right\}
+\end{align*}
+and
+\begin{align*}
+\ker(T_{2})
+=
+\Span\left\{
+\begin{bmatrix}
+-1	\\
+-1	\\
+1	\\
+0
+\end{bmatrix}%
+\right\}.
+\end{align*}
+
+The rank--nullity theorem writes as
+\begin{align*}
+\dim(\text{domain}(T_{2}))
+=
+4
+=
+3 + 1
+=
+\dim(\image(T_{2})) + \dim(\ker(T_{2})).
+\end{align*}}% End solution.

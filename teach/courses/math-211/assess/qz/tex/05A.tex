@@ -1,0 +1,58 @@
+\section{Exercise}
+
+% For a discussion of the function f(t,y), see https://math.stackexchange.com/questions/1391544/differentiable-but-not-continuously-differentiable
+
+(2 pt) Consider the first-order IVP
+\begin{align*}
+y'
+=
+f(t,y),
+&&
+y(1)
+=
+0,
+\end{align*}
+where
+\begin{align*}
+f(t,y)
+=
+\begin{dcases*}
+y^{2} \sin\left(\frac{1}{y}\right)	&	if $y \neq 0$,	\\
+0						&	if $y = 0$.
+\end{dcases*}%
+.
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item (1 pt) A friend tells you that $f(t,y)$ is differentiable at all $(t,y)$. Assuming that she's right, what, if anything, can we conclude about existence of solutions to this IVP? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin spaceSolution.
+If a function is differentiable, then it is continuous. If our friend is right, then $f(t,y)$ is continuous, so Picard's theorem implies that there exists a solution to this IVP on some $t$-interval around $t = 1$.}% End spaceSolution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (1 pt) Your friend tells you that $\frac{\partial f}{\partial y}$ is not continuous at $(1,0)$. Assuming that she's right, what, if anything, can we conclude about uniqueness of solutions to this IVP? Justify briefly.
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin spaceSolution.
+The uniqueness statement in Picard's theorem requires that $\frac{\partial f}{\partial y}$ be continuous. Thus, if our friend is right, we can't use Picard's theorem to conclude anything about uniqueness.}% End spaceSolution.
+
+
+
+\begin{enumerate}[resume,label=(\alph*)]
+\item (\Heart{} pt) Can you justify or refute your friend's assertions about $f$?
+\end{enumerate}
+
+\spaceSolution{2in}{% Begin spaceSolution.
+For $y \neq 0$, we compute
+\begin{align*}
+\frac{\partial f}{\partial y}
+=
+\frac{\intd f}{\intd y}
+=
+2 y \sin\left(\frac{1}{y}\right) + y^{2} \cos\left(\frac{1}{y}\right) \left(-y^{-2}\right)
+=
+2 y \sin\left(\frac{1}{y}\right) - \cos\left(\frac{1}{y}\right).
+\end{align*}
+This function is well defined for all $y \neq 0$, so $f$ is well defined}% End spaceSolution.

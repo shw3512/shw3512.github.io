@@ -1,0 +1,69 @@
+%
+% Quiz 04 : 2019-07-11 (R)
+% Stewart 6e Chapter 7.1 Exercise 29.
+%
+\section{Exercise}
+
+(5 pt) Evaluate the following integral.% Begin footnote.
+\footnote{\fontHint{Let $u$ and $v$ be functions of $t$. Note that integrating the product rule
+\begin{align*}
+\frac{\intd}{\intd t} (u v)
+=
+u' v + v' u
+\end{align*}
+gives
+\begin{align*}
+u v
+=
+\int v u' \spaceIntd \intd t
++
+\int u v' \spaceIntd \intd t,
+\end{align*}
+which we can rearrange to yield the ``formula'' for integration by parts (which now we know is just the product rule, integrated!). Remember that you can check your work: Differentiating your answer should give the original integrand.}}% End footnote.
+\begin{align*}
+\int (\cos t) \ln(\sin t) \spaceIntd \intd t
+\end{align*}
+
+\spaceSolution{5in}{% Begin spaceSolution.
+The $\ln(\sin t)$ factor is complicated; differentiating will simplify it. So we try
+\begin{align*}
+u
+=
+\ln(\sin t),
+&&
+\intd v
+=
+\cos t \spaceIntd \intd t.
+\end{align*}
+Then
+\begin{align*}
+\intd u
+=
+\frac{\cos t}{\sin t} \spaceIntd \intd t,
+&&
+v
+=
+\sin t,
+\end{align*}
+and
+\begin{align*}
+\int (\cos t) \ln(\sin t) \spaceIntd \intd t
+&=
+(\sin t) \ln(\sin t) - \int \sin t \frac{\cos t}{\sin t} \spaceIntd \intd t
+\\
+&=
+(\sin t) \ln(\sin t) - \int \cos t \spaceIntd \intd t
+\\
+&=
+(\sin t) \ln(\sin t) - \sin t + C,
+\end{align*}
+where $C \in \reals$. Note: The derivative of our solution is (using the product rule and chain rule)
+\begin{align*}
+\frac{\intd}{\intd t}\big((\sin t) \ln(\sin t) - \sin t + C\big)
+&=
+(\cos t) \ln(\sin t) + (\sin t) \frac{\cos t}{\sin t} - \cos t + 0
+\\
+&=
+(\cos t) \ln(\sin t),
+\end{align*}
+the original integrand, as required.}% End spaceSolution.

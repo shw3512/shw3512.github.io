@@ -1,0 +1,575 @@
+%
+% Quiz 01 : 2019-07-08 (M)
+%
+\section{Single-Variable Calculus}
+
+
+
+\subsection{Exercise \ref{sec : Single Variable Calculus Q1}}
+\label{sec : Single Variable Calculus Q1}
+
+% Farlow et al. Section 8.1.
+
+(2 pt) Let $a,s \in \reals$ such that $s > a$. Evaluate the definite integral $\displaystyle\int_{0}^{+\infty} e^{-s t} e^{a t} \spaceIntd \intd t$.
+
+\spaceSolution{3in}{% Begin solution.
+We compute
+\begin{align*}
+\int_{0}^{+\infty} e^{-s t} e^{a t} \spaceIntd \intd t
+&=
+\lim_{b \rightarrow +\infty} \int_{0}^{b} e^{-(s - a) t} \spaceIntd \intd t
+\\
+&=
+\lim_{b \rightarrow +\infty} \left[-\frac{1}{s - a} e^{-(s - a) t}\right]_{t = 0}^{t = b}
+\\
+&=
+-\frac{1}{s - a} \left[\lim_{b \rightarrow +\infty} e^{-(s - a) b} - 1\right].
+\end{align*}
+By hypothesis, $s - a > 0$, so
+\begin{align*}
+\lim_{b \rightarrow +\infty} e^{-(s - a) b}
+=
+0,
+\end{align*}
+and we are left with
+\begin{align*}
+\int_{0}^{+\infty} e^{-s t} e^{a t} \spaceIntd \intd t
+=
+-\frac{1}{s - a} \left[0 - 1\right]
+=
+\frac{1}{s - a}.
+\end{align*}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Single Variable Calculus Q2}}
+\label{sec : Single Variable Calculus Q2}
+
+% Farlow et al. Section 2.2.
+
+(2 pt) Let $p(t)$ be a continuous function of $t$, let $v(t)$ be a differentiable function of $t$, and let
+\begin{align*}
+y(t)
+=
+v(t) e^{-\int p(t) \spaceIntd \intd t}.
+\end{align*}
+Compute $y'(t)$.
+
+\spaceSolution{3in}{% Begin solution.
+We use the product rule, the chain rule, and the fundamental theorem of calculus:
+\begin{align*}
+y'(t)
+=
+v'(t) e^{-\int p(t) \spaceIntd \intd t} + v(t) e^{-\int p(t) \spaceIntd \intd t} (-p(t))
+=
+e^{-\int p(t) \spaceIntd \intd t} \left(v'(t) - p(t) v(t)\right).
+\end{align*}}% End solution.
+
+\newpage
+
+
+
+\subsection{Exercise \ref{sec : Single Variable Calculus Q3}}
+\label{sec : Single Variable Calculus Q3}
+
+(2 pt) Evaluate the integral $\displaystyle\int \frac{x^{2} + 3 x + 2}{(x - 3) (x^{2} + 1)} \spaceIntd \intd x$.
+
+\spaceSolution{3in}{% Begin solution.
+We use partial fraction decomposition. First we find the decomposition:
+\begin{align*}
+\frac{A}{x - 3} + \frac{B x + C}{x^{2} + 1}
+\seteq
+\frac{x^{2} + 3 x + 2}{(x - 3) (x^{2} + 1)}.
+\end{align*}
+Clearing denominators and gathering like terms, we have
+\begin{align*}
+x^{2} + 3 x + 2
+=
+A (x^{2} + 1) + (B x + C) (x - 3)
+=
+(A + B) x^{2} + (-3 B + C) x + (A - 3 C).
+\end{align*}
+These polynomials are equal if and only if their coefficients for each $x^{n}$ are equal. This yields a system of three equations in three unknowns:
+\begin{align*}
+A + B
+=
+1,
+&&
+-3 B + C
+=
+3,
+&&
+A - 3 C
+=
+2.
+\end{align*}
+This system has the unique solution
+\begin{align*}
+A
+=
+2,
+&&
+B
+=
+-1,
+&&
+C
+=
+0.
+\end{align*}
+Thus
+\begin{align*}
+\int \frac{x^{2} + 5}{(x - 3) (x^{2} + 1)} \spaceIntd \intd x
+&=
+\int \left(\frac{2}{x - 3} - \frac{x}{x^{2} + 1}\right) \intd x
+\\
+&=
+2 \int \frac{1}{x - 3} \spaceIntd \intd x - \frac{1}{2} \int \frac{2 x}{x^{2} + 1} \spaceIntd \intd x
+\\
+&=
+2 \ln\abs{x - 3} - \frac{1}{2} \ln\abs{x^{2} + 1} + c,
+\end{align*}
+where $c \in \reals$.}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Single Variable Calculus Q4}}
+\label{sec : Single Variable Calculus Q4}
+
+(2 pt) Evaluate the integral $3 \displaystyle\int x^{2} \ln x \spaceIntd \intd x$.
+
+\spaceSolution{3in}{% Begin solution.
+We use integration by parts (which is just the product rule, integrated): Let
+\begin{align*}
+u
+= 
+ln x
+&&
+\text{and}
+&&
+\intd v
+=
+x^{2} \spaceIntd \intd x.
+\end{align*}
+Then
+\begin{align*}
+\intd u
+=
+\frac{1}{x} \spaceIntd \intd x
+&&
+\text{and}
+&&
+v
+=
+\frac{1}{3} x^{3},
+\end{align*}
+so
+\begin{align*}
+3 \int x^{2} \ln x \spaceIntd \intd x
+&=
+3 \left(\frac{1}{3} x^{3} \ln x - \frac{1}{3} \int x^{3} \frac{1}{x} \spaceIntd \intd x\right)
+\\
+&=
+x^{3} \ln x - \int x^{2} \spaceIntd \intd x
+\\
+&=
+x^{3} \ln x - \frac{1}{3} x^{3} + c,
+\end{align*}
+where $c \in \reals$.}% End solution.
+
+
+
+
+
+\newpage
+
+\section{Algebra}
+
+
+
+\subsection{Exercise \ref{sec : Algebra Q1}}
+\label{sec : Algebra Q1}
+
+(2 pt) Let $i$ satisfy $i^{2} = -1$. Write the following in the form $A + i B$, for $A,B \in \reals$:
+\begin{align*}
+(a + i b) e^{\alpha + i \beta}.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Recall \href{https://en.wikipedia.org/wiki/Euler\%27s\_formula}{\fontDefWord{Euler's formula}}:
+\begin{align*}
+e^{i \theta}
+=
+\cos \theta + i \sin \theta.
+\end{align*}
+Using this, we compute
+\begin{align*}
+(a + i b) e^{\alpha + i \beta}
+&=
+(a + i b) e^{\alpha} e^{i \beta}
+\\
+&=
+e^{\alpha} (a + i b) (\cos \beta + i \sin \beta)
+\\
+&=
+e^{\alpha} \left(a \cos \beta + i^{2} b \sin \beta + i a \sin \beta + i b \cos \beta\right)
+\\
+&=
+e^{\alpha} (a \cos \beta - b \sin \beta) + i e^{\alpha} (a \sin \beta + b \cos \beta).
+\end{align*}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Algebra Q2}}
+\label{sec : Algebra Q2}
+
+(2 pt) Let $f(x) = m x$, where $m \neq 0$. Let $x_{h}$ be a solution to $f(x) = 0$, and let $x_{p}$ be a solution to $f(x) = 1$. Let $a \in \reals$. Show that $a x_{h} + x_{p}$ is also a solution to $f(x) = 1$.
+
+\spaceSolution{3in}{% Begin solution.
+We substitute $a x_{h} + x_{p}$ into $f(x) = m x$ and see what happens:
+\begin{align*}
+f(a x_{h} + x_{p})
+=
+m (a x_{h} + x_{p})
+=
+m a x_{h} + m x_{p}
+=
+a f(x_{h}) + f(x_{p})
+=
+a \cdot 0 + 1
+=
+1.
+\end{align*}
+Thus $a x_{h} + x_{p}$ is a solution to $f(x) = 1$, as desired.}% End solution.
+
+
+
+\newpage
+
+\subsection{Exercise \ref{sec : Algebra Q3}}
+\label{sec : Algebra Q3}
+
+% Farlow Example 5.4.8.
+
+(2 pt) Write the following system of equations as a matrix equation:
+\begin{align*}
+x_{1} + x_{2} - 2 x_{3}
+=
+b_{1},
+&&
+-x_{1} + 2 x_{2} + x_{3}
+=
+b_{2},
+&&
+x_{2} - x_{3}
+=
+b_{3}.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Coefficient matrix times variable vector equals constants vector:
+\begin{align*}
+\begin{bmatrix}
+1	&	1	&	-2	\\
+-1	&	2	&	1	\\
+0	&	1	&	-1
+\end{bmatrix}
+\begin{bmatrix}
+x_{1}	\\
+x_{2}	\\
+x_{3}
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_{1}	\\
+b_{2}	\\
+b_{3}
+\end{bmatrix}%
+.
+\end{align*}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Algebra Q4}}
+\label{sec : Algebra Q4}
+
+(2 pt) Show that for all $b_{1},b_{2},b_{3}$, there exists a unique solution to the system of equations in Exercise \ref{sec : Algebra Q3}.
+
+\spaceSolution{3in}{% Begin solution.
+We can show this in many ways. One way is to treat the vector of constants $b_{i}$ as parameters and explicitly solve the system (e.g., by substitution, by \href{https://en.wikipedia.org/wiki/Gaussian\_elimination}{row reduction}, by inverting the coefficient matrix, etc.). However, this is a bit of work. The exercise doesn't ask us to find the solution, only to show that it exists and is unique. This is true if the coefficient matrix is invertible, which is equivalent to the coefficient matrix having a nonzero determinant. Using expansion by minors down the first column, we compute
+\begin{align*}
+\det
+\begin{bmatrix}
+1	&	1	&	-2	\\
+-1	&	2	&	1	\\
+0	&	1	&	-1
+\end{bmatrix}
+&=
+(-1)^{1 + 1} (1) \det
+\begin{bmatrix}
+2	&	1	\\
+1	&	-1
+\end{bmatrix}
++ (-1)^{2 + 1} (-1) \det
+\begin{bmatrix}
+1	&	-2	\\
+1	&	-1
+\end{bmatrix}
++ 0
+\\
+&=
+(1) (-2 - 1) + (1) (-1 - (-2))
+=
+-3 + 1
+=
+-2
+\neq
+0.
+\end{align*}
+The determinant is nonzero, hence the coefficient matrix is invertible, hence the matrix equation has a unique solution for any value of the $b_{i}$, hence the system of equations has a unique solution for any value of the $b_{i}$. (All these are equivalent statements.)}% End solution.
+
+
+
+
+
+\newpage
+
+\section{Differential Equations}
+
+
+
+\subsection{Exercise \ref{sec : Differential Equations Q1}}
+\label{sec : Differential Equations Q1}
+
+% Farlow et al. Example 2.5.1(b) (pp 90--91).
+
+(2 pt) For the following homogeneous 1st-order autonomous ODE, determine the equilibrium values and classify the stability of each.
+\begin{align*}
+y'
+=
+(y - 1) (y - 3) (y - 5)^{2}.
+\end{align*}
+
+\spaceSolution{2in}{% Begin solution.
+By definition, an equilibrium is a solution $y$ that does not change with time, i.e. it solves $y' = 0$, which is satisfied if and only if $y(t) \equiv c$ for $c \in \{1,3,5\}$. Analyzing the sign of each factor on the right side of the given ODE, we see that
+\begin{align*}
+y' > 0 \text{ on }(-\infty,1) \cup (3,5) \cup (5,+\infty)
+&&
+\text{and}
+&&
+y' < 0 \text{ on } (1,3).
+\end{align*}
+We conclude that this ODE has three equilibria:
+\begin{itemize}
+\item $y \equiv 1$ : stable
+\item $y \equiv 3$ : unstable
+\item $y \equiv 5$ : semistable (stable from below, unstable from above)
+\end{itemize}}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Differential Equations Q2}}
+\label{sec : Differential Equations Q2}
+
+% Rice Math 211 2018 Fall Final Q 9
+
+(2 pt) Find the general solution to the homogeneous 1st-order linear system of ODEs
+\begin{align*}
+\fontVector{x}'
+=
+\begin{bmatrix}
+-3	&	2	\\
+-1	&	-5
+\end{bmatrix}
+\fontVector{x}.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Let $\fontMatrix{A}$ denote the $2 \times 2$ coefficient matrix. Compute the characteristic polynomial:
+\begin{align*}
+\det(\fontMatrix{A} - \lambda \fontMatrix{I})
+=
+\det
+\begin{bmatrix}
+-3 - \lambda	&	2			\\
+-1			&	-5 - \lambda
+\end{bmatrix}
+=
+\lambda^{2} + 8 \lambda + 17.
+\end{align*}
+Compute the roots of the characteristic polynomial, which are the eigenvalues:
+\begin{align*}
+\lambda
+=
+\frac{-8 \pm \sqrt{64 - 4 (1) (17)}}{2 (1)}
+=
+-4 \pm i.
+\end{align*}
+The eigenvalues are complex, so it suffices to look at one of the eigenvalues and find the real and imaginary parts of its corresponding eigenvector. Consider $\lambda_{+} = -4 + i$. Its eigenvectors $\fontVector{v}_{+}$ solve
+\begin{align*}
+\begin{bmatrix}
+1 - i	&	2	\\
+-1	&	-1 - i
+\end{bmatrix}
+\fontVector{v}_{+}
+=
+\fontVector{0}.
+\end{align*}
+Solve this:
+\begin{align*}
+\fontVector{v}_{+}
+=
+\begin{bmatrix}
+1 + i	\\
+-1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1	\\
+-1
+\end{bmatrix}
++
+i
+\begin{bmatrix}
+1	\\
+0
+\end{bmatrix}%
+.
+\end{align*}
+The general solution is
+\begin{align*}
+\fontVector{x}
+=
+c_{1} \fontVector{x}_{\realPart} + c_{2} \fontVector{x}_{\imaginaryPart},
+\end{align*}
+where
+\begin{align*}
+\fontVector{x}_{\realPart}(t)
+=
+e^{-4 t} \cos t \begin{bmatrix}1\\-1\end{bmatrix} - e^{-4 t} \sin t \begin{bmatrix}1\\0\end{bmatrix}
+&&
+\text{and}
+&&
+\fontVector{x}_{\imaginaryPart}(t)
+=
+e^{-4 t} \sin t \begin{bmatrix}1\\-1\end{bmatrix} + e^{-4 t} \cos t \begin{bmatrix}1\\0\end{bmatrix}.
+\end{align*}}% End solution.
+
+
+
+\newpage
+
+\subsection{Exercise \ref{sec : Differential Equations Q3}}
+\label{sec : Differential Equations Q3}
+
+% Rice Math 211 2018 Fall Final Q 7(c)
+
+(2 pt) Find the general solution $y \in \reals[t]$ to the homogeneous 4th-order ODE
+\begin{align*}
+y^{(4)} - 3 y^{(2)} - 4 y
+=
+0.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+The associated characteristic polynomial (obtained by replacing $y^{(n)}$ by $\lambda^{n}$) is
+\begin{align*}
+\lambda^{4} - 3 \lambda^{2} - 4
+=
+0.
+\end{align*}
+Factoring, we find
+\begin{align*}
+0
+=
+(\lambda^{2} + 1) (\lambda^{2} - 4)
+=
+(\lambda + i) (\lambda - i) (\lambda + 2) (\lambda - 2).
+\end{align*}
+This equation has four distinct roots, $\lambda = \pm{}i$ and $\lambda = \pm{}2$, each with algebraic multiplicity $1$. Hence the general solution is
+\begin{align*}
+y(t)
+=
+c_{1} \cos t + c_{2} \sin t + c_{3} e^{-2 t} + c_{4} e^{2 t},
+\end{align*}
+where $c_{1},\ldots,c_{4} \in \reals$.}% End solution.
+
+
+
+\subsection{Exercise \ref{sec : Differential Equations Q4}}
+\label{sec : Differential Equations Q4}
+
+% Rice Math 211 2018 Fall Final Q 10
+
+(2 pt) Using the laplace transform, solve the following homogeneous 3rd-order ODE IVP:
+\begin{align*}
+y^{(3)} + 4 y^{(2)} - 5 y^{(1)}
+=
+0,
+&&
+y(0)
+=
+4,
+&&
+y'(0)
+=
+-7,
+&&
+y''(0)
+=
+23.
+\end{align*}
+
+\spaceSolution{3in}{% Begin solution.
+Let $\laplaceTransform(y^{(n)})$ denote the laplace transform of $y^{(n)}$. Using the initial conditions, we compute
+\begin{align*}
+\laplaceTransform(y')
+&=
+s \laplaceTransform(y) - y(0)
+=
+s \laplaceTransform(y) - 4
+\\
+\laplaceTransform(y^{(2)})
+&=
+s \laplaceTransform(y') - y'(0)
+=
+s (s \laplaceTransform(y) - 4) - (-7)
+=
+s^{2} \laplaceTransform(y) - 4 s + 7
+\\
+\laplaceTransform(y^{(3)})
+&=
+s \laplaceTransform(y^{(2)}) - y^{(2)}(0)
+=
+s (s^{2} \laplaceTransform(y) - 4 s + 7) - 23
+=
+s^{3} \laplaceTransform(y) - 4 s^{2} + 7 s - 23.
+\end{align*}
+Apply the laplace transform $\laplaceTransform$ to both sides of the given ODE, and use (i) the fact that $\laplaceTransform$ is a linear operator and (ii) the above results:
+\begin{align*}
+0
+=
+\laplaceTransform(0)
+=
+\laplaceTransform(y^{(3)}) + 4 \laplaceTransform(y^{(2)}) - 5 \laplaceTransform(y^{(1)})
+=
+\laplaceTransform(y) (s^{3} + 4 s^{2} - 5 s) - 4 s^{2} - 9 s + 25.
+\end{align*}
+Solve for $\laplaceTransform(y)$, using partial fraction decomposition:
+\begin{align*}
+\laplaceTransform(y)
+=
+\frac{4 s^{2} + 9 s - 25}{s^{3} + 4 s^{2} - 5 s}
+=
+\frac{5}{s} + \frac{1}{s + 5} - \frac{2}{s - 1}.
+\end{align*}
+Now take the inverse laplace transform of both sides to give $y(t)$, using that $\laplaceTransform^{-1}$ is also linear:
+\begin{align*}
+y(t)
+&=
+5 \laplaceTransform^{-1}\left(\frac{1}{s}\right) + \laplaceTransform^{-1}\left(\frac{1}{s + 5}\right) - 2 \laplaceTransform^{-1}\left(\frac{1}{s - 1}\right)
+\\
+&=
+5 + e^{-5 t} - 2 e^{t}.
+\end{align*}
+One can (and should) check that this solution satisfies the original ODE and initial conditions.}% End solution.

@@ -1,0 +1,113 @@
+%
+% Quiz 15A : 2019-07-30 (T)
+%
+\section{Exercise}
+
+(5 pt) Solve the initial value problem given by the homogeneous 3nd-order ODE
+\begin{align*}
+y''' + y'' - 6 y'
+=
+0%
+\label{eq : Quiz 15A ODE}
+\end{align*}
+and the initial conditions
+\begin{align*}
+y(0)
+=
+6,
+&&
+y'(0)
+=
+3,
+&&
+y''(0)
+=
+21.
+\end{align*}
+Your final answer should be an explicit equation for $y(t)$.
+
+\spaceSolution{6in}{% Begin solution.
+The corresponding characteristic polynomial% Begin footnote.
+\footnote{We can obtain the characteristic polynomial by (i) using the change of variables $x_{i} = y^{(i)}$ to rewrite the given higher-order linear ODE as a 1st-order linear system, and computing the eigenvalues of the coefficient matrix $A$ via $\det(\lambda I - A) = 0$; or (ii) replacing $y^{(i)}$ with $\lambda^{i}$ --- this is precisely the polynomial we get using approach (i) --- and computing the roots.} % End footnote.
+is (up to sign)
+\begin{align*}
+p(\lambda)
+=
+\lambda^{3} + \lambda^{2} - 6 \lambda
+=
+\lambda (\lambda + 3) (\lambda - 2),
+\end{align*}
+which has roots (the eigenvalues)
+\begin{align*}
+\lambda
+\in
+\{-3,0,2\}.
+\end{align*}
+Thus the general solution $y(t)$ to the ODE is
+\begin{align*}
+y(t)
+=
+c_{1} e^{-3 t} + c_{2} + c_{3} e^{2 t}.
+\end{align*}
+To solve the IVP, need to apply the given initial conditions. First we compute the derivatives:
+\begin{align*}
+y'(t)
+&=
+-3 c_{1} e^{-3 t} + 2 c_{3} e^{2 t}
+\\
+y''(t)
+&=
+9 c_{1} e^{-3 t} + 4 c_{3} e^{2 t}.
+\end{align*}
+Then we apply the initial conditions:
+\begin{align*}
+\begin{array}{c c c c c c c c c}
+6	&	=	&	y(0)	&	=	&	c_{1}		&	+	&	c_{2}	&	+	&	c_{3}		\\
+3	&	=	&	y'(0)	&	=	&	-3 c_{1}	&	+	&		&		&	2 c_{3}	\\
+21	&	=	&	y''(0)	&	=	&	9 c_{1}	&	+	&		&		&	4 c_{3}.
+\end{array}
+\end{align*}
+This is a system of equations in the unknowns $c_{1},c_{2},c_{3}$. Writing the corresponding augmented matrix and applying the row reduction algorithm, we get
+\begin{align*}
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	1	&	1	&	6	\\
+-3	&	0	&	2	&	3	\\
+9	&	0	&	4	&	21
+\end{array}
+\right]
+\rightarrow
+\cdots
+\rightarrow
+\left[
+\begin{array}{c c c;{2pt/2pt}c}
+1	&	0	&	0	&	1	\\
+0	&	1	&	0	&	2	\\
+0	&	0	&	1	&	3
+\end{array}
+\right],%
+\end{align*}
+from which we can read off the solution
+\begin{align*}
+c_{1}
+=
+1,
+&&
+c_{2}
+=
+2,
+&&
+c_{3}
+=
+3.
+\end{align*}
+We conclude that the solution to the IVP is
+\begin{align*}
+y(t)
+=
+e^{-3 t} + 2 + 3 e^{2 t}.
+\end{align*}
+
+% WolframAlpha : solve y'''+y''-6y'=0,y(0)=6,y'(0)=3,y''(0)=21
+
+Note that we can check our solution by (i) plugging it into the original ODE and confirming that the equation holds, and (ii) evaluating $y(t)$ and its derivatives at $0$ and confirming that we get the values given by the initial conditions.}% End solution.
