@@ -24,8 +24,10 @@
 
 Remarks.
 
-1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, `tex` links to the TeX document, and `im` links to a zip file of images used in the assessment.
-2. To compile pdfs for the quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named `sq`, `lq`, `rq`, `me`, and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
+1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, and `tex` links to source files (TeX and image files) called when compiling the pdfs.
+    - If exactly one source file is called, then `tex` links to that TeX file.
+    - If more than one source file is called, then `tex` links to a zip file that contains all source files.
+3. To compile pdfs for the quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named `sq`, `lq`, `rq`, `me`, and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
     - Abbreviations: `sq` = short quiz, `lq` = long quiz, `rq` = requiz, `me` = mock exam, `ex` = exam
 
 ### Quizzes
@@ -77,7 +79,7 @@ Remarks.
 
 | # | Key topics | Files |
 |:--|:-----------|:------|
-| 1 | Functions, continuity, differentiation, related rates | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), tex ([instr](assess/ex/tex/01-instr.tex), [grade](assess/ex/tex/01-grade.tex), [q+a](assess/ex/tex/01.tex), [im](assess/ex/tex/01-graphics.zip)) |
-| 2 | Limits, integration, signed area under curves         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-instr.tex), [grade](assess/ex/tex/02-grade.tex), [q+a](assess/ex/tex/02.tex), [im](assess/ex/tex/02-graphics.zip)) |
-| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([instr](assess/ex/tex/03-instr.tex), [grade](assess/ex/tex/03-grade.tex), [q+a](assess/ex/tex/03.tex), [im](assess/ex/tex/03-graphics.zip)) |
-| 4 | Comprehensive                                         | [q](assess/lq/pdf/04.pdf), [a](assess/lq/pdf/04-sol.pdf), tex ([instr](assess/ex/tex/04-instr.tex), [grade](assess/ex/tex/04-grade.tex), [q+a](assess/ex/tex/04.tex), [im](assess/ex/tex/04-graphics.zip)) |
+| 1 | Functions, continuity, differentiation, related rates | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), [tex](assess/ex/tex/01.zip)) |
+| 2 | Limits, integration, signed area under curves         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), [tex](assess/ex/tex/02.zip)) |
+| 3 | Integration, fundamental theorem of calculus, graphs  | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), [tex](assess/ex/tex/03.zip)) |
+| 4 | Comprehensive                                         | [q](assess/lq/pdf/04.pdf), [a](assess/lq/pdf/04-sol.pdf), [tex](assess/ex/tex/04.zip)) |
