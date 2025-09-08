@@ -73,7 +73,7 @@ Remarks.
 |-----:|:-------|:------|
 |    0 | Diagnostic quiz | [q](assess/qz/pdf/01.pdf), [a](assess/qz/pdf/01-sol.pdf), tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
 |    1 | Mostly first-order ODEs | [q](assess/ex/pdf/01.pdf), [a](assess/ex/pdf/01-sol.pdf), tex ([instr](assess/ex/tex/01-instr.tex), [grade](assess/ex/tex/01-grade.tex), [q+a](assess/ex/tex/01.tex), [im](assess/ex/tex/01-graphics.zip)) |
-|    2 | Linear algebra, first-order ODEs | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-instr.tex), [grade](assess/ex/tex/02-grade.tex), [q+a](assess/ex/tex/02.tex) |
+|    2 | Linear algebra, first-order ODEs | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), tex ([instr](assess/ex/tex/02-instr.tex), [grade](assess/ex/tex/02-grade.tex), [q+a](assess/ex/tex/02.tex)) |
 |    3 | Linear algebra, first-order linear systems, second-order linear ODEs | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([instr](assess/ex/tex/03-instr.tex), [grade](assess/ex/tex/03-grade.tex), [q+a](assess/ex/tex/03.tex), [im](assess/ex/tex/03-graphics.zip)) |
 |    4 | Comprehensive | [q](assess/ex/pdf/04.pdf), [a](assess/ex/pdf/04-sol.pdf), tex ([instr](assess/ex/tex/04-instr.tex), [grade](assess/ex/tex/04-grade.tex), [q+a](assess/ex/tex/04.tex), [im](assess/ex/tex/04-graphics.zip)) |
 | oral | Comprehensive | [q+a](assess/ex/pdf/oral.pdf), [tex](assess/ex/tex/oral.tex) |
