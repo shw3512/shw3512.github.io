@@ -71,9 +71,9 @@ Remarks.
 
 |    # | Topics | Files |
 |-----:|:-------|:------|
-|    0 |  | [q](assess/qz/pdf/01.pdf), [a](assess/qz/pdf/01-sol.pdf), tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
-|    1 |  | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
-|    2 |  | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
-|    3 |  | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
-|    4 |  | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
-| oral |  | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
+|    0 | Diagnostic quiz | [q](assess/qz/pdf/01.pdf), [a](assess/qz/pdf/01-sol.pdf), tex ([instr](assess/qz/tex/01-instr.tex), [grade](assess/qz/tex/01-grade.tex), [q+a](assess/qz/tex/01.tex)) |
+|    1 | Mostly first-order ODEs | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
+|    2 | Linear algebra, first-order ODEs | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
+|    3 | Linear algebra, first-order linear systems, second-order linear ODEs | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
+|    4 | Comprehensive | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
+| oral | Comprehensive | [q](), [a](), tex ([instr](), [grade](), [q+a]()) |
