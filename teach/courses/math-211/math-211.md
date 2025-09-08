@@ -44,7 +44,7 @@ Remarks.
 | Sequence | Type  | Topic                                              | Quiz | Requiz A | Requiz B |
 |---------:|:------|:---------------------------------------------------|:-----|:---------|:---------|
 |        2 | short | Checking solutions to ODEs                         | [q](assess/ex/pdf/02.pdf), [a](assess/ex/pdf/02-sol.pdf), [tex](assess/ex/tex/02.tex) |  |  |
-|        3 | short | Slope fiels of 1st-order ODEs                      | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([q+a](assess/ex/tex/02.tex), [im](assess/ex/tex/03-graphics.zip)) |  |  |
+|        3 | short | Slope fields of 1st-order ODEs                      | [q](assess/ex/pdf/03.pdf), [a](assess/ex/pdf/03-sol.pdf), tex ([q+a](assess/ex/tex/02.tex), [im](assess/ex/tex/03-graphics.zip)) |  |  |
 |        4 | long  | Integration by parts                               | [q](assess/ex/pdf/04.pdf), [a](assess/ex/pdf/04-sol.pdf), [tex](assess/ex/tex/04.tex) | [q](assess/ex/pdf/04A.pdf), [a](assess/ex/pdf/04A-sol.pdf), [tex](assess/ex/tex/04A.tex) | [q](assess/ex/pdf/04B.pdf), -, [tex](assess/ex/tex/04B.tex) |
 |        5 | short | Solutions to initial-value problems                | [q](assess/ex/pdf/05.pdf), [a](assess/ex/pdf/05-sol.pdf), [tex](assess/ex/tex/05.tex) |  |  |
 |        6 | long  | Nonhomogeneous linear ODE                          | [q](assess/ex/pdf/06.pdf), [a](assess/ex/pdf/06-sol.pdf), [tex](assess/ex/tex/06.tex) | [q](assess/ex/pdf/06A.pdf), -, [tex](assess/ex/tex/06A.tex) | [q](assess/ex/pdf/06B.pdf), -, [tex](assess/ex/tex/06B.tex) |
