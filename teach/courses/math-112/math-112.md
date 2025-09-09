@@ -25,9 +25,9 @@
 Remarks.
 
 1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, and `tex` links to a zip file of all source files (TeX and image files) called when compiling the pdfs.
-2. To compile pdfs of quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)) and a subdirectory structure of the form `_assessment-type_/tex/_NN_`. For example, source files for Exam 01 reside in the relative directory `ex/tex/01` (relative to `main.tex`). File calls in `main.tex` assume this directory structure.
-    - Allowed values of `_assessment-type_`: `ex` = exam, `lq` = long quiz, `me` = mock exam, `rq` = requiz, `sq` = short quiz
-    - Allowed values of `_NN_`: Any two-digit number (e.g., 00, 01, ...). Requiz names have a capital letter following the number (e.g., 01A).
+2. To compile pdfs of quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)) and a directory structure of the form `<assessment-type>/tex/<NN>`. For example, source files for Exam 01 reside in the relative directory `ex/tex/01` (relative to `main.tex`). File calls in `main.tex` assume this directory structure.
+    - Allowed values of `<assessment-type>`: `ex` = exam, `lq` = long quiz, `me` = mock exam, `rq` = requiz, `sq` = short quiz
+    - Allowed values of `<NN>`: Any two-digit number (e.g., 00, 01, ...). Requiz names have a capital letter following the number (e.g., 01A).
 
 ### Quizzes
 
