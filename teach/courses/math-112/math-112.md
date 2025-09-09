@@ -24,11 +24,9 @@
 
 Remarks.
 
-1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, and `tex` links to source files (TeX and image files) called when compiling the pdfs.
-    - If exactly one source file is called, then `tex` links to that TeX file.
-    - If more than one source file is called, then `tex` links to a zip file that contains all source files.
-3. To compile pdfs for the quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named `sq`, `lq`, `rq`, `me`, and `ex` (in the same directory as `main.tex`), each with its own subdirectory named `tex`, in which the corresponding TeX files were saved.
-    - Abbreviations: `sq` = short quiz, `lq` = long quiz, `rq` = requiz, `me` = mock exam, `ex` = exam
+1. In the tables below, `q` links to a pdf of the exercises, `a` links to a pdf of proposed solutions, and `tex` links to a zip file of all source files (TeX and image files) called when compiling the pdfs.
+2. To compile pdfs for the quizzes and exams, I used a common template TeX document ([`main.tex`](assess/main.tex)); and subdirectories named  `ex`, `lq`, `me`, `rq`, and `sq` (in the same directory as `main.tex`). For example, source files for Exam 01 reside in the relative directory `ex/tex/01` (relative to `main.tex`). This directory structure is reflected in `main.tex`.
+    - Abbreviations: `ex` = exam, `lq` = long quiz, `me` = mock exam, `rq` = requiz, `sq` = short quiz
 
 ### Quizzes
 
