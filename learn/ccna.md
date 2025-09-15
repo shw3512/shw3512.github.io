@@ -29,6 +29,7 @@ Below I list the resources that I used to prepare for the CCNA certification exa
     - November 2024
         - Volume 1 ([Amazon](https://www.amazon.com/CCNA-Certification-Study-Guide-Exam-dp-1394213018/dp/1394213018))
         - Volume 2 ([Amazon](https://www.amazon.com/CCNA-Certification-Study-Guide-200-301-dp-1394302150/dp/1394302150))
+- Cost: I purchased a print version of the 2019/2020-edition two-volume set for just over 30 USD from a third-party seller on Amazon in October 2023. As of September 2025, sellers on Amazon offer each volume for less than 10 USD (includes shipping).
 - My review: Neutral
     - I read volume 1 only, not volume 2. (When I finished volume 1, I started reading Jeremy McDowell's books, listed below.) Also, I read an older (2019/2020) edition; I do not know how the newer edition compares. I found Todd Lammle's writing to be accessible (to a network beginner) and engaging. Some topics---like banners, configuration registers, licensing, RIP, and several WAN topics---that he covers may be more relevant to on-the-job work (well, maybe not RIP...) than to the current CCNA exam.
 
@@ -40,6 +41,7 @@ Below I list the resources that I used to prepare for the CCNA certification exa
     - Volume 1, "Fundamentals and protocols" ([Manning](https://www.manning.com/books/acing-the-ccna-exam-fundamentals-and-protocols))
     - Volume 2, "Advanced networking and security" ([Manning](https://www.manning.com/books/acing-the-ccna-exam-advanced-networking-and-security))
     - Published in July 2024, the two books together cover all topics on Cisco's "[CCNA exam topics](https://learningnetwork.cisco.com/s/ccna-exam-topics)" list released in August 2024
+- Cost: I purchased the print (includes e-book access) version of each volume for 27.49 USD (each), plus 11 USD shipping (total), from Manning in July 2024.
 - My review: Highly recommend
     - I found Jeremy McDowell's writing to be accessible (to a network beginner), clear, and logically and effectively organized. McDowell goes into more detail than is needed for the CCNA exam. I don't view this as a negative: McDowell's books provide both an effective framework and helpful context for the CCNA exam topics. This over-prepares you for the CCNA exam, jump-starts you on your CCNP Enterprise studies, and serves you well on the job.
 
@@ -55,10 +57,12 @@ N.B. Udemy has frequent promotions (sales), so I've never paid the sticker price
 - Platforms:
     - [Teachable](https://courses.jeremysitlab.com/p/ccna)
     - [Udemy](https://www.udemy.com/course/ccna-jitl/)
-        - I purchased an [earlier version](https://www.udemy.com/course/complete-cisco-ccna-200-301-course/) of this course for 13.99 USD in June 2024.
     - [YouTube](https://www.youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
         - The videos on YouTube include advertisements, which I found to be disruptive and distracting.
     - See Jeremy's [comparison of the three platforms](https://docs.google.com/spreadsheets/d/1bqXS1nKNuIdumXjNXUoOINzUa704Og5jwUVyrvyauZs/edit)
+- Cost:
+    - YouTube: free (includes in-video advertisements)
+    - Udemy: I purchased an [earlier version of the course](https://www.udemy.com/course/complete-cisco-ccna-200-301-course/) on Udemy for 13.99 USD in June 2024.
 - Details:
     - "A free* and complete CCNA course"
         - Free when viewed on YouTube
@@ -71,7 +75,7 @@ N.B. Udemy has frequent promotions (sales), so I've never paid the sticker price
 - Instructor: Neil Anderson
 - Platforms:
     - [Udemy](https://www.udemy.com/course/ccna-complete)
-        - I purchased the course for 16.99 USD in June 2024.
+- Cost: I purchased the course on Udemy for 16.99 USD in June 2024.
 - Details:
     - Includes lecture videos, labs (in Packet Tracer), and flashcards (in Anki)
 - Review: Highly recommend
