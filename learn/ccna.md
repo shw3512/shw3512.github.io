@@ -75,6 +75,7 @@ N.B. Some libraries, including public libraries, offer access to Udemy courses. 
 - Instructor: Neil Anderson
 - Platforms:
     - [FlackBox](https://www.flackbox.com/cisco-ccna-course)
+        - Other websites (for example, [Practical Networking](https://www.practicalnetworking.net/announcement/discounted-ccna-course-by-neil-anderson/)) may offer discounts for this course.
     - [Udemy](https://www.udemy.com/course/ccna-complete)
 - Cost: I purchased the course on Udemy for 16.99 USD in June 2024.
 - Details:
