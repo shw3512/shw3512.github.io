@@ -18,4 +18,4 @@ Peruse my past [learning](learn/past.md) and [projects](proj/past.md).
 
 # Connect
 
-Reach me on [GitHub](https://github.com/shw3512) \| [LinkedIn](https://www.linkedin.com/in/stephen-wolff-0x200/)
+Reach me on [GitHub](https://github.com/shw3512) or [LinkedIn](https://www.linkedin.com/in/stephen-wolff-0x200/).
