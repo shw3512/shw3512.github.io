@@ -6,7 +6,7 @@
 
 
 
-## Learning resources
+## Resources
 
 N.B. Cisco announced "[minor updates](https://learningnetwork.cisco.com/s/ccna-exam-topics)" for the CCNA certification, effective 20 August 2024. When you investigate learning resources---for the CCNA or any other exam---I suggest that you verify when the resource was created and last updated, and the version of the exam on which it focuses. Older resource aren't worthless, and indeed may be preferred, for reasons of convenience, cost, or curiosity; but in choosing your resources, it helps to know what the current exam topics are (typically easy to determine) and what has changed regarding exam topics, technology, and best practices (typically harder to determine).
 

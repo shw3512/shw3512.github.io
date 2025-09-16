@@ -6,7 +6,7 @@
 
 
 
-## Learning resources
+## Resources
 
 ### Books
 
