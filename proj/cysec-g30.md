@@ -43,22 +43,37 @@ generating discussion and desire to know more, not delivering "content".
 ## Realities
 
 1. People face tradeoffs
-    - Security v convenience
+    - Security v cost and convenience
     - Trust v time
     - Different balance in different settings with different people (entities, etc.)
         - Your bff AirDrops a photo to you irl
-        - A stranger sends you a file on the Internet
-2. The Internet...
-    - is open
+        - A stranger sends you a file over the Internet
+2. The Internet is...
+    - Open
         - Anyone can see Internet traffic
-    - is public
+    - Public
         - Anyone can use it
-    - is forever
+    - Forever
         - [Internet Archive](https://archive.org/) (Wayback Machine)
 
 
 
 ## Attacks
+
+### Examples
+
+#### In the news
+
+- Stuxnet worm (2010) destroys centrifuges at air-gapped Iranian nuclear facility ([IEEE](https://spectrum.ieee.org/the-real-story-of-stuxnet), [Kaspersky](https://www.kaspersky.com/resource-center/definitions/what-is-stuxnet), [Wikipedia](https://en.wikipedia.org/wiki/Stuxnet), [WIRED](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/), [YouTube : CFR Education](https://www.youtube.com/watch?v=djUHvCyPYhY), [YouTube : Darknet Diaries](https://www.youtube.com/watch?v=9DCwyuH29SI))
+- Hackers hijack car remotely (2015), killing the engine on a highway and (separately) driving it into a ditch ([YouTube : WIRED](https://www.youtube.com/watch?v=MK0SrxBC1xs), [WIRED](https://www.wired.com/video/watch/hackers-wireless-jeep-attack-stranded-me-on-a-highway))
+- NotPetya encrypting malware (2017) cripples firms, causing estimated 10B USD in damages ([Cloudflare](https://www.cloudflare.com/learning/security/ransomware/petya-notpetya-ransomware/), [Wikipedia](https://en.wikipedia.org/wiki/Petya_(malware_family)), [WIRED](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/), [YouTube : Cybernews](https://www.youtube.com/watch?v=3-MSlNVqzYY))
+- Colonial Pipeline ransomware attack (2021) highlights vulnerabilities in US critical infrastructure ([US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack))
+
+#### But, it won't happen to me...right?
+
+- How easy is it to steal passwords from a Web browser's password manager? ([YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk))
+- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing ([Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/))
+    - Notice how quickly an attack can unfold (automation!)
 
 ### Social engineering
 
@@ -79,7 +94,7 @@ generating discussion and desire to know more, not delivering "content".
 - Your name is missing or misspelled
 - Fishy (or look-alike) sender e-mail address
 
-##### Commonly used tactics
+#### Commonly used tactics
 
 - Scarcity
 - Urgency
@@ -92,15 +107,23 @@ generating discussion and desire to know more, not delivering "content".
 - Likeableness
     - Pity
 
-##### Tips
+#### Tips
 
 - Listen to your Spidey sense
     - Does something feel "off"?
 - Slow down and question
 - Use another route
-    - Scenario: You get an e-mail from your bank saying that your account may have been compromised and you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. What do you do?
-        - One option: Instead of clicking the link, give your bank a call.
-            - Using what phone number? The number in the e-mail, the number on their website, the number on the back of your bank card,...?
+
+### Your turn
+
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills that come due in the next few days.
+
+What do you do?
+
+- Option: Instead of clicking the link, log in to your bank's website.
+    - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
+- Option: Instead of clicking the link, give your bank a call.
+    - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
 
 
 
