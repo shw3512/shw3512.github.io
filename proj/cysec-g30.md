@@ -49,10 +49,10 @@ generating discussion and desire to know more, not delivering "content".
         - Your bff AirDrops a photo to you irl
         - A stranger sends you a file over the Internet
 2. The Internet is...
-    - Open
-        - Anyone can see Internet traffic
     - Public
         - Anyone can use it
+    - Open
+        - Anyone can see Internet traffic
     - Forever
         - [Internet Archive](https://archive.org/) (Wayback Machine)
 
@@ -77,23 +77,9 @@ generating discussion and desire to know more, not delivering "content".
 
 ### Social engineering
 
-- Manipulation
-    - Doesn't require technology (not even verbal language!)
-        - Threatening gestures (!!!) (insert image)
-
-#### Phishing
-
-- (!!!) Definition
-- Spear phishing: targeted phishing
-    - (!!!) Definition
-    - Example (!!!) (from real life)
-
-##### Phishing indicators (may or may not apply!)
-
-- Bad grammar, spelling
-    - Advancements in large language models (LLMs) have enabled attackers to mitigate this indicator
-- Your name is missing or misspelled
-- Fishy (or look-alike) sender e-mail address
+- An attempt to manipulate
+    - Doesn't require technology (or even verbal language!)
+        - Example. Threatening actions or gestures
 
 #### Commonly used tactics
 
@@ -108,7 +94,20 @@ generating discussion and desire to know more, not delivering "content".
 - Likeableness
     - Pity
 
-#### Tips
+#### Phishing
+
+- Socially engineering via e-mail
+- Spear phishing: targeted phishing
+    - Example. Successful spear-phishing attack during the 2016 US presidential election ([Wikipedia](https://en.wikipedia.org/wiki/Podesta_emails))
+
+##### Phishing indicators (may or may not apply!)
+
+- Bad grammar, spelling
+    - Advancements in large language models (LLMs) have enabled attackers to mitigate this indicator
+- Your name is missing or misspelled
+- Fishy (or look-alike) sender e-mail address
+
+#### Tips to mitigate social engineering
 
 - Listen to your Spidey sense
     - Does something feel "off"?
@@ -117,13 +116,15 @@ generating discussion and desire to know more, not delivering "content".
 
 ### Your turn
 
-Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills that come due in the next few days.
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
 
 What do you do?
 
-- Option: Log in to your bank's website.
+(Example options)
+
+- Log in to your bank's website.
     - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
-- Option: Give your bank a call.
+- Give your bank a call.
     - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
 
 
@@ -132,10 +133,13 @@ What do you do?
 
 ### Introduction
 
-- (!!!) Definition
 - Compare: authentication versus identification (versus authorization)
-    - Example: Monty Python and the Holy Grail ([YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg))
-        - "[A]nswer me these questions three, ere the other side [you] see."
+    - Identification: Who are you?
+    - Authentication: How do I know you are who you say you are?
+        - "Prove" your identity!
+    - Authorization: What are you allowed to do?
+- Example. Monty Python and the Holy Grail ([YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg))
+  - "[A]nswer me these questions three, ere the other side [you] see."
 
 ### Factors of authentication
 
@@ -152,13 +156,13 @@ Others:
 
 ### Multifactor authentication
 
-- (!!!) Definition
-- Must be different _factors_ (categories)!
+- Use of two or more different factors during authentication
+    - Must be different _factors_ (categories)!
 - Why it helps
     - Defense in depth
 - Tradeoff: Security versus convenience
-    - (!!!) Ways to make MFA more convenient
-        - (!!!) Example (from real life)
+    - Consider: Make MFA more convenient, and you can make systems and data more secure
+        - Examples. Integrating fingerprint scanning hardware and software into laptops. Integrating face-scanning software into cell phones.
 
 ### Passwords
 
@@ -205,9 +209,12 @@ For each scenario below, identify (a) what is the identification, authentication
 
 ### Suspicious files and links
 
+- [Joe Sandbox](https://www.joesandbox.com)
 - [VirusTotal](https://www.virustotal.com/gui/)
-    - Note: If you upload a file, then assume others will see it (and potentially the info it contains)
-        - For more info, see [this article](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/) and [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
+
+Note: If you upload a file, then assume others will see it (and potentially the info it contains).
+
+- For more info, see [this article](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/) and [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
 
 ### Device settings
 
