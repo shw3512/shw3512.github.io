@@ -8,9 +8,9 @@ I'm currently working on
 
 I'm currently learning about
 
-- [Compilers](compilers.md)
-- [Computer networking]() (at the level of Cisco's CCNP)
-- [Lisp](lisp.md)
+- [Compilers](learn/compilers.md)
+- [Computer networking](learn/ccnp.md) (at the level of Cisco's CCNP)
+- [Lisp](learn/lisp.md)
 
 # Previously
 
