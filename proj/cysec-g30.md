@@ -37,6 +37,7 @@ generating discussion and desire to know more, not delivering "content".
 2. [Authentication](cysec-g30.md#authentication)
 3. [Best practices](cysec-g30.md#best-practices)
 4. [Practice](cysec-g30.md#practice)
+5. [References](cysec-g30.md#references)
 
 
 
@@ -238,3 +239,10 @@ Note: If you upload a file, then assume others will see it (and potentially the 
 1. On your way home from work, school, the library, etc., you find a USB flash drive on which is written the tiny message, "If found, please mail to address in README file." What do you do?
 
 (!!!) Additional scenarios, time permitting
+
+
+
+## References
+
+1. Grubb, S. (2021). How Cybersecurity Really Works: A Hands-On Guide for Total Beginners. United States: No Starch Press.
+    - ISBN-13 978-1-7185-0128-7
