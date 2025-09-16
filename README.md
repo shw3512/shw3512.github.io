@@ -4,7 +4,7 @@ I'm glad you're here.
 
 I'm currently working on
 
-- [Cybersecurity presentation for a general audience](cysec-g30.md) (30 minutes, English)
+- [Cybersecurity presentation for a general audience](proj/cysec-g30.md) (30 minutes, English)
 
 I'm currently learning about
 
