@@ -43,18 +43,20 @@ generating discussion and desire to know more, not delivering "content".
 
 ## Realities
 
-1. Tradeoffs exist
-    - Security versus cost and convenience
-    - Trust versus time
-    - Different balance in different settings with different people or organizations
-        - Your bff AirDrops a photo to you irl
-        - A stranger sends you a file over the Internet
-2. The Internet is...
-    - Public
+1. Tradeoffs
+    - Tradeoffs exist
+        - Security versus cost
+        - Security versus convenience
+        - Trust versus time
+    - Tradeoffs change
+    - Tradeoffs depend on context
+        - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
+2. The Internet
+    - The Internet is public
         - Anyone can use it
-    - Open
+    - The Internet is open
         - Anyone can see Internet traffic
-    - Forever
+    - The Internet is forever
         - [Internet Archive](https://archive.org/) (Wayback Machine)
 
 
@@ -65,16 +67,30 @@ generating discussion and desire to know more, not delivering "content".
 
 #### In the news
 
-- Stuxnet worm (2010) destroys centrifuges at an air-gapped Iranian nuclear facility \[[IEEE](https://spectrum.ieee.org/the-real-story-of-stuxnet), [Kaspersky](https://www.kaspersky.com/resource-center/definitions/what-is-stuxnet), [Wikipedia](https://en.wikipedia.org/wiki/Stuxnet), [WIRED](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/), [YouTube : CFR Education](https://www.youtube.com/watch?v=djUHvCyPYhY), [YouTube : Darknet Diaries](https://www.youtube.com/watch?v=9DCwyuH29SI)\]
-- Hackers hijack car remotely (2015), killing the engine on a highway and driving it into a ditch \[[YouTube : WIRED](https://www.youtube.com/watch?v=MK0SrxBC1xs), [WIRED](https://www.wired.com/video/watch/hackers-wireless-jeep-attack-stranded-me-on-a-highway)\]
-- NotPetya encrypting malware (2017) cripples firms, causing an estimated 10B USD in damages \[[Cloudflare](https://www.cloudflare.com/learning/security/ransomware/petya-notpetya-ransomware/), [Wikipedia](https://en.wikipedia.org/wiki/Petya_(malware_family)), [WIRED](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/), [YouTube : Cybernews](https://www.youtube.com/watch?v=3-MSlNVqzYY)\]
-- Colonial Pipeline ransomware attack (2021) highlights vulnerabilities in US critical infrastructure \[[US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)\]
+- Stuxnet worm (2010)
+    - Destroys centrifuges at an air-gapped Iranian nuclear facility
+    - [IEEE](https://spectrum.ieee.org/the-real-story-of-stuxnet), [Kaspersky](https://www.kaspersky.com/resource-center/definitions/what-is-stuxnet), [Wikipedia](https://en.wikipedia.org/wiki/Stuxnet), [WIRED](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/), [YouTube : CFR Education](https://www.youtube.com/watch?v=djUHvCyPYhY), [YouTube : Darknet Diaries](https://www.youtube.com/watch?v=9DCwyuH29SI)
+- Remote hijacking of car (2015)
+    - Hackers kill the engine on a highway and drive the car into a ditch
+    - [YouTube : WIRED](https://www.youtube.com/watch?v=MK0SrxBC1xs), [WIRED](https://www.wired.com/video/watch/hackers-wireless-jeep-attack-stranded-me-on-a-highway)
+- NotPetya encrypting malware (2017)
+    - Cripples firms, causing an estimated 10B USD in damages
+    - [Cloudflare](https://www.cloudflare.com/learning/security/ransomware/petya-notpetya-ransomware/), [Wikipedia](https://en.wikipedia.org/wiki/Petya_(malware_family)), [WIRED](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/), [YouTube : Cybernews](https://www.youtube.com/watch?v=3-MSlNVqzYY)
+- Colonial Pipeline ransomware attack (2021)
+    - Highlights vulnerabilities in US critical infrastructure
+    - [US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)
 
 #### But, it won't happen to me...right?
 
-- How easy is it to steal passwords from a Web browser's password manager? \[[YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)\]
-- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing \[[Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)\]
+- How easy is it to steal passwords from a Web browser's password manager?
+    - [YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)
+- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
+    - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
     - Notice how quickly an attack can unfold (automation!)
+- Mirai botnet
+    - Automatically scans the Internet for potentially vulnerable IoT devices and attempts brute-force logins (mostly using default credentials)
+    - At its peak, infects over half a million devices
+    - [Cloudflare](https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/), [CIS](https://www.cisecurity.org/insights/blog/the-mirai-botnet-threats-and-mitigations), [Google Research](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46301.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Mirai_(malware))
 
 ### Social engineering
 
@@ -90,7 +106,7 @@ generating discussion and desire to know more, not delivering "content".
     - "Order before the countdown timer reaches zero and get 25% off!"
 - Intimidation
     - Fear
-        - "Your tax return is being investigated for fraud that carries penalties of prison terms up to five years and fines up to $250,000."
+        - "Your tax return is being investigated for fraud that carries penalties of prison terms of up to five years and fines of up to $250,000."
 - Authority
     - "Nine out of ten doctors agree."
     - "The experiment requires that you continue."
@@ -102,10 +118,11 @@ generating discussion and desire to know more, not delivering "content".
         - "You know me."
 - Likeableness
     - Pity
+        - "They deserve a better life than this. Donate your money, time, and action now."
 
 #### Phishing
 
-- Socially engineering via e-mail
+- Social engineering via e-mail
 - Spear phishing: targeted phishing
     - Example. Successful spear-phishing attack during the 2016 US presidential election \[[Wikipedia](https://en.wikipedia.org/wiki/Podesta_emails)\]
 
@@ -222,15 +239,33 @@ For each scenario below, identify (a) what is the identification, authentication
 
 Tools for your cybersecurity toolkit
 
+Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
+
+### Data breach
+
+- [HaveIBeenPwned](https://haveibeenpwned.com)
+
+### Inspect suspicious e-mails
+
+- [CheckPhish](https://checkphish.bolster.ai)
+- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
+- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
+- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
+- "Top 10 email analysis tools for phishing" \[[Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)\]
+
 ### Inspect suspicious files or links
 
+- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
 - [Joe Sandbox](https://www.joesandbox.com)
 - [VirusTotal](https://www.virustotal.com/gui/)
 
-Note: If you upload a file, then assume others will see it (and potentially the info it contains).
-
 - Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
 - [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
+
+### Inspect suspicious URLs (Web sites)
+
+- [AbuseIPDB](https://www.abuseipdb.com)
+    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
 
 ### Device settings
 
@@ -269,5 +304,7 @@ Note: If you upload a file, then assume others will see it (and potentially the 
 
 ## References
 
-1. Grubb, S. (2021). _How Cybersecurity Really Works: A Hands-On Guide for Total Beginners._ United States: No Starch Press.
-    - ISBN-13 978-1-7185-0128-7
+1. Grubb, Sam (2021). _How Cybersecurity Really Works: A Hands-On Guide for Total Beginners._ United States: No Starch Press.
+    - ISBN-13 978-1-7185-0128-7 (paperback)
+2. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: WW Norton.
+    - ISBN-13 978-1-3240-0430-1 (e-book), 978-1-3240-0429-5 (hardcover), 978-0-3938-6745-9 (paperback)
