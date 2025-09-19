@@ -55,7 +55,7 @@ generating discussion and desire to know more, not delivering "content".
         - Values change
     - Tradeoffs depend on context
         - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
-            - Every file your bff has shared with you recently has been infected with malware.
+            - Every file your bff has shared with you recently has been infected with malware, and the file seems unusually large.
             - (!!!) The stranger is an employee at Microsoft, and the file is a security update whose MD5 and SHA-512 checksums agree with those on Microsoft's website.
 2. The Internet
     - The Internet is public
