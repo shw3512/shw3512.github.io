@@ -33,10 +33,11 @@ generating discussion and desire to know more, not delivering "content".
 ## Overview
 
 0. [Realities](cysec-g30.md#realities)
-1. [Attacks](cysec-g30.md#attacks)
-2. [Authentication](cysec-g30.md#authentication)
-3. [Tools](cysec-g30.md#tools)
-4. [Conclusion](cysec-g30.md#conclusion)
+1. [Fundamentals](cysec-g30.md#fundamentals)
+2. [Attacks](cysec-g30.md#attacks)
+3. [Authentication](cysec-g30.md#authentication)
+4. [Tools](cysec-g30.md#tools)
+5. [Conclusion](cysec-g30.md#conclusion)
 6. [References](cysec-g30.md#references)
 
 
@@ -58,6 +59,24 @@ generating discussion and desire to know more, not delivering "content".
         - Anyone can see Internet traffic
     - The Internet is forever
         - [Internet Archive](https://archive.org/) (Wayback Machine)
+
+
+
+## Fundamentals
+
+### What is cybersecurity?
+
+CIA triad:
+
+- Confidentiality
+    - Only entities that are authorized to access a resource can do so
+    - Opposite: disclosure
+- Integrity
+    - Data are reliable
+    - Opposite: alteration
+- Availability
+    - Resources are available when they are needed
+    - Opposite: denial of service
 
 
 
