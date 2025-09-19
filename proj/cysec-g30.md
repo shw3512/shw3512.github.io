@@ -50,6 +50,9 @@ generating discussion and desire to know more, not delivering "content".
         - Security versus convenience
         - Trust versus time
     - Tradeoffs change
+        - Technology changes
+        - Threat landscape changes
+        - Values change
     - Tradeoffs depend on context
         - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
 2. The Internet
