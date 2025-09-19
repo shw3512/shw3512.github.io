@@ -32,44 +32,51 @@ generating discussion and desire to know more, not delivering "content".
 
 ## Overview
 
-0. [Realities](cysec-g30.md#realities)
 1. [Fundamentals](cysec-g30.md#fundamentals)
 2. [Attacks](cysec-g30.md#attacks)
+    - [Social engineering](cysec-g30.md#social-engineering)
 3. [Authentication](cysec-g30.md#authentication)
+    - [Passwords](cysec-g30.md#passwords)
 4. [Tools](cysec-g30.md#tools)
 5. [Conclusion](cysec-g30.md#conclusion)
 6. [References](cysec-g30.md#references)
 
 
 
-## Realities
-
-1. Tradeoffs
-    - Tradeoffs exist
-        - Security versus cost
-        - Security versus convenience
-        - Trust versus time
-    - Tradeoffs change
-        - Technology changes
-        - Threat landscape changes
-        - Values change
-    - Tradeoffs depend on context
-        - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
-            - Every file your bff has shared with you recently has been infected with malware, and the file seems unusually large.
-            - (!!!) The stranger is an employee at Microsoft, and the file is a security update whose MD5 and SHA-512 checksums agree with those on Microsoft's website.
-2. The Internet
-    - The Internet is public
-        - Anyone can use it
-    - The Internet is open
-        - Anyone can see Internet traffic
-    - The Internet is forever
-        - [Internet Archive](https://archive.org/) (Wayback Machine)
-
-
-
 ## Fundamentals
 
-### What is cybersecurity?
+### Axioms
+
+1. Tradeoffs
+2. The Internet
+
+#### Tradeoffs
+
+- Tradeoffs exist
+    - Security versus cost
+        - Security versus convenience
+        - Trust versus time
+- Tradeoffs change
+    - Technology changes
+        - Threat landscape changes
+        - Values change
+- Tradeoffs depend on context
+    - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
+        - Every file your bff has shared with you recently has been infected with malware, and the file seems unusually large.
+        - (!!!) The stranger is an employee at Microsoft, and the file is a security update whose MD5 and SHA-512 checksums agree with those on Microsoft's website.
+
+#### The Internet
+
+- The Internet is public
+    - Anyone can use it
+- The Internet is open
+    - Anyone can see Internet traffic
+- The Internet is forever
+    - [Internet Archive](https://archive.org/) (Wayback Machine)
+
+### Definitions
+
+#### What is cybersecurity?
 
 CIA triad:
 
@@ -89,7 +96,7 @@ CIA triad:
 
 ### Examples
 
-#### In the news
+#### What's the worst that can happen?
 
 - Stuxnet worm (2010)
     - Destroys centrifuges at an air-gapped Iranian nuclear facility
@@ -104,17 +111,20 @@ CIA triad:
     - Highlights vulnerabilities in US critical infrastructure
     - [US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)
 
-#### But, it won't happen to me...right?
+#### But hackers won't target me, right?
 
 - How easy is it to steal passwords from a Web browser's password manager?
     - [YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)
-- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
-    - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
-    - Notice how quickly an attack can unfold (automation!)
 - Mirai botnet
     - Automatically scans the Internet for potentially vulnerable IoT devices and attempts brute-force logins (mostly using default credentials)
     - At its peak, infects over half a million devices
     - [Cloudflare](https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/), [CIS](https://www.cisecurity.org/insights/blog/the-mirai-botnet-threats-and-mitigations), [Google Research](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46301.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Mirai_(malware))
+
+#### Still, it won't happen to me...right?
+
+- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
+    - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
+    - Notice how quickly an attack can unfold (automation!)
 
 ### Social engineering
 
@@ -290,6 +300,16 @@ Note: If you upload anything (file, link, etc.), then assume others will see it 
 
 - [AbuseIPDB](https://www.abuseipdb.com)
     - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
+
+### Anti-malware
+
+- [Bitdefender]()
+- [Malwarebytes]()
+
+Review articles
+
+- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
+- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
 
 ### Device settings
 
