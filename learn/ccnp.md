@@ -8,6 +8,10 @@
 
 ## Resources
 
+Other people's suggestions for CCNP preparation:
+
+- [Petru Gulian](https://gulian.uk/how-to-prepare-for-the-ccnp-encor-exam/)
+
 ### Books
 
 #### Cisco's Official Cert Guide, "CCNP and CCIE Enterprise Core"
@@ -41,3 +45,4 @@
 - Details:
     - (pending)
 - Review: (pending)
+    - For other reviews, see [this thread on Reddit](https://www.reddit.com/r/ccnp/comments/1nno3v7/arash_deljoo_course/)
