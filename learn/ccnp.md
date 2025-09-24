@@ -8,7 +8,7 @@
 
 ## Resources
 
-Other people's suggestions for CCNP preparation:
+Other people's suggestions for CCNP ENCOR preparation:
 
 - [Petru Gulian](https://gulian.uk/how-to-prepare-for-the-ccnp-encor-exam/)
 
