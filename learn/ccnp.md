@@ -8,9 +8,9 @@
 
 ## Resources
 
-Other people's suggestions for CCNP ENCOR preparation:
+Below I list the resources that I used to prepare for the CCNP ENCOR certification exam.
 
-- [Petru Gulian](https://gulian.uk/how-to-prepare-for-the-ccnp-encor-exam/)
+- Petru Gulian documents his suggested steps and resources in [this post](https://gulian.uk/how-to-prepare-for-the-ccnp-encor-exam/).
 
 ### Books
 
