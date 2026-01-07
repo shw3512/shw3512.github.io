@@ -1,6 +1,6 @@
 # Teaching
 
-Course names (will eventually) link to webpages (on GitHub) hosting corresponding course documents.
+Course names link to webpages (on GitHub) hosting corresponding course documents.
 
 | Year | Term   | Institution     | Course # | Course name                                                                |
 |:-----|:-------|:----------------|:---------|:---------------------------------------------------------------------------|
