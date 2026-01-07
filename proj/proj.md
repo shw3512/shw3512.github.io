@@ -2,7 +2,7 @@
 
 ## Cisco Packet Tracer
 
-- Jeremy's IT Lab : CCNA : [Graded `.pka` labs](cpt/jitl-ccna/cpt.md)
+- Jeremy's IT Lab : CCNA : [Graded `.pka` labs](cpt/jitl-ccna/labs.md)
 
 ## Computer builds
 
