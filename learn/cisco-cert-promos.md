@@ -1,4 +1,8 @@
-# Cisco certification exam offers
+# Cisco certification exams: discounts and promotions
+
+
+
+## Free retake promotion
 
 In recent years, for a limited time once or twice a year, Cisco has offered a free retake with the purchase of an exam voucher for certain exams.
 
@@ -12,6 +16,10 @@ From 1 May 2025 to 12 June 2025, Pearson VUE ran a promotion [[1][1]] that offer
 
 Cisco offered a similar promotion [[7][7]] from 2 December 2024 to 31 December 2024, with a retake window from 1 January 2025 to 17 April 2025.
 
+
+
+## Exam Safeguard option
+
 Cisco's Exam Safeguard voucher [[8][8]]---pay an additional 75 USD for your exam voucher to receive a free retake if you don't pass the first time---appears to be available year-round [[9][9]], except when Cisco temporarily suspends it in favor of a "free retake" promotion. (So if you were planning to buy an Exam Safeguard voucher, and don't see it on Cisco's page, see if Pearson VUE is offering a (better) promotion!)
 
 The same page [[8][8]] gives information about Cisco's Exam Safeguard Plus bundle, which consists of an Exam Safeguard voucher and 90-day access to Cisco's practice tests for the corresponding exam.
@@ -20,7 +28,7 @@ Note that Cisco's Exam Safeguard and Exam Safeguard Plus options are both 90-day
 
 At current prices (see Table 1 below), I consider the Exam Safeguard voucher a good deal (of course, it depends on your confidence and risk appetite), but the Exam Safeguard Plus option a bad one. In my opinion, if you want access to Cisco's practice exams, then it's better to pay an extra 4 USD to buy it separately from and earlier than the exam voucher. Buying it separately gives you 180-day access to the practice exams (twice as long as the 90-day access that comes with the Safeguard Plus bundle); buying it earlier than the exam voucher helps you study and gauge whether you're ready to sit the exam. Also, Cisco will occasionally discount study products like their practice exams---for example, during Cisco's annual Pi Day sale (March 14) [[11][11], [12][12]].
 
-Table 1. Price comparison for Cisco exam products, purchased through Cisco U. Prices are in USD and link to product page at Cisco U.
+Table 1. Price comparison for Cisco exam products, purchased through Cisco U. Prices are in USD and link to the corresponding product page at Cisco U.
 
 | Exam  | Exam code | Voucher   | Safeguard | Safeguard Plus | Exam review |
 |:------|----------:|----------:|----------:|---------------:|------------:|
