@@ -1,5 +1,15 @@
 # Jeremy's IT Lab (JITL) CCNA course labs
 
+Goals of this project:
+
+- Translate all labs from Jeremy's CCNA course from `.pkt` activites to graded `.pka` labs.
+    - Students often like to check their work, and ideally confirm that they're configuring devices correctly in real time (immediate feedback). The "Percent completion" feature of `.pka` files allows this.
+- In the instructions for each lab, add questions and answers on key concepts that arise.
+
+Remark. I used Jeremy's course and labs in my CCNA studies. I found them to be excellent, both for general learning and for specific exam preparation, and I highly recommend them to anyone preparing for the CCNA exam or just looking to learn about computer networking. Jeremy makes his course available free of charge on YouTube, and his labs freely available upon request. Note that the videos on YouTube include intermittent advertisements. Personally, I find such interruptions distracting and disruptive. If you are like me in that regard, and you can afford to do so, then I recommend that you purchase access to ad-free versions of the same videos, either from [Udemy](https://www.udemy.com/course/ccna-jitl/) (the course goes on sale from time to time for around 10 USD) or from [Jeremy's JITL site on Teachable](https://courses.jeremysitlab.com/p/ccna) (where course access costs 69 USD).
+
+Table. Labs. In the "Lab files" column, `pka` links to the graded lab only; `zip` links to a zip file consisting of the `.pka` file, a folder with a `.txt` file of CLI commands for each device to transition it from initial to final configuration, and a `.txt` file of the questions that appear in the lab instructions along with sample answers.
+
 |  Day | Topic                         | Lab files | SHA-256 of zip file |
 |-----:|:------------------------------|:----------|:--------------------|
 |    1 | Packet Tracer introduction    | [pka](), [zip]() |  |
