@@ -4,7 +4,7 @@
 
 ## Cryptography
 
-- "[Real-world cryptography](crypto-wong.md)"
+- "[Real-world cryptography](crypto-wong.md)", by David Wong (2021)
 
 
 
