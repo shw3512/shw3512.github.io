@@ -1,8 +1,12 @@
 # Learning
 
+
+
 ## Cryptography
 
 - "[Real-world cryptography](crypto-wong.md)"
+
+
 
 ## Information technology
 
@@ -13,3 +17,10 @@
 ### Reference
 
 - Observations on [Cisco certification exams: discounts and promotions](cisco-cert-promos.md)
+
+
+
+## Programming
+
+- [Compilers](compilers.md)
+- [Lisp](lisp.md)
