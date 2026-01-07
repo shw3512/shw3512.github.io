@@ -17,6 +17,7 @@
 
 Chapter title links to my outline for the chapter (here on GitHub).
 
-| Chapter | Title                 |
-|--------:|:----------------------|
-|       1 | [Introduction](notes/01.md) |
+| Chapter | Title                                      |
+|--------:|:-------------------------------------------|
+|       0 | [Preface and About this book](notes/00.md) |
+|       1 | [Introduction](notes/01.md)                |
