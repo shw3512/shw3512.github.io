@@ -10,6 +10,7 @@ I'm currently working on
 I'm currently learning about
 
 - [Computer networking](learn/encor.md) (at the level of Cisco's CCNP ENCOR exam)
+- [Cryptography](crypto-wong.md)
 - [Lisp](learn/lisp.md)
 
 # Previously
