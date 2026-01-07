@@ -4,12 +4,13 @@ I'm glad you're here.
 
 I'm currently working on
 
-- [Cybersecurity presentation for a general audience](proj/cysec-g30.md) (30 minutes, English)
+- [Cybersecurity presentation](proj/cysec-g30.md) for a general audience (30 minutes, English)
 - Computer build (cosmos)
 
 I'm currently learning about
 
 - [Computer networking](learn/encor.md) (at the level of Cisco's CCNP ENCOR exam)
+- [Cryptography](crypto-wong.md)
 - [Lisp](learn/lisp.md)
 
 # Previously
