@@ -5,16 +5,16 @@ I'm glad you're here.
 I'm currently working on
 
 - [Cybersecurity presentation for a general audience](proj/cysec-g30.md) (30 minutes, English)
+- Computer build (cosmos)
 
 I'm currently learning about
 
-- [Compilers](learn/compilers.md)
-- [Computer networking](learn/ccnp.md) (at the level of Cisco's CCNP)
+- [Computer networking](learn/encor.md) (at the level of Cisco's CCNP ENCOR exam)
 - [Lisp](learn/lisp.md)
 
 # Previously
 
-Peruse my past [learning](learn/past.md) and [projects](proj/past.md).
+Peruse my past [learning](learn/learn.md) and [projects](proj/proj.md).
 
 # Connect
 
