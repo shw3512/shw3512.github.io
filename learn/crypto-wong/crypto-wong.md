@@ -7,5 +7,16 @@
 - My review: (pending)
 - Other reviews:
     - [CryptoHack Blog](https://blog.cryptohack.org/real-world-cryptography-review)
-    - [David Wong](https://www.cryptologie.net/posts/real-world-cryptography-a-bit-more-than-a-year-later/) (less a review, more a request for reviews)
+    - [David Wong](https://www.cryptologie.net/posts/real-world-cryptography-a-bit-more-than-a-year-later/) (the author)
+        - Less a review, more a request for reviews
     - [Reddit](https://www.reddit.com/r/crypto/comments/rxjum6/realworld_cryptography_by_david_wong_2021_book/) (sparse thread)
+
+
+
+## Notes
+
+Chapter title links to my outline for the chapter (here on GitHub).
+
+| Chapter | Title                 |
+|--------:|:----------------------|
+|       1 | [Introduction](notes/01.md) |
