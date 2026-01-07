@@ -15,7 +15,7 @@ I'm currently learning about
 
 # Previously
 
-Peruse my past [learning](learn/learn.md), [teaching](teach/teach.md), and [projects](proj/proj.md).
+Peruse my past [learning](learn/learn.md), [projects](proj/proj.md), and [teaching](teach/teach.md).
 
 # Connect
 
