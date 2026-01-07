@@ -1,4 +1,4 @@
-# Past projects
+# Projects
 
 ## Teaching
 
