@@ -3,7 +3,7 @@
 Goals of this project:
 
 - Translate all labs from Jeremy's CCNA course from `.pkt` activites to graded `.pka` labs.
-    - Students often like to check their work, and ideally confirm that they're configuring devices correctly in real time (immediate feedback). Packet Tracer allows this via the Activity Wizard's "Percent completion" feature of `.pka` files.
+    - Students like to check their work and ideally confirm that they're configuring devices correctly in real time. (Immediate feedback promotes the development of expertise.) Packet Tracer allows this via the Activity Wizard's "Percent completion" feature of `.pka` files.
 - In the instructions for each lab, list explicit objectives (citing specific [CCNA exam topics](https://learningnetwork.cisco.com/s/ccna-exam-topics)), and add questions and answers on key concepts that arise.
 
 Remark. I used Jeremy's course and labs in my CCNA studies. I found them to be excellent, both for general learning and for specific exam preparation. I highly recommend them to anyone preparing for the CCNA exam or just looking to learn about computer networking. Jeremy makes his course available free of charge on YouTube and his labs freely available upon request. Note that the videos on YouTube include intermittent advertisements. Personally, I find such interruptions distracting and disruptive. If you are like me in that regard, and you can afford to do so, then I recommend that you purchase access to ad-free versions of the same videos, either from [Udemy](https://www.udemy.com/course/ccna-jitl/) (the course goes on sale from time to time for around 10 USD) or from [Jeremy's JITL site on Teachable](https://courses.jeremysitlab.com/p/ccna) (where course access costs 69 USD).
