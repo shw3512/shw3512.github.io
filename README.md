@@ -5,7 +5,7 @@ I'm glad you're here.
 I'm currently working on
 
 - [Cybersecurity presentation](proj/cysec-g30.md) for a general audience (30 minutes, English)
-- Computer build (cosmos)
+- Computer build (cmos)
 
 I'm currently learning about
 
