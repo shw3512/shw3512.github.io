@@ -21,3 +21,4 @@ Chapter title links to my outline for the chapter (here on GitHub).
 |--------:|:-------------------------------------------|
 |       0 | [Preface and About this book](notes/00.md) |
 |       1 | [Introduction](notes/01.md)                |
+|       2 | [Hash functions](notes/02.md)              |
