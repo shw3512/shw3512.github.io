@@ -8,4 +8,4 @@
 
 - [apipa](https://pcpartpicker.com/b/Ysj2FT) (2023 summer)
 - [bpdu](https://pcpartpicker.com/b/6rwcCJ) (2025 autumn)
-- cosmos (2026 winter)
+- cmos (2026 winter)
