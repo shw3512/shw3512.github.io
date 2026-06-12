@@ -1,10 +1,10 @@
 - name: About
-  link: /index.html
+  link: /
 - name: Blog
-  link: /blog.html
+  link: /blog/
 - name: Do
-  link: /do.html
+  link: /do/
 - name: Learn
-  link: /learn.html
+  link: /learn/
 - name: Teach
-  link: /teach.html
+  link: /teach/
