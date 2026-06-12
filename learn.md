@@ -1,6 +1,6 @@
 # Learn
 
-Here I list topics I'm learning.
+Here I list my learning.
 
 
 
