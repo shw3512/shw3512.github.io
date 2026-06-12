@@ -14,4 +14,4 @@ Course names link to webpages (on GitHub) hosting corresponding course documents
 ## Presentations
 
 | Date | Venue | Title | Slides | Notes |
-|:-----|:------|:------|:-------|:------|
+| :--- | :---- | :---- | :----- | :---- |
