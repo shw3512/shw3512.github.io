@@ -1,3 +1,4 @@
+baseurl: ""
 defaults:
   - scope:
       path: ""
@@ -8,3 +9,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+#domain: "shw3512.github.io"
+#repository: "shw3512.github.io"
+url: "https://shw3512.github.io"
