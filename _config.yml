@@ -5,6 +5,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      permalink: /blog/:year/:month/:day/
   - scope:
       path: ""
     values:
