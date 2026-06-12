@@ -1,4 +1,4 @@
-# Learn
+# Learning
 
 Here I list topics I'm learning.
 
