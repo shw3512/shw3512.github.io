@@ -13,5 +13,6 @@ Course names link to webpages (on GitHub) hosting corresponding course documents
 
 ## Presentations
 
-| Date | Venue | Title | Slides | Notes |
-| :--- | :---- | :---- | :----- | :---- |
+| Date       | Venue                | Title                            | Slides | Notes                                   |
+| :--------- | :------------------- | :------------------------------- | :----- | :-------------------------------------- |
+| 2026-01-20 | Avalos P-TECH School | Career pathways in cybersecurity |        | I presented as an ISC2 Center volunteer |
