@@ -1,0 +1,12 @@
+- name: About
+  link: /about.html
+- name: Blog
+  link: /blog.html
+- name: Do
+  link: /do.html
+- name: Home
+  link: /
+- name: Learn
+  link: /learn.html
+- name: Teach
+  link: /teach.html
