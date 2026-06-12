@@ -2,9 +2,13 @@
 
 Here I list personal projects.
 
+
+
 ## Cisco Packet Tracer
 
 - Jeremy's IT Lab : CCNA : [Graded `.pka` labs](cpt/jitl-ccna/labs.md)
+
+
 
 ## Computer builds
 
