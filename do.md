@@ -1,6 +1,6 @@
 # Do
 
-Here I list personal projects.
+Here I list my projects.
 
 
 
