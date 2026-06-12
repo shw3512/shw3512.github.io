@@ -1,3 +1,7 @@
+---
+permalink: /do/
+title: Do
+---
 # Do
 
 Here I list my projects.
