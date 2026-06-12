@@ -1,3 +1,7 @@
+---
+permalink: /learn/
+title: Learn
+---
 # Learn
 
 Here I list my learning.
