@@ -1,3 +1,7 @@
+---
+permalink: /teach/
+title: Teach
+---
 # Teach
 
 Here I list my teaching.
