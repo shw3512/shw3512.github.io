@@ -1,3 +1,7 @@
+---
+title: About
+permalink: /about/
+---
 # About
 
 I'm Stephen Wolff. I'm glad you're here.
