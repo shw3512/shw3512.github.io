@@ -1,6 +1,10 @@
-I'm glad you're here.
+# About
 
-# Currently
+I'm Stephen Wolff. I'm glad you're here.
+
+
+
+## Currently
 
 I'm currently working on
 
@@ -13,10 +17,14 @@ I'm currently learning about
 - [Cryptography](learn/crypto-wong/crypto-wong.md)
 - [Lisp](learn/lisp.md)
 
-# Previously
+
+
+## Previously
 
 Peruse my past [learning](learn/learn.md), [projects](proj/proj.md), and [teaching](teach.md).
 
-# Connect
+
+
+## Connect
 
 Reach me on [GitHub](https://github.com/shw3512) or [LinkedIn](https://www.linkedin.com/in/stephen-wolff-0x200/).
