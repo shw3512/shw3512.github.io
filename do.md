@@ -1,6 +1,6 @@
 # Do
 
-Here I present personal projects.
+Here I list personal projects.
 
 ## Cisco Packet Tracer
 
