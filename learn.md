@@ -6,23 +6,23 @@ Here I list my learning.
 
 ## Cryptography
 
-- "[Real-world cryptography](crypto-wong/crypto-wong.md)", by David Wong (2021)
+- "[Real-world cryptography](learn/crypto-wong/crypto-wong.md)", by David Wong (2021)
 
 
 
 ## Information technology
 
 - Cisco Certified Network Professional (CCNP)
-    - [Enterprise Core (ENCOR)](encor.md)
-- [Cisco Certified Network Associate (CCNA)](ccna.md)
+    - [Enterprise Core (ENCOR)](learn/encor.md)
+- [Cisco Certified Network Associate (CCNA)](learn/ccna.md)
 
 ### Reference
 
-- Observations on [Cisco certification exams: discounts and promotions](cisco-cert-promos.md)
+- Observations on [Cisco certification exams: discounts and promotions](learn/cisco-cert-promos.md)
 
 
 
 ## Programming
 
-- [Compilers](compilers.md)
-- [Lisp](lisp.md)
+- [Compilers](learn/compilers.md)
+- [Lisp](learn/lisp.md)
