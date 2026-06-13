@@ -12,4 +12,5 @@ defaults:
       layout: "default"
 #domain: "shw3512.github.io"
 #repository: "shw3512.github.io"
+theme: jekyll-theme-midnight
 url: "https://shw3512.github.io"
