@@ -9,7 +9,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "page"
 #domain: "shw3512.github.io"
 #repository: "shw3512.github.io"
 remote_theme: pages-themes/midnight@v0.1.1
