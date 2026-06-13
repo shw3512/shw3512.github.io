@@ -18,14 +18,6 @@
 {% include head-custom.html %}
   </head>
   <body>
-    <div id="header">
-      <nav>
-{% for item in site.data.nav %}
-        <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-page-current"{% endif %}>{{ item.name }}</a>
-{% endfor %}
-      </nav>
-    </div><!-- end header -->
-
     <div class="wrapper">
 
       <section>
@@ -35,6 +27,11 @@
           <hr>
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+          <nav>
+{% for item in site.data.nav %}
+            <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-page-current"{% endif %}>{{ item.name }}</a>
+{% endfor %}
+          </nav>
         </div>
 
         {{ content }}
