@@ -22,13 +22,12 @@
 
       <section>
         <div id="title">
+          <span class="credits left">Site maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits right">A GitHub Pages site using the <a href="https://github.com/pages-themes/midnight">Midnight theme</a></span>
+          <hr>
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
           <hr>
-          <span class="credits left">Site maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-          <span class="credits right">A GitHub Pages site using the <a href="https://github.com/pages-themes/midnight">Midnight theme</a></span>
-        </div>
-        <div id="title">
           <span class="nav">
 {% include nav.html %}
           </span>
