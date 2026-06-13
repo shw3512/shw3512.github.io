@@ -29,11 +29,7 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
           <hr>
           <span class="credits left">
-            <nav>
-{% for item in site.data.nav %}
-              <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-page-current"{% endif %}>{{ item.name }}</a>
-{% endfor %}
-            </nav>
+{% include nav.html %}
           </span>
         </div>
 
