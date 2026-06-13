@@ -1,10 +1,18 @@
-I'm glad you're here.
+---
+permalink: /about/
+title: About
+---
+# About
 
-# Currently
+I'm Stephen Wolff. I'm glad you're here.
+
+
+
+## Currently
 
 I'm currently working on
 
-- [Cybersecurity presentation](proj/cysec-g30.md) for a general audience (30 minutes, English)
+- [Cybersecurity presentation](teach/cysec-g30.md) for a general audience (30 minutes, English)
 - Computer build (cmos)
 
 I'm currently learning about
@@ -13,10 +21,14 @@ I'm currently learning about
 - [Cryptography](learn/crypto-wong/crypto-wong.md)
 - [Lisp](learn/lisp.md)
 
-# Previously
 
-Peruse my past [learning](learn/learn.md), [projects](proj/proj.md), and [teaching](teach.md).
 
-# Connect
+## Previously
+
+Peruse my past [learning](learn.md), [projects](do.md), and [teaching](teach.md).
+
+
+
+## Connect
 
 Reach me on [GitHub](https://github.com/shw3512) or [LinkedIn](https://www.linkedin.com/in/stephen-wolff-0x200/).

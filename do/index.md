@@ -1,8 +1,18 @@
-# Projects
+---
+permalink: /do/
+title: Do
+---
+# Do
+
+Here I list my projects.
+
+
 
 ## Cisco Packet Tracer
 
-- Jeremy's IT Lab : CCNA : [Graded `.pka` labs](cpt/jitl-ccna/labs.md)
+- Jeremy's IT Lab : CCNA : [Graded `.pka` labs](https://github.com/shw3512/jitl-ccna)
+
+
 
 ## Computer builds
 

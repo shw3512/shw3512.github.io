@@ -1,0 +1,15 @@
+baseurl: ""
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+#domain: "shw3512.github.io"
+#repository: "shw3512.github.io"
+url: "https://shw3512.github.io"
