@@ -25,7 +25,7 @@ I'm currently learning about
 
 ## Previously
 
-Peruse my past [learning](learn.md), [projects](do.md), and [teaching](teach.md).
+Peruse my past [learning](learn/index.md), [projects](do/index.md), and [teaching](teach/index.md).
 
 
 
