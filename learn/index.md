@@ -10,7 +10,7 @@ Here I list my learning.
 
 ## Cryptography
 
-- "[Real-world cryptography](learn/crypto-wong/crypto-wong/)", by David Wong (2021)
+- "[Real-world cryptography](learn/crypto-wong/)", by David Wong (2021)
 
 
 
