@@ -32,14 +32,14 @@ generating discussion and desire to know more, not delivering "content".
 
 ## Overview
 
-1. [Fundamentals](cysec-g30.md#fundamentals)
-2. [Attacks](cysec-g30.md#attacks)
-    - [Social engineering](cysec-g30.md#social-engineering)
-3. [Authentication](cysec-g30.md#authentication)
-    - [Passwords](cysec-g30.md#passwords)
-4. [Tools](cysec-g30.md#tools)
-5. [Conclusion](cysec-g30.md#conclusion)
-6. [References](cysec-g30.md#references)
+1. [Fundamentals](#fundamentals)
+2. [Attacks](#attacks)
+    - [Social engineering](#social-engineering)
+3. [Authentication](#authentication)
+    - [Passwords](#passwords)
+4. [Tools](#tools)
+5. [Conclusion](#conclusion)
+6. [References](#references)
 
 
 
