@@ -18,7 +18,7 @@ I'm currently working on
 I'm currently learning about
 
 - [Computer networking](/learn/encor/) (at the level of Cisco's CCNP ENCOR exam)
-- [Cryptography](/learn/crypto-wong/crypto-wong/)
+- [Cryptography](/learn/crypto-wong/)
 - [Lisp](/learn/lisp/)
 
 
