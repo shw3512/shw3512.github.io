@@ -49,8 +49,8 @@ What is cybersecurity?
 - The Internet is forever
     - [Internet Archive](https://archive.org/) (Wayback Machine)
     - Privacy laws
-        - Right to erasure (GDPR)
-        - Right to delete (CCPA)
+        - Right to erasure ([GDPR](https://gdpr.eu))
+        - Right to delete ([CCPA](https://cppa.ca.gov))
 
 #### Tradeoffs
 
