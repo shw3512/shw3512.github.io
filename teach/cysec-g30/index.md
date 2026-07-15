@@ -12,16 +12,13 @@
 ## Overview
 
 1. [Fundamentals](#fundamentals)
-    - [Definitions](#definitions)
-    - [Axioms](#axioms)
-    - [Frameworks](#frameworks)
 2. [Your security](#your-security)
-3. [Authentication](#authentication)
-    - [Passwords](#passwords)
-4. [Tools](#tools)
-5. [Conclusion](#conclusion)
-6. [References](#references)
-7. [Appendix](#appendix)
+3. [Tools](#tools)
+4. [Conclusion](#conclusion)
+5. [References](#references)
+6. [Appendix](#appendix)
+    1. [Motivation](#motivation)
+    2. [Authentication](#authentication)
 
 
 
@@ -393,11 +390,9 @@ Review articles
 
 ## Appendix
 
-### Attacks
+### Motivation
 
-#### Examples
-
-##### What's the worst that can happen?
+#### What's the worst that can happen?
 
 - Stuxnet worm (2010)
     - Destroys centrifuges at an air-gapped Iranian nuclear facility
@@ -412,7 +407,7 @@ Review articles
     - Highlights vulnerabilities in US critical infrastructure
     - [US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)
 
-##### But hackers won't target me, right?
+#### But hackers won't target me, right?
 
 - How easy is it to steal passwords from a Web browser's password manager?
     - [YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)
@@ -421,7 +416,7 @@ Review articles
     - At its peak, infects over half a million devices
     - [Cloudflare](https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/), [CIS](https://www.cisecurity.org/insights/blog/the-mirai-botnet-threats-and-mitigations), [Google Research](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46301.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Mirai_(malware))
 
-##### Still, it won't happen to me...right?
+#### Still, it won't happen to me...right?
 
 - Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
     - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
