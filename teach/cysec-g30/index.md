@@ -98,7 +98,8 @@ Which is riskier?
 Context:
 
 - Your bff
-    - Every file your bff has shared with you recently has been infected with malware (why is this person still your bff?)
+    - Every file your bff has shared with you recently has been infected with malware
+        - (Why is this person still your bff?)
     - The file seems unusually large
 - The stranger
     - The stranger is (allegedly) an employee at Microsoft
