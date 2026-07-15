@@ -148,12 +148,15 @@ Context:
 
 - Use a password manager
 - Review the security settings on your accounts
-    - Password strength
-    - MFA enabled?
-    - Security alerts
-        - Triggers
-        - Delivery options
-    - Account-recovery options
+    - Settings to review:
+        - Password strength
+        - MFA enabled?
+        - Security alerts
+            - Triggers
+            - Delivery options
+        - Account-recovery options
+    - You don't have to do all your accounts in one sitting!
+        - Prioritize accounts by value and risk
 - Implement MFA on high-value and high-risk accounts
     - ...and on any account where security benefit outweighs convenience cost
 
@@ -164,7 +167,7 @@ Context:
 - Make sufficiently long
 - Don't use security questions
     - If you do, then use random answers
-    - Issues: OSINT, social engineering
+    - Concern: OSINT, social engineering
 
 #### Password manager
 
@@ -178,6 +181,22 @@ Key benefits:
 Key risk:
 
 - Keys to the kingdom
+
+##### Commonly recommended password managers (2026)
+
+- [1Password](https://1password.com)
+- [Bitwarden](https://bitwarden.com)
+- [Dashlane](https://www.dashlane.com)
+- [Keeper](https://www.keepersecurity.com)
+- [NordPass](https://nordpass.com)
+- [Proton Pass](https://proton.me/pass)
+
+References:
+
+- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+- [security.org](https://www.security.org/password-manager/best/)
+- [WIRED](https://www.wired.com/story/best-password-managers/)
 
 #### Multi-factor authentication (MFA)
 
