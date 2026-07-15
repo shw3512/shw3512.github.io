@@ -432,7 +432,7 @@ Review articles:
         - Slow down and question
     - Know secure behavior and security tools
         - Public behavior
-    - Show grace to yourself and to others :)
+    - Show grace to yourself and to others
 
 
 
