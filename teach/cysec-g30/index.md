@@ -127,6 +127,8 @@ Context:
 - Account access
 - Devices
 - Networks
+    - Home router
+    - Public Wi-Fi
 - Relational
 - In public
 
@@ -203,13 +205,16 @@ References:
 - The use of two or more different (!) factors during authentication
     - Factors of authentication:
         - Something you know
+            - Example. Password
         - Something you have
+            - Example. Device (cell phone)
         - Something you are
+            - Example. Face, fingerprint
 - Why it helps: defense in depth
 - Tradeoff: Security versus convenience
-    - If you make MFA more convenient, then you can make systems and data more secure.
-        - Example. Integrate fingerprint scanning hardware and software into laptops.
-        - Example. Integrate face-scanning hardware and software into cell phones.
+    - If you make MFA more convenient, then you make systems and data more secure
+        - Example. Integrate fingerprint scanning hardware and software into laptops
+        - Example. Integrate face-scanning hardware and software into cell phones
 
 ### Devices
 
@@ -217,16 +222,61 @@ References:
 
 - Review the security settings on your digital devices
     - Login settings
-        - Passcode? Password? Biometric? MFA?
+        - Password? Passcode? Biometric? MFA?
     - Lock-screen timer
+        - Enabled? Time frame?
     - Encryption
-        - File-level or full-disk encryption (FDE)
+        - File-level? Full-disk encryption (FDE)?
         - Reduces risk of data disclosure if your device is lost or stolen
 
 ### Networks
 
-- Public Wi-Fi
-- How to test and harden home router
+- Be wary of public Wi-Fi
+- Harden your home router
+
+#### Public Wi-Fi
+
+##### Risks
+
+- Rogue access points
+- Man-in-the-middle attack
+
+##### Recommendations
+
+- Use a virtual private network (VPN)
+- Enable MFA on sensitive accounts
+- Avoid sensitive transactions
+    - Banking
+    - Entering payment information (online shopping)
+- Use HTTPS, not HTTP
+
+##### References
+
+- [Fortinet](https://www.fortinet.com/resources/cyberglossary/vpn-wifi)
+
+#### Home router
+
+##### To do
+
+- Change default credentials
+- Enable strong encryption
+    - Best: WPA3
+    - Second best: WPA2
+    - Don't use: WEP, WPA
+- Enable automatic updates
+- Disable risky features
+    - Remote management
+    - Wi-Fi Protected Setup (WPS)
+    - Universal Plug and Play (UPnP)
+- Create a guest network
+    - Enable a separate, strong password
+
+##### References
+
+- [Acronis](https://www.acronis.com/en/blog/posts/hardening-home-router/)
+- [Canadian Centre for Cyber Security](https://www.cyber.gc.ca/en/guidance/routers-cyber-security-best-practices-itsap80019)
+- [TP-Link](https://www.tp-link.com/ph/blog/1778/wi-fi-security-settings-10-steps-to-secure-your-wifi-router/)
+- [US CISA](https://www.cisa.gov/audiences/high-risk-communities/projectupskill/module5)
 
 ### Relational
 
@@ -270,7 +320,7 @@ References:
     - Your name is missing or misspelled
     - Fishy (or look-alike) sender e-mail address
 
-#### Tips to protect yourself against social engineering
+#### To do
 
 - Listen to your Spidey sense
     - Does something feel "off"?
@@ -357,23 +407,6 @@ Review articles
 - [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
 - [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
 
-### Device settings
-
-- Login settings
-    - Passcode? Password? Biometric? MFA?
-- Lock-screen timer
-- Encryption
-    - File-level or full-disk encryption (FDE)
-    - Reduces risk of data disclosure if your device is lost or stolen
-
-### Public behavior
-
-- Open Wi-Fi
-- Shoulder surfing
-    - Bystander, binoculars, camera
-- Device settings
-    - Leave your device unattended?
-
 
 
 ## Conclusion
@@ -381,14 +414,14 @@ Review articles
 - Realities
     - The Internet is public, open, and forever
     - Tradeoffs exist
-- Cyberattacks can and will happen
+- Cyberattacks will happen
     - Be alert for commonly used social-engineering tactics
     - Know what to do (generally) and tools to use (specifically)
-- Tools for your cybersecurity toolkit
-    - Software (anti-malware, sandboxes)
-    - Password management
-    - Device settings
-    - Public behavior
+        - Anti-malware
+        - Sandbox
+        - Password managers
+        - Device settings
+        - Public behavior
 
 
 
@@ -402,8 +435,6 @@ Review articles
     - ISBN-13: 978-1-61729-800-4 (paperback)
 4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
     - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
-
-
 
 
 
