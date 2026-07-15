@@ -1,48 +1,24 @@
 # Cybersecurity
 
-- Audience: General
 - Presentation length: 30 minutes
-
-
-
-<!--
-Reorganize presentation to focus on real-world applications, not theory.
-After "Realities" section, give two or three sections focusing on single
-area. In each area, give brief (!) background and theory, then give tips
-and example scenarios for group discussion. Focus on engagement and
-generating discussion and desire to know more, not delivering "content".
-
-- Devices
-    - Device security settings (auto screen-lock, etc.)
-- Authentication
-    - MFA
-    - Password management
-- Phishing
-    - Discuss general social engineering, include in examples
-- Networks
-    - Public Wi-Fi
-    - How to test and harden home router
-- Summary
-    - Gather (restate) helpful resources
-        - VirusTotal
-        - Password generators
--->
+- Audience: General
+- Goals: As relevant to daily life,...
+    - Introduce frameworks
+    - Explain best practices (what and why)
+    - Provide a reference list of cybersecurity tools
 
 
 
 ## Overview
 
 1. [Fundamentals](#fundamentals)
-    - [Definitions](#definitions)
-    - [Axioms](#axioms)
-    - [Frameworks](#frameworks)
-2. [Attacks](#attacks)
-    - [Social engineering](#social-engineering)
-3. [Authentication](#authentication)
-    - [Passwords](#passwords)
-4. [Tools](#tools)
-5. [Conclusion](#conclusion)
-6. [References](#references)
+2. [Your security](#your-security)
+3. [Tools](#tools)
+4. [Conclusion](#conclusion)
+5. [References](#references)
+6. [Appendix](#appendix)
+    1. [Motivation](#motivation)
+    2. [Authentication](#authentication)
 
 
 
@@ -60,8 +36,9 @@ What is cybersecurity?
 
 ### Axioms
 
-1. The Internet
-2. Tradeoffs
+1. The Internet is
+2. Tradeoffs exist
+3. Cyberattacks happen
 
 #### The Internet
 
@@ -73,8 +50,8 @@ What is cybersecurity?
 - The Internet is forever
     - [Internet Archive](https://archive.org/) (Wayback Machine)
     - Privacy laws
-        - Right to erasure (GDPR)
-        - Right to delete (CCPA)
+        - Right to erasure ([GDPR](https://gdpr.eu))
+        - Right to delete ([CCPA](https://cppa.ca.gov))
 
 #### Tradeoffs
 
@@ -87,6 +64,16 @@ What is cybersecurity?
     - Threat landscape changes
     - Values change
 - Tradeoffs depend on context
+
+#### Cyberattacks happen
+
+- What you can't control
+    - Whether cyberattacks happen (they will)
+- What you can control
+    - How secure are your actions? accounts? devices?
+    - Know what to do and where to go
+    - The balance you choose (!) among tradeoffs
+    - Laws you support (privacy, accountability)
 
 #### Your turn
 
@@ -103,6 +90,7 @@ Context:
     - The file seems unusually large
 - The stranger
     - The stranger is (allegedly) an employee at Microsoft
+        - How might you verify this?
     - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
 
 ### Frameworks
@@ -145,9 +133,325 @@ Context:
 
 
 
-## Attacks
+## Your security
 
-### Examples
+- Account access
+- Devices
+- Networks
+    - Home router
+    - Public Wi-Fi
+- Relational
+- In public
+
+### Account access
+
+#### Your turn
+
+- How many passwords do you have?
+    - Give an order-of-magnitude estimate: 1, 10, 100, 1000,....
+- How do you manage your passwords? (Select all that apply.)
+    1. I use the same password or similar passwords for most or all of my accounts.
+    2. I write down my most commonly used passwords on a piece of paper and keep it on or near my computer.
+    3. I save them in my Web browser (for example, using the "remember me" feature).
+    4. I write down my passwords in a notebook and look them up when I need them.
+    5. I use a password manager.
+- What are the tradeoffs for each method of password management listed above?
+
+#### To do
+
+- Use a password manager
+- Review the security settings on your accounts
+    - Settings to review:
+        - Password strength
+        - MFA enabled?
+        - Security alerts
+            - Triggers
+            - Delivery options
+        - Account-recovery options
+    - You don't have to do all your accounts in one sitting!
+        - Prioritize accounts by value and risk
+- Implement MFA on high-value and high-risk accounts
+    - ...and on any account where security benefit outweighs convenience cost
+
+#### Password best practices
+
+- Don't reuse passwords
+    - Tradeoff: Security versus convenience
+- Make sufficiently long
+- Don't use security questions
+    - If you do, then use random answers
+    - Concern: OSINT, social engineering
+
+#### Password manager
+
+Key benefits:
+
+- Generates and stores unique, complex passwords
+- Integrates with common Web browsers (plug-in) and mobile devices (app)
+- Auto-fills login credentials only on valid website
+    - Protects against spoofed websites
+
+Key risk:
+
+- Keys to the kingdom
+
+##### Commonly recommended password managers (2026)
+
+- [1Password](https://1password.com)
+- [Bitwarden](https://bitwarden.com)
+- [Dashlane](https://www.dashlane.com)
+- [Keeper](https://www.keepersecurity.com)
+- [NordPass](https://nordpass.com)
+- [Proton Pass](https://proton.me/pass)
+
+References:
+
+- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+- [security.org](https://www.security.org/password-manager/best/)
+- [WIRED](https://www.wired.com/story/best-password-managers/)
+
+#### Multi-factor authentication (MFA)
+
+- The use of two or more different (!) factors during authentication
+    - Factors of authentication:
+        - Something you know
+            - Example. Password
+        - Something you have
+            - Example. Device (cell phone)
+        - Something you are
+            - Example. Face, fingerprint
+- Why it helps: defense in depth
+- Tradeoff: Security versus convenience
+    - If you make MFA more convenient, then you make systems and data more secure
+        - Example. Integrate fingerprint scanning hardware and software into laptops
+        - Example. Integrate face-scanning hardware and software into cell phones
+
+### Devices
+
+#### To do
+
+- Review the security settings on your digital devices
+    - Login settings
+        - Password? Passcode? Biometric? MFA?
+    - Lock-screen timer
+        - Enabled? Time frame?
+    - Encryption
+        - File-level? Full-disk encryption (FDE)?
+        - Reduces risk of data disclosure if your device is lost or stolen
+- Align the security settings to the device
+    - Tradeoff: Security versus cost and convenience
+    - Considerations:
+        - How mobile is the device?
+        - What is the value of the device and of the data on it?
+
+### Networks
+
+- Be wary of public Wi-Fi
+- Harden your home router
+
+#### Public Wi-Fi
+
+##### Risks
+
+- Rogue access points
+- Man-in-the-middle attack
+
+##### Recommendations
+
+- Use a virtual private network (VPN)
+- Enable MFA on sensitive accounts
+- Avoid sensitive transactions
+    - Banking
+    - Entering payment information (online shopping)
+- Use HTTPS, not HTTP
+
+##### References
+
+- [Fortinet](https://www.fortinet.com/resources/cyberglossary/vpn-wifi)
+
+#### Home router
+
+##### To do
+
+- Change default credentials
+- Enable strong encryption
+    - Best: WPA3
+    - Second best: WPA2
+    - Don't use: WEP, WPA
+- Enable automatic updates
+- Disable risky features
+    - Remote management
+    - Wi-Fi Protected Setup (WPS)
+    - Universal Plug and Play (UPnP)
+- Create a guest network
+    - Enable a separate, strong password
+
+##### References
+
+- [Acronis](https://www.acronis.com/en/blog/posts/hardening-home-router/)
+- [Canadian Centre for Cyber Security](https://www.cyber.gc.ca/en/guidance/routers-cyber-security-best-practices-itsap80019)
+- [TP-Link](https://www.tp-link.com/ph/blog/1778/wi-fi-security-settings-10-steps-to-secure-your-wifi-router/)
+- [US CISA](https://www.cisa.gov/audiences/high-risk-communities/projectupskill/module5)
+
+### Relational
+
+- Social engineering
+- Phishing
+
+#### Social engineering
+
+- An attempt to manipulate humans
+    - Doesn't require technology (even verbal language!)
+        - Example. Threatening actions or gestures
+
+##### Commonly used tactics
+
+- Scarcity
+    - "Only one left in stock!"
+- Urgency
+    - "Order before the countdown timer reaches zero and get 80% off!"
+- Intimidation
+    - Fear
+        - "Your tax return is being investigated for fraud that carries penalties of prison terms of up to five years and fines of up to $250,000."
+- Authority
+    - "Nine out of ten doctors agree."
+    - "The experiment requires that you continue."
+        - From psychologist Stanley Milgram's experiments on obedience to authority \[[Wikipedia](https://en.wikipedia.org/wiki/Milgram_experiment)\]
+- Trust
+    - Social proof
+        - "Everyone else is doing it."
+    - Familiarity
+        - "You know me."
+- Likeableness
+    - Pity
+        - "They deserve a better life than this. Donate your money, time, and action now."
+
+##### Phishing
+
+- Social engineering via e-mail
+- Common indicators (may not apply!)
+    - Bad grammar, spelling
+        - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
+    - Your name is missing or misspelled
+    - Fishy (or look-alike) sender e-mail address
+
+#### To do
+
+- Listen to your Spidey sense
+    - Does something feel "off"?
+- Slow down and question
+- Use another route
+
+#### Your turn
+
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
+
+What do you do?
+
+(Example options)
+
+- Ignore the e-mail. It's probably fake.
+- Immediately click the link and provide the requested information---I got bills to pay and things to do!
+- Log in to your bank's website.
+    - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
+- Give your bank a call.
+    - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
+
+### In public
+
+#### To do
+
+- Configure secure device settings in advance
+- Don't leave your devices unattended
+- Beware shoulder surfing
+    - Bystander, binoculars, camera
+- Beware tailgating and piggybacking
+
+
+
+## Tools
+
+Tools for your cybersecurity toolkit
+
+Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
+
+### Identify disclosure of personal data (in a data breach)
+
+- [HaveIBeenPwned](https://haveibeenpwned.com)
+
+### Inspect suspicious e-mails
+
+- [CheckPhish](https://checkphish.bolster.ai)
+- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
+- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
+- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
+- "Top 10 email analysis tools for phishing" \[[Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)\]
+
+### Inspect suspicious files or links
+
+- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
+- [Joe Sandbox](https://www.joesandbox.com)
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+Privacy:
+
+- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
+- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
+
+### Inspect suspicious URLs (Web sites)
+
+- [AbuseIPDB](https://www.abuseipdb.com)
+    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+### Anti-malware
+
+- [Bitdefender](https://www.bitdefender.com/en-us/)
+- [Malwarebytes](https://www.malwarebytes.com)
+
+Review articles:
+
+- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
+- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
+
+
+
+## Conclusion
+
+- Realities
+    - The Internet is public, open, and forever
+    - Tradeoffs exist
+    - Cyberattacks happen
+- What to do
+    - Defend in advance
+        - Configure secure account and device settings
+        - Use a password manager
+        - Use anti-malware software
+    - Be alert for social-engineering tactics
+        - Slow down and question
+    - Know secure behavior and security tools
+        - Public behavior
+    - Show grace to yourself and to others :)
+
+
+
+## References
+
+1. Andress, Jason (2026). _Foundations of cybersecurity: A straightforward introduction,_ 2nd edition. United States: [No Starch Press](https://nostarch.com/foundations-cybersecurity-2e).
+    - ISBN-13: 978-1-7185-0441-7 (e-book), 978-1-7185-0440-0 (paperback)
+2. Grubb, Sam (2021). _How cybersecurity really works: A hands-on guide for total beginners._ United States: [No Starch Press](https://nostarch.com/cybersecurityreallyworks).
+    - ISBN-13: 978-1-7185-0129-4 (e-book), 978-1-7185-0128-7 (paperback)
+3. Kranz, Thomas (2022). _Making sense of cybersecurity._ United States: [Manning Publications](https://www.manning.com/books/making-sense-of-cybersecurity).
+    - ISBN-13: 978-1-61729-800-4 (paperback)
+4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
+    - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
+
+
+
+## Appendix
+
+### Motivation
 
 #### What's the worst that can happen?
 
@@ -179,72 +483,11 @@ Context:
     - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
     - Notice how quickly an attack can unfold (automation!)
 
-### Social engineering
-
-- An attempt to manipulate
-    - Doesn't require technology (or even verbal language!)
-        - Example. Threatening actions or gestures
-
-#### Commonly used tactics
-
-- Scarcity
-    - "Only one left in stock!"
-- Urgency
-    - "Order before the countdown timer reaches zero and get 25% off!"
-- Intimidation
-    - Fear
-        - "Your tax return is being investigated for fraud that carries penalties of prison terms of up to five years and fines of up to $250,000."
-- Authority
-    - "Nine out of ten doctors agree."
-    - "The experiment requires that you continue."
-        - From psychologist Stanley Milgram's experiments on obedience to authority \[[Wikipedia](https://en.wikipedia.org/wiki/Milgram_experiment)\]
-- Trust
-    - Social proof
-        - "Everyone else is doing it."
-    - Familiarity
-        - "You know me."
-- Likeableness
-    - Pity
-        - "They deserve a better life than this. Donate your money, time, and action now."
-
-#### Phishing
-
-- Social engineering via e-mail
-- Spear phishing: targeted phishing
-    - Example. Successful spear-phishing attack during the 2016 US presidential election \[[Wikipedia](https://en.wikipedia.org/wiki/Podesta_emails)\]
-
-##### Phishing indicators (may or may not apply!)
-
-- Bad grammar, spelling
-    - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
-- Your name is missing or misspelled
-- Fishy (or look-alike) sender e-mail address
-
-#### Tips to mitigate social engineering
-
-- Listen to your Spidey sense
-    - Does something feel "off"?
-- Slow down and question
-- Use another route
-
-### Your turn
-
-Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
-
-What do you do?
-
-(Example options)
-
-- Log in to your bank's website.
-    - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
-- Give your bank a call.
-    - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
 
 
+### Authentication
 
-## Authentication
-
-### Introduction
+#### Introduction
 
 - Authentication versus identification (versus authorization)
     - Identification: Who are you?
@@ -254,7 +497,7 @@ What do you do?
 - Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
   - "[A]nswer me these questions three, ere the other side [you] see."
 
-### Factors of authentication
+#### Factors of authentication
 
 Main three:
 
@@ -267,7 +510,7 @@ Others:
 4. Something you do (behavior)
 5. Somewhere you are (location)
 
-### Multifactor authentication
+#### Multifactor authentication
 
 - The use of two or more different (!) factors during authentication
 - Why it helps: defense in depth
@@ -275,25 +518,11 @@ Others:
     - Consider: If you make MFA more convenient, then you can make systems and data more secure.
         - Examples. Integrate fingerprint scanning hardware and software into laptops. Integrate face-scanning software into cell phones.
 
-### Passwords
+#### Passwords
 
 - Still a common form of authentication
 
-#### Poll questions
-
-(Ask aloud to the group, answer silently to yourself.)
-
-- How many passwords do you have?
-    - Give an order-of-magnitude estimate: 1, 10, 100, 1000,....
-- How do you manage your passwords? (Select all that apply.)
-    1. I use the same password or similar passwords for most or all of my accounts.
-    2. I write down my most commonly used passwords on a piece of paper and keep it on or near my computer.
-    3. I save them in my Web browser (for example, using the "remember me" feature).
-    4. I write down my passwords in a notebook and look them up when I need them.
-    5. I use a password manager.
-- Discuss the tradeoffs of each method of password management.
-
-#### Password best practices
+##### Password best practices
 
 - Don't reuse passwords
     - Tradeoff: Security versus convenience
@@ -311,7 +540,7 @@ Others:
         - Use a strong master password
         - Strongly consider enabling MFA
 
-### Your turn
+#### Your turn
 
 For each scenario below, identify (a) what is the identification, authentication, and authorization; and (b) what factors of authentication are used. Which scenarios implement multi-factor authentication (MFA)? Which implementations do you think are most secure? Which are convenient? Why?
 
@@ -319,93 +548,3 @@ For each scenario below, identify (a) what is the identification, authentication
 2. When accessing a website, you are prompted for your username and password.
 3. At the entrance to your work (or school, or gym, etc.), you are asked to swipe your ID, then give your date of birth.
 4. When signing in for a cybersecurity certification exam, you are asked to present two forms of ID, one with your photograph and one with your signature; sign your name on a digital pad; and sit for a head photograph.
-
-
-
-## Tools
-
-Tools for your cybersecurity toolkit
-
-Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
-
-### Data breach
-
-- [HaveIBeenPwned](https://haveibeenpwned.com)
-
-### Inspect suspicious e-mails
-
-- [CheckPhish](https://checkphish.bolster.ai)
-- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
-- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
-- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
-- "Top 10 email analysis tools for phishing" \[[Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)\]
-
-### Inspect suspicious files or links
-
-- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
-- [Joe Sandbox](https://www.joesandbox.com)
-- [VirusTotal](https://www.virustotal.com/gui/)
-
-- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
-- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
-
-### Inspect suspicious URLs (Web sites)
-
-- [AbuseIPDB](https://www.abuseipdb.com)
-    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
-
-### Anti-malware
-
-- [Bitdefender]()
-- [Malwarebytes]()
-
-Review articles
-
-- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
-- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
-
-### Device settings
-
-- Login settings
-    - Passcode? Password? Biometric? MFA?
-- Lock-screen timer
-- Encryption
-    - File-level or full-disk encryption (FDE)
-    - Reduces risk of data disclosure if your device is lost or stolen
-
-### Public behavior
-
-- Open Wi-Fi
-- Shoulder surfing
-    - Bystander, binoculars, camera
-- Device settings
-    - Leave your device unattended?
-
-
-
-## Conclusion
-
-- Realities
-    - The Internet is public, open, and forever
-    - Tradeoffs exist
-- Cyberattacks can and will happen
-    - Be alert for commonly used social-engineering tactics
-    - Know what to do (generally) and tools to use (specifically)
-- Tools for your cybersecurity toolkit
-    - Software (anti-malware, sandboxes)
-    - Password management
-    - Device settings
-    - Public behavior
-
-
-
-## References
-
-1. Andress, Jason (2026). _Foundations of cybersecurity: A straightforward introduction,_ 2nd edition. United States: [No Starch Press](https://nostarch.com/foundations-cybersecurity-2e).
-    - ISBN-13: 978-1-7185-0441-7 (e-book), 978-1-7185-0440-0 (paperback)
-2. Grubb, Sam (2021). _How cybersecurity really works: A hands-on guide for total beginners._ United States: [No Starch Press](https://nostarch.com/cybersecurityreallyworks).
-    - ISBN-13: 978-1-7185-0129-4 (e-book), 978-1-7185-0128-7 (paperback)
-3. Kranz, Thomas (2022). _Making sense of cybersecurity._ United States: [Manning Publications](https://www.manning.com/books/making-sense-of-cybersecurity).
-    - ISBN-13: 978-1-61729-800-4 (paperback)
-4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
-    - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
