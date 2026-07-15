@@ -349,11 +349,11 @@ Review articles
 
 ## References
 
-1. Andress, Jason (2026). _Foundations of cybersecurity: A straightforward introduction,_ 2nd edition. United States: No Starch Press.
+1. Andress, Jason (2026). _Foundations of cybersecurity: A straightforward introduction,_ 2nd edition. United States: [No Starch Press](https://nostarch.com/foundations-cybersecurity-2e).
     - ISBN-13: 978-1-7185-0441-7 (e-book), 978-1-7185-0440-0 (paperback)
-2. Grubb, Sam (2021). _How cybersecurity really works: A hands-on guide for total beginners._ United States: No Starch Press.
+2. Grubb, Sam (2021). _How cybersecurity really works: A hands-on guide for total beginners._ United States: [No Starch Press](https://nostarch.com/cybersecurityreallyworks).
     - ISBN-13: 978-1-7185-0129-4 (e-book), 978-1-7185-0128-7 (paperback)
-3. Kranz, Thomas (2022). _Making sense of cybersecurity._ United States: Manning Publications.
+3. Kranz, Thomas (2022). _Making sense of cybersecurity._ United States: [Manning Publications](https://www.manning.com/books/making-sense-of-cybersecurity).
     - ISBN-13: 978-1-61729-800-4 (paperback)
-4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: WW Norton.
+4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
     - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
