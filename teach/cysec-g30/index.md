@@ -33,6 +33,9 @@ generating discussion and desire to know more, not delivering "content".
 ## Overview
 
 1. [Fundamentals](#fundamentals)
+    - [Definitions](#definitions)
+    - [Axioms](#axioms)
+    - [Frameworks](#frameworks)
 2. [Attacks](#attacks)
     - [Social engineering](#social-engineering)
 3. [Authentication](#authentication)
@@ -45,25 +48,20 @@ generating discussion and desire to know more, not delivering "content".
 
 ## Fundamentals
 
+- Definitions
+- Axioms
+- Frameworks
+
+### Definitions
+
+What is cybersecurity?
+
+- Identify, assess, address, and monitor relevant cyber threats
+
 ### Axioms
 
-1. Tradeoffs
-2. The Internet
-
-#### Tradeoffs
-
-- Tradeoffs exist
-    - Security versus cost
-        - Security versus convenience
-        - Trust versus time
-- Tradeoffs change
-    - Technology changes
-        - Threat landscape changes
-        - Values change
-- Tradeoffs depend on context
-    - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
-        - Every file your bff has shared with you recently has been infected with malware, and the file seems unusually large.
-        - (!!!) The stranger is an employee at Microsoft, and the file is a security update whose MD5 and SHA-512 checksums agree with those on Microsoft's website.
+1. The Internet
+2. Tradeoffs
 
 #### The Internet
 
@@ -71,24 +69,78 @@ generating discussion and desire to know more, not delivering "content".
     - Anyone can use it
 - The Internet is open
     - Anyone can see Internet traffic
+        - Hence encryption (see ≠ understand)
 - The Internet is forever
     - [Internet Archive](https://archive.org/) (Wayback Machine)
+    - Privacy laws
+        - Right to erasure (GDPR)
+        - Right to delete (CCPA)
 
-### Definitions
+#### Tradeoffs
 
-#### What is cybersecurity?
+- Tradeoffs exist
+    - Security versus cost
+    - Security versus convenience
+    - Trust versus time
+- Tradeoffs change
+    - Technology changes
+    - Threat landscape changes
+    - Values change
+- Tradeoffs depend on context
 
-CIA triad:
+#### Your turn
+
+Which is riskier?
+
+(A) Your bff AirDrops a file to you irl
+(B) A stranger sends you a file over the Internet
+
+Context:
+
+- Your bff
+    - Every file your bff has shared with you recently has been infected with malware (why is this person still your bff?)
+    - The file seems unusually large
+- The stranger
+    - The stranger is (allegedly) an employee at Microsoft
+    - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
+
+### Frameworks
+
+- CIA triad
+- Risk
+- OODA loop
+
+#### CIA triad
 
 - Confidentiality
-    - Only entities that are authorized to access a resource can do so
+    - Entities can access a resource only if they are authorized
     - Opposite: disclosure
 - Integrity
-    - Data are reliable
+    - Resources are reliable
     - Opposite: alteration
 - Availability
-    - Resources are available when they are needed
+    - Entities can access a resource if they are authorized
     - Opposite: denial of service
+
+#### Risk
+
+- Asset
+    - Something of value
+    - Can be physical, digital, or relational (e.g., reputation)
+- Vulnerability
+    - A weakness
+- Threat
+    - Potential danger
+- Risk
+    - Potential loss
+    - Threat exploits a vulnerability of an asset
+
+#### OODA loop
+
+1. Observe
+2. Orient
+3. Decide
+4. Act
 
 
 
@@ -176,7 +228,7 @@ CIA triad:
 
 ### Your turn
 
-Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
 
 What do you do?
 
@@ -333,8 +385,8 @@ Review articles
 ## Conclusion
 
 - Realities
-    - Tradeoffs exist
     - The Internet is public, open, and forever
+    - Tradeoffs exist
 - Cyberattacks can and will happen
     - Be alert for commonly used social-engineering tactics
     - Know what to do (generally) and tools to use (specifically)
@@ -348,7 +400,11 @@ Review articles
 
 ## References
 
-1. Grubb, Sam (2021). _How Cybersecurity Really Works: A Hands-On Guide for Total Beginners._ United States: No Starch Press.
-    - ISBN-13 978-1-7185-0128-7 (paperback)
-2. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: WW Norton.
-    - ISBN-13 978-1-3240-0430-1 (e-book), 978-1-3240-0429-5 (hardcover), 978-0-3938-6745-9 (paperback)
+1. Andress, Jason (2026). _Foundations of cybersecurity: A straightforward introduction,_ 2nd edition. United States: [No Starch Press](https://nostarch.com/foundations-cybersecurity-2e).
+    - ISBN-13: 978-1-7185-0441-7 (e-book), 978-1-7185-0440-0 (paperback)
+2. Grubb, Sam (2021). _How cybersecurity really works: A hands-on guide for total beginners._ United States: [No Starch Press](https://nostarch.com/cybersecurityreallyworks).
+    - ISBN-13: 978-1-7185-0129-4 (e-book), 978-1-7185-0128-7 (paperback)
+3. Kranz, Thomas (2022). _Making sense of cybersecurity._ United States: [Manning Publications](https://www.manning.com/books/making-sense-of-cybersecurity).
+    - ISBN-13: 978-1-61729-800-4 (paperback)
+4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
+    - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
