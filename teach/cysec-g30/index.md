@@ -54,16 +54,29 @@ generating discussion and desire to know more, not delivering "content".
 
 - Tradeoffs exist
     - Security versus cost
-        - Security versus convenience
-        - Trust versus time
+    - Security versus convenience
+    - Trust versus time
 - Tradeoffs change
     - Technology changes
-        - Threat landscape changes
-        - Values change
+    - Threat landscape changes
+    - Values change
 - Tradeoffs depend on context
-    - Example. Your bff AirDrops a file to you irl, versus a stranger sends you a file over the Internet
-        - Every file your bff has shared with you recently has been infected with malware, and the file seems unusually large.
-        - The stranger is an employee at Microsoft, and the file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website.
+
+### Your turn
+
+Which is riskier?
+
+(A) Your bff AirDrops a file to you irl
+(B) A stranger sends you a file over the Internet
+
+Context:
+
+- Your bff
+    - Every file your bff has shared with you recently has been infected with malware (why is this person still your bff?)
+    - The file seems unusually large
+- The stranger
+    - The stranger is (allegedly) an employee at Microsoft
+    - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
 
 #### The Internet
 
@@ -74,6 +87,7 @@ generating discussion and desire to know more, not delivering "content".
         - Hence encryption (see ≠ understand)
 - The Internet is forever
     - [Internet Archive](https://archive.org/) (Wayback Machine)
+    - "Right to erasure" (GDPR), "right to delete" (CCPA)
 
 ### Definitions
 
