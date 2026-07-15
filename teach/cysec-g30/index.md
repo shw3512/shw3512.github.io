@@ -33,6 +33,9 @@ generating discussion and desire to know more, not delivering "content".
 ## Overview
 
 1. [Fundamentals](#fundamentals)
+    - [Definitions](#definitions)
+    - [Axioms](#axioms)
+    - [Frameworks](#frameworks)
 2. [Attacks](#attacks)
     - [Social engineering](#social-engineering)
 3. [Authentication](#authentication)
@@ -45,10 +48,33 @@ generating discussion and desire to know more, not delivering "content".
 
 ## Fundamentals
 
+- Definitions
+- Axioms
+- Frameworks
+
+### Definitions
+
+What is cybersecurity?
+
+- Identify, assess, address, and monitor relevant cyber threats
+
 ### Axioms
 
-1. Tradeoffs
-2. The Internet
+1. The Internet
+2. Tradeoffs
+
+#### The Internet
+
+- The Internet is public
+    - Anyone can use it
+- The Internet is open
+    - Anyone can see Internet traffic
+        - Hence encryption (see ≠ understand)
+- The Internet is forever
+    - [Internet Archive](https://archive.org/) (Wayback Machine)
+    - Privacy laws
+        - Right to erasure (GDPR)
+        - Right to delete (CCPA)
 
 #### Tradeoffs
 
@@ -62,7 +88,7 @@ generating discussion and desire to know more, not delivering "content".
     - Values change
 - Tradeoffs depend on context
 
-### Your turn
+#### Your turn
 
 Which is riskier?
 
@@ -78,24 +104,11 @@ Context:
     - The stranger is (allegedly) an employee at Microsoft
     - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
 
-#### The Internet
-
-- The Internet is public
-    - Anyone can use it
-- The Internet is open
-    - Anyone can see Internet traffic
-        - Hence encryption (see ≠ understand)
-- The Internet is forever
-    - [Internet Archive](https://archive.org/) (Wayback Machine)
-    - Privacy laws
-        - Right to erasure (GDPR)
-        - Right to delete (CCPA)
-
 ### Frameworks
 
-#### What is cybersecurity?
-
-- Identify, assess, address, and monitor relevant cyber threats
+- CIA triad
+- Risk
+- OODA loop
 
 #### CIA triad
 
@@ -372,8 +385,8 @@ Review articles
 ## Conclusion
 
 - Realities
-    - Tradeoffs exist
     - The Internet is public, open, and forever
+    - Tradeoffs exist
 - Cyberattacks can and will happen
     - Be alert for commonly used social-engineering tactics
     - Know what to do (generally) and tools to use (specifically)
