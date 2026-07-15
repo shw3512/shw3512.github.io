@@ -1,32 +1,11 @@
 # Cybersecurity
 
-- Audience: General
 - Presentation length: 30 minutes
-
-
-
-<!--
-Reorganize presentation to focus on real-world applications, not theory.
-After "Realities" section, give two or three sections focusing on single
-area. In each area, give brief (!) background and theory, then give tips
-and example scenarios for group discussion. Focus on engagement and
-generating discussion and desire to know more, not delivering "content".
-
-- Devices
-    - Device security settings (auto screen-lock, etc.)
-- Authentication
-    - MFA
-    - Password management
-- Phishing
-    - Discuss general social engineering, include in examples
-- Networks
-    - Public Wi-Fi
-    - How to test and harden home router
-- Summary
-    - Gather (restate) helpful resources
-        - VirusTotal
-        - Password generators
--->
+- Audience: General
+- Goals: As relevant to daily life,...
+    - Introduce frameworks
+    - Explain best practices (what and why)
+    - Provide a reference list of cybersecurity tools
 
 
 
@@ -36,14 +15,13 @@ generating discussion and desire to know more, not delivering "content".
     - [Definitions](#definitions)
     - [Axioms](#axioms)
     - [Frameworks](#frameworks)
-2. [Your personal security](#your-personal-security)
-3. [Attacks](#attacks)
-    - [Social engineering](#social-engineering)
-4. [Authentication](#authentication)
+2. [Your security](#your-security)
+3. [Authentication](#authentication)
     - [Passwords](#passwords)
-5. [Tools](#tools)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+4. [Tools](#tools)
+5. [Conclusion](#conclusion)
+6. [References](#references)
+7. [Appendix](#appendix)
 
 
 
@@ -104,6 +82,7 @@ Context:
     - The file seems unusually large
 - The stranger
     - The stranger is (allegedly) an employee at Microsoft
+        - How might you verify this?
     - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
 
 ### Frameworks
@@ -146,28 +125,87 @@ Context:
 
 
 
-## Your personal security
+## Your security
 
-- Access
+- Account access
 - Devices
 - Networks
 - Relational
 - In public
 
-### Access
+### Account access
 
-- MFA
-- Password management
+#### Your turn
+
+- How many passwords do you have?
+    - Give an order-of-magnitude estimate: 1, 10, 100, 1000,....
+- How do you manage your passwords? (Select all that apply.)
+    1. I use the same password or similar passwords for most or all of my accounts.
+    2. I write down my most commonly used passwords on a piece of paper and keep it on or near my computer.
+    3. I save them in my Web browser (for example, using the "remember me" feature).
+    4. I write down my passwords in a notebook and look them up when I need them.
+    5. I use a password manager.
+- What are the tradeoffs for each method of password management listed above?
+
+#### To do
+
+- Use a password manager
+- Review the security settings on your accounts
+    - Password strength
+    - MFA enabled?
+    - Security alerts
+        - Triggers
+        - Delivery options
+    - Account-recovery options
+- Implement MFA on high-value and high-risk accounts
+    - ...and on any account where security benefit outweighs convenience cost
+
+#### Password best practices
+
+- Don't reuse passwords
+    - Tradeoff: Security versus convenience
+- Make sufficiently long
+- Don't use security questions
+    - If you do, then use random answers
+    - Issues: OSINT, social engineering
+
+#### Password manager
+
+Key benefits:
+
+- Generates and stores unique, complex passwords
+- Integrates with common Web browsers (plug-in) and mobile devices (app)
+- Auto-fills login credentials only on valid website
+    - Protects against spoofed websites
+
+Key risk:
+
+- Keys to the kingdom
+
+#### Multi-factor authentication (MFA)
+
+- The use of two or more different (!) factors during authentication
+    - Factors of authentication:
+        - Something you know
+        - Something you have
+        - Something you are
+- Why it helps: defense in depth
+- Tradeoff: Security versus convenience
+    - If you make MFA more convenient, then you can make systems and data more secure.
+        - Example. Integrate fingerprint scanning hardware and software into laptops.
+        - Example. Integrate face-scanning hardware and software into cell phones.
 
 ### Devices
 
-- Device security settings
-- Login settings
-    - Passcode? Password? Biometric? MFA?
-- Lock-screen timer
-- Encryption
-    - File-level or full-disk encryption (FDE)
-    - Reduces risk of data disclosure if your device is lost or stolen
+#### To do
+
+- Review the security settings on your digital devices
+    - Login settings
+        - Passcode? Password? Biometric? MFA?
+    - Lock-screen timer
+    - Encryption
+        - File-level or full-disk encryption (FDE)
+        - Reduces risk of data disclosure if your device is lost or stolen
 
 ### Networks
 
@@ -178,7 +216,65 @@ Context:
 
 - Social engineering
 - Phishing
-    - Discuss general social engineering, include in examples
+
+#### Social engineering
+
+- An attempt to manipulate humans
+    - Doesn't require technology (even verbal language!)
+        - Example. Threatening actions or gestures
+
+##### Commonly used tactics
+
+- Scarcity
+    - "Only one left in stock!"
+- Urgency
+    - "Order before the countdown timer reaches zero and get 80% off!"
+- Intimidation
+    - Fear
+        - "Your tax return is being investigated for fraud that carries penalties of prison terms of up to five years and fines of up to $250,000."
+- Authority
+    - "Nine out of ten doctors agree."
+    - "The experiment requires that you continue."
+        - From psychologist Stanley Milgram's experiments on obedience to authority \[[Wikipedia](https://en.wikipedia.org/wiki/Milgram_experiment)\]
+- Trust
+    - Social proof
+        - "Everyone else is doing it."
+    - Familiarity
+        - "You know me."
+- Likeableness
+    - Pity
+        - "They deserve a better life than this. Donate your money, time, and action now."
+
+##### Phishing
+
+- Social engineering via e-mail
+- Common indicators (may not apply!)
+    - Bad grammar, spelling
+        - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
+    - Your name is missing or misspelled
+    - Fishy (or look-alike) sender e-mail address
+
+#### Tips to protect yourself against social engineering
+
+- Listen to your Spidey sense
+    - Does something feel "off"?
+- Slow down and question
+- Use another route
+
+#### Your turn
+
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
+
+What do you do?
+
+(Example options)
+
+- Ignore the e-mail. It's probably fake.
+- Immediately click the link and provide the requested information---I got bills to pay and things to do!
+- Log in to your bank's website.
+    - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
+- Give your bank a call.
+    - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
 
 ### In public
 
@@ -200,183 +296,6 @@ Summary
 Appendix
 
 
-
-
-
-## Attacks
-
-### Examples
-
-#### What's the worst that can happen?
-
-- Stuxnet worm (2010)
-    - Destroys centrifuges at an air-gapped Iranian nuclear facility
-    - [IEEE](https://spectrum.ieee.org/the-real-story-of-stuxnet), [Kaspersky](https://www.kaspersky.com/resource-center/definitions/what-is-stuxnet), [Wikipedia](https://en.wikipedia.org/wiki/Stuxnet), [WIRED](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/), [YouTube : CFR Education](https://www.youtube.com/watch?v=djUHvCyPYhY), [YouTube : Darknet Diaries](https://www.youtube.com/watch?v=9DCwyuH29SI)
-- Remote hijacking of car (2015)
-    - Hackers kill the engine on a highway and drive the car into a ditch
-    - [YouTube : WIRED](https://www.youtube.com/watch?v=MK0SrxBC1xs), [WIRED](https://www.wired.com/video/watch/hackers-wireless-jeep-attack-stranded-me-on-a-highway)
-- NotPetya encrypting malware (2017)
-    - Cripples firms, causing an estimated 10B USD in damages
-    - [Cloudflare](https://www.cloudflare.com/learning/security/ransomware/petya-notpetya-ransomware/), [Wikipedia](https://en.wikipedia.org/wiki/Petya_(malware_family)), [WIRED](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/), [YouTube : Cybernews](https://www.youtube.com/watch?v=3-MSlNVqzYY)
-- Colonial Pipeline ransomware attack (2021)
-    - Highlights vulnerabilities in US critical infrastructure
-    - [US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)
-
-#### But hackers won't target me, right?
-
-- How easy is it to steal passwords from a Web browser's password manager?
-    - [YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)
-- Mirai botnet
-    - Automatically scans the Internet for potentially vulnerable IoT devices and attempts brute-force logins (mostly using default credentials)
-    - At its peak, infects over half a million devices
-    - [Cloudflare](https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/), [CIS](https://www.cisecurity.org/insights/blog/the-mirai-botnet-threats-and-mitigations), [Google Research](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46301.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Mirai_(malware))
-
-#### Still, it won't happen to me...right?
-
-- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
-    - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
-    - Notice how quickly an attack can unfold (automation!)
-
-### Social engineering
-
-- An attempt to manipulate
-    - Doesn't require technology (or even verbal language!)
-        - Example. Threatening actions or gestures
-
-#### Commonly used tactics
-
-- Scarcity
-    - "Only one left in stock!"
-- Urgency
-    - "Order before the countdown timer reaches zero and get 25% off!"
-- Intimidation
-    - Fear
-        - "Your tax return is being investigated for fraud that carries penalties of prison terms of up to five years and fines of up to $250,000."
-- Authority
-    - "Nine out of ten doctors agree."
-    - "The experiment requires that you continue."
-        - From psychologist Stanley Milgram's experiments on obedience to authority \[[Wikipedia](https://en.wikipedia.org/wiki/Milgram_experiment)\]
-- Trust
-    - Social proof
-        - "Everyone else is doing it."
-    - Familiarity
-        - "You know me."
-- Likeableness
-    - Pity
-        - "They deserve a better life than this. Donate your money, time, and action now."
-
-#### Phishing
-
-- Social engineering via e-mail
-- Spear phishing: targeted phishing
-    - Example. Successful spear-phishing attack during the 2016 US presidential election \[[Wikipedia](https://en.wikipedia.org/wiki/Podesta_emails)\]
-
-##### Phishing indicators (may or may not apply!)
-
-- Bad grammar, spelling
-    - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
-- Your name is missing or misspelled
-- Fishy (or look-alike) sender e-mail address
-
-#### Tips to mitigate social engineering
-
-- Listen to your Spidey sense
-    - Does something feel "off"?
-- Slow down and question
-- Use another route
-
-### Your turn
-
-Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
-
-What do you do?
-
-(Example options)
-
-- Log in to your bank's website.
-    - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
-- Give your bank a call.
-    - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
-
-
-
-## Authentication
-
-### Introduction
-
-- Authentication versus identification (versus authorization)
-    - Identification: Who are you?
-    - Authentication: How do I know you are who you say you are?
-        - "Prove" your identity!
-    - Authorization: What are you allowed to do?
-- Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
-  - "[A]nswer me these questions three, ere the other side [you] see."
-
-### Factors of authentication
-
-Main three:
-
-1. Something you know (knowledge)
-2. Something you have (possession)
-3. Something you are (inherence)
-
-Others:
-
-4. Something you do (behavior)
-5. Somewhere you are (location)
-
-### Multifactor authentication
-
-- The use of two or more different (!) factors during authentication
-- Why it helps: defense in depth
-- Tradeoff: Security versus convenience
-    - Consider: If you make MFA more convenient, then you can make systems and data more secure.
-        - Examples. Integrate fingerprint scanning hardware and software into laptops. Integrate face-scanning software into cell phones.
-
-### Passwords
-
-- Still a common form of authentication
-
-#### Poll questions
-
-(Ask aloud to the group, answer silently to yourself.)
-
-- How many passwords do you have?
-    - Give an order-of-magnitude estimate: 1, 10, 100, 1000,....
-- How do you manage your passwords? (Select all that apply.)
-    1. I use the same password or similar passwords for most or all of my accounts.
-    2. I write down my most commonly used passwords on a piece of paper and keep it on or near my computer.
-    3. I save them in my Web browser (for example, using the "remember me" feature).
-    4. I write down my passwords in a notebook and look them up when I need them.
-    5. I use a password manager.
-- Discuss the tradeoffs of each method of password management.
-
-#### Password best practices
-
-- Don't reuse passwords
-    - Tradeoff: Security versus convenience
-- Make sufficiently long
-    - Complex?
-        - Tradeoffs
-            - "Research has shown...that users respond in very predictable ways to the requirements imposed by composition rules.... For example, a user that might have chosen “password” as their password would be relatively likely to choose “Password1” if required to include an uppercase letter and a number, or “Password1!” if a symbol is also required." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
-            - "Highly complex memorized secrets introduce a new potential vulnerability: they are less likely to be memorable, and it is more likely that they will be written down or stored electronically in an unsafe manner." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
-            - See also [xkcd](https://xkcd.com/936/)
-- Use a password manager (maybe?)
-    - Tradeoffs
-        - Keys to the kingdom
-        - You trust the password manager for secure implementation and operations
-    - If you use a password manager, then...
-        - Use a strong master password
-        - Strongly consider enabling MFA
-
-### Your turn
-
-For each scenario below, identify (a) what is the identification, authentication, and authorization; and (b) what factors of authentication are used. Which scenarios implement multi-factor authentication (MFA)? Which implementations do you think are most secure? Which are convenient? Why?
-
-1. Before you cross the Bridge of Death, the bridgekeeper asks you your name, your quest, and a secret question.
-2. When accessing a website, you are prompted for your username and password.
-3. At the entrance to your work (or school, or gym, etc.), you are asked to swipe your ID, then give your date of birth.
-4. When signing in for a cybersecurity certification exam, you are asked to present two forms of ID, one with your photograph and one with your signature; sign your name on a digital pad; and sit for a head photograph.
 
 
 
@@ -467,3 +386,109 @@ Review articles
     - ISBN-13: 978-1-61729-800-4 (paperback)
 4. Martin, Keith (2020). _Cryptography: The key to digital security, how it works, and why it matters._ United States: [WW Norton](https://wwnorton.com/books/9780393867459).
     - ISBN-13: 978-1-32400-430-1 (e-book), 978-1-32400-429-5 (hardcover), 978-0-39386-745-9 (paperback)
+
+
+
+
+
+## Appendix
+
+### Attacks
+
+#### Examples
+
+##### What's the worst that can happen?
+
+- Stuxnet worm (2010)
+    - Destroys centrifuges at an air-gapped Iranian nuclear facility
+    - [IEEE](https://spectrum.ieee.org/the-real-story-of-stuxnet), [Kaspersky](https://www.kaspersky.com/resource-center/definitions/what-is-stuxnet), [Wikipedia](https://en.wikipedia.org/wiki/Stuxnet), [WIRED](https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/), [YouTube : CFR Education](https://www.youtube.com/watch?v=djUHvCyPYhY), [YouTube : Darknet Diaries](https://www.youtube.com/watch?v=9DCwyuH29SI)
+- Remote hijacking of car (2015)
+    - Hackers kill the engine on a highway and drive the car into a ditch
+    - [YouTube : WIRED](https://www.youtube.com/watch?v=MK0SrxBC1xs), [WIRED](https://www.wired.com/video/watch/hackers-wireless-jeep-attack-stranded-me-on-a-highway)
+- NotPetya encrypting malware (2017)
+    - Cripples firms, causing an estimated 10B USD in damages
+    - [Cloudflare](https://www.cloudflare.com/learning/security/ransomware/petya-notpetya-ransomware/), [Wikipedia](https://en.wikipedia.org/wiki/Petya_(malware_family)), [WIRED](https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/), [YouTube : Cybernews](https://www.youtube.com/watch?v=3-MSlNVqzYY)
+- Colonial Pipeline ransomware attack (2021)
+    - Highlights vulnerabilities in US critical infrastructure
+    - [US CISA](https://www.cisa.gov/news-events/news/attack-colonial-pipeline-what-weve-learned-what-weve-done-over-past-two-years), [US DOE](https://www.energy.gov/ceser/colonial-pipeline-cyber-incident), [Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack)
+
+##### But hackers won't target me, right?
+
+- How easy is it to steal passwords from a Web browser's password manager?
+    - [YouTube](https://www.youtube.com/watch?v=CIOsemj3kl4), [YouTube](https://www.youtube.com/watch?v=-UPweZDohjk)
+- Mirai botnet
+    - Automatically scans the Internet for potentially vulnerable IoT devices and attempts brute-force logins (mostly using default credentials)
+    - At its peak, infects over half a million devices
+    - [Cloudflare](https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/), [CIS](https://www.cisecurity.org/insights/blog/the-mirai-botnet-threats-and-mitigations), [Google Research](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46301.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Mirai_(malware))
+
+##### Still, it won't happen to me...right?
+
+- Security expert Troy Hunt, creator of security website [HaveIBeenPwned](https://haveibeenpwned.com), falls victim to phishing
+    - [Troy Hunt](https://www.troyhunt.com/a-sneaky-phish-just-grabbed-my-mailchimp-mailing-list/), [Cory Doctorow](https://pluralistic.net/2025/04/05/troy-hunt/#teach-a-man-to-phish), [Adam Shostack](https://shostack.org/blog/learning-from-troy-hunts-sneaky-phish/)
+    - Notice how quickly an attack can unfold (automation!)
+
+
+
+### Authentication
+
+#### Introduction
+
+- Authentication versus identification (versus authorization)
+    - Identification: Who are you?
+    - Authentication: How do I know you are who you say you are?
+        - "Prove" your identity!
+    - Authorization: What are you allowed to do?
+- Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
+  - "[A]nswer me these questions three, ere the other side [you] see."
+
+#### Factors of authentication
+
+Main three:
+
+1. Something you know (knowledge)
+2. Something you have (possession)
+3. Something you are (inherence)
+
+Others:
+
+4. Something you do (behavior)
+5. Somewhere you are (location)
+
+#### Multifactor authentication
+
+- The use of two or more different (!) factors during authentication
+- Why it helps: defense in depth
+- Tradeoff: Security versus convenience
+    - Consider: If you make MFA more convenient, then you can make systems and data more secure.
+        - Examples. Integrate fingerprint scanning hardware and software into laptops. Integrate face-scanning software into cell phones.
+
+#### Passwords
+
+- Still a common form of authentication
+
+##### Password best practices
+
+- Don't reuse passwords
+    - Tradeoff: Security versus convenience
+- Make sufficiently long
+    - Complex?
+        - Tradeoffs
+            - "Research has shown...that users respond in very predictable ways to the requirements imposed by composition rules.... For example, a user that might have chosen “password” as their password would be relatively likely to choose “Password1” if required to include an uppercase letter and a number, or “Password1!” if a symbol is also required." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
+            - "Highly complex memorized secrets introduce a new potential vulnerability: they are less likely to be memorable, and it is more likely that they will be written down or stored electronically in an unsafe manner." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
+            - See also [xkcd](https://xkcd.com/936/)
+- Use a password manager (maybe?)
+    - Tradeoffs
+        - Keys to the kingdom
+        - You trust the password manager for secure implementation and operations
+    - If you use a password manager, then...
+        - Use a strong master password
+        - Strongly consider enabling MFA
+
+#### Your turn
+
+For each scenario below, identify (a) what is the identification, authentication, and authorization; and (b) what factors of authentication are used. Which scenarios implement multi-factor authentication (MFA)? Which implementations do you think are most secure? Which are convenient? Why?
+
+1. Before you cross the Bridge of Death, the bridgekeeper asks you your name, your quest, and a secret question.
+2. When accessing a website, you are prompted for your username and password.
+3. At the entrance to your work (or school, or gym, etc.), you are asked to swipe your ID, then give your date of birth.
+4. When signing in for a cybersecurity certification exam, you are asked to present two forms of ID, one with your photograph and one with your signature; sign your name on a digital pad; and sit for a head photograph.
