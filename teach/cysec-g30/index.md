@@ -87,23 +87,47 @@ Context:
         - Hence encryption (see ≠ understand)
 - The Internet is forever
     - [Internet Archive](https://archive.org/) (Wayback Machine)
-    - "Right to erasure" (GDPR), "right to delete" (CCPA)
+    - Privacy laws
+        - Right to erasure (GDPR)
+        - Right to delete (CCPA)
 
-### Definitions
+### Frameworks
 
 #### What is cybersecurity?
 
-CIA triad:
+- Identify, assess, address, and monitor relevant cyber threats
+
+#### CIA triad
 
 - Confidentiality
-    - Only entities that are authorized to access a resource can do so
+    - Entities can access a resource only if they are authorized
     - Opposite: disclosure
 - Integrity
-    - Data are reliable
+    - Resources are reliable
     - Opposite: alteration
 - Availability
-    - Resources are available when they are needed
+    - Entities can access a resource if they are authorized
     - Opposite: denial of service
+
+#### Risk
+
+- Asset
+    - Something of value
+    - Can be physical, digital, or relational (e.g., reputation)
+- Vulnerability
+    - A weakness
+- Threat
+    - Potential danger
+- Risk
+    - Potential loss
+    - Threat exploits a vulnerability of an asset
+
+#### OODA loop
+
+1. Observe
+2. Orient
+3. Decide
+4. Act
 
 
 
@@ -191,7 +215,7 @@ CIA triad:
 
 ### Your turn
 
-Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use this link to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
+Scenario: You get an e-mail from your bank saying that your account may have been compromised and that you need to use the link provided in the e-mail to verify your identity and account activity within 24 hours or your account will be frozen. You use this bank account to pay multiple important bills, several of which come due in the next few days.
 
 What do you do?
 
