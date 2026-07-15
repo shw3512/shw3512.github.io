@@ -36,8 +36,9 @@ What is cybersecurity?
 
 ### Axioms
 
-1. The Internet
-2. Tradeoffs
+1. The Internet is
+2. Tradeoffs exist
+3. Cyberattacks happen
 
 #### The Internet
 
@@ -63,6 +64,16 @@ What is cybersecurity?
     - Threat landscape changes
     - Values change
 - Tradeoffs depend on context
+
+#### Cyberattacks happen
+
+- What you can't control
+    - Whether cyberattacks happen (they will)
+- What you can control
+    - How secure are your actions? accounts? devices?
+    - Know what to do and where to go
+    - The balance you choose (!) among tradeoffs
+    - Laws you support (privacy, accountability)
 
 #### Your turn
 
@@ -228,6 +239,11 @@ References:
     - Encryption
         - File-level? Full-disk encryption (FDE)?
         - Reduces risk of data disclosure if your device is lost or stolen
+- Align the security settings to the device
+    - Tradeoff: Security versus cost and convenience
+    - Considerations:
+        - How mobile is the device?
+        - What is the value of the device and of the data on it?
 
 ### Networks
 
@@ -344,24 +360,13 @@ What do you do?
 
 ### In public
 
-- Shoulder surfing
+#### To do
+
+- Configure secure device settings in advance
+- Don't leave your devices unattended
+- Beware shoulder surfing
     - Bystander, binoculars, camera
-- Device settings
-    - Leave your device unattended?
- 
-
-
-Tools
-
-- Gather (restate) helpful resources
-    - VirusTotal
-    - Password managers
-
-Summary
-
-Appendix
-
-
+- Beware tailgating and piggybacking
 
 
 
@@ -371,7 +376,7 @@ Tools for your cybersecurity toolkit
 
 Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
 
-### Data breach
+### Identify disclosure of personal data (in a data breach)
 
 - [HaveIBeenPwned](https://haveibeenpwned.com)
 
@@ -389,6 +394,8 @@ Note: If you upload anything (file, link, etc.), then assume others will see it 
 - [Joe Sandbox](https://www.joesandbox.com)
 - [VirusTotal](https://www.virustotal.com/gui/)
 
+Privacy:
+
 - Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
 - [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
 
@@ -396,13 +403,14 @@ Note: If you upload anything (file, link, etc.), then assume others will see it 
 
 - [AbuseIPDB](https://www.abuseipdb.com)
     - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
+- [VirusTotal](https://www.virustotal.com/gui/)
 
 ### Anti-malware
 
-- [Bitdefender]()
-- [Malwarebytes]()
+- [Bitdefender](https://www.bitdefender.com/en-us/)
+- [Malwarebytes](https://www.malwarebytes.com)
 
-Review articles
+Review articles:
 
 - [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
 - [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
@@ -414,14 +422,17 @@ Review articles
 - Realities
     - The Internet is public, open, and forever
     - Tradeoffs exist
-- Cyberattacks will happen
-    - Be alert for commonly used social-engineering tactics
-    - Know what to do (generally) and tools to use (specifically)
-        - Anti-malware
-        - Sandbox
-        - Password managers
-        - Device settings
+    - Cyberattacks happen
+- What to do
+    - Defend in advance
+        - Configure secure account and device settings
+        - Use a password manager
+        - Use anti-malware software
+    - Be alert for social-engineering tactics
+        - Slow down and question
+    - Know secure behavior and security tools
         - Public behavior
+    - Show grace to yourself and to others :)
 
 
 
