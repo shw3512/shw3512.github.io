@@ -92,8 +92,8 @@ What is cybersecurity?
 
 Which is riskier?
 
-(A) Your bff AirDrops a file to you irl
-(B) A stranger sends you a file over the Internet
+1. Your bff AirDrops a file to you irl
+2. A stranger sends you a file over the Internet
 
 Context:
 
