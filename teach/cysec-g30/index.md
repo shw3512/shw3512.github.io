@@ -36,13 +36,14 @@ generating discussion and desire to know more, not delivering "content".
     - [Definitions](#definitions)
     - [Axioms](#axioms)
     - [Frameworks](#frameworks)
-2. [Attacks](#attacks)
+2. [Your personal security](#your-personal-security)
+3. [Attacks](#attacks)
     - [Social engineering](#social-engineering)
-3. [Authentication](#authentication)
+4. [Authentication](#authentication)
     - [Passwords](#passwords)
-4. [Tools](#tools)
-5. [Conclusion](#conclusion)
-6. [References](#references)
+5. [Tools](#tools)
+6. [Conclusion](#conclusion)
+7. [References](#references)
 
 
 
@@ -142,6 +143,63 @@ Context:
 2. Orient
 3. Decide
 4. Act
+
+
+
+## Your personal security
+
+- Access
+- Devices
+- Networks
+- Relational
+- In public
+
+### Access
+
+- MFA
+- Password management
+
+### Devices
+
+- Device security settings
+- Login settings
+    - Passcode? Password? Biometric? MFA?
+- Lock-screen timer
+- Encryption
+    - File-level or full-disk encryption (FDE)
+    - Reduces risk of data disclosure if your device is lost or stolen
+
+### Networks
+
+- Public Wi-Fi
+- How to test and harden home router
+
+### Relational
+
+- Social engineering
+- Phishing
+    - Discuss general social engineering, include in examples
+
+### In public
+
+- Shoulder surfing
+    - Bystander, binoculars, camera
+- Device settings
+    - Leave your device unattended?
+ 
+
+
+Tools
+
+- Gather (restate) helpful resources
+    - VirusTotal
+    - Password managers
+
+Summary
+
+Appendix
+
+
 
 
 
