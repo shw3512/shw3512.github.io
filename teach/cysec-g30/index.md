@@ -131,14 +131,13 @@ Context:
 
 - Asset
     - Something of value
-    - Can be physical, digital, or relational (e.g., reputation)
+    - Can be physical, digital, or intangible (e.g., reputation)
 - Vulnerability
     - A weakness
 - Threat
     - Potential danger
 - Risk
-    - Potential loss
-    - Threat exploits a vulnerability of an asset
+    - Potential loss that occurs when a threat exploits a vulnerability of an asset
 
 #### AAA
 
