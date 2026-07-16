@@ -5,19 +5,6 @@
 
 
 
-## Overview
-
-1. [Fundamentals](#fundamentals)
-2. [Your security](#your-security)
-3. [Toolkit overview](#toolkit-overview)
-4. [Conclusion](#conclusion)
-5. [References](#references)
-6. [Appendix](#appendix)
-    1. [Motivation](#motivation)
-    2. [Authentication](#authentication)
-
-
-
 ## Goals
 
 Help you...
@@ -30,6 +17,22 @@ Help you...
     - Be informed and confident in your digital decisions
 - Know where to go for cyber info
     - Have a reference list of trustworthy cybersecurity tools and information
+
+
+
+## Overview
+
+1. [Fundamentals](#fundamentals)
+2. [Your security](#your-security)
+3. [Toolkit overview](#toolkit-overview)
+4. [Conclusion](#conclusion)
+5. [References](#references)
+6. [Appendix](#appendix)
+    1. [Tools](#tools)
+    2. [Motivation](#motivation)
+    3. [Authentication](#authentication)
+
+
 
 ## Fundamentals
 
