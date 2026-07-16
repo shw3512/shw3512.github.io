@@ -142,6 +142,7 @@ Context:
 ## Your security
 
 - Account access
+- Software
 - Devices
 - Networks
     - Home router
@@ -232,6 +233,16 @@ References:
     - If you make MFA more convenient, then you make systems and data more secure
         - Example. Integrate fingerprint scanning hardware and software into laptops
         - Example. Integrate face-scanning hardware and software into cell phones
+
+### Software
+
+#### To do
+
+- Install software (applications, plug-ins, and updates) from trusted sources only
+    - Even on trusted sites, be wary
+- Review the security settings and permissions of applications
+    - (???) which, exactly (???)
+- Uninstall unused software
 
 ### Devices
 
@@ -437,6 +448,8 @@ Review articles:
 
 ## Conclusion
 
+### What we learned
+
 - Realities
     - The Internet is public, open, and forever
     - Tradeoffs exist
@@ -450,8 +463,21 @@ Review articles:
     - Be alert for social-engineering tactics
         - Slow down and question
     - Know secure behavior and security tools
-        - Public behavior
+        - Mind your public behavior
     - Show grace to yourself and to others
+
+### What to do
+
+- Today
+    - Share what you learned with a friend
+- This week
+    - Enable MFA on sensitive accounts
+- This month
+    - Install a password manager (app and Web-browser plug-in)
+        - Enter account credentials
+        - Update passwords to secure alternatives (in the password manager _and_ on the account)
+- This year
+    - Configure secure settings for accounts and devices
 
 
 
