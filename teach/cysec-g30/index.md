@@ -474,66 +474,18 @@ Now what?
 
 
 
-## Tools
+## Toolkit (overview)
 
-This section presents reference lists of tools for your cybersecurity toolkit.
+(See the "[Tools](#tools)" section in the appendix for detailed lists)
 
-Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
+- Password manager
+- Anti-malware software
+- Data backup
+- Check suspicious file or URL: [VirusTotal](https://www.virustotal.com/gui/)
+- Check data breach: [HaveIBeenPwned](https://haveibeenpwned.com)
+- Report phishing: [APWG](https://apwg.org/reportphishing)
 
-### Password managers
-
-- [1Password](https://1password.com)
-- [Bitwarden](https://bitwarden.com)
-- [Dashlane](https://www.dashlane.com)
-- [Keeper](https://www.keepersecurity.com)
-- [NordPass](https://nordpass.com)
-- [Proton Pass](https://proton.me/pass)
-
-Reviews:
-
-- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
-- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
-- [security.org](https://www.security.org/password-manager/best/)
-- [WIRED](https://www.wired.com/story/best-password-managers/)
-
-### Anti-malware
-
-- [Bitdefender](https://www.bitdefender.com/en-us/)
-- [Malwarebytes](https://www.malwarebytes.com)
-
-Reviews:
-
-- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
-- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
-
-### Identify disclosure of personal data (in a data breach)
-
-- [HaveIBeenPwned](https://haveibeenpwned.com)
-
-### Inspect suspicious e-mails
-
-- [CheckPhish](https://checkphish.bolster.ai)
-- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
-- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
-- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
-- "Top 10 email analysis tools for phishing" \[[Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)\]
-
-### Inspect suspicious files or links
-
-- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
-- [Joe Sandbox](https://www.joesandbox.com)
-- [VirusTotal](https://www.virustotal.com/gui/)
-
-Privacy considerations:
-
-- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
-- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
-
-### Inspect suspicious URLs (Web sites)
-
-- [AbuseIPDB](https://www.abuseipdb.com)
-    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
-- [VirusTotal](https://www.virustotal.com/gui/)
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
 
 
 
@@ -545,16 +497,21 @@ Privacy considerations:
     - The Internet is public, open, and forever
     - Tradeoffs exist
     - Cyberattacks happen
-- What to do
+- Frameworks
+    - CIA triad
+    - Risk
+    - AAA
+    - OODA loop
+- Habits
     - Defend in advance
         - Configure secure settings for accounts and devices
         - Apply software patches and updates
         - Use a password manager
         - Use anti-malware software
+        - Have a data-backup routine
     - Be alert for social-engineering tactics
         - Slow down, question, and verify
-    - Know secure behavior and security tools
-        - Mind your public behavior
+    - Make friends with a few security tools
     - Show grace to yourself and to others
 
 ### What to do
@@ -588,6 +545,87 @@ Privacy considerations:
 
 
 ## Appendix
+
+
+
+### Tools
+
+- Reference lists for your cybersecurity toolkit
+
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
+
+### Password managers
+
+Tools:
+
+- [1Password](https://1password.com)
+- [Bitwarden](https://bitwarden.com)
+- [Dashlane](https://www.dashlane.com)
+- [Keeper](https://www.keepersecurity.com)
+- [NordPass](https://nordpass.com)
+- [Proton Pass](https://proton.me/pass)
+
+Reviews:
+
+- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+- [security.org](https://www.security.org/password-manager/best/)
+- [WIRED](https://www.wired.com/story/best-password-managers/)
+
+### Anti-malware
+
+Tools:
+
+- [Bitdefender](https://www.bitdefender.com/en-us/)
+- [Malwarebytes](https://www.malwarebytes.com)
+
+Reviews:
+
+- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
+- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
+
+### Identify disclosure of personal data (in a data breach)
+
+Tools:
+
+- [HaveIBeenPwned](https://haveibeenpwned.com)
+
+### Inspect suspicious e-mails
+
+Tools:
+
+- [APWG](https://apwg.org/reportphishing) (report phish)
+- [CheckPhish](https://checkphish.bolster.ai)
+- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
+- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
+- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
+
+Reviews:
+
+- [Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)
+
+### Inspect suspicious files or links
+
+Tools:
+
+- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
+- [Joe Sandbox](https://www.joesandbox.com)
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+Privacy considerations:
+
+- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
+- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
+
+### Inspect suspicious URLs (Web sites)
+
+Tools:
+
+- [AbuseIPDB](https://www.abuseipdb.com)
+    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+
 
 ### Motivation
 
