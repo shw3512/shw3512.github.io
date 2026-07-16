@@ -211,6 +211,7 @@ How to use it:
     - Public Wi-Fi
 - Relational
 - In public
+- Recovery
 
 ### Account access
 
@@ -451,6 +452,25 @@ What do you do?
 - Beware shoulder surfing
     - Bystander, binoculars, camera
 - Beware tailgating and piggybacking
+
+### Recovery
+
+A cyber event happened!
+
+- Forgotten password
+- Account compromise
+- Device failure
+- Ransomware
+
+Now what?
+
+#### Account resets
+
+- (!!!)
+
+#### Backups
+
+- (!!!)
 
 
 
