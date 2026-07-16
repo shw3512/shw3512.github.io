@@ -12,7 +12,7 @@ I'm Stephen Wolff. I'm glad you're here.
 
 I'm currently working on
 
-- [Cybersecurity presentation](/teach/cysec-g30/) for a general audience (30 minutes, English)
+- [Cybersecurity presentation](/teach/cysec-g30/) (general audience, 30--60 minutes, English)
 - Computer build (cmos)
 
 I'm currently learning about
