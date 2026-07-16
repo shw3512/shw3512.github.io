@@ -1,16 +1,7 @@
 # Cybersecurity
 
-- Presentation length: 30 minutes
+- Duration: 30--60 minutes
 - Audience: General
-- Goals: Help you...
-    - Think wisely about cyber risk
-        - Practice simple, useful frameworks for dealing with risk
-        - Focus on risk reduction, not perfect security (a Fata Morgana, a mirage)
-    - Adopt good cyber habits
-        - Practice cybersecurity best practices (behavior over tools)
-        - Be informed and confident in your digital decisions
-    - Know where to go for cyber info
-        - Have a reference list of trustworthy cybersecurity tools and information
 
 
 
@@ -18,7 +9,7 @@
 
 1. [Fundamentals](#fundamentals)
 2. [Your security](#your-security)
-3. [Tools](#tools)
+3. [Toolkit overview](#toolkit-overview)
 4. [Conclusion](#conclusion)
 5. [References](#references)
 6. [Appendix](#appendix)
@@ -26,6 +17,19 @@
     2. [Authentication](#authentication)
 
 
+
+## Goals
+
+Help you...
+
+- Recognize and respond to cyber risk
+    - Adopt simple, useful frameworks to manage risk
+    - Aim to reduce risk, not eliminate it
+- Adopt safe cyber habits
+    - Practice cybersecurity best practices (habits over tools)
+    - Be informed and confident in your digital decisions
+- Know where to go for cyber info
+    - Have a reference list of trustworthy cybersecurity tools and information
 
 ## Fundamentals
 
@@ -65,21 +69,26 @@ What is cybersecurity?
     - Security versus convenience
     - Trust versus time
 - Tradeoffs change
-    - Technology changes
-    - Threat landscape changes
+    - Technologies change
+    - Threats change
     - Values change
 - Tradeoffs depend on context
 
 #### Cyberattacks happen
 
-- What you can't control
+- You can't control...
     - Whether cyberattacks happen (they will)
-    - Achieving complete safety (we can't)
-- What you can control
-    - How secure are your actions? accounts? devices?
-    - Know what to do and where to go
-    - The balance you choose (!) among tradeoffs
-    - Laws you support (privacy, accountability)
+    - Whether you achieve perfect safety (you can't)
+- You can control...
+    - How informed you are
+        - You're here!
+        - Know what to do and where to go
+    - How prepared you are
+        - How secure are your actions? accounts? devices?
+    - What balance _you choose_ among tradeoffs
+    - What laws you support (privacy, accountability)
+    - What grace you show yourself and others
+        - More perfect, never perfect
 
 #### Your turn
 
@@ -97,12 +106,13 @@ Context:
 - The stranger
     - The stranger is (allegedly) an employee at Microsoft
         - How might you verify this?
-    - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
+    - The file is a security update whose checksums agree with those on Microsoft's website
 
 ### Frameworks
 
 - CIA triad
 - Risk
+- AAA
 - OODA loop
 
 #### CIA triad
@@ -111,24 +121,69 @@ Context:
     - Entities can access a resource only if they are authorized
     - Opposite: disclosure
 - Integrity
-    - Resources are reliable
+    - Resources are reliable---accurate, complete, and changed only by authorized entities
     - Opposite: alteration
 - Availability
     - Entities can access a resource if they are authorized
     - Opposite: denial of service
 
+How to use it:
+
+- When assessing security and risk, identify which aspects of the CIA triad are relevant
+
 #### Risk
 
 - Asset
     - Something of value
-    - Can be physical, digital, or relational (e.g., reputation)
+    - Can be physical, digital, or intangible (e.g., reputation)
 - Vulnerability
     - A weakness
 - Threat
-    - Potential danger
+    - A potential danger
 - Risk
-    - Potential loss
-    - Threat exploits a vulnerability of an asset
+    - A potential loss that occurs when a threat exploits a vulnerability of an asset
+
+How to use it:
+
+- To deconstruct risk, in order to better understand and manage to it
+
+#### AAA
+
+- Identification
+    - Who are you?
+- Authentication
+    - How do I know you are who you say you are?
+        - "Prove" your identity!
+- Authorization
+    - What are you allowed to do?
+- Accounting
+    - What did you do?
+
+Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
+
+- "[A]nswer me these questions three, ere the other side [you] see."
+
+How to use it:
+
+- To understand your interactions with (digital and physical) service providers
+
+##### Factors of authentication
+
+1. Something you know
+    - Example: password
+2. Something you have
+    - Example: cell phone
+3. Something you are
+    - Example: face, fingerprint
+
+##### Multi-factor authentication (MFA)
+
+- The use of two or more _different_ factors during authentication
+- Why it helps: defense in depth
+- Tradeoff: security versus convenience
+    - If you make MFA more convenient, then you make systems and data more secure
+        - Example. Integrate fingerprint scanning hardware and software into laptops
+        - Example. Integrate face-scanning hardware and software into cell phones
 
 #### OODA loop
 
@@ -137,17 +192,26 @@ Context:
 3. Decide
 4. Act
 
+How to use it:
+
+- In safe, controlled settings, practice it
+    - Sports
+    - Digital simulations of cyber threats
+- In event of emergency, use it
+
 
 
 ## Your security
 
 - Account access
+- Software
 - Devices
 - Networks
     - Home router
     - Public Wi-Fi
 - Relational
 - In public
+- Recovery
 
 ### Account access
 
@@ -200,38 +264,17 @@ Key benefits:
 Key risk:
 
 - Keys to the kingdom
+    - Make your master password strong (long and memorable)
 
-##### Commonly recommended password managers (2026)
+### Software
 
-- [1Password](https://1password.com)
-- [Bitwarden](https://bitwarden.com)
-- [Dashlane](https://www.dashlane.com)
-- [Keeper](https://www.keepersecurity.com)
-- [NordPass](https://nordpass.com)
-- [Proton Pass](https://proton.me/pass)
+#### To do
 
-References:
-
-- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
-- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
-- [security.org](https://www.security.org/password-manager/best/)
-- [WIRED](https://www.wired.com/story/best-password-managers/)
-
-#### Multi-factor authentication (MFA)
-
-- The use of two or more different (!) factors during authentication
-    - Factors of authentication:
-        - Something you know
-            - Example. Password
-        - Something you have
-            - Example. Device (cell phone)
-        - Something you are
-            - Example. Face, fingerprint
-- Why it helps: defense in depth
-- Tradeoff: Security versus convenience
-    - If you make MFA more convenient, then you make systems and data more secure
-        - Example. Integrate fingerprint scanning hardware and software into laptops
-        - Example. Integrate face-scanning hardware and software into cell phones
+- Install software (applications, plug-ins, and updates) from trusted sources only
+    - Even on trusted sites, be wary
+- Review the security settings and permissions of applications
+    - (???) which, exactly (???)
+- Uninstall unused software
 
 ### Devices
 
@@ -275,15 +318,19 @@ References:
     - Benefits of HTTPS over HTTP:
         - Privacy
             - HTTP transmits all data in plaintext
-                - Includes usernames, passwords, payment information, etc.
-            - HTTPS encrypts Web traffic
+                - This includes usernames, passwords, payment information, etc.
+            - HTTPS encrypts Web traffic content
+                - Anyone can view related metadata (like sender and receiver address)
         - Integrity
             - HTTPS ensures that your communication with a website is not tampered with
         - Authenticity
             - HTTPS automatically verifies that you're communicating with a legitimate server
                 - This prevents spoofing (an attacker pretending to be a website)
                 - (!) This does not prevent you from connecting to malicious websites
-- Use a virtual private network (VPN)
+- If HTTPS is not enough (or not available), then use a virtual private network (VPN)
+    - Routes all traffic through an encrypted tunnel to the VPN server
+        - Hides your IP address, location, and Web-browsing destinations
+    - Note: Shifts trust from the ISP to the VPN provider, who still sees this information
 
 ##### References
 
@@ -348,19 +395,39 @@ References:
 
 ##### Phishing
 
-- Social engineering via e-mail
-- Common indicators (may not apply!)
-    - Bad grammar, spelling
-        - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
-    - Your name is missing or misspelled
-    - Fishy (or look-alike) sender e-mail address
+- Social engineering over communication technology
+
+Variants:
+
+- Phishing
+    - Via e-mail
+- Vishing
+    - Via voice call
+- Smishing
+    - Via SMS
+
+How to detect (often though not always):
+
+- Is unexpected
+- Is from an unusual source (e-mail address, phone number)
+- Uses a generic greeting
+- Uses social-engineering tactics
 
 #### To do
 
 - Listen to your Spidey sense
     - Does something feel "off"?
 - Slow down and question
-- Use another route
+- Verify by using another route
+- If it's a phish, then report and delete
+    - "Report spam" feature in e-mail client
+    - [Forward to APWG](https://apwg.org/reportphishing)
+
+References:
+
+- [Anti-Phishing Working Group (APWG)](https://apwg.org)
+- [Bitwarden](https://bitwarden.com/blog/what-is-a-common-indicator-of-phishing/)
+- [US CISA](https://www.cisa.gov/secure-our-world/recognize-and-report-phishing)
 
 #### Your turn
 
@@ -386,72 +453,94 @@ What do you do?
     - Bystander, binoculars, camera
 - Beware tailgating and piggybacking
 
+### Recovery
+
+A cyber event happened!
+
+- Forgotten password
+- Account compromise
+- Device failure
+- Ransomware
+
+Now what?
+
+#### Account resets
+
+- (!!!)
+
+#### Backups
+
+- (!!!)
 
 
-## Tools
 
-This section presents reference lists of tools for your cybersecurity toolkit.
+## Toolkit overview
 
-Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
+(See the "[Tools](#tools)" section in the appendix for detailed lists)
 
-### Identify disclosure of personal data (in a data breach)
+- Password manager
+- Anti-malware software
+- Data backup
+- Check suspicious file or URL: [VirusTotal](https://www.virustotal.com/gui/)
+- Check data breach: [HaveIBeenPwned](https://haveibeenpwned.com)
+- Report phishing: [APWG](https://apwg.org/reportphishing)
 
-- [HaveIBeenPwned](https://haveibeenpwned.com)
-
-### Inspect suspicious e-mails
-
-- [CheckPhish](https://checkphish.bolster.ai)
-- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
-- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
-- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
-- "Top 10 email analysis tools for phishing" \[[Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)\]
-
-### Inspect suspicious files or links
-
-- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
-- [Joe Sandbox](https://www.joesandbox.com)
-- [VirusTotal](https://www.virustotal.com/gui/)
-
-Privacy:
-
-- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
-- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
-
-### Inspect suspicious URLs (Web sites)
-
-- [AbuseIPDB](https://www.abuseipdb.com)
-    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
-- [VirusTotal](https://www.virustotal.com/gui/)
-
-### Anti-malware
-
-- [Bitdefender](https://www.bitdefender.com/en-us/)
-- [Malwarebytes](https://www.malwarebytes.com)
-
-Review articles:
-
-- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
-- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
 
 
 
 ## Conclusion
 
+### What we aimed for (goals)
+
+Help you...
+
+- Recognize and respond to cyber risk
+    - Adopt simple, useful frameworks to manage risk
+    - Aim to reduce risk, not eliminate it
+- Adopt safe cyber habits
+    - Practice cybersecurity best practices (habits over tools)
+    - Be informed and confident in your digital decisions
+- Know where to go for cyber info
+    - Have a reference list of trustworthy cybersecurity tools and information
+
+### What we learned
+
 - Realities
     - The Internet is public, open, and forever
     - Tradeoffs exist
     - Cyberattacks happen
-- What to do
+- Frameworks
+    - CIA triad
+    - Risk
+    - AAA
+    - OODA loop
+- Habits
     - Defend in advance
         - Configure secure settings for accounts and devices
         - Apply software patches and updates
         - Use a password manager
         - Use anti-malware software
+        - Have a data-backup routine
     - Be alert for social-engineering tactics
-        - Slow down and question
-    - Know secure behavior and security tools
-        - Public behavior
+        - Slow down, question, and verify
+    - Make friends with a few security tools
     - Show grace to yourself and to others
+
+### What we do
+
+- Today
+    - Share what you learned with a friend
+- This week
+    - Enable MFA on sensitive accounts
+- This month
+    - Install a password manager (app and Web-browser plug-in)
+        - Enter account credentials
+        - Update passwords to secure alternatives (in the password manager _and_ on the account)
+    - Adopt a realistic routine for patching and updating software
+        - Automate where possible
+- This year
+    - Configure secure settings for accounts and devices
 
 
 
@@ -469,6 +558,87 @@ Review articles:
 
 
 ## Appendix
+
+
+
+### Tools
+
+- Reference lists for your cybersecurity toolkit
+
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
+
+### Password managers
+
+Tools:
+
+- [1Password](https://1password.com)
+- [Bitwarden](https://bitwarden.com)
+- [Dashlane](https://www.dashlane.com)
+- [Keeper](https://www.keepersecurity.com)
+- [NordPass](https://nordpass.com)
+- [Proton Pass](https://proton.me/pass)
+
+Reviews:
+
+- [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+- [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+- [security.org](https://www.security.org/password-manager/best/)
+- [WIRED](https://www.wired.com/story/best-password-managers/)
+
+### Anti-malware
+
+Tools:
+
+- [Bitdefender](https://www.bitdefender.com/en-us/)
+- [Malwarebytes](https://www.malwarebytes.com)
+
+Reviews:
+
+- [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
+- [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
+
+### Identify disclosure of personal data (in a data breach)
+
+Tools:
+
+- [HaveIBeenPwned](https://haveibeenpwned.com)
+
+### Inspect suspicious e-mails
+
+Tools:
+
+- [APWG](https://apwg.org/reportphishing) (report phish)
+- [CheckPhish](https://checkphish.bolster.ai)
+- [EasyDMARC](https://easydmarc.com/tools/phishing-url)
+- [IPQS](https://www.ipqualityscore.com/free-email-verifier)
+- [Keepnet](https://keepnetlabs.com/free-phishing-email-analysis)
+
+Reviews:
+
+- [Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)
+
+### Inspect suspicious files or links
+
+Tools:
+
+- [Bitdefender](https://www.bitdefender.com/en-us/consumer/link-checker)
+- [Joe Sandbox](https://www.joesandbox.com)
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+Privacy considerations:
+
+- Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
+- [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
+
+### Inspect suspicious URLs (Web sites)
+
+Tools:
+
+- [AbuseIPDB](https://www.abuseipdb.com)
+    - Note. You must enter the domain name (ending in `.com`, `.edu`, etc.), not the full URL
+- [VirusTotal](https://www.virustotal.com/gui/)
+
+
 
 ### Motivation
 
@@ -506,16 +676,6 @@ Review articles:
 
 ### Authentication
 
-#### Introduction
-
-- Authentication versus identification (versus authorization)
-    - Identification: Who are you?
-    - Authentication: How do I know you are who you say you are?
-        - "Prove" your identity!
-    - Authorization: What are you allowed to do?
-- Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
-  - "[A]nswer me these questions three, ere the other side [you] see."
-
 #### Factors of authentication
 
 Main three:
@@ -535,7 +695,8 @@ Others:
 - Why it helps: defense in depth
 - Tradeoff: Security versus convenience
     - Consider: If you make MFA more convenient, then you can make systems and data more secure.
-        - Examples. Integrate fingerprint scanning hardware and software into laptops. Integrate face-scanning software into cell phones.
+        - Example: Integrate fingerprint scanning hardware and software into laptops.
+        - Example: Integrate face-scanning software into cell phones.
 
 #### Passwords
 
