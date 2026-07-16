@@ -365,12 +365,22 @@ Key risk:
 
 ##### Phishing
 
-- Social engineering via e-mail
-- Common indicators (may not apply!)
-    - Bad grammar, spelling
-        - Advances in large language models (LLMs) have enabled attackers to mitigate this indicator
-    - Your name is missing or misspelled
-    - Fishy (or look-alike) sender e-mail address
+- Social engineering over communication technology
+
+Variants:
+
+- Phishing
+    - Via e-mail
+- Vishing
+    - Via voice call
+- Smishing
+    - Via SMS
+
+How to detect (often though not always):
+
+- Unexpected
+- From an unusual source (e-mail address, phone number)
+- Uses social-engineering tactics
 
 #### To do
 
