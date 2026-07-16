@@ -9,7 +9,7 @@
 
 1. [Fundamentals](#fundamentals)
 2. [Your security](#your-security)
-3. [Tools](#tools)
+3. [Toolkit overview](#toolkit-overview)
 4. [Conclusion](#conclusion)
 5. [References](#references)
 6. [Appendix](#appendix)
@@ -18,7 +18,7 @@
 
 
 
-##  Goals
+## Goals
 
 Help you...
 
@@ -474,7 +474,7 @@ Now what?
 
 
 
-## Toolkit (overview)
+## Toolkit overview
 
 (See the "[Tools](#tools)" section in the appendix for detailed lists)
 
@@ -490,6 +490,19 @@ Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume 
 
 
 ## Conclusion
+
+### What we aimed for (goals)
+
+Help you...
+
+- Recognize and respond to cyber risk
+    - Adopt simple, useful frameworks to manage risk
+    - Aim to reduce risk, not eliminate it
+- Adopt safe cyber habits
+    - Practice cybersecurity best practices (habits over tools)
+    - Be informed and confident in your digital decisions
+- Know where to go for cyber info
+    - Have a reference list of trustworthy cybersecurity tools and information
 
 ### What we learned
 
@@ -514,7 +527,7 @@ Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume 
     - Make friends with a few security tools
     - Show grace to yourself and to others
 
-### What to do
+### What we do
 
 - Today
     - Share what you learned with a friend
