@@ -2,10 +2,15 @@
 
 - Presentation length: 30 minutes
 - Audience: General
-- Goals: As relevant to daily life,...
-    - Introduce frameworks
-    - Explain best practices (what and why)
-    - Provide a reference list of cybersecurity tools
+- Goals: Help you...
+    - Think wisely about cyber risk
+        - Practice simple, useful frameworks for dealing with risk
+        - Focus on risk reduction, not perfect security (a Fata Morgana, a mirage)
+    - Adopt good cyber habits
+        - Practice cybersecurity best practices (behavior over tools)
+        - Be informed and confident in your digital decisions
+    - Know where to go for cyber info
+        - Have a reference list of trustworthy cybersecurity tools and information
 
 
 
@@ -69,6 +74,7 @@ What is cybersecurity?
 
 - What you can't control
     - Whether cyberattacks happen (they will)
+    - Achieving complete safety (we can't)
 - What you can control
     - How secure are your actions? accounts? devices?
     - Know what to do and where to go
