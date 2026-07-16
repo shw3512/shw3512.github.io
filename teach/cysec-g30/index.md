@@ -6,7 +6,7 @@
     - Think wisely about cyber risk
         - Practice simple, useful frameworks for dealing with risk
         - Focus on risk reduction, not perfect security (a Fata Morgana, a mirage)
-    - Adopt good cyber habits
+    - Adopt safe cyber habits
         - Practice cybersecurity best practices (behavior over tools)
         - Be informed and confident in your digital decisions
     - Know where to go for cyber info
