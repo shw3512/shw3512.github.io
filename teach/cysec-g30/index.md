@@ -78,14 +78,14 @@ What is cybersecurity?
 
 - You can't control...
     - Whether cyberattacks happen (they will)
-    - Achieving perfect safety (we can't)
+    - Whether you achieve perfect safety (you can't)
 - You can control...
     - How informed you are
         - You're here!
         - Know what to do and where to go
     - How prepared you are
         - How secure are your actions? accounts? devices?
-    - What balance you choose among tradeoffs
+    - What balance _you choose_ among tradeoffs
     - What laws you support (privacy, accountability)
     - What grace you show yourself and others
         - More perfect, never perfect
