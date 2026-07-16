@@ -2,15 +2,6 @@
 
 - Duration: 30--60 minutes
 - Audience: General
-- Goals: Help you...
-    - Recognize and respond to cyber risk
-        - Practice simple, useful frameworks for dealing with risk
-        - Aim to reduce risk, not eliminate it
-    - Adopt safe cyber habits
-        - Practice cybersecurity best practices (habits over tools)
-        - Be informed and confident in your digital decisions
-    - Know where to go for cyber info
-        - Have a reference list of trustworthy cybersecurity tools and information
 
 
 
@@ -26,6 +17,19 @@
     2. [Authentication](#authentication)
 
 
+
+##  Goals
+
+Help you...
+
+- Recognize and respond to cyber risk
+    - Adopt simple, useful frameworks to manage risk
+    - Aim to reduce risk, not eliminate it
+- Adopt safe cyber habits
+    - Practice cybersecurity best practices (habits over tools)
+    - Be informed and confident in your digital decisions
+- Know where to go for cyber info
+    - Have a reference list of trustworthy cybersecurity tools and information
 
 ## Fundamentals
 
@@ -65,21 +69,26 @@ What is cybersecurity?
     - Security versus convenience
     - Trust versus time
 - Tradeoffs change
-    - Technology changes
-    - Threat landscape changes
+    - Technologies change
+    - Threats change
     - Values change
 - Tradeoffs depend on context
 
 #### Cyberattacks happen
 
-- What you can't control
+- You can't control...
     - Whether cyberattacks happen (they will)
-    - Achieving complete safety (we can't)
-- What you can control
-    - How secure are your actions? accounts? devices?
-    - Know what to do and where to go
-    - The balance you choose (!) among tradeoffs
-    - Laws you support (privacy, accountability)
+    - Achieving perfect safety (we can't)
+- You can control...
+    - How informed you are
+        - You're here!
+        - Know what to do and where to go
+    - How prepared you are
+        - How secure are your actions? accounts? devices?
+    - What balance you choose among tradeoffs
+    - What laws you support (privacy, accountability)
+    - What grace you show yourself and others
+        - More perfect, never perfect
 
 #### Your turn
 
