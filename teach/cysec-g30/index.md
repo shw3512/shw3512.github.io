@@ -292,15 +292,19 @@ Key risk:
     - Benefits of HTTPS over HTTP:
         - Privacy
             - HTTP transmits all data in plaintext
-                - Includes usernames, passwords, payment information, etc.
-            - HTTPS encrypts Web traffic
+                - This includes usernames, passwords, payment information, etc.
+            - HTTPS encrypts Web traffic content
+                - Anyone can view related metadata (like sender and receiver address)
         - Integrity
             - HTTPS ensures that your communication with a website is not tampered with
         - Authenticity
             - HTTPS automatically verifies that you're communicating with a legitimate server
                 - This prevents spoofing (an attacker pretending to be a website)
                 - (!) This does not prevent you from connecting to malicious websites
-- Use a virtual private network (VPN)
+- If HTTPS is not enough (or not available), then use a virtual private network (VPN)
+    - Routes all traffic through an encrypted tunnel to the VPN server
+        - Hides your IP address, location, and Web-browsing destinations
+    - Note: Shifts trust from the ISP to the VPN provider, who still sees this information
 
 ##### References
 
