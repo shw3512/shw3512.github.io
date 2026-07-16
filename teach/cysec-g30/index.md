@@ -103,6 +103,7 @@ Context:
 
 - CIA triad
 - Risk
+- AAA
 - OODA loop
 
 #### CIA triad
@@ -129,6 +130,42 @@ Context:
 - Risk
     - Potential loss
     - Threat exploits a vulnerability of an asset
+
+#### AAA
+
+- Identification
+    - Who are you?
+- Authentication
+    - How do I know you are who you say you are?
+        - "Prove" your identity!
+- Authorization
+    - What are you allowed to do?
+- Accounting
+    - What did you do?
+
+Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
+
+- "[A]nswer me these questions three, ere the other side [you] see."
+
+##### Factors of authentication
+
+1. Something you know
+    - Example: password
+2. Something you have
+    - Example: cell phone
+3. Something you are
+    - Example: face, fingerprint
+
+##### Multi-factor authentication (MFA)
+
+- The use of two or more _different_ factors during authentication
+- Why it helps: defense in depth
+- Tradeoff: security versus convenience
+    - If you make MFA more convenient, then you make systems and data more secure
+        - Example. Integrate fingerprint scanning hardware and software into laptops
+        - Example. Integrate face-scanning hardware and software into cell phones
+
+
 
 #### OODA loop
 
@@ -201,6 +238,7 @@ Key benefits:
 Key risk:
 
 - Keys to the kingdom
+    - Make your master password strong (long and memorable)
 
 ##### Commonly recommended password managers (2026)
 
@@ -217,22 +255,6 @@ References:
 - [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
 - [security.org](https://www.security.org/password-manager/best/)
 - [WIRED](https://www.wired.com/story/best-password-managers/)
-
-#### Multi-factor authentication (MFA)
-
-- The use of two or more different (!) factors during authentication
-    - Factors of authentication:
-        - Something you know
-            - Example. Password
-        - Something you have
-            - Example. Device (cell phone)
-        - Something you are
-            - Example. Face, fingerprint
-- Why it helps: defense in depth
-- Tradeoff: Security versus convenience
-    - If you make MFA more convenient, then you make systems and data more secure
-        - Example. Integrate fingerprint scanning hardware and software into laptops
-        - Example. Integrate face-scanning hardware and software into cell phones
 
 ### Software
 
