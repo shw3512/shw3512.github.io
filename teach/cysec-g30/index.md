@@ -121,11 +121,15 @@ Context:
     - Entities can access a resource only if they are authorized
     - Opposite: disclosure
 - Integrity
-    - Resources are reliable
+    - Resources are reliable---accurate, complete, and changed only by authorized entities
     - Opposite: alteration
 - Availability
     - Entities can access a resource if they are authorized
     - Opposite: denial of service
+
+How to use it:
+
+- When assessing security and risk, identify which aspects of the CIA triad are relevant
 
 #### Risk
 
@@ -135,9 +139,13 @@ Context:
 - Vulnerability
     - A weakness
 - Threat
-    - Potential danger
+    - A potential danger
 - Risk
-    - Potential loss that occurs when a threat exploits a vulnerability of an asset
+    - A potential loss that occurs when a threat exploits a vulnerability of an asset
+
+How to use it:
+
+- To deconstruct risk, in order to better understand and manage to it
 
 #### AAA
 
@@ -154,6 +162,10 @@ Context:
 Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
 
 - "[A]nswer me these questions three, ere the other side [you] see."
+
+How to use it:
+
+- To understand your interactions with (digital and physical) service providers
 
 ##### Factors of authentication
 
@@ -173,14 +185,19 @@ Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/wat
         - Example. Integrate fingerprint scanning hardware and software into laptops
         - Example. Integrate face-scanning hardware and software into cell phones
 
-
-
 #### OODA loop
 
 1. Observe
 2. Orient
 3. Decide
 4. Act
+
+How to use it:
+
+- In safe, controlled settings, practice it
+    - Sports
+    - Digital simulations of cyber threats
+- In event of emergency, use it
 
 
 
