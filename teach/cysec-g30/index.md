@@ -564,16 +564,6 @@ Privacy considerations:
 
 ### Authentication
 
-#### Introduction
-
-- Authentication versus identification (versus authorization)
-    - Identification: Who are you?
-    - Authentication: How do I know you are who you say you are?
-        - "Prove" your identity!
-    - Authorization: What are you allowed to do?
-- Example. Monty Python and the Holy Grail \[[YouTube](https://www.youtube.com/watch?v=RbTaP0_Galg)\]
-  - "[A]nswer me these questions three, ere the other side [you] see."
-
 #### Factors of authentication
 
 Main three:
@@ -593,7 +583,8 @@ Others:
 - Why it helps: defense in depth
 - Tradeoff: Security versus convenience
     - Consider: If you make MFA more convenient, then you can make systems and data more secure.
-        - Examples. Integrate fingerprint scanning hardware and software into laptops. Integrate face-scanning software into cell phones.
+        - Example: Integrate fingerprint scanning hardware and software into laptops.
+        - Example: Integrate face-scanning software into cell phones.
 
 #### Passwords
 
