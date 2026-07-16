@@ -244,6 +244,8 @@ References:
     - Considerations:
         - How mobile is the device?
         - What is the value of the device and of the data on it?
+- Regularly apply software patches and updates
+    - Automate?
 
 ### Networks
 
@@ -259,12 +261,23 @@ References:
 
 ##### Recommendations
 
-- Use a virtual private network (VPN)
 - Enable MFA on sensitive accounts
 - Avoid sensitive transactions
     - Banking
     - Entering payment information (online shopping)
 - Use HTTPS, not HTTP
+    - Benefits of HTTPS over HTTP:
+        - Privacy
+            - HTTP transmits all data in plaintext
+                - Includes usernames, passwords, payment information, etc.
+            - HTTPS encrypts Web traffic
+        - Integrity
+            - HTTPS ensures that your communication with a website is not tampered with
+        - Authenticity
+            - HTTPS automatically verifies that you're communicating with a legitimate server
+                - This prevents spoofing (an attacker pretending to be a website)
+                - (!) This does not prevent you from connecting to malicious websites
+- Use a virtual private network (VPN)
 
 ##### References
 
@@ -349,14 +362,13 @@ Scenario: You get an e-mail from your bank saying that your account may have bee
 
 What do you do?
 
-(Example options)
-
-- Ignore the e-mail. It's probably fake.
-- Immediately click the link and provide the requested information---I got bills to pay and things to do!
-- Log in to your bank's website.
+1. Ignore the e-mail. It's probably fake.
+2. Immediately click the link and provide the requested information---I got bills to pay and things to do!
+3. Log in to your bank's website.
     - Using what URL? The URL in the e-mail? The URL from a Web search? The URL you previously bookmarked in your Web browser or password manager?
-- Give your bank a call.
+4. Give your bank a call.
     - Using what phone number? The number in the e-mail? The number on your bank's website? The number on the back of your bank card?
+5. Other (explain)
 
 ### In public
 
@@ -372,7 +384,7 @@ What do you do?
 
 ## Tools
 
-Tools for your cybersecurity toolkit
+This section presents reference lists of tools for your cybersecurity toolkit.
 
 Note: If you upload anything (file, link, etc.), then assume others will see it and the information it contains.
 
@@ -425,7 +437,8 @@ Review articles:
     - Cyberattacks happen
 - What to do
     - Defend in advance
-        - Configure secure account and device settings
+        - Configure secure settings for accounts and devices
+        - Apply software patches and updates
         - Use a password manager
         - Use anti-malware software
     - Be alert for social-engineering tactics
