@@ -1,13 +1,13 @@
 # Cybersecurity
 
-- Presentation length: 30 minutes
+- Duration: 30--60 minutes
 - Audience: General
 - Goals: Help you...
-    - Think wisely about cyber risk
+    - Recognize and respond to cyber risk
         - Practice simple, useful frameworks for dealing with risk
-        - Focus on risk reduction, not perfect security (a Fata Morgana, a mirage)
+        - Aim to reduce risk, not eliminate it
     - Adopt safe cyber habits
-        - Practice cybersecurity best practices (behavior over tools)
+        - Practice cybersecurity best practices (habits over tools)
         - Be informed and confident in your digital decisions
     - Know where to go for cyber info
         - Have a reference list of trustworthy cybersecurity tools and information
@@ -97,7 +97,7 @@ Context:
 - The stranger
     - The stranger is (allegedly) an employee at Microsoft
         - How might you verify this?
-    - The file is a security update whose SHA-1 and SHA-256 checksums agree with those on Microsoft's website
+    - The file is a security update whose checksums agree with those on Microsoft's website
 
 ### Frameworks
 
