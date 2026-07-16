@@ -378,8 +378,9 @@ Variants:
 
 How to detect (often though not always):
 
-- Unexpected
-- From an unusual source (e-mail address, phone number)
+- Is unexpected
+- Is from an unusual source (e-mail address, phone number)
+- Uses a generic greeting
 - Uses social-engineering tactics
 
 #### To do
@@ -387,7 +388,16 @@ How to detect (often though not always):
 - Listen to your Spidey sense
     - Does something feel "off"?
 - Slow down and question
-- Use another route
+- Verify by using another route
+- If it's a phish, then report and delete
+    - "Report spam" feature in e-mail client
+    - [Forward to APWG](https://apwg.org/reportphishing)
+
+References:
+
+- [Anti-Phishing Working Group (APWG)](https://apwg.org)
+- [Bitwarden](https://bitwarden.com/blog/what-is-a-common-indicator-of-phishing/)
+- [US CISA](https://www.cisa.gov/secure-our-world/recognize-and-report-phishing)
 
 #### Your turn
 
@@ -493,7 +503,7 @@ Privacy considerations:
         - Use a password manager
         - Use anti-malware software
     - Be alert for social-engineering tactics
-        - Slow down and question
+        - Slow down, question, and verify
     - Know secure behavior and security tools
         - Mind your public behavior
     - Show grace to yourself and to others
@@ -508,6 +518,8 @@ Privacy considerations:
     - Install a password manager (app and Web-browser plug-in)
         - Enter account credentials
         - Update passwords to secure alternatives (in the password manager _and_ on the account)
+    - Adopt a realistic routine for patching and updating software
+        - Automate where possible
 - This year
     - Configure secure settings for accounts and devices
 
