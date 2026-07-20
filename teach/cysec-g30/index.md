@@ -255,7 +255,7 @@ How to use it:
     - If you do, then use random answers
     - Concern: OSINT, social engineering
 
-#### Password manager
+#### Password managers
 
 Key benefits:
 
@@ -268,6 +268,26 @@ Key risk:
 
 - Keys to the kingdom
     - Make your master password strong (long and memorable)
+
+##### How to start
+
+1. Review
+    - Reviews: [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers), [PCMag](https://www.pcmag.com/picks/the-best-password-managers), [security.org](https://www.security.org/password-manager/best/), [WIRED](https://www.wired.com/story/best-password-managers/)
+2. Choose
+    - My advice: If unsure, start with [Bitwarden](https://bitwarden.com)
+        - Free, easy to use, easy to transfer logins if you switch
+3. Install
+    - App: on PC, phone
+    - Web-browser plug-in: on PC
+4. Enter credentials
+    - Approaches:
+        - Trial: Start with a few low-value, low-risk accounts
+        - All-in: Import saved login credentials from Web browser
+    - For each account, enter username, password, security questions, website
+5. Update passwords
+    - In the password manager _and_ on the account
+    - Use random-password generator feature
+        - For security questions, too!
 
 ### Software
 
@@ -530,16 +550,21 @@ Help you...
     - Make friends with a few security tools
     - Show grace to yourself and to others
 
-### What we do
+### What we'll do
 
 - Today
     - Share what you learned with a friend
 - This week
     - Enable MFA on sensitive accounts
 - This month
-    - Install a password manager (app and Web-browser plug-in)
+    - Start using a password manager 
+        - Install app on PC, phone
+        - Install Web-browser plug-in on PC
         - Enter account credentials
-        - Update passwords to secure alternatives (in the password manager _and_ on the account)
+        - Update passwords to secure alternatives
+            - In the password manager _and_ on the account
+            - Use random-password generator feature
+                - For security questions, too!
     - Adopt a realistic routine for patching and updating software
         - Automate where possible
 - This year
@@ -570,7 +595,7 @@ Help you...
 
 Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
 
-### Password managers
+#### Password managers
 
 Tools:
 
@@ -588,7 +613,7 @@ Reviews:
 - [security.org](https://www.security.org/password-manager/best/)
 - [WIRED](https://www.wired.com/story/best-password-managers/)
 
-### Anti-malware
+#### Anti-malware
 
 Tools:
 
@@ -600,13 +625,13 @@ Reviews:
 - [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
 - [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
 
-### Identify disclosure of personal data (in a data breach)
+#### Identify disclosure of personal data (in a data breach)
 
 Tools:
 
 - [HaveIBeenPwned](https://haveibeenpwned.com)
 
-### Inspect suspicious e-mails
+#### Inspect suspicious e-mails
 
 Tools:
 
@@ -620,7 +645,7 @@ Reviews:
 
 - [Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)
 
-### Inspect suspicious files or links
+#### Inspect suspicious files or links
 
 Tools:
 
@@ -633,7 +658,7 @@ Privacy considerations:
 - Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
 - [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
 
-### Inspect suspicious URLs (Web sites)
+#### Inspect suspicious URLs (Web sites)
 
 Tools:
 
@@ -715,7 +740,7 @@ Others:
             - "Research has shown...that users respond in very predictable ways to the requirements imposed by composition rules.... For example, a user that might have chosen “password” as their password would be relatively likely to choose “Password1” if required to include an uppercase letter and a number, or “Password1!” if a symbol is also required." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
             - "Highly complex memorized secrets introduce a new potential vulnerability: they are less likely to be memorable, and it is more likely that they will be written down or stored electronically in an unsafe manner." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
             - See also [xkcd](https://xkcd.com/936/)
-- Use a password manager (maybe?)
+- Use a password manager
     - Tradeoffs
         - Keys to the kingdom
         - You trust the password manager for secure implementation and operations
