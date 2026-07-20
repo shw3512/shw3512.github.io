@@ -608,6 +608,12 @@ Help you...
 - This year
     - Configure secure settings for accounts and devices
 
+### Thank you
+
+- Presentation by: Stephen Wolff
+- Available at: [https://shw3512.github.io/teach/cysec-g30/](https://shw3512.github.io/teach/cysec-g30/)
+- LinkedIn profile: [https://www.linkedin.com/in/stephen-wolff-0x200/](https://www.linkedin.com/in/stephen-wolff-0x200/)
+
 
 
 ## References
