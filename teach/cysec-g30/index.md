@@ -13,9 +13,9 @@ Help you...
     - Adopt simple, useful frameworks to manage risk
     - Aim to reduce risk, not eliminate it
 - Adopt safe cyber habits
-    - Practice cybersecurity best practices (habits over tools)
-    - Be informed and confident in your digital decisions
-- Know where to go for cyber info
+    - Plan and prepare
+    - Focus on habits, not tools
+- Be informed and confident in your digital decisions
     - Have a reference list of trustworthy cybersecurity tools and information
 
 
@@ -250,30 +250,51 @@ How to use it:
 
 - Don't reuse passwords
     - Tradeoff: Security versus convenience
-- Make sufficiently long
+- Make passwords sufficiently long
 - Don't use security questions
     - If you do, then use random answers
     - Concern: OSINT, social engineering
 
-#### Password manager
+#### Password managers
 
-Key benefits:
+Benefits:
 
 - Generates and stores unique, complex passwords
 - Integrates with common Web browsers (plug-in) and mobile devices (app)
 - Auto-fills login credentials only on valid website
     - Protects against spoofed websites
 
-Key risk:
+Risk:
 
 - Keys to the kingdom
     - Make your master password strong (long and memorable)
+
+##### How to start
+
+1. Review
+    - Reviews: [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers), [PCMag](https://www.pcmag.com/picks/the-best-password-managers), [security.org](https://www.security.org/password-manager/best/), [WIRED](https://www.wired.com/story/best-password-managers/)
+2. Choose
+    - My advice: If unsure, start with [Bitwarden](https://bitwarden.com)
+        - Free, easy to use, easy to transfer logins if you switch
+3. Install
+    - App: on PC, phone
+    - Web-browser plug-in: on PC
+4. Enter credentials
+    - Approaches:
+        - Trial: Start with a few low-value, low-risk accounts
+        - All-in: Import saved login credentials from Web browser
+    - For each account, enter username, password, security questions, website
+5. Update passwords
+    - In the password manager _and_ on the account
+    - Use random-password generator feature
+        - For security questions, too!
 
 ### Software
 
 #### To do
 
-- Install software (applications, plug-ins, and updates) from trusted sources only
+- Install software from trusted sources only
+    - Software includes applications, plug-ins, and updates
     - Even on trusted sites, be wary
 - Review the security settings and permissions of applications
     - (???) which, exactly (???)
@@ -299,6 +320,8 @@ Key risk:
 - Regularly apply software patches and updates
     - Automate?
 
+(!!!) provide (links to) step-by-step guidance (!!!)
+
 ### Networks
 
 - Be wary of public Wi-Fi
@@ -306,10 +329,10 @@ Key risk:
 
 #### Public Wi-Fi
 
-##### Risks
+Risks
 
 - Rogue access points
-- Man-in-the-middle attack
+- Man-in-the-middle attacks
 
 ##### Recommendations
 
@@ -409,7 +432,9 @@ Variants:
 - Smishing
     - Via SMS
 
-How to detect (often though not always):
+##### How to detect phishing
+
+(Often, not always!)
 
 - Is unexpected
 - Is from an unusual source (e-mail address, phone number)
@@ -419,11 +444,11 @@ How to detect (often though not always):
 #### To do
 
 - Listen to your Spidey sense
-    - Does something feel "off"?
+    - Does something feel off?
 - Slow down and question
 - Verify by using another route
 - If it's a phish, then report and delete
-    - "Report spam" feature in e-mail client
+    - Use "report spam" feature in e-mail client
     - [Forward to APWG](https://apwg.org/reportphishing)
 
 References:
@@ -458,7 +483,7 @@ What do you do?
 
 ### Recovery
 
-A cyber event happened!
+A cyber incident happened!
 
 - Forgotten password
 - Account compromise
@@ -469,11 +494,47 @@ Now what?
 
 #### Account resets
 
-- (!!!)
+- Forgotten password
+    - Click "I forgot my password"
+    - Receive e-mail with temporary code or link
+        - Enter new password
+    - Enter recovery code
+        - Issued when you created the account
+            - Save securely!
+- Lost MFA device
+    - Prepare!
+        - Install authenticator app on second device
+            - Keep backup app up to date
+        - Capture and securely store static setup key
+            - Setup key: QR code, text
+            - Store in password manager with associated account
+- Locked account
+    - Often triggered by too many failed login attempts
+    - Options:
+        - Wait
+        - Request a password reset
+        - Contact customer support (!)
 
 #### Backups
 
-- (!!!)
+- Adpot a realistic backup routine
+    - Automate!
+- Protects against....
+    - Accidental file changes
+    - Hardware failure
+    - Ransomware
+- Options:
+    - External hard drive
+    - Cloud storage
+- Considerations:
+    - Privacy
+        - Of your data
+        - Of cloud-service provider
+    - Availability
+        - Loss of power or Internet
+        - Fire or theft
+    - Criticality of data
+    - Urgency of access
 
 
 
@@ -488,7 +549,7 @@ Now what?
 - Check data breach: [HaveIBeenPwned](https://haveibeenpwned.com)
 - Report phishing: [APWG](https://apwg.org/reportphishing)
 
-Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains
 
 
 
@@ -502,9 +563,9 @@ Help you...
     - Adopt simple, useful frameworks to manage risk
     - Aim to reduce risk, not eliminate it
 - Adopt safe cyber habits
-    - Practice cybersecurity best practices (habits over tools)
-    - Be informed and confident in your digital decisions
-- Know where to go for cyber info
+    - Plan and prepare
+    - Focus on habits, not tools
+- Be informed and confident in your digital decisions
     - Have a reference list of trustworthy cybersecurity tools and information
 
 ### What we learned
@@ -519,31 +580,39 @@ Help you...
     - AAA
     - OODA loop
 - Habits
-    - Defend in advance
+    - Prepare in advance
         - Configure secure settings for accounts and devices
-        - Apply software patches and updates
         - Use a password manager
         - Use anti-malware software
-        - Have a data-backup routine
+        - Follow software-update routine
+        - Follow data-backup routine
+        - "Failing to prepare is preparing to fail"
     - Be alert for social-engineering tactics
         - Slow down, question, and verify
     - Make friends with a few security tools
     - Show grace to yourself and to others
 
-### What we do
+### What we'll do
 
 - Today
     - Share what you learned with a friend
 - This week
     - Enable MFA on sensitive accounts
 - This month
-    - Install a password manager (app and Web-browser plug-in)
-        - Enter account credentials
-        - Update passwords to secure alternatives (in the password manager _and_ on the account)
-    - Adopt a realistic routine for patching and updating software
-        - Automate where possible
+    - Start using a password manager 
+        - Install app and plug-in, enter and update passwords
+    - Adopt realistic routines to...
+        - Update software
+        - Back up data
+        - Automate!
 - This year
     - Configure secure settings for accounts and devices
+
+### Thank you
+
+- Presentation by: Stephen Wolff
+- Available at: [https://shw3512.github.io/teach/cysec-g30/](https://shw3512.github.io/teach/cysec-g30/)
+- LinkedIn profile: [https://www.linkedin.com/in/stephen-wolff-0x200/](https://www.linkedin.com/in/stephen-wolff-0x200/)
 
 
 
@@ -570,7 +639,7 @@ Help you...
 
 Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
 
-### Password managers
+#### Password managers
 
 Tools:
 
@@ -588,7 +657,7 @@ Reviews:
 - [security.org](https://www.security.org/password-manager/best/)
 - [WIRED](https://www.wired.com/story/best-password-managers/)
 
-### Anti-malware
+#### Anti-malware
 
 Tools:
 
@@ -600,13 +669,13 @@ Reviews:
 - [CNET](https://www.cnet.com/tech/services-and-software/best-antivirus/)
 - [PCMag](https://www.pcmag.com/picks/the-best-antivirus-protection)
 
-### Identify disclosure of personal data (in a data breach)
+#### Identify disclosure of personal data (in a data breach)
 
 Tools:
 
 - [HaveIBeenPwned](https://haveibeenpwned.com)
 
-### Inspect suspicious e-mails
+#### Inspect suspicious e-mails
 
 Tools:
 
@@ -620,7 +689,7 @@ Reviews:
 
 - [Keepnet](https://keepnetlabs.com/blog/top-10-email-analysis-tools-for-phishing)
 
-### Inspect suspicious files or links
+#### Inspect suspicious files or links
 
 Tools:
 
@@ -633,7 +702,7 @@ Privacy considerations:
 - Article on accidental disclosure from VirusTotal upload \[[ThreatDown](https://www.threatdown.com/blog/accidental-virustotal-upload-is-a-valuable-reminder-to-double-check-what-you-share/)\]
 - [VirusTotal's privacy policy](https://virustotal.readme.io/docs/privacy-policy)
 
-### Inspect suspicious URLs (Web sites)
+#### Inspect suspicious URLs (Web sites)
 
 Tools:
 
@@ -715,7 +784,7 @@ Others:
             - "Research has shown...that users respond in very predictable ways to the requirements imposed by composition rules.... For example, a user that might have chosen “password” as their password would be relatively likely to choose “Password1” if required to include an uppercase letter and a number, or “Password1!” if a symbol is also required." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
             - "Highly complex memorized secrets introduce a new potential vulnerability: they are less likely to be memorable, and it is more likely that they will be written down or stored electronically in an unsafe manner." ([NIST SP 800-63](https://pages.nist.gov/800-63-3/sp800-63b.html#appA))
             - See also [xkcd](https://xkcd.com/936/)
-- Use a password manager (maybe?)
+- Use a password manager
     - Tradeoffs
         - Keys to the kingdom
         - You trust the password manager for secure implementation and operations
