@@ -15,7 +15,7 @@ Help you...
 - Adopt safe cyber habits
     - Plan and prepare
     - Focus on habits, not tools
-- Be informed and confident in your digital decisions
+- Be informed and confident in your cyber decisions
     - Have a reference list of trustworthy cybersecurity tools and information
 
 
