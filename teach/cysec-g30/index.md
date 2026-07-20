@@ -13,9 +13,9 @@ Help you...
     - Adopt simple, useful frameworks to manage risk
     - Aim to reduce risk, not eliminate it
 - Adopt safe cyber habits
-    - Practice cybersecurity best practices (habits over tools)
-    - Be informed and confident in your digital decisions
-- Know where to go for cyber info
+    - Plan and prepare
+    - Focus on habits, not tools
+- Be informed and confident in your digital decisions
     - Have a reference list of trustworthy cybersecurity tools and information
 
 
@@ -563,9 +563,9 @@ Help you...
     - Adopt simple, useful frameworks to manage risk
     - Aim to reduce risk, not eliminate it
 - Adopt safe cyber habits
-    - Practice cybersecurity best practices (habits over tools)
-    - Be informed and confident in your digital decisions
-- Know where to go for cyber info
+    - Plan and prepare
+    - Focus on habits, not tools
+- Be informed and confident in your digital decisions
     - Have a reference list of trustworthy cybersecurity tools and information
 
 ### What we learned
