@@ -277,7 +277,11 @@ Risk:
 ##### How to start
 
 1. Review
-    - Reviews: [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers), [PCMag](https://www.pcmag.com/picks/the-best-password-managers), [security.org](https://www.security.org/password-manager/best/), [WIRED](https://www.wired.com/story/best-password-managers/)
+    - Reviews:
+        - [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+        - [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+        - [security.org](https://www.security.org/password-manager/best/)
+        - [WIRED](https://www.wired.com/story/best-password-managers/)
 2. Choose
     - My advice: If unsure, start with [Bitwarden](https://bitwarden.com)
         - Free, easy to use, easy to transfer logins if you switch
@@ -288,7 +292,13 @@ Risk:
     - Approaches:
         - Trial: Start with a few low-value, low-risk accounts
         - All-in: Import saved login credentials from Web browser
-    - For each account, enter username, password, security questions, website
+    - For each account, enter...
+        - Username
+        - Password
+        - Security questions
+        - MFA static setup key
+        - Account recovery code
+        - Website (domain)
 5. Update passwords
     - In the password manager _and_ on the account
     - Use random-password generator feature
