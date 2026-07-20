@@ -16,7 +16,7 @@ Help you...
     - Plan and prepare
     - Focus on habits, not tools
 - Be informed and confident in your cyber decisions
-    - Have a reference list of trustworthy cybersecurity tools and information
+    - Have a reference list of trustworthy tools and information
 
 
 
@@ -565,8 +565,8 @@ Help you...
 - Adopt safe cyber habits
     - Plan and prepare
     - Focus on habits, not tools
-- Be informed and confident in your digital decisions
-    - Have a reference list of trustworthy cybersecurity tools and information
+- Be informed and confident in your cyber decisions
+    - Have a reference list of trustworthy tools and information
 
 ### What we learned
 
