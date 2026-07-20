@@ -179,6 +179,10 @@ How to use it:
 3. Something you are
     - Example: face, fingerprint
 
+How to use it:
+
+- To understand MFA
+
 ##### Multi-factor authentication (MFA)
 
 - The use of two or more _different_ factors during authentication
@@ -197,10 +201,11 @@ How to use it:
 
 How to use it:
 
-- In safe, controlled settings, practice it
-    - Sports
-    - Digital simulations of cyber threats
-- In event of emergency, use it
+- To make deliberate decisions under stress
+    - In safe, controlled settings, practice it
+        - Sports
+        - Digital simulations of cyber threats
+    - In event of emergency, use it
 
 
 
