@@ -250,21 +250,21 @@ How to use it:
 
 - Don't reuse passwords
     - Tradeoff: Security versus convenience
-- Make sufficiently long
+- Make passwords sufficiently long
 - Don't use security questions
     - If you do, then use random answers
     - Concern: OSINT, social engineering
 
 #### Password managers
 
-Key benefits:
+Benefits:
 
 - Generates and stores unique, complex passwords
 - Integrates with common Web browsers (plug-in) and mobile devices (app)
 - Auto-fills login credentials only on valid website
     - Protects against spoofed websites
 
-Key risk:
+Risk:
 
 - Keys to the kingdom
     - Make your master password strong (long and memorable)
@@ -293,7 +293,8 @@ Key risk:
 
 #### To do
 
-- Install software (applications, plug-ins, and updates) from trusted sources only
+- Install software from trusted sources only
+    - Software includes applications, plug-ins, and updates
     - Even on trusted sites, be wary
 - Review the security settings and permissions of applications
     - (???) which, exactly (???)
@@ -319,6 +320,8 @@ Key risk:
 - Regularly apply software patches and updates
     - Automate?
 
+(!!!) provide (links to) step-by-step guidance (!!!)
+
 ### Networks
 
 - Be wary of public Wi-Fi
@@ -326,10 +329,10 @@ Key risk:
 
 #### Public Wi-Fi
 
-##### Risks
+Risks
 
 - Rogue access points
-- Man-in-the-middle attack
+- Man-in-the-middle attacks
 
 ##### Recommendations
 
@@ -429,7 +432,9 @@ Variants:
 - Smishing
     - Via SMS
 
-How to detect (often though not always):
+##### How to detect phishing
+
+(Often, not always!)
 
 - Is unexpected
 - Is from an unusual source (e-mail address, phone number)
@@ -439,11 +444,11 @@ How to detect (often though not always):
 #### To do
 
 - Listen to your Spidey sense
-    - Does something feel "off"?
+    - Does something feel off?
 - Slow down and question
 - Verify by using another route
 - If it's a phish, then report and delete
-    - "Report spam" feature in e-mail client
+    - Use "report spam" feature in e-mail client
     - [Forward to APWG](https://apwg.org/reportphishing)
 
 References:
@@ -478,7 +483,7 @@ What do you do?
 
 ### Recovery
 
-A cyber event happened!
+A cyber incident happened!
 
 - Forgotten password
 - Account compromise
@@ -489,11 +494,47 @@ Now what?
 
 #### Account resets
 
-- (!!!)
+- Forgotten password
+    - Click "I forgot my password"
+    - Receive e-mail with temporary code or link
+        - Enter new password
+    - Enter recovery code
+        - Issued when you created the account
+            - Save securely!
+- Lost MFA device
+    - Prepare!
+        - Install authenticator app on second device
+            - Keep backup app up to date
+        - Capture and securely store static setup key
+            - Setup key: QR code, text
+            - Store in password manager with associated account
+- Locked account
+    - Often triggered by too many failed login attempts
+    - Options:
+        - Wait
+        - Request a password reset
+        - Contact customer support (!)
 
 #### Backups
 
-- (!!!)
+- Adpot a realistic backup routine
+    - Automate!
+- Protects against....
+    - Accidental file changes
+    - Hardware failure
+    - Ransomware
+- Options:
+    - External hard drive
+    - Cloud storage
+- Considerations:
+    - Privacy
+        - Of your data
+        - Of cloud-service provider
+    - Availability
+        - Loss of power or Internet
+        - Fire or theft
+    - Criticality of data
+    - Urgency of access
 
 
 
@@ -508,7 +549,7 @@ Now what?
 - Check data breach: [HaveIBeenPwned](https://haveibeenpwned.com)
 - Report phishing: [APWG](https://apwg.org/reportphishing)
 
-Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains.
+Note: If you upload anything (e-mail, file, link, etc.) to the Web, then assume others will see it and any information it contains
 
 
 
@@ -539,12 +580,13 @@ Help you...
     - AAA
     - OODA loop
 - Habits
-    - Defend in advance
+    - Prepare in advance
         - Configure secure settings for accounts and devices
-        - Apply software patches and updates
         - Use a password manager
         - Use anti-malware software
-        - Have a data-backup routine
+        - Follow software-update routine
+        - Follow data-backup routine
+        - "Failing to prepare is preparing to fail"
     - Be alert for social-engineering tactics
         - Slow down, question, and verify
     - Make friends with a few security tools
@@ -558,15 +600,11 @@ Help you...
     - Enable MFA on sensitive accounts
 - This month
     - Start using a password manager 
-        - Install app on PC, phone
-        - Install Web-browser plug-in on PC
-        - Enter account credentials
-        - Update passwords to secure alternatives
-            - In the password manager _and_ on the account
-            - Use random-password generator feature
-                - For security questions, too!
-    - Adopt a realistic routine for patching and updating software
-        - Automate where possible
+        - Install app and plug-in, enter and update passwords
+    - Adopt realistic routines to...
+        - Update software
+        - Back up data
+        - Automate!
 - This year
     - Configure secure settings for accounts and devices
 
