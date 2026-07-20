@@ -148,7 +148,7 @@ How to use it:
 
 How to use it:
 
-- To deconstruct risk, in order to better understand and manage to it
+- To deconstruct risk, in order to better understand and manage it
 
 #### AAA
 
