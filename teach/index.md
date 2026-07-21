@@ -23,6 +23,7 @@ Course names link to separate repositories (on GitHub) hosting corresponding cou
 
 ## Presentations
 
-| Date       | Venue                | Title                            | Slides | Notes                                   |
-| :--------- | :------------------- | :------------------------------- | :----- | :-------------------------------------- |
-| 2026-01-20 | Avalos P-TECH School | Career pathways in cybersecurity |        | I presented as an ISC2 Center volunteer |
+| Date       | Venue                | Title                            | Slides | Notes | Remarks                                 |
+| :--------- | :------------------- | :------------------------------- | :----- | :---- | :-------------------------------------- |
+| 2026-07-21 |                      | Personal cybersecurity           | [pdf](cysec-g30/slides.pdf), [tex](cysec-g30/slides.tex) | [md](cysec-g30/notes.md) |  |
+| 2026-01-20 | Avalos P-TECH School | Career pathways in cybersecurity |        |       | I presented as an ISC2 Center volunteer |
