@@ -1,4 +1,4 @@
-# Cybersecurity
+# Personal cybersecurity
 
 - Audience: General
 - Duration: 30--60 minutes
