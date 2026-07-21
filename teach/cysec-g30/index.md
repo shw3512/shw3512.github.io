@@ -15,8 +15,8 @@ Help you...
 - Adopt safe cyber habits
     - Plan and prepare
     - Focus on habits, not tools
-- Be informed and confident in your digital decisions
-    - Have a reference list of trustworthy cybersecurity tools and information
+- Be informed and confident in your cyber decisions
+    - Have a reference list of trustworthy tools and information
 
 
 
@@ -148,7 +148,7 @@ How to use it:
 
 How to use it:
 
-- To deconstruct risk, in order to better understand and manage to it
+- To deconstruct risk, in order to better understand and manage it
 
 #### AAA
 
@@ -179,6 +179,10 @@ How to use it:
 3. Something you are
     - Example: face, fingerprint
 
+How to use it:
+
+- To understand MFA
+
 ##### Multi-factor authentication (MFA)
 
 - The use of two or more _different_ factors during authentication
@@ -197,10 +201,11 @@ How to use it:
 
 How to use it:
 
-- In safe, controlled settings, practice it
-    - Sports
-    - Digital simulations of cyber threats
-- In event of emergency, use it
+- To make deliberate decisions under stress
+    - In safe, controlled settings, practice it
+        - Sports
+        - Digital simulations of cyber threats
+    - In event of emergency, use it
 
 
 
@@ -272,7 +277,11 @@ Risk:
 ##### How to start
 
 1. Review
-    - Reviews: [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers), [PCMag](https://www.pcmag.com/picks/the-best-password-managers), [security.org](https://www.security.org/password-manager/best/), [WIRED](https://www.wired.com/story/best-password-managers/)
+    - Reviews:
+        - [Bellator Cyber Guard](https://bellatorcyber.com/blog/best-password-managers)
+        - [PCMag](https://www.pcmag.com/picks/the-best-password-managers)
+        - [security.org](https://www.security.org/password-manager/best/)
+        - [WIRED](https://www.wired.com/story/best-password-managers/)
 2. Choose
     - My advice: If unsure, start with [Bitwarden](https://bitwarden.com)
         - Free, easy to use, easy to transfer logins if you switch
@@ -283,7 +292,13 @@ Risk:
     - Approaches:
         - Trial: Start with a few low-value, low-risk accounts
         - All-in: Import saved login credentials from Web browser
-    - For each account, enter username, password, security questions, website
+    - For each account, enter...
+        - Username
+        - Password
+        - Security questions
+        - MFA static setup key
+        - Account recovery code
+        - Website (domain)
 5. Update passwords
     - In the password manager _and_ on the account
     - Use random-password generator feature
@@ -487,7 +502,7 @@ A cyber incident happened!
 
 - Forgotten password
 - Account compromise
-- Device failure
+- Hardware failure
 - Ransomware
 
 Now what?
@@ -515,9 +530,9 @@ Now what?
         - Request a password reset
         - Contact customer support (!)
 
-#### Backups
+#### Data backups
 
-- Adpot a realistic backup routine
+- Adopt a realistic backup routine
     - Automate!
 - Protects against....
     - Accidental file changes
@@ -565,8 +580,8 @@ Help you...
 - Adopt safe cyber habits
     - Plan and prepare
     - Focus on habits, not tools
-- Be informed and confident in your digital decisions
-    - Have a reference list of trustworthy cybersecurity tools and information
+- Be informed and confident in your cyber decisions
+    - Have a reference list of trustworthy tools and information
 
 ### What we learned
 
