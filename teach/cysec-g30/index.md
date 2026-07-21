@@ -502,7 +502,7 @@ A cyber incident happened!
 
 - Forgotten password
 - Account compromise
-- Device failure
+- Hardware failure
 - Ransomware
 
 Now what?
