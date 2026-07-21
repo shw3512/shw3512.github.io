@@ -1,5 +1,7 @@
 # Presentation on personal cybersecurity
 
+Scope:
+
 - Audience: General
 - Duration: 30--60 minutes
 
