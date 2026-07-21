@@ -8,7 +8,7 @@ Materials:
 - Slides ([pdf](slides.pdf), [tex](slides.tex))
 - Notes ([md](notes.md))
 
-A Web version of the notes follows.
+A Web version of the presentation notes follows below.
 
 
 
