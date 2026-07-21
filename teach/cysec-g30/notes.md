@@ -1,7 +1,7 @@
 # Cybersecurity
 
-- Duration: 30--60 minutes
 - Audience: General
+- Duration: 30--60 minutes
 
 
 
