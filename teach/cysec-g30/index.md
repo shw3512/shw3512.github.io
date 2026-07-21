@@ -530,9 +530,9 @@ Now what?
         - Request a password reset
         - Contact customer support (!)
 
-#### Backups
+#### Data backups
 
-- Adpot a realistic backup routine
+- Adopt a realistic backup routine
     - Automate!
 - Protects against....
     - Accidental file changes
