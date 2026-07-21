@@ -1,16 +1,7 @@
-# Presentation on personal cybersecurity
-
-Scope:
+# Personal cybersecurity
 
 - Audience: General
 - Duration: 30--60 minutes
-
-Materials:
-
-- Slides ([pdf](slides.pdf), [tex](slides.tex))
-- Notes ([md](notes.md))
-
-A Web version of the presentation notes follows below.
 
 
 

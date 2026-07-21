@@ -1,0 +1,980 @@
+\documentclass[blue]{beamer}
+
+
+
+\beamertemplatenavigationsymbolsempty
+\usetheme{}
+% Specify overlay option (for hidden text):
+% - invisible
+% - transparent
+\setbeamercovered{invisible}
+\usepackage{xcolor}
+  \definecolor{colorLink}{rgb}{0,0.2,0.6}
+\usepackage{graphicx}
+\usepackage{hyperref}
+  \hypersetup{colorlinks,breaklinks,urlcolor=colorLink,linkcolor=colorLink}
+
+
+
+\begin{document}
+
+
+
+\title{Personal cybersecurity}
+\subtitle{Frameworks, habits, confidence}
+\author{Stephen Wolff\thanks{\url{https://www.linkedin.com/in/stephen-wolff-0x200/}}}
+%\date{}
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\section{Introduction}
+
+
+
+\begin{frame}
+\frametitle{Goals}
+
+Help you\ldots{}
+
+\begin{itemize}
+  \item Recognize and respond to cyber risk
+  \begin{itemize}
+    \item Adopt simple, useful frameworks to manage risk
+    \item Aim to reduce risk, not eliminate it
+  \end{itemize}
+  \item Adopt safe cyber habits
+  \begin{itemize}
+    \item Plan and prepare
+    \item Focus on habits, not tools
+  \end{itemize}
+  \item Be informed and confident in your cyber decisions
+  \begin{itemize}
+    \item Have a reference list of trustworthy tools and information
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Outline}
+
+\begin{enumerate}
+  \item Fundamentals
+  \item Your security
+  \item Toolkit overview
+  \item Conclusion
+\end{enumerate}
+
+\end{frame}
+
+
+
+\section{Fundamentals}
+
+
+
+\begin{frame}
+\frametitle{Fundamentals}
+
+\begin{block}{Outline:}
+
+\begin{itemize}
+  \item Definitions
+  \item Axioms
+  \item Frameworks
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Definitions}
+
+What is cybersecurity?
+
+\begin{itemize}
+  \item Identify, assess, address, and monitor relevant cyber threats
+\end{itemize}
+
+\end{frame}
+
+
+
+\subsection{Axioms}
+
+\begin{frame}
+\frametitle{Axioms}
+
+\begin{block}{Outline:}
+\begin{enumerate}
+  \item The Internet is
+  \item Tradeoffs exist
+  \item Cyberattacks happen
+\end{enumerate}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The Internet}
+
+\begin{itemize}
+  \item The Internet is public
+  \begin{itemize}
+    \item Anyone can use it
+  \end{itemize}
+  \item The Internet is open
+  \begin{itemize}
+    \item Anyone can see Internet traffic
+  \end{itemize}
+  \item The Internet is forever
+  \begin{itemize}
+    \item \href{https://archive.org/}{Internet Archive} (Wayback Machine)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Tradeoffs}
+
+\begin{itemize}
+  \item Tradeoffs exist
+  \begin{itemize}
+    \item Security versus cost
+    \item Security versus convenience
+    \item Trust versus time
+  \end{itemize}
+  \item Tradeoffs change
+  \begin{itemize}
+    \item Technologies change
+    \item Threats change
+    \item Values change
+  \end{itemize}
+  \item Tradeoffs depend on context
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Cyberattacks happen}
+
+\begin{itemize}
+  \item You can't control\ldots{}
+  \begin{itemize}
+    \item Whether cyberattacks happen (they will)
+    \item Whether you achieve perfect safety (you can't)
+  \end{itemize}
+  \item You can control\ldots{}
+  \begin{itemize}
+    \item How informed you are
+    \begin{itemize}
+      \item Know what to do and where to go
+    \end{itemize}
+    \item How prepared you are
+    \item What balance \emph{you choose} among tradeoffs
+    \item What laws you support (privacy, accountability)
+    \item What grace you show yourself and others
+    \begin{itemize}
+      \item More perfect, never perfect
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Your turn}
+
+\begin{block}{Which is riskier?}<1->
+\begin{enumerate}[(a)]
+  \item Your bff AirDrops a file to you irl
+  \item A stranger sends you a file over the Internet
+\end{enumerate}
+\end{block}
+
+\begin{block}{Context:}<2->
+\begin{itemize}
+  \item Your bff
+  \begin{itemize}
+    \item Every file your bff has shared with you recently has been infected with malware
+    \item The file seems unusually large
+  \end{itemize}
+  \item The stranger
+  \begin{itemize}
+    \item The stranger is (allegedly) an employee at Microsoft
+    \item The file is a security update whose checksums agree with those on Microsoft's website
+  \end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Frameworks}
+
+\begin{block}{Outline:}
+\begin{itemize}
+  \item CIA triad
+  \item Risk
+  \item AAA
+  \item OODA loop
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{CIA triad}
+
+\begin{itemize}
+  \item Confidentiality
+  \begin{itemize}
+    \item Unauthorized entities can't access resources
+    \item Opposite: disclosure
+  \end{itemize}
+  \item Integrity
+  \begin{itemize}
+    \item Resources are reliable
+    \item Opposite: alteration
+  \end{itemize}
+  \item Availability
+  \begin{itemize}
+    \item Authorized entities can access resources
+    \item Opposite: denial of service
+  \end{itemize}
+\end{itemize}
+
+\begin{alertblock}{How to use it:}
+
+\begin{itemize}
+  \item To understand and assess security
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Risk}
+
+\begin{itemize}
+  \item Asset
+  \begin{itemize}
+    \item Something of value
+    \item Can be physical, digital, or intangible
+  \end{itemize}
+  \item Vulnerability
+  \begin{itemize}
+    \item A weakness
+  \end{itemize}
+  \item Threat
+  \begin{itemize}
+    \item A potential danger
+  \end{itemize}
+  \item Risk
+  \begin{itemize}
+    \item A potential loss that occurs when a threat exploits a vulnerability of an asset
+  \end{itemize}
+\end{itemize}
+
+\begin{alertblock}{How to use it:}
+
+\begin{itemize}
+  \item To understand and manage risk
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{AAA}
+
+\begin{itemize}
+  \item Identification
+  \begin{itemize}
+    \item Who are you?
+  \end{itemize}
+  \item Authentication
+  \begin{itemize}
+    \item How do I know you are who you say you are?
+  \end{itemize}
+\item Authorization
+  \begin{itemize}
+    \item What are you allowed to do?
+  \end{itemize}
+  \item Accounting
+  \begin{itemize}
+    \item What did you do?
+  \end{itemize}
+\end{itemize}
+
+\begin{alertblock}{How to use it:}
+\begin{itemize}
+  \item To understand interactions with service providers
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Factors of authentication}
+
+\begin{itemize}
+  \item Something you know
+  \begin{itemize}
+    \item Password
+  \end{itemize}
+  \item Something you have
+  \begin{itemize}
+    \item Cell phone
+  \end{itemize}
+  \item Something you are
+  \begin{itemize}
+    \item Face, fingerprint
+  \end{itemize}
+\end{itemize}
+
+\begin{alertblock}{How to use it:}
+\begin{itemize}
+  \item To understand MFA
+  \begin{itemize}
+    \item Use two or more \emph{different} factors during authentication
+  \end{itemize}
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{OODA loop}
+
+\begin{enumerate}
+  \item Observe
+  \item Orient
+  \item Decide
+  \item Act
+\end{enumerate}
+
+\begin{alertblock}{How to use it:}
+\begin{itemize}
+  \item To make deliberate decisions under stress
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+
+
+\section{Your security}
+
+
+
+\begin{frame}
+\frametitle{Your security}
+
+\begin{block}{Outline:}
+\begin{itemize}
+  \item Account access
+  \item Software
+  \item Devices
+  \item Networks
+  \begin{itemize}
+    \item Home router
+    \item Public Wi-Fi
+  \end{itemize}
+  \item Relational
+  \item In public
+  \item Recovery
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Account access: Your turn}
+
+\begin{itemize}
+  \item How many passwords do you have?
+  \begin{itemize}
+    \item Give an order-of-magnitude estimate: 1, 10, 100, 1000,\ldots{}
+  \end{itemize}
+  \item How do you manage your passwords? (Select all that apply.)
+  \begin{enumerate}[(a)]
+    \item I use the same password or similar passwords for most or all of my accounts.
+    \item I write down my most commonly used passwords on a piece of paper and keep it on or near my computer.
+    \item I save them in my Web browser (for example, using the ``remember me'' feature).
+    \item I write down my passwords in a notebook and look them up when I need them.
+    \item I use a password manager.
+  \end{enumerate}
+  \item What are the tradeoffs for each method of password management listed above?
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Account access: To do}
+
+\begin{itemize}
+  \item Use a password manager
+  \item Review the security settings on your accounts
+  \begin{itemize}
+    \item Password strength
+    \item MFA enabled?
+    \item Security alerts
+    \item Account-recovery options
+  \end{itemize}
+  \item Implement MFA on high-value and high-risk accounts
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Password best practices}
+
+\begin{itemize}
+  \item Don't reuse passwords
+  \item Make passwords sufficiently long
+  \item Don't use security questions
+  \begin{itemize}
+    \item Why not? OSINT, social engineering
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Password managers}
+
+\begin{block}{Benefits:}
+\begin{itemize}
+  \item Generates and stores unique, complex passwords
+  \item Integrates with Web browsers and mobile devices
+  \item Auto-fills login credentials only on valid website
+\end{itemize}
+\end{block}
+
+\begin{block}{Risk:}
+\begin{itemize}
+  \item Keys to the kingdom
+  \begin{itemize}
+    \item Make your master password strong
+  \end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Password managers: How to start}
+
+\begin{enumerate}
+  \item Review
+  \item Choose
+  \item Install
+  \begin{itemize}
+    \item App: on PC, phone
+    \item Web-browser plug-in: on PC
+  \end{itemize}
+  \item Enter credentials (for each account)
+  \item Update passwords
+  \begin{itemize}
+    \item In the password manager \emph{and} on the account
+    \item Use random-password generator feature
+  \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Software: To do}
+
+\begin{itemize}
+  \item Install software from trusted sources only
+  \item Review the security settings and permissions of applications
+  \item Uninstall unused software
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Devices: To do}
+
+\begin{itemize}
+  \item Review the security settings on your digital devices
+  \begin{itemize}
+    \item Login settings
+    \item Lock-screen timer
+    \item Encryption
+  \end{itemize}
+  \item Align the security settings to the device
+  \begin{itemize}
+    \item Tradeoff: Security versus cost and convenience
+    \item Considerations:
+    \begin{itemize}
+      \item Device mobility
+      \item Data value
+    \end{itemize}
+  \end{itemize}
+  \item Regularly apply software patches and updates
+  \begin{itemize}
+    \item Automate?
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Networks}
+
+\begin{block}{Outline:}
+\begin{itemize}
+  \item Be wary of public Wi-Fi
+  \item Harden your home router
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Public Wi-Fi}
+
+\begin{block}{Risks:}
+\begin{itemize}
+  \item Rogue access points
+  \item Man-in-the-middle attacks
+\end{itemize}
+\end{block}
+
+\begin{block}{Habits:}
+\begin{itemize}
+  \item Enable MFA on sensitive accounts
+  \item Avoid sensitive transactions
+  \item Use HTTPS, not HTTP
+  \item If HTTPS is not enough, then use a VPN
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Home router: To do}
+
+\begin{itemize}
+  \item Change default credentials
+  \item Enable strong encryption
+  \begin{itemize}
+    \item Best: WPA3
+    \item Second best: WPA2
+    \item Don't use: WEP, WPA
+  \end{itemize}
+  \item Enable automatic updates
+  \item Disable risky features
+  \begin{itemize}
+    \item Remote management
+    \item Wi-Fi Protected Setup (WPS)
+    \item Universal Plug and Play (UPnP)
+  \end{itemize}
+  \item Create a guest network
+  \begin{itemize}
+    \item Enable a separate, strong password
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Relational}
+
+\begin{block}{Outline:}
+\begin{itemize}
+  \item Social engineering
+  \item Phishing
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Social engineering}
+
+\begin{itemize}
+  \item An attempt to manipulate humans
+\end{itemize}
+
+\begin{block}{Commonly used tactics:}
+\begin{itemize}
+  \item Scarcity
+  \item Urgency
+  \item Intimidation
+  \item Authority
+  \item Trust
+  \begin{itemize}
+    \item Social proof
+    \item Familiarity
+  \end{itemize}
+  \item Likeableness
+  \begin{itemize}
+    \item Pity
+  \end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Phishing}
+
+\begin{itemize}
+  \item Social engineering over communication technology
+\end{itemize}
+
+\begin{block}{Variants:}
+\begin{itemize}
+  \item Phishing
+  \begin{itemize}
+    \item Via e-mail
+  \end{itemize}
+  \item Vishing
+  \begin{itemize}
+    \item Via voice call
+  \end{itemize}
+  \item Smishing
+  \begin{itemize}
+    \item Via SMS
+  \end{itemize}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{How to detect phishing}
+
+(Often, not always!)
+\begin{itemize}
+  \item Is unexpected
+  \item Is from an unusual source (e-mail address, phone number)
+  \item Uses a generic greeting
+  \item Uses social-engineering tactics
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Social engineering: To do}
+\begin{itemize}
+  \item Listen to your Spidey sense
+  \item Slow down and question
+  \item Verify by using another route
+  \item If it's a phish, then report and delete
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Your turn}
+
+You receive the following e-mail from your bank:
+
+\begin{quote}
+We have detected suspicious activity on your account.
+
+Please use the following link to verify your identity and account activity within 24 hours or your account will be frozen: \href{foo}{verify account}
+\end{quote}
+
+You use this bank account to pay multiple important bills, several of which come due in the next few days.
+
+\begin{block}{What do you do?}
+%\begin{enumerate}[(a)]
+%  \item Ignore the e-mail. It's probably fake.
+%  \item Click the link and provide the requested information.
+%  \item Log in to your bank's website.
+%  \item Give your bank a call.
+%  \item Other (explain)
+%\end{enumerate}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{In public: To do}
+
+\begin{itemize}
+  \item Configure secure device settings in advance
+  \item Don't leave your devices unattended
+  \item Beware shoulder surfing
+  \begin{itemize}
+    \item Bystander, binoculars, camera
+  \end{itemize}
+  \item Beware tailgating and piggybacking
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Recovery}
+
+A cyber incident happened!
+\begin{itemize}
+  \item Forgotten password
+  \item Account compromise
+  \item Hardware failure
+  \item Ransomware
+\end{itemize}
+Now what?
+\begin{itemize}
+  \item Account resets
+  \item Data backups
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Account resets}
+
+\begin{itemize}
+  \item Forgotten password
+  \begin{itemize}
+    \item Receive e-mail with temporary code or link
+    \item Enter recovery code (issued at account creation)
+  \end{itemize}
+  \item Lost MFA device
+  \begin{itemize}
+    \item Install authenticator app on second device
+    \item Capture and securely store static setup key
+  \end{itemize}
+  \item Locked account
+  \begin{itemize}
+    \item Wait
+    \item Request automated password reset
+    \item Contact customer support
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Data backups}
+
+\begin{itemize}
+  \item Adopt a realistic backup routine
+  \item Protects against accidental file changes, hardware failure, ransomware
+  \item Options:
+  \begin{itemize}
+    \item External hard drive
+    \item Cloud storage
+  \end{itemize}
+  \item Considerations:
+  \begin{itemize}
+    \item Privacy
+    \item Availability
+    \item Criticality of data
+    \item Urgency of access
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\section{Toolkit overview}
+
+
+
+\begin{frame}
+\frametitle{Toolkit overview}
+
+\begin{itemize}
+  \item Password manager
+  \item Anti-malware software
+  \item Data backup
+  \item Check suspicious file or URL: \href{https://www.virustotal.com/gui/}{VirusTotal}
+  \item Check data breach: \href{https://haveibeenpwned.com}{HaveIBeenPwned}
+  \item Report phishing: \href{https://apwg.org/reportphishing}{APWG}
+\end{itemize}
+
+\begin{alertblock}{Caution:}
+Don't upload sensitive information
+\end{alertblock}
+
+\end{frame}
+
+
+
+\section{Conclusion}
+
+
+
+\begin{frame}
+\frametitle{Conclusion: What we aimed for (goals)}
+
+Help you\ldots{}
+
+\begin{itemize}
+  \item Recognize and respond to cyber risk
+  \begin{itemize}
+    \item Adopt simple, useful frameworks to manage risk
+    \item Aim to reduce risk, not eliminate it
+  \end{itemize}
+  \item Adopt safe cyber habits
+  \begin{itemize}
+    \item Plan and prepare
+    \item Focus on habits, not tools
+  \end{itemize}
+  \item Be informed and confident in your cyber decisions
+  \begin{itemize}
+    \item Have a reference list of trustworthy tools and information
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Conclusion: What we learned}
+
+\begin{itemize}
+  \item Realities
+  \begin{itemize}
+    \item The Internet is public, open, and forever
+    \item Tradeoffs exist
+    \item Cyberattacks happen
+  \end{itemize}
+  \item Frameworks
+  \begin{itemize}
+    \item CIA triad
+    \item Risk
+    \item AAA
+    \item OODA loop
+  \end{itemize}
+  \item Habits
+  \begin{itemize}
+    \item Prepare in advance
+    \item Be alert for social-engineering tactics
+    \begin{itemize}
+      \item Slow down, question, and verify
+    \end{itemize}
+    \item Make friends with a few security tools
+    \item Show grace to yourself and to others
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Conclusion: What we'll do}
+
+\begin{itemize}
+  \item Today
+  \begin{itemize}
+    \item Share what you learned with a friend
+  \end{itemize}
+  \item This week
+  \begin{itemize}
+    \item Enable MFA on sensitive accounts
+  \end{itemize}
+  \item This month
+  \begin{itemize}
+    \item Start using a password manager
+    \item Adopt regular routines to\ldots{}
+    \begin{itemize}
+      \item Update software
+      \item Back up data
+    \end{itemize}
+  \end{itemize}
+  \item This year
+  \begin{itemize}
+    \item Configure secure settings for accounts and devices
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Thank you}
+
+\begin{itemize}
+  \item Presentation by: Stephen Wolff
+  \item Presentation available at: \url{https://shw3512.github.io/teach/cysec-g30/}
+  \item LinkedIn profile: \url{https://www.linkedin.com/in/stephen-wolff-0x200/}
+\end{itemize}
+
+\end{frame}
+
+
+
+\end{document}
