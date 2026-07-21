@@ -1,0 +1,2 @@
+- Slides ([pdf](slides.pdf), [tex](slides.tex))
+- Notes ([md](notes.md))
